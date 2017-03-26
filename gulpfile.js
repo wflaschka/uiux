@@ -52,7 +52,6 @@ var paths = {
 	],
 	shell: [
 		rootSource + '**/*.sh'
-		,'browsersync.sh'
 	]
 };
 
