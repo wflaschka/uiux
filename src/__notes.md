@@ -1,5 +1,7 @@
 # Misc notes
 
+**Need to watch for all SASS, but then compile only x, y, z... does gulp keep this handled?**
+
 ## CSS FX
 
 * CSS Shakes: https://elrumordelaluz.github.io/csshake/
