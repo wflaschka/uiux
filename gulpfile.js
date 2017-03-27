@@ -152,6 +152,8 @@ gulp.task('watch', ['all'], function() {
 	gulp.watch(paths.html, ['html']);
 	gulp.watch(paths.fonts, ['fonts']);
 	gulp.watch(paths.shell, ['shell']);
+	gulp.watch(rootSource + '**/*.scss', ['sass']);
+	gulp.watch(rootSource + '**/*.sass', ['sass']);
 });
 
 gulp.task('all', function(callback) {
