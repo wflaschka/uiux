@@ -1,5 +1,5 @@
 #!/bin/bash
 
-gulp all;
+# gulp all;
 
-cd dist && browsersync.sh;
+cd dist && ./browsersync.sh;

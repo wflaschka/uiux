@@ -1,0 +1,19 @@
+body {
+	background-color: #efefef;
+}
+.logo {
+
+}
+.logo img {
+  width:120px;
+}
+.container {
+  padding-top:50px;
+  max-width: 968px;
+}
+.section {
+  margin-top:40px;
+  border: 1px solid #fefefe;
+  border-radius: 10px;
+}
+

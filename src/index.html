@@ -6,9 +6,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>ArtTap UI/UX Patterns</title>
 
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="./assets/styles/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="./assets/styles/bulma.css">
-	<link rel="stylesheet" type="text/css" href="./assets/styles/page.css">
+	<link rel="stylesheet" type="text/css" href="./assets/styles/main.css">
 </head>
 <body>
 
@@ -52,7 +52,7 @@
 						<ul>
 							<li>Buttons</li>
 							<li>Tags</li>
-							<li>Hearts
+							<li><a href="prototypes/design-elements/hearts.html">Hearts (75% complete)</a>
 
 								<ul>
 									<li>Liked</li>
@@ -139,7 +139,7 @@
 							<li>Navigation
 
 								<ul>
-									<li>Header
+									<li><a href="prototypes/page-elements/top-nav.html">Header</a> (early March 2017)
 
 										<ul>
 											<li>Not logged in</li>
@@ -166,6 +166,7 @@
 							<li>Pages
 
 								<ul>
+									<li><a href="prototypes/pages/landing.html">Landing page</a> (Early March 2017)</li>
 									<li>Product page</li>
 									<li>Artist page</li>
 									<li>Liked page</li>
@@ -206,12 +207,13 @@
 
 						<ul>
 							<li>Default for 3rd party packages is Bootstrap which is used <em>everywhere</em>. Each new integration requires a bit of simplification and removing of excess markup to get it ready for Bulma</li>
-							<li>No built-in JS means some JS coding for UI/UX</li>
+							<li>No built-in JS means some JS coding for UI/UX (turning out to be a good thing so far -- wf 201703)</li>
+							<li>Flexbox approach means some SCSS mixins or other libraries for older CSS won't work as expected</li>
 						</ul>
 					</li>
 				</ul>
 				<p>
-					<a href="https://dansup.github.io/bulma-templates/">Examples of layouts made with Bulma.</a>
+					<a href="https://dansup.github.io/bulma-templates/" target="_blank">Examples of layouts made with Bulma.</a>
 				</p>
 
 

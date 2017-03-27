@@ -23,6 +23,7 @@ var buildTargets = {
 	'scripts'     : rootTarget + 'assets/scripts'
 	, 'images'    : rootTarget + 'assets/images'
 	, 'styles'    : rootTarget + 'assets/styles'
+	, 'fonts'     : rootTarget + 'assets/fonts'
 	, 'shell'     : rootTarget
 	, 'html'      : rootTarget
 	, 'fullbuild' : rootTarget
@@ -34,8 +35,11 @@ var paths = {
 		// ,rootSource + 'assets/scripts/validate_*.js'
 	],
 	styles: [
-		rootSource    + 'assets/styles/*.css'
+		rootSource    + 'assets/styles/**/*.css'
 		//,rootSource + 'assets/semantic/dist/semantic.min.css'
+	],
+	fonts: [
+		rootSource    + 'assets/fonts/**/*'
 	],
 	images: [
 		rootSource    + 'assets/images/**/*.*'
@@ -43,6 +47,7 @@ var paths = {
 	],
 	sass: [
 		rootSource    + 'assets/styles/bulma.sass'
+		,rootSource    + 'assets/styles/site.sass'
 		// ,'node_modules/bulma/sass/**/*.*'
 	],
 	html: [
@@ -121,8 +126,15 @@ gulp.task('images', function() {
 
 // HTML
 gulp.task('html', function() {
+	// del([buildTargets.html + '**/*.htm?']);
 	return gulp.src(paths.html)
 		.pipe(gulp.dest(buildTargets.html));
+});
+
+// FONTS
+gulp.task('fonts', function() {
+	return gulp.src(paths.fonts)
+		.pipe(gulp.dest(buildTargets.fonts));
 });
 
 // Shell scripts
@@ -138,6 +150,7 @@ gulp.task('watch', ['all'], function() {
 	gulp.watch(paths.scripts, ['scripts']);
 	gulp.watch(paths.styles, ['styles']);
 	gulp.watch(paths.html, ['html']);
+	gulp.watch(paths.fonts, ['fonts']);
 	gulp.watch(paths.shell, ['shell']);
 });
 
@@ -145,7 +158,7 @@ gulp.task('all', function(callback) {
   runSequence(
 	'clean',
 	'images', 'scripts', 'styles',
-	'sass',
+	'sass', 'fonts',
 	'html', 'shell',
 	callback);
 });

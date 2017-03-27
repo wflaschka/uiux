@@ -1,0 +1,233 @@
+/**
+ * 
+ * Landing Page CSS
+ *
+ */
+
+#harbinger-panel {
+	background-color: #000;
+	color: #ffffff;
+	padding: 0.5em;
+	margin: 0px;
+}
+
+#marquee {
+	background-image: url("../../images/marquee.jpg");
+	background-image: url("../../images/marquee-bright-desert.jpg");
+	/*background-image: url("../../images/marquee-dark-forest.jpg");*/
+	background-size: cover;
+}
+#marquee div.hero-head header.nav {
+	/*background-color: rgba(0, 0, 0, 0.30);*/
+	box-shadow: none;
+}
+
+
+#marquee div.callout {
+	background-color: white;
+	padding: 30px 0px 30px 0px;
+}
+#marquee div.callout div.content p {
+	font-weight: bolder;
+}
+
+/**
+ * Contextually change the nav color based on background image.
+ * Using assets/js/background-check/*.js
+ */
+/*#marquee div.hero-head header.nav a.background--light {
+	color: black;
+}
+#marquee div.hero-head header.nav a.background--dark {
+	color: white;
+}
+#marquee div.hero-head header.nav a.background--complex {
+	color: gray;
+}*/
+#marquee div.hero-head.background--light header.nav a {
+	color: black;
+}
+#marquee div.hero-head.background--dark header.nav a {
+	color: white;
+}
+/*#marquee div.hero-head.background--complex header.nav a {
+	color: gray;
+}*/
+
+
+/**
+ * Search bar settings
+ */
+
+.button.is-cta-button {
+	border: none;
+	font-weight: bolder;
+	font-size: larger;
+}
+
+#search-bar-level-2 {
+	border-top: 1px solid gray;
+}
+#search-bar-level-2 div.column:not(:first-of-type) {
+	border-left: 1px solid gray;
+}
+#search-bar-level-2 div.column:last-of-type {
+	/*Not working*/
+	/*vertical-align: middle;*/
+	/*border: 1px solid red;*/
+}
+
+/**
+ * Blurbs section
+ */
+section#blurbs div.column:not(:first-of-type) {
+	border-left: 1px solid gray;
+	padding-left: 21px;
+}
+section#blurbs ul {
+	margin-left: 0px;
+	padding-left: 0px;
+	list-style: none;
+}
+
+
+/**
+ * Helper classes
+ */
+.has-padding-extra {
+	padding: 1.1em;
+}
+.is-fullheight {}
+
+/**
+ * Magic.css animation speed
+ * 
+ * https://github.com/miniMAC/magic
+ * https://www.minimamente.com/example/magic_animations/
+ */
+.magictime {
+	-webkit-animation-duration: 0.5s;
+	-moz-animation-duration: 0.5s;
+	-o-animation-duration: 0.5s;
+	animation-duration: 0.5s;
+}
+
+/**
+ * Card: media-card
+ */
+
+div.media-card {
+	height: 20rem;
+	border: none;
+	box-shadow: none;
+}
+
+/* TRANS for "favorite" icon */
+.icon-favorite {
+	opacity: .4;
+	transition: opacity 0.3s;
+	transition: color 0.4s;
+}
+.icon-favorite:hover {
+	opacity: 1;
+	color: #ff3333;
+}
+
+div.media-card div.card-image {
+	height: 15rem;
+	background-size: cover;
+	overflow: hidden;
+	background-position: center center;
+	background-repeat: no-repeat;
+	/*background-color: #000000;*/
+}
+div.media-card div.card-content {
+	padding: 10px 10px 0px 10px;
+}
+div.media-card figure.image {
+	height: inherit;
+	overflow: clip;
+	opacity: 0.3;
+	background-image: url("../../images/icon-crop.png");
+	background-position-x: 95%;
+	background-position-y: 95%;
+	background-size: 2em;
+	background-repeat: no-repeat;
+}
+div.media-card div.card-image:hover figure.image {
+	background-image: none;
+	opacity: 1.0;
+}
+div.media-card img.superimposed {
+	display: none;
+	margin-top: 8em;
+	margin-right: 1em;
+
+    height: auto; 
+    width: auto; 
+    max-width: 6.5em; 
+    max-height: 6.5em;
+
+	float: right;
+	box-shadow: -2px -2px 15px white, 2px 2px 15px white,
+				2px -2px 15px white, -2px 2px 15px white;
+}
+
+
+/**
+ * INTERIOR PAGE HEADER NAV
+ */
+header.nav {
+	min-height: 6em;
+}
+header.nav img.logo {
+	min-height: 5em;
+	width: auto;
+}
+img.profile-picture {
+	min-height: 100%;	
+	min-width: 100%;
+	/*min-height: 4em;*/
+
+	/*height: 100%;*/
+	/*width: auto;*/
+}
+
+div.profile-item {
+
+}
+div.profile-picture {
+	border: 1px solid rgba(100, 100, 100, 0.60);
+	height: 3em;
+	width: 3em;
+	/*max-height: 5em;*/
+	/*max-width: 5em;*/
+	border-radius: 30px;
+	overflow: hidden;
+	margin: 0px 0.5em 0px 0px;
+}
+
+/*If someone is "become" someone else*/
+div.nav-item-profile.is-assumed-identity {}
+div.nav-item-profile.is-assumed-identity h3 {
+	color: rgba(255, 100, 100, 0.90);
+}
+div.nav-item-profile.is-assumed-identity span.icon {
+	color: rgba(255, 100, 100, 0.90);
+}
+div.nav-item-profile.is-assumed-identity div.profile-picture {
+	border: 1px solid rgba(255, 100, 100, 0.60);
+	box-shadow: 0px 0px 5px rgba(255, 100, 100, 0.60);
+}
+div.nav-item-buttons .is-admin-user {
+	display: none;
+}
+div.nav-item-buttons .is-merchant-user {
+	display: none;
+}
+div.nav-item-buttons.is-elevated-user .is-admin-user {
+	display: inherit;
+}
+div.nav-item-buttons.is-elevated-user .is-merchant-user {
+	display: inherit;
+}
