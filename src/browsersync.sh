@@ -1,3 +1,3 @@
 #!/bin/bash
 
-browser-sync start --server --files "*"
+browser-sync start --server --files "."

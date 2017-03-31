@@ -9,6 +9,8 @@ h1, h2, h3, h4, h5, h6 {
 			font-family: $family-serif-title !important;
 			font-weight: 400;
 			font-size: $size-1;
+			// line-height: $size-1;
+			margin-bottom: .3em;
 		}
 		&.is-2 {
 			text-transform: uppercase;
@@ -29,10 +31,24 @@ h1, h2, h3, h4, h5, h6 {
 			font-weight: lighter;
 			font-size: $size-5;
 		}
+
 	}
 	&.subtitle {
 		font-family: $family-sans-serif !important;
 		color: rgba( $grey-dark, .9 ) !important;
+	}
+
+	&.title, &.subtitle {
+		// In-line headers like bootstrap http://getbootstrap.com/components/#page-header
+		small {
+			color: $grey;
+			font-size: 60%;
+			letter-spacing: -1px;
+			text-transform: none;
+			font-family: $family-sans-serif;
+			// margin-left: 1em;
+			font-style: normal;
+		}
 	}
 
 }

@@ -4,7 +4,7 @@ div.heart {
 	&:hover .icon .fa {
 		@include pulse(
 			$duration: .5s,
-			$count: 2,
+			$count: 1,
 			$delay: 0s,
 			$function: ease, 
 			$fill: both
