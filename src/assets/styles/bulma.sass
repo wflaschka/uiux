@@ -5,8 +5,9 @@
 /* ********************************************************* */
 /* ********************************************************* */
 
-// Put variables here:
-@import "bulma-extensions.sass"
+// Set important variables here.
+// They'll be used when Bulma is created.
+@import "bulma-settings.sass"
 
 // Use these only for reference:
 // @import "bulma-variables.sass"
@@ -15,4 +16,10 @@
 
 // Include the bulk of Bulma.io
 @import "../../../node_modules/bulma/bulma.sass"
+
+
+// Changes to Bulma applied after the rest has run.
+// This way we don't have to get into the guts of the 
+// Bulma definitions in node_modules/bulma/*
+@import "bulma-extended.scss"
 

@@ -22,6 +22,7 @@ var rootSource = 'src/';
 var buildTargets = {
 	'scripts'     : rootTarget + 'assets/scripts'
 	, 'images'    : rootTarget + 'assets/images'
+	, 'pdfs'      : rootTarget + 'assets/pdfs'
 	, 'styles'    : rootTarget + 'assets/styles'
 	, 'fonts'     : rootTarget + 'assets/fonts'
 	, 'shell'     : rootTarget
@@ -40,6 +41,9 @@ var paths = {
 	],
 	fonts: [
 		rootSource    + 'assets/fonts/**/*'
+	],
+	pdfs: [
+		rootSource    + 'assets/pdfs/**/*'
 	],
 	images: [
 		rootSource    + 'assets/images/**/*.*'
@@ -124,6 +128,12 @@ gulp.task('images', function() {
 		.pipe(gulp.dest(buildTargets.images));
 });
 
+// PDFs
+gulp.task('pdfs', function() {
+	return gulp.src(paths.pdfs)
+		.pipe(gulp.dest(buildTargets.pdfs));
+});
+
 // HTML
 gulp.task('html', function() {
 	// del([buildTargets.html + '**/*.htm?']);
@@ -151,6 +161,7 @@ gulp.task('watch', ['all'], function() {
 	gulp.watch(paths.styles, ['styles']);
 	gulp.watch(paths.html, ['html']);
 	gulp.watch(paths.fonts, ['fonts']);
+	gulp.watch(paths.pdfs, ['pdfs']);
 	gulp.watch(paths.shell, ['shell']);
 	gulp.watch(rootSource + '**/*.scss', ['sass']);
 	gulp.watch(rootSource + '**/*.sass', ['sass']);
@@ -160,7 +171,7 @@ gulp.task('all', function(callback) {
   runSequence(
 	'clean',
 	'images', 'scripts', 'styles',
-	'sass', 'fonts',
+	'sass', 'fonts', 'pdfs',
 	'html', 'shell',
 	callback);
 });
