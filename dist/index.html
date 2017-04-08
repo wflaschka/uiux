@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ArtTap UI/UX Patterns</title>
+
+	<link rel="stylesheet" type="text/css" href="./assets/styles/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="./assets/styles/bulma.css">
+	<link rel="stylesheet" type="text/css" href="./assets/styles/main.css">
+</head>
+<body>
+
+	<div class="container">
+
+		<div class="logo has-text-centered">
+			<a href="index.html">
+				<img src="assets/images/arttap-logo.svg">
+			</a>
+		</div>
+
+		<div class="section">
+			<h1 class="title is-1">ArtTap UI/UX Patterns</h1>
+			<h4 class="subtitle is-4">Bulma.io prototypes</h4>
+
+
+			<div class="content">
+
+				<h4 class="title is-4">What is this?</h4>
+				<p>
+					This is an <strong>ArtTap</strong> UI/UX design pattern library for review and comment. 
+					The pages should capture the UI interactions, behaviors, layout, and responsivity.
+				</p>
+				<p>
+					This is starting with the <a href="http://bulma.io" target="_blank">Bulma.io flexbox framework</a>.
+					Why is Walter <a href="#whybulma">starting with Bulma?</a>
+				</p>
+				<p>
+					<a href="https://github.com/wflaschka/at-ui-ux" target="_blank">Github repo for this site</a> (you'll need an invitation from @wflaschka).
+				</p>
+
+				<p>
+					<a href="assets/pdfs/Typography-Guidelines-20170329.pdf">ArtTap style guide 20170329.</a>
+				</p>
+
+			</div>
+			<div class="content is-small">
+				<p>
+					<strong>Site dependencies:</strong>
+					Git, Node, Gulp, Sass (scss), Browsersync.io, CSS, Flexbox HTML, Bulma.io, Javascript, JQuery, various Sass mixins
+			</div>
+		</div>
+
+		<div class="section">
+			<div class="content">
+
+				<h2 class="title is-2">Patterns</h2>
+				<ul>
+					<li><a href="prototypes/design-elements/frames.html">Framed Artwork Tests</a></li>
+					<li>Small elements
+
+						<ul>
+							<li><a href="prototypes/design-elements/typography.html">Typography</a></li>
+							<li><a href="prototypes/design-elements/buttons.html">Buttons (TODO)</a></li>
+							<li><a href="prototypes/design-elements/tags.html">Tags</a></li>
+							<li><a href="prototypes/design-elements/hearts.html">Hearts</a></li>
+							<li>System colors</li>
+							<li>Icons</li>
+						</ul>
+					</li>
+					<li>Larger page element patterns
+
+						<ul>
+							<li>Carousels
+
+								<ul>
+									<li>Landing carousels</li>
+									<li>Left-right slider</li>
+									<li>Curated (left card) slider</li>
+								</ul>
+							</li>
+							<li>Cards
+
+								<ul>
+									<li>Artist card</li>
+									<li><a href="prototypes/design-elements/art-cards.html">Basic artwork card (decisions needed)</a></li>
+									<li>Cartesian grid</li>
+									<li>Masonry grid</li>
+									<li>Sizes (TBD; basic, secondary, thumbnail, tiny)</li>
+								</ul>
+							</li>
+							<li>Forms
+
+								<ul>
+									<li>Form card</li>
+									<li>Actual real form</li>
+									<li>Small inline settings form</li>
+								</ul>
+							</li>
+							<li>Dismissable messages
+
+								<ul>
+									<li>Flash messages</li>
+									<li>Activity log</li>
+									<li>Modals
+
+										<ul>
+											<li>Popup discussion</li>
+											<li>Popup small form</li>
+											<li>Image zoom functionality</li>
+										</ul>
+									</li>
+									<li>Header bar message MoTD</li>
+								</ul>
+							</li>
+							<li>Grids
+
+								<ul>
+									<li>Masonry with &ldquo;view all&rdquo; at top</li>
+									<li>Squares</li>
+								</ul>
+							</li>
+							<li>Navigation
+
+								<ul>
+									<li><a href="prototypes/page-elements/top-nav.html">Header</a> (early March 2017)
+
+										<ul>
+											<li>Not logged in</li>
+											<li>Logged in
+
+												<ul>
+													<li>As USER</li>
+													<li>As MERCHANT
+
+														<ul>
+															<li>As MERCHANT > ARTIST (Brand)</li>
+														</ul>
+													</li>
+													<li>As ADMIN</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li>Slide-up icon menu (social shares <code>Product Details Page – 2.pdf</code>)</li>
+									<li>Searchbar</li>
+									<li>Footer</li>
+								</ul>
+							</li>
+							<li>Pages
+
+								<ul>
+									<li><a href="prototypes/pages/landing.html">Landing page</a> (Early March 2017)</li>
+									<li>Product page</li>
+									<li>Artist page</li>
+									<li>Liked page</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+
+			</div>
+
+		</div>
+
+
+
+		<div class="section">
+			<a name="whybulma"></a>
+
+			<h2 class="title is=2">Why <a href="http://bulma.io" target="_blank">Bulma</a> as a CSS framework?</h2>
+			<h4 class="subtitle is=4">It's pretty neat</h4>
+			<div class="content">
+				<ul>
+					<li>Benefits
+
+						<ul>
+							<li>Very simple but comprehensive</li>
+							<li>Based on flex-box which is successor to old-fashioned CSS</li>
+							<li>Can function alongside other CSS frameworks because it does not style unclassed objects (with work; must add bulma scope to css)</li>
+							<li>Minimal: Learn it in a day</li>
+							<li>Incredibly responsive</li>
+							<li>Not opinionated; <em>we can customize it easily</em></li>
+							<li>Competitive with larger, more opinionated frameworks like Bootstrap and Semantic-UI</li>
+							<li>CSS-only, no built-in JS framework requirements to adapt or integrate</li>
+							<li>Does not look like Bootstrap</li>
+						</ul>
+					</li>
+					<li>Drawbacks
+
+						<ul>
+							<li>Default for 3rd party packages is Bootstrap which is used <em>everywhere</em>. Each new integration requires a bit of simplification and removing of excess markup to get it ready for Bulma</li>
+							<li>No built-in JS means some JS coding for UI/UX (turning out to be a good thing so far -- wf 201703)</li>
+							<li>Flexbox approach means some SCSS mixins or other libraries for older CSS won't work as expected</li>
+						</ul>
+					</li>
+				</ul>
+				<p>
+					<a href="https://dansup.github.io/bulma-templates/" target="_blank">Examples of layouts made with Bulma.</a>
+				</p>
+
+
+			</div>
+
+
+		</div>
+
+
+		<div class="section">
+			<div class="status-footer has-text-centered">
+				<p>
+					Walter Flaschka 
+					<span class="tag is-black">20170331</span>
+					<span class="tag is-grey">20170325</span>
+				</p>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
+
+

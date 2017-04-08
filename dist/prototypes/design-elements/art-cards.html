@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ArtTap UI/UX Patterns</title>
+
+	<link rel="stylesheet" type="text/css" href="../../assets/styles/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/styles/bulma.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/styles/site.css">
+	<script type="text/javascript" src="../../assets/scripts/jquery-3.1.1.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+	<h1 class="title is-1">
+		Art Cards
+		<a href="/" class="tag is-warning is-icon">
+			Home
+			<span class="icon is-small">
+				<i class="fa fa-arrow-up"></i>
+			</span>
+		</a>
+	</h1>
+
+	<section class="content is-large">
+		<p>
+			<em>Styles:</em> <tt>src/assets/styles/elements/art-cards.scss</tt>
+			<br>
+			<em>Markup:</em> <tt>src/prototypes/design-elements/art-cards.html</tt>
+			<br>
+			<em>JS:</em> <tt>None</tt>
+		</p>
+	</section>
+
+
+	<div class="box">
+		<h3 class="subtitle is=3">Basic card / Cropped image / proportional width with flexgrid</h3>
+
+			<div class="columns">
+
+				<div class="card media-card is-cropped column is-4">
+					<div class="card-image" style="background-image: url('../../assets/images/artwork/art-4.jpg');">
+						<figure class="image">
+							<img src="../../assets/images/artwork/art-4.jpg" class="superimposed">
+						</figure>
+					</div>
+					<div class="card-content content is-small">
+							<div class="is-pulled-right">
+
+								<div class="heart">
+									<span class="heart-number is-grey">61</span>
+									<span class="icon"><i class="fa fa-heart"></i></span>
+								</div>
+
+							</div>
+							<p class="card-info">
+								<span class="card-brand">John Smith</span>
+								<br />
+								<span class=card-title>Title of Image in Acrylic</span>
+								<br />
+								<span class=card-price>$120</>
+							</p>
+					</div>
+				</div>
+
+				<div class="card media-card is-cropped column is-4">
+					<div class="card-image" style="background-image: url('../../assets/images/artwork/art-3.jpg');">
+						<figure class="image">
+							<img src="../../assets/images/artwork/art-3.jpg" class="superimposed">
+						</figure>
+					</div>
+					<div class="card-content content is-small">
+							<div class="is-pulled-right">
+
+								<div class="heart">
+									<span class="heart-number is-grey">61</span>
+									<span class="icon"><i class="fa fa-heart"></i></span>
+								</div>
+
+							</div>
+							<p class="card-info">
+								<span class="card-brand">John Smith</span>
+								<br />
+								<span class=card-title>Title of Image in Acrylic</span>
+								<br />
+								<span class=card-price>$120</>
+							</p>
+					</div>
+				</div>
+
+				<div class="card media-card is-cropped column is-4">
+					<div class="card-image" style="background-image: url('../../assets/images/artwork/art-2.jpg');">
+						<figure class="image">
+							<img src="../../assets/images/artwork/art-2.jpg" class="superimposed">
+						</figure>
+					</div>
+					<div class="card-content content is-small">
+							<div class="is-pulled-right">
+
+								<div class="heart">
+									<span class="heart-number is-grey">61</span>
+									<span class="icon"><i class="fa fa-heart"></i></span>
+								</div>
+
+							</div>
+							<p class="card-info">
+								<span class="card-brand">John Smith</span>
+								<br />
+								<span class=card-title>Title of Image in Acrylic</span>
+								<br />
+								<span class=card-price>$120</>
+							</p>
+					</div>
+				</div>
+
+		</div> <!-- /columns -->
+	</div>
+
+	<div class="box">
+		<h3 class="subtitle is=3">Basic card / Non-cropped image / proportional width with flexgrid</h3>
+
+			<div class="columns">
+
+				<div class="card media-card column is-4">
+
+					<div class="card-image" style="background-image: url('../../assets/images/artwork/art-4.jpg');">
+						<figure class="image">
+							<img src="../../assets/images/artwork/art-4.jpg" class="superimposed">
+						</figure>
+					</div>
+					<div class="card-content content is-small">
+							<div class="is-pulled-right">
+
+								<div class="heart">
+									<span class="heart-number is-grey">61</span>
+									<span class="icon"><i class="fa fa-heart"></i></span>
+								</div>
+
+							</div>
+
+							<p class="card-info">
+								<span class="card-brand">John Smith</span>
+								<br />
+								<span class=card-title>Title of Image in Acrylic</span>
+								<br />
+								<span class=card-price>$120</>
+							</p>
+					</div>
+
+				</div>
+
+				<div class="card media-card column is-4">
+
+					<div class="card-image" style="background-image: url('../../assets/images/artwork/art-3.jpg');">
+						<figure class="image">
+							<img src="../../assets/images/artwork/art-3.jpg" class="superimposed">
+						</figure>
+					</div>
+					<div class="card-content content is-small">
+							<div class="is-pulled-right">
+
+								<div class="heart">
+									<span class="heart-number is-grey">61</span>
+									<span class="icon"><i class="fa fa-heart"></i></span>
+								</div>
+
+							</div>
+
+							<p class="card-info">
+								<span class="card-brand">John Smith</span>
+								<br />
+								<span class=card-title>Title of Image in Acrylic</span>
+								<br />
+								<span class=card-price>$120</>
+							</p>
+					</div>
+
+				</div>
+
+				<div class="card media-card column is-4">
+
+					<div class="card-image" style="background-image: url('../../assets/images/artwork/art-2.jpg');">
+						<figure class="image">
+							<img src="../../assets/images/artwork/art-2.jpg" class="superimposed">
+						</figure>
+					</div>
+					<div class="card-content content is-small">
+							<div class="is-pulled-right">
+
+								<div class="heart">
+									<span class="heart-number is-grey">61</span>
+									<span class="icon"><i class="fa fa-heart"></i></span>
+								</div>
+
+							</div>
+
+							<p class="card-info">
+								<span class="card-brand">John Smith</span>
+								<br />
+								<span class=card-title>Title of Image in Acrylic</span>
+								<br />
+								<span class=card-price>$120</>
+							</p>
+					</div>
+
+				</div>
+
+		</div> <!-- /columns -->
+	</div>
+
+
+	<div class="box">
+		<h3 class="subtitle is=3">Basic card / Non-cropped image / dynamic width</h3>
+
+		<div class="content">
+			<p>(Currently no responsive breakpoints.)</p>
+		</div>
+
+			<div class="columns">
+
+				<div class="card media-card is-dynamic-width">
+					<div class="card-image" style="background-image: url('../../assets/images/artwork/art-4.jpg');">
+						<figure class="image">
+							<img src="../../assets/images/artwork/art-4.jpg" class="superimposed">
+						</figure>
+					</div>
+					<div class="card-content content is-small">
+							<div class="is-pulled-right">
+
+								<div class="heart">
+									<span class="heart-number is-grey">61</span>
+									<span class="icon"><i class="fa fa-heart"></i></span>
+								</div>
+
+							</div>
+							<p class="card-info">
+								<span class="card-brand">John Smith</span>
+								<br />
+								<span class=card-title>Title of Image in Acrylic</span>
+								<br />
+								<span class=card-price>$120</>
+							</p>
+					</div>
+				</div>
+
+				<div class="card media-card is-dynamic-width">
+					<div class="card-image" style="background-image: url('../../assets/images/artwork/art-4.jpg');">
+						<figure class="image">
+							<img src="../../assets/images/artwork/art-4.jpg" class="superimposed">
+						</figure>
+					</div>
+					<div class="card-content content is-small">
+							<div class="is-pulled-right">
+
+								<div class="heart">
+									<span class="heart-number is-grey">61</span>
+									<span class="icon"><i class="fa fa-heart"></i></span>
+								</div>
+
+							</div>
+							<p class="card-info">
+								<span class="card-brand">Mister McLongname McSummersonsmith</span>
+								<br />
+								<span class=card-title>Title of Image in Acrylic</span>
+								<br />
+								<span class=card-price>$120</>
+							</p>
+					</div>
+				</div>
+
+				<div class="card media-card is-dynamic-width">
+					<div class="card-image" style="background-image: url('../../assets/images/artwork/art-4.jpg');">
+						<figure class="image">
+							<img src="../../assets/images/artwork/art-4.jpg" class="superimposed">
+						</figure>
+					</div>
+					<div class="card-content content is-small">
+							<div class="is-pulled-right">
+
+								<div class="heart">
+									<span class="heart-number is-grey">61</span>
+									<span class="icon"><i class="fa fa-heart"></i></span>
+								</div>
+
+							</div>
+							<p class="card-info">
+								<span class="card-brand">Avo</span>
+								<br />
+								<span class=card-title>Title of Image in Acrylic</span>
+								<br />
+								<span class=card-price>$120</>
+							</p>
+					</div>
+				</div>
+
+
+				<div class="card media-card is-dynamic-width">
+					<div class="card-image" style="background-image: url('../../assets/images/artwork/art-3.jpg');">
+						<figure class="image">
+							<img src="../../assets/images/artwork/art-3.jpg" class="superimposed">
+						</figure>
+					</div>
+					<div class="card-content content is-small">
+							<div class="is-pulled-right">
+
+								<div class="heart">
+									<span class="heart-number is-grey">61</span>
+									<span class="icon"><i class="fa fa-heart"></i></span>
+								</div>
+
+							</div>
+							<p class="card-info">
+								<span class="card-brand">John Smith</span>
+								<br />
+								<span class="card-title is-text-red">Image mostly fits</span>
+								<br />
+								<span class=card-price>$120</>
+							</p>
+					</div>
+				</div>
+
+				<div class="card media-card is-dynamic-width is-wider-than-tall">
+					<div class="card-image" style="background-image: url('../../assets/images/artwork/art-2.jpg');">
+						<figure class="image">
+							<img src="../../assets/images/artwork/art-2.jpg" class="superimposed">
+						</figure>
+					</div>
+					<div class="card-content content is-small">
+							<div class="is-pulled-right">
+
+								<div class="heart">
+									<span class="heart-number is-grey">61</span>
+									<span class="icon"><i class="fa fa-heart"></i></span>
+								</div>
+
+							</div>
+							<p class="card-info">
+								<span class="card-brand">John Smith</span>
+								<br />
+								<span class="card-title is-text-red">Image is wider than tall</span>
+								<br />
+								<span class=card-price>$120</>
+							</p>
+					</div>
+				</div>
+
+
+
+		</div> <!-- /columns -->
+	</div>
+
+
+</div>
+
+</body>
+</html>
