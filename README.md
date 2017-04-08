@@ -116,6 +116,8 @@ Get browsersync for your computer at [https://browsersync.io/](https://browsersy
 
 ## NPM setup
 
+These are just notes; it's not necessary to run these because they're in the `package.json` file.
+
 ```sh
 npm init
 npm install bulma --save
