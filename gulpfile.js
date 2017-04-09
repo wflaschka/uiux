@@ -33,10 +33,12 @@ var buildTargets = {
 var paths = {
 	scripts: [
 		rootSource   + 'assets/scripts/**/*'
+		,'node_modules/nouislider/distribute/*.js'
 		// ,rootSource + 'assets/scripts/validate_*.js'
 	],
 	styles: [
 		rootSource    + 'assets/styles/**/*.css'
+		,'node_modules/nouislider/distribute/*.css'
 		//,rootSource + 'assets/semantic/dist/semantic.min.css'
 	],
 	fonts: [

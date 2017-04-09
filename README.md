@@ -112,7 +112,10 @@ Get browsersync for your computer at [https://browsersync.io/](https://browsersy
             * Artist page
             * Liked page
 
+## Interesting things to look at
 
+* Compass CSS3: http://compass-style.org/reference/compass/css3/
+    * Includes <a href="http://compass-style.org/reference/compass/css3/flexbox/">flexbox directives</a>
 
 ## NPM setup
 
