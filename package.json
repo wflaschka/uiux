@@ -41,6 +41,7 @@
     "sassdoc": "^2.2.1"
   },
   "dependencies": {
-    "bulma": "^0.4.0"
+    "bulma": "^0.4.0",
+    "nouislider": "^9.2.0"
   }
 }

@@ -1,0 +1,220 @@
+$transition-duration: .4s;
+$checkbox-offset: -25px;
+$checkbox-width: 25px;
+$checkbox-height: 25px;
+$checkbox-border: 1px;
+$checkbox-inner-padding: 2px;
+$is-large-multiplier: 1.5;
+
+$color-list: 
+	(red $red)
+	(orange $orange)
+	(yellow $yellow)
+	(green $green)
+	(turquoise $turquoise)
+	(blue $blue)
+	(purple $purple);
+
+
+form.is-search-form {
+
+
+	input {
+		display: none;
+	}
+	label, .checkbox, .radio, .radio + .radio {
+		position: relative;
+		margin-left: ($checkbox-offset * -1) * 1.25;
+		padding-left: ($checkbox-offset * -1) * .25;
+
+		&.is-large {
+			margin-left: ($checkbox-offset * -1) * 1.25 * $is-large-multiplier;
+			padding-left: ($checkbox-offset * -1) * .25 * $is-large-multiplier;
+		}
+	}
+
+	label span::before,
+	label span::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+
+		// margin: 0;
+		padding: 0;
+		margin: auto;
+	}
+	label span::before {
+		left: $checkbox-offset;
+		width: $checkbox-width;
+		height: $checkbox-height;
+		background-color: $white;
+		border: $checkbox-border solid $grey-darker;
+	}
+	label span::after {
+		left: $checkbox-offset + $checkbox-border  + ($checkbox-inner-padding * 1);
+		width: $checkbox-width - ($checkbox-border * 2) - ($checkbox-inner-padding * 2);
+		height: $checkbox-height - ($checkbox-border * 2) - ($checkbox-inner-padding * 2);
+		background-color: $white;
+		transition: background-color $transition-duration;
+	}
+
+	// Fill the input when checked
+	input:checked + span:after {
+		background-color: $grey-darker;
+	}
+
+	// Larger
+	label.is-large span::before {
+		left: ($checkbox-offset) * $is-large-multiplier;
+		width: ($checkbox-width) * $is-large-multiplier;
+		height: ($checkbox-height) * $is-large-multiplier;
+		background-color: $white;
+		border: ($checkbox-border * $is-large-multiplier) solid $grey-darker;
+	}
+	label.is-large span::after {
+		left: ($checkbox-offset + $checkbox-border  + ($checkbox-inner-padding * 1)) * $is-large-multiplier;
+		width: ($checkbox-width - ($checkbox-border * 2) - ($checkbox-inner-padding * 2)) * $is-large-multiplier;
+		height: ($checkbox-height - ($checkbox-border * 2) - ($checkbox-inner-padding * 2)) * $is-large-multiplier;
+		background-color: $white;
+		transition: background-color $transition-duration;
+	}
+	// label.is-large span::before {
+	// 	transform: scale(2);
+	// }
+	// label.is-large span::before {
+	// 	transform: scale(2);
+	// }
+
+	// Color checkboxes (center, and then a border when selected)
+	label.is-color-checkbox-2 {
+		span::before {
+			border-radius: $checkbox-width;
+			border: $checkbox-border solid transparent;
+			transition: border-color $transition-duration;
+		}
+		span::after {
+			border-radius: $checkbox-width;
+		}
+
+
+		&.is-large {
+			span::before {
+				border-radius: $checkbox-width * $is-large-multiplier;
+			}
+			span::after {
+				border-radius: $checkbox-width * $is-large-multiplier;
+			}
+		}
+
+		@each $combo in $color-list {
+			$tag: nth($combo, 1);
+			$val: nth($combo, 2);
+
+			&.is-color-#{$tag} {
+				span::after {
+					background-color: $val;
+				}
+
+				//HERE HERE HERE
+				input:checked + span:before {
+					border-color: $val;
+				}
+			}
+		}
+
+	}
+
+	// Color checkboxes inverted (behaves like regular checkbox)
+	label.is-color-checkbox-1 {
+		span::before {
+			border-radius: $checkbox-width;
+		}
+		span::after {
+			border-radius: $checkbox-width;
+		}
+
+		&.is-large {
+			span::before {
+				border-radius: $checkbox-width * $is-large-multiplier;
+			}
+			span::after {
+				border-radius: $checkbox-width * $is-large-multiplier;
+			}
+		}
+
+		@each $combo in $color-list {
+			$tag: nth($combo, 1);
+			$val: nth($combo, 2);
+
+			&.is-color-#{$tag} {
+				span::before {
+					border-color: $val;
+				}
+
+				//HERE HERE HERE
+				input:checked + span:after {
+					background-color: $val;
+				}
+			}
+		}
+	}
+
+	//
+	// NoUISlider -- change styling
+	/* Handle stripes;
+	*/
+.noUi-horizontal {
+  height: 5px;
+}
+.noUi-target {
+  background: $grey-light;
+  border-radius: 4px;
+  // border: 1px solid #D3D3D3;
+  // box-shadow: inset 0 1px 1px #F0F0F0, 0 3px 6px -5px #BBB;
+  box-shadow: none;
+  border: none;
+}
+.noUi-connect {
+  background: $grey-dark;
+  box-shadow: none;
+  // box-shadow: inset 0 0 3px rgba(51, 51, 51, 0.45);
+  -webkit-transition: background 450ms;
+  transition: background 450ms;
+}
+.noUi-base {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  /* Fix 401 */
+}
+	.noUi-horizontal .noUi-handle {
+		width: 20px;
+		height: 20px;
+		left: -17px;
+		top: -8px;
+	}
+	.noUi-handle {
+		border: 1px solid $grey-dark;
+		border-radius: 100%;
+		background: $grey-dark;
+		cursor: default;
+		box-shadow: none;
+
+		// box-shadow: inset 0 0 1px #FFF, inset 0 1px 7px #EBEBEB, 0 3px 6px -3px #BBB;
+	}
+	.noUi-handle:before,
+	.noUi-handle:after {
+		display: none;
+		// content: "";
+		// display: block;
+		// position: absolute;
+		// height: 14px;
+		// width: 1px;
+		// background: #E8E7E6;
+		// left: 14px;
+		// top: 6px;
+	}
+
+}
