@@ -15,6 +15,14 @@ var sassdoc = require('sassdoc');
 var util = require("gulp-util"); // https://github.com/gulpjs/gulp-util
 var log = util.log;
 
+var less = require('gulp-less');
+var cleancss = require('gulp-clean-css');
+var csscomb = require('gulp-csscomb');
+var rename = require('gulp-rename');
+var LessPluginAutoPrefix = require('less-plugin-autoprefix');
+var autoprefix= new LessPluginAutoPrefix({ browsers: ["last 4 versions"] });
+
+
 // Paths
 var rootTarget = 'dist/';
 var rootSource = 'src/';
@@ -55,6 +63,15 @@ var paths = {
 		rootSource    + 'assets/styles/bulma.sass'
 		,rootSource    + 'assets/styles/site.sass'
 		// ,'node_modules/bulma/sass/**/*.*'
+	],
+	sass: [
+		rootSource    + 'assets/styles/bulma.sass'
+		,rootSource    + 'assets/styles/site.sass'
+		// ,'node_modules/bulma/sass/**/*.*'
+	],
+	less: [
+		rootSource    + 'assets/styles/*.less'
+		,'node_modules/spectre.css/spectre-icons.less'
 	],
 	html: [
 		rootSource    + '**/*.htm?'
@@ -155,25 +172,43 @@ gulp.task('shell', function() {
 		.pipe(gulp.dest(buildTargets.shell));
 });
 
+// Less CSS
+gulp.task('less', function() {
+    gulp.src(paths.less)
+        .pipe(less({
+            plugins: [autoprefix]
+        }))
+        .pipe(csscomb())
+        .pipe(gulp.dest('./dist'))
+        .pipe(cleancss())
+        .pipe(rename({
+            suffix: '.min'
+        }))
+        .pipe(gulp.dest(buildTargets.styles))
+});
+
+
 // Rerun the task when a file changes
 // invoke with: gulp watch
 gulp.task('watch', ['all'], function() {
 	gulp.watch(paths.images, ['images']);
 	gulp.watch(paths.scripts, ['scripts']);
 	gulp.watch(paths.styles, ['styles']);
+	gulp.watch(paths.less, ['less']);
 	gulp.watch(paths.html, ['html']);
 	gulp.watch(paths.fonts, ['fonts']);
 	gulp.watch(paths.pdfs, ['pdfs']);
 	gulp.watch(paths.shell, ['shell']);
 	gulp.watch(rootSource + '**/*.scss', ['sass']);
 	gulp.watch(rootSource + '**/*.sass', ['sass']);
+	gulp.watch(rootSource + '**/*.less', ['less']);
 });
 
 gulp.task('all', function(callback) {
   runSequence(
 	'clean',
 	'images', 'scripts', 'styles',
-	'sass', 'fonts', 'pdfs',
+	'less', 'sass', 'fonts', 'pdfs',
 	'html', 'shell',
 	callback);
 });
