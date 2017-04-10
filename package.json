@@ -38,10 +38,16 @@
     "path": "^0.12.7",
     "relative": "^3.0.2",
     "run-sequence": "^1.2.2",
-    "sassdoc": "^2.2.1"
+    "sassdoc": "^2.2.1",
+    "gulp-clean-css": "^3.0.3",
+    "gulp-csscomb": "^3.0.8",
+    "gulp-less": "^3.3.0",
+    "gulp-rename": "^1.2.2",
+    "less-plugin-autoprefix": "^1.5.1"
   },
   "dependencies": {
     "bulma": "^0.4.0",
-    "nouislider": "^9.2.0"
+    "nouislider": "^9.2.0",
+    "spectre.css": "^0.2.12"
   }
 }
