@@ -70,7 +70,7 @@ var paths = {
 		// ,'node_modules/bulma/sass/**/*.*'
 	],
 	less: [
-		rootSource    + 'assets/styles/*.less'
+		rootSource    + 'assets/styles/spectre.less'
 		,'node_modules/spectre.css/spectre-icons.less'
 	],
 	html: [
