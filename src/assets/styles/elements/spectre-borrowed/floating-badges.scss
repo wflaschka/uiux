@@ -1,6 +1,29 @@
 // file:///Users/flash/Desktop/DOCUMENTATION/spectre/components.html#badges
 
 .badge {
+   position:relative;
+}
+.badge[data-badge]:after {
+	background-clip: padding-box;
+	background: $red;
+	// border-radius:50%;
+	border-radius: 1rem;
+	color: $white;
+	content:attr(data-badge);
+	font-size: $size-small;
+	height: 1rem;
+	line-height: 1;
+	min-width: 1rem;
+	padding: .1rem .2rem;
+	position:absolute;
+	right:-0.5rem;
+	text-align: center;
+	text-align:center;
+	top:-0.5rem;
+	white-space: nowrap;
+}
+
+.badgeX {
 	position: relative;
 	white-space: nowrap;
 

@@ -1,0 +1,30 @@
+// These color variables come from ../bulma-settings.sass
+// We want to define the colors only once and use them everywhere...
+
+$swal2-white:                      $white !default;
+$swal2-black:                      $black !default;
+$swal2-transparent:                rgba($swal2-black, 0) !default;
+
+$swal2-success:                    $success !default;
+$swal2-success-border:             rgba($swal2-success, .2) !default;
+$swal2-error:                      $danger !default;
+$swal2-warning:                    $warning !default;
+$swal2-info:                       $info !default;
+$swal2-question:                   $primary !default;
+
+//$swal2-overlay:                    rgba($swal2-black, .4) !default;
+$swal2-overlay:                    rgba($grey-darker, .2) !default;
+
+$swal2-close-button:               lighten($swal2-black, 80) !default;
+// $swal2-close-button-hover:         #d55 !default;
+$swal2-close-button-hover:         lighten($swal2-black, 90) !default;
+
+$swal2-input-border:               lighten($swal2-black, 85) !default;
+// $swal2-input-border-focus:         lighten($swal2-black, 30) !default;
+$swal2-input-border-focus:         $info !default;
+$swal2-input-box-shadow:           rgba($swal2-black, .06) !default;
+$swal2-input-box-shadow-focus:     none !default;
+
+$swal2-validationerror-background: $red !default;
+$swal2-validationerror-color:      $swal2-white !default;
+

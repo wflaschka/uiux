@@ -48,6 +48,7 @@
   "dependencies": {
     "bulma": "^0.4.0",
     "nouislider": "^9.2.0",
-    "spectre.css": "^0.2.12"
+    "spectre.css": "^0.2.12",
+    "sweetalert2": "^6.6.2"
   }
 }

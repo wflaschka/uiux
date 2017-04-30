@@ -42,11 +42,13 @@ var paths = {
 	scripts: [
 		rootSource   + 'assets/scripts/**/*'
 		,'node_modules/nouislider/distribute/*.js'
+		,'node_modules/sweetalert2/dist/*.js'
 		// ,rootSource + 'assets/scripts/validate_*.js'
 	],
 	styles: [
 		rootSource    + 'assets/styles/**/*.css'
 		,'node_modules/nouislider/distribute/*.css'
+		// ,'node_modules/sweetalert2/dist/*.css'
 		//,rootSource + 'assets/semantic/dist/semantic.min.css'
 	],
 	fonts: [
@@ -62,13 +64,13 @@ var paths = {
 	sass: [
 		rootSource    + 'assets/styles/bulma.sass'
 		,rootSource    + 'assets/styles/site.sass'
+		// ,rootSource   + 'assets/styles/interactive/sweetalert-build.scss' // 20170430 only if we want standalone css for this
 		// ,'node_modules/bulma/sass/**/*.*'
 	],
-	sass: [
-		rootSource    + 'assets/styles/bulma.sass'
-		,rootSource    + 'assets/styles/site.sass'
-		// ,'node_modules/bulma/sass/**/*.*'
-	],
+	// sass: [
+	// 	rootSource    + 'assets/styles/bulma.sass'
+	// 	,rootSource    + 'assets/styles/site.sass'
+	// ],
 	less: [
 		rootSource    + 'assets/styles/spectre.less'
 		,'node_modules/spectre.css/spectre-icons.less'
