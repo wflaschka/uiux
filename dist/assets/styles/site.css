@@ -10339,6 +10339,34 @@ form.is-search-form .noUi-handle:after {
 }
 
 /**
+ * Top panel MoTD
+ */
+@keyframes slide-up-dismiss {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+}
+
+.message.is-motd {
+  background-color: #0a0a0a;
+  border-radius: 0px;
+}
+
+.message.is-motd .message-header {
+  border-radius: 0px;
+}
+
+.message.is-motd.dismissable-close {
+  animation: slide-up-dismiss .2s ease 1;
+  display: none;
+}
+
+/**
  * Include Interactive elements
  */
 /**
