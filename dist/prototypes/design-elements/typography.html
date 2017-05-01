@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ArtTap UI/UX Patterns</title>
+
+	<link rel="stylesheet" type="text/css" href="../../assets/styles/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/styles/bulma.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/styles/site.css">
+	<script type="text/javascript" src="../../assets/scripts/jquery-3.1.1.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+	<h1 class="title is-1">
+		Typography
+		<a href="/" class="tag is-warning is-icon">
+			Home
+			<span class="icon is-small">
+				<i class="fa fa-arrow-up"></i>
+			</span>
+		</a>
+	</h1>
+
+	<section class="content is-large">
+		<p>
+			<em>Styles:</em> <tt>src/assets/styles/elements/typography.scss</tt>
+			<br>
+			<em>Markup:</em> <tt>src/prototypes/design-elements/typography.html</tt>
+		</p>
+		<p>
+			Bulma's <a href="http://bulma.io/documentation/elements/title/" target="_blank">default title definitions</a> have handy <em>subtitle</em> spacings.
+		</p>
+		<p>
+			The <tt>content</tt> container accepts <tt>is-small</tt>, <tt>is-medium</tt> and <tt>is-large</tt> modifiers.
+		</p>
+		<p>
+			Maybe look at header sizings from <a href="https://semantic-ui.com/elements/header.html" target="_blank">Semantic UI</a>?
+		</p>
+
+	</section>
+
+	<div class="box">
+		<h3 class="subtitle is-3">Standard (not in <tt>content</tt>)</h3>
+		<hr>
+			<h1 class="title is-1">How to Advertise Your Listings</h1>
+			<p>(Page title, <tt>&lt;h1 class="title is-1"&gt;</tt>)</p>
+	</div>
+
+	<div class="box">
+		<h3 class="subtitle is-3">Standard (<tt>content</tt>)</h3>
+
+		<div class="content">
+
+			<h1 class="title is-1">How to Advertise Your Listings (h1)</h1>
+			<h3 class="subtitle is-3">Social Media Tips (h3)</h4>
+		 	<hr>
+			<h2 class="title is-2">How to Advertise Your Listings (h2)</h2>
+			<h4 class="subtitle is-4">Social Media Tips (h4)</h4>
+		 	<hr>
+			<h3 class="title is-3">How to Advertise Your Listings (h3)</h3>
+			<h5 class="subtitle is-5">Social Media Tips (h5)</h5>
+		 	<hr>
+			<h4 class="title is-4">How to Advertise Your Listings (h4)</h4>
+			<h6 class="subtitle is-6">Social Media Tips (h6)</h6>
+		 	<hr>
+			<h5 class="title is-5">How to Advertise Your Listings (h5)</h5>
+			<p><span class="icon"><i class="fa fa-arrow-up"></i></span> We'll fix when we get sans-serif face with variations.</p>
+		 	<hr>
+
+			<p class="body is-1">Default body. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p class="body is-2">"Body 2." Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p class="caption">Caption text goes here.</p>
+		</div>
+	</div>
+
+	<div class="box">
+		<h3 class="subtitle is-3">Standard (<tt>content</tt>)</h3>
+
+		<div class="content">
+			<p>Using in-line subheaders like <a href="http://getbootstrap.com/components/#page-header" target="_blank">Bootstrap</a>. Work in progress...</p>
+
+			<h1 class="title is-1">How to Advertise Your Listings (h1) <small>OMG Becky!</small></h1>
+		 	<hr>
+			<h2 class="title is-2">How to Advertise Your Listings (h2) <small>OMG Becky!</small></h2>
+		 	<hr>
+			<h3 class="title is-3">How to Advertise Your Listings (h3) <small>OMG Becky!</small></h3>
+		 	<hr>
+			<h4 class="title is-4">How to Advertise Your Listings (h4) <small>OMG Becky!</small></h4>
+		 	<hr>
+			<h5 class="title is-5">How to Advertise Your Listings (h5)</h5>
+
+		</div>
+	</div>
+
+	<div class="box">
+		<h3 class="subtitle is-3">Medium (Tablet) (<tt>content</tt>)</h3>
+
+		<div class="content is-medium">
+
+			<h1 class="title is-1">How to Advertise Your Listings (h1)</h1>
+			<h4 class="subtitle is-4">Social Media Tips (h4)</h4>
+		 	<hr>
+			<h2 class="title is-2">How to Advertise Your Listings (h2)</h2>
+			<h4 class="subtitle is-4">Social Media Tips (h4)</h4>
+		 	<hr>
+			<h3 class="title is-3">How to Advertise Your Listings (h3)</h3>
+			<h5 class="subtitle is-5">Social Media Tips (h5)</h5>
+		 	<hr>
+			<h4 class="title is-4">How to Advertise Your Listings (h4)</h4>
+			<h6 class="subtitle is-6">Social Media Tips (h6)</h6>
+		 	<hr>
+			<h5 class="title is-5">How to Advertise Your Listings (h5)</h5>
+		 	<hr>
+
+			<p class="body is-1">Default body. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p class="body is-2">"Body 2." Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p class="caption">Caption text goes here.</p>
+		</div>
+	</div>
+
+	<div class="box">
+		<h3 class="subtitle is-3">Large (Tablet / Phone) (<tt>content</tt>)</h3>
+
+		<div class="content is-large">
+			<h1 class="title is-1">How to Advertise Your Listings (h1)</h1>
+			<h4 class="subtitle is-4">Social Media Tips (h4)</h4>
+		 	<hr>
+			<h2 class="title is-2">How to Advertise Your Listings (h2)</h2>
+			<h4 class="subtitle is-4">Social Media Tips (h4)</h4>
+		 	<hr>
+			<h3 class="title is-3">How to Advertise Your Listings (h3)</h3>
+			<h5 class="subtitle is-5">Social Media Tips (h5)</h5>
+		 	<hr>
+			<h4 class="title is-4">How to Advertise Your Listings (h4)</h4>
+			<h6 class="subtitle is-6">Social Media Tips (h6)</h6>
+		 	<hr>
+			<h5 class="title is-5">How to Advertise Your Listings (h5)</h5>
+		 	<hr>
+
+			<p class="body is-1">Default body. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p class="body is-2">"Body 2." Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p class="caption">Caption text goes here.</p>
+		</div>
+	</div>
+
+	<div class="box">
+		<h3 class="subtitle is-3">Small (compressed / legalese) (<tt>content</tt>)</h3>
+		<div class="content is-small">
+
+			<p class="body is-1">Default body. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p class="body is-2">"Body 2." Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+	</div>
+
+
+
+</div>
+
+</body>
+</html>

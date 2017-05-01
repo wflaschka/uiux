@@ -91,6 +91,9 @@ var paths = {
 	less: [
 		rootSource    + 'assets/styles/spectre.less'
 		,rootSource   + 'assets/styles/spectre-carousel/carousels-bulma.less'
+		// ,rootSource   + 'assets/styles/spectre-menu/bulma-menu.less'
+		,rootSource   + 'assets/styles/spectre-menu/bulma-dropdown-menu.less'
+		,rootSource   + 'assets/styles/spectre-avatar/bulma-avatars.less'
 		,'node_modules/spectre.css/spectre-icons.less'
 	],
 	html: [

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ArtTap UI/UX Patterns</title>
+
+	<link rel="stylesheet" type="text/css" href="../../assets/styles/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/styles/bulma.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/styles/site.css">
+	<script type="text/javascript" src="../../assets/scripts/jquery-3.1.1.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+	<h1 class="title is-1">
+		Hearts
+		<a href="/" class="tag is-warning is-icon">
+			Home
+			<span class="icon is-small">
+				<i class="fa fa-arrow-up"></i>
+			</span>
+		</a>
+	</h1>
+
+	<section class="content is-large">
+		<p>
+			<em>Styles:</em> <tt>src/assets/styles/elements/hearts.scss</tt>
+			<br>
+			<em>Markup:</em> <tt>src/prototypes/design-elements/hearts.html</tt>
+			<br>
+			<em>JS:</em> <tt>TBD</tt>
+		</p>
+	</section>
+
+
+	<div class="box">
+		<h3 class="subtitle is=3">Basic</h3>
+
+		<div class="heart">
+			<span class="heart-number is-grey">61</span>
+			<span class="icon"><i class="fa fa-heart"></i></span>
+		</div>
+	</div>
+
+	<div class="box">
+		<h3 class="subtitle is=3">Hearted</h3>
+
+		<div class="heart is-hearted">
+			<span class="heart-number is-grey">62</span>
+			<span class="icon"><i class="fa fa-heart"></i></span>
+		</div>
+	</div>
+
+	<div class="box">
+		<h3 class="subtitle is=3">When clicked</h3>
+
+		<div class="heart" id="heart-when-clicked">
+			<span class="heart-number is-grey">62</span>
+			<span class="icon"><i class="fa fa-heart"></i></span>
+		</div>
+		<script type="text/javascript">
+			$( document ).ready(function() {
+				$('#heart-when-clicked').click(function(){
+					$(this).toggleClass( "is-hearted" );
+					$(this).toggleClass( "is-being-clicked" );
+					setTimeout(function(){
+						$('#heart-when-clicked').removeClass("is-being-clicked");
+					}, 750);
+
+					// Toggle text just for visuals
+					if ($(this).hasClass("is-hearted")) {
+						$(this).find('.heart-number').html("63");
+					} else {
+						$(this).find('.heart-number').html("62");
+					}
+				});
+			});
+		</script>
+	</div>
+
+	<div class="box">
+		<h3 class="subtitle is=3">Mouseover / Tooltip</h3>
+
+		<div class="heart" data-tooltip="62 people have liked this piece">
+			<span class="heart-number is-grey">62</span>
+			<span class="icon"><i class="fa fa-heart"></i></span>
+		</div>
+
+		<p class="help is-danger">
+			NOTE: Need to add delayed tooltip that says "62 people have liked this piece"
+		</p>
+	</div>
+
+
+
+</div>
+
+</body>
+</html>

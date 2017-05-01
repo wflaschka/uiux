@@ -1,5 +1,10 @@
 # Misc notes
 
+* Loupe: http://www.netzgesta.de/loupe/
+* Etalage seems broken now: https://codecanyon.net/item/etalage/180719
+* Slide-in panel: https://codyhouse.co/gem/css-slide-in-panel/
+* "Slide and push menus": http://callmenick.com/post/slide-and-push-menus-with-css3-transitions
+
 ## 20170430
 
 NPM compile to fix:

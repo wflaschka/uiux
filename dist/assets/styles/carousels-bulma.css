@@ -1,0 +1,178 @@
+#bulma-version .button
+{
+    position: relative;
+
+    display: block;
+}
+#bulma-version .text-hide
+{
+    display: none;
+
+    text-indent: -1000px;
+
+    color: transparent;
+}
+#bulma-version .text-hide.hand
+{
+    cursor: pointer;
+}
+#bulma-version .carousel
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    width: 100%;
+
+    background: #f00;
+}
+#bulma-version .carousel .carousel-container
+{
+    position: relative;
+    left: 0;
+
+    height: 100%;
+}
+#bulma-version .carousel .carousel-container::before
+{
+    display: block;
+
+    padding-bottom: 56.25%;
+
+    content: '';
+}
+#bulma-version .carousel .carousel-container .carousel-item
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    margin: 0;
+
+    animation: carousel-slideout 1s ease-in-out 1;
+
+    opacity: 0;
+}
+#bulma-version .carousel .carousel-container .carousel-item:hover .item-prev,
+#bulma-version .carousel .carousel-container .carousel-item:hover .item-next
+{
+    opacity: 1;
+}
+#bulma-version .carousel .carousel-container .item-prev,
+#bulma-version .carousel .carousel-container .item-next
+{
+    position: absolute;
+    z-index: 200;
+    top: 50%;
+
+    transition: all .4s ease;
+    -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+
+    opacity: 0;
+    color: #e7e9ed;
+    border-color: rgba(231, 233, 237, .5);
+    background: rgba(231, 233, 237, .25);
+}
+#bulma-version .carousel .carousel-container .item-prev
+{
+    left: 2rem;
+}
+#bulma-version .carousel .carousel-container .item-next
+{
+    right: 2rem;
+}
+#bulma-version .carousel .carousel-locator:nth-of-type(1):checked ~ .carousel-container .carousel-item:nth-of-type(1),
+#bulma-version .carousel .carousel-locator:nth-of-type(2):checked ~ .carousel-container .carousel-item:nth-of-type(2),
+#bulma-version .carousel .carousel-locator:nth-of-type(3):checked ~ .carousel-container .carousel-item:nth-of-type(3),
+#bulma-version .carousel .carousel-locator:nth-of-type(4):checked ~ .carousel-container .carousel-item:nth-of-type(4)
+{
+    z-index: 100;
+
+    animation: carousel-slidein .75s ease-in-out 1;
+
+    opacity: 1;
+}
+#bulma-version .carousel .carousel-locator:nth-of-type(1):checked ~ .carousel-nav .nav-item:nth-of-type(1),
+#bulma-version .carousel .carousel-locator:nth-of-type(2):checked ~ .carousel-nav .nav-item:nth-of-type(2),
+#bulma-version .carousel .carousel-locator:nth-of-type(3):checked ~ .carousel-nav .nav-item:nth-of-type(3),
+#bulma-version .carousel .carousel-locator:nth-of-type(4):checked ~ .carousel-nav .nav-item:nth-of-type(4)
+{
+    color: #e7e9ed;
+}
+#bulma-version .carousel .carousel-nav
+{
+    position: absolute;
+    z-index: 200;
+    bottom: 1rem;
+    left: 50%;
+
+    display: -ms-flexbox;
+    display: flex;
+
+    width: 20rem;
+
+    -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+#bulma-version .carousel .carousel-nav .nav-item
+{
+    position: relative;
+
+    display: block;
+
+    max-width: 5rem;
+    height: 4rem;
+    margin: .4rem;
+
+    color: rgba(231, 233, 237, .5);
+
+    -ms-flex: 1 0 auto;
+        flex: 1 0 auto;
+}
+#bulma-version .carousel .carousel-nav .nav-item::before
+{
+    position: absolute;
+    top: 2rem;
+
+    display: block;
+
+    width: 100%;
+    height: .3rem;
+
+    content: '';
+
+    background: currentColor;
+}
+@keyframes carousel-slidein
+{
+    0%
+    {
+        transform: translateX(100%);
+    }
+    100%
+    {
+        transform: translateX(0);
+    }
+}
+@keyframes carousel-slideout
+{
+    0%
+    {
+        transform: translateX(0);
+
+        opacity: 1;
+    }
+    100%
+    {
+        transform: translateX(-50%);
+
+        opacity: 1;
+    }
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ArtTap UI/UX Patterns</title>
+
+	<script type="text/javascript" src="../../assets/scripts/jquery-3.1.1.js"></script>
+
+
+	<!-- Spectre to Bulma -->
+	<link rel="stylesheet" type="text/css" href="../../assets/styles/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/styles/bulma.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/styles/site.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/styles/bulma-dropdown-menu.css">
+
+	<!-- Spectre (works) 20170501 -->
+	<!-- <link rel="stylesheet" type="text/css" href="../../assets/styles/spectre.min.css"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="../../assets/styles/spectre-icons.min.css"> -->
+
+	<style>
+/*		#push-panel-right
+		{
+			-webkit-transition: -webkit-transform 0.2s ease-in; 
+			position: absolute; 
+			left: 0; top: 0; 
+			width: 40%; 
+			height: 100%;
+			background: #ffcccc; 
+			-webkit-transform: translate3d(250%,0,0); // hide it outside canvas by move it far to left
+			transform: translate3d(250%,0,0);
+		}
+
+		#push-panel-right.sliding{
+			-webkit-transform: translate3d(150%,0,0); // move back to view
+		}
+
+		#app {
+			-webkit-transition: -webkit-transform 0.2s ease-in;  // smooth move
+		}
+
+		#app.sliding {
+			-webkit-transform: translate3d(-40%,0,0); //move to the right make room for left panel
+		}
+		*/
+
+		#menubtn:hover{
+			background-color: red;
+			color: white;
+		}
+		#menubtn{
+			width:120px; 
+			height:40px; 
+			line-height: 40px;
+			text-align: center;
+			display: block;
+			background-color: gray;
+			border: 1px solid black;
+			margin: 20px;
+		}
+	</style>
+
+
+</head>
+<body>
+
+<div id="app" class="container">
+
+	<h1 class="title is-1">
+		Push-in Panel
+		<a href="/" class="tag is-warning is-icon">
+			Home
+			<span class="icon is-small">
+				<i class="fa fa-arrow-up"></i>
+			</span>
+		</a>
+	</h1>
+
+	<section class="content is-medium">
+		<p>
+			<em>Note:</em> 
+			See <a href="#">xx</a>
+		</p>
+		<p>
+			<em>Markup:</em> <tt>src/prototypes/interactive/push-in.html</tt>
+			<br>
+			<em>css:</em> <tt>src/assets/styles/interactive/push-in.scss</tt>
+		</p>
+
+	</section>
+
+	<div class="box">
+		<h3 class="subtitle is-3">Some content here</h3>
+
+		<div class="content">
+			<p>Content</p>
+			<div id="menubtn" onclick="$('#push-panel-right, #app').toggleClass('sliding')">Slide me</div>
+		</div>
+	</div>
+
+</div> <!-- end main container -->
+
+<!-- Slide-In Panel -->
+<!-- Slide-In Panel -->
+<div id="push-panel-right" onclick="$('#push-panel-right, #app').toggleClass('sliding')"> 
+	<div class="columns">
+		<div class="column is-10 is-offset-1">
+			<h3>
+				Myteezine ver 
+				<span id="version">1.5.0</span>
+				<br> Written by Mytee<br>  
+			</h3> 
+			<h4>
+				Copyright © 2013-2014 
+				<a href="http://intcloud.mobi">IntCloud</a>. 
+				All rights reserved.
+			</h4>
+		</div>
+	</div>
+</div>
+<!-- Slide-In Panel -->
+<!-- Slide-In Panel -->
+
+
+</body>
+</html>
