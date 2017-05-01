@@ -22,6 +22,18 @@ var rename = require('gulp-rename');
 var LessPluginAutoPrefix = require('less-plugin-autoprefix');
 var autoprefix= new LessPluginAutoPrefix({ browsers: ["last 4 versions"] });
 
+// Handle vue files:
+// https://www.npmjs.com/package/gulp-vueify
+// 20170430 ugh might need: https://github.com/vuejs/vueify#configuring-options
+// var fs = require("fs")
+// var browserify = require('browserify')
+// var vueify = require('gulp-vueify');
+
+//oOR:
+// https://www.npmjs.com/package/gulp-vue-module
+// Discussion
+// https://forum-archive.vuejs.org/topic/630/gulp-workflow-for-vue-js
+
 
 // Paths
 var rootTarget = 'dist/';
@@ -29,6 +41,7 @@ var rootSource = 'src/';
 
 var buildTargets = {
 	'scripts'     : rootTarget + 'assets/scripts'
+	, 'vue'       : rootTarget + 'assets/scripts/vue'
 	, 'images'    : rootTarget + 'assets/images'
 	, 'pdfs'      : rootTarget + 'assets/pdfs'
 	, 'styles'    : rootTarget + 'assets/styles'
@@ -42,11 +55,17 @@ var paths = {
 	scripts: [
 		rootSource   + 'assets/scripts/**/*'
 		,'node_modules/nouislider/distribute/*.js'
+		,'node_modules/sweetalert2/dist/*.js'
 		// ,rootSource + 'assets/scripts/validate_*.js'
+	],
+	vue: [
+		// rootSource   + 'assets/scripts/vue-bulma-carousel/**/*.vue'
+		rootSource   + 'assets/scripts/vue-bulma-carousel/src/App.vue'
 	],
 	styles: [
 		rootSource    + 'assets/styles/**/*.css'
 		,'node_modules/nouislider/distribute/*.css'
+		// ,'node_modules/sweetalert2/dist/*.css'
 		//,rootSource + 'assets/semantic/dist/semantic.min.css'
 	],
 	fonts: [
@@ -62,15 +81,19 @@ var paths = {
 	sass: [
 		rootSource    + 'assets/styles/bulma.sass'
 		,rootSource    + 'assets/styles/site.sass'
+		// ,rootSource   + 'assets/styles/interactive/sweetalert-build.scss' // 20170430 only if we want standalone css for this
 		// ,'node_modules/bulma/sass/**/*.*'
 	],
-	sass: [
-		rootSource    + 'assets/styles/bulma.sass'
-		,rootSource    + 'assets/styles/site.sass'
-		// ,'node_modules/bulma/sass/**/*.*'
-	],
+	// sass: [
+	// 	rootSource    + 'assets/styles/bulma.sass'
+	// 	,rootSource    + 'assets/styles/site.sass'
+	// ],
 	less: [
-		rootSource    + 'assets/styles/*.less'
+		rootSource    + 'assets/styles/spectre.less'
+		,rootSource   + 'assets/styles/spectre-carousel/carousels-bulma.less'
+		// ,rootSource   + 'assets/styles/spectre-menu/bulma-menu.less'
+		,rootSource   + 'assets/styles/spectre-menu/bulma-dropdown-menu.less'
+		,rootSource   + 'assets/styles/spectre-avatar/bulma-avatars.less'
 		,'node_modules/spectre.css/spectre-icons.less'
 	],
 	html: [
@@ -117,6 +140,24 @@ gulp.task('scripts', function() {
 gulp.task('styles', function () {
 	return gulp.src(paths.styles)
 		.pipe(gulp.dest(buildTargets.styles));
+});
+
+// VUE -- 20170430 can't get working
+gulp.task('vue', function () {
+	log("    - Generate Vue files " + (new Date()).toString());
+
+	browserify(paths.vue)
+	  .transform(vueify, {
+	    // sass: {
+	      // includePaths: []
+	    // },
+	  })
+	  .bundle()
+	  .pipe(fs.createWriteStream("bundle.js"));
+	return true;
+	// return gulp.src(paths.vue)
+	// .pipe(vueify())
+	// .pipe(gulp.dest(buildTargets.vue));
 });
 
 // SASS
@@ -179,7 +220,7 @@ gulp.task('less', function() {
             plugins: [autoprefix]
         }))
         .pipe(csscomb())
-        .pipe(gulp.dest('./dist'))
+        .pipe(gulp.dest(buildTargets.styles))
         .pipe(cleancss())
         .pipe(rename({
             suffix: '.min'

@@ -1,0 +1,67 @@
+/**
+ * Build sweetalert2 CSS
+**/
+
+// Get colors as defined for BULMA framework
+@import '../bulma-settings.sass';
+
+//xx  Site colors are defined in `../bulma-settings.sass`
+
+// Convert colors to sweetalert variables
+@import 'sweetalert-colors.scss';
+
+// Import the sweetalert CSS
+@import '../../../../node_modules/sweetalert2/src/sweetalert2.scss';
+
+
+//////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
+// Special CSS definitions
+
+// Remove highlight color (for now)
+// github.com/limonte/sweetalert2/issues/268
+[class^='swal2'] {
+  -webkit-tap-highlight-color: none;
+}
+
+// Change popup appearance animation
+// We need to reimport (why!?) animate.scss
+@import "../../../../node_modules/animatewithsass/animate.scss";
+.swal2-show {
+	@include pulse(
+		$duration: .3s,
+		$count: 1,
+		$delay: 0s,
+		$function: ease, 
+		$fill: both
+	);
+}
+
+// 20170430 FIX FIX FIX FIX FIX FIX FIX FIX FIX FIX FIX FIX FIX FIX 
+// WTF, the colors are hardcoded(!!) in sweetalert2.scss
+// Overwrite the hardcoded colors
+
+.swal2-progresssteps {
+	$lightblue: lighten($primary, 90);
+	$blue: $primary;
+
+	.swal2-progresscircle {
+		background: $blue;
+
+		&.swal2-activeprogressstep {
+			background: $blue;
+
+			~ .swal2-progresscircle {
+				background: $lightblue;
+			}
+
+			~ .swal2-progressline {
+				background: $lightblue;
+			}
+		}
+	}
+
+	.swal2-progressline {
+		background: $blue;
+	}
+}

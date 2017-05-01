@@ -26,14 +26,24 @@
 
 // Colors
 // Core colors
-@primary-color: #5764c6;
+
+@color-red: #e85600;
+@color-orange: hsl(42,  100%, 44%);
+@color-yellow: hsl(48,  100%, 67%);
+@color-blue: #260A80;
+@color-green: #007F49;
+@accent-color: @color-orange;
+
+@primary-color: @color-blue;
+// @primary-color: #5764c6;
+// @primary-color: hsl(42,  100%, 44%);
 @primary-color-dark: darken(@primary-color, 3%);
 @primary-color-light: lighten(@primary-color, 3%);
 @secondary-color: lighten(@primary-color, 40%);
 @secondary-color-dark: darken(@secondary-color, 3%);
 @secondary-color-light: lighten(@secondary-color, 3%);
 
-@link-color: @primary-color;
+@link-color: @accent-color;
 @link-color-dark: darken(@link-color, 10%);
 
 // Gray colors
@@ -50,9 +60,10 @@
 @bg-color-light: @light-color;
 
 // Control colors
-@control-color-success: #32b643;
-@control-color-warning: #ffb700;
-@control-color-danger: #e85600;
+@control-color-success: @color-green;
+@control-color-warning: @color-yellow;
+@control-color-error: @color-yellow;
+@control-color-danger: @color-red;
 
 // Other colors
 @code-color: #e06870;

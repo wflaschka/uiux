@@ -1,0 +1,66 @@
+// file:///Users/flash/Desktop/DOCUMENTATION/spectre/components.html#badges
+
+.badge {
+   position:relative;
+}
+.badge[data-badge]:after {
+	background-clip: padding-box;
+	background: $red;
+	// border-radius:50%;
+	border-radius: 1rem;
+	color: $white;
+	content:attr(data-badge);
+	font-size: $size-small;
+	height: 1rem;
+	line-height: 1;
+	min-width: 1rem;
+	padding: .1rem .2rem;
+	position:absolute;
+	right:-0.5rem;
+	text-align: center;
+	text-align:center;
+	top:-0.5rem;
+	white-space: nowrap;
+}
+
+.badgeX {
+	position: relative;
+	white-space: nowrap;
+
+	// &[data-badge], &:not([data-badge]) {
+		&::after {
+			background: $grey;
+			background-clip: padding-box;
+			border: 1 solid $grey-darker;
+			border-radius: 1rem;
+			color: $white;
+			content: attr(data-badge);
+			// display: inline-block;
+			display: block;
+			// transform: translate(-.2rem, -1rem);
+		}
+	// }
+
+	// &[data-badge] {
+	// 	&::after {
+	// 		height: 1rem;
+	// 		min-width: 1rem;
+
+	// 		font-size: $size-small;
+	// 		line-height: 1;
+	// 		padding: .1rem .2rem;
+	// 		text-align: center;
+	// 		white-space: nowrap;
+	// 	}
+	// }
+	// &:not([data-badge]), &[data-badge=''] {
+	// 	&::after {
+	// 		height: .4rem;
+	// 		min-width: .4rem;
+	// 		padding: 0;
+	// 		width: .4rem;
+	// 	}
+	// }
+
+
+}

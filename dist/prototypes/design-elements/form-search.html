@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ArtTap UI/UX Patterns</title>
+
+	<link rel="stylesheet" type="text/css" href="../../assets/styles/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/styles/bulma.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/styles/site.css">
+	<script type="text/javascript" src="../../assets/scripts/jquery-3.1.1.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+	<h1 class="title is-1">
+		Search form elements
+		<a href="/" class="tag is-warning is-icon">
+			Home
+			<span class="icon is-small">
+				<i class="fa fa-arrow-up"></i>
+			</span>
+		</a>
+	</h1>
+
+	<section class="content is-large">
+		<p>
+			<em>Styles:</em> <tt>src/assets/styles/elements/form-search.scss</tt>
+			<br>
+			<em>Markup:</em> <tt>src/prototypes/design-elements/form-search.html</tt>
+		</p>
+		<p>
+			Bulma's <a href="http://bulma.io/documentation/elements/form/" target="_blank">default form definitions</a>.
+		</p>
+
+	</section>
+
+
+	<!-- <div class="box">
+		<h3 class="subtitle is-3">Slider</h3>
+		<p>Experimental (?) HTML5.</p>
+		<hr>
+		    <input type='range' class='range' value="50" min="10" max="100" step="1" />
+	</div> -->
+
+	<div class="box">
+		<h3 class="subtitle is-3">Slider with Min/Max Range</h3>
+		<p>
+			Using <a href="https://refreshless.com/nouislider/">noUISlider</a> (<a href="https://github.com/leongersen/noUiSlider">GitHub</a>).
+		</p>
+		<p>
+			numberMin: <input type="text" id="numberMin">
+			<br />
+			numberMax: <input type="text" id="numberMax">
+		</p>
+		<hr>
+			<script type="text/javascript" src="../../assets/scripts/nouislider.js"></script>
+			<link rel="stylesheet" type="text/css" href="../../assets/styles/nouislider.css">
+
+			<!-- <div id="slider-handles" class="noUi-target noUi-ltr noUi-horizontal">
+				<div class="noUi-base">
+					<div class="noUi-origin">
+						<div class="noUi-handle noUi-handle-lower" data-handle="0" style="z-index: 5;">
+						</div>
+					</div>
+					<div class="noUi-connect" style="left: 0%; right: 0%;"></div>
+					<div class="noUi-origin">
+						<div class="noUi-handle noUi-handle-upper" data-handle="1" style="z-index: 4;">
+						</div>
+					</div>
+				</div>
+			</div> -->
+			<form class="is-search-form" action="#" method="post">
+				<div id="slider-handles" class="noUi-target noUi-ltr noUi-horizontal"></div>
+			</form>
+			<script type="text/javascript">
+				var handlesSlider = document.getElementById('slider-handles');
+
+				noUiSlider.create(handlesSlider, {
+					start: [ 20, 80 ],
+					connect: true,
+					range: {
+						'min': [  10 ],
+						'max': [ 100 ]
+					}
+				});
+
+				var numberMax = document.getElementById('numberMax');
+				var numberMin = document.getElementById('numberMin');
+
+				handlesSlider.noUiSlider.on('update', function( values, handle ) {
+
+					var value = values[handle];
+
+					if ( handle ) {
+						numberMax.value = Math.round(value);
+					} else {
+						numberMin.value = Math.round(value);
+					}
+				});
+
+				numberMin.addEventListener('change', function(){
+					handlesSlider.noUiSlider.set([this.value, null]);
+				});
+
+				numberMax.addEventListener('change', function(){
+					handlesSlider.noUiSlider.set([null, this.value]);
+				});
+			</script>
+	</div>
+
+	<div class="box">
+		<h3 class="subtitle is-3">Color checkbox</h3>
+		<p>With <tt>.is-color-checkbox-2</tt>.</p>
+		<hr>
+		<form class="is-search-form" action="#" method="post">
+			<div class="field">
+				<p class="control">
+					<label class="checkbox is-color-checkbox-2 is-color-red" for="input-3crred">
+						<input type="checkbox" id="input-3crred" name="input-3crred">
+						<span></span>
+						red
+					</label>
+					<label class="checkbox is-color-checkbox-2 is-color-orange" for="input-3crorange">
+						<input type="checkbox" id="input-3crorange" name="input-3crorange">
+						<span></span>
+						orange
+					</label>
+					<label class="checkbox is-color-checkbox-2 is-color-yellow" for="input-3cryellow">
+						<input type="checkbox" id="input-3cryellow" name="input-3cryellow">
+						<span></span>
+						yellow
+					</label>
+					<label class="checkbox is-color-checkbox-2 is-color-green" for="input-3crgreen">
+						<input type="checkbox" id="input-3crgreen" name="input-3crgreen">
+						<span></span>
+						green
+					</label>
+					<label class="checkbox is-color-checkbox-2 is-color-turquoise" for="input-3crturquoise">
+						<input type="checkbox" id="input-3crturquoise" name="input-3crturquoise">
+						<span></span>
+						turquoise
+					</label>
+					<label class="checkbox is-color-checkbox-2 is-color-blue" for="input-3crblue">
+						<input type="checkbox" id="input-3crblue" name="input-3crblue">
+						<span></span>
+						blue
+					</label>
+					<label class="checkbox is-color-checkbox-2 is-color-purple" for="input-3crpurple">
+						<input type="checkbox" id="input-3crpurple" name="input-3crpurple">
+						<span></span>
+						purple
+					</label>
+
+				</p>
+			</div>
+		</form>
+	</div>
+
+	<div class="box">
+		<h3 class="subtitle is-3">Color checkbox</h3>
+		<p>With <tt>.is-color-checkbox-2 .is-large</tt>.</p>
+		<hr>
+		<form class="is-search-form" action="#" method="post">
+			<div class="field">
+				<p class="control">
+					<label class="checkbox is-color-checkbox-2 is-large is-color-red" for="input-3crredlg">
+						<input type="checkbox" id="input-3crredlg" name="input-3crredlg">
+						<span></span>
+					</label>
+					<label class="checkbox is-color-checkbox-2 is-large is-color-orange" for="input-3crorangelg">
+						<input type="checkbox" id="input-3crorangelg" name="input-3crorangelg">
+						<span></span>
+					</label>
+					<label class="checkbox is-color-checkbox-2 is-large is-color-yellow" for="input-3cryellowlg">
+						<input type="checkbox" id="input-3cryellowlg" name="input-3cryellowlg">
+						<span></span>
+					</label>
+					<label class="checkbox is-color-checkbox-2 is-large is-color-green" for="input-3crgreenlg">
+						<input type="checkbox" id="input-3crgreenlg" name="input-3crgreenlg">
+						<span></span>
+					</label>
+					<label class="checkbox is-color-checkbox-2 is-large is-color-turquoise" for="input-3crturquoiselg">
+						<input type="checkbox" id="input-3crturquoiselg" name="input-3crturquoiselg">
+						<span></span>
+					</label>
+					<label class="checkbox is-color-checkbox-2 is-large is-color-blue" for="input-3crbluelg">
+						<input type="checkbox" id="input-3crbluelg" name="input-3crbluelg">
+						<span></span>
+					</label>
+					<label class="checkbox is-color-checkbox-2 is-large is-color-purple" for="input-3crpurplelg">
+						<input type="checkbox" id="input-3crpurplelg" name="input-3crpurplelg">
+						<span></span>
+					</label>
+
+				</p>
+			</div>
+		</form>
+	</div>
+
+
+	<div class="box">
+		<h3 class="subtitle is-3">Color checkbox inverted</h3>
+		<p>With <tt>.is-color-checkbox-1</tt>.</p>
+		<hr>
+
+		<form class="is-search-form" action="#" method="post">
+			<div class="field">
+				<p class="control">
+					<label class="checkbox is-color-checkbox-1 is-color-red" for="input-1crred">
+						<input type="checkbox" id="input-1crred" name="input-1crred">
+						<span></span>
+						red
+					</label>
+					<label class="checkbox is-color-checkbox-1 is-color-orange" for="input-2crorange">
+						<input type="checkbox" id="input-2crorange" name="input-2crorange">
+						<span></span>
+						orange
+					</label>
+					<label class="checkbox is-color-checkbox-1 is-color-yellow" for="input-2cryellow">
+						<input type="checkbox" id="input-2cryellow" name="input-2cryellow">
+						<span></span>
+						yellow
+					</label>
+					<label class="checkbox is-color-checkbox-1 is-color-green" for="input-2crgreen">
+						<input type="checkbox" id="input-2crgreen" name="input-2crgreen">
+						<span></span>
+						green
+					</label>
+					<label class="checkbox is-color-checkbox-1 is-color-turquoise" for="input-2crturquoise">
+						<input type="checkbox" id="input-2crturquoise" name="input-2crturquoise">
+						<span></span>
+						turquoise
+					</label>
+					<label class="checkbox is-color-checkbox-1 is-color-blue" for="input-2crblue">
+						<input type="checkbox" id="input-2crblue" name="input-2crblue">
+						<span></span>
+						blue
+					</label>
+					<label class="checkbox is-color-checkbox-1 is-color-purple" for="input-2crpurple">
+						<input type="checkbox" id="input-2crpurple" name="input-2crpurple">
+						<span></span>
+						purple
+					</label>
+
+				</p>
+			</div>
+		</form>
+	</div>
+
+	<div class="box">
+		<h3 class="subtitle is-3">Checkbox</h3>
+		<hr>
+
+
+		<form class="is-search-form" action="#" method="post">
+			<div class="field">
+				Checkboxes:
+				<p class="control">
+					<label class="checkbox" for="input-1">
+						<input type="checkbox" id="input-1" name="input-1">
+						<span></span>
+						Ketchup
+					</label>
+					<label class="checkbox" for="input-2">
+						<input type="checkbox" id="input-2" name="input-2">
+						<span></span>
+						Mustard
+					</label>
+				</p>
+			</div>
+
+			<div class="field">
+				Radios:
+				<p class="control">
+					<label class="radio">
+						<input type="radio" name="question">
+						<span></span>
+						Yes
+					</label>
+					<label class="radio">
+						<input type="radio" name="question">
+						<span></span>
+						No
+					</label>
+				</p>
+			</div>
+		</form>
+
+	</div>
+
+
+
+
+
+</div>
+
+</body>
+</html>
