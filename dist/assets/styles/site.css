@@ -10379,6 +10379,80 @@ form.is-search-form .noUi-handle:after {
 }
 
 /**
+ * Masonry layout for artwork cards
+ * Container: .masonry
+ */
+.masonryx {
+  display: none;
+}
+
+.masonry {
+  border: 1px solid red;
+  display: flex;
+  flex-flow: column wrap;
+  width: 50rem;
+  height: 130rem;
+}
+
+.masonry .masonry-panel {
+  overflow: hidden;
+  width: 33%;
+}
+
+.masonry .masonry-panel__content img {
+  width: 100%;
+  height: auto;
+  padding: 5px;
+}
+
+/**
+ *
+ *
+ * below is first try
+ * 
+ */
+.masonryZ {
+  background-color: red;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.masonryZ .card {
+  transition: .8s opacity;
+}
+
+.masonryZ:hover .card {
+  opacity: 0.3;
+}
+
+.masonryZ:hover .card:hover {
+  opacity: 1;
+}
+
+.masonryZ .media-card {
+  display: inline-block;
+  height: auto;
+  width: 32%;
+  max-width: 32%;
+  margin: 1rem 1rem 0rem 0rem;
+  border: none;
+  box-shadow: none;
+}
+
+.masonryZ .media-card > figure {
+  height: auto;
+  width: 100%;
+}
+
+.masonryZ .media-card > figure img {
+  box-shadow: 4px 4px 10px #b5b5b5;
+  height: auto;
+  width: 100%;
+}
+
+/**
  * Include Interactive elements
  */
 /**

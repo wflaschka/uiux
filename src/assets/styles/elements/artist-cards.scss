@@ -11,6 +11,7 @@ $artist-card-image-max-width: $artist-card-max-width;
 // $shrink-divisor: 1.5;
 
 .artist-card {
+
 	height: $artist-card-height;
 	min-width: $artist-card-min-width;
 	max-width: $artist-card-max-width;
@@ -30,8 +31,8 @@ $artist-card-image-max-width: $artist-card-max-width;
 				margin-right: 0.5rem;
 			}
 		}
-
 	}
+
 	figure.avatar {
 		margin-right: 0.5rem;
 	}
