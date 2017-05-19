@@ -4,7 +4,8 @@
 
 	// Button level 1
 	&.is-primary {
-		box-shadow: 5px 5px 10px $grey-light;
+		// box-shadow: 5px 5px 10px $grey-light;
+		box-shadow: $primary-box-shadow;
 		text-transform: uppercase;
 		font-weight: bold;
 		&:hover {

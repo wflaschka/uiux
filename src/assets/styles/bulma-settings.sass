@@ -36,7 +36,8 @@ $purple:       hsl(271, 100%, 71%) !default
 $red:          #cc3333 !default
 
 // Typography
-$family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif !default
+// $family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif !default
+$family-sans-serif: "Helvetica Neue", "Helvetica", "Arial", sans-serif !default
 $family-monospace: monospace !default
 $family-serif-title: 'Portrait Web', Georgia;
 
@@ -163,6 +164,15 @@ $colors: (white: ($white, $black), black: ($black, $white), light: ($light, $lig
 // @warn $danger-invert
 // @warn darken($danger-invert, 5%)
 
-
-
 $sizes: $size-1 $size-2 $size-3 $size-4 $size-5 $size-6 !default
+
+
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+// Shadows
+
+$shadow-offset-x: 4px;
+$shadow-offset-y: 4px;
+$shadow-spread: 10px;
+$shadow-color: $grey-light;
+$primary-box-shadow: $shadow-offset-x $shadow-offset-y $shadow-spread $shadow-color;

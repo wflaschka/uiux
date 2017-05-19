@@ -1,6 +1,12 @@
 
 div.heart {
+
 	font-family: $family-sans-serif;
+
+	.heart-number {
+		color: $grey;
+	}
+
 	&:hover .icon .fa {
 		@include pulse(
 			$duration: .5s,
