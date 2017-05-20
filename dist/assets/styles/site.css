@@ -10382,28 +10382,33 @@ form.is-search-form .noUi-handle:after {
  * Masonry layout for artwork cards
  * Container: .masonry
  */
-.masonry-1 {
-  display: none;
-}
-
-.masonry-2 {
-  border: 1px solid red;
+.masonry {
   display: flex;
   flex-flow: column wrap;
   overflow: hidden;
   width: 50rem;
   /**
-	 * Height is crucial or the pieces won't wrap
+	 * Height is crucial or the pieces won't wrap properly.
+	 * Height is normally calculated with JS
 	 */
-  height: 50rem;
+  height: 100rem;
 }
 
-.masonry-2 .masonry-panel {
+.masonry .masonry-panel {
   overflow: hidden;
   width: 33%;
 }
 
-.masonry-2 .media-card {
+.masonry:hover .card {
+  opacity: 0.6;
+}
+
+.masonry:hover .card:hover {
+  opacity: 1;
+}
+
+.masonry .media-card {
+  transition: .3s opacity;
   height: auto;
   width: 100%;
   max-width: 100%;
@@ -10412,12 +10417,12 @@ form.is-search-form .noUi-handle:after {
   box-shadow: none;
 }
 
-.masonry-2 .media-card > figure {
+.masonry .media-card > figure {
   height: auto;
   width: 100%;
 }
 
-.masonry-2 .media-card > figure img {
+.masonry .media-card > figure img {
   box-shadow: 4px 4px 10px #b5b5b5;
   height: auto;
   width: 100%;
