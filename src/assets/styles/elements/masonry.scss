@@ -2,19 +2,31 @@
  * Masonry layout for artwork cards
  * Container: .masonry
  */
+$masonry-media-card-height: 20rem;
+$masonry-media-card-max-width: 100%;
+$masonry-media-card-min-width: 10rem;
+$masonry-media-card-image-max-height: 15rem;
+$masonry-media-card-image-max-width: 100%;
+$masonry-shrink-divisor: 1.5;
 
-.masonryx {
+.masonry-1 {
 	display: none;
 }
 
 // VIA: https://medium.com/@_jh3y/how-to-the-masonry-layout-56f0fe0b19df
-.masonry {
+.masonry-2 {
 	border: 1px solid red;
 	display: flex;
 	flex-flow: column wrap;
+	overflow: hidden;
 	// max-width: 100%;
 	width: 50rem;
-	height: 130rem;
+
+	/**
+	 * Height is crucial or the pieces won't wrap
+	 */
+	// height: 100rem;
+	height: 50rem;
 	// https://www.w3schools.com/cssref/css_units.asp
 	// height: 100vw;
 
@@ -23,19 +35,43 @@
 		width: 33%;
 	}
 
-	.masonry-panel__content img {
-		// width: 50%;
-		// height: 50%;
-		// max-width: 23rem;
-		// width: 23rem;
-		width: 100%;
-		// height: 20rem;
+	.media-card {
+		// display: inline-block; 
+		// background-color: green;
+
 		height: auto;
-		// margin-right: 1em;
-		// 
-		// gutter:
-		padding: 5px;
+		width: $masonry-media-card-max-width;
+		max-width: $masonry-media-card-max-width;
+
+		// margin: 1rem 1rem 0rem 0rem;
+		padding: 1rem;
+		border: none;
+		box-shadow: none;
+
+		>figure {
+			height: auto;
+			width: $masonry-media-card-image-max-width;
+			// display: flex;
+			// align-items: center;
+			
+			img {
+				box-shadow: $primary-box-shadow;
+
+				// Most images but not the wide ones
+				height: auto;
+				width: $masonry-media-card-image-max-width;
+				// margin: 0px auto; //center
+
+				// &.is-wide {
+				// 	display: inline-block;
+				// 	width: $media-card-max-width;
+				// 	height: auto;
+				// 	margin: none;
+				// }
+			}
+		}
 	}
+
 }
 
 // @media (min-width: 430px) {
@@ -68,7 +104,7 @@ $masonry-shrink-divisor: 1.5;
 
 
 
-.masonryZ { 
+.masonry-try1 { 
 	background-color: red;
 	overflow: hidden;
 

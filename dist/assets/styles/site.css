@@ -10382,27 +10382,45 @@ form.is-search-form .noUi-handle:after {
  * Masonry layout for artwork cards
  * Container: .masonry
  */
-.masonryx {
+.masonry-1 {
   display: none;
 }
 
-.masonry {
+.masonry-2 {
   border: 1px solid red;
   display: flex;
   flex-flow: column wrap;
+  overflow: hidden;
   width: 50rem;
-  height: 130rem;
+  /**
+	 * Height is crucial or the pieces won't wrap
+	 */
+  height: 50rem;
 }
 
-.masonry .masonry-panel {
+.masonry-2 .masonry-panel {
   overflow: hidden;
   width: 33%;
 }
 
-.masonry .masonry-panel__content img {
-  width: 100%;
+.masonry-2 .media-card {
   height: auto;
-  padding: 5px;
+  width: 100%;
+  max-width: 100%;
+  padding: 1rem;
+  border: none;
+  box-shadow: none;
+}
+
+.masonry-2 .media-card > figure {
+  height: auto;
+  width: 100%;
+}
+
+.masonry-2 .media-card > figure img {
+  box-shadow: 4px 4px 10px #b5b5b5;
+  height: auto;
+  width: 100%;
 }
 
 /**
@@ -10411,7 +10429,7 @@ form.is-search-form .noUi-handle:after {
  * below is first try
  * 
  */
-.masonryZ {
+.masonry-try1 {
   background-color: red;
   overflow: hidden;
   display: flex;
@@ -10419,19 +10437,19 @@ form.is-search-form .noUi-handle:after {
   flex-wrap: wrap;
 }
 
-.masonryZ .card {
+.masonry-try1 .card {
   transition: .8s opacity;
 }
 
-.masonryZ:hover .card {
+.masonry-try1:hover .card {
   opacity: 0.3;
 }
 
-.masonryZ:hover .card:hover {
+.masonry-try1:hover .card:hover {
   opacity: 1;
 }
 
-.masonryZ .media-card {
+.masonry-try1 .media-card {
   display: inline-block;
   height: auto;
   width: 32%;
@@ -10441,12 +10459,12 @@ form.is-search-form .noUi-handle:after {
   box-shadow: none;
 }
 
-.masonryZ .media-card > figure {
+.masonry-try1 .media-card > figure {
   height: auto;
   width: 100%;
 }
 
-.masonryZ .media-card > figure img {
+.masonry-try1 .media-card > figure img {
   box-shadow: 4px 4px 10px #b5b5b5;
   height: auto;
   width: 100%;
