@@ -1,149 +1,105 @@
 /**
- * Card: media-card
+ * Artwork Card: .media-card
  */
 
-div.media-card {
-	height: 20rem;
+$media-card-height: 20rem;
+$media-card-max-width: 15rem;
+$media-card-min-width: 10rem;
+$media-card-image-max-height: 15rem;
+$media-card-image-max-width: $media-card-max-width;
+$shrink-divisor: 1.5;
+
+.media-card,
+.artist-card {
+	height: $media-card-height;
+	min-width: $media-card-min-width;
+	max-width: $media-card-max-width;
+
+	margin: 0rem 1rem 0rem 0rem;
 
 	border: none;
 	box-shadow: none;
 
-	/**
-	 * Changes when the card is hovered
-	 */
-	&:hover .card-info {
+	// Change font color when the card is hovered
+	&:hover .card-content {
+		.card-info, .heart .heart-number {
 		color: $grey-dark;
-	}
-
-	.card-info {
-		color: $grey-light;
-		max-width: 75%;
-		text-overflow: ellipsis;
-		overflow: hidden;
-		white-space: nowrap;
-		transition: color 0.4s;
-
-		.card-brand {
-			font-weight: bold;
-		}
-		.card-title {
-			font-style: italic;
-		}
-		.card-price {
-			font-family: $family-sans-serif;
 		}
 	}
 
-	div.card-content {
-		padding: 10px 10px 0px 10px;
-	}
+	.card-content {
+		padding: 10px 0px 0px 0px;
 
-	div.card-image {
-		height: 15rem;
-		background-size: contain;
-		overflow: hidden;
-		background-position: center center;
-		background-repeat: no-repeat;
-	}
-	figure.image {
-		display: none;
-		transition: opacity 0.4s;
-
-		img {
-			transition: opacity 0.4s;
-		}
-	}
-
-	// Dynamic width version of basic card
-	&.is-dynamic-width {
-		max-width: 18rem;
-		min-width: 12rem;
-		margin-right: 2rem;
-
-		div.card-image {
-			height: 15rem;
-			background-image: none !important;
-			// border: 1px solid green;
-
-			figure.image {
-				height: inherit;
-				width: inherit;
-				display: block;
-
-				// border: 1px solid red;
-
-				img {
-					margin: 0 auto 0 auto;
-					height: inherit;
-					width: auto;
-				}
-			}
-		}
-
-		&.is-wider-than-tall {
-			div.card-image {
-				figure.image {
-					display: flex;
-					align-items: center;
-					justify-content: center;
-					img {
-						height: auto;
-						width: inherit;
-					}
-				}
-			}
-		}
-
-	}
-
-
-	// Cropped version of basic card
-	&.is-cropped {
-
-		div.card-image {
-			height: 15rem;
-			background-size: cover;
+		.card-info {
+			color: $grey;
+			max-width: 85%;
+			text-overflow: ellipsis;
 			overflow: hidden;
-			background-position: center center;
-			background-repeat: no-repeat;
-		}
+			white-space: nowrap;
+			transition: color 0.4s;
 
-		figure.image {
-			display: block;
-			height: inherit;
-			overflow: clip;
-			opacity: .7;
-			background-image: url("../images/icon-crop.png");
-			background-position-x: 95%;
-			background-position-y: 95%;
-			background-size: 2em;
-			background-repeat: no-repeat;
-
-			img.superimposed {
-				opacity: 0;
-				margin-top: 1em;
-				margin-right: 1em;
-
-			    height: auto; 
-			    width: auto; 
-				max-width:  90%; 
-				max-height: 90%;
-
-				float: right;
-				box-shadow: -2px -2px 15px white, 2px 2px 15px white,
-							2px -2px 15px white, -2px 2px 15px white;
+			.card-brand {
+				font-weight: bold;
+			}
+			.card-title {
+				font-style: italic;
+			}
+			.card-price {
 			}
 		}
 
-		&:hover figure.image img.superimposed {
-			// display: block;
-			opacity: 1.0;
-		}
-		&:hover figure.image {
-			opacity: 1.0;
-			background-image: none;
-		}
 	}
 
+	>figure {
+		height: $media-card-image-max-height;
+		display: flex;
+		align-items: center;
+		
+		img {
+			box-shadow: $primary-box-shadow;
 
+			// Most images but not the wide ones
+			height: $media-card-image-max-height;
+			width: auto;
+			margin: 0px auto; //center
+
+			&.is-wide {
+				display: inline-block;
+				width: $media-card-max-width;
+				height: auto;
+				margin: none;
+			}
+		}
+	}
+}
+
+/**
+ * Smaller version of artwork card, 
+ * e.g. "related artwork" lists
+ *
+ * TODO: Figure out proper semantic clas tag to use
+ */
+.is-smaller-artwork .media-card, .media-card.is-smaller,
+.is-related-artwork .media-card, .media-card.is-related {
+	height: $media-card-height / $shrink-divisor;
+	min-width: $media-card-min-width / $shrink-divisor;
+	max-width: $media-card-max-width / $shrink-divisor;
+
+	margin: 0rem (1rem / $shrink-divisor) 0rem 0rem;
+
+	.card-content {
+		font-size: 70%;
+	}
+
+	figure {
+		height: $media-card-image-max-height / $shrink-divisor;
+		
+		img {
+			height: $media-card-image-max-height / $shrink-divisor;
+
+			&.is-wide {
+				width: $media-card-max-width / $shrink-divisor;
+			}
+		}
+	}	
 }

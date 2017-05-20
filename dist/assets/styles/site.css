@@ -9604,7 +9604,11 @@ tt {
  * Include elements
  */
 div.heart {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+div.heart .heart-number {
+  color: #7a7a7a;
 }
 
 div.heart:hover .icon .fa {
@@ -9693,140 +9697,148 @@ div.heart.is-being-clicked .icon .fa {
 }
 
 /**
- * Card: media-card
+ * Artwork Card: .media-card
  */
-div.media-card {
+.media-card,
+.artist-card {
   height: 20rem;
+  min-width: 10rem;
+  max-width: 15rem;
+  margin: 0rem 1rem 0rem 0rem;
   border: none;
   box-shadow: none;
-  /**
-	 * Changes when the card is hovered
-	 */
 }
 
-div.media-card:hover .card-info {
+.media-card:hover .card-content .card-info, .media-card:hover .card-content .heart .heart-number,
+.artist-card:hover .card-content .card-info,
+.artist-card:hover .card-content .heart .heart-number {
   color: #4a4a4a;
 }
 
-div.media-card .card-info {
-  color: #b5b5b5;
-  max-width: 75%;
+.media-card .card-content,
+.artist-card .card-content {
+  padding: 10px 0px 0px 0px;
+}
+
+.media-card .card-content .card-info,
+.artist-card .card-content .card-info {
+  color: #7a7a7a;
+  max-width: 85%;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
   transition: color 0.4s;
 }
 
-div.media-card .card-info .card-brand {
+.media-card .card-content .card-info .card-brand,
+.artist-card .card-content .card-info .card-brand {
   font-weight: bold;
 }
 
-div.media-card .card-info .card-title {
+.media-card .card-content .card-info .card-title,
+.artist-card .card-content .card-info .card-title {
   font-style: italic;
 }
 
-div.media-card .card-info .card-price {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-}
-
-div.media-card div.card-content {
-  padding: 10px 10px 0px 10px;
-}
-
-div.media-card div.card-image {
+.media-card > figure,
+.artist-card > figure {
   height: 15rem;
-  background-size: contain;
-  overflow: hidden;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-
-div.media-card figure.image {
-  display: none;
-  transition: opacity 0.4s;
-}
-
-div.media-card figure.image img {
-  transition: opacity 0.4s;
-}
-
-div.media-card.is-dynamic-width {
-  max-width: 18rem;
-  min-width: 12rem;
-  margin-right: 2rem;
-}
-
-div.media-card.is-dynamic-width div.card-image {
-  height: 15rem;
-  background-image: none !important;
-}
-
-div.media-card.is-dynamic-width div.card-image figure.image {
-  height: inherit;
-  width: inherit;
-  display: block;
-}
-
-div.media-card.is-dynamic-width div.card-image figure.image img {
-  margin: 0 auto 0 auto;
-  height: inherit;
-  width: auto;
-}
-
-div.media-card.is-dynamic-width.is-wider-than-tall div.card-image figure.image {
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
-div.media-card.is-dynamic-width.is-wider-than-tall div.card-image figure.image img {
-  height: auto;
-  width: inherit;
-}
-
-div.media-card.is-cropped div.card-image {
+.media-card > figure img,
+.artist-card > figure img {
+  box-shadow: 4px 4px 10px #b5b5b5;
   height: 15rem;
-  background-size: cover;
-  overflow: hidden;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-
-div.media-card.is-cropped figure.image {
-  display: block;
-  height: inherit;
-  overflow: clip;
-  opacity: .7;
-  background-image: url("../images/icon-crop.png");
-  background-position-x: 95%;
-  background-position-y: 95%;
-  background-size: 2em;
-  background-repeat: no-repeat;
-}
-
-div.media-card.is-cropped figure.image img.superimposed {
-  opacity: 0;
-  margin-top: 1em;
-  margin-right: 1em;
-  height: auto;
   width: auto;
-  max-width: 90%;
-  max-height: 90%;
-  float: right;
-  box-shadow: -2px -2px 15px white, 2px 2px 15px white, 2px -2px 15px white, -2px 2px 15px white;
+  margin: 0px auto;
 }
 
-div.media-card.is-cropped:hover figure.image img.superimposed {
-  opacity: 1.0;
+.media-card > figure img.is-wide,
+.artist-card > figure img.is-wide {
+  display: inline-block;
+  width: 15rem;
+  height: auto;
+  margin: none;
 }
 
-div.media-card.is-cropped:hover figure.image {
-  opacity: 1.0;
-  background-image: none;
+/**
+ * Smaller version of artwork card, 
+ * e.g. "related artwork" lists
+ *
+ * TODO: Figure out proper semantic clas tag to use
+ */
+.is-smaller-artwork .media-card, .media-card.is-smaller,
+.is-related-artwork .media-card, .media-card.is-related {
+  height: 13.33333rem;
+  min-width: 6.66667rem;
+  max-width: 10rem;
+  margin: 0rem 0.66667rem 0rem 0rem;
+}
+
+.is-smaller-artwork .media-card .card-content, .media-card.is-smaller .card-content,
+.is-related-artwork .media-card .card-content, .media-card.is-related .card-content {
+  font-size: 70%;
+}
+
+.is-smaller-artwork .media-card figure, .media-card.is-smaller figure,
+.is-related-artwork .media-card figure, .media-card.is-related figure {
+  height: 10rem;
+}
+
+.is-smaller-artwork .media-card figure img, .media-card.is-smaller figure img,
+.is-related-artwork .media-card figure img, .media-card.is-related figure img {
+  height: 10rem;
+}
+
+.is-smaller-artwork .media-card figure img.is-wide, .media-card.is-smaller figure img.is-wide,
+.is-related-artwork .media-card figure img.is-wide, .media-card.is-related figure img.is-wide {
+  width: 10rem;
+}
+
+/**
+ * Artist Card: .artist-card
+ * Subclassed off of .media-card (art-cards.scss)
+ */
+.artist-card {
+  height: 20rem;
+  min-width: 10rem;
+  max-width: 20rem;
+  box-shadow: 4px 4px 10px #b5b5b5;
+  margin: 0rem 1rem 0rem 0rem;
+}
+
+.artist-card .card-content {
+  padding: 1rem 0px 0px 0px;
+  text-overflow: ellipsis;
+  margin: 0 auto;
+}
+
+.artist-card .card-content .card-info .card-following, .artist-card .card-content .card-info .card-views {
+  margin-right: 0.5rem;
+}
+
+.artist-card figure.avatar {
+  margin-right: 0.5rem;
+}
+
+.artist-card > figure {
+  height: 13rem;
+  width: auto;
+}
+
+.artist-card > figure img {
+  box-shadow: none;
+  height: 13rem;
+}
+
+.artist-card > figure img.is-wide {
+  width: 20rem;
 }
 
 .tag {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
 .tag.is-system {
@@ -9956,7 +9968,7 @@ h1.title.is-5, h2.title.is-5, h3.title.is-5, h4.title.is-5, h5.title.is-5, h6.ti
 }
 
 h1.subtitle, h2.subtitle, h3.subtitle, h4.subtitle, h5.subtitle, h6.subtitle {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif !important;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif !important;
   color: rgba(74, 74, 74, 0.9) !important;
 }
 
@@ -9965,7 +9977,7 @@ h1.title small, h1.subtitle small, h2.title small, h2.subtitle small, h3.title s
   font-size: 60%;
   letter-spacing: -1px;
   text-transform: none;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-style: normal;
 }
 
@@ -9984,7 +9996,7 @@ p.caption {
 }
 
 .button.is-primary {
-  box-shadow: 5px 5px 10px #b5b5b5;
+  box-shadow: 4px 4px 10px #b5b5b5;
   text-transform: uppercase;
   font-weight: bold;
 }
@@ -10364,6 +10376,103 @@ form.is-search-form .noUi-handle:after {
 .message.is-motd.dismissable-close {
   animation: slide-up-dismiss .2s ease 1;
   display: none;
+}
+
+/**
+ * Masonry layout for artwork cards
+ * Container: .masonry
+ */
+.masonry {
+  display: flex;
+  flex-flow: column wrap;
+  overflow: hidden;
+  width: 50rem;
+  /**
+	 * Height is crucial or the pieces won't wrap properly.
+	 * Height is normally calculated with JS
+	 */
+  height: 100rem;
+}
+
+.masonry .masonry-panel {
+  overflow: hidden;
+  width: 33%;
+}
+
+.masonry:hover .card {
+  opacity: 0.6;
+}
+
+.masonry:hover .card:hover {
+  opacity: 1;
+}
+
+.masonry .media-card {
+  transition: .3s opacity;
+  height: auto;
+  width: 100%;
+  max-width: 100%;
+  padding: 1rem;
+  border: none;
+  box-shadow: none;
+}
+
+.masonry .media-card > figure {
+  height: auto;
+  width: 100%;
+}
+
+.masonry .media-card > figure img {
+  box-shadow: 4px 4px 10px #b5b5b5;
+  height: auto;
+  width: 100%;
+}
+
+/**
+ *
+ *
+ * below is first try
+ * 
+ */
+.masonry-try1 {
+  background-color: red;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.masonry-try1 .card {
+  transition: .8s opacity;
+}
+
+.masonry-try1:hover .card {
+  opacity: 0.3;
+}
+
+.masonry-try1:hover .card:hover {
+  opacity: 1;
+}
+
+.masonry-try1 .media-card {
+  display: inline-block;
+  height: auto;
+  width: 32%;
+  max-width: 32%;
+  margin: 1rem 1rem 0rem 0rem;
+  border: none;
+  box-shadow: none;
+}
+
+.masonry-try1 .media-card > figure {
+  height: auto;
+  width: 100%;
+}
+
+.masonry-try1 .media-card > figure img {
+  box-shadow: 4px 4px 10px #b5b5b5;
+  height: auto;
+  width: 100%;
 }
 
 /**

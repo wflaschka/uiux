@@ -1,0 +1,169 @@
+/**
+ * Masonry layout for artwork cards
+ * Container: .masonry
+ */
+
+$masonry-media-card-max-width: 100%;
+$masonry-media-card-image-max-width: 100%;
+
+// VIA: https://medium.com/@_jh3y/how-to-the-masonry-layout-56f0fe0b19df
+.masonry {
+	display: flex;
+	flex-flow: column wrap;
+	overflow: hidden;
+	width: 50rem;
+
+	/**
+	 * Height is crucial or the pieces won't wrap properly.
+	 * Height is normally calculated with JS
+	 */
+	// https://www.w3schools.com/cssref/css_units.asp
+	// height: 100vw;
+	// height: 50rem;
+	height: 100rem;
+
+	.masonry-panel {
+		overflow: hidden;
+		width: 33%;
+	}
+
+	&:hover { 
+		.card {
+			opacity: 0.6; 
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+
+	.media-card {
+		transition: .3s opacity;
+
+		height: auto;
+		width: $masonry-media-card-max-width;
+		max-width: $masonry-media-card-max-width;
+
+		padding: 1rem; // Gutter around items
+		border: none;
+		box-shadow: none;
+
+		>figure {
+			height: auto;
+			width: $masonry-media-card-image-max-width;
+			
+			img {
+				box-shadow: $primary-box-shadow;
+
+				height: auto;
+				width: $masonry-media-card-image-max-width;
+				// margin: 0px auto; //center
+
+				// &.is-wide {
+				// 	display: inline-block;
+				// 	width: $media-card-max-width;
+				// 	height: auto;
+				// 	margin: none;
+				// }
+			}
+		}
+	}
+
+}
+
+// @media (min-width: 430px) {
+//   .masonry-panel { width: 100%; }
+// }
+// @media (min-width: 768px) {
+//   .masonry-panel { width: 50%; }
+// }
+// @media (min-width: 992px) {
+//   .masonry-panel { width:  33.333333333333336%; }
+// }
+// @media (min-width: 1500px) {
+//   .masonry-panel { width: 25%; }
+// }
+
+
+/**
+ *
+ *
+ * below is first try
+ * 
+ */
+
+$masonry-media-card-height: 20rem;
+$masonry-media-card-max-width: 32%;
+$masonry-media-card-min-width: 10rem;
+$masonry-media-card-image-max-height: 15rem;
+$masonry-media-card-image-max-width: 100%;
+$masonry-shrink-divisor: 1.5;
+
+
+
+.masonry-try1 { 
+	background-color: red;
+	overflow: hidden;
+
+
+	display: flex; 
+	flex-direction: column; 
+	flex-wrap: wrap;
+	// height: 100vw;
+	// max-height: 800px;
+	// font-size: 0;  
+
+	.card {  
+		// width: 33.3%;
+		transition: .8s opacity;
+	}
+
+	&:hover { 
+		.card {
+			opacity: 0.3; 
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+
+	.media-card {
+		display: inline-block; 
+
+		height: auto;
+		width: $masonry-media-card-max-width;
+		max-width: $masonry-media-card-max-width;
+
+		margin: 1rem 1rem 0rem 0rem;
+		border: none;
+		box-shadow: none;
+
+		>figure {
+			height: auto;
+			width: $masonry-media-card-image-max-width;
+			// display: flex;
+			// align-items: center;
+			
+			img {
+				box-shadow: $primary-box-shadow;
+
+				// Most images but not the wide ones
+				height: auto;
+				width: $masonry-media-card-image-max-width;
+				// margin: 0px auto; //center
+
+				// &.is-wide {
+				// 	display: inline-block;
+				// 	width: $media-card-max-width;
+				// 	height: auto;
+				// 	margin: none;
+				// }
+			}
+		}
+	}
+
+
+}
+
+
