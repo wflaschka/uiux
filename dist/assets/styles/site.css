@@ -10033,19 +10033,51 @@ form.is-search-form {
 	*/
 }
 
+form.is-search-form .nav-item.dropdown {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+form.is-search-form .nav-item.dropdown > .button.dropdown-toggle {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+form.is-search-form .nav-item.dropdown aside.menu {
+  font-size: 70%;
+  box-shadow: 4px 4px 10px #b5b5b5;
+  padding: 0.25rem;
+  margin-top: none;
+  white-space: nowrap;
+}
+
+form.is-search-form .nav-item.dropdown aside.menu ul.menu-list {
+  list-style: none;
+  margin: 0px;
+}
+
 form.is-search-form input {
   display: none;
 }
 
+form.is-search-form input[type=text] {
+  display: inherit;
+}
+
+form.is-search-form input[type=text].is-dollar-input {
+  width: 40%;
+  display: inline-block;
+}
+
 form.is-search-form label, form.is-search-form .checkbox, form.is-search-form .radio, form.is-search-form .radio + .radio {
   position: relative;
-  margin-left: 31.25px;
-  padding-left: 6.25px;
+  margin-left: 18.75px;
+  padding-left: 3.75px;
 }
 
 form.is-search-form label.is-large, form.is-search-form .checkbox.is-large, form.is-search-form .radio.is-large, form.is-search-form .radio + .radio.is-large {
-  margin-left: 46.875px;
-  padding-left: 9.375px;
+  margin-left: 28.125px;
+  padding-left: 5.625px;
 }
 
 form.is-search-form label span::before,
@@ -10059,17 +10091,17 @@ form.is-search-form label span::after {
 }
 
 form.is-search-form label span::before {
-  left: -25px;
-  width: 25px;
-  height: 25px;
+  left: -15px;
+  width: 15px;
+  height: 15px;
   background-color: white;
   border: 1px solid #363636;
 }
 
 form.is-search-form label span::after {
-  left: -22px;
-  width: 19px;
-  height: 19px;
+  left: -12px;
+  width: 9px;
+  height: 9px;
   background-color: white;
   transition: background-color 0.4s;
 }
@@ -10079,37 +10111,37 @@ form.is-search-form input:checked + span:after {
 }
 
 form.is-search-form label.is-large span::before {
-  left: -37.5px;
-  width: 37.5px;
-  height: 37.5px;
+  left: -22.5px;
+  width: 22.5px;
+  height: 22.5px;
   background-color: white;
   border: 1.5px solid #363636;
 }
 
 form.is-search-form label.is-large span::after {
-  left: -33px;
-  width: 28.5px;
-  height: 28.5px;
+  left: -18px;
+  width: 13.5px;
+  height: 13.5px;
   background-color: white;
   transition: background-color 0.4s;
 }
 
 form.is-search-form label.is-color-checkbox-2 span::before {
-  border-radius: 25px;
+  border-radius: 15px;
   border: 1px solid transparent;
   transition: border-color 0.4s;
 }
 
 form.is-search-form label.is-color-checkbox-2 span::after {
-  border-radius: 25px;
+  border-radius: 15px;
 }
 
 form.is-search-form label.is-color-checkbox-2.is-large span::before {
-  border-radius: 37.5px;
+  border-radius: 22.5px;
 }
 
 form.is-search-form label.is-color-checkbox-2.is-large span::after {
-  border-radius: 37.5px;
+  border-radius: 22.5px;
 }
 
 form.is-search-form label.is-color-checkbox-2.is-color-red span::after {
@@ -10169,19 +10201,19 @@ form.is-search-form label.is-color-checkbox-2.is-color-purple input:checked + sp
 }
 
 form.is-search-form label.is-color-checkbox-1 span::before {
-  border-radius: 25px;
+  border-radius: 15px;
 }
 
 form.is-search-form label.is-color-checkbox-1 span::after {
-  border-radius: 25px;
+  border-radius: 15px;
 }
 
 form.is-search-form label.is-color-checkbox-1.is-large span::before {
-  border-radius: 37.5px;
+  border-radius: 22.5px;
 }
 
 form.is-search-form label.is-color-checkbox-1.is-large span::after {
-  border-radius: 37.5px;
+  border-radius: 22.5px;
 }
 
 form.is-search-form label.is-color-checkbox-1.is-color-red span::before {

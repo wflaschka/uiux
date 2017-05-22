@@ -1,10 +1,20 @@
+// $transition-duration: .4s;
+// $checkbox-offset: -25px;
+// $checkbox-width: 25px;
+// $checkbox-height: 25px;
+// $checkbox-border: 1px;
+// $checkbox-inner-padding: 2px;
+// $is-large-multiplier: 1.5;
+
+// 20170522
 $transition-duration: .4s;
-$checkbox-offset: -25px;
-$checkbox-width: 25px;
-$checkbox-height: 25px;
+$checkbox-offset: -15px;
+$checkbox-width: 15px;
+$checkbox-height: 15px;
 $checkbox-border: 1px;
 $checkbox-inner-padding: 2px;
 $is-large-multiplier: 1.5;
+
 
 $color-list: 
 	(red $red)
@@ -14,15 +24,69 @@ $color-list:
 	(turquoise $turquoise)
 	(blue $blue)
 	(purple $purple);
+$shadow-offset-x: 4px;
+$shadow-offset-y: 4px;
+$shadow-spread: 10px;
+$shadow-color: $grey-light;
+$primary-box-shadow: $shadow-offset-x $shadow-offset-y $shadow-spread $shadow-color;
 
 
 form.is-search-form {
 
+	.nav-item.dropdown {
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+
+		>.button.dropdown-toggle {
+			margin-bottom: 0px;
+			padding-bottom: 0px;
+			// border: 1px solid red;
+
+			// &.active {
+			// 	padding-bottom: 0px;
+			// }
+
+		}
+		aside.menu {
+			font-size: 70%;
+
+			// border: 1px solid blue;
+			box-shadow: $primary-box-shadow;
+			// line-height: 2;
+
+			padding: 0.25rem;
+			margin-top: none;
+			white-space: nowrap;
+
+			ul.menu-list {
+				list-style: none;
+				margin: 0px;
+
+				// TODO: Fix... Item is floating inward when p.control wrapper is missing; see `label` def below. 20170522 064902
+				// label, li {
+				// 	margin-left: none;
+				// 	padding-left: none;
+				// }
+			}
+		}
+	}
 
 	input {
 		display: none;
 	}
+	input[type=text] {
+		display: inherit;
+
+		&.is-dollar-input {
+			width: 40%;
+			display: inline-block;
+		}
+	}
+
+
 	label, .checkbox, .radio, .radio + .radio {
+	// ^^ WAS 20170522 064821, but was pushing in the line for dropdowns. Trying:
+	// .checkbox, .radio, .radio + .radio {
 		position: relative;
 		margin-left: ($checkbox-offset * -1) * 1.25;
 		padding-left: ($checkbox-offset * -1) * .25;
