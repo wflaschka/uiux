@@ -92,6 +92,23 @@ form.is-search-form {
 			transition: background-color $transition-duration;
 		}
 
+		// experiment 20170523 064407
+		i::before {
+			display: block;
+			width: $checkbox-width;
+			height: $checkbox-height;
+			background-color: $white;
+			border: $checkbox-border solid $grey-darker;
+		}
+		i::after {
+			display: block;
+			width: $checkbox-width - ($checkbox-border * 2) - ($checkbox-inner-padding * 2);
+			height: $checkbox-height - ($checkbox-border * 2) - ($checkbox-inner-padding * 2);
+			background-color: $white;
+			transition: background-color $transition-duration;
+		}
+
+
 		// Larger checkboxes / radios
 		&.is-large {
 			span::before {
@@ -165,20 +182,21 @@ form.is-search-form {
 	// BASSIC COLOR CHECKBOXES COLOR CHECKBOXES COLOR CHECKBOXES COLOR CHECKBOXES 
 	// Color checkboxes (ball in center, then a border when selected)
 	label.is-color-checkbox {
-		span::before {
+		// the <i> stuff is for an experiment 20170523 064325
+		span::before, i::before {
 			border-radius: $checkbox-width;
 			border: $checkbox-border solid transparent;
 			transition: border-color $transition-duration;
 		}
-		span::after {
+		span::after, i::after {
 			border-radius: $checkbox-width;
 		}
 
 		&.is-large {
-			span::before {
+			span::before, i::before {
 				border-radius: $checkbox-width * $is-large-multiplier;
 			}
-			span::after {
+			span::after, i::after {
 				border-radius: $checkbox-width * $is-large-multiplier;
 			}
 		}
@@ -192,6 +210,13 @@ form.is-search-form {
 					background-color: $val;
 				}
 				input:checked + span:before {
+					border-color: $val;
+				}
+				// for experiment 20170523 064237:
+				i::after {
+					background-color: $val;
+				}
+				input:checked + i:before {
 					border-color: $val;
 				}
 			}
@@ -246,10 +271,69 @@ form.is-search-form {
 		align-content: center;
 		align-items: flex-start;
 
-		label {
+		label.is-color-checkbox {
 			flex: 0 0 auto;
 			border: 1px solid red;
 			align-self: auto;
+
+			margin: 0px;
+			padding: 1rem;
+
+			// span::before, span::after {
+			// 	content: '';
+			// 	position: absolute;
+			// 	// position: relative !important;
+			// 	top: 0;
+			// 	bottom: 0;
+			// 	padding: 0;
+			// 	margin: auto;
+			// }
+
+			// TRY 2 as flex centered
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-content: center;
+			align-items: flex-start;
+
+			i::before, i::after {
+				order: 0;
+				flex: 0 0 auto;
+				align-self: stretch;
+
+				content: '';
+				position: none !important;
+				// position: relative !important;
+				top: 0;
+				bottom: 0;
+				padding: 0;
+				margin: auto;
+			}
+
+			// BELOW works 20170523 063558, but it's predicated upon 
+			// pulling left to position for a label. What if we simply
+			// vertically / horizontally aligned stuff and let it take 
+			// of itself?
+			.try-20170523 {
+				span::before {
+					// left: 0px; // Don't move it
+				}
+				span::after {
+					left: $checkbox-border  + ($checkbox-inner-padding * 1);
+				}
+				// Larger checkboxes / radios (only stuff that changed from defs above)
+				&.is-large {
+					span::before {
+						left: 0px;
+					}
+					span::after {
+						left: ($checkbox-border  + ($checkbox-inner-padding * 1)) * $is-large-multiplier;
+					}
+				} 
+			}
+
+
 		}
 	}
 	// END IS-COLOR-MENU END IS-COLOR-MENU END IS-COLOR-MENU 
