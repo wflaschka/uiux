@@ -1,3 +1,4 @@
+// STANDARD/INHERITED COLOR AND SIZE SETTINGS FOR THESE STYLES
 // $transition-duration: .4s;
 // $checkbox-offset: -25px;
 // $checkbox-width: 25px;
@@ -5,7 +6,6 @@
 // $checkbox-border: 1px;
 // $checkbox-inner-padding: 2px;
 // $is-large-multiplier: 1.5;
-
 // 20170522
 $transition-duration: .4s;
 $checkbox-offset: -15px;
@@ -15,7 +15,7 @@ $checkbox-border: 1px;
 $checkbox-inner-padding: 2px;
 $is-large-multiplier: 1.5;
 
-
+// TODO: Official color list
 $color-list: 
 	(red $red)
 	(orange $orange)
@@ -30,63 +30,32 @@ $shadow-spread: 10px;
 $shadow-color: $grey-light;
 $primary-box-shadow: $shadow-offset-x $shadow-offset-y $shadow-spread $shadow-color;
 
+/**
+ * TOC: Search form markup
+ * 1. Styling for non-search form but fancy inputs
+ * 2. Styling for dollar input
+ * 2. Styling for color checkbox with right-side label
+ * 3. Styling within dropdown menus
+ * 		3.1 Special styling for "color" dropdown
+ * 4. Slider for sizes
+ * 5. Alternative UI/UX for color / checkboxes (Deprecated 20170523)
+ */
 
 form.is-search-form {
+	// TODO: Text and element sizing within dropdown
+	// TODO: Reliable way to make dropdown size to contents? (a spectre.css method?)
 
-	.nav-item.dropdown {
-		padding-left: 0.5rem;
-		padding-right: 0.5rem;
-
-		>.button.dropdown-toggle {
-			margin-bottom: 0px;
-			padding-bottom: 0px;
-			// border: 1px solid red;
-
-			// &.active {
-			// 	padding-bottom: 0px;
-			// }
-
-		}
-		aside.menu {
-			font-size: 70%;
-
-			// border: 1px solid blue;
-			box-shadow: $primary-box-shadow;
-			// line-height: 2;
-
-			padding: 0.25rem;
-			margin-top: none;
-			white-space: nowrap;
-
-			ul.menu-list {
-				list-style: none;
-				margin: 0px;
-
-				// TODO: Fix... Item is floating inward when p.control wrapper is missing; see `label` def below. 20170522 064902
-				// label, li {
-				// 	margin-left: none;
-				// 	padding-left: none;
-				// }
-			}
-		}
-	}
-
+	/**
+	 * Basic positioning and definitions
+	 */
+	// BASIC FANCY FORM DEF BASIC FANCY FORM DEF BASIC FANCY FORM DEF BASIC FANCY FORM DEF 
+	// BASIC FANCY FORM DEF BASIC FANCY FORM DEF BASIC FANCY FORM DEF BASIC FANCY FORM DEF 
+	// Generally for these fancy inputs:
 	input {
 		display: none;
 	}
-	input[type=text] {
-		display: inherit;
-
-		&.is-dollar-input {
-			width: 40%;
-			display: inline-block;
-		}
-	}
-
 
 	label, .checkbox, .radio, .radio + .radio {
-	// ^^ WAS 20170522 064821, but was pushing in the line for dropdowns. Trying:
-	// .checkbox, .radio, .radio + .radio {
 		position: relative;
 		margin-left: ($checkbox-offset * -1) * 1.25;
 		padding-left: ($checkbox-offset * -1) * .25;
@@ -97,61 +66,105 @@ form.is-search-form {
 		}
 	}
 
-	label span::before,
-	label span::after {
-		content: '';
-		position: absolute;
-		top: 0;
-		bottom: 0;
+	label {
+		span::before, span::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
 
-		// margin: 0;
-		padding: 0;
-		margin: auto;
-	}
-	label span::before {
-		left: $checkbox-offset;
-		width: $checkbox-width;
-		height: $checkbox-height;
-		background-color: $white;
-		border: $checkbox-border solid $grey-darker;
-	}
-	label span::after {
-		left: $checkbox-offset + $checkbox-border  + ($checkbox-inner-padding * 1);
-		width: $checkbox-width - ($checkbox-border * 2) - ($checkbox-inner-padding * 2);
-		height: $checkbox-height - ($checkbox-border * 2) - ($checkbox-inner-padding * 2);
-		background-color: $white;
-		transition: background-color $transition-duration;
+			// margin: 0;
+			padding: 0;
+			margin: auto;
+		}
+		span::before {
+			left: $checkbox-offset;
+			width: $checkbox-width;
+			height: $checkbox-height;
+			background-color: $white;
+			border: $checkbox-border solid $grey-darker;
+		}
+		span::after {
+			left: $checkbox-offset + $checkbox-border  + ($checkbox-inner-padding * 1);
+			width: $checkbox-width - ($checkbox-border * 2) - ($checkbox-inner-padding * 2);
+			height: $checkbox-height - ($checkbox-border * 2) - ($checkbox-inner-padding * 2);
+			background-color: $white;
+			transition: background-color $transition-duration;
+		}
+
+		// Larger checkboxes / radios
+		&.is-large {
+			span::before {
+				left: ($checkbox-offset) * $is-large-multiplier;
+				width: ($checkbox-width) * $is-large-multiplier;
+				height: ($checkbox-height) * $is-large-multiplier;
+				background-color: $white;
+				border: ($checkbox-border * $is-large-multiplier) solid $grey-darker;
+			}
+			span::after {
+				left: ($checkbox-offset + $checkbox-border  + ($checkbox-inner-padding * 1)) * $is-large-multiplier;
+				width: ($checkbox-width - ($checkbox-border * 2) - ($checkbox-inner-padding * 2)) * $is-large-multiplier;
+				height: ($checkbox-height - ($checkbox-border * 2) - ($checkbox-inner-padding * 2)) * $is-large-multiplier;
+				background-color: $white;
+				transition: background-color $transition-duration;
+			}
+		} 
 	}
 
-	// Fill the input when checked
+	// Fill the input (span) when checkbox has been checked
 	input:checked + span:after {
 		background-color: $grey-darker;
 	}
 
-	// Larger
-	label.is-large span::before {
-		left: ($checkbox-offset) * $is-large-multiplier;
-		width: ($checkbox-width) * $is-large-multiplier;
-		height: ($checkbox-height) * $is-large-multiplier;
-		background-color: $white;
-		border: ($checkbox-border * $is-large-multiplier) solid $grey-darker;
-	}
-	label.is-large span::after {
-		left: ($checkbox-offset + $checkbox-border  + ($checkbox-inner-padding * 1)) * $is-large-multiplier;
-		width: ($checkbox-width - ($checkbox-border * 2) - ($checkbox-inner-padding * 2)) * $is-large-multiplier;
-		height: ($checkbox-height - ($checkbox-border * 2) - ($checkbox-inner-padding * 2)) * $is-large-multiplier;
-		background-color: $white;
-		transition: background-color $transition-duration;
-	}
-	// label.is-large span::before {
-	// 	transform: scale(2);
+	// 20170523 061519 probably okay to delete this earlier unfactored version
+	// label span::before,
+	// label span::after {
+	// 	content: '';
+	// 	position: absolute;
+	// 	top: 0;
+	// 	bottom: 0;
+
+	// 	// margin: 0;
+	// 	padding: 0;
+	// 	margin: auto;
 	// }
-	// label.is-large span::before {
-	// 	transform: scale(2);
+	// label span::before {
+	// 	left: $checkbox-offset;
+	// 	width: $checkbox-width;
+	// 	height: $checkbox-height;
+	// 	background-color: $white;
+	// 	border: $checkbox-border solid $grey-darker;
+	// }
+	// label span::after {
+	// 	left: $checkbox-offset + $checkbox-border  + ($checkbox-inner-padding * 1);
+	// 	width: $checkbox-width - ($checkbox-border * 2) - ($checkbox-inner-padding * 2);
+	// 	height: $checkbox-height - ($checkbox-border * 2) - ($checkbox-inner-padding * 2);
+	// 	background-color: $white;
+	// 	transition: background-color $transition-duration;
 	// }
 
-	// Color checkboxes (center, and then a border when selected)
-	label.is-color-checkbox-2 {
+
+	/**
+	 * Positioning for DOLLAR input
+	 */
+	// DOLLAR INPUT DOLLAR INPUT DOLLAR INPUT DOLLAR INPUT DOLLAR INPUT DOLLAR INPUT 
+	// DOLLAR INPUT DOLLAR INPUT DOLLAR INPUT DOLLAR INPUT DOLLAR INPUT DOLLAR INPUT 
+	input[type=text] {
+		display: inherit;
+
+		&.is-dollar-input {
+			width: 40%;
+			display: inline-block;
+		}
+	}
+
+	/**
+	 * Basic color-checkbox, with right-side label and pulled-left color ball
+	 */
+	// BASSIC COLOR CHECKBOXES COLOR CHECKBOXES COLOR CHECKBOXES COLOR CHECKBOXES 
+	// BASSIC COLOR CHECKBOXES COLOR CHECKBOXES COLOR CHECKBOXES COLOR CHECKBOXES 
+	// Color checkboxes (ball in center, then a border when selected)
+	label.is-color-checkbox {
 		span::before {
 			border-radius: $checkbox-width;
 			border: $checkbox-border solid transparent;
@@ -160,7 +173,6 @@ form.is-search-form {
 		span::after {
 			border-radius: $checkbox-width;
 		}
-
 
 		&.is-large {
 			span::before {
@@ -179,18 +191,136 @@ form.is-search-form {
 				span::after {
 					background-color: $val;
 				}
-
-				//HERE HERE HERE
 				input:checked + span:before {
 					border-color: $val;
+				}
+			}
+		}
+	}
+
+	/**
+	 * Positioning for searchbar/navigation dropdown
+	 * And inside that, the colorball dropdown
+	 */
+	// MENU DROPDOWN for searchbar / navigation MENU DROPDOWN for searchbar / navigation 
+	// MENU DROPDOWN for searchbar / navigation MENU DROPDOWN for searchbar / navigation 
+	.nav-item.dropdown {
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+
+		>.button.dropdown-toggle {
+			margin-bottom: 0px;
+			padding-bottom: 0px;
+		}
+
+		aside.menu {
+			padding: 0.25rem;
+			margin-top: none;
+			white-space: nowrap;
+
+			ul.menu-list {
+				list-style: none;
+				margin: 0px;
+				
+				li {
+					align-items: left;
+					display: flex;
+					padding: 0.2rem;
 				}
 			}
 		}
 
 	}
 
+	/**
+	 * Special handling for color dropdown menu (breakout)
+	 */
+	// IS-COLOR-MENU IS-COLOR-MENU IS-COLOR-MENU IS-COLOR-MENU IS-COLOR-MENU 
+	// IS-COLOR-MENU IS-COLOR-MENU IS-COLOR-MENU IS-COLOR-MENU IS-COLOR-MENU 
+	.nav-item.dropdown aside.menu.is-color-menu {
+		// http://the-echoplex.net/flexyboxes/?fixed-height=on&display=flex&flex-direction=row&flex-wrap=wrap&justify-content=flex-start&align-items=flex-start&align-content=center&order%5B%5D=0&flex-grow%5B%5D=0&flex-shrink%5B%5D=1&flex-basis%5B%5D=auto&align-self%5B%5D=auto&order%5B%5D=0&flex-grow%5B%5D=0&flex-shrink%5B%5D=1&flex-basis%5B%5D=auto&align-self%5B%5D=auto&order%5B%5D=0&flex-grow%5B%5D=0&flex-shrink%5B%5D=1&flex-basis%5B%5D=auto&align-self%5B%5D=auto&order%5B%5D=0&flex-grow%5B%5D=0&flex-shrink%5B%5D=1&flex-basis%5B%5D=auto&align-self%5B%5D=auto&order%5B%5D=0&flex-grow%5B%5D=0&flex-shrink%5B%5D=1&flex-basis%5B%5D=auto&align-self%5B%5D=auto&order%5B%5D=0&flex-grow%5B%5D=0&flex-shrink%5B%5D=1&flex-basis%5B%5D=auto&align-self%5B%5D=auto&order%5B%5D=0&flex-grow%5B%5D=0&flex-shrink%5B%5D=1&flex-basis%5B%5D=auto&align-self%5B%5D=auto&order%5B%5D=0&flex-grow%5B%5D=0&flex-shrink%5B%5D=1&flex-basis%5B%5D=auto&align-self%5B%5D=auto&order%5B%5D=0&flex-grow%5B%5D=0&flex-shrink%5B%5D=1&flex-basis%5B%5D=auto&align-self%5B%5D=auto&order%5B%5D=0&flex-grow%5B%5D=0&flex-shrink%5B%5D=1&flex-basis%5B%5D=auto&align-self%5B%5D=auto&order%5B%5D=0&flex-grow%5B%5D=0&flex-shrink%5B%5D=1&flex-basis%5B%5D=auto&align-self%5B%5D=auto
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-content: center;
+		align-items: flex-start;
+
+		label {
+			flex: 0 0 auto;
+			border: 1px solid red;
+			align-self: auto;
+		}
+	}
+	// END IS-COLOR-MENU END IS-COLOR-MENU END IS-COLOR-MENU 
+	// END IS-COLOR-MENU END IS-COLOR-MENU END IS-COLOR-MENU 
+
+
+	/**
+	 * NoUISlider styling for sizes
+	 */
+	// NoUISlider -- change styling
+	// UI SLIDER FOR SIZES UI SLIDER FOR SIZES UI SLIDER FOR SIZES UI SLIDER FOR SIZES 
+	// UI SLIDER FOR SIZES UI SLIDER FOR SIZES UI SLIDER FOR SIZES UI SLIDER FOR SIZES 
+	.noUi-horizontal {
+		height: 5px;
+	}
+	.noUi-target {
+		background: $grey-light;
+		border-radius: 4px;
+		// border: 1px solid #D3D3D3;
+		// box-shadow: inset 0 1px 1px #F0F0F0, 0 3px 6px -5px #BBB;
+		box-shadow: none;
+		border: none;
+	}
+	.noUi-connect {
+		background: $grey-dark;
+		box-shadow: none;
+		// box-shadow: inset 0 0 3px rgba(51, 51, 51, 0.45);
+		-webkit-transition: background 450ms;
+		transition: background 450ms;
+	}
+	.noUi-base {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		z-index: 1;
+		/* Fix 401 */
+	}
+	.noUi-horizontal .noUi-handle {
+		width: 20px;
+		height: 20px;
+		left: -17px;
+		top: -8px;
+	}
+	.noUi-handle {
+		border: 1px solid $grey-dark;
+		border-radius: 100%;
+		background: $grey-dark;
+		cursor: default;
+		box-shadow: none;
+		// box-shadow: inset 0 0 1px #FFF, inset 0 1px 7px #EBEBEB, 0 3px 6px -3px #BBB;
+	}
+	.noUi-handle:before,
+	.noUi-handle:after {
+		display: none;
+		// content: "";
+		// display: block;
+		// position: absolute;
+		// height: 14px;
+		// width: 1px;
+		// background: #E8E7E6;
+		// left: 14px;
+		// top: 6px;
+	}
+
+	/**
+	 * Alternative color checkbox UI, deprecated 20170523
+	 */
+	// ALTERNATIVE COLOR CHECKBOX ALTERNATIVE COLOR CHECKBOX ALTERNATIVE COLOR CHECKBOX 
+	// ALTERNATIVE COLOR CHECKBOX ALTERNATIVE COLOR CHECKBOX ALTERNATIVE COLOR CHECKBOX 
 	// Color checkboxes inverted (behaves like regular checkbox)
-	label.is-color-checkbox-1 {
+	label.is-color-checkbox-DEPRECATED {
 		span::before {
 			border-radius: $checkbox-width;
 		}
@@ -224,61 +354,6 @@ form.is-search-form {
 		}
 	}
 
-	//
-	// NoUISlider -- change styling
-	/* Handle stripes;
-	*/
-.noUi-horizontal {
-  height: 5px;
-}
-.noUi-target {
-  background: $grey-light;
-  border-radius: 4px;
-  // border: 1px solid #D3D3D3;
-  // box-shadow: inset 0 1px 1px #F0F0F0, 0 3px 6px -5px #BBB;
-  box-shadow: none;
-  border: none;
-}
-.noUi-connect {
-  background: $grey-dark;
-  box-shadow: none;
-  // box-shadow: inset 0 0 3px rgba(51, 51, 51, 0.45);
-  -webkit-transition: background 450ms;
-  transition: background 450ms;
-}
-.noUi-base {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  z-index: 1;
-  /* Fix 401 */
-}
-	.noUi-horizontal .noUi-handle {
-		width: 20px;
-		height: 20px;
-		left: -17px;
-		top: -8px;
-	}
-	.noUi-handle {
-		border: 1px solid $grey-dark;
-		border-radius: 100%;
-		background: $grey-dark;
-		cursor: default;
-		box-shadow: none;
 
-		// box-shadow: inset 0 0 1px #FFF, inset 0 1px 7px #EBEBEB, 0 3px 6px -3px #BBB;
-	}
-	.noUi-handle:before,
-	.noUi-handle:after {
-		display: none;
-		// content: "";
-		// display: block;
-		// position: absolute;
-		// height: 14px;
-		// width: 1px;
-		// background: #E8E7E6;
-		// left: 14px;
-		// top: 6px;
-	}
 
 }
