@@ -10058,27 +10058,43 @@ form.is-search-form {
   /**
 	 * NoUISlider styling for sizes
 	 */
-  /**
-	 * Alternative color checkbox UI, deprecated 20170523
-	 */
 }
 
 form.is-search-form input {
   display: none;
 }
 
-form.is-search-form label, form.is-search-form .checkbox, form.is-search-form .radio, form.is-search-form .radio + .radio {
+form.is-search-form label:not(.is-colorball-checkbox), form.is-search-form .checkbox:not(.is-colorball-checkbox), form.is-search-form .radio:not(.is-colorball-checkbox), form.is-search-form .radio + .radio:not(.is-colorball-checkbox) {
   position: relative;
   margin-left: 18.75px;
   padding-left: 3.75px;
 }
 
-form.is-search-form label.is-large, form.is-search-form .checkbox.is-large, form.is-search-form .radio.is-large, form.is-search-form .radio + .radio.is-large {
+form.is-search-form label:not(.is-colorball-checkbox).is-large, form.is-search-form .checkbox:not(.is-colorball-checkbox).is-large, form.is-search-form .radio:not(.is-colorball-checkbox).is-large, form.is-search-form .radio + .radio:not(.is-colorball-checkbox).is-large {
   margin-left: 28.125px;
   padding-left: 5.625px;
 }
 
-form.is-search-form label span::before, form.is-search-form label span::after {
+form.is-search-form label span::before {
+  background-color: white;
+  border: 1px solid #363636;
+}
+
+form.is-search-form label span::after {
+  background-color: white;
+  transition: background-color 0.4s;
+}
+
+form.is-search-form label.is-large span::before {
+  background-color: white;
+  border: 1.5px solid #363636;
+}
+
+form.is-search-form label.is-large span::after {
+  background-color: white;
+}
+
+form.is-search-form label:not(.is-colorball-checkbox) span::before, form.is-search-form label:not(.is-colorball-checkbox) span::after {
   content: '';
   position: absolute;
   top: 0;
@@ -10087,36 +10103,28 @@ form.is-search-form label span::before, form.is-search-form label span::after {
   margin: auto;
 }
 
-form.is-search-form label span::before {
+form.is-search-form label:not(.is-colorball-checkbox) span::before {
   left: -15px;
   width: 15px;
   height: 15px;
-  background-color: white;
-  border: 1px solid #363636;
 }
 
-form.is-search-form label span::after {
+form.is-search-form label:not(.is-colorball-checkbox) span::after {
   left: -12px;
   width: 9px;
   height: 9px;
-  background-color: white;
-  transition: background-color 0.4s;
 }
 
-form.is-search-form label.is-large span::before {
+form.is-search-form label:not(.is-colorball-checkbox).is-large span::before {
   left: -22.5px;
   width: 22.5px;
   height: 22.5px;
-  background-color: white;
-  border: 1.5px solid #363636;
 }
 
-form.is-search-form label.is-large span::after {
+form.is-search-form label:not(.is-colorball-checkbox).is-large span::after {
   left: -18px;
   width: 13.5px;
   height: 13.5px;
-  background-color: white;
-  transition: background-color 0.4s;
 }
 
 form.is-search-form input:checked + span:after {
@@ -10132,77 +10140,95 @@ form.is-search-form input[type=text].is-dollar-input {
   display: inline-block;
 }
 
-form.is-search-form label.is-color-checkbox span::before {
+form.is-search-form label.is-color-checkbox span::before,
+form.is-search-form label.is-colorball-checkbox span::before {
   border-radius: 15px;
   border: 1px solid transparent;
   transition: border-color 0.4s;
 }
 
-form.is-search-form label.is-color-checkbox span::after {
+form.is-search-form label.is-color-checkbox span::after,
+form.is-search-form label.is-colorball-checkbox span::after {
   border-radius: 15px;
 }
 
-form.is-search-form label.is-color-checkbox.is-large span::before {
+form.is-search-form label.is-color-checkbox.is-large span::before,
+form.is-search-form label.is-colorball-checkbox.is-large span::before {
   border-radius: 22.5px;
 }
 
-form.is-search-form label.is-color-checkbox.is-large span::after {
+form.is-search-form label.is-color-checkbox.is-large span::after,
+form.is-search-form label.is-colorball-checkbox.is-large span::after {
   border-radius: 22.5px;
 }
 
-form.is-search-form label.is-color-checkbox.is-color-red span::after {
+form.is-search-form label.is-color-checkbox.is-color-red span::after,
+form.is-search-form label.is-colorball-checkbox.is-color-red span::after {
   background-color: #cc3333;
 }
 
-form.is-search-form label.is-color-checkbox.is-color-red input:checked + span:before {
+form.is-search-form label.is-color-checkbox.is-color-red input:checked + span:before,
+form.is-search-form label.is-colorball-checkbox.is-color-red input:checked + span:before {
   border-color: #cc3333;
 }
 
-form.is-search-form label.is-color-checkbox.is-color-orange span::after {
+form.is-search-form label.is-color-checkbox.is-color-orange span::after,
+form.is-search-form label.is-colorball-checkbox.is-color-orange span::after {
   background-color: #e09d00;
 }
 
-form.is-search-form label.is-color-checkbox.is-color-orange input:checked + span:before {
+form.is-search-form label.is-color-checkbox.is-color-orange input:checked + span:before,
+form.is-search-form label.is-colorball-checkbox.is-color-orange input:checked + span:before {
   border-color: #e09d00;
 }
 
-form.is-search-form label.is-color-checkbox.is-color-yellow span::after {
+form.is-search-form label.is-color-checkbox.is-color-yellow span::after,
+form.is-search-form label.is-colorball-checkbox.is-color-yellow span::after {
   background-color: #ffdd57;
 }
 
-form.is-search-form label.is-color-checkbox.is-color-yellow input:checked + span:before {
+form.is-search-form label.is-color-checkbox.is-color-yellow input:checked + span:before,
+form.is-search-form label.is-colorball-checkbox.is-color-yellow input:checked + span:before {
   border-color: #ffdd57;
 }
 
-form.is-search-form label.is-color-checkbox.is-color-green span::after {
+form.is-search-form label.is-color-checkbox.is-color-green span::after,
+form.is-search-form label.is-colorball-checkbox.is-color-green span::after {
   background-color: #007F49;
 }
 
-form.is-search-form label.is-color-checkbox.is-color-green input:checked + span:before {
+form.is-search-form label.is-color-checkbox.is-color-green input:checked + span:before,
+form.is-search-form label.is-colorball-checkbox.is-color-green input:checked + span:before {
   border-color: #007F49;
 }
 
-form.is-search-form label.is-color-checkbox.is-color-turquoise span::after {
+form.is-search-form label.is-color-checkbox.is-color-turquoise span::after,
+form.is-search-form label.is-colorball-checkbox.is-color-turquoise span::after {
   background-color: #00d1b2;
 }
 
-form.is-search-form label.is-color-checkbox.is-color-turquoise input:checked + span:before {
+form.is-search-form label.is-color-checkbox.is-color-turquoise input:checked + span:before,
+form.is-search-form label.is-colorball-checkbox.is-color-turquoise input:checked + span:before {
   border-color: #00d1b2;
 }
 
-form.is-search-form label.is-color-checkbox.is-color-blue span::after {
+form.is-search-form label.is-color-checkbox.is-color-blue span::after,
+form.is-search-form label.is-colorball-checkbox.is-color-blue span::after {
   background-color: #260A80;
 }
 
-form.is-search-form label.is-color-checkbox.is-color-blue input:checked + span:before {
+form.is-search-form label.is-color-checkbox.is-color-blue input:checked + span:before,
+form.is-search-form label.is-colorball-checkbox.is-color-blue input:checked + span:before {
   border-color: #260A80;
 }
 
-form.is-search-form label.is-color-checkbox.is-color-purple span::after {
+form.is-search-form label.is-color-checkbox.is-color-purple span::after,
+form.is-search-form label.is-colorball-checkbox.is-color-purple span::after {
   background-color: #b86bff;
 }
 
-form.is-search-form label.is-color-checkbox.is-color-purple input:checked + span:before {
+form.is-search-form label.is-color-checkbox.is-color-purple input:checked + span:before,
+form.is-search-form label.is-colorball-checkbox.is-color-purple input:checked + span:before {
   border-color: #b86bff;
 }
 
@@ -10233,19 +10259,77 @@ form.is-search-form .nav-item.dropdown aside.menu ul.menu-list li {
   padding: 0.2rem;
 }
 
-form.is-search-form .nav-item.dropdown aside.menu.is-color-menu {
+form.is-search-form.active .menu.is-color-menu,
+form.is-search-form .dropdown-toggle:focus + .menu.is-color-menu,
+form.is-search-form .menu.is-color-menu:hover {
   display: flex;
+}
+
+form.is-search-form aside.menu.is-color-menu {
+  display: none;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
-  align-items: flex-start;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
 }
 
-form.is-search-form .nav-item.dropdown aside.menu.is-color-menu label {
+form.is-search-form aside.menu.is-color-menu label.is-colorball-checkbox {
   flex: 0 0 auto;
-  border: 1px solid red;
-  align-self: auto;
+  align-self: center;
+  width: 22.5px;
+  height: 22.5px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+form.is-search-form aside.menu.is-color-menu label.is-colorball-checkbox span::before, form.is-search-form aside.menu.is-color-menu label.is-colorball-checkbox span::after {
+  content: '';
+}
+
+form.is-search-form aside.menu.is-color-menu label.is-colorball-checkbox span::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  /* center horizontally */
+  top: 50%;
+  /* center vertically */
+  transform: translate(-50%, -50%);
+  width: 15px;
+  height: 15px;
+}
+
+form.is-search-form aside.menu.is-color-menu label.is-colorball-checkbox span::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  /* center horizontally */
+  top: 50%;
+  /* center vertically */
+  transform: translate(-50%, -50%);
+  width: 9px;
+  height: 9px;
+}
+
+form.is-search-form aside.menu.is-color-menu label.is-colorball-checkbox.is-large {
+  width: 24px;
+  height: 24px;
+}
+
+form.is-search-form aside.menu.is-color-menu label.is-colorball-checkbox.is-large span::before {
+  width: 22.5px;
+  height: 22.5px;
+}
+
+form.is-search-form aside.menu.is-color-menu label.is-colorball-checkbox.is-large span::after {
+  width: 13.5px;
+  height: 13.5px;
 }
 
 form.is-search-form .noUi-horizontal {
@@ -10292,78 +10376,6 @@ form.is-search-form .noUi-handle {
 form.is-search-form .noUi-handle:before,
 form.is-search-form .noUi-handle:after {
   display: none;
-}
-
-form.is-search-form label.is-color-checkbox-DEPRECATED span::before {
-  border-radius: 15px;
-}
-
-form.is-search-form label.is-color-checkbox-DEPRECATED span::after {
-  border-radius: 15px;
-}
-
-form.is-search-form label.is-color-checkbox-DEPRECATED.is-large span::before {
-  border-radius: 22.5px;
-}
-
-form.is-search-form label.is-color-checkbox-DEPRECATED.is-large span::after {
-  border-radius: 22.5px;
-}
-
-form.is-search-form label.is-color-checkbox-DEPRECATED.is-color-red span::before {
-  border-color: #cc3333;
-}
-
-form.is-search-form label.is-color-checkbox-DEPRECATED.is-color-red input:checked + span:after {
-  background-color: #cc3333;
-}
-
-form.is-search-form label.is-color-checkbox-DEPRECATED.is-color-orange span::before {
-  border-color: #e09d00;
-}
-
-form.is-search-form label.is-color-checkbox-DEPRECATED.is-color-orange input:checked + span:after {
-  background-color: #e09d00;
-}
-
-form.is-search-form label.is-color-checkbox-DEPRECATED.is-color-yellow span::before {
-  border-color: #ffdd57;
-}
-
-form.is-search-form label.is-color-checkbox-DEPRECATED.is-color-yellow input:checked + span:after {
-  background-color: #ffdd57;
-}
-
-form.is-search-form label.is-color-checkbox-DEPRECATED.is-color-green span::before {
-  border-color: #007F49;
-}
-
-form.is-search-form label.is-color-checkbox-DEPRECATED.is-color-green input:checked + span:after {
-  background-color: #007F49;
-}
-
-form.is-search-form label.is-color-checkbox-DEPRECATED.is-color-turquoise span::before {
-  border-color: #00d1b2;
-}
-
-form.is-search-form label.is-color-checkbox-DEPRECATED.is-color-turquoise input:checked + span:after {
-  background-color: #00d1b2;
-}
-
-form.is-search-form label.is-color-checkbox-DEPRECATED.is-color-blue span::before {
-  border-color: #260A80;
-}
-
-form.is-search-form label.is-color-checkbox-DEPRECATED.is-color-blue input:checked + span:after {
-  background-color: #260A80;
-}
-
-form.is-search-form label.is-color-checkbox-DEPRECATED.is-color-purple span::before {
-  border-color: #b86bff;
-}
-
-form.is-search-form label.is-color-checkbox-DEPRECATED.is-color-purple input:checked + span:after {
-  background-color: #b86bff;
 }
 
 .badge {
