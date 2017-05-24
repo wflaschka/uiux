@@ -1,12 +1,4 @@
 // STANDARD/INHERITED COLOR AND SIZE SETTINGS FOR THESE STYLES
-// $transition-duration: .4s;
-// $checkbox-offset: -25px;
-// $checkbox-width: 25px;
-// $checkbox-height: 25px;
-// $checkbox-border: 1px;
-// $checkbox-inner-padding: 2px;
-// $is-large-multiplier: 1.5;
-// 20170522
 $transition-duration: .4s;
 $checkbox-offset: -15px;
 $checkbox-width: 15px;
@@ -43,7 +35,6 @@ $primary-box-shadow: $shadow-offset-x $shadow-offset-y $shadow-spread $shadow-co
 
 form.is-search-form {
 	// TODO: Text and element sizing within dropdown
-	// TODO: Reliable way to make dropdown size to contents? (a spectre.css method?)
 
 	/**
 	 * Basic positioning and definitions
@@ -55,25 +46,49 @@ form.is-search-form {
 		display: none;
 	}
 
+	// Set positioning for labels and checkbox/radio elements
+	// * except `is-colorball-checkbox` which is special (defined later)
 	label, .checkbox, .radio, .radio + .radio {
-		position: relative;
-		margin-left: ($checkbox-offset * -1) * 1.25;
-		padding-left: ($checkbox-offset * -1) * .25;
+		&:not(.is-colorball-checkbox) {
+			position: relative;
+			margin-left: ($checkbox-offset * -1) * 1.25;
+			padding-left: ($checkbox-offset * -1) * .25;
 
-		&.is-large {
-			margin-left: ($checkbox-offset * -1) * 1.25 * $is-large-multiplier;
-			padding-left: ($checkbox-offset * -1) * .25 * $is-large-multiplier;
+			&.is-large {
+				margin-left: ($checkbox-offset * -1) * 1.25 * $is-large-multiplier;
+				padding-left: ($checkbox-offset * -1) * .25 * $is-large-multiplier;
+			}
 		}
 	}
 
+	// Styling for all checkbox labels: set the basic colors
 	label {
+		span::before {
+			background-color: $white;
+			border: $checkbox-border solid $grey-darker;
+		}
+		span::after {
+			background-color: $white;
+			transition: background-color $transition-duration;
+		}
+		&.is-large {
+			span::before {
+				background-color: $white;
+				border: ($checkbox-border * $is-large-multiplier) solid $grey-darker;
+			}
+			span::after {
+				background-color: $white;
+			}
+		} 
+	}
+	// Styling for all checkbox labels*: set positioning
+	// * except `is-colorball-checkbox` which is special (defined later)
+	label:not(.is-colorball-checkbox) {
 		span::before, span::after {
 			content: '';
 			position: absolute;
 			top: 0;
 			bottom: 0;
-
-			// margin: 0;
 			padding: 0;
 			margin: auto;
 		}
@@ -81,33 +96,16 @@ form.is-search-form {
 			left: $checkbox-offset;
 			width: $checkbox-width;
 			height: $checkbox-height;
-			background-color: $white;
-			border: $checkbox-border solid $grey-darker;
+			// background-color: $white;
+			// border: $checkbox-border solid $grey-darker;
 		}
 		span::after {
 			left: $checkbox-offset + $checkbox-border  + ($checkbox-inner-padding * 1);
 			width: $checkbox-width - ($checkbox-border * 2) - ($checkbox-inner-padding * 2);
 			height: $checkbox-height - ($checkbox-border * 2) - ($checkbox-inner-padding * 2);
-			background-color: $white;
-			transition: background-color $transition-duration;
+			// background-color: $white;
+			// transition: background-color $transition-duration;
 		}
-
-		// experiment 20170523 064407
-		i::before {
-			display: block;
-			width: $checkbox-width;
-			height: $checkbox-height;
-			background-color: $white;
-			border: $checkbox-border solid $grey-darker;
-		}
-		i::after {
-			display: block;
-			width: $checkbox-width - ($checkbox-border * 2) - ($checkbox-inner-padding * 2);
-			height: $checkbox-height - ($checkbox-border * 2) - ($checkbox-inner-padding * 2);
-			background-color: $white;
-			transition: background-color $transition-duration;
-		}
-
 
 		// Larger checkboxes / radios
 		&.is-large {
@@ -115,51 +113,23 @@ form.is-search-form {
 				left: ($checkbox-offset) * $is-large-multiplier;
 				width: ($checkbox-width) * $is-large-multiplier;
 				height: ($checkbox-height) * $is-large-multiplier;
-				background-color: $white;
-				border: ($checkbox-border * $is-large-multiplier) solid $grey-darker;
+				// background-color: $white;
+				// border: ($checkbox-border * $is-large-multiplier) solid $grey-darker;
 			}
 			span::after {
 				left: ($checkbox-offset + $checkbox-border  + ($checkbox-inner-padding * 1)) * $is-large-multiplier;
 				width: ($checkbox-width - ($checkbox-border * 2) - ($checkbox-inner-padding * 2)) * $is-large-multiplier;
 				height: ($checkbox-height - ($checkbox-border * 2) - ($checkbox-inner-padding * 2)) * $is-large-multiplier;
-				background-color: $white;
-				transition: background-color $transition-duration;
+				// background-color: $white;
+				// transition: background-color $transition-duration;
 			}
 		} 
 	}
 
-	// Fill the input (span) when checkbox has been checked
+	// Fill the span::after when checkbox has been checked
 	input:checked + span:after {
 		background-color: $grey-darker;
 	}
-
-	// 20170523 061519 probably okay to delete this earlier unfactored version
-	// label span::before,
-	// label span::after {
-	// 	content: '';
-	// 	position: absolute;
-	// 	top: 0;
-	// 	bottom: 0;
-
-	// 	// margin: 0;
-	// 	padding: 0;
-	// 	margin: auto;
-	// }
-	// label span::before {
-	// 	left: $checkbox-offset;
-	// 	width: $checkbox-width;
-	// 	height: $checkbox-height;
-	// 	background-color: $white;
-	// 	border: $checkbox-border solid $grey-darker;
-	// }
-	// label span::after {
-	// 	left: $checkbox-offset + $checkbox-border  + ($checkbox-inner-padding * 1);
-	// 	width: $checkbox-width - ($checkbox-border * 2) - ($checkbox-inner-padding * 2);
-	// 	height: $checkbox-height - ($checkbox-border * 2) - ($checkbox-inner-padding * 2);
-	// 	background-color: $white;
-	// 	transition: background-color $transition-duration;
-	// }
-
 
 	/**
 	 * Positioning for DOLLAR input
@@ -178,25 +148,28 @@ form.is-search-form {
 	/**
 	 * Basic color-checkbox, with right-side label and pulled-left color ball
 	 */
-	// BASSIC COLOR CHECKBOXES COLOR CHECKBOXES COLOR CHECKBOXES COLOR CHECKBOXES 
-	// BASSIC COLOR CHECKBOXES COLOR CHECKBOXES COLOR CHECKBOXES COLOR CHECKBOXES 
+	// BASIC COLOR CHECKBOXES COLOR CHECKBOXES COLOR CHECKBOXES COLOR CHECKBOXES 
+	// BASIC COLOR CHECKBOXES COLOR CHECKBOXES COLOR CHECKBOXES COLOR CHECKBOXES 
 	// Color checkboxes (ball in center, then a border when selected)
-	label.is-color-checkbox {
-		// the <i> stuff is for an experiment 20170523 064325
-		span::before, i::before {
+	// 	- Defines roundness, transition speeds, border thicknesses
+	// 	- Assigns actual colors from list via a loop
+	// 	- Allows `.is-large` for larger scaling
+	label.is-color-checkbox,
+	label.is-colorball-checkbox {
+		span::before {
 			border-radius: $checkbox-width;
 			border: $checkbox-border solid transparent;
 			transition: border-color $transition-duration;
 		}
-		span::after, i::after {
+		span::after {
 			border-radius: $checkbox-width;
 		}
 
 		&.is-large {
-			span::before, i::before {
+			span::before {
 				border-radius: $checkbox-width * $is-large-multiplier;
 			}
-			span::after, i::after {
+			span::after {
 				border-radius: $checkbox-width * $is-large-multiplier;
 			}
 		}
@@ -210,13 +183,6 @@ form.is-search-form {
 					background-color: $val;
 				}
 				input:checked + span:before {
-					border-color: $val;
-				}
-				// for experiment 20170523 064237:
-				i::after {
-					background-color: $val;
-				}
-				input:checked + i:before {
 					border-color: $val;
 				}
 			}
@@ -254,7 +220,6 @@ form.is-search-form {
 				}
 			}
 		}
-
 	}
 
 	/**
@@ -262,78 +227,105 @@ form.is-search-form {
 	 */
 	// IS-COLOR-MENU IS-COLOR-MENU IS-COLOR-MENU IS-COLOR-MENU IS-COLOR-MENU 
 	// IS-COLOR-MENU IS-COLOR-MENU IS-COLOR-MENU IS-COLOR-MENU IS-COLOR-MENU 
-	.nav-item.dropdown aside.menu.is-color-menu {
-		// http://the-echoplex.net/flexyboxes/?fixed-height=on&display=flex&flex-direction=row&flex-wrap=wrap&justify-content=flex-start&align-items=flex-start&align-content=center&order%5B%5D=0&flex-grow%5B%5D=0&flex-shrink%5B%5D=1&flex-basis%5B%5D=auto&align-self%5B%5D=auto&order%5B%5D=0&flex-grow%5B%5D=0&flex-shrink%5B%5D=1&flex-basis%5B%5D=auto&align-self%5B%5D=auto&order%5B%5D=0&flex-grow%5B%5D=0&flex-shrink%5B%5D=1&flex-basis%5B%5D=auto&align-self%5B%5D=auto&order%5B%5D=0&flex-grow%5B%5D=0&flex-shrink%5B%5D=1&flex-basis%5B%5D=auto&align-self%5B%5D=auto&order%5B%5D=0&flex-grow%5B%5D=0&flex-shrink%5B%5D=1&flex-basis%5B%5D=auto&align-self%5B%5D=auto&order%5B%5D=0&flex-grow%5B%5D=0&flex-shrink%5B%5D=1&flex-basis%5B%5D=auto&align-self%5B%5D=auto&order%5B%5D=0&flex-grow%5B%5D=0&flex-shrink%5B%5D=1&flex-basis%5B%5D=auto&align-self%5B%5D=auto&order%5B%5D=0&flex-grow%5B%5D=0&flex-shrink%5B%5D=1&flex-basis%5B%5D=auto&align-self%5B%5D=auto&order%5B%5D=0&flex-grow%5B%5D=0&flex-shrink%5B%5D=1&flex-basis%5B%5D=auto&align-self%5B%5D=auto&order%5B%5D=0&flex-grow%5B%5D=0&flex-shrink%5B%5D=1&flex-basis%5B%5D=auto&align-self%5B%5D=auto&order%5B%5D=0&flex-grow%5B%5D=0&flex-shrink%5B%5D=1&flex-basis%5B%5D=auto&align-self%5B%5D=auto
+	&.active .menu.is-color-menu,
+	.dropdown-toggle:focus + .menu.is-color-menu,
+	.menu.is-color-menu:hover {
 		display: flex;
+	}
+	aside.menu.is-color-menu {
+		// http://the-echoplex.net/flexyboxes/?fixed-height=on&display=flex&flex-direction=row&flex-wrap=wrap&justify-content=flex-start&align-items=flex-start&align-content=center&order%5B%5D=0&flex-grow%5B%5D=0&flex-shrink%5B%5D=1&flex-basis%5B%5D=auto&align-self%5B%5D=auto&order%5B%5D=0&flex-grow%5B%5D=0&flex-shrink%5B%5D=1&flex-basis%5B%5D=auto&align-self%5B%5D=auto&order%5B%5D=0&flex-grow%5B%5D=0&flex-shrink%5B%5D=1&flex-basis%5B%5D=auto&align-self%5B%5D=auto&order%5B%5D=0&flex-grow%5B%5D=0&flex-shrink%5B%5D=1&flex-basis%5B%5D=auto&align-self%5B%5D=auto&order%5B%5D=0&flex-grow%5B%5D=0&flex-shrink%5B%5D=1&flex-basis%5B%5D=auto&align-self%5B%5D=auto&order%5B%5D=0&flex-grow%5B%5D=0&flex-shrink%5B%5D=1&flex-basis%5B%5D=auto&align-self%5B%5D=auto&order%5B%5D=0&flex-grow%5B%5D=0&flex-shrink%5B%5D=1&flex-basis%5B%5D=auto&align-self%5B%5D=auto&order%5B%5D=0&flex-grow%5B%5D=0&flex-shrink%5B%5D=1&flex-basis%5B%5D=auto&align-self%5B%5D=auto&order%5B%5D=0&flex-grow%5B%5D=0&flex-shrink%5B%5D=1&flex-basis%5B%5D=auto&align-self%5B%5D=auto&order%5B%5D=0&flex-grow%5B%5D=0&flex-shrink%5B%5D=1&flex-basis%5B%5D=auto&align-self%5B%5D=auto&order%5B%5D=0&flex-grow%5B%5D=0&flex-shrink%5B%5D=1&flex-basis%5B%5D=auto&align-self%5B%5D=auto
+		display: none;
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: center;
 		align-content: center;
-		align-items: flex-start;
+		align-items: center;
 
-		label.is-color-checkbox {
+		padding: 0px;
+		margin: 0px;
+
+		label.is-colorball-checkbox {
 			flex: 0 0 auto;
-			border: 1px solid red;
-			align-self: auto;
+			align-self: center;
 
-			margin: 0px;
-			padding: 1rem;
-
-			// span::before, span::after {
-			// 	content: '';
-			// 	position: absolute;
-			// 	// position: relative !important;
-			// 	top: 0;
-			// 	bottom: 0;
-			// 	padding: 0;
-			// 	margin: auto;
-			// }
+			width: $checkbox-width * 1.5;
+			height: $checkbox-height * 1.5;
 
 			// TRY 2 as flex centered
 			display: flex;
 			flex-direction: row;
-			flex-wrap: wrap;
-			justify-content: center;
+			flex-wrap: nowrap;
+			align-items: center;
 			align-content: center;
-			align-items: flex-start;
+			justify-content: center;
 
-			i::before, i::after {
-				order: 0;
-				flex: 0 0 auto;
-				align-self: stretch;
+			// Special span definition where things are flex-centered
+			// and not precisely positioned
+			span {
+				// border: 1px dashed pink;
+				// width: 100%;
+				// height: 100%;
+				// padding: 0px;
+				// margin: 0px;
 
-				content: '';
-				position: none !important;
-				// position: relative !important;
-				top: 0;
-				bottom: 0;
-				padding: 0;
-				margin: auto;
+				// display: flex;
+				// flex-direction: row;
+				// flex-wrap: nowrap;
+				// align-items: center;
+				// align-content: center;
+				// justify-content: center;
+
+				// http://the-echoplex.net/flexyboxes/?fixed-height=on&display=flex&flex-direction=row&flex-wrap=wrap&justify-content=center&align-items=center&align-content=center&order%5B%5D=1&flex-grow%5B%5D=1&flex-shrink%5B%5D=1&flex-basis%5B%5D=auto&align-self%5B%5D=center&order%5B%5D=2&flex-grow%5B%5D=1&flex-shrink%5B%5D=1&flex-basis%5B%5D=auto&align-self%5B%5D=center
+				&::before, &::after {
+					content: '';
+				}
+				&::before {
+					// Has the border
+					content: '';
+					position: absolute;
+					// border: 1px dotted blue;
+					left: 50%;                        /* center horizontally */
+					top: 50%;                         /* center vertically */
+					transform: translate(-50%,-50%);
+
+					width: $checkbox-width;
+					height: $checkbox-height;
+				}
+				&::after {
+					// Has the ball
+					content: '';
+					// display: flex;
+					// flex: 0 0 auto;
+					// align-self: auto;
+
+					position: absolute;
+					// border: 1px dotted blue;
+					left: 50%;                        /* center horizontally */
+					top: 50%;                         /* center vertically */
+					transform: translate(-50%,-50%);
+
+					width: $checkbox-width - ($checkbox-border * 2) - ($checkbox-inner-padding * 2);
+					height: $checkbox-height - ($checkbox-border * 2) - ($checkbox-inner-padding * 2);
+				}
+
+
 			}
 
-			// BELOW works 20170523 063558, but it's predicated upon 
-			// pulling left to position for a label. What if we simply
-			// vertically / horizontally aligned stuff and let it take 
-			// of itself?
-			.try-20170523 {
+			&.is-large {
+				// width:  $checkbox-width * (1.5 * $is-large-multiplier);
+				// height: $checkbox-height * (1.5 * $is-large-multiplier);
+				width:  $checkbox-width * (1.6);
+				height: $checkbox-height * (1.6);
+
 				span::before {
-					// left: 0px; // Don't move it
+					width: $checkbox-width * $is-large-multiplier;
+					height: $checkbox-height * $is-large-multiplier;
 				}
 				span::after {
-					left: $checkbox-border  + ($checkbox-inner-padding * 1);
+					width: ($checkbox-width - ($checkbox-border * 2) - ($checkbox-inner-padding * 2)) * $is-large-multiplier;
+					height: ($checkbox-height - ($checkbox-border * 2) - ($checkbox-inner-padding * 2)) * $is-large-multiplier;
 				}
-				// Larger checkboxes / radios (only stuff that changed from defs above)
-				&.is-large {
-					span::before {
-						left: 0px;
-					}
-					span::after {
-						left: ($checkbox-border  + ($checkbox-inner-padding * 1)) * $is-large-multiplier;
-					}
-				} 
 			}
-
-
 		}
 	}
 	// END IS-COLOR-MENU END IS-COLOR-MENU END IS-COLOR-MENU 
@@ -397,47 +389,4 @@ form.is-search-form {
 		// left: 14px;
 		// top: 6px;
 	}
-
-	/**
-	 * Alternative color checkbox UI, deprecated 20170523
-	 */
-	// ALTERNATIVE COLOR CHECKBOX ALTERNATIVE COLOR CHECKBOX ALTERNATIVE COLOR CHECKBOX 
-	// ALTERNATIVE COLOR CHECKBOX ALTERNATIVE COLOR CHECKBOX ALTERNATIVE COLOR CHECKBOX 
-	// Color checkboxes inverted (behaves like regular checkbox)
-	label.is-color-checkbox-DEPRECATED {
-		span::before {
-			border-radius: $checkbox-width;
-		}
-		span::after {
-			border-radius: $checkbox-width;
-		}
-
-		&.is-large {
-			span::before {
-				border-radius: $checkbox-width * $is-large-multiplier;
-			}
-			span::after {
-				border-radius: $checkbox-width * $is-large-multiplier;
-			}
-		}
-
-		@each $combo in $color-list {
-			$tag: nth($combo, 1);
-			$val: nth($combo, 2);
-
-			&.is-color-#{$tag} {
-				span::before {
-					border-color: $val;
-				}
-
-				//HERE HERE HERE
-				input:checked + span:after {
-					background-color: $val;
-				}
-			}
-		}
-	}
-
-
-
 }
