@@ -39,4 +39,16 @@
 		}
 	}
 
+	// General for buttons, but 20170525 used in search form size pulldown
+	&.has-shadow {
+		box-shadow: $primary-box-shadow;
+		&.is-depressed {
+			box-shadow: none;
+		}
+	}
+	&.is-depressed {
+		opacity: 0.6;
+	}
+
+
 }
