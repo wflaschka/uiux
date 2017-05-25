@@ -50,368 +50,471 @@
 	</section>
 
 	<div class="box">
-		<!-- <h3 class="subtitle is-3">Masonry Grid</h3> -->
-		<!-- <p>Appears in artist profile, artwork tab.</p> -->
 
 
-<form class="is-search-form is-fullwidth">
+		<form class="is-search-form is-fullwidth">
+			<nav class="nav">
 
-<p>HERE:
-						<label class="checkbox is-color-checkbox is-large is-color-purple" for="input-3crpurple-2">
+				<!-- MEDIUMS MEDIUMS MEDIUMS MEDIUMS MEDIUMS MEDIUMS MEDIUMS MEDIUMS -->
+				<!-- MEDIUMS MEDIUMS MEDIUMS MEDIUMS MEDIUMS MEDIUMS MEDIUMS MEDIUMS -->
+				<div class="nav-item dropdown">
+					<a class="button dropdown-toggle" tabindex="1">
+						<span>Mediums</span>
+						<span class="icon is-small">
+							<i class="fa fa-angle-double-down"></i>
+						</span>
+					</a>
+					<aside class="menu">
+						<ul class="menu-list">
+							<li class="">
+								<label class="checkbox" for="input-painting">
+									<input type="checkbox" id="input-painting" name="input-painting">
+									<span></span>
+									Paintings
+								</label>
+							</li>
+							<li>
+								<label class="checkbox" for="input-photography">
+									<input type="checkbox" id="input-photography" name="input-photography">
+									<span></span>
+									Photography
+								</label>
+							</li>
+							<li>
+								<label class="checkbox" for="input-works-on-paper">
+									<input type="checkbox" id="input-works-on-paper" name="input-works-on-paper">
+									<span></span>
+									Works on Paper
+								</label>
+							</li>
+						</ul>
+					</aside>
+				</div>
+
+
+				<!-- SUBJECTS SUBJECTS SUBJECTS SUBJECTS SUBJECTS SUBJECTS SUBJECTS SUBJECTS -->
+				<!-- SUBJECTS SUBJECTS SUBJECTS SUBJECTS SUBJECTS SUBJECTS SUBJECTS SUBJECTS -->
+				<div class="nav-item dropdown">
+					<a class="button dropdown-toggle" tabindex="1">
+						<span>Subjects</span>
+						<span class="icon is-small">
+							<i class="fa fa-angle-double-down"></i>
+						</span>
+					</a>
+					<aside class="menu">
+						<ul class="menu-list">
+							<li class="">
+								<label class="checkbox" for="input-subject-abstract">
+									<input type="checkbox" id="input-subject-abstract" name="input-subject-abstract">
+									<span></span>
+									Abstract
+								</label>
+							</li>
+							<li>
+								<label class="checkbox" for="input-subject-figurative">
+									<input type="checkbox" id="input-subject-figurative" name="input-subject-figurative">
+									<span></span>
+									Figurative
+								</label>
+							</li>
+							<li>
+								<label class="checkbox" for="input-subject-still-life">
+									<input type="checkbox" id="input-subject-still-life" name="input-subject-still-life">
+									<span></span>
+									Still Life
+								</label>
+							</li>
+						</ul>
+					</aside>
+				</div>
+
+
+
+				<!-- PRICES PRICES PRICES PRICES PRICES PRICES PRICES -->
+				<!-- PRICES PRICES PRICES PRICES PRICES PRICES PRICES -->
+				<div class="nav-item dropdown">
+					<a class="button dropdown-toggle" tabindex="1">
+						<span>Prices</span>
+						<span class="icon is-small">
+							<i class="fa fa-angle-double-down"></i>
+						</span>
+					</a>
+					<aside class="menu">
+						<script type="text/javascript">
+							$( document ).ready(function() {
+								$('#input-price-all').on('change', function() { priceMinMax(0,10000); });
+								$('#input-price-lt500').on('change', function() { priceMinMax(0,500); });
+								$('#input-price-1t25').on('change', function() { priceMinMax(0,2500); });
+								$('#input-price-25t5').on('change', function() { priceMinMax(2500,5000); });
+								$('#input-price-5t10').on('change', function() { priceMinMax(5000,10000); });
+								function priceMinMax(min, max) {
+									$('#input-price-min').val(min);
+									$('#input-price-max').val(max);
+									return true;
+								}
+							});
+						</script>
+						<ul class="menu-list">
+							<li>
+								&dollar; <input name="input-price-min" id="input-price-min" class="input is-small is-dollar-input" type="text" placeholder="0">
+								&ndash;
+								&dollar; <input name="input-price-max" id="input-price-max" class="input is-small is-dollar-input" type="text" placeholder="10000">
+							</li>
+							<li class="">
+								<label class="radio" for="input-price-all">
+									<input type="radio" id="input-price-all" name="input-price-span" checked="true">
+									<span></span>
+									All prices
+								</label>
+							</li>
+							<li>
+								<label class="radio" for="input-price-lt500">
+									<input type="radio" id="input-price-lt500" name="input-price-span">
+									<span></span>
+									Under $500
+								</label>
+							</li>
+							<li>
+								<label class="radio" for="input-price-1t25">
+									<input type="radio" id="input-price-1t25" name="input-price-span">
+									<span></span>
+									$1,000 &ndash; $2,500
+								</label>
+							</li>
+							<li>
+								<label class="radio" for="input-price-25t5">
+									<input type="radio" id="input-price-25t5" name="input-price-span">
+									<span></span>
+									$2,500 &ndash; $5,000
+								</label>
+							</li>
+							<li>
+								<label class="radio" for="input-price-5t10">
+									<input type="radio" id="input-price-5t10" name="input-price-span">
+									<span></span>
+									$5,000 &ndash; $10,000
+								</label>
+							</li>
+						</ul>
+					</aside>
+				</div>
+
+
+				<!-- SIZES SIZES SIZES SIZES SIZES SIZES SIZES SIZES -->
+				<!-- SIZES SIZES SIZES SIZES SIZES SIZES SIZES SIZES -->
+				<div class="nav-item dropdown active">
+					<a class="button dropdown-toggle" tabindex="1">
+						<span>Sizes</span>
+						<span class="icon is-small">
+							<i class="fa fa-angle-double-down"></i>
+						</span>
+					</a>
+					<aside class="menu is-size-menu">
+						<div class="level">
+							<div class="level-left">
+								<div class="level-item">
+
+<!-- 									<a class="button is-link is-small">
+										<span>All sizes</span>
+									</a>
+ -->
+									<label class="checkbox" for="sizeAllSizes">
+										<input type="checkbox" id="sizeAllSizes" name="sizeAllSizes">
+										<span></span>
+										All sizes
+									</label>
+
+ 								</div>
+							</div>
+							<div class="level-right">
+								<div class="level-item">
+									<a id="size-set-in" class="button is-small has-shadow is-depressed">
+										<span>Inches</span>
+									</a>
+									<a id="size-set-cm" class="button is-small has-shadow">
+										<span>Centimeters</span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<!-- Form inputs -->
+						<input type="hidden" id="sizeInchOrCentimeter" value="in">
+						min<input type="input" id="sizeMinWidth" value="20" style="display: inherit;" width="5">
+						<!-- <input type="hidden" id="sizeMinWidth" value="20"> -->
+						<input type="hidden" id="sizeMaxWidth" value="100">
+						<input type="hidden" id="sizeMinHeight" value="20">
+						<input type="hidden" id="sizeMaxHeight" value="100">
+
+						<div class="noUi-container">
+							<label>Height</label>
+							<div id="height-slider-handles" class="noUi-target noUi-ltr noUi-horizontal"></div>
+							<div class="level">
+								<div class="level-left">
+									<div class="level-item">
+										<span class="sizeMinHeight"></span>
+										<span class="sizeMeasureInorCm">in</span>
+									</div>
+								</div>
+								<div class="level-right">
+									<div class="level-item">
+										<span class="sizeMaxHeight"></span>
+										<span class="sizeMeasureInorCm">in</span>
+									</div>
+								</div>
+							</div>
+							<label>Width</label>
+							<div id="width-slider-handles" class="noUi-target noUi-ltr noUi-horizontal"></div>
+							<div class="level">
+								<div class="level-left">
+									<div class="level-item">
+										<span class="sizeMinWidth"></span>
+										<span class="sizeMeasureInorCm">in</span>
+									</div>
+								</div>
+								<div class="level-right">
+									<div class="level-item">
+										<span class="sizeMaxWidth"></span>
+										<span class="sizeMeasureInorCm">in</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</aside>
+				</div>
+
+
+				<!-- COLORS COLORS COLORS COLORS COLORS COLORS COLORS COLORS -->
+				<!-- COLORS COLORS COLORS COLORS COLORS COLORS COLORS COLORS -->
+				<div class="nav-item dropdown">
+					<a class="button dropdown-toggle" tabindex="1">
+						<span>Colors</span>
+						<span class="icon is-small">
+							<i class="fa fa-angle-double-down"></i>
+						</span>
+					</a>
+					<aside class="menu is-color-menu">
+						<label class="checkbox is-colorball-checkbox is-large is-color-red" for="input-3crred">
+							<input type="checkbox" id="input-3crred" name="input-3crred">
+							<span></span>
+						</label>
+						<label class="checkbox is-colorball-checkbox is-large is-color-orange" for="input-3crorange">
+							<input type="checkbox" id="input-3crorange" name="input-3crorange">
+							<span></span>
+						</label>
+						<label class="checkbox is-colorball-checkbox is-large is-color-yellow" for="input-3cryellow">
+							<input type="checkbox" id="input-3cryellow" name="input-3cryellow">
+							<span></span>
+						</label>
+						<label class="checkbox is-colorball-checkbox is-large is-color-green" for="input-3crgreen">
+							<input type="checkbox" id="input-3crgreen" name="input-3crgreen">
+							<span></span>
+						</label>
+						<label class="checkbox is-colorball-checkbox is-large is-color-green" for="input-3crgreen">
+							<input type="checkbox" id="input-3crgreen" name="input-3crgreen">
+							<span></span>
+						</label>
+						<label class="checkbox is-colorball-checkbox is-large is-color-turquoise" for="input-3crturquoise">
+							<input type="checkbox" id="input-3crturquoise" name="input-3crturquoise">
+							<span></span>
+						</label>
+						<label class="checkbox is-colorball-checkbox is-large is-color-blue" for="input-3crblue">
+							<input type="checkbox" id="input-3crblue" name="input-3crblue">
+							<span></span>
+						</label>
+						<label class="checkbox is-colorball-checkbox is-large is-color-purple" for="input-3crpurple">
+							<input type="checkbox" id="input-3crpurple" name="input-3crpurple">
+							<span></span>
+						</label>
+						<label class="checkbox is-colorball-checkbox is-large is-color-red" for="input-3crred-2">
+							<input type="checkbox" id="input-3crred-2" name="input-3crred-2">
+							<span></span>
+						</label>
+						<label class="checkbox is-colorball-checkbox is-large is-color-orange" for="input-3crorange-2">
+							<input type="checkbox" id="input-3crorange-2" name="input-3crorange-2">
+							<span></span>
+						</label>
+						<label class="checkbox is-colorball-checkbox is-large is-color-yellow" for="input-3cryellow-2">
+							<input type="checkbox" id="input-3cryellow-2" name="input-3cryellow-2">
+							<span></span>
+						</label>
+						<label class="checkbox is-colorball-checkbox is-large is-color-green" for="input-3crgreen-2">
+							<input type="checkbox" id="input-3crgreen-2" name="input-3crgreen-2">
+							<span></span>
+						</label>
+						<label class="checkbox is-colorball-checkbox is-large is-color-turquoise" for="input-3crturquoise-2">
+							<input type="checkbox" id="input-3crturquoise-2" name="input-3crturquoise-2">
+							<span></span>
+						</label>
+						<label class="checkbox is-colorball-checkbox is-large is-color-blue" for="input-3crblue-2">
+							<input type="checkbox" id="input-3crblue-2" name="input-3crblue-2">
+							<span></span>
+						</label>
+						<label class="checkbox is-colorball-checkbox is-large is-color-purple" for="input-3crpurple-2">
 							<input type="checkbox" id="input-3crpurple-2" name="input-3crpurple-2">
 							<span></span>
 						</label>
-</p>
-
-	<nav class="nav">
-
-		<!-- MEDIUMS MEDIUMS MEDIUMS MEDIUMS MEDIUMS MEDIUMS MEDIUMS MEDIUMS -->
-		<!-- MEDIUMS MEDIUMS MEDIUMS MEDIUMS MEDIUMS MEDIUMS MEDIUMS MEDIUMS -->
-		<div class="nav-item dropdown">
-			<a class="button dropdown-toggle" tabindex="1">
-				<span>Mediums</span>
-				<span class="icon is-small">
-					<i class="fa fa-angle-double-down"></i>
-				</span>
-			</a>
-			<aside class="menu">
-				<ul class="menu-list">
-					<!-- Checkboxes: -->
-					<li class="">
-						<!-- <p class="control"> -->
-							<label class="checkbox" for="input-painting">
-								<input type="checkbox" id="input-painting" name="input-painting">
-								<span></span>
-								Paintings
-							</label>
-						<!-- </p> -->
-					</li>
-					<li>
-						<!-- <p class="control"> -->
-							<label class="checkbox" for="input-photography">
-								<input type="checkbox" id="input-photography" name="input-photography">
-								<span></span>
-								Photography
-							</label>
-						<!-- </p> -->
-					</li>
-					<li>
-						<!-- <p class="control"> -->
-							<label class="checkbox" for="input-works-on-paper">
-								<input type="checkbox" id="input-works-on-paper" name="input-works-on-paper">
-								<span></span>
-								Works on Paper
-							</label>
-						<!-- </p> -->
-					</li>
-				</ul>
-			</aside>
-		</div>
-
-
-		<!-- SUBJECTS SUBJECTS SUBJECTS SUBJECTS SUBJECTS SUBJECTS SUBJECTS SUBJECTS -->
-		<!-- SUBJECTS SUBJECTS SUBJECTS SUBJECTS SUBJECTS SUBJECTS SUBJECTS SUBJECTS -->
-		<div class="nav-item dropdown">
-			<a class="button dropdown-toggle" tabindex="1">
-				<span>Subjects</span>
-				<span class="icon is-small">
-					<i class="fa fa-angle-double-down"></i>
-				</span>
-			</a>
-			<aside class="menu">
-				<ul class="menu-list">
-					<!-- Checkboxes: -->
-					<li class="">
-						<!-- <p class="control"> -->
-							<label class="checkbox" for="input-subject-abstract">
-								<input type="checkbox" id="input-subject-abstract" name="input-subject-abstract">
-								<span></span>
-								Abstract
-							</label>
-						<!-- </p> -->
-					</li>
-					<li>
-						<!-- <p class="control"> -->
-							<label class="checkbox" for="input-subject-figurative">
-								<input type="checkbox" id="input-subject-figurative" name="input-subject-figurative">
-								<span></span>
-								Figurative
-							</label>
-						<!-- </p> -->
-					</li>
-					<li>
-						<!-- <p class="control"> -->
-							<label class="checkbox" for="input-subject-still-life">
-								<input type="checkbox" id="input-subject-still-life" name="input-subject-still-life">
-								<span></span>
-								Still Life
-							</label>
-						<!-- </p> -->
-					</li>
-				</ul>
-			</aside>
-		</div>
-
-
-
-		<!-- PRICES PRICES PRICES PRICES PRICES PRICES PRICES -->
-		<!-- PRICES PRICES PRICES PRICES PRICES PRICES PRICES -->
-		<div class="nav-item dropdown active">
-			<a class="button dropdown-toggle" tabindex="1">
-				<span>Prices</span>
-				<span class="icon is-small">
-					<i class="fa fa-angle-double-down"></i>
-				</span>
-			</a>
-			<aside class="menu">
-				<ul class="menu-list">
-					<li>
-						&dollar; <input class="input is-small is-dollar-input" type="text" placeholder="0">
-						&ndash;
-						&dollar; <input class="input is-small is-dollar-input" type="text" placeholder="5000">
-					</li>
-					<li>
-						<label class="radio">
-							<input type="radio" name="question">
-							<span></span>
-							Yes
-						</label>
-					</li>
-					<li>
-						<label class="radio">
-							<input type="radio" name="question">
-							<span></span>
-							No
-						</label>
-					</li>
-				</ul>
-			</aside>
-		</div>
-
-
-		<!-- SIZES SIZES SIZES SIZES SIZES SIZES SIZES SIZES -->
-		<!-- SIZES SIZES SIZES SIZES SIZES SIZES SIZES SIZES -->
-		<div class="nav-item dropdown">
-			<a class="button dropdown-toggle" tabindex="1">
-				<span>Sizes</span>
-				<span class="icon is-small">
-					<i class="fa fa-angle-double-down"></i>
-				</span>
-			</a>
-			<aside class="menu">
-				<div class="level">
-					<div class="level-left">
-						<div class="level-item">
-							<a href="#" class="button is-link is-small">
-								<span>All sizes</span>
-							</a>
-						</div>
-					</div>
-					<div class="level-right">
-						<div class="level-item">
-							<a href="#" class="button is-inverted is-small">
-								<span>Inches</span>
-							</a>
-							<a href="#" class="button is-small">
-								<span>Centimeters</span>
-							</a>
-						</div>
-					</div>
+					</aside>
 				</div>
-				<div class="container has-text-left">
-					<label>Height</label>
-					<div id="height-slider-handles" class="noUi-target noUi-ltr noUi-horizontal"></div>
-					<div class="level">
-						<div class="level-left">
-							<div class="level-item">
-								<span class="numberMinHeight"></span> in
-							</div>
-						</div>
-						<div class="level-right">
-							<div class="level-item">
-								<span class="numberMaxHeight"></span> in
-							</div>
-						</div>
-					</div>
-					<input type="hidden" id="numberMinHeight">
-					<input type="hidden" id="numberMaxHeight">
+
+
+				<!-- SEARCH BUTTON SEARCH BUTTON SEARCH BUTTON SEARCH BUTTON SEARCH BUTTON -->
+				<!-- SEARCH BUTTON SEARCH BUTTON SEARCH BUTTON SEARCH BUTTON SEARCH BUTTON -->
+				<div class="nav-item">
+					<a href="#" class="button is-primary is-small">
+						Search
+					</a>
 				</div>
-				<div class="container has-text-left">
-					<label>Width</label>
-					<div id="width-slider-handles" class="noUi-target noUi-ltr noUi-horizontal"></div>
-					<div class="level">
-						<div class="level-left">
-							<div class="level-item">
-								<span class="numberMinWidth"></span> in
-							</div>
-						</div>
-						<div class="level-right">
-							<div class="level-item">
-								<span class="numberMaxWidth"></span> in
-							</div>
-						</div>
-					</div>
-					<input type="hidden" id="numberMinWidth">
-					<input type="hidden" id="numberMaxWidth">
-				</div>
-			</aside>
-		</div>
+			</nav>
+		</form>
 
+	</div>
 
-		<!-- COLORS COLORS COLORS COLORS COLORS COLORS COLORS COLORS -->
-		<!-- COLORS COLORS COLORS COLORS COLORS COLORS COLORS COLORS -->
-		<div class="nav-item dropdown">
-			<a class="button dropdown-toggle" tabindex="1">
-				<span>Colors</span>
-				<span class="icon is-small">
-					<i class="fa fa-angle-double-down"></i>
-				</span>
-			</a>
-			<aside class="menu is-color-menu">
-				<label class="checkbox is-colorball-checkbox is-large is-color-red" for="input-3crred">
-					<input type="checkbox" id="input-3crred" name="input-3crred">
-					<span></span>
-				</label>
-				<label class="checkbox is-colorball-checkbox is-large is-color-orange" for="input-3crorange">
-					<input type="checkbox" id="input-3crorange" name="input-3crorange">
-					<span></span>
-				</label>
-				<label class="checkbox is-colorball-checkbox is-large is-color-yellow" for="input-3cryellow">
-					<input type="checkbox" id="input-3cryellow" name="input-3cryellow">
-					<span></span>
-				</label>
-				<label class="checkbox is-colorball-checkbox is-large is-color-green" for="input-3crgreen">
-					<input type="checkbox" id="input-3crgreen" name="input-3crgreen">
-					<span></span>
-				</label>
-				<label class="checkbox is-colorball-checkbox is-large is-color-green" for="input-3crgreen">
-					<input type="checkbox" id="input-3crgreen" name="input-3crgreen">
-					<span></span>
-				</label>
-				<label class="checkbox is-colorball-checkbox is-large is-color-turquoise" for="input-3crturquoise">
-					<input type="checkbox" id="input-3crturquoise" name="input-3crturquoise">
-					<span></span>
-				</label>
-				<label class="checkbox is-colorball-checkbox is-large is-color-blue" for="input-3crblue">
-					<input type="checkbox" id="input-3crblue" name="input-3crblue">
-					<span></span>
-				</label>
-				<label class="checkbox is-colorball-checkbox is-large is-color-purple" for="input-3crpurple">
-					<input type="checkbox" id="input-3crpurple" name="input-3crpurple">
-					<span></span>
-				</label>
-				<label class="checkbox is-colorball-checkbox is-large is-color-red" for="input-3crred-2">
-					<input type="checkbox" id="input-3crred-2" name="input-3crred-2">
-					<span></span>
-				</label>
-				<label class="checkbox is-colorball-checkbox is-large is-color-orange" for="input-3crorange-2">
-					<input type="checkbox" id="input-3crorange-2" name="input-3crorange-2">
-					<span></span>
-				</label>
-				<label class="checkbox is-colorball-checkbox is-large is-color-yellow" for="input-3cryellow-2">
-					<input type="checkbox" id="input-3cryellow-2" name="input-3cryellow-2">
-					<span></span>
-				</label>
-				<label class="checkbox is-colorball-checkbox is-large is-color-green" for="input-3crgreen-2">
-					<input type="checkbox" id="input-3crgreen-2" name="input-3crgreen-2">
-					<span></span>
-				</label>
-				<label class="checkbox is-colorball-checkbox is-large is-color-turquoise" for="input-3crturquoise-2">
-					<input type="checkbox" id="input-3crturquoise-2" name="input-3crturquoise-2">
-					<span></span>
-				</label>
-				<label class="checkbox is-colorball-checkbox is-large is-color-blue" for="input-3crblue-2">
-					<input type="checkbox" id="input-3crblue-2" name="input-3crblue-2">
-					<span></span>
-				</label>
-				<label class="checkbox is-colorball-checkbox is-large is-color-purple" for="input-3crpurple-2">
-					<input type="checkbox" id="input-3crpurple-2" name="input-3crpurple-2">
-					<span></span>
-				</label>
-			</aside>
-		</div>
+	<script type="text/javascript" src="../../assets/scripts/nouislider.js"></script>
+	// UI Slider and Size logic
+	<script type="text/javascript">
+		$( document ).ready(function() {
+			// CONVERSION CONVERSION CONVERSION CONVERSION CONVERSION CONVERSION 
+			// 1 in = 2.54 cm
+			$('#size-set-in, #size-set-cm').on('click', function() {
+				$('#size-set-in, #size-set-cm').toggleClass('is-depressed');
+				// $('#size-set-in').toggleClass('is-depressed');
+				// $('#size-set-cm').toggleClass('is-depressed');
+				if ($('#size-set-in').hasClass('is-depressed')) {
+					$('#sizeInchOrCentimeter').val('in');
+					$('span.sizeMeasureInorCm').text('in');
+				} else {
+					$('#sizeInchOrCentimeter').val('cm');
+					$('span.sizeMeasureInorCm').text('cm');
+				}
+				console.log("Value of #sizeInchOrCentimeter: %s", $('#sizeInchOrCentimeter').val());
+setSizeMeasureLabel('sizeMinWidth', $('#sizeMinWidth').val());
+setSizeMeasureLabel('sizeMaxWidth', $('#sizeMaxWidth').val());
+setSizeMeasureLabel('sizeMinHeight', $('#sizeMinHeight').val());
+setSizeMeasureLabel('sizeMaxHeight', $('#sizeMaxHeight').val());
+				// setSizeMeasureLabel(measureName, value)
+			});
 
+			// All sizes
+			$('#sizeAllSizes').on('change', function() {
+				if ($('#sizeAllSizes').prop('checked')) {
+					$('#sizeMinWidth').val(0).trigger('change');
+					$('#sizeMaxWidth').val(120).trigger('change');
+					$('#sizeMinHeight').val(0).trigger('change');
+					$('#sizeMaxHeight').val(120).trigger('change');
+					setSizeMeasureLabel('sizeMinWidth', $('#sizeMinWidth').val());
+					setSizeMeasureLabel('sizeMaxWidth', $('#sizeMaxWidth').val());
+					setSizeMeasureLabel('sizeMinHeight', $('#sizeMinHeight').val());
+					setSizeMeasureLabel('sizeMaxHeight', $('#sizeMaxHeight').val());
+				}
+			});
 
-		<div class="nav-item">
-			<a href="#" class="button is-primary is-small">
-				Search
-			</a>
-		</div>
-	</nav>
-</form>
+			// DISPLAY CURRENT MEASURES
+			function setSizeMeasureLabel(measureName, value) {
+				console.log("Changing `%s` to %s", measureName, value);
+				if ($('#size-set-in').hasClass('is-depressed')) {
+					newValue = value;
+				} else {
+					// cm
+					newValue = Math.round(value * 2.54);
+				}
+				$('span.'+measureName).text(newValue);
+			}
 
-</div>
+			// SLIDER SLIDER SLIDER SLIDER SLIDER SLIDER SLIDER SLIDER 
+			// https://refreshless.com/nouislider/
+			// TODO: Add noUiSlider settings like tab-drag behavior
+			var handlesSliderWidth = document.getElementById('width-slider-handles');
+			var handlesSliderHeight = document.getElementById('height-slider-handles');
 
-<script type="text/javascript" src="../../assets/scripts/nouislider.js"></script>
-<script type="text/javascript">
-	var handlesSliderWidth = document.getElementById('width-slider-handles');
-	var handlesSliderHeight = document.getElementById('height-slider-handles');
+			noUiSlider.create(handlesSliderWidth, {
+				start: [ 20, 100 ],
+				connect: true,
+				range: {
+					'min': [  0 ],
+					'max': [ 120 ]
+				}
+			});
 
-	noUiSlider.create(handlesSliderWidth, {
-		start: [ 20, 100 ],
-		connect: true,
-		range: {
-			'min': [  0 ],
-			'max': [ 120 ]
-		}
-	});
+			noUiSlider.create(handlesSliderHeight, {
+				start: [ 20, 100 ],
+				connect: true,
+				range: {
+					'min': [  0 ],
+					'max': [ 120 ]
+				}
+			});
 
-	noUiSlider.create(handlesSliderHeight, {
-		start: [ 20, 100 ],
-		connect: true,
-		range: {
-			'min': [  0 ],
-			'max': [ 120 ]
-		}
-	});
+			var sizeMaxWidth = document.getElementById('sizeMaxWidth');
+			var sizeMinWidth = document.getElementById('sizeMinWidth');
+			var sizeMaxHeight = document.getElementById('sizeMaxHeight');
+			var sizeMinHeight = document.getElementById('sizeMinHeight');
 
-	var numberMaxWidth = document.getElementById('numberMaxWidth');
-	var numberMinWidth = document.getElementById('numberMinWidth');
-	var numberMaxHeight = document.getElementById('numberMaxHeight');
-	var numberMinHeight = document.getElementById('numberMinHeight');
+			handlesSliderWidth.noUiSlider.on('update', function( values, handle ) {
+				var value = values[handle];
+				// Uncheck the "All sizes" checkbox
+				// $('#sizeAllSizes').prop('checked', false);
+				if ( handle ) {
+					sizeMaxWidth.value = Math.round(value);
+					// console.log("sizeMaxWidth.value: " + sizeMaxWidth.value);
+					// $('span.sizeMaxWidth').text(sizeMaxWidth.value);
+					setSizeMeasureLabel('sizeMaxWidth', sizeMaxWidth.value);
+				} else {
+					sizeMinWidth.value = Math.round(value);
+					// console.log("sizeMinWidth.value: " + sizeMinWidth.value);
+					// $('span.sizeMinWidth').text(sizeMinWidth.value);
+					setSizeMeasureLabel('sizeMinWidth', sizeMinWidth.value);
+				}
+			});
 
-	handlesSliderWidth.noUiSlider.on('update', function( values, handle ) {
-		var value = values[handle];
-		if ( handle ) {
-			numberMaxWidth.value = Math.round(value);
-			console.log("numberMaxWidth.value: " + numberMaxWidth.value);
-			$('span.numberMaxWidth').text(numberMaxWidth.value);
-		} else {
-			numberMinWidth.value = Math.round(value);
-			console.log("numberMinWidth.value: " + numberMinWidth.value);
-			$('span.numberMinWidth').text(numberMinWidth.value);
-		}
-	});
+			$('#sizeMinWidth').on('change', function() {
+				// console.log('YO-1: sizeMinWidth changed to %s', this.value);
+				handlesSliderWidth.noUiSlider.set([this.value, null]);
+			});
+			// sizeMinWidth.addEventListener('change', function(){
+			// 	console.log('YO-2: sizeMinWidth changed');
+			// 	handlesSliderWidth.noUiSlider.set([this.value, null]);
+			// });
 
-	numberMinWidth.addEventListener('change', function(){
-		handlesSliderWidth.noUiSlider.set([this.value, null]);
-	});
+			$('#sizeMaxWidth').on('change', function() {
+				handlesSliderWidth.noUiSlider.set([null, this.value]);
+			});
+			// sizeMaxWidth.addEventListener('change', function(){
+			// 	handlesSliderWidth.noUiSlider.set([null, this.value]);
+			// });
 
-	numberMaxWidth.addEventListener('change', function(){
-		handlesSliderWidth.noUiSlider.set([null, this.value]);
-	});
+			handlesSliderHeight.noUiSlider.on('update', function( values, handle ) {
+				var value = values[handle];
+				// Uncheck the "All sizes" checkbox
+				$('#sizeAllSizes').prop('checked', false);
+				if ( handle ) {
+					sizeMaxHeight.value = Math.round(value);
+					// console.log("sizeMaxHeight.value: " + sizeMaxHeight.value);
+					// $('span.sizeMaxHeight').text(sizeMaxHeight.value);
+					setSizeMeasureLabel('sizeMaxHeight', sizeMaxHeight.value);
+				} else {
+					sizeMinHeight.value = Math.round(value);
+					// console.log("sizeMinHeight.value: " + sizeMinHeight.value);
+					// $('span.sizeMinHeight').text(sizeMinHeight.value);
+					setSizeMeasureLabel('sizeMinHeight', sizeMinHeight.value);
+				}
+			});
 
-	handlesSliderHeight.noUiSlider.on('update', function( values, handle ) {
-		var value = values[handle];
-		if ( handle ) {
-			numberMaxHeight.value = Math.round(value);
-			console.log("numberMaxHeight.value: " + numberMaxHeight.value);
-			$('span.numberMaxHeight').text(numberMaxHeight.value);
-		} else {
-			numberMinHeight.value = Math.round(value);
-			console.log("numberMinHeight.value: " + numberMinHeight.value);
-			$('span.numberMinHeight').text(numberMinHeight.value);
-		}
-	});
+			$('#sizeMinHeight').on('change', function() {
+				handlesSliderHeight.noUiSlider.set([this.value, null]);
+			});
+			$('#sizeMaxHeight').on('change', function() {
+				handlesSliderHeight.noUiSlider.set([null, this.value]);
+			});
 
-	numberMinHeight.addEventListener('change', function(){
-		handlesSliderHeight.noUiSlider.set([this.value, null]);
-	});
+			// sizeMinHeight.addEventListener('change', function(){
+			// 	handlesSliderHeight.noUiSlider.set([this.value, null]);
+			// });
 
-	numberMaxHeight.addEventListener('change', function(){
-		handlesSliderHeight.noUiSlider.set([null, this.value]);
-	});
-</script>
+			// sizeMaxHeight.addEventListener('change', function(){
+			// 	handlesSliderHeight.noUiSlider.set([null, this.value]);
+			// });
+		});
+	</script>
 
 
 </body>
