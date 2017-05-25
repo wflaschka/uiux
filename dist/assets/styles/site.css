@@ -10028,6 +10028,18 @@ p.caption {
   background-color: transparent;
 }
 
+.button.has-shadow {
+  box-shadow: 4px 4px 10px #b5b5b5;
+}
+
+.button.has-shadow.is-depressed {
+  box-shadow: none;
+}
+
+.button.is-depressed {
+  opacity: 0.6;
+}
+
 /**
  * TOC: Search form markup
  * 1. Styling for non-search form but fancy inputs
@@ -10041,6 +10053,9 @@ p.caption {
 form.is-search-form {
   /**
 	 * Basic positioning and definitions
+	 */
+  /**
+	 * Text sizing inside dropdowns
 	 */
   /**
 	 * Positioning for DOLLAR input
@@ -10131,12 +10146,17 @@ form.is-search-form input:checked + span:after {
   background-color: #363636;
 }
 
+form.is-search-form .menu {
+  font-size: 0.8rem;
+}
+
 form.is-search-form input[type=text] {
   display: inherit;
 }
 
 form.is-search-form input[type=text].is-dollar-input {
   width: 40%;
+  height: 1rem;
   display: inline-block;
 }
 
@@ -10332,8 +10352,17 @@ form.is-search-form aside.menu.is-color-menu label.is-colorball-checkbox.is-larg
   height: 13.5px;
 }
 
+form.is-search-form aside.menu.is-size-menu {
+  width: 20rem;
+}
+
+form.is-search-form .noUi-container {
+  padding: 0px 0.5rem;
+}
+
 form.is-search-form .noUi-horizontal {
-  height: 5px;
+  height: 2px;
+  margin: 3px 0 3px 0;
 }
 
 form.is-search-form .noUi-target {
@@ -10358,19 +10387,23 @@ form.is-search-form .noUi-base {
   /* Fix 401 */
 }
 
-form.is-search-form .noUi-horizontal .noUi-handle {
-  width: 20px;
-  height: 20px;
-  left: -17px;
-  top: -8px;
-}
-
 form.is-search-form .noUi-handle {
   border: 1px solid #4a4a4a;
   border-radius: 100%;
   background: #4a4a4a;
   cursor: default;
   box-shadow: none;
+}
+
+form.is-search-form .noUi-horizontal .noUi-handle {
+  width: 15px;
+  height: 15px;
+  left: -14px;
+  top: -6px;
+}
+
+form.is-search-form .noUi-horizontal .noUi-handle.noUi-handle-lower {
+  left: -1px;
 }
 
 form.is-search-form .noUi-handle:before,

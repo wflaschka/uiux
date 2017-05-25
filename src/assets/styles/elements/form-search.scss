@@ -132,6 +132,13 @@ form.is-search-form {
 	}
 
 	/**
+	 * Text sizing inside dropdowns
+	 */
+	 .menu {
+	 	font-size: 0.8rem;
+	 }
+
+	/**
 	 * Positioning for DOLLAR input
 	 */
 	// DOLLAR INPUT DOLLAR INPUT DOLLAR INPUT DOLLAR INPUT DOLLAR INPUT DOLLAR INPUT 
@@ -141,6 +148,7 @@ form.is-search-form {
 
 		&.is-dollar-input {
 			width: 40%;
+			height: 1rem;
 			display: inline-block;
 		}
 	}
@@ -338,8 +346,16 @@ form.is-search-form {
 	// NoUISlider -- change styling
 	// UI SLIDER FOR SIZES UI SLIDER FOR SIZES UI SLIDER FOR SIZES UI SLIDER FOR SIZES 
 	// UI SLIDER FOR SIZES UI SLIDER FOR SIZES UI SLIDER FOR SIZES UI SLIDER FOR SIZES 
+	aside.menu.is-size-menu {
+		width: 20rem;
+	}
+	.noUi-container {
+		padding: 0px 0.5rem;
+	}
+
 	.noUi-horizontal {
-		height: 5px;
+		height: 2px;
+		margin: 3px 0 3px 0;
 	}
 	.noUi-target {
 		background: $grey-light;
@@ -363,12 +379,6 @@ form.is-search-form {
 		z-index: 1;
 		/* Fix 401 */
 	}
-	.noUi-horizontal .noUi-handle {
-		width: 20px;
-		height: 20px;
-		left: -17px;
-		top: -8px;
-	}
 	.noUi-handle {
 		border: 1px solid $grey-dark;
 		border-radius: 100%;
@@ -376,6 +386,16 @@ form.is-search-form {
 		cursor: default;
 		box-shadow: none;
 		// box-shadow: inset 0 0 1px #FFF, inset 0 1px 7px #EBEBEB, 0 3px 6px -3px #BBB;
+	}
+	.noUi-horizontal .noUi-handle {
+		width: 15px;
+		height: 15px;
+		left: -14px;
+		top: -6px;
+		&.noUi-handle-lower {
+			// So going to "0" on left doesn't mean ball goes off the line
+			left: -1px;
+		}
 	}
 	.noUi-handle:before,
 	.noUi-handle:after {
