@@ -10411,6 +10411,73 @@ form.is-search-form .noUi-handle:after {
   display: none;
 }
 
+/**
+* FORM markup
+* Based on BULMA with special extras
+*/
+.has-zooming-labels .control {
+  position: relative;
+}
+
+.has-zooming-labels .control label.label {
+  color: #363636;
+  display: block;
+  font-size: 1rem;
+  font-weight: normal;
+  margin: 0px;
+  position: absolute;
+  left: .6rem;
+  top: .4rem;
+  cursor: text;
+  opacity: 0.8;
+  transition: all .2s;
+}
+
+.has-zooming-labels .control input.input {
+  padding-top: 1.4em;
+  padding-bottom: 1em;
+}
+
+.has-zooming-labels .control input.input:focus, .has-zooming-labels .control input.input:active {
+  outline: none;
+}
+
+.has-zooming-labels .control textarea.textarea {
+  padding-top: 2rem;
+  padding-bottom: 1em;
+}
+
+.has-zooming-labels .control textarea.textarea:focus, .has-zooming-labels .control textarea.textarea:active {
+  outline: none;
+}
+
+.has-zooming-labels .control input.input:focus + label,
+.has-zooming-labels .control input.input.has-value + label,
+.has-zooming-labels .control input.input:not(:placeholder-shown) + label,
+.has-zooming-labels .control textarea.textarea:focus + label,
+.has-zooming-labels .control textarea.textarea.has-value + label,
+.has-zooming-labels .control textarea.textarea:not(:placeholder-shown) + label {
+  font-weight: normal;
+  font-size: 65%;
+  transform: translateY(-20%);
+}
+
+.has-zooming-labels .control input.input::placeholder,
+.has-zooming-labels .control textarea.textarea::placeholder {
+  opacity: 0;
+  transition: all .2s;
+}
+
+.has-zooming-labels .control input.input:placeholder-shown:not(:focus)::placeholder,
+.has-zooming-labels .control textarea.textarea:placeholder-shown:not(:focus)::placeholder {
+  opacity: 0;
+}
+
+.has-zooming-labels .control input.input:placeholder-shown:focus::placeholder,
+.has-zooming-labels .control textarea.textarea:placeholder-shown:focus::placeholder {
+  opacity: 1;
+}
+
 .badge {
   position: relative;
 }
