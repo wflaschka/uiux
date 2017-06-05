@@ -79,6 +79,8 @@ $zindex-4: 400;
     position: relative;
     width: 100%;
     z-index: $zindex-1;
+
+    max-height: inherit;
   }
 
   .avatar-icon {
