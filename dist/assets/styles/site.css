@@ -10937,12 +10937,17 @@ form.is-search-form .noUi-handle:after {
   width: 6.4rem;
 }
 
+.nav-item .avatar img {
+  max-height: inherit;
+}
+
 .avatar img {
   border-radius: 50%;
   height: 100%;
   position: relative;
   width: 100%;
   z-index: 100;
+  max-height: inherit;
 }
 
 .avatar .avatar-icon {
