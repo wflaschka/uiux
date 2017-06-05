@@ -11,7 +11,7 @@
 	<link rel="stylesheet" type="text/css" href="../../assets/styles/site.css">
 	<script type="text/javascript" src="../../assets/scripts/jquery-3.1.1.js"></script>
 
-	<link rel="stylesheet" type="text/css" href="../../assets/styles/bulma-avatars.css">
+	<!--<link rel="stylesheet" type="text/css" href="../../assets/styles/bulma-avatars.css">-->
 
 </head>
 <body>
@@ -30,7 +30,7 @@
 
 	<section class="content is-large">
 		<p>
-			<em>Styles:</em> <tt>src/assets/styles/elements/spectre-avatar/bulma-avatars.less</tt>
+			<em>Styles:</em> <tt>src/assets/styles/elements/avatars.scss</tt>
 			<br>
 			<em>Markup:</em> <tt>src/prototypes/design-elements/avatars.html</tt>
 		</p>
@@ -75,17 +75,37 @@
 			<img src="../../assets/images/profiles/person-2.jpg" />
 		</figure>
 
-		<p>&nbsp;</p>
+		<hr>
+		<h3 class="title is-3">Sizes:</h3>
+		<figure class="avatar avatar-xl" data-initial="YZ"></figure>
+		<figure class="avatar avatar-lg" data-initial="YZ"></figure>
+		<figure class="avatar" data-initial="YZ"></figure>
+		<figure class="avatar avatar-sm" data-initial="YZ"></figure>
+		<figure class="avatar avatar-xs" data-initial="YZ"></figure>
 
+		<hr>
+		<h3 class="title is-3">Colors:</h3>
 
-		<figure class="avatar avatar-xl" data-initial="YZ" style="background-color: #ddbdff;"></figure>
-		<figure class="avatar avatar-lg" data-initial="YZ" style="background-color: #ddbdff;"></figure>
-		<figure class="avatar" data-initial="YZ" style="background-color: #ddbdff;"></figure>
-		<figure class="avatar avatar-sm" data-initial="YZ" style="background-color: #ddbdff;"></figure>
-		<figure class="avatar avatar-xs" data-initial="YZ" style="background-color: #ddbdff;"></figure>
+		<figure class="avatar" data-initial="WF"></figure>
+		<figure class="avatar is-white" data-initial="WF"></figure>
+		<figure class="avatar is-black" data-initial="WF"></figure>
+		<figure class="avatar is-light" data-initial="WF"></figure>
+		<figure class="avatar is-dark" data-initial="WF"></figure>
+		<figure class="avatar is-primary" data-initial="WF"></figure>
+		<figure class="avatar is-info" data-initial="WF"></figure>
+		<figure class="avatar is-danger" data-initial="WF"></figure>
+		<figure class="avatar is-success" data-initial="WF"></figure>
+		<figure class="avatar is-warning" data-initial="WF"></figure>
+		<figure class="avatar is-orange" data-initial="WF"></figure>
+		<figure class="avatar is-yellow" data-initial="WF"></figure>
+		<figure class="avatar is-green" data-initial="WF"></figure>
+		<figure class="avatar is-turquoise" data-initial="WF"></figure>
+		<figure class="avatar is-blue" data-initial="WF"></figure>
+		<figure class="avatar is-purple" data-initial="WF"></figure>
+		<figure class="avatar is-red" data-initial="WF"></figure>
 
-
-		<p>&nbsp;</p>
+		<hr>
+		<h3 class="title is-3">Stacking:</h3>
 
 		<figure class="avatar avatar-xl">
 			<img src="../../assets/images/profiles/person-2.jpg" />
@@ -95,15 +115,19 @@
 			<img src="../../assets/images/profiles/person-2.jpg" />
 			<img src="../../assets/images/profiles/person-3.jpg" class="avatar-icon" />
 		</figure>
-
 		<p>&nbsp;</p>
+		<p>TODO: How to stack non-image avatars?</p>
+		<figure class="avatar is-red" data-initial="WF">
+			<figure class="avatar is-green" data-initial="WF"></figure>
+		</figure>
+
+		<hr>
+		<h3 class="title is-3">Experiments (code):</h3>
 
 		<figure class="avatar avatar-xl" data-initial="YZ" style="background-color: #ddbdff;"></figure>
 		<figure class="avatar avatar-xs" data-initial="YZ" style="background-color: #ddbdff;"></figure>
 		<figure class="avatar avatar-xl" data-initial="WBF" style="background-color: #ddbdff;"></figure>
 		<figure class="avatar avatar-xs" data-initial="WBF" style="background-color: #ddbdff;"></figure>
-		<!-- <figure class="avatar avatar-xl" data-initial="MRWF" style="background-color: #ddbdff;"></figure> -->
-		<!-- <figure class="avatar avatar-xl" data-initial="MRWF Jr." style="background-color: #ddbdff;"></figure> -->
 		<figure class="avatar avatar-xl" data-initial="i2" style="background-color: #ddbdff;"></figure>
 
 		<!-- Show initals when avatar image is unavailable or not fully loaded -->

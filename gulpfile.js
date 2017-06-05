@@ -79,8 +79,8 @@ var paths = {
 		,'!' + rootSource + 'assets/images/**/*.psd'
 	],
 	sass: [
-		rootSource    + 'assets/styles/bulma.sass'
-		,rootSource    + 'assets/styles/site.sass'
+		rootSource    + 'assets/styles/bulma.scss'
+		,rootSource    + 'assets/styles/site.scss'
 		// ,rootSource   + 'assets/styles/interactive/sweetalert-build.scss' // 20170430 only if we want standalone css for this
 		// ,'node_modules/bulma/sass/**/*.*'
 	],
@@ -89,12 +89,11 @@ var paths = {
 	// 	,rootSource    + 'assets/styles/site.sass'
 	// ],
 	less: [
-		rootSource    + 'assets/styles/spectre.less'
-		,rootSource   + 'assets/styles/spectre-carousel/carousels-bulma.less'
-		// ,rootSource   + 'assets/styles/spectre-menu/bulma-menu.less'
-		,rootSource   + 'assets/styles/spectre-menu/bulma-dropdown-menu.less'
-		,rootSource   + 'assets/styles/spectre-avatar/bulma-avatars.less'
-		,'node_modules/spectre.css/spectre-icons.less'
+		// rootSource    + 'assets/styles/spectre.less'
+		// ,rootSource   + 'assets/styles/spectre-carousel/carousels-bulma.less'
+		// ,rootSource   + 'assets/styles/spectre-menu/bulma-dropdown-menu.less'
+		// ,rootSource   + 'assets/styles/spectre-avatar/bulma-avatars.less'
+		// ,'node_modules/spectre.css/spectre-icons.less'
 	],
 	html: [
 		rootSource    + '**/*.htm?'
