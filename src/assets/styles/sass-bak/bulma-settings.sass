@@ -39,7 +39,7 @@ $red:          #cc3333 !default
 // $family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif !default
 $family-sans-serif: "Helvetica Neue", "Helvetica", "Arial", sans-serif !default
 $family-monospace: monospace !default
-$family-serif-title: 'Portrait Web', Georgia;
+$family-serif-title: 'Portrait Web', Georgia
 
 $size-1: 3rem !default
 $size-2: 2.5rem !default
@@ -95,7 +95,7 @@ $dark: $grey-darker !default
 // 3. Applied variables
 
 // Invert colors
-$black-invert: $white;
+$black-invert: $white
 $orange-invert: findColorInvert($orange) !default
 $yellow-invert: findColorInvert($yellow) !default
 $green-invert: findColorInvert($green) !default
@@ -158,7 +158,10 @@ $size-large: $size-4 !default
 ////////////////////////////////////////////////
 // 4. Lists and maps
 
-$colors: (white: ($white, $black), black: ($black, $white), light: ($light, $light-invert), dark: ($dark, $dark-invert), primary: ($primary, $primary-invert), info: ($info, $info-invert), danger: ($danger, $danger-invert), success: ($success, $success-invert), warning: ($warning, $warning-invert) ) !default
+$colors: (white: ($white, $black), black: ($black, $white), light: ($light, $light-invert), dark: ($dark, $dark-invert), primary: ($primary, $primary-invert), info: ($info, $info-invert), danger: ($danger, $danger-invert), success: ($success, $success-invert), warning: ($warning, $warning-invert), orange: ($orange, $orange-invert), yellow: ($yellow, $yellow-invert), green: ($green, $green-invert), turquoise: ($turquoise, $turquoise-invert), blue: ($blue, $blue-invert), purple: ($purple, $purple-invert), red: ($red, $red-invert)) !default
+
+
+
 
 // @warn 'danger-invert:'
 // @warn $danger-invert
@@ -171,8 +174,8 @@ $sizes: $size-1 $size-2 $size-3 $size-4 $size-5 $size-6 !default
 ////////////////////////////////////////////////
 // Shadows
 
-$shadow-offset-x: 4px;
-$shadow-offset-y: 4px;
-$shadow-spread: 10px;
-$shadow-color: $grey-light;
-$primary-box-shadow: $shadow-offset-x $shadow-offset-y $shadow-spread $shadow-color;
+$shadow-offset-x: 4px
+$shadow-offset-y: 4px
+$shadow-spread: 10px
+$shadow-color: $grey-light
+$primary-box-shadow: $shadow-offset-x $shadow-offset-y $shadow-spread $shadow-color

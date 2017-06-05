@@ -6,6 +6,13 @@ https://picturepan2.github.io/spectre/utilities.html#divider
 ArtTap UI/UX patterns for Marketplace project.
 
 
+SASS/SCSS functions
+http://sass-lang.com/documentation/Sass/Script/Functions.html
+
+```sh
+sass-convert --from sass --to scss temp.sass temp.scss
+```
+
 ## Install
 
 Install with git:

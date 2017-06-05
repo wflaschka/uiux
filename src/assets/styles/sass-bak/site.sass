@@ -23,8 +23,8 @@
 tt
 	color: $grey
 	background-color: $grey-lighter
-	border-radius: 3px;
-	padding: 1px 3px;
+	border-radius: 3px
+	padding: 1px 3px
 
 .is-text-red
 	color: $red
@@ -52,16 +52,26 @@ tt
 @import "elements/hearts.scss"
 @import "elements/art-cards.scss"
 @import "elements/artist-cards.scss"
+//Must be after artist-cards.scss
+@import "elements/masonry.scss" 
 @import "elements/tags.scss"
-@import "elements/frames.scss"
 @import "elements/typography.scss"
 @import "elements/buttons.scss"
 @import "elements/form-search.scss"
 @import "elements/form.scss"
-@import "elements/spectre-borrowed/floating-badges.scss"
+@import "elements/floating-badges.scss"
 @import "elements/push-panel-right.scss"
 @import "elements/motd.scss"
-@import "elements/masonry.scss" //after artist-cards.scss
+@import "elements/motd.scss"
+@import "elements/motd.scss"
+@import "elements/dropdown-menu.scss"
+@import "elements/avatars.scss"
+@import "elements/carousel.scss"
+
+/**
+ * Experimental
+ */
+@import "elements/frames.scss"
 
 /**
  * Include Interactive elements
