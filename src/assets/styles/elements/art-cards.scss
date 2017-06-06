@@ -46,6 +46,10 @@ $shrink-divisor: 1.5;
 			}
 			.card-price {
 			}
+
+			.card-advisory {
+				visibility: hidden;
+			}
 		}
 
 	}
@@ -71,6 +75,26 @@ $shrink-divisor: 1.5;
 			}
 		}
 	}
+
+	&.is-sold, &.is-not-visible, &.is-rejected {
+		.card-advisory {
+			visibility: visible;
+			color: $danger;
+			text-align: right;
+		}
+	}
+	&.is-not-visible {
+		>figure {
+			img {
+				opacity: 0.4;
+			}
+		}
+	}
+	&.is-rejected {
+		border: 1px solid transparentize($danger, 0.7);
+		background-color: transparentize($danger, 0.8);
+	}
+
 }
 
 /**

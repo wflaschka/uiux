@@ -9605,6 +9605,7 @@ tt {
  */
 div.heart {
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  text-align: right;
 }
 
 div.heart .heart-number {
@@ -9740,6 +9741,11 @@ div.heart.is-being-clicked .icon .fa {
   font-style: italic;
 }
 
+.media-card .card-content .card-info .card-advisory,
+.artist-card .card-content .card-info .card-advisory {
+  visibility: hidden;
+}
+
 .media-card > figure,
 .artist-card > figure {
   height: 15rem;
@@ -9761,6 +9767,26 @@ div.heart.is-being-clicked .icon .fa {
   width: 15rem;
   height: auto;
   margin: none;
+}
+
+.media-card.is-sold .card-advisory, .media-card.is-not-visible .card-advisory, .media-card.is-rejected .card-advisory,
+.artist-card.is-sold .card-advisory,
+.artist-card.is-not-visible .card-advisory,
+.artist-card.is-rejected .card-advisory {
+  visibility: visible;
+  color: #cc3333;
+  text-align: right;
+}
+
+.media-card.is-not-visible > figure img,
+.artist-card.is-not-visible > figure img {
+  opacity: 0.4;
+}
+
+.media-card.is-rejected,
+.artist-card.is-rejected {
+  border: 1px solid rgba(204, 51, 51, 0.3);
+  background-color: rgba(204, 51, 51, 0.2);
 }
 
 /**
