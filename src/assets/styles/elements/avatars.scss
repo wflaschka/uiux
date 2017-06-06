@@ -109,10 +109,11 @@ $zindex-4: 400;
         border: 1px solid $info;
         background-color: $white;
             
-            background-image: url("../images/graphics/Arrows/arrows_up.svg");
-            background-size: 50px;
-            background-repeat: no-repeat;
-            background-position: center 20%;
+        background-image: url("../images/graphics/Arrows/arrows_up.svg");
+        fill: $info;
+        background-size: 50px;
+        background-repeat: no-repeat;
+        background-position: center 20%;
 
         &[data-initial]::before {
             content: '';
