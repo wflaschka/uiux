@@ -10972,6 +10972,7 @@ form.is-search-form .noUi-handle:after {
   border: 1px solid #e09d00;
   background-color: white;
   background-image: url("../images/graphics/Arrows/arrows_up.svg");
+  fill: #e09d00;
   background-size: 50px;
   background-repeat: no-repeat;
   background-position: center 20%;
