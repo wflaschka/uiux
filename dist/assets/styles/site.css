@@ -10937,10 +10937,6 @@ form.is-search-form .noUi-handle:after {
   width: 6.4rem;
 }
 
-.nav-item .avatar img {
-  max-height: inherit;
-}
-
 .avatar img {
   border-radius: 50%;
   height: 100%;
@@ -10969,6 +10965,39 @@ form.is-search-form .noUi-handle:after {
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
+}
+
+.avatar.is-upload-prompt {
+  color: #e09d00;
+  border: 1px solid #e09d00;
+  background-color: white;
+  background-image: url("../images/graphics/Arrows/arrows_up.svg");
+  background-size: 50px;
+  background-repeat: no-repeat;
+  background-position: center 20%;
+}
+
+.avatar.is-upload-prompt[data-initial]::before {
+  content: '';
+}
+
+.avatar.is-upload-prompt[data-initial]::before, .avatar.is-upload-prompt::before {
+  font-size: 0.8rem;
+  font-weight: 300;
+  text-align: center;
+  color: currentColor;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1em;
+  content: "Add Photo";
+  position: absolute;
+  z-index: 1;
+}
+
+.nav-item .avatar img {
+  max-height: inherit;
 }
 
 #bulma-version .button {
@@ -11110,6 +11139,165 @@ form.is-search-form .noUi-handle:after {
   }
 }
 
+.is-user-navigation.panel .panel-heading,
+.is-user-navigation.panel .panel-tabs,
+.is-user-navigation.panel .panel-block {
+  border-bottom: 1px solid #dbdbdb;
+  border-left: none;
+  border-right: none;
+}
+
+.is-user-navigation.panel .panel-heading:first-child,
+.is-user-navigation.panel .panel-tabs:first-child,
+.is-user-navigation.panel .panel-block:first-child {
+  border-top: none;
+}
+
+.is-user-navigation.panel .panel-block {
+  font-size: 0.75rem;
+  font-weight: bold;
+  align-items: center;
+  color: #363636;
+  display: flex;
+  justify-content: flex-start;
+  padding: 1.25em 0.75em;
+}
+
+.is-user-navigation.panel .panel-block a {
+  color: #4a4a4a;
+  text-transform: uppercase;
+}
+
+.is-user-navigation.panel .panel-block a:hover {
+  color: #e09d00;
+}
+
+.is-user-navigation.panel .panel-block.is-active {
+  color: #e09d00;
+}
+
+.is-user-navigation.panel .panel-block.is-active a {
+  color: #e09d00;
+}
+
+.is-user-navigation.panel .panel-block.is-active .panel-icon {
+  color: #e09d00;
+}
+
+/*
+#DEPRECATED {
+    .panel {
+    font-size: $size-normal;
+
+        &:not(:last-child) {
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    .panel-heading,
+    .panel-tabs,
+    .panel-block {
+    border-bottom: 1px solid $border;
+    border-left: 1px solid $border;
+    border-right: 1px solid $border;
+
+    &:first-child {
+        border-top: 1px solid $border;
+    }
+    }
+
+    .panel-heading {
+    background-color: $background;
+    border-radius: $radius $radius 0 0;
+    color: $text-strong;
+    font-size: 1.25em;
+    font-weight: $weight-light;
+    line-height: 1.25;
+    padding: 0.5em 0.75em;
+    }
+
+    .panel-tabs {
+    align-items: flex-end;
+    display: flex;
+    font-size: 0.875em;
+    justify-content: center;
+
+    a {
+        border-bottom: 1px solid $border;
+        margin-bottom: -1px;
+        padding: 0.5em;
+
+        // Modifiers
+        &.is-active {
+        border-bottom-color: $link-active-border;
+        color: $link-active;
+        }
+    }
+    }
+
+    .panel-list {
+    a {
+        color: $text;
+
+        &:hover {
+        color: $link;
+        }
+    }
+    }
+
+    .panel-block {
+    align-items: center;
+    color: $text-strong;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0.5em 0.75em;
+
+    input[type="checkbox"] {
+        margin-right: 0.75em;
+    }
+
+    & > .control {
+        flex-grow: 1;
+        flex-shrink: 1;
+        width: 100%;
+    }
+
+    &.is-wrapped {
+        flex-wrap: wrap;
+    }
+
+    &.is-active {
+        border-left-color: $link;
+        color: $link-active;
+
+        .panel-icon {
+        color: $link;
+        }
+    }
+    }
+
+    a.panel-block,
+    label.panel-block {
+    cursor: pointer;
+
+    &:hover {
+        background-color: $background;
+    }
+    }
+
+    .panel-icon {
+    // @include fa(14px, 1em);
+
+    color: $text-light;
+    margin-right: 0.75em;
+
+    .fa {
+        font-size: inherit;
+        line-height: inherit;
+    }
+    }
+}
+*/
 /**
  * Experimental
  */

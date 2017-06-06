@@ -50,7 +50,6 @@ $zindex-4: 400;
     }
   }
 
-
   // Avatar sizes
   &.avatar-xs {
     font-size: .8rem;
@@ -103,6 +102,40 @@ $zindex-4: 400;
     transform: translate(-50%, -50%);
     z-index: $zindex-0;
   }
+
+    // Special definition for the upload prompt
+    &.is-upload-prompt {
+        color: $info;
+        border: 1px solid $info;
+        background-color: $white;
+            
+            background-image: url("../images/graphics/Arrows/arrows_up.svg");
+            background-size: 50px;
+            background-repeat: no-repeat;
+            background-position: center 20%;
+
+        &[data-initial]::before {
+            content: '';
+        }
+        &[data-initial]::before, &::before {
+            font-size: 0.8rem;
+            font-weight: 300;
+            text-align: center;
+            color: currentColor;
+
+            width: 100%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 1em;
+
+            content: "Add Photo";
+            position: absolute;
+            z-index: $zindex-0;
+        }
+
+    }
 }
 
 // Navigation header, super-targeted
