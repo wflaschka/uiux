@@ -9778,8 +9778,10 @@ div.heart.is-being-clicked .icon .fa {
   text-align: right;
 }
 
-.media-card.is-not-visible > figure img,
-.artist-card.is-not-visible > figure img {
+.media-card.is-sold > figure img, .media-card.is-not-visible > figure img, .media-card.is-rejected > figure img,
+.artist-card.is-sold > figure img,
+.artist-card.is-not-visible > figure img,
+.artist-card.is-rejected > figure img {
   opacity: 0.4;
 }
 
