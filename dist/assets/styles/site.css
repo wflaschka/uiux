@@ -9824,6 +9824,162 @@ div.heart.is-being-clicked .icon .fa {
 }
 
 /**
+ * View of artwork card from artist perspective
+ */
+.media-card.is-artist-view {
+  height: auto;
+  width: 15rem;
+  min-width: 15rem;
+  max-width: 15rem;
+  box-shadow: 4px 4px 10px #b5b5b5;
+}
+
+.media-card.is-artist-view.is-rejected .card-content .button {
+  background-color: white !important;
+}
+
+.media-card.is-artist-view .card-content {
+  padding: 1em 1em 0em 1em;
+}
+
+.media-card.is-artist-view .card-content .button {
+  margin-bottom: 1rem;
+}
+
+.media-card.is-artist-view .card-content .button.is-disabled {
+  pointer-events: none;
+  background-color: transparent;
+  box-shadow: none;
+  opacity: 0.4;
+}
+
+.media-card.is-artist-view .card-content .button.is-disabled.is-white {
+  background-color: #b5b5b5;
+  color: #363636;
+  border-color: transparent;
+}
+
+.media-card.is-artist-view .card-content .button.is-disabled.is-black {
+  background-color: #b5b5b5;
+  color: #363636;
+  border-color: transparent;
+}
+
+.media-card.is-artist-view .card-content .button.is-disabled.is-light {
+  background-color: #b5b5b5;
+  color: #363636;
+  border-color: transparent;
+}
+
+.media-card.is-artist-view .card-content .button.is-disabled.is-dark {
+  background-color: #b5b5b5;
+  color: #363636;
+  border-color: transparent;
+}
+
+.media-card.is-artist-view .card-content .button.is-disabled.is-primary {
+  background-color: #b5b5b5;
+  color: #363636;
+  border-color: transparent;
+}
+
+.media-card.is-artist-view .card-content .button.is-disabled.is-info {
+  background-color: #b5b5b5;
+  color: #363636;
+  border-color: transparent;
+}
+
+.media-card.is-artist-view .card-content .button.is-disabled.is-danger {
+  background-color: #b5b5b5;
+  color: #363636;
+  border-color: transparent;
+}
+
+.media-card.is-artist-view .card-content .button.is-disabled.is-success {
+  background-color: #b5b5b5;
+  color: #363636;
+  border-color: transparent;
+}
+
+.media-card.is-artist-view .card-content .button.is-disabled.is-warning {
+  background-color: #b5b5b5;
+  color: #363636;
+  border-color: transparent;
+}
+
+.media-card.is-artist-view .card-content .button.is-disabled.is-orange {
+  background-color: #b5b5b5;
+  color: #363636;
+  border-color: transparent;
+}
+
+.media-card.is-artist-view .card-content .button.is-disabled.is-yellow {
+  background-color: #b5b5b5;
+  color: #363636;
+  border-color: transparent;
+}
+
+.media-card.is-artist-view .card-content .button.is-disabled.is-green {
+  background-color: #b5b5b5;
+  color: #363636;
+  border-color: transparent;
+}
+
+.media-card.is-artist-view .card-content .button.is-disabled.is-turquoise {
+  background-color: #b5b5b5;
+  color: #363636;
+  border-color: transparent;
+}
+
+.media-card.is-artist-view .card-content .button.is-disabled.is-blue {
+  background-color: #b5b5b5;
+  color: #363636;
+  border-color: transparent;
+}
+
+.media-card.is-artist-view .card-content .button.is-disabled.is-purple {
+  background-color: #b5b5b5;
+  color: #363636;
+  border-color: transparent;
+}
+
+.media-card.is-artist-view .card-content .button.is-disabled.is-red {
+  background-color: #b5b5b5;
+  color: #363636;
+  border-color: transparent;
+}
+
+.media-card.is-artist-view > figure {
+  height: 15rem;
+  width: 15rem;
+  display: block;
+}
+
+.media-card.is-artist-view > figure img {
+  box-shadow: none;
+  pointer-events: none;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+}
+
+.media-card.is-artist-view.is-sold .card-advisory, .media-card.is-artist-view.is-not-visible .card-advisory, .media-card.is-artist-view.is-rejected .card-advisory {
+  visibility: visible;
+  color: #cc3333;
+  text-align: right;
+}
+
+.media-card.is-artist-view.is-not-visible > figure img {
+  opacity: 0.4;
+}
+
+.media-card.is-artist-view.is-rejected {
+  border: 1px solid rgba(204, 51, 51, 0.3);
+  background-color: rgba(204, 51, 51, 0.2);
+}
+
+/**
  * Artist Card: .artist-card
  * Subclassed off of .media-card (art-cards.scss)
  */
