@@ -16,7 +16,7 @@
 	<div class="container">
 
 		<h1 class="title is-1">
-			Artwork Card (Single)
+			Artwork Card from Artist (Single)
 			<a href="/" class="tag is-warning is-icon">
 				Home
 				<span class="icon is-small">
@@ -29,36 +29,24 @@
 			<p>
 				<em>Styles:</em> <tt>src/assets/styles/elements/art-cards.scss</tt>
 				<br>
-				<em>Markup:</em> <tt>src/prototypes/design-elements/art-card-single.html</tt>
+				<em>Markup:</em> <tt>src/prototypes/design-elements/art-card-from-artist.html</tt>
 			</p>
 		</section>
 
 
 		<div class="box">
 			<h3 class="subtitle is-3">Basic card</h3>
-			<div class="content">
-				<ul>
-					<li>Height: 20rem</li>
-					<li>Image height always: 15rem</li>
-					<li>Min width: 10rem</li>
-					<li>Max width: 15rem</li>
-					<li>Examples:
-						<ol>
-							<li>Proportionally narrower than minimum card width</li>
-							<li>Squareish art piece</li>
-							<li>Wideish art piece</li>
-							<li>Proportionally wider than maximum card width</li>
-						</ol>
-					</li>
-				</ul>
-			</div>
-
+            <div class="content">
+                <ul>
+                    <li>Artist view <span class="tag is-warning">.is-artist-view</span></li>
+                </ul>
+            </div>
 
 			<div class="columns">
 
 				<!-- ART CARD -->
 				<!-- ART CARD -->
-				<div class="card media-card">
+				<div class="card media-card is-artist-view">
 					<figure>
 						<img src="../../assets/images/artwork/art-4.jpg">
 					</figure>
@@ -79,6 +67,10 @@
 							<span class="card-price">$120</span>
 						</p>
 
+                        <!-- Art-from-artwork view -->
+                        <a class="button is-small is-outlined is-info is-fullwidth">
+                            Edit Artwork
+                        </a>
 					</div>
 				</div>
 				<!-- ART CARD -->
@@ -87,7 +79,7 @@
 
 				<!-- ART CARD -->
 				<!-- ART CARD -->
-				<div class="card media-card">
+				<div class="card media-card is-artist-view">
 					<figure>
 						<img src="../../assets/images/artwork/art-3.jpg">
 					</figure>
@@ -108,6 +100,10 @@
 							<span class="card-price">$120</span>
 						</p>
 
+                        <!-- Art-from-artwork view -->
+                        <a class="button is-small is-outlined is-info is-fullwidth">
+                            Edit Artwork
+                        </a>
 					</div>
 				</div>
 				<!-- ART CARD -->
@@ -117,7 +113,7 @@
 
 				<!-- ART CARD -->
 				<!-- ART CARD -->
-				<div class="card media-card">
+				<div class="card media-card is-artist-view">
 					<figure>
 						<img class="is-wide" src="../../assets/images/artwork/art-2.jpg">
 					</figure>
@@ -138,6 +134,10 @@
 							<span class="card-price">$120</span>
 						</p>
 
+                        <!-- Art-from-artwork view -->
+                        <a class="button is-small is-outlined is-info is-fullwidth">
+                            Edit Artwork
+                        </a>
 					</div>
 				</div>
 				<!-- ART CARD -->
@@ -146,7 +146,7 @@
 
 				<!-- ART CARD -->
 				<!-- ART CARD -->
-				<div class="card media-card">
+				<div class="card media-card is-artist-view">
 					<figure>
 						<img class="is-wide" src="../../assets/images/artwork/art-wide-1.jpg">
 					</figure>
@@ -167,6 +167,10 @@
 							<span class="card-price">$120</span>
 						</p>
 
+                        <!-- Art-from-artwork view -->
+                        <a class="button is-small is-outlined is-info is-fullwidth">
+                            Edit Artwork
+                        </a>
 					</div>
 				</div>
 				<!-- ART CARD -->
@@ -192,7 +196,7 @@
 
 		<!-- ART CARD -->
 		<!-- ART CARD -->
-		<div class="card media-card is-sold">
+		<div class="card media-card is-artist-view is-sold">
 			<figure>
 				<img src="../../assets/images/artwork/art-4.jpg">
 			</figure>
@@ -214,6 +218,10 @@
 					<span class="card-price">$120</span>
 						</p>
 
+                        <!-- Art-from-artwork view -->
+                        <a class="button is-disabled is-small is-outlined is-info is-fullwidth">
+                            Sold
+                        </a>
 					</div>
 				</div>
 				<!-- ART CARD -->
@@ -222,7 +230,7 @@
 
 				<!-- ART CARD -->
 				<!-- ART CARD -->
-				<div class="card media-card is-not-visible">
+				<div class="card media-card is-artist-view is-not-visible">
 					<figure>
 						<img src="../../assets/images/artwork/art-3.jpg">
 					</figure>
@@ -244,6 +252,10 @@
 			<span class="card-price">$120</span>
 						</p>
 
+                        <!-- Art-from-artwork view -->
+                        <a class="button is-small is-outlined is-info is-fullwidth">
+                            Edit Artwork
+                        </a>
 					</div>
 				</div>
 				<!-- ART CARD -->
@@ -252,7 +264,7 @@
 
 <!-- ART CARD -->
 <!-- ART CARD -->
-<div class="card media-card is-rejected">
+<div class="card media-card is-artist-view is-rejected">
 	<figure>
 		<img class="is-wide" src="../../assets/images/artwork/art-wide-1.jpg">
 	</figure>
@@ -263,7 +275,7 @@
 				<span class="heart-number">61</span>
 				<span class="icon is-small"><i class="fa fa-heart is-small"></i></span>
 			</div>
-	<span class="card-advisory">Please resubmit</span>
+	<span class="card-advisory">Not approved</span>
 		</div>
 
 		<p class="card-info">
@@ -274,6 +286,10 @@
 			<span class="card-price">$120</span>
 		</p>
 
+                        <!-- Art-from-artwork view -->
+                        <a class="button is-small is-outlined is-info is-fullwidth">
+                            Edit and Resubmit
+                        </a>
 	</div>
 </div>
 <!-- ART CARD -->
@@ -285,81 +301,6 @@
 			</div>
 
 
-
-<!-- SMALLER CARDS SMALLER CARDS SMALLER CARDS SMALLER CARDS SMALLER CARDS SMALLER CARDS SMALLER CARDS -->
-<!-- SMALLER CARDS SMALLER CARDS SMALLER CARDS SMALLER CARDS SMALLER CARDS SMALLER CARDS SMALLER CARDS -->
-		<div class="box">
-			<h3 class="subtitle is-3">Smaller card</h3>
-			<div class="content">
-				<ul>
-					<li>Dimensions: scale 65% of full size</li>
-					<li>Font: scales 70% of full size</li>
-				</ul>
-			</div>
-
-
-			<div class="columns">
-
-				<!-- ART CARD -->
-				<!-- ART CARD -->
-				<div class="card media-card is-related">
-					<figure>
-						<img src="../../assets/images/artwork/art-4.jpg">
-					</figure>
-					<div class="card-content content is-small">
-
-						<div class="is-pulled-right">
-							<div class="heart">
-								<span class="heart-number">61</span>
-								<span class="icon is-small"><i class="fa fa-heart is-small"></i></span>
-							</div>
-						</div>
-
-						<p class="card-info">
-							<span class="card-brand">#1 John Smith</span>
-							<br />
-							<span class="card-title">Long ellipses triggering title for demonstration purposes in Acrylic</span>
-							<br />
-							<span class="card-price">$120</span>
-						</p>
-
-					</div>
-				</div>
-				<!-- ART CARD -->
-				<!-- ART CARD -->
-
-				<!-- ART CARD -->
-				<!-- ART CARD -->
-				<div class="card media-card is-related">
-					<figure>
-						<img src="../../assets/images/artwork/art-3.jpg">
-					</figure>
-					<div class="card-content content is-small">
-
-						<div class="is-pulled-right">
-							<div class="heart">
-								<span class="heart-number">61</span>
-								<span class="icon is-small"><i class="fa fa-heart is-small"></i></span>
-							</div>
-						</div>
-
-						<p class="card-info">
-							<span class="card-brand">#2 John Smith</span>
-							<br />
-							<span class="card-title">Long ellipses triggering title for demonstration purposes in Acrylic</span>
-							<br />
-							<span class="card-price">$120</span>
-						</p>
-
-					</div>
-				</div>
-				<!-- ART CARD -->
-				<!-- ART CARD -->
-
-
-
-			</div> <!-- /columns -->
-		</div>
 
 
 
