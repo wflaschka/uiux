@@ -10861,32 +10861,113 @@ form.is-search-form .noUi-handle:after {
   display: none;
 }
 
-/**
- * Top panel MoTD
- */
-@keyframes slide-up-dismiss {
-  0% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(-3rem);
-  }
+.chip {
+  align-items: center;
+  border-radius: 2px;
+  display: inline-flex;
+  height: 2.4rem;
+  margin: 0 .1rem .1rem 0;
+  max-width: 100%;
+  padding: .1rem .6rem;
+  text-decoration: none;
+  vertical-align: middle;
+  font-weight: bold;
 }
 
-.message.is-motd {
-  background-color: #0a0a0a;
-  border-radius: 0px;
+.chip.is-white {
+  background: white;
+  color: #0a0a0a;
 }
 
-.message.is-motd .message-header {
-  border-radius: 0px;
+.chip.is-black {
+  background: #0a0a0a;
+  color: white;
 }
 
-.message.is-motd.dismissable-close {
-  animation: slide-up-dismiss .2s ease 1;
-  display: none;
+.chip.is-light {
+  background: whitesmoke;
+  color: #363636;
+}
+
+.chip.is-dark {
+  background: #363636;
+  color: whitesmoke;
+}
+
+.chip.is-primary {
+  background: #0a0a0a;
+  color: white;
+}
+
+.chip.is-info {
+  background: #e09d00;
+  color: #0a0a0a;
+}
+
+.chip.is-danger {
+  background: #cc3333;
+  color: #fff;
+}
+
+.chip.is-success {
+  background: #007F49;
+  color: #fff;
+}
+
+.chip.is-warning {
+  background: #ffdd57;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.chip.is-orange {
+  background: #e09d00;
+  color: #fff;
+}
+
+.chip.is-yellow {
+  background: #ffdd57;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.chip.is-green {
+  background: #007F49;
+  color: #fff;
+}
+
+.chip.is-turquoise {
+  background: #00d1b2;
+  color: #fff;
+}
+
+.chip.is-blue {
+  background: #260A80;
+  color: #fff;
+}
+
+.chip.is-purple {
+  background: #b86bff;
+  color: #fff;
+}
+
+.chip.is-red {
+  background: #cc3333;
+  color: #fff;
+}
+
+.chip .avatar {
+  margin-left: -.4rem;
+  margin-right: .4rem;
+}
+
+.chip .is-double {
+  line-height: 1em;
+}
+
+.chip .is-double span {
+  display: block;
+  font-size: small;
+  line-height: 0.8;
+  font-weight: lighter;
 }
 
 @keyframes slide-down-menu {
