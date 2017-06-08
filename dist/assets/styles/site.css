@@ -11326,7 +11326,7 @@ form.is-search-form .noUi-handle:after {
 
 nav.leftnav {
   background-color: rgba(219, 219, 219, 0.5);
-  width: 340px;
+  min-width: 100px;
 }
 
 nav.leftnav > ul, nav.leftnav > ul ul {

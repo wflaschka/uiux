@@ -18,7 +18,8 @@ nav.leftnav {
     background-color: transparentize($grey-lighter, 0.5);
 
     // Any width.
-    width: 340px;
+    min-width: 100px;
+    // width: 340px;
 
     > ul, > ul ul {
         display: flex;
