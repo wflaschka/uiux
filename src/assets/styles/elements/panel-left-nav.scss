@@ -1,4 +1,109 @@
+
+////////////////////////////////////////////////
+// Shadows
+// USEFUL for inset: http://jsfiddle.net/KFrun/171/
+$box-shadow: 0px 6px 6px -6px $grey;
+$top-shadow: 0px -6px 6px -7px $grey;
+$inset-shadow: inset -7px 0px 6px -6px $grey;
+$active-shadow: $box-shadow, $inset-shadow;
+
+
+$debug: false;
+$test-border: none;
+@if ($debug) {
+    $test-border: 1px solid red;
+}
+
+nav.leftnav {
+    background-color: transparentize($grey-lighter, 0.5);
+
+    // Any width.
+    width: 340px;
+
+    > ul, > ul ul {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    > ul li {
+        margin: 0;
+        background-color: none;
+
+        a {
+            box-shadow: $inset-shadow;
+            display: flex;
+            flex-direction: row;
+            padding: 1em 0em 1em 2em;
+
+            span {
+                display: flex;
+                border: $test-border;
+                align-items: center;
+
+                &.icon {
+                    flex: 0 0 2em;
+                    color: black !important;
+                }
+                &.prompt {
+                    color: $black;
+                    font-size: $size-small;
+                    flex: 1 1 auto;
+                    width: 100%;
+                    padding-left: 1em;
+                    font-weight: bold;
+                }
+                &.tag {
+                    flex: 0 0 auto;
+                    margin-right: 1em;
+                }
+            }
+        }
+
+        ul {
+            display: none;
+        }
+    }
+
+    > ul li.is-active {
+        background-color: $white;
+
+        a {
+            box-shadow: 
+                $top-shadow,
+                $box-shadow;
+            z-index: 20;
+        }
+
+        > ul {
+            display: flex;
+            padding-left: 2em;
+            border: $test-border;
+            box-shadow: $active-shadow;
+            z-index: -30;
+
+            li {
+                a {
+                    box-shadow: none;
+                }
+
+                &.is-active {
+                    box-shadow: $inset-shadow;
+                    a .prompt {
+                        color: $info;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
 .is-user-navigation.panel {
+    width: 200px !important;
 
     .panel-heading,
     .panel-tabs,
