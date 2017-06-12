@@ -92,6 +92,7 @@ nav.leftnav {
 
                 &.is-active {
                     box-shadow: $inset-shadow;
+                    background-color: none;
                     a .prompt {
                         color: $info;
                     }
