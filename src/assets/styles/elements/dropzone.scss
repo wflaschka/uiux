@@ -1,5 +1,12 @@
 // Dropzone for images
 
+// Enable this to test whether there's a conflict with default CSS.
+// It's included in the Vue component so we can't just fix it here.
+// @import "../../../node_modules/dropzone/src/dropzone.scss";
+
+
+$border-radius: 2px;
+
 .is-dropcontainer {
 	text-align: center;
 
@@ -9,39 +16,104 @@
 		color: $grey;
 	}
 
-	span i.fa {
-		font-size: 6em;
-		color: $grey-light;
-	}
-
 	.is-dropzone {
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-
-		align-items: center;
-		vertical-align: middle;
 		text-align: center;
-		// width: 100%;
-		// height: 100%;
-		min-height: 10em;
-		min-width: 10em;
-		// max-height: 12em;
-		// max-width: 12em;
 
 		box-shadow: $primary-box-shadow;
-		
 		margin: 0.5em;
-
 		font-weight: bold;
 
-		// TODO: Style the auto-styled "Droply" dropzone
-		// Defined here: ~/Dropbox/Websites/at/node_modules/droply/src/Droply.vue
-		// .dropzone {
-		// 	border: none;
-		// 	color: $grey;
-		// }
+		.row {
+			margin-top: 1rem;
+		}
 
+		div {
+		    .dropzone {
+				padding: 3em;
+		        transition: background-color .5s linear;
+		        // border: 1px solid red;
+
+		        &:hover{
+		            background-color: transparentize($grey, 0.85);
+			        .dz-message {
+		                color: $grey;
+			        }
+		        }
+
+		        .dz-preview {
+		            &:hover .dz-image img{
+		                transform: none;
+		                -webkit-filter: none;
+		            }
+
+		            .dz-image {
+		                border-radius: $border-radius;
+		            }
+
+		            .dz-remove{
+		                position: absolute;
+		                z-index: 30;
+		                color: white;
+		                margin-left: 15px;
+		                padding: 10px;
+		                top: inherit;
+		                bottom: 15px;
+		                border: 2px white solid;
+		                text-decoration: none;
+		                text-transform: uppercase;
+		                font-size: 0.8rem;
+		                font-weight: 800;
+		                letter-spacing: 1.1px;
+		                opacity: 0;
+		            }
+
+		            .dz-details {
+		                bottom: 0;
+		                top: 0;
+		                color: white;
+		                background-color: rgba(33, 150, 243, 0.8);
+		                transition: opacity .2s linear;
+		                text-align: left;
+
+		                .dz-filename span, .dropzone .dz-preview .dz-details .dz-size span {
+		                    background-color: transparent;
+		                }
+
+		                .dz-filename:not(:hover) span{
+		                    border: none;
+		                }
+
+		                .dz-filename:hover span{
+		                    background-color: transparent;
+		                    border: none;
+		                }
+		            }
+
+		            &:hover .dz-remove {
+		                opacity: 1;
+		            }
+
+		            .dz-success-mark,
+		            .dz-error-mark {
+		                margin-left: -40px;
+		                margin-top: -50px;
+		            }
+
+		            .dz-success-mark i,
+		            .dz-error-mark i {
+		                color: white;
+		                font-size: 5rem;
+		            }
+		        }
+
+		        .dz-message {
+	                color: $grey-light;
+		            span {}
+		            i {
+						font-size: 6em;
+		            }
+		        }
+		    }
+		}
 	}
-
 }
