@@ -52,6 +52,7 @@
   "dependencies": {
     "animatewithsass": "^3.2.1",
     "bulma": "^0.4.0",
+    "droply": "0.0.3",
     "gulp-vue": "^0.1.0",
     "gulp-vuejs": "^1.0.2",
     "nouislider": "^9.2.0",
