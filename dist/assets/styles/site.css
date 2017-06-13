@@ -11737,6 +11737,35 @@ nav.leftnav ul li.is-active ul li.is-active a .prompt {
   width: 0%;
 }
 
+.is-dropcontainer {
+  text-align: center;
+}
+
+.is-dropcontainer p {
+  font-size: small;
+  font-weight: light;
+  color: #7a7a7a;
+}
+
+.is-dropcontainer span i.fa {
+  font-size: 6em;
+  color: #b5b5b5;
+}
+
+.is-dropcontainer .is-dropzone {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  text-align: center;
+  min-height: 10em;
+  min-width: 10em;
+  box-shadow: 4px 4px 10px #b5b5b5;
+  margin: 0.5em;
+  font-weight: bold;
+}
+
 /**
  * Experimental
  */
