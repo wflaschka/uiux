@@ -14,7 +14,7 @@
 ////////////////////////////////////////////////
 // Miscellaneous settings
 
-.is-grey {
+.is-grey, .is-grey-text {
   color: $grey-light;
 }
 
@@ -23,6 +23,15 @@ tt {
   background-color: $grey-lighter;
   border-radius: 3px;
   padding: 1px 3px;
+}
+
+// TODO: text sizes and color variations
+.is-small-text {
+  font-size: $size-6;
+}
+
+.is-centered-text {
+  // TODO: this style
 }
 
 .is-text-red {
@@ -82,6 +91,7 @@ table.has-chips, table.has-rows-vertical-centered {
 @import "elements/chips.scss";
 @import "elements/dashboard.scss";
 @import "elements/statistic.scss";
+@import "elements/separator.scss";
 
 /**
  * Experimental
