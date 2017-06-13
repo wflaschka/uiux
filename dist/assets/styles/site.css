@@ -5,7 +5,7 @@
  *
  * 
  */
-.is-grey {
+.is-grey, .is-grey-text {
   color: #b5b5b5;
 }
 
@@ -14,6 +14,10 @@ tt {
   background-color: #dbdbdb;
   border-radius: 3px;
   padding: 1px 3px;
+}
+
+.is-small-text {
+  font-size: 1rem;
 }
 
 .is-text-red {
@@ -11696,6 +11700,41 @@ nav.leftnav ul li.is-active ul li.is-active a .prompt {
 
 .statistics .statistic:not(:last-child) {
   padding-right: 2em;
+}
+
+.is-bordered {
+  border: 1px solid red;
+}
+
+.divider {
+  margin: 0em 1em;
+  display: flex;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #b5b5b5;
+  line-height: 2em;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  /*--------------
+	Vertical
+	---------------*/
+}
+
+.divider.vertical {
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
+.divider.vertical:before, .divider.vertical:after {
+  display: flex;
+  left: 50%;
+  content: '';
+  z-index: 3;
+  flex: 1 1 auto;
+  border-left: 1px solid #7a7a7a;
+  border-right: 1px solid rgba(219, 219, 219, 0.5);
+  width: 0%;
 }
 
 /**
