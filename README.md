@@ -1,24 +1,16 @@
-# at-ui-ux
-
-https://picturepan2.github.io/spectre/utilities.html#divider
-
+# at-ui-ux2
 
 ArtTap UI/UX patterns for Marketplace project.
 
+This version of the AT-UI-UX repo (v2) uses [Semantic UI](http://www.semantic-ui.com) instead of [Bulma](http://bulma.io) because it has a wider range of components and pre-built interactions. The overhead for Bulma (e.g. getting dropdown menus to work, borrowing from Spectre.css, etc.) started to outweigh the benefits of having the lean framework. Bulma version is moved to `src-bulma/` but the gulpfile doesn't look at it ATM (20170719 110322).
 
-SASS/SCSS functions
-http://sass-lang.com/documentation/Sass/Script/Functions.html
-
-```sh
-sass-convert --from sass --to scss temp.sass temp.scss
-```
 
 ## Install
 
 Install with git:
 
 ```sh
-git clone https://github.com/wflaschka/at-ui-ux.git at-ui-ux
+git clone https://github.com/wflaschka/at-ui-ux2.git at-ui-ux
 ```
 
 Update npm:
@@ -28,6 +20,7 @@ npm update
 ```
 
 After dependencies are downloaded, continue to the next step and compile the site.
+
 
 ## Using this repository
 
@@ -53,101 +46,204 @@ After browsersync, you'll have a server running (probably on port `3000`) and yo
 
 Get browsersync for your computer at [https://browsersync.io/](https://browsersync.io/).
 
+---
 
-## Overview
+## <span style="color: green;">Gulp Build</span> Updates
 
-* UI/UX design pattern library for comment and review
-    * UI interactions
-    * Layout
-    * Behaviors
-    * All of it has responsivity
-* Landing page is `index.html`
-* Patterns
-    * Small elements
-        * Buttons
-        * Tags
-        * Hearts 
-            * Liked
-            * Animations
-        * Colors and Fonts
-            * Primary text (black)
-            * Retiring text (gray / opacity)
-            * Emphasis text
-        * Icons
-            * Checked icon
-            * Highlighted icon
-            * Callout icon
-            * Small, medium, big, etc.
-    * Larger page element patterns
-        * Carousels
-            * Landing carousels
-            * Left-right slider
-            * Curated (left card) slider
-        * Cards
-            * Artist card
-            * Artwork card
-            * Sizes
-                * Primary
-                * Secondary
-                * Thumbnail
-                * Tiny
-        * Forms
-            * Form card
-            * Actual real form
-            * Small inline settings form
-        * Dismissable messages
-            * Flash messages
-            * Activity log
-            * Modals
-                * Popup discussion
-                * Popup small form
-                * Image zoom functionality
-            * Header bar message MoTD
-        * Grids
-            * Masonry with "view all" at top
-            * Squares
-        * Navigation
-            * Header
-                * Not logged in
-                * Logged in
-                    * As USER
-                    * As MERCHANT
-                        * As MERCHANT > ARTIST (Brand)
-                    * As ADMIN
-            * Slide-up icon menu (social shares `Product Details Page – 2.pdf`)
-            * Searchbar
-            * Footer
-        * Pages
-            * Product page
-            * Artist page
-            * Liked page
+**20170719 103839**: Updated `./gulpfile.js` and get clean build for Semantic UI with: 
+
+```sh
+# Only build semantic ui:
+gulp "build ui"
+
+# Standard simple gulp (builds and then watches). Generalized build works fine:
+gulp build
+
+## Gulp watch works too! It's just slow because of the Semantic-UI components:
+gulp
+
+## or:
+gulp watch
+```
+
+***
+
+## Semantic-UI Information
+
+* [Semantic UI website](http://www.semantic-ui.com)
+* [Semantic-UI Github](https://github.com/Semantic-Org/Semantic-UI)
+* Googlesearch on `semantic ui`, `semantic-ui`, `semanticui`, `sui`
+* Import gulp tasks -- [howto documentation](https://semantic-ui.com/introduction/advanced-usage.html), and an [example project](https://github.com/Semantic-Org/Example-External-Gulpfile)
+* Gulp build/watch instructions [are on this page](https://semantic-ui.com/introduction/build-tools.html): 
+* Auto-install and continuous integration are at the [bottom of the page here](https://semantic-ui.com/introduction/build-tools.html)
+
+### Information for this project
+
+Your site's theme:
+
+```
+./semantic/src/site
+```
+
+Update semantic-ui to latest via `npm` to get framework changes: 
+
+```shell
+npm update
+```
+
+**Configuration files.** Build tool settings are stored in a special file called `semantic.json`. Make changes here to change paths (e.g. to `dist/` etc.).
+
+We skip using Semantic-UI's gulpfile because we want to integrate with our own gulp pipeline. Using [instructions here](https://semantic-ui.com/introduction/advanced-usage.html). See first section of this document.
+
+
+***
+
+## Leftover notes 
+
+
+
 
 ## Interesting things to look at
 
 * Compass CSS3: http://compass-style.org/reference/compass/css3/
     * Includes <a href="http://compass-style.org/reference/compass/css3/flexbox/">flexbox directives</a>
-
-## NPM setup
-
-These are just notes; it's not necessary to run these because they're in the `package.json` file.
+* https://picturepan2.github.io/spectre/utilities.html#divider
+* Cool [SASS/SCSS functions](http://sass-lang.com/documentation/Sass/Script/Functions.html), e.g.:
 
 ```sh
-npm init
-npm install bulma --save
-npm install gulp --save-dev
-npm install path --save-dev
-npm install del --save-dev
-npm install debug --save-dev
-npm install relative --save-dev
-npm install gulp-debug --save-dev
-npm install run-sequence --save-dev
-npm install gulp-concat --save-dev
-npm install gulp-sass --save-dev
-npm install gulp-sourcemaps --save-dev
-npm install gulp-autoprefixer --save-dev
-npm install sassdoc --save-dev
-npm install gulp-util --save-dev
+sass-convert --from sass --to scss temp.sass temp.scss
 ```
 
+***
+***
+***
+***
+***
+***
+***
+***
+
+## Target UI/UX patterns
+
+Built off 20170718 snapshot of invision project, exported file `arttapx-invision-10278582.pdf`. The `md` file was named `__Design-elements-20170718--at-ui-ux.md` if you need to find it later.
+
+### Elements
+
+* Icon check with green text under
+
+### Typography
+
+1. Headers
+    * Primary header h1..hn (has that special font)
+    * Secondary header h1..hn (san serif)
+    * Header setting
+        * Subheader spacing (less space below big header)
+        * Top-subheader spacing (less space atop big header)
+    * Header *segment* -- all over the place
+        * Header on left side
+        * Button / link on right side
+        * Optional line along bottom
+3. Badge
+4. Inches and fractions of inch
+
+### Cards
+
+1. Artwork card: Flexible-width card, row, uniform height
+2. Artist card: static width and height
+3. Artwork card no text
+4. Dashboard card (see artist profile dashboard page)
+5. Variations
+    * "Not visible" on card
+    * Circle on card
+    * "See stats" on card
+
+
+### Items / boxes
+
+* Social feed item
+* Order item item
+* Styles for boxes
+    * Inverted red (see canceled order)
+    * `thick orange top border` etc. (Order of arguments.)
+
+### Interactions 
+
+* Pop-up modals
+* Right push-in cart
+
+### Menus
+
+* Public header menu
+* Profile
+    * Header
+    * Vertical menu / slide-out
+
+
+### Forms
+
+* Labels that shrink and move
+* Rich text input
+    * minimal formatting
+    * maximal formatting
+    * Maximize box
+* Dropdown with progressive update
+* Date dropdown pattern
+* Square checkboxes
+* Round radios
+* Tag input box
+* Larger search input box (Help section), right-aligned magnifying glass icon
+
+#### Tiny blocks
+
+* Artist chip
+    * Small avatar
+    * Name
+    * Followers
+* Number of hearts in collection: "60 H in Collection"
+* Statistics (dashboard, user profile page)
+* Avatars
+    * Styles: round, bordered
+    * Superimposed badges 
+        * With icons: check, plus, empty (see followers list page)
+        * Aligned bottom right
+        * Aligned top right
+        * Sizes
+    * Sizes
+* Small circles (followers list page) 
+* Pop-overs
+    * Help icon = pop-over (see page 89 of 114)
+* Segment with orange header (see dashboard page)
+
+### Matching quiz
+
+* Progress bar for wizard completion
+
+### Larger pieces
+
+1. Masonry grid, artwork cards, fixed width and dynamic height
+1. Bulma's "Level" into Semantic-UI
+1. Left push-in hamburger menu
+1. Progressive search dropdown in header menu
+1. Upload image drag-and-drop
+
+
+### Single pieces
+
+* Search bar UI
+* Google map for checkout page
+
+### Sliders
+
+1. Collection slider: left-static box, right-scroll box artist cards
+2. Newest slider: like collection slider but no left box
+3. Artist slider: like above but with artist cards
+4. Product page (popup) slider
+5. Artwork slider: no meta data or text, just image, fixed height (Artist profile page)
+6. Testimonial slider
+
+
+### Misc notes:
+
+Remember the responsive handling, do'h.
 
 

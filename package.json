@@ -1,14 +1,14 @@
 {
-  "name": "at-ui-ux",
+  "name": "at-ui-ux2",
   "version": "1.0.0",
-  "description": "ArtTap UI/UX for Marketplace",
+  "description": "ArtTap UI/UX v2 for Marketplace",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wflaschka/at-ui-ux.git"
+    "url": "git+https://github.com/wflaschka/at-ui-ux2.git"
   },
   "keywords": [
     "arttap",
@@ -17,14 +17,15 @@
     "ux",
     "css",
     "style",
-    "js"
+    "js",
+    "v2", "semantic-ui"
   ],
   "author": "Walter Flaschka",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/wflaschka/at-ui-ux/issues"
+    "url": "https://github.com/wflaschka/at-ui-ux2/issues"
   },
-  "homepage": "https://github.com/wflaschka/at-ui-ux#readme",
+  "homepage": "https://github.com/wflaschka/at-ui-ux2#readme",
   "devDependencies": {
     "browserify": "^14.3.0",
     "debug": "^2.6.3",
@@ -41,7 +42,6 @@
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.4.1",
     "gulp-util": "^3.0.8",
-    "gulp-vue": "^0.1.0",
     "gulp-vueify": "0.0.3",
     "less-plugin-autoprefix": "^1.5.1",
     "path": "^0.12.7",
@@ -53,9 +53,9 @@
     "animatewithsass": "^3.2.1",
     "bulma": "^0.4.0",
     "droply": "0.0.3",
-    "gulp-vue": "^0.1.0",
     "gulp-vuejs": "^1.0.2",
     "nouislider": "^9.2.0",
+    "semantic-ui": "^2.2.11",
     "spectre.css": "^0.2.12",
     "sweetalert2": "^6.6.2"
   }
