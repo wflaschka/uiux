@@ -1,6 +1,4 @@
-// wflaschka 20170325
-// NOTE: Autoprefixer seems to be broken.
-
+// wflaschka 20170719
 var gulp = require('gulp');
 var path = require('path');
 var concat = require('gulp-concat');
@@ -22,18 +20,9 @@ var rename = require('gulp-rename');
 var LessPluginAutoPrefix = require('less-plugin-autoprefix');
 var autoprefix= new LessPluginAutoPrefix({ browsers: ["last 4 versions"] });
 
-// Handle vue files:
-// https://www.npmjs.com/package/gulp-vueify
-// 20170430 ugh might need: https://github.com/vuejs/vueify#configuring-options
-// var fs = require("fs")
-// var browserify = require('browserify')
-// var vueify = require('gulp-vueify');
-
-//oOR:
-// https://www.npmjs.com/package/gulp-vue-module
-// Discussion
-// https://forum-archive.vuejs.org/topic/630/gulp-workflow-for-vue-js
-
+// https://semantic-ui.com/introduction/advanced-usage.html
+var watch_semantic = require('./semantic/tasks/watch');
+var build_semantic = require('./semantic/tasks/build');
 
 // Paths
 var rootTarget = 'dist/';
@@ -41,7 +30,6 @@ var rootSource = 'src/';
 
 var buildTargets = {
 	'scripts'     : rootTarget + 'assets/scripts'
-	, 'vue'       : rootTarget + 'assets/scripts/vue'
 	, 'images'    : rootTarget + 'assets/images'
 	, 'pdfs'      : rootTarget + 'assets/pdfs'
 	, 'styles'    : rootTarget + 'assets/styles'
@@ -56,17 +44,10 @@ var paths = {
 		rootSource   + 'assets/scripts/**/*'
 		,'node_modules/nouislider/distribute/*.js'
 		,'node_modules/sweetalert2/dist/*.js'
-		// ,rootSource + 'assets/scripts/validate_*.js'
-	],
-	vue: [
-		// rootSource   + 'assets/scripts/vue-bulma-carousel/**/*.vue'
-		rootSource   + 'assets/scripts/vue-bulma-carousel/src/App.vue'
 	],
 	styles: [
 		rootSource    + 'assets/styles/**/*.css'
 		,'node_modules/nouislider/distribute/*.css'
-		// ,'node_modules/sweetalert2/dist/*.css'
-		//,rootSource + 'assets/semantic/dist/semantic.min.css'
 	],
 	fonts: [
 		rootSource    + 'assets/fonts/**/*'
@@ -77,28 +58,17 @@ var paths = {
 	images: [
 		rootSource    + 'assets/images/**/*.*'
 		,'!' + rootSource + 'assets/images/**/*.psd'
+		,'!' + rootSource + 'assets/images/**/*.ai'
 	],
 	sass: [
-		rootSource    + 'assets/styles/bulma.scss'
+//		rootSource    + 'assets/styles/bulma.scss'
 		,rootSource    + 'assets/styles/site.scss'
-		// ,rootSource   + 'assets/styles/interactive/sweetalert-build.scss' // 20170430 only if we want standalone css for this
-		// ,'node_modules/bulma/sass/**/*.*'
 	],
-	// sass: [
-	// 	rootSource    + 'assets/styles/bulma.sass'
-	// 	,rootSource    + 'assets/styles/site.sass'
-	// ],
 	less: [
-		// rootSource    + 'assets/styles/spectre.less'
-		// ,rootSource   + 'assets/styles/spectre-carousel/carousels-bulma.less'
-		// ,rootSource   + 'assets/styles/spectre-menu/bulma-dropdown-menu.less'
-		// ,rootSource   + 'assets/styles/spectre-avatar/bulma-avatars.less'
-		// ,'node_modules/spectre.css/spectre-icons.less'
+//		rootSource    + 'assets/styles/bulma.scss'
 	],
 	html: [
 		rootSource    + '**/*.htm?'
-		// ,'!' + rootSource + 'assets/**/*.*'
-		// ,'!' + rootSource + 'partials/**/*.*'
 	],
 	shell: [
 		rootSource + '**/*.sh'
@@ -120,7 +90,7 @@ var sassdocOptions = {
 
 ////////////////////////////////////////////////////////////////////////////////////
 // Start work:
-// log("Gulpfile building...")
+log("Gulpfile building...")
 // log("--paths:"); log(paths);
 // log("--buildTargets:"); log(buildTargets);
 
@@ -141,26 +111,7 @@ gulp.task('styles', function () {
 		.pipe(gulp.dest(buildTargets.styles));
 });
 
-// VUE -- 20170430 can't get working
-gulp.task('vue', function () {
-	log("    - Generate Vue files " + (new Date()).toString());
-
-	browserify(paths.vue)
-	  .transform(vueify, {
-	    // sass: {
-	      // includePaths: []
-	    // },
-	  })
-	  .bundle()
-	  .pipe(fs.createWriteStream("bundle.js"));
-	return true;
-	// return gulp.src(paths.vue)
-	// .pipe(vueify())
-	// .pipe(gulp.dest(buildTargets.vue));
-});
-
 // SASS
-// https://www.sitepoint.com/simple-gulpy-workflow-sass/
 gulp.task('sass', function () {
 	log("    - Generate CSS files " + (new Date()).toString());
 	log("    - Reading from: " + paths.sass);
@@ -171,13 +122,8 @@ gulp.task('sass', function () {
 		.pipe(sourcemaps.init())
 		.pipe(sass(sassOptions).on('error', sass.logError))
 		.pipe(sourcemaps.write('/maps'))
-		// .pipe(autoprefixer(autoprefixerOptions))
-		// .pipe(autoprefixer())
-		// .pipe(autoprefixer("last 3 version","safari 5", "ie 8", "ie 9"))
 		.pipe(gulp.dest(buildTargets.styles))
 		.pipe(sassdoc(sassdocOptions))
-		// Release the pressure back and trigger flowing mode (drain)
-		// See: http://sassdoc.com/gulp/#drain-event
 		.resume();
 });
 
@@ -195,7 +141,6 @@ gulp.task('pdfs', function() {
 
 // HTML
 gulp.task('html', function() {
-	// del([buildTargets.html + '**/*.htm?']);
 	return gulp.src(paths.html)
 		.pipe(gulp.dest(buildTargets.html));
 });
@@ -227,6 +172,11 @@ gulp.task('less', function() {
         .pipe(gulp.dest(buildTargets.styles))
 });
 
+// import Semantic-UI tasks with custom task names
+// https://semantic-ui.com/introduction/advanced-usage.html
+gulp.task('watch ui', 'Watch UI for Semantic UI', watch_semantic);
+gulp.task('build ui', 'Build UI for Semantic UI', build_semantic);
+
 
 // Rerun the task when a file changes
 // invoke with: gulp watch
@@ -250,8 +200,36 @@ gulp.task('all', function(callback) {
 	'images', 'scripts', 'styles',
 	'less', 'sass', 'fonts', 'pdfs',
 	'html', 'shell',
+	'build ui',
 	callback);
 });
 
-gulp.task('default', ['watch']);
+gulp.task('default', ['watch', 'watch ui']);
 
+
+
+// https://github.com/Semantic-Org/Example-External-Gulpfile/blob/master/gulpfile.js
+// /*******************************
+//             Custom
+// *******************************/
+// 
+// var
+//   gulp         = require('gulp'),
+// 
+//   // require tasks as dependencies
+//   watch        = require('./semantic/tasks/watch'),
+//   build        = require('./semantic/tasks/build')
+// ;
+// 
+// 
+// /*******************************
+//              Tasks
+// *******************************/
+// 
+// 
+// gulp.task('watch-ui', watch);
+// gulp.task('build-ui', build);
+// 
+// // Gulp help descriptions also work
+// // gulp.task('watch-ui', 'Watch UI for Semantic UI', watch);
+// // gulp.task('build-ui', 'Build UI for Semantic UI', build);

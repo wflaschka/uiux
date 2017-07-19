@@ -6,54 +6,54 @@
  * 
  */
 
-@import "bulma-functions.scss";
-@import "bulma-settings.scss";
+// @import "bulma-functions.scss";
+// @import "bulma-settings.scss";
 
 // @import "../../../node_modules/bulma/sass/utilities/variables.sass"
 
 ////////////////////////////////////////////////
 // Miscellaneous settings
 
-.is-grey, .is-grey-text {
-  color: $grey-light;
-}
+// .is-grey, .is-grey-text {
+//   color: $grey-light;
+// }
 
-tt {
-  color: $grey;
-  background-color: $grey-lighter;
-  border-radius: 3px;
-  padding: 1px 3px;
-}
+// tt {
+//   color: $grey;
+//   background-color: $grey-lighter;
+//   border-radius: 3px;
+//   padding: 1px 3px;
+// }
 
-// TODO: text sizes and color variations
-.is-small-text {
-  font-size: $size-6;
-}
+// // TODO: text sizes and color variations
+// .is-small-text {
+//   font-size: $size-6;
+// }
 
-.is-centered-text {
-  // TODO: this style
-}
+// .is-centered-text {
+//   // TODO: this style
+// }
 
-.is-text-red {
-  color: $red;
-}
+// .is-text-red {
+//   color: $red;
+// }
 
-.has-padding {
-  padding: 1em;
-}
+// .has-padding {
+//   padding: 1em;
+// }
 
-.has-padding-more {
-  padding: 2.5em;
-}
+// .has-padding-more {
+//   padding: 2.5em;
+// }
 
 
-// Tables that use the "chip" user/avatar layout 
-// or we just want vertically centered rows
-table.has-chips, table.has-rows-vertical-centered {
-  td {
-    vertical-align: middle;
-  }
-}
+// // Tables that use the "chip" user/avatar layout 
+// // or we just want vertically centered rows
+// table.has-chips, table.has-rows-vertical-centered {
+//   td {
+//     vertical-align: middle;
+//   }
+// }
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
 
@@ -62,42 +62,12 @@ table.has-chips, table.has-rows-vertical-centered {
 /**
  * Mixins to try
  */
+// Animate is like 500k, need to optimize:
 @import "../../../node_modules/animatewithsass/animate.scss";
+
+// Must remember these for use
 @import "mixins/utilitybelt-alertpulse.scss";
 @import "mixins/utilitybelt-tooltip.scss";
-
-/**
- * Include elements
- */
-@import "elements/hearts.scss";
-@import "elements/art-cards.scss";
-@import "elements/artist-cards.scss";
-// The following line must be after artist-cards.scss
-@import "elements/masonry.scss";
-@import "elements/tags.scss";
-@import "elements/typography.scss";
-@import "elements/buttons.scss";
-@import "elements/form-search.scss";
-@import "elements/form.scss";
-@import "elements/floating-badges.scss";
-@import "elements/push-panel-right.scss";
-@import "elements/motd.scss";
-@import "elements/motd.scss";
-@import "elements/header.scss";
-@import "elements/dropdown-menu.scss";
-@import "elements/avatars.scss";
-@import "elements/carousel.scss";
-@import "elements/panel-left-nav.scss";
-@import "elements/chips.scss";
-@import "elements/dashboard.scss";
-@import "elements/statistic.scss";
-@import "elements/separator.scss";
-@import "elements/dropzone.scss";
-
-/**
- * Experimental
- */
-@import "elements/frames.scss";
 
 /**
  * Include Interactive elements
@@ -105,9 +75,42 @@ table.has-chips, table.has-rows-vertical-centered {
 @import "interactive/sweetalert-build.scss";
 
 /**
+ * Include elements
+ */
+// @import "elements/hearts.scss";
+// @import "elements/art-cards.scss";
+// @import "elements/artist-cards.scss";
+// // The following line must be after artist-cards.scss
+// @import "elements/masonry.scss";
+// @import "elements/tags.scss";
+// @import "elements/typography.scss";
+// @import "elements/buttons.scss";
+// @import "elements/form-search.scss";
+// @import "elements/form.scss";
+// @import "elements/floating-badges.scss";
+// @import "elements/push-panel-right.scss";
+// @import "elements/motd.scss";
+// @import "elements/motd.scss";
+// @import "elements/header.scss";
+// @import "elements/dropdown-menu.scss";
+// @import "elements/avatars.scss";
+// @import "elements/carousel.scss";
+// @import "elements/panel-left-nav.scss";
+// @import "elements/chips.scss";
+// @import "elements/dashboard.scss";
+// @import "elements/statistic.scss";
+// @import "elements/separator.scss";
+// @import "elements/dropzone.scss";
+
+/**
+ * Experimental
+ */
+// @import "elements/frames.scss";
+
+/**
  * Include Page elements
  */
 @import "site-helpers.scss";
 
 // @import "pages/header-nav.scss"
-@import "pages/header.scss";
+// @import "pages/header.scss";
