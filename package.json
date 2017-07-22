@@ -18,7 +18,8 @@
     "css",
     "style",
     "js",
-    "v2", "semantic-ui"
+    "v2",
+    "semantic-ui"
   ],
   "author": "Walter Flaschka",
   "license": "ISC",
@@ -54,6 +55,7 @@
     "bulma": "^0.4.0",
     "droply": "0.0.3",
     "gulp-vuejs": "^1.0.2",
+    "materialize-css": "^0.100.1",
     "nouislider": "^9.2.0",
     "semantic-ui": "^2.2.11",
     "spectre.css": "^0.2.12",

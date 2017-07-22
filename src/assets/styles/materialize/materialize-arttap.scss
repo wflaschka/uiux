@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+/**
+ * These are the MaterializeCSS overwwrites for ArtTap
+ * Most components are commented out until real changes need to be made:
+ */
+
+// Mixins
+// @import "arttap-components/mixins";
+// @import "arttap-components/color";
+
+// Variables;
+@import "arttap-components/variables";
+@import "variables-semantic-ui.scss";
+
+// Reset
+// @import "arttap-components/normalize";
+
+// components
+// @import "arttap-components/global";
+// ^^global has image info, so put this after:
+@import "images.scss";
+
+// @import "arttap-components/badges";
+// @import "arttap-components/icons-material-design";
+// @import "arttap-components/grid";
+// @import "arttap-components/navbar";
+// @import "arttap-components/roboto";
+// @import "arttap-components/typography";
+// @import "arttap-components/transitions";
+// @import "arttap-components/cards";
+// @import "arttap-components/toast";
+// @import "arttap-components/tabs";
+// @import "arttap-components/tooltip";
+// @import "arttap-components/buttons";
+// @import "arttap-components/dropdown";
+// @import "arttap-components/waves";
+// @import "arttap-components/modal";
+// @import "arttap-components/collapsible";
+// @import "arttap-components/chips";
+// @import "arttap-components/materialbox";
+// @import "arttap-components/forms/forms";
+// @import "arttap-components/table_of_contents";
+// @import "arttap-components/sideNav";
+// @import "arttap-components/preloader";
+// @import "arttap-components/slider";
+// @import "arttap-components/carousel";
+// @import "arttap-components/tapTarget";
+// @import "arttap-components/pulse";
+// @import "arttap-components/date_picker/default";
+// @import "arttap-components/date_picker/default.date";
+// @import "arttap-components/date_picker/default.time";
