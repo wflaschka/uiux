@@ -1,223 +1,295 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>ArtTap UI/UX Patterns</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ArtTap UI/UX Patterns</title>
 
-	<link rel="stylesheet" type="text/css" href="./assets/styles/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="./assets/styles/bulma.css">
-	<link rel="stylesheet" type="text/css" href="./assets/styles/main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./assets/styles/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/styles/materialize.css">
+    <!-- <link rel="stylesheet" type="text/css" href="./assets/styles/site.css"> -->
+
+    <script src="./assets/scripts/jquery-3.1.1.js"></script>
+    <script src="./assets/scripts/materialize.js"></script>
+    <script type="text/javascript">
+        $( document ).ready(function() {
+            // $(".button-collapse").sideNav();
+            // $('select').material_select();
+            // $('.datepicker').pickadate({
+            //     selectMonths: true, // Creates a dropdown to control month
+            //     selectYears: 15, // Creates a dropdown of 15 years to control year,
+            //     today: 'Today',
+            //     clear: 'Clear',
+            //     close: 'Ok',
+            //     closeOnSelect: false // Close upon selecting a date,
+            // });
+            // $('input.autocomplete').autocomplete({
+            //   data: {
+            //     "Apple": null,
+            //     "Microsoft": null,
+            //     "Google": 'https://placehold.it/250x250'
+            //   },
+            //   limit: 20, // The max amount of results that can be shown at once. Default: Infinity.
+            //   onAutocomplete: function(val) {
+            //     // Callback function when value is autcompleted.
+            //   },
+            //   minLength: 1, // The minimum length of the input for the autocomplete to start. Default: 1.
+            // });
+
+        });
+    </script>
+
 </head>
 <body>
 
-	<div class="container">
+    <main>
 
-		<div class="logo has-text-centered">
-			<a href="index.html">
-				<img src="assets/images/arttap-logo.svg">
-			</a>
-		</div>
+        <div class="navbar-fixed">
+            <nav class="black">
+                <div class="nav-wrapper">
+                    <!-- <a href="index.html" class="center brand-logo"><img class="responsive-img" src="assets/images/graphics/Logo/ArtTap_Logo-Yellow.svg"></a> -->
+                    <!-- <a href="index.html" class="center brand-logo"><img class="sized image fluid" src="assets/images/arttap-square-logo.svg"></a> -->
+                    <a href="index.html" class="center brand-logo"><img class="centered fitted sized image" src="assets/images/graphics/Logo/ArtTap_Logo-Yellow.svg"></a>
+                    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                    <ul class="right hide-on-mobile">
+                        <li><a class="pink-text text-lighten-4" href="https://www.codeply.com/go/xubNUCJTVG" target="_blank">Codeply testbed</a></li>
+                        <li><a class="pink-text text-lighten-4" href="#">Contact</a></li>
+                    </ul>
 
-		<div class="section">
-			<h1 class="title is-1">ArtTap UI/UX Patterns</h1>
-			<h4 class="subtitle is-4">Bulma.io prototypes</h4>
+                    <ul class="side-nav white" id="mobile-demo">
+                        <!-- <li><img class="centered fitted sized image" src="assets/images/graphics/Logo/ArtTap_Logo-Yellow.svg"></li> -->
+                        <!-- <a href="index.html" class=""><img class="centered fitted sized image" src="assets/images/graphics/Logo/ArtTap_Logo-Yellow.svg"></a> -->
+                        <!-- <ul> -->
+                        <li><a class="pink-text text-lighten-4" href="https://www.codeply.com/go/xubNUCJTVG" target="_blank">Codeply testbed</a></li>
+                        <li><a class="pink-text text-lighten-4" href="#">Contact</a></li>
+                    </ul>
+                    <!-- </div>  -->
+                </div>
+            </nav>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h1 class="">ArtTap UI/UX Patterns</h1>
+
+                <h4 class="">What is this website</h4>
+                <p>
+                    This is an <strong>ArtTap</strong> UI/UX design pattern library for review and comment. 
+                    The pages should capture the UI interactions, behaviors, layout, and responsivity. 
+                    This version of the repo uses MaterializeCSS framework (<a href="#why">Why?</a>).
+                </p>
+                <p>
+                    <a href="https://github.com/wflaschka/at-ui-ux2" target="_blank">Github repo for this site</a> (you'll need an invitation from @wflaschka).
+                </p>
+                <p>
+                    Art Tap Pages for Code</strong> <a href="https://drive.google.com/drive/folders/0B9JARrgknJoiWmJfSFhyU1FwRTA" target="_blank">(Shared Google Drive)</a>
+                </p>
+
+                <p>
+                    <strong>Site dependencies:</strong>
+                    Git, Node, Gulp, Sass (SCSS), Less, Browsersync.io, CSS, Flexbox HTML, <s>Bulma.io</s>, <s>Spectre CSS</s>, <s>Semantic-UI</s>, MaterializeCSS, Javascript, JQuery, <s>Vue2</s>, various Sass mixins
+                </p>
+                <p>
+                    <strong>Optimization notes:</strong>
+                    When it's time, <tt>animate.scss</tt> can be greatly trimmed from its 560k size.
+                </p>
+            </div>
+
+            <div class="section">
+
+                <h3 class="">Patterns</h3>
+                <p>List of target patterns is built off 20170718 snapshot of invision project, exported file <tt>arttapx-invision-10278582.pdf</tt>.</p>
+
+                <h4 id="elements">Elements</h4>
+                <ul class="browser-default">
+                    <li>Icon check with green text under</li>
+                </ul>
+                <h4 id="typography">Typography</h4>
+                <ol>
+                    <li>Headers
+                        <ul class="browser-default">
+                            <li>Primary header h1..hn (has that special font)</li>
+                            <li>Secondary header h1..hn (san serif)</li>
+                            <li>Header setting
+                                <ul class="browser-default">
+                                    <li>Subheader spacing (less space below big header)</li>
+                                    <li>Top-subheader spacing (less space atop big header)</li>
+                                </ul>
+                            </li>
+                            <li>Header <em>segment</em> &ndash; all over the place
+                                <ul class="browser-default">
+                                    <li>Header on left side</li>
+                                    <li>Button / link on right side</li>
+                                    <li>Optional line along bottom</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Badge</li>
+                    <li>Inches and fractions of inch</li>
+                </ol>
+                <h4 id="cards">Cards</h4>
+                <ol>
+                    <li>Artwork card: Flexible-width card, row, uniform height</li>
+                    <li>Artist card: static width and height</li>
+                    <li>Artwork card no text</li>
+                    <li>Dashboard card (see artist profile dashboard page)</li>
+                    <li>Variations
+                        <ul class="browser-default">
+                            <li>&ldquo;Not visible&rdquo; on card</li>
+                            <li>Circle on card</li>
+                            <li>&ldquo;See stats&rdquo; on card</li>
+                        </ul>
+                    </li>
+                </ol>
+                <h4 id="items---boxes">Items / boxes</h4>
+                <ul class="browser-default">
+                    <li>Social feed item</li>
+                    <li>Order item item</li>
+                    <li>Styles for boxes
+                        <ul class="browser-default">
+                            <li>Inverted red (see canceled order)</li>
+                            <li><code>thick orange top border</code> etc. (Order of arguments.)</li>
+                        </ul>
+                    </li>
+                </ul>
+                <h4 id="interactions">Interactions</h4>
+                <ul class="browser-default">
+                    <li>Pop-up modals</li>
+                    <li>Right push-in cart</li>
+                </ul>
+                <h4 id="menus">Menus</h4>
+                <ul class="browser-default">
+                    <li>Public header menu</li>
+                    <li>Profile
+                        <ul class="browser-default">
+                            <li>Header</li>
+                            <li>Vertical menu / slide-out</li>
+                        </ul>
+                    </li>
+                </ul>
+                <h4 id="forms">Forms</h4>
+                <ul class="browser-default">
+                    <li>Labels that shrink and move</li>
+                    <li>Rich text input
+                        <ul class="browser-default">
+                            <li>minimal formatting</li>
+                            <li>maximal formatting</li>
+                            <li>Maximize box</li>
+                        </ul>
+                    </li>
+                    <li>Dropdown with progressive update</li>
+                    <li>Date dropdown pattern</li>
+                    <li>Square checkboxes</li>
+                    <li>Round radios</li>
+                    <li>Tag input box</li>
+                    <li>Larger search input box (Help section), right-aligned magnifying glass icon</li>
+                </ul>
+                <h4 id="tiny-blocks">Tiny blocks</h4>
+                <ul class="browser-default">
+                    <li>Artist chip
+                        <ul class="browser-default">
+                            <li>Small avatar</li>
+                            <li>Name</li>
+                            <li>Followers</li>
+                        </ul>
+                    </li>
+                    <li>Number of hearts in collection: &ldquo;60 H in Collection&rdquo;</li>
+                    <li>Statistics (dashboard, user profile page)</li>
+                    <li>Avatars
+                        <ul class="browser-default">
+                            <li>Styles: round, bordered</li>
+                            <li>Superimposed badges
+                                <ul class="browser-default">
+                                    <li>With icons: check, plus, empty (see followers list page)</li>
+                                    <li>Aligned bottom right</li>
+                                    <li>Aligned top right</li>
+                                    <li>Sizes</li>
+                                </ul>
+                            </li>
+                            <li>Sizes</li>
+                        </ul>
+                    </li>
+                    <li>Small circles (followers list page)</li>
+                    <li>Pop-overs
+                        <ul class="browser-default">
+                            <li>Help icon = pop-over (see page 89 of 114)</li>
+                        </ul>
+                    </li>
+                    <li>Segment with orange header (see dashboard page)</li>
+                </ul>
+                <h4 id="matching-quiz">Matching quiz</h4>
+                <ul class="browser-default">
+                    <li>Progress bar for wizard completion</li>
+                </ul>
+                <h4 id="larger-pieces">Larger pieces</h4>
+                <ol>
+                    <li>Masonry grid, artwork cards, fixed width and dynamic height</li>
+                    <li>Bulma&rsquo;s &ldquo;Level&rdquo; into Semantic-UI</li>
+                    <li>Left push-in hamburger menu</li>
+                    <li>Progressive search dropdown in header menu</li>
+                    <li>Upload image drag-and-drop</li>
+                </ol>
+                <h4 id="single-pieces">Single pieces</h4>
+                <ul class="browser-default">
+                    <li>Search bar UI</li>
+                    <li>Google map for checkout page</li>
+                </ul>
+                <h4 id="sliders">Sliders</h4>
+                <ol>
+                    <li>Collection slider: left-static box, right-scroll box artist cards</li>
+                    <li>Newest slider: like collection slider but no left box</li>
+                    <li>Artist slider: like above but with artist cards</li>
+                    <li>Product page (popup) slider</li>
+                    <li>Artwork slider: no meta data or text, just image, fixed height (Artist profile page)</li>
+                    <li>Testimonial slider</li>
+                </ol>
 
 
-			<div class="content">
 
-				<h4 class="title is-4">What is this website</h4>
-				<p>
-					This is an <strong>ArtTap</strong> UI/UX design pattern library for review and comment. 
-					The pages should capture the UI interactions, behaviors, layout, and responsivity.
-				</p>
-				<p>
-					This is starting with the <a href="http://bulma.io" target="_blank">Bulma.io flexbox framework</a>. Why <a href="#whybulma">try Bulma?</a>
-				</p>
-				<p>
-					<a href="https://github.com/wflaschka/at-ui-ux" target="_blank">Github repo for this site</a> (you'll need an invitation from @wflaschka).
-				</p>
-
-				<ul>
-					<li><strong>Art Tap Pages for Code</strong> <a href="ArtTap Pages for code [LINK](https://drive.google.com/drive/folders/0B9JARrgknJoiWmJfSFhyU1FwRTA)" target="_blank">(Shared Google Drive)</a></li>
-					<li><a href="assets/pdfs/Typography-Guidelines-20170329.pdf">ArtTap style guide 20170329.</a></li>
-				</ul>
-
-			</div>
-			<div class="content is-small">
-				<p>
-					<strong>Site dependencies:</strong>
-					Git, Node, Gulp, Sass (scss), Less, Browsersync.io, CSS, Flexbox HTML, Bulma.io, Javascript, JQuery, Vue2, various Sass mixins
-				</p>
-				<p>
-					<strong>Optimization notes:</strong>
-					When it's time, <tt>animate.scss</tt> can be greatly trimmed.
-				</p>
-			</div>
-		</div>
-
-		<div class="section">
-			<div class="content">
-
-				<h2 class="title is-2">Patterns</h2>
-				<ul>
-					<li>Small elements
-
-						<ul>
-							<li>
-								<a href="prototypes/design-elements/typography.html">Typography</a>
-							</li>
-							<li>
-								<a href="prototypes/design-elements/typography.html">Icons</a>
-								<ul>
-									<li>Default: <a href="http://fontawesome.io/icons/" target="_blank">FontAwesome</a></li>
-									<li>ArtTap custom font <span class="tag is-danger">TODO</span> (e.g. <a href="http://fontastic.me/howto">here</a>)</li>
-								</ul>
-							</li>
-							<li><a href="prototypes/design-elements/buttons.html">Buttons</a></li>
-							<li><a href="prototypes/design-elements/tags.html">Tags</a></li>
-							<li><a href="prototypes/design-elements/hearts.html">Hearts</a></li>
-							<li><a href="prototypes/design-elements/floating-badges.html">Floating Badges</a></li>
-							<li><a href="prototypes/design-elements/chips.html">Chips</a></li>
-							<li><a href="prototypes/page-elements/separator.html">Separator</a> <span class="tag is-warning">IN PROG</span></li>
-							<li><a href="prototypes/design-elements/dropzone.html">Image Dropzone</a> <span class="tag is-green">New</span></li>
-						</ul>
-					</li>
-					<li>Larger page element patterns
-						<ul>
-							<li><a href="prototypes/page-elements/dashboard-boxes.html">Dashboard Boxes</a> <span class="tag is-warning">INPROG</span></li>
-							<li>
-								<a href="prototypes/page-elements/spectre-bulma-carousel.html">
-									<span class="icon is-small"><i class="fa fa-star"></i></span>
-									Carousel
-								</a> (Spectre adapted to Bulma)
-							</li>
-							<li>
-								Curated list slider (ref: landing page)
-							</li>
-							<li>Cards / artworks
-
-								<ul>
-									<li>Artist
-										<ol>
-											<li><a href="prototypes/design-elements/artist-card-single.html">Artist card (single)</a></li>
-											<li><a href="prototypes/design-elements/art-card-from-artist.html">Artwork from artist view</a></li>
-										</ol>
-									</li>
-									<li>Artwork
-										<ol>
-											<li><a href="prototypes/design-elements/art-card-single.html">Artwork card (single)</a></li>
-											<li><a href="prototypes/design-elements/art-cards.html">Artwork cards (row)</a></li>
-											<li><a href="prototypes/page-elements/art-cards-masonry.html">Artwork cards (masonry)</a></li>
-										</ol>
-									</li>
-									<!-- <li><tt>spectre.css</tt> <a href="prototypes/design-elements/art-cards-spectre.html">Artwork cards</a></li> -->
-									<!-- <li>Cartesian grid</li> -->
-									<li><a href="prototypes/design-elements/frames.html">Experimental: Framed artwork tests</a></li>
-								</ul>
-							</li>
-							<li>Forms
-								<ul>
-									<li><a href="prototypes/page-elements/form.html">Form</a></li>
-									<li><a href="prototypes/design-elements/form-search.html">Search form elements</a></li>
-									<li><a href="prototypes/page-elements/search-form.html">Search form bar</a></li>
-								</ul>
-							</li>
-
-							<li>Interactives
-								<ul>
-									<li>Image zoom functionality</li>
-									<li>Tabs <span class="tag is-danger">TODO</span> (<a href="https://codepen.io/cssjockey/pen/jGzuK">See</a>)</li>
-								</ul>
-							</li>
-							<li>Notices
-								<ul>
-									<li><a href="prototypes/interactive/sweetalert.html">Alerts and Modals (dialogs)</a> (vue-sweetalert)</li>
-									<li><a href="prototypes/interactive/dropdowns.html">Dropdowns</a></li>
-									<li><a href="prototypes/interactive/motd.html">Header bar message MoTD</a></li>
-									<li><a href="prototypes/interactive/push-in.html">Push-in Panels</a></li>
-									<li>via <a href="https://buefy.github.io/#/documentation/snackbar" target="_blank">Buefy project</a>:
-										<ul>
-											<li>Toast</li>
-											<li>Snackbar</li>
-											<li>Notification</li>
-											<!-- <li>Message</li> -->
-										</ul>
-									</li>
-								</ul>
-							</li>
-							<li>Navigation elements
-								<ul>
-									<li><a href="prototypes/page-elements/header.html">Header (regular pages)</a></li>
-									<li><a href="prototypes/page-elements/header-artist.html">Header (artist pages)</a> <span class="tag is-danger">TODO</span></li>
-									<li><a href="prototypes/page-elements/panel-left-nav.html">Left navigation</a> (merchant pages)</li>
-									<li>Searchbar</li>
-									<li>Footer</li>
-								</ul>
-							</li>
-						</ul>
-					</li>
-				</ul>
-
-			</div>
-
-		</div>
+            </div>
 
 
+            <div class="section">
+                <div class="row">
+                    <div class="col s12 m12">
 
-		<div class="section">
-			<a name="whybulma"></a>
+                        <div class="card blue-grey darken-1 z-depth-0">
+                            <div class="card-content white-text">
+                                <span class="card-title">Why MaterializeCSS?</span>
+                                <p class="">
+                                    This version of the AT-UI-UX repo (v2) uses 
+                                    <a class="yellow-text" href="http://materializecss.com">MaterializeCSS</a>
+                                    instead of <a class="yellow-text" href="http://bulma.io">Bulma</a> because it has a wider range of components and pre-built interactions. 
+                                    The overhead for Bulma (e.g. getting dropdown menus to work, borrowing from Spectre.css, etc.) started to outweigh the benefits of having the lean framework.
+                                </p>
+                            </div>
+                        </div>
 
-			<h2 class="title is=2">Why <a href="http://bulma.io" target="_blank">Bulma</a> as a CSS framework?</h2>
-			<h4 class="subtitle is=4">It's pretty neat</h4>
-			<div class="content">
-				<ul>
-					<li>Benefits
+                    </div>
+                </div>
+            </div>
+        </div>
 
-						<ul>
-							<li>Very simple but comprehensive</li>
-							<li>Based on flex-box which is successor to old-fashioned CSS</li>
-							<li>Can function alongside other CSS frameworks because it does not style unclassed objects (with work; must add bulma scope to css)</li>
-							<li>Minimal: Learn it in a day</li>
-							<li>Incredibly responsive</li>
-							<li>Not opinionated; <em>we can customize it easily</em></li>
-							<li>Competitive with larger, more opinionated frameworks like Bootstrap and Semantic-UI</li>
-							<li>CSS-only, no built-in JS framework requirements to adapt or integrate</li>
-							<li>Does not look like Bootstrap</li>
-						</ul>
-					</li>
-					<li>Drawbacks
+    </main>
 
-						<ul>
-							<li>Default for 3rd party packages is Bootstrap which is used <em>everywhere</em>. Each new integration requires a bit of simplification and removing of excess markup to get it ready for Bulma</li>
-							<li>No built-in JS means some JS coding for UI/UX (turning out to be a good thing so far -- wf 201703)</li>
-							<li>Flexbox approach means some SCSS mixins or other libraries for older CSS won't work as expected</li>
-						</ul>
-					</li>
-				</ul>
-				<p>
-					<a href="https://dansup.github.io/bulma-templates/" target="_blank">Examples of layouts made with Bulma.</a>
-				</p>
+    <footer class="page-footer black center-align">
+        <p>
+            <strong>Walter Flaschka</strong> 
+        </p>
+        <p>
+            <small>
+                <span class="chip green">v2: 20170722</span>
+                <span class="chip orange">v1: 20170502</span>
+                <span class="chip orange">v1: 20170331</span>
+                <span class="chip orange">v1: 20170325</span>
+            </small>
+        </p>
+    </footer>
 
-
-			</div>
-
-
-		</div>
-
-
-		<div class="section">
-			<div class="status-footer has-text-centered">
-				<p>
-					Walter Flaschka 
-					<span class="tag is-black">20170502</span>
-					<span class="tag is-warning">20170331</span>
-					<span class="tag is-warning">20170325</span>
-				</p>
-			</div>
-		</div>
-	</div>
 
 </body>
 </html>

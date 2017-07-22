@@ -2,8 +2,8 @@
 
 ArtTap UI/UX patterns for Marketplace project.
 
-This version of the AT-UI-UX repo (v2) uses [Semantic UI](http://www.semantic-ui.com) instead of [Bulma](http://bulma.io) because it has a wider range of components and pre-built interactions. The overhead for Bulma (e.g. getting dropdown menus to work, borrowing from Spectre.css, etc.) started to outweigh the benefits of having the lean framework. Bulma version is moved to `src-bulma/` but the gulpfile doesn't look at it ATM (20170719 110322).
-
+* **Update:** `20170722 123106` This version of the AT-UI-UX repo (v2) uses [MaterializeCSS](http://materializecss.com/) instead of [Semantic UI](http://www.semantic-ui.com).
+* ~~This version of the AT-UI-UX repo (v2) uses [Semantic UI](http://www.semantic-ui.com) instead of [Bulma](http://bulma.io) because it has a wider range of components and pre-built interactions. The overhead for Bulma (e.g. getting dropdown menus to work, borrowing from Spectre.css, etc.) started to outweigh the benefits of having the lean framework. Bulma version is moved to `src-bulma/` but the gulpfile doesn't look at it ATM (20170719 110322).~~
 
 ## Install
 
@@ -46,82 +46,43 @@ After browsersync, you'll have a server running (probably on port `3000`) and yo
 
 Get browsersync for your computer at [https://browsersync.io/](https://browsersync.io/).
 
----
+***
 
-## <span style="color: green;">Gulp Build</span> Updates
+## CSS Framework Adjustments
 
-**20170719 103839**: Updated `./gulpfile.js` and get clean build for Semantic UI with: 
+### Images
 
-```sh
-# Only build semantic ui:
-gulp "build ui"
+Have special extra classes with `.sized.image`.
 
-# Standard simple gulp (builds and then watches). Generalized build works fine:
-gulp build
+    <img class="sized image tightly fitted" src="logo.svg">
+    <img class="middle aligned fitted sized image" src="logo.svg">
 
-## Gulp watch works too! It's just slow because of the Semantic-UI components:
-gulp
+*All Semantic-UI classes are available!*
 
-## or:
-gulp watch
+Also available is a new `fitted` class:
+
+* `fitted` = image sized to 90% of container
+* `tightly fitted` = image sized to 100% of container
+* TODO: Does this *really* work??
+
+Test:
+
+```html
+<ul>
+    <li>sized image rounded small: <img class="sized image rounded small" src="assets/images/artwork/art-1.jpg"></li>
+    <li>sized image circular small: <img class="sized image circular small" src="assets/images/artwork/art-1.jpg"></li>
+    <li>sized image rounded large: <img class="sized image rounded large" src="assets/images/artwork/art-1.jpg"></li>
+    <li>sized image circular large: <img class="sized image circular large" src="assets/images/artwork/art-1.jpg"></li>
+    <li>sized image mini: <img class="sized image mini" src="assets/images/artwork/art-1.jpg"></li>
+    <li>sized image small: <img class="sized image small" src="assets/images/artwork/art-1.jpg"></li>
+    <li>sized image medium: <img class="sized image medium" src="assets/images/artwork/art-1.jpg"></li>
+    <li>sized image large: <img class="sized image large" src="assets/images/artwork/art-1.jpg"></li>
+    <li>sized image bordered large: <img class="sized image bordered large" src="assets/images/bulma-logo.png"></li>
+    <li>sized image huge: <img class="sized image huge" src="assets/images/artwork/art-1.jpg"></li>
+</ul>
 ```
 
-***
 
-## Semantic-UI Information
-
-* [Semantic UI website](http://www.semantic-ui.com)
-* [Semantic-UI Github](https://github.com/Semantic-Org/Semantic-UI)
-* Googlesearch on `semantic ui`, `semantic-ui`, `semanticui`, `sui`
-* Import gulp tasks -- [howto documentation](https://semantic-ui.com/introduction/advanced-usage.html), and an [example project](https://github.com/Semantic-Org/Example-External-Gulpfile)
-* Gulp build/watch instructions [are on this page](https://semantic-ui.com/introduction/build-tools.html): 
-* Auto-install and continuous integration are at the [bottom of the page here](https://semantic-ui.com/introduction/build-tools.html)
-
-### Information for this project
-
-Your site's theme:
-
-```
-./semantic/src/site
-```
-
-Update semantic-ui to latest via `npm` to get framework changes: 
-
-```shell
-npm update
-```
-
-**Configuration files.** Build tool settings are stored in a special file called `semantic.json`. Make changes here to change paths (e.g. to `dist/` etc.).
-
-We skip using Semantic-UI's gulpfile because we want to integrate with our own gulp pipeline. Using [instructions here](https://semantic-ui.com/introduction/advanced-usage.html). See first section of this document.
-
-
-***
-
-## Leftover notes 
-
-
-
-
-## Interesting things to look at
-
-* Compass CSS3: http://compass-style.org/reference/compass/css3/
-    * Includes <a href="http://compass-style.org/reference/compass/css3/flexbox/">flexbox directives</a>
-* https://picturepan2.github.io/spectre/utilities.html#divider
-* Cool [SASS/SCSS functions](http://sass-lang.com/documentation/Sass/Script/Functions.html), e.g.:
-
-```sh
-sass-convert --from sass --to scss temp.sass temp.scss
-```
-
-***
-***
-***
-***
-***
-***
-***
-***
 
 ## Target UI/UX patterns
 
@@ -242,8 +203,65 @@ Built off 20170718 snapshot of invision project, exported file `arttapx-invision
 6. Testimonial slider
 
 
-### Misc notes:
+## Leftover notes 
 
-Remember the responsive handling, do'h.
+* Compass CSS3: http://compass-style.org/reference/compass/css3/
+    * Includes <a href="http://compass-style.org/reference/compass/css3/flexbox/">flexbox directives</a>
+* https://picturepan2.github.io/spectre/utilities.html#divider
+* Cool [SASS/SCSS functions](http://sass-lang.com/documentation/Sass/Script/Functions.html), e.g.:
+
+```sh
+sass-convert --from sass --to scss temp.sass temp.scss
+```
 
 
+---
+
+## <span style="color: green;">Gulp Build</span> Updates DEPRECATED 20170722
+
+**20170719 103839**: Updated `./gulpfile.js` and get clean build for Semantic UI with: 
+
+```sh
+# Only build semantic ui:
+gulp "build ui"
+
+# Standard simple gulp (builds and then watches). Generalized build works fine:
+gulp build
+
+## Gulp watch works too! It's just slow because of the Semantic-UI components:
+gulp
+
+## or:
+gulp watch
+```
+
+
+
+***
+
+## Semantic-UI Information DEPRECATED 20170722
+
+* [Semantic UI website](http://www.semantic-ui.com)
+* [Semantic-UI Github](https://github.com/Semantic-Org/Semantic-UI)
+* Googlesearch on `semantic ui`, `semantic-ui`, `semanticui`, `sui`
+* Import gulp tasks -- [howto documentation](https://semantic-ui.com/introduction/advanced-usage.html), and an [example project](https://github.com/Semantic-Org/Example-External-Gulpfile)
+* Gulp build/watch instructions [are on this page](https://semantic-ui.com/introduction/build-tools.html): 
+* Auto-install and continuous integration are at the [bottom of the page here](https://semantic-ui.com/introduction/build-tools.html)
+
+### Information for this project
+
+Your site's theme:
+
+```
+./semantic/src/site
+```
+
+Update semantic-ui to latest via `npm` to get framework changes: 
+
+```shell
+npm update
+```
+
+**Configuration files.** Build tool settings are stored in a special file called `semantic.json`. Make changes here to change paths (e.g. to `dist/` etc.).
+
+We skip using Semantic-UI's gulpfile because we want to integrate with our own gulp pipeline. Using [instructions here](https://semantic-ui.com/introduction/advanced-usage.html). See first section of this document.

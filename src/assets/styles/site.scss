@@ -5,6 +5,35 @@
  *
  * 
  */
+@import "materialize/arttap-components/variables";
+
+
+///////////////////////////////////////////////////////////////////////////
+// Navbar logo, special case.
+// Really, MCSS? Not built in??
+nav .nav-wrapper .brand-logo {
+	height: $navbar-height-mobile;
+	margin-top: .5rem;
+}
+@media #{$medium-and-up} {
+	nav .nav-wrapper .brand-logo {
+		height: $navbar-height;
+		margin-top: .7rem;
+	}
+}
+
+///////////////////////////////////////////////////////////////////////////
+// Guarantee a sticky footer:
+// file:///Users/flash/Dropbox/Websites/Reference/materializecss.com/footer.html#sticky-footer
+body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+main {
+	flex: 1 0 auto;
+}
+
 
 // @import "bulma-functions.scss";
 // @import "bulma-settings.scss";
