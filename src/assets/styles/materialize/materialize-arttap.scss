@@ -13,6 +13,9 @@
 @import "arttap-components/variables";
 @import "variables-semantic-ui.scss";
 
+// Fonts;
+@import "fonts.scss";
+
 // Reset
 // @import "arttap-components/normalize";
 
@@ -20,13 +23,16 @@
 // @import "arttap-components/global";
 // ^^global has image info, so put this after:
 @import "images.scss";
+@import "level.scss";
+@import "action-status.scss";
+@import "fractions.scss";
 
 // @import "arttap-components/badges";
-// @import "arttap-components/icons-material-design";
+@import "arttap-components/icons-material-design";
 // @import "arttap-components/grid";
 // @import "arttap-components/navbar";
 // @import "arttap-components/roboto";
-// @import "arttap-components/typography";
+@import "arttap-components/typography";
 // @import "arttap-components/transitions";
 // @import "arttap-components/cards";
 // @import "arttap-components/toast";
@@ -37,7 +43,7 @@
 // @import "arttap-components/waves";
 // @import "arttap-components/modal";
 // @import "arttap-components/collapsible";
-// @import "arttap-components/chips";
+@import "arttap-components/chips";
 // @import "arttap-components/materialbox";
 // @import "arttap-components/forms/forms";
 // @import "arttap-components/table_of_contents";

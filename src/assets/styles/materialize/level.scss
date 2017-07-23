@@ -1,0 +1,106 @@
+/*******************************
+Cribbed from Bulma's "Level" component which is cool
+*******************************/
+// $debugBorder: 1px solid red;
+$debugBorder: none;
+
+.level-item {
+    align-items: center;
+    display: flex;
+    flex-basis: auto;
+    flex-grow: 0;
+    flex-shrink: 0;
+    justify-content: center;
+
+    border: $debugBorder;
+
+    h1, h2, h3, h4, h5, h6 {
+        margin: 0;
+    }
+
+    // // Responsiveness
+    // +mobile
+    //     &:not(:last-child)
+    //         margin-bottom: 0.75rem
+}
+
+.level-left,
+.level-right {
+    flex-basis: auto;
+    flex-grow: 0;
+    flex-shrink: 0;
+    .level-item {
+        &:not(:last-child) {
+            margin-right: 0.75rem;
+        }
+        // Modifiers
+        &.is-flexible {
+            flex-grow: 1;
+        }
+    }
+}
+
+.level-left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    // // Responsiveness
+    // +mobile
+    //     & + .level-right
+    //         margin-top: 1.5rem
+    // +tablet
+    //     display: flex
+}
+
+.level-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    // // Responsiveness
+    // +tablet
+    //     display: flex
+}
+
+.level {
+    // +block
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border: $debugBorder;
+
+    code {
+        border-radius: $button-radius;
+    }
+    img {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    // Modifiers
+    &.is-mobile {
+        display: flex;
+        .level-left,
+        .level-right {
+            display: flex;
+        }
+        .level-left + .level-right {
+            margin-top: 0;
+        }
+        .level-item {
+            &:not(:last-child) {
+                margin-bottom: 0;
+            }
+            &:not(.is-narrow) {
+                flex-grow: 1;
+            }
+        }
+    }
+
+    // // Responsiveness
+    // +tablet
+    //     display: flex
+    //     & > .level-item
+    //         &:not(.is-narrow)
+    //             flex-grow: 1
+}
