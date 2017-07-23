@@ -9066,6 +9066,18 @@ output. They should be changed on a case-by-case basis.
   This ensures these "ratios" remain constant despite changes in EM
 */
 /*******************************
+Font definitions centralized here when possible
+*******************************/
+@font-face {
+  font-family: 'Portrait Web';
+  src: url("../fonts/commercial-type-1703-LWFBVL-web/Portrait-Regular-Web.eot");
+  src: url("../fonts/commercial-type-1703-LWFBVL-web/Portrait-Regular-Web.eot?#iefix") format("embedded-opentype"), url("../fonts/commercial-type-1703-LWFBVL-web/Portrait-Regular-Web.woff2") format("woff2"), url("../fonts/commercial-type-1703-LWFBVL-web/Portrait-Regular-Web.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+/*******************************
 Images (cribbed from Semantic-UI)
 *******************************/
 /*-------------------
@@ -9447,6 +9459,558 @@ img
 .sized.images svg {
   display: inline-block;
   margin: 0em 0.25rem 0.5rem;
+}
+
+/*******************************
+Cribbed from Bulma's "Level" component which is cool
+*******************************/
+.level-item {
+  align-items: center;
+  display: flex;
+  flex-basis: auto;
+  flex-grow: 0;
+  flex-shrink: 0;
+  justify-content: center;
+  border: none;
+}
+
+.level-item h1, .level-item h2, .level-item h3, .level-item h4, .level-item h5, .level-item h6 {
+  margin: 0;
+}
+
+.level-left,
+.level-right {
+  flex-basis: auto;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.level-left .level-item:not(:last-child),
+.level-right .level-item:not(:last-child) {
+  margin-right: 0.75rem;
+}
+
+.level-left .level-item.is-flexible,
+.level-right .level-item.is-flexible {
+  flex-grow: 1;
+}
+
+.level-left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.level-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.level {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+}
+
+.level code {
+  border-radius: 2px;
+}
+
+.level img {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.level.is-mobile {
+  display: flex;
+}
+
+.level.is-mobile .level-left,
+.level.is-mobile .level-right {
+  display: flex;
+}
+
+.level.is-mobile .level-left + .level-right {
+  margin-top: 0;
+}
+
+.level.is-mobile .level-item:not(:last-child) {
+  margin-bottom: 0;
+}
+
+.level.is-mobile .level-item:not(.is-narrow) {
+  flex-grow: 1;
+}
+
+/*******************************
+Display big icon with text underneath
+*******************************/
+.display-action-status {
+  text-align: center;
+}
+
+.display-action-status .material-icons,
+.display-action-status .arttap-icons,
+.display-action-status img {
+  display: block;
+  margin: 0 auto;
+}
+
+/*******************************
+Display fractions
+*******************************/
+/* This is needed for some mobile phones to display the Google Icon font properly */
+.material-icons {
+  text-rendering: optimizeLegibility;
+  font-feature-settings: 'liga';
+}
+
+p i.material-icons,
+li i.material-icons {
+  position: relative;
+  top: 0.25em;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+@media only screen and (min-width: 0) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  html {
+    font-size: 14.5px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  font-weight: inherit;
+}
+
+h1 {
+  font-size: 4.2rem;
+  line-height: 110%;
+  margin: 2.1rem 0 1.4rem 0;
+}
+
+h2 {
+  font-size: 3.56rem;
+  line-height: 110%;
+  margin: 1.78rem 0 1.18667rem 0;
+}
+
+h3 {
+  font-size: 2.92rem;
+  line-height: 110%;
+  margin: 1.46rem 0 0.97333rem 0;
+}
+
+h4 {
+  font-size: 2.28rem;
+  line-height: 110%;
+  margin: 1.14rem 0 0.76rem 0;
+}
+
+h5 {
+  font-size: 1.64rem;
+  line-height: 110%;
+  margin: 0.82rem 0 0.54667rem 0;
+}
+
+h6 {
+  font-size: 1rem;
+  line-height: 110%;
+  margin: 0.5rem 0 0.33333rem 0;
+}
+
+h1[secondary] {
+  font-size: 2.52rem;
+  line-height: 110%;
+  margin: 1.26rem 0 0.84rem 0;
+}
+
+h2[secondary] {
+  font-size: 2.136rem;
+  line-height: 110%;
+  margin: 1.068rem 0 0.712rem 0;
+}
+
+h3[secondary] {
+  font-size: 1.752rem;
+  line-height: 110%;
+  margin: 0.876rem 0 0.584rem 0;
+}
+
+h4[secondary] {
+  font-size: 1.368rem;
+  line-height: 110%;
+  margin: 0.684rem 0 0.456rem 0;
+}
+
+h5[secondary] {
+  font-size: 0.984rem;
+  line-height: 110%;
+  margin: 0.492rem 0 0.328rem 0;
+}
+
+h6[secondary] {
+  font-size: 0.6rem;
+  line-height: 110%;
+  margin: 0.3rem 0 0.2rem 0;
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: 500;
+}
+
+small {
+  font-size: 75%;
+}
+
+.light, .page-footer .footer-copyright {
+  font-weight: 300;
+}
+
+.thin {
+  font-weight: 200;
+}
+
+.flow-text {
+  font-weight: 300;
+}
+
+@media only screen and (min-width: 360px) {
+  .flow-text {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (min-width: 390px) {
+  .flow-text {
+    font-size: 1.224rem;
+  }
+}
+
+@media only screen and (min-width: 420px) {
+  .flow-text {
+    font-size: 1.248rem;
+  }
+}
+
+@media only screen and (min-width: 450px) {
+  .flow-text {
+    font-size: 1.272rem;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  .flow-text {
+    font-size: 1.296rem;
+  }
+}
+
+@media only screen and (min-width: 510px) {
+  .flow-text {
+    font-size: 1.32rem;
+  }
+}
+
+@media only screen and (min-width: 540px) {
+  .flow-text {
+    font-size: 1.344rem;
+  }
+}
+
+@media only screen and (min-width: 570px) {
+  .flow-text {
+    font-size: 1.368rem;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .flow-text {
+    font-size: 1.392rem;
+  }
+}
+
+@media only screen and (min-width: 630px) {
+  .flow-text {
+    font-size: 1.416rem;
+  }
+}
+
+@media only screen and (min-width: 660px) {
+  .flow-text {
+    font-size: 1.44rem;
+  }
+}
+
+@media only screen and (min-width: 690px) {
+  .flow-text {
+    font-size: 1.464rem;
+  }
+}
+
+@media only screen and (min-width: 720px) {
+  .flow-text {
+    font-size: 1.488rem;
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  .flow-text {
+    font-size: 1.512rem;
+  }
+}
+
+@media only screen and (min-width: 780px) {
+  .flow-text {
+    font-size: 1.536rem;
+  }
+}
+
+@media only screen and (min-width: 810px) {
+  .flow-text {
+    font-size: 1.56rem;
+  }
+}
+
+@media only screen and (min-width: 840px) {
+  .flow-text {
+    font-size: 1.584rem;
+  }
+}
+
+@media only screen and (min-width: 870px) {
+  .flow-text {
+    font-size: 1.608rem;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .flow-text {
+    font-size: 1.632rem;
+  }
+}
+
+@media only screen and (min-width: 930px) {
+  .flow-text {
+    font-size: 1.656rem;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .flow-text {
+    font-size: 1.68rem;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .flow-text {
+    font-size: 1.2rem;
+  }
+}
+
+/****************************************************************************/
+/****************************************************************************/
+[documentation] {
+  color: #2196F3 !important;
+}
+
+hr[documentation] {
+  height: 30px;
+  border-style: solid;
+  border-color: #2196F3;
+  border-width: 1px 0 0 0;
+  border-radius: 20px;
+}
+
+hr[documentation]:before {
+  display: block;
+  content: "";
+  height: 30px;
+  margin-top: -31px;
+  border-style: solid;
+  border-color: #2196F3;
+  border-width: 0 0 1px 0;
+  border-radius: 20px;
+}
+
+tt,
+code {
+  font-family: Menlo, Consolas, Monaco, "Lucida Console", "Fira Mono", monospace;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Portrait Web", Georgia;
+}
+
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  margin-left: 1em;
+  font-size: 60%;
+  letter-spacing: -1px;
+  text-transform: none;
+  font-family: Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: bolder;
+  opacity: 0.7;
+}
+
+h1[secondary], h2[secondary], h3[secondary], h4[secondary], h5[secondary], h6[secondary] {
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+h1[secondary] small, h2[secondary] small, h3[secondary] small, h4[secondary] small, h5[secondary] small, h6[secondary] small {
+  font-family: "Portrait Web", Georgia;
+  font-size: 80%;
+  text-transform: none;
+  font-style: normal;
+}
+
+h1 + h1, h1 + h2, h1 + h3, h1 + h4, h1 + h5, h1 + h6,
+h1[secondary] + h1, h1[secondary] + h2, h1[secondary] + h3, h1[secondary] + h4, h1[secondary] + h5, h1[secondary] + h6, h2 + h1, h2 + h2, h2 + h3, h2 + h4, h2 + h5, h2 + h6,
+h2[secondary] + h1, h2[secondary] + h2, h2[secondary] + h3, h2[secondary] + h4, h2[secondary] + h5, h2[secondary] + h6, h3 + h1, h3 + h2, h3 + h3, h3 + h4, h3 + h5, h3 + h6,
+h3[secondary] + h1, h3[secondary] + h2, h3[secondary] + h3, h3[secondary] + h4, h3[secondary] + h5, h3[secondary] + h6, h4 + h1, h4 + h2, h4 + h3, h4 + h4, h4 + h5, h4 + h6,
+h4[secondary] + h1, h4[secondary] + h2, h4[secondary] + h3, h4[secondary] + h4, h4[secondary] + h5, h4[secondary] + h6, h5 + h1, h5 + h2, h5 + h3, h5 + h4, h5 + h5, h5 + h6,
+h5[secondary] + h1, h5[secondary] + h2, h5[secondary] + h3, h5[secondary] + h4, h5[secondary] + h5, h5[secondary] + h6, h6 + h1, h6 + h2, h6 + h3, h6 + h4, h6 + h5, h6 + h6,
+h6[secondary] + h1, h6[secondary] + h2, h6[secondary] + h3, h6[secondary] + h4, h6[secondary] + h5, h6[secondary] + h6 {
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  margin-top: -0.5em;
+}
+
+tt,
+.chip {
+  display: inline-block;
+  height: 32px;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 32px;
+  padding: 0 12px;
+  border-radius: 16px;
+  background-color: #e4e4e4;
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+
+tt > img,
+.chip > img {
+  float: left;
+  margin: 0 8px 0 -12px;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+}
+
+tt .close,
+.chip .close {
+  cursor: pointer;
+  float: right;
+  font-size: 16px;
+  line-height: 32px;
+  padding-left: 8px;
+}
+
+tt,
+.chips {
+  border: none;
+  border-bottom: 1px solid #9e9e9e;
+  box-shadow: none;
+  margin: 0 0 20px 0;
+  min-height: 45px;
+  outline: none;
+  transition: all .3s;
+}
+
+tt.focus,
+.chips.focus {
+  border-bottom: 1px solid #26a69a;
+  box-shadow: 0 1px 0 0 #26a69a;
+}
+
+tt:hover,
+.chips:hover {
+  cursor: text;
+}
+
+tt .chip.selected,
+.chips .chip.selected {
+  background-color: #26a69a;
+  color: #fff;
+}
+
+tt .input,
+.chips .input {
+  background: none;
+  border: 0;
+  color: rgba(0, 0, 0, 0.6);
+  display: inline-block;
+  font-size: 1rem;
+  height: 3rem;
+  line-height: 32px;
+  outline: 0;
+  margin: 0;
+  padding: 0 !important;
+  width: 120px !important;
+}
+
+tt .input:focus,
+.chips .input:focus {
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+tt .autocomplete-content,
+.chips .autocomplete-content {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.prefix ~ .chips {
+  margin-left: 3rem;
+  width: 92%;
+  width: calc(100% - 3rem);
+}
+
+.chips:empty ~ label {
+  font-size: 0.8rem;
+  transform: translateY(-140%);
+}
+
+tt {
+  margin: 0;
+  min-height: 0;
+  padding: 0 0.5em;
+  font-family: Menlo, Consolas, Monaco, "Lucida Console", "Fira Mono", monospace;
 }
 
 /**

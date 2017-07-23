@@ -1,0 +1,41 @@
+/*******************************
+Display fractions
+*******************************/
+// Deprecated until needed.
+
+
+// https://stackoverflow.com/questions/7525977/how-to-write-fraction-value-using-html
+// span.xxx-fraction {
+//     display: inline-block;
+//     font-size: 50%;
+//     text-align: center;
+//     & > sup {
+//         display: block;
+//         border-bottom: 1px solid;
+//         font: inherit;
+//     }
+//     & > span {
+//         display: none;
+//     }
+//     & > sub {
+//         display: block;
+//         font: inherit;
+//     }
+// }
+
+// .xxx-fraction2 { display: inline-block;
+//     position: relative;
+//     vertical-align: middle;
+//     letter-spacing: 0.001em;
+//     text-align: center;
+//     & > span {
+//         display: block;
+//         padding: 0.1em;
+//     }
+//     & span.bottom {
+//         border-top: thin solid black;
+//     }
+//     & span.symbol {
+//         display: none;
+//     } 
+// }

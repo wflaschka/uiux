@@ -3,3 +3,11 @@
   text-rendering: optimizeLegibility;
   font-feature-settings: 'liga';
 }
+
+// Inline icons should align with text: 
+// https://css-tricks.com/tips-aligning-icons-text/
+p i.material-icons,
+li i.material-icons {
+	position: relative;
+	top: 0.25em;
+}
