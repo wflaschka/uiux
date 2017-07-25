@@ -277,6 +277,9 @@ $massiveWidth: 960px;
         width: $miniWidth;
         height: auto;
         font-size: $mini;
+        &.avatar {
+            height: $miniWidth;
+        }
     }
     &.tiny .image,
     &.tiny img,
@@ -285,6 +288,9 @@ $massiveWidth: 960px;
         width: $tinyWidth;
         height: auto;
         font-size: $tiny;
+        &.avatar {
+            height: $tinyWidth;
+        }
     }
     &.small .image,
     &.small img,
@@ -293,6 +299,9 @@ $massiveWidth: 960px;
         width: $smallWidth;
         height: auto;
         font-size: $small;
+        &.avatar {
+            height: $smallWidth;
+        }
     }
     &.medium .image,
     &.medium img,
@@ -301,6 +310,9 @@ $massiveWidth: 960px;
         width: $mediumWidth;
         height: auto;
         font-size: $medium;
+        &.avatar {
+            height: $mediumWidth;
+        }
     }
     &.large .image,
     &.large img,
@@ -309,6 +321,9 @@ $massiveWidth: 960px;
         width: $largeWidth;
         height: auto;
         font-size: $large;
+        &.avatar {
+            height: $largeWidth;
+        }
     }
     &.big .image,
     &.big img,
@@ -317,6 +332,9 @@ $massiveWidth: 960px;
         width: $bigWidth;
         height: auto;
         font-size: $big;
+        &.avatar {
+            height: $bigWidth;
+        }
     }
     &.huge .image,
     &.huge img,
@@ -325,6 +343,9 @@ $massiveWidth: 960px;
         width: $hugeWidth;
         height: auto;
         font-size: $huge;
+        &.avatar {
+            height: $hugeWidth;
+        }
     }
     &.massive .image,
     &.massive img,
@@ -333,6 +354,9 @@ $massiveWidth: 960px;
         width: $massiveWidth;
         height: auto;
         font-size: $massive;
+        &.avatar {
+            height: $massiveWidth;
+        }
     }
 }
 

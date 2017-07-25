@@ -6,21 +6,9 @@
  * 
  */
 @import "materialize/arttap-components/variables";
+@import "animations-custom.scss";
 
 
-///////////////////////////////////////////////////////////////////////////
-// Navbar logo, special case.
-// Really, MCSS? Not built in??
-nav .nav-wrapper .brand-logo {
-	height: $navbar-height-mobile;
-	margin-top: .5rem;
-}
-@media #{$medium-and-up} {
-	nav .nav-wrapper .brand-logo {
-		height: $navbar-height;
-		margin-top: .7rem;
-	}
-}
 
 ///////////////////////////////////////////////////////////////////////////
 // Guarantee a sticky footer:
@@ -92,7 +80,7 @@ main {
  * Mixins to try
  */
 // Animate is like 500k, need to optimize:
-@import "../../../node_modules/animatewithsass/animate.scss";
+// @import "../../../node_modules/animatewithsass/animate.scss";
 
 // Must remember these for use
 @import "mixins/utilitybelt-alertpulse.scss";

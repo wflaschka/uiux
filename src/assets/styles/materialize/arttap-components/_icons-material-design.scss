@@ -4,8 +4,12 @@
   font-feature-settings: 'liga';
 }
 
+
+// WF after here:
+
 // Inline icons should align with text: 
 // https://css-tricks.com/tips-aligning-icons-text/
+// button i.material-icons,
 p i.material-icons,
 li i.material-icons {
 	position: relative;
