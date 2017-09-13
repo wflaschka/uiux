@@ -1,0 +1,34 @@
+/**
+ * Column
+ */
+
+.box {
+    // border: 1px solid green;
+}
+.column {
+    // padding: 1rem;
+
+    // border: 1px solid blue;
+    // background: fade(blue, 15%);
+
+    &.aligned {
+        &.center {
+            text-align: center;
+        }
+        &.left {
+            text-align: left;
+        }
+        &.right {
+            text-align: right;
+        }
+        &.middle {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+
+}
+.column.centered {
+    @extend .column.aligned.center;
+}

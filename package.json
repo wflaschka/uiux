@@ -58,7 +58,7 @@
     "materialize-css": "^0.100.1",
     "nouislider": "^9.2.0",
     "semantic-ui": "^2.2.11",
-    "spectre.css": "^0.2.12",
+    "spectre.css": "^0.2.15",
     "sweetalert2": "^6.6.2"
   }
 }

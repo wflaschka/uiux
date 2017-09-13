@@ -1,0 +1,333 @@
+/**
+ * MIXINS
+ */
+
+@function fade($color, $amount) {
+	$amount: 1 - ($amount / 100);
+	// @debug transparentize($color, $amount);
+	@return transparentize($color, $amount);
+}
+
+// Function for converting a px based font-size to rem.
+@function calculateRem($size) {
+	// $remSize: $size / 16px;
+	$remSize: $size / 16px;
+	//Default font size on html element is 100%, equivalent to 16px;
+	@return #{$remSize}rem;
+}
+@function px-to-rem($size) {
+	@return calculateRem($size);
+}
+@function rem-to-px($size) {
+	@return strip-units($size) * 16px;
+}
+
+// Mixin that will include the fall back px declaration as well as the calculated rem value.
+@mixin fontSize($size) {
+	font-size: $size;
+	font-size: calculateRem($size);
+}
+
+
+@function strip-units($number) {
+  @return $number / ($number * 0 + 1);
+}
+
+// https://www.sassmeister.com/gist/9fa19d254864f33d4a80
+@function to-number($value) {
+  @if type-of($value) == 'number' {
+    @return $value;
+  } @else if type-of($value) != 'string' {
+    $_: log('Value for `to-number` should be a number or a string.');
+  }
+  
+  $result: 0;
+  $digits: 0;
+  $minus: str-slice($value, 1, 1) == '-';
+  $numbers: ('0': 0, '1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9);
+  
+  @for $i from if($minus, 2, 1) through str-length($value) {
+    $character: str-slice($value, $i, $i);
+    
+    @if not (index(map-keys($numbers), $character) or $character == '.') {
+      @return to-length(if($minus, -$result, $result), str-slice($value, $i))
+    }
+    
+    @if $character == '.' {
+      $digits: 1; 
+    } @else if $digits == 0 {
+      $result: $result * 10 + map-get($numbers, $character);  
+    } @else {
+      $digits: $digits * 10;
+      $result: $result + map-get($numbers, $character) / $digits;
+    }
+  }
+  
+  @return if($minus, -$result, $result);;
+}
+
+
+///
+/// Add `$unit` to `$value`
+///
+/// @param {Number} $value - Value to add unit to
+/// @param {String} $unit - String representation of the unit
+///
+/// @return {Number} - `$value` expressed in `$unit`
+///
+@function to-length($value, $unit) {
+  $units: ('px': 1px, 'cm': 1cm, 'mm': 1mm, '%': 1%, 'ch': 1ch, 'pc': 1pc, 'in': 1in, 'em': 1em, 'rem': 1rem, 'pt': 1pt, 'ex': 1ex, 'vw': 1vw, 'vh': 1vh, 'vmin': 1vmin, 'vmax': 1vmax);
+  
+  @if not index(map-keys($units), $unit) {
+    $_: log('Invalid unit `#{$unit}`.');
+  }
+  
+  @return $value * map-get($units, $unit);
+}
+
+
+
+/*------------------------
+https://codepen.io/davidhalford/pen/wlDxL
+
+mixin that calculates if text needs to be light or dark
+depending on the background color passed.
+
+Color brightness is determined by the following formula: 
+((Red value X 299) + (Green value X 587) + (Blue value X 114)) / 1000
+------------------------*/
+@mixin text-contrast($n) {
+  $color-brightness: round((red($n) * 299) + (green($n) * 587) + (blue($n) * 114) / 1000);
+  $light-color: round((red(#ffffff) * 299) + (green(#ffffff) * 587) + (blue(#ffffff) * 114) / 1000);
+  
+  @if abs($color-brightness) < ($light-color/2){
+    // color: rgba(255, 255, 255, 0.8) !important;
+    color: white !important;
+  }
+
+  @else {
+    // color: $off-black !important;
+  }
+}
+// .c000000{background-color:#000000; @include text-contrast(#000000);}
+// .c000022{background-color:#000022; @include text-contrast(#000022);}
+// .c000044{background-color:#000044; @include text-contrast(#000044);}
+// .c000066{background-color:#000066; @include text-contrast(#000066);}
+// .c000099{background-color:#000099; @include text-contrast(#000099);}
+// .c0000aa{background-color:#0000aa; @include text-contrast(#0000aa);}
+
+
+/*------------------------
+RESPONSIVE SCREEN SIZES
+https://medium.freecodecamp.org/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862
+	// usage
+	.my-box {
+	  padding: 10px;
+	  
+	  @include for-desktop-up {
+	    padding: 20px;
+	  }
+	}
+------------------------*/
+
+@mixin for-phone-only {
+  @media (max-width: 599px) { @content; }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) { @content; }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) { @content; }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) { @content; }
+}
+
+
+
+// Mixins
+// Avatar mixin
+@mixin avatar-base($size: $unit-8) {
+  font-size: $size / 2.2;
+  height: $size;
+  width: $size;
+}
+
+// Clearfix mixin
+@mixin clearfix() {
+  &::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
+
+// Component focus shadow
+@mixin control-shadow($color: $primary-color) {
+  box-shadow: 0 0 0 .1rem fade($color, 20%);
+}
+
+// Component transition
+@mixin control-transition() {
+  transition: all .2s ease;
+}
+
+// Toast variant
+@mixin toast-variant($color: $dark-color) {
+  background: fade($color, 90%);
+  border-color: $color;
+}
+
+// Label base style
+@mixin label-base() {
+  border-radius: $border-radius;
+  display: inline-block;
+  line-height: 1;
+  padding: .2em .3em;
+  vertical-align: baseline;
+}
+
+@mixin label-variant($color: $light-color, $bg-color: $primary-color) {
+  background: $bg-color;
+  color: $color;
+}
+
+// Shadow mixin
+@mixin shadow-variant($offset) {
+  box-shadow: 0 $offset ($offset + .05rem) * 2 fade($dark-color, 30%);
+}
+
+// Position utility mixin
+@mixin margin-variant($size: 1) {
+  .m-#{$size} {
+    padding: $size * $unit-1;
+  }
+  .mb-#{$size} {
+    padding-bottom: $size * $unit-1;
+  }
+  .ml-#{$size} {
+    padding-left: $size * $unit-1;
+  }
+  .mr-#{$size} {
+    padding-right: $size * $unit-1;
+  }
+  .mt-#{$size} {
+    padding-top: $size * $unit-1;
+  }
+  .mx-#{$size} {
+    padding-left: $size * $unit-1;
+    padding-right: $size * $unit-1;
+  }
+  .my-#{$size} {
+    padding-bottom: $size * $unit-1;
+    padding-top: $size * $unit-1;
+  }
+}
+
+@mixin padding-variant($size: 1)
+{
+  .p-#{$size} {
+    padding: $size * $unit-1;
+  }
+  .pb-#{$size} {
+    padding-bottom: $size * $unit-1;
+  }
+  .pl-#{$size} {
+    padding-left: $size * $unit-1;
+  }
+  .pr-#{$size} {
+    padding-right: $size * $unit-1;
+  }
+  .pt-#{$size} {
+    padding-top: $size * $unit-1;
+  }
+  .px-#{$size} {
+    padding-left: $size * $unit-1;
+    padding-right: $size * $unit-1;
+  }
+  .py-#{$size} {
+    padding-bottom: $size * $unit-1;
+    padding-top: $size * $unit-1;
+  }
+}
+
+// Colors mixin
+@mixin text-color-variant($color: $primary-color) {
+  color: $color;
+  a {
+    &:focus,
+    &:hover {
+      color: darken($color, 5%);
+    }
+  }
+}
+
+@mixin bg-color-variant($color: $primary-color) {
+  background: $color;
+}
+
+
+
+/**
+ * https://gist.github.com/paulmelnikow/7fcfbe4f68e5df7fe326
+ * 
+ * A mixin which helps you to add depth to elements according to the Google Material Design spec:
+ * http://www.google.com/design/spec/layout/layout-principles.html#layout-principles-dimensionality
+ *
+ * Please note that the values given in the specification cannot be used as is. To create the same visual experience
+ * the blur parameter has to be doubled.
+ *
+ * Adapted from a LESS version at https://medium.com/@Florian/freebie-google-material-design-shadow-helper-2a0501295a2d
+ *
+ * Original Author: Florian Kutschera (@gefangenimnetz), Conceptboard GmbH (@conceptboardapp)
+ *
+ * Example usage:
+ *
+ * .card {
+ *     width: 95px;
+ *     height: 95px;
+ *     background: #f4f4f4;
+ *     -webkit-transition: all 250ms;
+ *     -moz-transition: all 250ms;
+ *     transition: all 250ms;
+ *     @include box_shadow(1);
+ *     &:hover {
+ *         @include box_shadow(3);
+ *         -webkit-transform: translateY(-5px);
+ *         -moz-transform: translateY(-5px);
+ *         transform: translateY(-5px);
+ *     }
+ * }
+ *
+ */
+
+@mixin box_shadow ($level) {
+    @if $level == 1 {
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    } @else if $level == 2 {
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    } @else if $level == 3 {
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    } @else if $level == 4 {
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    } @else if $level == 5 {
+        box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    }
+}
+
+@mixin box_shadow_topless ($level) {
+    @if $level == 1 {
+        box-shadow: 0 2px 2px rgba(0,0,0,0.12), 0 2px 1px rgba(0,0,0,0.24);
+    } @else if $level == 2 {
+        box-shadow: 0 3px 3px rgba(0,0,0,0.16), 0 3px 2px rgba(0,0,0,0.23);
+    } @else if $level == 3 {
+        box-shadow: 0 10px 10px rgba(0,0,0,0.19), 0 10px 8px rgba(0,0,0,0.23);
+    } @else if $level == 4 {
+        box-shadow: 0 14px 14px rgba(0,0,0,0.25), 0 14px 10px rgba(0,0,0,0.22);
+    } @else if $level == 5 {
+        box-shadow: 0 19px 19px rgba(0,0,0,0.30), 0 19px 15px rgba(0,0,0,0.22);
+    }
+}

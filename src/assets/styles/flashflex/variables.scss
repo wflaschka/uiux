@@ -1,0 +1,51 @@
+/**
+ * VARIABLES
+ */
+
+// FONTS
+$roboto-font-path: "../fonts/" !default;
+$font-family-monospace: Menlo, Consolas, Monaco, "Lucida Console", "Fira Mono", monospace;
+$font-family-header: "Portrait Web", Georgia;
+$font-family-header-secondary: "Helvetica Neue", "Helvetica", "Arial", sans-serif !default;
+$font-family-sans-serif: Helvetica, Arial, sans-serif !default;
+$font-family-body: $font-family-sans-serif;
+
+
+// Breakpoints
+// From Robyn 20170912 except the tablet landscape
+$breakPointMobile: 360px;
+$breakPointTablet: 768px;
+$breakPointTabletLandscape: 900px;
+$breakPointDesktop: 1280px;
+$breakPointDesktopBig: 1800px;
+
+// // Above renamed for flexboxgrid-sass framework
+// $xs: 22rem;
+// $sm: 48rem;
+// $md: 56rem;
+// $lg: 80em;
+// $xl: 112rem;
+
+// Above renamed for flexboxgrid-sass framework
+$xs: 37.5rem;
+$sm: 48rem;
+$md: 56rem;
+$lg: 80em;
+$xl: 112rem;
+
+// Measures
+// 1 rem should = 16px
+// $sizeRem: 16px;
+// $pxPerRem: 16;
+
+// Header Styles
+$margin-bottom-divisor: 3;
+$secondary-header-multiplier: 0.6;
+$off-black: rgba(0, 0, 0, 0.87) !default;
+$h1-fontsize: 4.2rem !default;
+$h2-fontsize: 3.56rem !default;
+$h3-fontsize: 2.92rem !default;
+$h4-fontsize: 2.28rem !default;
+$h5-fontsize: 1.64rem !default;
+$h6-fontsize: 1rem !default;
+

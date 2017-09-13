@@ -6,303 +6,229 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ArtTap UI/UX Patterns</title>
 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/materialize.css">
-    <!-- <link rel="stylesheet" type="text/css" href="./assets/styles/site.css"> -->
+    <link rel="stylesheet" type="text/css" href="./assets/styles/site.css">
 
-    <script src="./assets/scripts/jquery-3.1.1.js"></script>
-    <script src="./assets/scripts/materialize.js"></script>
-    <script type="text/javascript">
-        $( document ).ready(function() {
-            // $(".button-collapse").sideNav();
-            // $('select').material_select();
-            // $('.datepicker').pickadate({
-            //     selectMonths: true, // Creates a dropdown to control month
-            //     selectYears: 15, // Creates a dropdown of 15 years to control year,
-            //     today: 'Today',
-            //     clear: 'Clear',
-            //     close: 'Ok',
-            //     closeOnSelect: false // Close upon selecting a date,
-            // });
-            // $('input.autocomplete').autocomplete({
-            //   data: {
-            //     "Apple": null,
-            //     "Microsoft": null,
-            //     "Google": 'https://placehold.it/250x250'
-            //   },
-            //   limit: 20, // The max amount of results that can be shown at once. Default: Infinity.
-            //   onAutocomplete: function(val) {
-            //     // Callback function when value is autcompleted.
-            //   },
-            //   minLength: 1, // The minimum length of the input for the autocomplete to start. Default: 1.
-            // });
+    <script type="text/javascript" src="./assets/scripts/jquery-3.1.1.js"></script>
+    <script type="text/javascript" src="./assets/scripts/site.js"></script>
 
-        });
-    </script>
-
+    <style type="text/css">
+        main {
+        }
+        header .col-xs {
+            /*border: 1px solid red;*/
+        }
+    </style>
 </head>
 <body>
 
-    <main>
+<header>
+    <div class="header container-fluid">
+        <div class="row middle-xs">
+            <div class="col-xs">
+                <div class="row begin-xs middle-xs">
+                    <div class="navigation-trigger-hamburger centered middle aligned column col-xs-4 col-sm-2 col-md-3">
+                        <i class="icon-hamburger"></i>
+                        <!-- <i class="icon-hamburger-active"></i> -->
+                    </div>
+<div id="header-navigation-menu" class="navigation-dropdown">
+<ul>
+    <li>Home</li>
+    <li>Newest Work</li>
+    <li>
+        Popular Searches
+        <i class="icon-disclosure"></i>
+        <ul>
+            <li>Paintings</li>
+            <li>Photographs</li>
+            <li>Prints &amp; Multiples</li>
+            <li>Under $500</li>
+            <li>Under $1000</li>
+            <li>Under $2500</li>
+        </ul>
+    </li>
+    <li>
+        Featured Artists
+        <i class="icon-disclosure"></i>
+        <ul>
+            <li>Alex Kwok</li>
+            <li>Camille Oudinot</li>
+            <li>Eloise Dumas</li>
+            <li>Lorraine Simms</li>
+            <li>Shelley Reeves</li>
+        </ul>
+    </li>
+    <li>About Art Tap</li>
+    <li>
+        Support
+        <i class="icon-disclosure"></i>
+        <ul>
+            <li>Support</li>
+            <li>FAQs</li>
+            <li>Partnerships</li>
+            <li>Contact Us</li>
+        </ul>
+    </li>
+</div>
 
-        <div class="navbar-fixed">
-            <nav class="black">
-                <div class="nav-wrapper">
-                    <!-- <a href="index.html" class="center brand-logo"><img class="responsive-img" src="assets/images/graphics/Logo/ArtTap_Logo-Yellow.svg"></a> -->
-                    <!-- <a href="index.html" class="center brand-logo"><img class="sized image fluid" src="assets/images/arttap-square-logo.svg"></a> -->
-                    <a href="index.html" class="center brand-logo"><img class="centered fitted sized image" src="assets/images/graphics/Logo/ArtTap_Logo-Yellow.svg"></a>
-                    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-                    <ul class="right hide-on-mobile">
-                        <li><a class="pink-text text-lighten-4" href="https://www.codeply.com/go/xubNUCJTVG" target="_blank">Codeply testbed</a></li>
-                        <li><a class="pink-text text-lighten-4" href="#">Contact</a></li>
-                    </ul>
-
-                    <ul class="side-nav white" id="mobile-demo">
-                        <!-- <li><img class="centered fitted sized image" src="assets/images/graphics/Logo/ArtTap_Logo-Yellow.svg"></li> -->
-                        <!-- <a href="index.html" class=""><img class="centered fitted sized image" src="assets/images/graphics/Logo/ArtTap_Logo-Yellow.svg"></a> -->
-                        <!-- <ul> -->
-                        <li><a class="pink-text text-lighten-4" href="https://www.codeply.com/go/xubNUCJTVG" target="_blank">Codeply testbed</a></li>
-                        <li><a class="pink-text text-lighten-4" href="#">Contact</a></li>
-                    </ul>
-                    <!-- </div>  -->
-                </div>
-            </nav>
-        </div>
-
-        <div class="container">
-
-            <div class="section">
-                <h1 class="">ArtTap UI/UX Patterns</h1>
-
-                <h4 class="">What is this website</h4>
-                <p>
-                    <i class="material-icons blue-text">favorite</i>
-                    This is an <strong>ArtTap</strong> UI/UX design pattern library for review and comment. 
-                    The pages should capture the UI interactions, behaviors, layout, and responsivity. 
-                    This version of the repo uses MaterializeCSS framework (<a href="#why">Why?</a>).
-                </p>
-                <p>
-                    <a href="https://github.com/wflaschka/at-ui-ux2" target="_blank">Github repo for this site</a> (you'll need an invitation from @wflaschka).
-                </p>
-                <p>
-                    Art Tap Pages for Code</strong> <a href="https://drive.google.com/drive/folders/0B9JARrgknJoiWmJfSFhyU1FwRTA" target="_blank">(Shared Google Drive)</a>
-                </p>
-
-                <p>
-                    <strong>Site dependencies:</strong>
-                    Git, Node, Gulp, Sass (SCSS), Less, Browsersync.io, CSS, Flexbox HTML, <s>Bulma.io</s>, <s>Spectre CSS</s>, <s>Semantic-UI</s>, MaterializeCSS, Javascript, JQuery, <s>Vue2</s>, various Sass mixins
-                </p>
-                <p>
-                    <strong>Optimization notes:</strong>
-                    When it's time, <tt>animate.scss</tt> can be greatly trimmed from its 560k size.
-                </p>
-            </div>
-
-            <div class="section">
-
-                <h3 class="">Patterns</h3>
-                <p>List of target patterns is built off 20170718 snapshot of invision project, exported file <tt>arttapx-invision-10278582.pdf</tt>.</p>
-
-                <h4 id="elements">Elements</h4>
-                <ul class="browser-default">
-                    <li><a href="sandbox.html">General experimental sandbox</a></li>
-                </ul>
-                <h4 id="typography">Typography</h4>
-                <ol>
-                    <li><a href="typography.html">Typography sandbox</a></li>
-                    <li><i class="material-icons">check_box</i> Icon check with green text under</li>
-                    <li>Create font for new arttap logos</li>
-                    <li>
-                        Headers
-                        <ul class="browser-default">
-                            <li><i class="material-icons">check_box</i> Primary header h1..hn (has that special font)</li>
-                            <li><i class="material-icons">check_box</i> Secondary header h1..hn (san serif)</li>
-                            <li>Header setting
-                                <ul class="browser-default">
-                                    <li><i class="material-icons">check_box</i> Subheader spacing (less space below big header)</li>
-                                    <li>Top-subheader spacing (less space atop big header)</li>
-                                </ul>
-                            </li>
-                            <li><i class="material-icons">check_box</i> Header <em>segment</em> &ndash; all over the place see <tt>bulma's level</tt>
-                                <ul class="browser-default">
-                                    <li><i class="material-icons">check_box</i> Header on left side</li>
-                                    <li><i class="material-icons">check_box</i> Button / link on right side</li>
-                                    <li><i class="material-icons">check_box</i> Optional line along bottom</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>Badge</li>
-                    <li><i class="material-icons">check_box</i> Inches and fractions of inch</li>
-                    <li><i class="material-icons">check_box</i> Fix icons when inline in text (right now <tt>p</tt> and <tt>li</tt>)</li>
-                    <li><i class="material-icons">check_box</i> Alias <tt>&lt;tt&gt;</tt> to tag ("chip") markup
-                </ol>
-                <h4 id="cards">Cards</h4>
-                <ol>
-                    <li>Artwork card: Flexible-width card, row, uniform height</li>
-                    <li>Artist card: static width and height</li>
-                    <li>Artwork card no text</li>
-                    <li>Dashboard card (see artist profile dashboard page)</li>
-                    <li>Variations
-                        <ul class="browser-default">
-                            <li>&ldquo;Not visible&rdquo; on card</li>
-                            <li>Circle on card</li>
-                            <li>&ldquo;See stats&rdquo; on card</li>
-                        </ul>
-                    </li>
-                </ol>
-                <h4 id="items---boxes">Items / boxes</h4>
-                <ul class="browser-default">
-                    <li>Social feed item</li>
-                    <li>Order item item</li>
-                    <li>Styles for boxes
-                        <ul class="browser-default">
-                            <li>Inverted red (see canceled order)</li>
-                            <li><code>thick orange top border</code> etc. (Order of arguments.)</li>
-                        </ul>
-                    </li>
-                </ul>
-                <h4 id="interactions">Interactions</h4>
-                <ul class="browser-default">
-                    <li>Pop-up modals</li>
-                    <li>Right push-in cart</li>
-                </ul>
-                <h4 id="menus">Menus</h4>
-                <ul class="browser-default">
-                    <li>
-                        <i class="material-icons">check_box_outline_blank</i>
-                        <a href="header-navbar.html">Public header menu</a>
-                        <ul class="browser-default">
-                            <li><i class="material-icons">check_box_outline_blank</i> User dropdown</li>
-                            <li><i class="material-icons">check_box</i> Mobile slide-out</li>
-                        </ul>
-                    </li>
-                    <li>Profile
-                        <ul class="browser-default">
-                            <li>Header</li>
-                            <li>Vertical menu / slide-out</li>
-                        </ul>
-                    </li>
-                </ul>
-                <h4 id="forms">Forms</h4>
-                <ul class="browser-default">
-                    <li><i class="material-icons">check_box</i> Labels that shrink and move</li>
-                    <li>Rich text input
-                        <ul class="browser-default">
-                            <li>minimal formatting</li>
-                            <li>maximal formatting</li>
-                            <li>Maximize box</li>
-                        </ul>
-                    </li>
-                    <li>Dropdown with progressive update</li>
-                    <li><i class="material-icons">check_box</i> Date dropdown pattern</li>
-                    <li><i class="material-icons">check_box</i> Square checkboxes</li>
-                    <li><i class="material-icons">check_box</i> Round radios</li>
-                    <li>Tag input box</li>
-                    <li>Larger search input box (Help section), right-aligned magnifying glass icon</li>
-                </ul>
-                <h4 id="tiny-blocks">Tiny blocks</h4>
-                <ul class="browser-default">
-                    <li>Artist chip
-                        <ul class="browser-default">
-                            <li>Small avatar</li>
-                            <li>Name</li>
-                            <li>Followers</li>
-                        </ul>
-                    </li>
-                    <li>Number of hearts in collection: &ldquo;60 <i class="material-icons red-text">favorite</i> in Collection&rdquo;</li>
-                    <li>Statistics (dashboard, user profile page)</li>
-                    <li>Avatars
-                        <ul class="browser-default">
-                            <li>Styles: round, bordered</li>
-                            <li>Superimposed badges
-                                <ul class="browser-default">
-                                    <li>With icons: check, plus, empty (see followers list page)</li>
-                                    <li>Aligned bottom right</li>
-                                    <li>Aligned top right</li>
-                                    <li>Sizes</li>
-                                </ul>
-                            </li>
-                            <li>Sizes</li>
-                        </ul>
-                    </li>
-                    <li>Small circles (followers list page)</li>
-                    <li>Pop-overs
-                        <ul class="browser-default">
-                            <li>Help icon = pop-over (see page 89 of 114)</li>
-                        </ul>
-                    </li>
-                    <li>Segment with orange header (see dashboard page)</li>
-                </ul>
-                <h4 id="matching-quiz">Matching quiz</h4>
-                <ul class="browser-default">
-                    <li>Progress bar for wizard completion</li>
-                </ul>
-                <h4 id="larger-pieces">Larger pieces</h4>
-                <ol>
-                    <li>Masonry grid, artwork cards, fixed width and dynamic height</li>
-                    <li><i class="material-icons">check_box</i> Bulma&rsquo;s &ldquo;Level&rdquo; into Semantic-UI</li>
-                    <li><i class="material-icons">check_box</i> Left push-in hamburger menu</li>
-                    <li>Progressive search dropdown in header menu</li>
-                    <li><i class="material-icons">check_box</i> Upload image drag-and-drop</li>
-                </ol>
-                <h4 id="single-pieces">Single pieces</h4>
-                <ul class="browser-default">
-                    <li>Search bar UI</li>
-                    <li>Google map for checkout page</li>
-                </ul>
-                <h4 id="sliders">Sliders</h4>
-                <ol>
-                    <li>Collection slider: left-static box, right-scroll box artist cards</li>
-                    <li>Newest slider: like collection slider but no left box</li>
-                    <li>Artist slider: like above but with artist cards</li>
-                    <li>Product page (popup) slider</li>
-                    <li>Artwork slider: no meta data or text, just image, fixed height (Artist profile page)</li>
-                    <li>Testimonial slider</li>
-                </ol>
-
-
-
-            </div>
-
-
-            <div class="section">
-                <div class="row">
-                    <div class="col s12 m12">
-
-                        <div class="card blue-grey darken-1 z-depth-0">
-                            <div class="card-content white-text">
-                                <span class="card-title">Why MaterializeCSS?</span>
-                                <p class="">
-                                    This version of the AT-UI-UX repo (v2) uses 
-                                    <a class="yellow-text" href="http://materializecss.com">MaterializeCSS</a>
-                                    instead of <a class="yellow-text" href="http://bulma.io">Bulma</a> because it has a wider range of components and pre-built interactions. 
-                                    The overhead for Bulma (e.g. getting dropdown menus to work, borrowing from Spectre.css, etc.) started to outweigh the benefits of having the lean framework.
-                                </p>
-                            </div>
+                    <div class="center middle aligned column col-xs-4">
+                        <div class="box">
+                            <i class="fa fa-search"></i>
+                            <span class="hide-on-sm-and-down">Search</span>
                         </div>
+                    </div>
+                    <div class="hide-on-md-and-down center middle aligned column col-md-5">
+                        <div class="box">
+                            Apply as an artist
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="/" class="logo center middle aligned column col-xs center-xs middle-xs">
+                <img class="responsive height" src="assets/images/graphics/Logo/ArtTap_Logo-Yellow.svg">
+            </a>
+            <div class="col-xs">
+                <div class="row end-xs middle-xs">
+                    <div class="center middle aligned column col-xs-4 col-sm-8 col-md-8">
+                        <div class="box">
+                            <i class="fa fa-user"></i>
+                            <span class="hide-on-sm-and-down">Sign in | Register</span>
+                        </div>
+                    </div>
+                    <div class="center middle aligned column col-xs-4 col-md-4">
+                        <div class="box">
+                            <i class="fa fa-shopping-cart"></i>
+                            <span class="hide-on-sm-and-down">Cart</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+<script type="text/javascript">
+    defer(function () {
+
+        $('.navigation-dropdown li').has('ul').click(function(){
+            submenu = $(this).find('ul');
+            if (submenu.is(':hidden')) {
+                submenu.slideDown('slow');
+                $(this).addClass('active');
+            } else {
+                submenu.slideUp('slow');
+                $(this).removeClass('active');
+            }
+        });
+
+$('.navigation-trigger-hamburger').click(function() {
+    console.log("Hamburger clicked!");
+    if ($('.navigation-dropdown').is(':hidden')) {
+        $('.navigation-dropdown').slideDown('slow');
+        $(this).toggleClass("active");
+        $(this).find('.icon-hamburger').toggleClass("active");
+        console.log("Hamburger slide down...");
+    } else {
+        $('.navigation-dropdown').slideUp('slow');
+        console.log("Hamburger slide up...");
+        $(this).find('.icon-hamburger').toggleClass("active");
+    }
+});
+
+    });
+</script>
+
+</header>
+
+<main>
+
+<h1>Links to work areas</h1>
+<ul>
+    <li><a href="header.html">Header</a></li>
+</ul>
+
+<hr>
+
+<h2 class="debug-hide">Junk from now on:</h2>
+
+<h1>h1 Something here is something</h1>
+<h1 secondary>h1 Something here is something</h1>
+<h2>h2 Something here is something</h2>
+<h2 secondary>h2 Something here is something</h2>
+<h3>h3 Something here is something</h3>
+<h3 secondary>h3 Something here is something</h3>
+
+<p class="debug-hide hide-on-xs"> hide-on-xs </p>
+<p class="debug-hide hide-on-sm"> hide-on-sm </p>
+<p class="debug-hide hide-on-sm-and-down"> hide-on-sm-and-down </p>
+<p class="debug-hide hide-on-sm-and-up"> hide-on-sm-and-up </p>
+<p class="debug-hide hide-on-md"> hide-on-md </p>
+<p class="debug-hide hide-on-md-and-down"> hide-on-md-and-down </p>
+<p class="debug-hide hide-on-md-and-up"> hide-on-md-and-up </p>
+<p class="debug-hide hide-on-lg"> hide-on-lg </p>
+<p class="debug-hide hide-on-lg-and-down"> hide-on-lg-and-down </p>
+<p class="debug-hide hide-on-lg-and-up"> hide-on-lg-and-up </p>
+<p class="debug-hide hide-on-xl"> hide-on-xl </p>
+<p class="debug-hide hide-on-xl-and-down"> hide-on-xl-and-down </p>
+
+<!-- 
+<header>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="left aligned column col-xs-1">|||</div>
+            <div class="center aligned column col-xs-1">0- Search</div>
+            <div class="center aligned column col-xs-1">Apply as an artist</div>
+            <a href="/" class="center aligned column col-xs-6">LOGO</a>
+            <div class="center aligned column col-xs-1 col-xs-offset-1">8 Sign in | Register</div>
+            <div class="center aligned column col-xs-1">## Cart</div>
+        </div>
+    </div>
+</header>
+ -->
+
+        <div class="container-fluid">
+        <!-- <div class="wrapper"> -->
+        <!-- <div class="wrapper container-fluid"> -->
+            <div class="row">
+                <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4">
+                    <div class="box">Responsive</div>
+                </div>
+                <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4">
+                    <div class="box">Responsive</div>
+                </div>
+                <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4">
+                    <div class="box">Responsive</div>
+                </div>
+            </div>
+            <div class="row row2 center-xs end-sm center-md start-lg middle-xs bottom-sm middle-md top-lg">
+                <div class="col-xs-6 col-lg-4">
+                    <div class="box">
+                        <p>All together now</p>
+                        <p>All together now</p>
+                        <p>All together now</p>
+                    </div>
+                </div>
+                <div class="col-xs-2 col-lg-6">
+                    <div class="box box2">
+                        Hi!
                     </div>
                 </div>
             </div>
         </div>
 
-    </main>
+</main>
 
-    <footer class="page-footer black center-align">
+<footer>
+    <div class="footer">
         <p>
             <strong>Walter Flaschka</strong> 
         </p>
         <p>
             <small>
                 <span class="chip green">v2: 20170722</span>
-                <span class="chip orange">v1: 20170502</span>
-                <span class="chip orange">v1: 20170331</span>
-                <span class="chip orange">v1: 20170325</span>
             </small>
         </p>
-    </footer>
+    </div>
+</footer>
+
 
 
 </body>
