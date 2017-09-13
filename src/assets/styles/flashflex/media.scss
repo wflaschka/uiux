@@ -1,0 +1,26 @@
+/*
+    MEDIA
+*/
+
+img {
+    &.responsive,
+    &.responsive.width {
+        display: block;
+        height: auto;
+        max-width: 100%;
+    }
+    &.responsive.height {
+        display: block;
+        max-height: 100%;
+        width: auto;
+    }
+    &.cover,
+    &.covering {
+        object-fit: cover;
+    }
+    &.contain,
+    &.contained {
+        object-fit: contain;
+    }
+}
+

@@ -1,0 +1,61 @@
+/**
+ * Material design touch ripple effect
+ *
+ * https://gist.github.com/azinasili/1b95d378b0761738122b
+ *
+ * Changed by WF 20170913
+ * Doesn't work: 20170913
+ * Usage: @include ripple(#ffffff, #ffff00);
+ */
+
+
+/// Mixin to create material design ripple effect
+/// @param {list} $bg-color - List of two colors for background and ripple
+/// @param {string} $hover [null] - Turn effect on or off
+/// @content Add more styles for when element is :active
+/// @output Background color, size, and radial gradient for effect
+/// @example scss
+///  .foo {
+///    @include ripple(#bada55 darken(#bada55, 10%)) {
+///      border-color: darken(#b8d951, 10%);
+///    };  
+///    color: #666;
+///    border: 1px solid #b8d951;
+///  
+///    &:hover, 
+///    &:focus {
+///      @include ripple(darken(#bada55, 2%), hover);  
+///    }
+///  }
+/// @example css
+///  .foo {
+///    background: #bada55 50%;
+///    background-size: 200%;
+///    color: #666;
+///    border: 1px solid #b8d951;
+///  }
+///  .foo:active {
+///    background: -webkit-radial-gradient(circle, #bada55 10%, #a8cf2d 11%) 50% no-repeat;
+///    background: radial-gradient(circle, #bada55 10%, #a8cf2d 11%) 50% no-repeat;
+///    background-size: 1000%;
+///    border-color: #a1c72b;
+///  }
+///  .foo:hover, 
+///  .foo:focus {
+///    background-color: #b6d84d;
+///  }
+
+@mixin ripple($bg-color, $bg-color-2, $hover: null) {
+  @if $hover != null {
+    background-color: $bg-color;
+  } @else {
+    background: $bg-color 50%;
+    background-size: 100%;
+
+    &:active {      
+      background: radial-gradient(circle, $bg-color 10%, $bg-color-2 11%) 50% no-repeat;
+      background-size: 1000%;
+      @content;
+    }
+  }
+}

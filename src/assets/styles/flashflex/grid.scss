@@ -1,0 +1,65 @@
+/**
+ * Extending FLEXBOXGRID -- http://flexboxgrid.com/
+ */
+
+/*
+<div class="container|container">
+    <div class="row">
+        (row is optional)
+        <div class="column">
+        </div>
+    </div>
+</div>
+*/
+
+.XXcontainer {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto 0 auto;
+    padding: 0;
+    width: 100%;
+
+    @include for-phone-only {
+        width: 100%;
+        margin: 0 auto 0 auto;
+    }
+    @include for-tablet-portrait-up {
+        width: 100%;
+        margin: 0 auto 0 auto;
+    }
+    @include for-tablet-landscape-up {
+        width: 100%;
+        margin: 0 auto 0 auto;
+        background-color: fade(red, 25%);
+    }
+    @include for-desktop-up {
+        width: 1000px;
+        background-color: fade(green, 25%);
+        margin: 0 auto 0 auto;
+    }
+    @include for-big-desktop-up {
+        width: 1200px;
+        background-color: fade(blue, 25%);
+        margin: 0 auto 0 auto;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .column {
+        flex: 1 1 auto;
+        margin: 0.5rem;
+        padding: 0.5rem;
+    }  
+    .column-box {
+        flex: 1 1 auto;
+        margin: 0;
+        padding: 0;
+    }  
+}
+
