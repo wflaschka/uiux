@@ -6,213 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ArtTap UI/UX Patterns</title>
 
-    <link rel="stylesheet" type="text/css" href="./assets/styles/site.css">
+    <link rel="stylesheet" type="text/css" href="/assets/styles/site.css">
 
-    <script type="text/javascript" src="./assets/scripts/jquery-3.1.1.js"></script>
-    <script type="text/javascript" src="./assets/scripts/site.js"></script>
-
-    <style type="text/css">
-        main {
-        }
-        header .col-xs {
-            /*border: 1px solid red;*/
-        }
-    </style>
+    <script type="text/javascript" src="/assets/scripts/jquery-3.1.1.js"></script>
+    <script type="text/javascript" src="/assets/scripts/site.js"></script>
 </head>
 <body>
 
 <header>
     <div class="header container-fluid">
         <div class="row middle-xs">
-            <div class="col-xs">
-                <div class="row begin-xs middle-xs">
-                    <div class="navigation-trigger-hamburger centered middle aligned column col-xs-4 col-sm-2 col-md-3">
-                        <i class="icon-hamburger"></i>
-                        <!-- <i class="icon-hamburger-active"></i> -->
-                    </div>
-<div id="header-navigation-menu" class="navigation-dropdown">
-<ul>
-    <li>Home</li>
-    <li>Newest Work</li>
-    <li>
-        Popular Searches
-        <i class="icon-disclosure"></i>
-        <ul>
-            <li>Paintings</li>
-            <li>Photographs</li>
-            <li>Prints &amp; Multiples</li>
-            <li>Under $500</li>
-            <li>Under $1000</li>
-            <li>Under $2500</li>
-        </ul>
-    </li>
-    <li>
-        Featured Artists
-        <i class="icon-disclosure"></i>
-        <ul>
-            <li>Alex Kwok</li>
-            <li>Camille Oudinot</li>
-            <li>Eloise Dumas</li>
-            <li>Lorraine Simms</li>
-            <li>Shelley Reeves</li>
-        </ul>
-    </li>
-    <li>About Art Tap</li>
-    <li>
-        Support
-        <i class="icon-disclosure"></i>
-        <ul>
-            <li>Support</li>
-            <li>FAQs</li>
-            <li>Partnerships</li>
-            <li>Contact Us</li>
-        </ul>
-    </li>
-</div>
-
-                    <div class="center middle aligned column col-xs-4">
-                        <div class="box">
-                            <i class="fa fa-search"></i>
-                            <span class="hide-on-sm-and-down">Search</span>
-                        </div>
-                    </div>
-                    <div class="hide-on-md-and-down center middle aligned column col-md-5">
-                        <div class="box">
-                            Apply as an artist
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div class="col-xs"></div>
             <a href="/" class="logo center middle aligned column col-xs center-xs middle-xs">
                 <img class="responsive height" src="assets/images/graphics/Logo/ArtTap_Logo-Yellow.svg">
             </a>
-            <div class="col-xs">
-                <div class="row end-xs middle-xs">
-                    <div class="center middle aligned column col-xs-4 col-sm-8 col-md-8">
-                        <div class="box">
-                            <i class="fa fa-user"></i>
-                            <span class="hide-on-sm-and-down">Sign in | Register</span>
-                        </div>
-                    </div>
-                    <div class="center middle aligned column col-xs-4 col-md-4">
-                        <div class="box">
-                            <i class="fa fa-shopping-cart"></i>
-                            <span class="hide-on-sm-and-down">Cart</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div class="col-xs"></div>
         </div>
     </div>
-
-<script type="text/javascript">
-    defer(function () {
-
-        $('.navigation-dropdown li').has('ul').click(function(){
-            submenu = $(this).find('ul');
-            if (submenu.is(':hidden')) {
-                submenu.slideDown('slow');
-                $(this).addClass('active');
-            } else {
-                submenu.slideUp('slow');
-                $(this).removeClass('active');
-            }
-        });
-
-$('.navigation-trigger-hamburger').click(function() {
-    console.log("Hamburger clicked!");
-    if ($('.navigation-dropdown').is(':hidden')) {
-        $('.navigation-dropdown').slideDown('slow');
-        $(this).toggleClass("active");
-        $(this).find('.icon-hamburger').toggleClass("active");
-        console.log("Hamburger slide down...");
-    } else {
-        $('.navigation-dropdown').slideUp('slow');
-        console.log("Hamburger slide up...");
-        $(this).find('.icon-hamburger').toggleClass("active");
-    }
-});
-
-    });
-</script>
-
 </header>
 
 <main>
 
 <h1>Links to work areas</h1>
 <ul>
-    <li><a href="header.html">Header</a></li>
+    <li><a href="components/headers/public.html">Public header</a></li>
+    <li><a href="sample-multi-nested-include.html">Sample multi-include page w/ partials and components</a></li>
 </ul>
-
-<hr>
-
-<h2 class="debug-hide">Junk from now on:</h2>
-
-<h1>h1 Something here is something</h1>
-<h1 secondary>h1 Something here is something</h1>
-<h2>h2 Something here is something</h2>
-<h2 secondary>h2 Something here is something</h2>
-<h3>h3 Something here is something</h3>
-<h3 secondary>h3 Something here is something</h3>
-
-<p class="debug-hide hide-on-xs"> hide-on-xs </p>
-<p class="debug-hide hide-on-sm"> hide-on-sm </p>
-<p class="debug-hide hide-on-sm-and-down"> hide-on-sm-and-down </p>
-<p class="debug-hide hide-on-sm-and-up"> hide-on-sm-and-up </p>
-<p class="debug-hide hide-on-md"> hide-on-md </p>
-<p class="debug-hide hide-on-md-and-down"> hide-on-md-and-down </p>
-<p class="debug-hide hide-on-md-and-up"> hide-on-md-and-up </p>
-<p class="debug-hide hide-on-lg"> hide-on-lg </p>
-<p class="debug-hide hide-on-lg-and-down"> hide-on-lg-and-down </p>
-<p class="debug-hide hide-on-lg-and-up"> hide-on-lg-and-up </p>
-<p class="debug-hide hide-on-xl"> hide-on-xl </p>
-<p class="debug-hide hide-on-xl-and-down"> hide-on-xl-and-down </p>
-
-<!-- 
-<header>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="left aligned column col-xs-1">|||</div>
-            <div class="center aligned column col-xs-1">0- Search</div>
-            <div class="center aligned column col-xs-1">Apply as an artist</div>
-            <a href="/" class="center aligned column col-xs-6">LOGO</a>
-            <div class="center aligned column col-xs-1 col-xs-offset-1">8 Sign in | Register</div>
-            <div class="center aligned column col-xs-1">## Cart</div>
-        </div>
-    </div>
-</header>
- -->
-
-        <div class="container-fluid">
-        <!-- <div class="wrapper"> -->
-        <!-- <div class="wrapper container-fluid"> -->
-            <div class="row">
-                <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4">
-                    <div class="box">Responsive</div>
-                </div>
-                <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4">
-                    <div class="box">Responsive</div>
-                </div>
-                <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4">
-                    <div class="box">Responsive</div>
-                </div>
-            </div>
-            <div class="row row2 center-xs end-sm center-md start-lg middle-xs bottom-sm middle-md top-lg">
-                <div class="col-xs-6 col-lg-4">
-                    <div class="box">
-                        <p>All together now</p>
-                        <p>All together now</p>
-                        <p>All together now</p>
-                    </div>
-                </div>
-                <div class="col-xs-2 col-lg-6">
-                    <div class="box box2">
-                        Hi!
-                    </div>
-                </div>
-            </div>
-        </div>
 
 </main>
 
@@ -223,15 +42,10 @@ $('.navigation-trigger-hamburger').click(function() {
         </p>
         <p>
             <small>
-                <span class="chip green">v2: 20170722</span>
+                <em>Project:</em> ArtTap Exchange 20170921
             </small>
         </p>
     </div>
 </footer>
-
-
-
 </body>
 </html>
-
-

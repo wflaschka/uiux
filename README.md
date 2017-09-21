@@ -2,7 +2,8 @@
 
 ArtTap UI/UX patterns for Marketplace project.
 
-* **Update:** `20170722 123106` This version of the AT-UI-UX repo (v2) uses [MaterializeCSS](http://materializecss.com/) instead of [Semantic UI](http://www.semantic-ui.com).
+* **Update:** `20170921` This version uses `flashbox` which borrows the best concepts from all frameworks, but does it from scratch without creating tons of CSS conflicts down the line. Pull in concepts, code, and supporting libraries as needed.
+* ~~**Update:** `20170722 123106` This version of the AT-UI-UX repo (v2) uses [MaterializeCSS](http://materializecss.com/) instead of [Semantic UI](http://www.semantic-ui.com).~~
 * ~~This version of the AT-UI-UX repo (v2) uses [Semantic UI](http://www.semantic-ui.com) instead of [Bulma](http://bulma.io) because it has a wider range of components and pre-built interactions. The overhead for Bulma (e.g. getting dropdown menus to work, borrowing from Spectre.css, etc.) started to outweigh the benefits of having the lean framework. Bulma version is moved to `src-bulma/` but the gulpfile doesn't look at it ATM (20170719 110322).~~
 
 ## Install
@@ -13,26 +14,17 @@ Install with git:
 git clone https://github.com/wflaschka/at-ui-ux2.git at-ui-ux
 ```
 
-Update npm:
+Install npm dependencies:
 
 ```sh
 npm update
 ```
 
-After dependencies are downloaded, continue to the next step and compile the site.
-
-
-## Using this repository
-
 Compile with `gulp`:
 
 ```sh
 gulp #cleans dist/, builds to /dist, watches /src
-gulp clean # cleans dist/
-gulp watch # watches /src for changes and builds to /dist
-gulp sass # generate CSS, SassDoc, SourceMap for CSS
 ```
-
 
 Run browsersync for updates while developing:
 ```sh
@@ -46,7 +38,37 @@ After browsersync, you'll have a server running (probably on port `3000`) and yo
 
 Get browsersync for your computer at [https://browsersync.io/](https://browsersync.io/).
 
+## HTML templates
+
+This repository uses HTML templates to make component development faster, and to permit the combination of components into pages. 
+
+https://www.npmjs.com/package/gulp-handlebars-master
+
+==NOTE: IMPORTANT WALTER:== Partials and components in nested directories won't show up if included in templates as partials unless the `gulpfile.js` task `build-html-pages` is updated. Add the new directories to scan to the `options` var under `batch`.
+
+Refer to partials and components in external files by their filename (without path):
+
+```html
+<p>Some partial / component to include:</p>
+{{> component-filename-without-extension }}
+```
+
+Templates, partials, and components are stored in project as:
+
+* `src/`
+    * `templates/` -- holds all the HTML that generates the `dist/*.html`
+        * `layouts/` -- main template(s) to use; variations for component display and full-page display
+            - `component-only.html` -- only use this for components
+            - `project-index.html` -- landing page, currently
+            - `page.html` -- multi-component and -partial pages, e.g. full page builds
+        * `partials/` -- repeating pieces for layouts like JS / CSS includes, footer, etc.
+        * `components/` -- all the website components to be shown individually or aggregated into pages
+        * `pages/` -- full pages that have multiple components together
+
 ***
+
+#  <span style="color: green;">Everything after this is 95% deprecated</span>
+
 
 ## CSS Framework Adjustments
 
