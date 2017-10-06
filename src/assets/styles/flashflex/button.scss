@@ -1,0 +1,23 @@
+/*
+    Overwriting Semantic UI 2.2.12 - Button
+ */
+
+
+/*******************************
+                        Button
+*******************************/
+
+.button {
+    @extend .ui;
+    @extend .button;
+}
+
+
+.button {
+    border-radius: 2px;
+    &.primary {
+        border: 1px solid $black;
+        background-color: $white;
+        color: $black;
+    }
+}

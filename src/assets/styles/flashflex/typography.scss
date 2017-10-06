@@ -100,7 +100,7 @@ h2 {
 }
 h3 { 
     font-size: $h3-fontsize; 
-    margin-top: ($h3-fontsize / 2); 
+    margin-top: ($h3-fontsize); 
     &[secondary] {
         font-size: $h3-fontsize * 0.5; 
         margin-top: 0;
@@ -108,7 +108,7 @@ h3 {
 }
 h4 { 
     font-size: $h4-fontsize; 
-    margin-top: ($h4-fontsize / 2); 
+    margin-top: ($h4-fontsize); 
     &[secondary] {
         font-size: $h4-fontsize * 0.5; 
         margin-top: 0;
@@ -116,7 +116,7 @@ h4 {
 }
 h5 { 
     font-size: $h5-fontsize; 
-    margin-top: ($h5-fontsize / 2); 
+    margin-top: ($h5-fontsize); 
     &[secondary] {
         font-size: $h5-fontsize * 0.5; 
         margin-top: 0;
@@ -124,7 +124,7 @@ h5 {
 }
 h6 { 
     font-size: $h6-fontsize; 
-    margin-top: ($h6-fontsize / 2); 
+    margin-top: ($h6-fontsize); 
     &[secondary] {
         font-size: $h6-fontsize * 0.5; 
         margin-top: 0;
@@ -132,7 +132,7 @@ h6 {
 }
 
 h1, h2, h3, h4, h5, h6 {
-
+    margin-bottom: 0;
     font-family: $font-family-header;
 
     small {

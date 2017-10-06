@@ -1,0 +1,38 @@
+{{> header-public }}
+
+{{> modal-basic }}
+
+
+
+<h3>Artists</h3>
+<div class="row">
+	{{> card-artist }}
+</div>
+
+
+<h3>Recent Additions</h3>
+<div class="row masonry-grid">
+	{{> card-masonry }}
+	{{> card-masonry }}
+</div>
+<script type="text/javascript" src="assets/scripts/masonry.pkgd.min.js"></script>
+<script type="text/javascript" src="assets/scripts/imagesloaded.pkgd.min.js"></script>
+<script type="text/javascript">
+	// https://masonry.desandro.com/layout.html#imagesloaded
+	// init Masonry
+	var $grid = $('.masonry-grid').masonry({
+		"itemSelector": ".card",
+		"columnWidth": 170
+	});
+	// layout Masonry after each image loads
+	$grid.imagesLoaded().progress( function() {
+		$grid.masonry('layout');
+	});
+	
+</script>
+
+{{> typography-form }}
+
+<hr />
+
+{{> footer-standard }}

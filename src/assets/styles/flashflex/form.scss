@@ -1,0 +1,137 @@
+/**
+* FORM markup
+* Forms start with Bulma 0.5.3, see docs: http://bulma.io/documentation/form/general/
+* We use Bulma because it's flexbox based and easy to extend,
+* while the other frameworks offer so many variations it becomes
+* very difficult to extend the styles for ArtTap.
+*
+* NOTE:
+* COLORS and VARIABLES will be consolidated into colors.scss and variables.scss
+*/
+
+// For required for ArtTap's fancy checkboxes and radios:
+	$checkbox-offset: -15px;
+	$checkbox-width: 15px;
+	$checkbox-height: 15px;
+	$checkbox-border: 1px;
+	$checkbox-inner-padding: 2px;
+	$is-large-multiplier: 1.5; 
+
+$input: $gray-color-dark;
+$transition-duration: .4s;
+$shadow-offset-x: 4px;
+$shadow-offset-y: 4px;
+$shadow-spread: 10px;
+$shadow-color: $gray-color-light;
+$primary-box-shadow: $shadow-offset-x $shadow-offset-y $shadow-spread $shadow-color;
+
+// An extra span in form labels is used for "optional" or "required" etc.
+// <label>Label Name <span>Please do this soon</span></label>
+label {
+	&:not(.checkbox):not(.radio) {
+		span {
+			font-style: italic;
+			font-weight: normal;
+			margin-left: 2rem;
+		}
+	}
+}
+
+// Checkbox and Radio handling
+// Set positioning for labels and checkbox/radio elements
+// * except `is-colorball-checkbox` which is special (defined later)
+// label, .checkbox, .radio, .radio + .radio {
+label {
+	&.radio {
+		// Make the control round for radios (default=square)
+		span::before, span::after {
+			border-radius: $checkbox-width * 2;
+		}
+	}
+
+	&.checkbox,
+	&.radio {
+		color: $black;
+		&:hover {
+			color: $black;
+		}
+
+		input {
+			display: none;
+		}
+
+		&:not(.is-colorball-checkbox) {
+			position: relative;
+			margin-left: ($checkbox-offset * -1) * 1.25;
+			padding-left: ($checkbox-offset * -1) * .25;
+
+			&.is-large {
+				margin-left: ($checkbox-offset * -1) * 1.25 * $is-large-multiplier;
+				padding-left: ($checkbox-offset * -1) * .25 * $is-large-multiplier;
+			}
+		}
+
+		span::before, span::after {
+			box-sizing: border-box;
+		}
+
+		// Set the basic colors for the checkboxes / radios
+		span::before {
+			background-color: $white;
+			border: $checkbox-border solid $gray-color-dark;
+		}
+		span::after {
+			background-color: $white;
+			transition: background-color $transition-duration;
+		}
+		&.is-large {
+			span::before {
+				background-color: $white;
+				border: ($checkbox-border * $is-large-multiplier) solid $gray-color-dark;
+			}
+			span::after {
+				background-color: $white;
+			}
+		} 
+
+		// Set positioning
+		// * except `is-colorball-checkbox` which is special (defined later)
+		span::before, span::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			padding: 0;
+			margin: auto;
+		}
+		span::before {
+			left: $checkbox-offset;
+			width: $checkbox-width;
+			height: $checkbox-height;
+		}
+		span::after {
+			left: $checkbox-offset + $checkbox-border  + ($checkbox-inner-padding * 1);
+			width: $checkbox-width - ($checkbox-border * 2) - ($checkbox-inner-padding * 2);
+			height: $checkbox-height - ($checkbox-border * 2) - ($checkbox-inner-padding * 2);
+		}
+
+		// Larger checkboxes / radios
+		&.is-large {
+			span::before {
+				left: ($checkbox-offset) * $is-large-multiplier;
+				width: ($checkbox-width) * $is-large-multiplier;
+				height: ($checkbox-height) * $is-large-multiplier;
+			}
+			span::after {
+				left: ($checkbox-offset + $checkbox-border  + ($checkbox-inner-padding * 1)) * $is-large-multiplier;
+				width: ($checkbox-width - ($checkbox-border * 2) - ($checkbox-inner-padding * 2)) * $is-large-multiplier;
+				height: ($checkbox-height - ($checkbox-border * 2) - ($checkbox-inner-padding * 2)) * $is-large-multiplier;
+			}
+		} 
+
+		// Fill the span::after when checkbox/radio has been selected
+		input:checked + span:after {
+			background-color: $gray-color-dark;
+		}
+	}
+}

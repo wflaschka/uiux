@@ -65,6 +65,26 @@ Templates, partials, and components are stored in project as:
         * `components/` -- all the website components to be shown individually or aggregated into pages
         * `pages/` -- full pages that have multiple components together
 
+## Library dependencies
+
+* Masonry grids
+    * https://github.com/desandro/masonry
+    * Docs https://masonry.desandro.com/
+    * Subdependency https://github.com/desandro/imagesloaded
+* CSS
+    * Flexboxgrid-sass
+        * http://hugeinc.github.io/flexboxgrid-sass/
+        * https://github.com/hugeinc/flexboxgrid-sass
+    * Fontawesome
+    * Spectre CSS framework
+        * For some components like Avatar
+        * https://github.com/picturepan2/spectre
+* Select2
+    * https://select2.org/
+    * https://github.com/select2/select2
+* Maybe
+    * Image cropping https://github.com/fengyuanchen/cropper
+
 ***
 
 #  <span style="color: green;">Everything after this is 95% deprecated</span>

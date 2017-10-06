@@ -43,7 +43,8 @@ var buildTargets = {
 };
 var paths = {
 	scripts: [
-		rootSource   + 'assets/scripts/**/*'
+		rootSource   + 'assets/scripts/**/*',
+		'!' + rootSource   + 'assets/scripts/jquery.modal.min.js'
 //		,'node_modules/nouislider/distribute/*.js'
 //		,'node_modules/sweetalert2/dist/*.js'
 	],
@@ -104,6 +105,9 @@ var sassdocOptions = {
 ////////////////////////////////////////////////////////////////////////////////////
 // Start work:
 log("Gulpfile building...")
+log(" ")
+log(" ")
+log("NOTE NOTE NOTE: You'll need to add new template/components to gulpfile!")
 
 // Clean target directory of everything
 gulp.task('clean', function() {
@@ -117,7 +121,7 @@ gulp.task('scripts', function() {
 });
 
 // Styles
-glp.task('styles', function () {
+gulp.task('styles', function () {
 	return gulp.src(paths.styles)
 		.pipe(gulp.dest(buildTargets.styles));
 });
@@ -132,7 +136,7 @@ gulp.task('sass', function () {
 		.src(paths.sass)
 		.pipe(sourcemaps.init())
 		.pipe(sass(sassOptions).on('error', sass.logError))
-	.pipe(sourcemaps.write('/maps'))
+		.pipe(sourcemaps.write('/maps'))
 		.pipe(gulp.dest(buildTargets.styles))
 		.pipe(sassdoc(sassdocOptions))
 		.resume();
@@ -199,6 +203,104 @@ gulp.task('materializeJs', function() {
 });
 
 // TEMPLATING FUNCTIONALITY 20170921
+// https://www.npmjs.com/package/gulp-handlebars-master
+// uses https://www.npmjs.com/package/handlebars
+var templateData = {
+	"cards": [
+		{
+			"image": "/assets/images/artwork/art-1.jpg",
+			"artist": "Camille Oudinot",
+			"title": "Fading Faces",
+			"price": "$930",
+			"from": "New York, NY",
+			"pieces": "1 piece",
+			"selfie": "/assets/images/profiles/person-1.jpg",
+			"follow": "add",
+			"hearts": 55
+		},
+		{
+			"image": "/assets/images/artwork/art-narrow-1.jpg",
+			"artist": "Sethlan Semelon",
+			"title": "Rhapsody in the Beginning of Summer",
+			"price": "$1930",
+			"from": "St. Louisville de la Mar, North Dakota",
+			"pieces": "230 pieces",
+			"selfie": "/assets/images/profiles/person-2.jpg",
+			"follow": "add",
+			"hearts": 23
+		},
+		{
+			"image": "/assets/images/artwork/art-wide-1.jpg",
+			"artist": "Nan Park",
+			"title": "Uncanny Valley",
+			"price": "$450",
+			"from": "Schenectady, NY",
+			"pieces": "15 pieces",
+			"selfie": "/assets/images/profiles/person-3.jpg",
+			"follow": "friend",
+			"hearts": 11
+		},
+		{
+			"image": "/assets/images/artwork/art-3.jpg",
+			"artist": "Jane Do",
+			"title": "Roommate #2",
+			"price": "$633",
+			"from": "New York, NY",
+			"pieces": "22 pieces",
+			"selfie": "/assets/images/profiles/person-1.jpg",
+			"follow": "add",
+			"hearts": 123
+		},
+		{
+			"image": "/assets/images/artwork/art-4.jpg",
+			"artist": "Jephesandra Tawarna",
+			"title": "Getting Coffee / Knife Wound",
+			"price": "$1024",
+			"from": "New York, NY",
+			"pieces": "44 pieces",
+			"selfie": "/assets/images/profiles/person-2.jpg",
+			"follow": "add",
+			"hearts": 61
+		},
+		{
+			"image": "/assets/images/artwork/art-5.jpg",
+			"artist": "Jimothy St. Creus de la Mare",
+			"title": "Oily Water",
+			"price": "$1930",
+			"from": "New York, NY",
+			"pieces": "60 pieces",
+			"selfie": "/assets/images/profiles/person-3.jpg",
+			"follow": "add",
+			"hearts": 31
+		},
+		{
+			"image": "/assets/images/artwork/art-6.jpg",
+			"artist": "Caulie Dempsei Alexandrian",
+			"title": "Lurid Overhead Squish",
+			"price": "$2450",
+			"from": "New York, NY",
+			"pieces": "20 pieces",
+			"selfie": "/assets/images/profiles/person-1.jpg",
+			"follow": "friend",
+			"hearts": 22
+		},
+		{
+			"image": "/assets/images/artwork/art-2.jpg",
+			"artist": "Amy Yu",
+			"title": "First Argument",
+			"price": "$4430",
+			"from": "New York, NY",
+			"pieces": "6 pieces",
+			"selfie": "/assets/images/profiles/person-2.jpg",
+			"follow": "add",
+			"hearts": 1
+		}
+	]
+}
+var templateDataSingleton = {}
+templateDataSingleton['cards'] = templateData["cards"][0];
+log(templateDataSingleton);
+
 gulp.task('build-html-component-pages', function() {
 	// Master used for components:
 	var master = paths.html_templates.layouts + 'component-only.html';
@@ -212,7 +314,8 @@ gulp.task('build-html-component-pages', function() {
 	}
 
 	return gulp.src(paths.html_templates.components)
-		.pipe( hbsmaster(master, [], options))
+		// .pipe( hbsmaster(master, [], options))
+		.pipe( hbsmaster(master, templateDataSingleton, options))
 		.pipe(gulp.dest(buildTargets.html + "components/"));
 });
 
@@ -234,11 +337,16 @@ gulp.task('build-html-pages', function() {
 		batch : [
 			paths.html_templates.partials
 			,paths.html_templates.component_partials + "headers/"
+			,paths.html_templates.component_partials + "cards/"
+			,paths.html_templates.component_partials + "details/"
+			,paths.html_templates.component_partials + "modals/"
+			,paths.html_templates.component_partials + "typography/"
 			,paths.html_templates.component_partials
 		]
 	}
 	return gulp.src(paths.html_templates.pages)
-		.pipe( hbsmaster(master, [], options))
+		// .pipe( hbsmaster(master, [], options))
+		.pipe( hbsmaster(master, templateData, options))
 		.pipe(gulp.dest(buildTargets.html));
 });
 

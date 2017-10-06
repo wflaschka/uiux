@@ -1,0 +1,69 @@
+/**
+ * STATISTICS
+ */
+
+.statistics {
+	width: 100%;
+	// border: 1px solid red;
+	margin-bottom: 2rem;
+
+	.title {
+		@extend h4;
+		padding: 0;
+		margin: 0;
+		border-bottom-width: 1px;
+		border-bottom-style: solid;
+		border-bottom-color: $black;
+	}
+
+	.statistics-row {
+		margin-top: 1rem;
+		// border: 3px solid green;
+		display: flex;
+		flex-direction: row;
+		align-items: stretch;
+
+		.item {
+			display: flex;
+			flex-direction: column;
+			flex-grow: 1;
+
+			// align-items: center;
+			// justify-content: center;
+
+			font-size: 1rem;
+			strong {
+				font-size: 3.7rem;
+				font-weight: normal;
+				display: block;
+			}
+		}
+	}
+}
+
+
+// <div class="statistics">
+// 	<div class="title">
+// 		Artwork Stats
+// 	</div>
+// 	<div class="statistics-row">
+
+// 		<div class="item">
+// 			<strong>2/25</strong>
+// 			Sold
+// 		</div>
+// 		<div class="item">
+// 			<strong>2.5k</strong>
+// 			Views
+// 		</div>
+// 		<div class="item">
+// 			<strong>500</strong>
+// 			Saved to Collection
+// 		</div>
+// 		<div class="item">
+// 			<strong>250</strong>
+// 			Hearted
+// 		</div>
+
+// 	</div>
+// </div>

@@ -1,0 +1,12 @@
+/*
+    Various containers and segments
+ */
+
+
+.segment {
+    padding: 1rem;
+    margin: 1rem;
+    border: 1px solid $gray-color-light;
+    display: flex;
+    width: 100%;
+}

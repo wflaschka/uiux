@@ -1,0 +1,35 @@
+<!--
+	file:///Users/flash/Dropbox/Websites/Reference/spectre.css/spectre/components.html#avatars
+-->
+
+<!-- 	<div class="heart">
+		<span class="heart-number is-grey">61</span>
+		<span class="icon"><i class="fa fa-heart"></i></span>
+	</div> -->
+
+{{#cards}}
+	<div class="heart">
+		<span class="heart-number">{{ hearts }}</span>
+		<i class="icon fa fa-heart"></i>
+	</div>
+{{/cards}}
+
+
+<script type="text/javascript">
+	$( document ).ready(function() {
+		$('.heart').click(function(){
+			$(this).toggleClass( "is-hearted" );
+			$(this).toggleClass( "is-being-clicked" );
+			setTimeout(function(){
+				$('.heart').removeClass("is-being-clicked");
+			}, 750);
+
+			// Toggle text just for visuals
+			if ($(this).hasClass("is-hearted")) {
+				$(this).find('.heart-number').html("63");
+			} else {
+				$(this).find('.heart-number').html("62");
+			}
+		});
+	});
+</script>
