@@ -1,0 +1,41 @@
+
+.heart {
+
+	// text-align: right;
+
+	.heart-number {
+		color: $gray-color;
+	}
+
+	&:hover .icon .fa {
+		@include pulse(
+			$duration: .5s,
+			$count: 1,
+			$delay: 0s,
+			$function: ease, 
+			$fill: both
+		);
+	}
+
+	.icon.fa {
+		color: $gray-color;
+		cursor: pointer;
+	}
+
+	&.is-hearted {
+		.icon.fa {
+			color: $red;
+		}
+	}
+	&.is-being-clicked {
+		.icon.fa {
+			@include rubberBand(
+				$duration: .5s,
+				$count: 1,
+				$delay: 0s,
+				$function: ease, 
+				$fill: both
+			);
+		}
+	}
+}

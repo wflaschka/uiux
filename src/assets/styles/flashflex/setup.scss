@@ -5,6 +5,7 @@
 // https://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/
 html {
   font-size: 16px; /* Sets up the Base 10 stuff */
+	font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
 body {
@@ -14,4 +15,15 @@ body {
 
 span {
 	// display: inline-block;
+}
+
+
+// From Bulma 0.5.3 minireset.scss
+* {
+  box-sizing: border-box;
+
+  &:before,
+  &:after {
+    box-sizing: border-box;
+  }
 }

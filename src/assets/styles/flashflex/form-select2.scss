@@ -1,0 +1,130 @@
+/**
+* Select2 with Bulma
+* https://stackoverflow.com/questions/43396252/bulma-css-with-select2-jquery-plugin
+* Documentation https://select2.org/
+*
+* This overwrites the directives supplied from select2/core.scss:
+*/
+
+// We'll rewrite these vars later
+// and define them in variables.scss
+$speed: 1s;
+$border: $input-border-color;
+$border-hover: $input-hover-border-color;
+
+.select2-wrapper {
+
+    // Bulma 0.5.3 adds a right-floated down arrow 
+    // using a CSS hack. Remove this for Tag input
+    // boxes.
+    &.select-tags {
+        &:after {
+            border: none;
+        }
+    }
+
+    .select2-container {
+        .select2-selection {
+            transition: border-color $speed;
+            // font-family: $family-sans-serif;
+            height: 2.285em;
+            line-height: 1.5;
+            font-size: 1rem;
+            outline: none !important;
+            display: inline-flex;
+            align-items: center;
+            width: 100%;
+            border-color: $border;
+            border-radius: $radius;
+            &:hover {
+                border-color: $border-hover;
+            }
+            .select2-selection__rendered {
+                padding-left: 0.75em;
+                padding-right: 0.75em;
+                .select2-selection__choice {
+                    @extend .tag;
+
+                    // Without changing Select2's default HTML,
+                    // Change the order of elements and fit the .tag
+                    // to the selectbox.
+                    flex-direction: row-reverse;
+                    margin: 0.05rem 0.1rem;
+                    height: 100%;
+
+                    // The remove/delete icon for the tag
+                    // Select2 hardcodes a formatted "x" character.
+                    // Hide it, then add in a FontAwesome icon
+                    .select2-selection__choice__remove {
+                        @extend .delete;
+                        color: rgba(0, 0, 0, 0);
+
+                        &::after {
+                            // Get the "Close" icon from FontAwesome (for now)
+                            @extend .fa;
+                            content: "\f00d";
+                            margin-left: -12px;
+                            color: $gray-color-dark;
+                        }
+                    }
+                }
+            }
+            .select2-selection__arrow {
+                display: none;
+                // height: 100%;
+                // top: 0px;
+            }
+
+        }
+
+        &.select2-container--open {
+            .select2-selection {
+                border-color: $black;
+                &:hover {
+                    border-color: $border-hover;
+                }
+            }
+        }
+    }
+
+    &.is-medium {
+        .select2-container {
+            .select2-selection {
+                font-size: $size-5;
+            }
+        }
+    }
+    &.is-large {
+        .select2-container {
+            .select2-selection {
+                font-size: $size-4;
+            }
+        }
+    }
+}
+
+.select2-container {
+    .select2-dropdown {
+        border-color: $input-border-color;
+
+        .select2-search {
+            margin: 10px;
+            .select2-search__field {
+                @extend .input;
+                border-radius: $radius !important;
+            }
+        }
+
+        .select2-results__options {
+            max-height: 250px;
+            .select2-results__option {
+                padding: 0.75em;
+                font-size: 1rem;
+
+                &.select2-results__option--highlighted {
+                    background: $gray-color-dark;
+                }
+            }
+        }
+    }
+}

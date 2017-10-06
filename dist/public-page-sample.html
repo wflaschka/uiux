@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ArtTap UI/UX Patterns</title>
+
+    <link rel="stylesheet" type="text/css" href="/assets/styles/site.css">
+
+    <script type="text/javascript" src="/assets/scripts/jquery-3.1.1.js"></script>
+    <script type="text/javascript" src="/assets/scripts/site.js"></script>
+    <script type="text/javascript" src="/assets/scripts/jquery.modal.js"></script>
+    <script type="text/javascript" src="/assets/scripts/select2/select2.full.js"></script>
+
+    <!-- <script type="text/javascript" src="/assets/scripts/semantic-ui/api.js"></script> -->
+    <!-- <script type="text/javascript" src="/assets/scripts/semantic-ui/dropdown.js"></script> -->
+    <!-- <script type="text/javascript" src="/assets/scripts/semantic-ui/form.js"></script> -->
+    <!-- <script type="text/javascript" src="/assets/scripts/semantic-ui/transition.js"></script> -->
+
+</head>
+<body id="prototype-page">
+
+<header>
+    <div class="header container-fluid">
+        <div class="row middle-xs">
+            <div class="col-xs">
+                <div class="row begin-xs middle-xs">
+                    <div class="navigation-trigger-hamburger centered middle aligned column col-xs-4 col-sm-2 col-md-3">
+                        <i class="icon-hamburger"></i>
+                        <!-- <i class="icon-hamburger-active"></i> -->
+                    </div>
+<div id="header-navigation-menu" class="navigation-dropdown">
+<ul>
+    <li>Home</li>
+    <li>Newest Work</li>
+    <li>
+        Popular Searches
+        <i class="icon-disclosure"></i>
+        <ul>
+            <li>Paintings</li>
+            <li>Photographs</li>
+            <li>Prints &amp; Multiples</li>
+            <li>Under $500</li>
+            <li>Under $1000</li>
+            <li>Under $2500</li>
+        </ul>
+    </li>
+    <li>
+        Featured Artists
+        <i class="icon-disclosure"></i>
+        <ul>
+            <li>Alex Kwok</li>
+            <li>Camille Oudinot</li>
+            <li>Eloise Dumas</li>
+            <li>Lorraine Simms</li>
+            <li>Shelley Reeves</li>
+        </ul>
+    </li>
+    <li>About Art Tap</li>
+    <li>
+        Support
+        <i class="icon-disclosure"></i>
+        <ul>
+            <li>Support</li>
+            <li>FAQs</li>
+            <li>Partnerships</li>
+            <li>Contact Us</li>
+        </ul>
+    </li>
+</div>
+
+                    <div class="center middle aligned column col-xs-4">
+                        <div class="box">
+                            <i class="fa fa-search"></i>
+                            <span class="hide-on-sm-and-down">Search</span>
+                        </div>
+                    </div>
+                    <div class="hide-on-md-and-down center middle aligned column col-md-5">
+                        <div class="box">
+                            Apply as an artist
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="/" class="logo center middle aligned column col-xs center-xs middle-xs">
+                <img class="responsive height" src="assets/images/graphics/Logo/ArtTap_Logo-Yellow.svg">
+            </a>
+            <div class="col-xs">
+                <div class="row end-xs middle-xs">
+                    <div class="center middle aligned column col-xs-4 col-sm-8 col-md-8">
+                        <div class="box">
+                            <i class="fa fa-user"></i>
+                            <span class="hide-on-sm-and-down">Sign in | Register</span>
+                        </div>
+                    </div>
+                    <div class="center middle aligned column col-xs-4 col-md-4">
+                        <div class="box">
+                            <i class="fa fa-shopping-cart"></i>
+                            <span class="hide-on-sm-and-down">Cart</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        defer(function () {
+
+            $('.navigation-dropdown li').has('ul').click(function(){
+                submenu = $(this).find('ul');
+                if (submenu.is(':hidden')) {
+                    submenu.slideDown('slow');
+                    $(this).addClass('active');
+                } else {
+                    submenu.slideUp('slow');
+                    $(this).removeClass('active');
+                }
+            });
+
+            $('.navigation-trigger-hamburger').click(function() {
+                console.log("Hamburger clicked!");
+                if ($('.navigation-dropdown').is(':hidden')) {
+                    $('.navigation-dropdown').slideDown('slow');
+                    $(this).toggleClass("active");
+                    $(this).find('.icon-hamburger').toggleClass("active");
+                    console.log("Hamburger slide down...");
+                } else {
+                    $('.navigation-dropdown').slideUp('slow');
+                    console.log("Hamburger slide up...");
+                    $(this).find('.icon-hamburger').toggleClass("active");
+                }
+            });
+
+        });
+    </script>
+</header>
+
+<!-- <div id="basic" class="modal" style="display:none;"> -->
+<div id="basic" style="display:none;">
+	<!-- <a href="#" rel="modal:close"> -->
+	<a href="#" rel="modal:close" class="close-modal">
+		<i class="fa fa-close"></i>
+	</a>
+	<h1>Some modal here</h1>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</p>
+</div>
+
+<p>
+	<a href="#basic" rel="modal:open">Open Modal</a>
+</p>
+
+<!-- <code>
+	&lt;a href="#basic" rel="modal:open"&gt;Open Modal&lt;/a&gt;
+</code>
+ -->
+<script type="text/javascript">
+	$.modal.defaults = {
+		closeExisting : true,      // Close existing modals. Set this to false if you need to stack multiple modal instances.
+		escapeClose   : true,      // Allows the user to close the modal by pressing `ESC`
+		clickClose    : true,      // Allows the user to close the modal by clicking the overlay
+		closeText     : '',        // Text content for the close <a> tag.
+		closeClass    : '',        // Add additional class(es) to the close <a> tag.
+		showClose     : true,      // Shows a (X) icon/link in the top-right corner
+		modalClass    : "modal",   // CSS class added to the element being displayed in the modal.
+		blockerClass  : "blocker", // CSS class added to the overlay (blocker).
+		spinnerHtml   : null,      // HTML appended to the default spinner during AJAX requests.
+		showSpinner   : true,      // Enable/disable the default spinner during AJAX requests.
+		fadeDuration  : 250,       // Number of milliseconds the fade transition takes (null means no transition)
+		fadeDelay     : 0.8        // Point during the overlay's fade-in that the modal begins to fade in (.5 = 50%, 1.5 = 150%, etc.)
+	};
+
+	// $("#basic").modal({
+	// 	fadeDuration: 500,
+	// 	fadeDelay: 0.80,
+	// 	escapeClose: true,
+	// 	clickClose: true,
+	// 	// showClose: false
+	// 	closeText: '',     // Text content for the close <a> tag.
+	// 	closeClass: '',         // Add additional class(es) to the close <a> tag.
+	// 	showClose: false,        // Shows a (X) icon/link in the top-right corner
+	// });
+
+
+
+	// $.modal.defaults = {
+	// 	closeExisting: true,    // Close existing modals. Set this to false if you need to stack multiple modal instances.
+	// 	escapeClose: true,      // Allows the user to close the modal by pressing `ESC`
+	// 	clickClose: true,       // Allows the user to close the modal by clicking the overlay
+	// 	closeText: 'Close',     // Text content for the close <a> tag.
+	// 	closeClass: '',         // Add additional class(es) to the close <a> tag.
+	// 	showClose: true,        // Shows a (X) icon/link in the top-right corner
+	// 	modalClass: "modal",    // CSS class added to the element being displayed in the modal.
+	// 	blockerClass: "modal",  // CSS class added to the overlay (blocker).
+	// 	spinnerHtml: null,      // HTML appended to the default spinner during AJAX requests.
+	// 	showSpinner: true,      // Enable/disable the default spinner during AJAX requests.
+	// 	fadeDuration: null,     // Number of milliseconds the fade transition takes (null means no transition)
+	// 	fadeDelay: 1.0          // Point during the overlay's fade-in that the modal begins to fade in (.5 = 50%, 1.5 = 150%, etc.)
+	// };
+</script>
+
+
+<h3>Artists</h3>
+<div class="row">
+	<div class="card artist">
+		<div class="image" style="background-image: url('/assets/images/artwork/art-1.jpg');">
+			<img src="/assets/images/artwork/art-1.jpg">
+		</div>
+		<div class="card-avatar">
+			<!--
+				file:///Users/flash/Dropbox/Websites/Reference/spectre.css/spectre/components.html#avatars
+			-->
+			
+		</div>
+		<div class="content">
+			<div class="artist">
+				Camille Oudinot
+			</div>
+			<div class="from">
+				New York, NY
+			</div>
+			<div class="pieces">
+				1 piece
+			</div>
+		</div>
+	</div>
+	<div class="card artist">
+		<div class="image" style="background-image: url('/assets/images/artwork/art-narrow-1.jpg');">
+			<img src="/assets/images/artwork/art-narrow-1.jpg">
+		</div>
+		<div class="card-avatar">
+			<!--
+				file:///Users/flash/Dropbox/Websites/Reference/spectre.css/spectre/components.html#avatars
+			-->
+			
+		</div>
+		<div class="content">
+			<div class="artist">
+				Sethlan Semelon
+			</div>
+			<div class="from">
+				St. Louisville de la Mar, North Dakota
+			</div>
+			<div class="pieces">
+				230 pieces
+			</div>
+		</div>
+	</div>
+	<div class="card artist">
+		<div class="image" style="background-image: url('/assets/images/artwork/art-wide-1.jpg');">
+			<img src="/assets/images/artwork/art-wide-1.jpg">
+		</div>
+		<div class="card-avatar">
+			<!--
+				file:///Users/flash/Dropbox/Websites/Reference/spectre.css/spectre/components.html#avatars
+			-->
+			
+		</div>
+		<div class="content">
+			<div class="artist">
+				Nan Park
+			</div>
+			<div class="from">
+				Schenectady, NY
+			</div>
+			<div class="pieces">
+				15 pieces
+			</div>
+		</div>
+	</div>
+	<div class="card artist">
+		<div class="image" style="background-image: url('/assets/images/artwork/art-3.jpg');">
+			<img src="/assets/images/artwork/art-3.jpg">
+		</div>
+		<div class="card-avatar">
+			<!--
+				file:///Users/flash/Dropbox/Websites/Reference/spectre.css/spectre/components.html#avatars
+			-->
+			
+		</div>
+		<div class="content">
+			<div class="artist">
+				Jane Do
+			</div>
+			<div class="from">
+				New York, NY
+			</div>
+			<div class="pieces">
+				22 pieces
+			</div>
+		</div>
+	</div>
+	<div class="card artist">
+		<div class="image" style="background-image: url('/assets/images/artwork/art-4.jpg');">
+			<img src="/assets/images/artwork/art-4.jpg">
+		</div>
+		<div class="card-avatar">
+			<!--
+				file:///Users/flash/Dropbox/Websites/Reference/spectre.css/spectre/components.html#avatars
+			-->
+			
+		</div>
+		<div class="content">
+			<div class="artist">
+				Jephesandra Tawarna
+			</div>
+			<div class="from">
+				New York, NY
+			</div>
+			<div class="pieces">
+				44 pieces
+			</div>
+		</div>
+	</div>
+	<div class="card artist">
+		<div class="image" style="background-image: url('/assets/images/artwork/art-5.jpg');">
+			<img src="/assets/images/artwork/art-5.jpg">
+		</div>
+		<div class="card-avatar">
+			<!--
+				file:///Users/flash/Dropbox/Websites/Reference/spectre.css/spectre/components.html#avatars
+			-->
+			
+		</div>
+		<div class="content">
+			<div class="artist">
+				Jimothy St. Creus de la Mare
+			</div>
+			<div class="from">
+				New York, NY
+			</div>
+			<div class="pieces">
+				60 pieces
+			</div>
+		</div>
+	</div>
+	<div class="card artist">
+		<div class="image" style="background-image: url('/assets/images/artwork/art-6.jpg');">
+			<img src="/assets/images/artwork/art-6.jpg">
+		</div>
+		<div class="card-avatar">
+			<!--
+				file:///Users/flash/Dropbox/Websites/Reference/spectre.css/spectre/components.html#avatars
+			-->
+			
+		</div>
+		<div class="content">
+			<div class="artist">
+				Caulie Dempsei Alexandrian
+			</div>
+			<div class="from">
+				New York, NY
+			</div>
+			<div class="pieces">
+				20 pieces
+			</div>
+		</div>
+	</div>
+	<div class="card artist">
+		<div class="image" style="background-image: url('/assets/images/artwork/art-2.jpg');">
+			<img src="/assets/images/artwork/art-2.jpg">
+		</div>
+		<div class="card-avatar">
+			<!--
+				file:///Users/flash/Dropbox/Websites/Reference/spectre.css/spectre/components.html#avatars
+			-->
+			
+		</div>
+		<div class="content">
+			<div class="artist">
+				Amy Yu
+			</div>
+			<div class="from">
+				New York, NY
+			</div>
+			<div class="pieces">
+				6 pieces
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<h3>Recent Additions</h3>
+<div class="row masonry-grid">
+	<div class="card masonry">
+		<div class="image" style="background-image: url('/assets/images/artwork/art-1.jpg');">
+			<img src="/assets/images/artwork/art-1.jpg">
+		</div>
+		<div class="content">
+			<div class="hearts">
+				<i class="fa fa-heart-o"></i>
+			</div>
+			<div class="artist">
+				Camille Oudinot
+			</div>
+			<div class="title">
+				Fading Faces
+			</div>
+			<div class="price">
+				$930
+			</div>
+		</div>
+	</div>
+	<div class="card masonry">
+		<div class="image" style="background-image: url('/assets/images/artwork/art-narrow-1.jpg');">
+			<img src="/assets/images/artwork/art-narrow-1.jpg">
+		</div>
+		<div class="content">
+			<div class="hearts">
+				<i class="fa fa-heart-o"></i>
+			</div>
+			<div class="artist">
+				Sethlan Semelon
+			</div>
+			<div class="title">
+				Rhapsody in the Beginning of Summer
+			</div>
+			<div class="price">
+				$1930
+			</div>
+		</div>
+	</div>
+	<div class="card masonry">
+		<div class="image" style="background-image: url('/assets/images/artwork/art-wide-1.jpg');">
+			<img src="/assets/images/artwork/art-wide-1.jpg">
+		</div>
+		<div class="content">
+			<div class="hearts">
+				<i class="fa fa-heart-o"></i>
+			</div>
+			<div class="artist">
+				Nan Park
+			</div>
+			<div class="title">
+				Uncanny Valley
+			</div>
+			<div class="price">
+				$450
+			</div>
+		</div>
+	</div>
+	<div class="card masonry">
+		<div class="image" style="background-image: url('/assets/images/artwork/art-3.jpg');">
+			<img src="/assets/images/artwork/art-3.jpg">
+		</div>
+		<div class="content">
+			<div class="hearts">
+				<i class="fa fa-heart-o"></i>
+			</div>
+			<div class="artist">
+				Jane Do
+			</div>
+			<div class="title">
+				Roommate #2
+			</div>
+			<div class="price">
+				$633
+			</div>
+		</div>
+	</div>
+	<div class="card masonry">
+		<div class="image" style="background-image: url('/assets/images/artwork/art-4.jpg');">
+			<img src="/assets/images/artwork/art-4.jpg">
+		</div>
+		<div class="content">
+			<div class="hearts">
+				<i class="fa fa-heart-o"></i>
+			</div>
+			<div class="artist">
+				Jephesandra Tawarna
+			</div>
+			<div class="title">
+				Getting Coffee / Knife Wound
+			</div>
+			<div class="price">
+				$1024
+			</div>
+		</div>
+	</div>
+	<div class="card masonry">
+		<div class="image" style="background-image: url('/assets/images/artwork/art-5.jpg');">
+			<img src="/assets/images/artwork/art-5.jpg">
+		</div>
+		<div class="content">
+			<div class="hearts">
+				<i class="fa fa-heart-o"></i>
+			</div>
+			<div class="artist">
+				Jimothy St. Creus de la Mare
+			</div>
+			<div class="title">
+				Oily Water
+			</div>
+			<div class="price">
+				$1930
+			</div>
+		</div>
+	</div>
+	<div class="card masonry">
+		<div class="image" style="background-image: url('/assets/images/artwork/art-6.jpg');">
+			<img src="/assets/images/artwork/art-6.jpg">
+		</div>
+		<div class="content">
+			<div class="hearts">
+				<i class="fa fa-heart-o"></i>
+			</div>
+			<div class="artist">
+				Caulie Dempsei Alexandrian
+			</div>
+			<div class="title">
+				Lurid Overhead Squish
+			</div>
+			<div class="price">
+				$2450
+			</div>
+		</div>
+	</div>
+	<div class="card masonry">
+		<div class="image" style="background-image: url('/assets/images/artwork/art-2.jpg');">
+			<img src="/assets/images/artwork/art-2.jpg">
+		</div>
+		<div class="content">
+			<div class="hearts">
+				<i class="fa fa-heart-o"></i>
+			</div>
+			<div class="artist">
+				Amy Yu
+			</div>
+			<div class="title">
+				First Argument
+			</div>
+			<div class="price">
+				$4430
+			</div>
+		</div>
+	</div>
+	<div class="card masonry">
+		<div class="image" style="background-image: url('/assets/images/artwork/art-1.jpg');">
+			<img src="/assets/images/artwork/art-1.jpg">
+		</div>
+		<div class="content">
+			<div class="hearts">
+				<i class="fa fa-heart-o"></i>
+			</div>
+			<div class="artist">
+				Camille Oudinot
+			</div>
+			<div class="title">
+				Fading Faces
+			</div>
+			<div class="price">
+				$930
+			</div>
+		</div>
+	</div>
+	<div class="card masonry">
+		<div class="image" style="background-image: url('/assets/images/artwork/art-narrow-1.jpg');">
+			<img src="/assets/images/artwork/art-narrow-1.jpg">
+		</div>
+		<div class="content">
+			<div class="hearts">
+				<i class="fa fa-heart-o"></i>
+			</div>
+			<div class="artist">
+				Sethlan Semelon
+			</div>
+			<div class="title">
+				Rhapsody in the Beginning of Summer
+			</div>
+			<div class="price">
+				$1930
+			</div>
+		</div>
+	</div>
+	<div class="card masonry">
+		<div class="image" style="background-image: url('/assets/images/artwork/art-wide-1.jpg');">
+			<img src="/assets/images/artwork/art-wide-1.jpg">
+		</div>
+		<div class="content">
+			<div class="hearts">
+				<i class="fa fa-heart-o"></i>
+			</div>
+			<div class="artist">
+				Nan Park
+			</div>
+			<div class="title">
+				Uncanny Valley
+			</div>
+			<div class="price">
+				$450
+			</div>
+		</div>
+	</div>
+	<div class="card masonry">
+		<div class="image" style="background-image: url('/assets/images/artwork/art-3.jpg');">
+			<img src="/assets/images/artwork/art-3.jpg">
+		</div>
+		<div class="content">
+			<div class="hearts">
+				<i class="fa fa-heart-o"></i>
+			</div>
+			<div class="artist">
+				Jane Do
+			</div>
+			<div class="title">
+				Roommate #2
+			</div>
+			<div class="price">
+				$633
+			</div>
+		</div>
+	</div>
+	<div class="card masonry">
+		<div class="image" style="background-image: url('/assets/images/artwork/art-4.jpg');">
+			<img src="/assets/images/artwork/art-4.jpg">
+		</div>
+		<div class="content">
+			<div class="hearts">
+				<i class="fa fa-heart-o"></i>
+			</div>
+			<div class="artist">
+				Jephesandra Tawarna
+			</div>
+			<div class="title">
+				Getting Coffee / Knife Wound
+			</div>
+			<div class="price">
+				$1024
+			</div>
+		</div>
+	</div>
+	<div class="card masonry">
+		<div class="image" style="background-image: url('/assets/images/artwork/art-5.jpg');">
+			<img src="/assets/images/artwork/art-5.jpg">
+		</div>
+		<div class="content">
+			<div class="hearts">
+				<i class="fa fa-heart-o"></i>
+			</div>
+			<div class="artist">
+				Jimothy St. Creus de la Mare
+			</div>
+			<div class="title">
+				Oily Water
+			</div>
+			<div class="price">
+				$1930
+			</div>
+		</div>
+	</div>
+	<div class="card masonry">
+		<div class="image" style="background-image: url('/assets/images/artwork/art-6.jpg');">
+			<img src="/assets/images/artwork/art-6.jpg">
+		</div>
+		<div class="content">
+			<div class="hearts">
+				<i class="fa fa-heart-o"></i>
+			</div>
+			<div class="artist">
+				Caulie Dempsei Alexandrian
+			</div>
+			<div class="title">
+				Lurid Overhead Squish
+			</div>
+			<div class="price">
+				$2450
+			</div>
+		</div>
+	</div>
+	<div class="card masonry">
+		<div class="image" style="background-image: url('/assets/images/artwork/art-2.jpg');">
+			<img src="/assets/images/artwork/art-2.jpg">
+		</div>
+		<div class="content">
+			<div class="hearts">
+				<i class="fa fa-heart-o"></i>
+			</div>
+			<div class="artist">
+				Amy Yu
+			</div>
+			<div class="title">
+				First Argument
+			</div>
+			<div class="price">
+				$4430
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="assets/scripts/masonry.pkgd.min.js"></script>
+<script type="text/javascript" src="assets/scripts/imagesloaded.pkgd.min.js"></script>
+<script type="text/javascript">
+	// https://masonry.desandro.com/layout.html#imagesloaded
+	// init Masonry
+	var $grid = $('.masonry-grid').masonry({
+		"itemSelector": ".card",
+		"columnWidth": 170
+	});
+	// layout Masonry after each image loads
+	$grid.imagesLoaded().progress( function() {
+		$grid.masonry('layout');
+	});
+	
+</script>
+
+<h1>Form elements</h1>
+<p>
+    20171006 125102: Forms use specific HTML markup from <a href="http://bulma.io/documentation/form/general/" target="_blank">Bulma 0.5.3</a>
+</p>
+<hr>
+
+
+<h4>Dropdowns</h4>
+<p>
+    Select / dropdowns / tag inputs are <a href="/components/typography/typography-select2.html">on this page</a>.
+</p>
+
+<!-- <h4>Checkbox</h4>
+<div class="field">
+    <div class="control">
+        <label class="checkbox">
+            <input type="checkbox">
+            Default checkbox won't display on styled pages. 
+            (Not used in ArtTap.)
+        </label>
+    </div>
+</div> -->
+
+<h4>Fancy checkboxes</h4>
+<p>
+    Checkboxes and radio controls require an extra empty <tt>span</tt> after the input element.
+</p>
+<div class="field">
+    <div class="control">
+        <label class="checkbox is-large" for="input-1">
+            <input type="checkbox" id="input-1" name="input-1">
+            <span></span>
+            Ketchup (large size)
+        </label>
+        <label class="checkbox" for="input-2">
+            <input type="checkbox" id="input-2" name="input-2">
+            <span></span>
+            Mustard
+        </label>
+        <label class="checkbox" for="input-3">
+            <input type="checkbox" id="input-3" name="input-3">
+            <span></span>
+            Horseradish
+        </label>
+    </div>
+</div>
+
+<h4>Fancy radios</h4>
+<div class="field">
+    <div class="control">
+        <label class="radio">
+            <input type="radio" name="question">
+            <span></span>
+            Yes
+        </label>
+        <label class="radio">
+            <input type="radio" name="question">
+            <span></span>
+            Maybe
+        </label>
+        <label class="radio is-large">
+            <input type="radio" name="question">
+            <span></span>
+            No (large size)
+        </label>
+    </div>
+</div>
+
+
+
+<h4>Input with loading indicator...</h4>
+<div class="control is-medium is-loading">
+    <input class="input" type="text" placeholder="Loading input">
+</div>
+
+<h4>Text area...</h4>
+<p>is-small, [default], is-medium, is-large</p>
+<div class="field">
+    <div class="control">
+        <textarea class="textarea is-medium" type="text" placeholder="Medium textarea"></textarea>
+    </div>
+</div>
+
+
+
+<h3>Input field <small>with attr readonly</small></h3>
+<div class="field">
+    <div class="control">
+        <input class="input is-primary" type="text" placeholder="Primary input" value="Some existing value" readonly>
+    </div>
+</div>
+
+<h3>With fontawesome icon details</h3>
+<div class="field">
+    <label class="label">Email</label>
+    <div class="control has-icons-left has-icons-right">
+        <input class="input is-danger" type="email" placeholder="Email input" value="hello@">
+        <span class="icon is-small is-left">
+            <i class="fa fa-envelope"></i>
+        </span>
+        <span class="icon is-small is-right">
+            <i class="fa fa-warning"></i>
+        </span>
+    </div>
+    <p class="help is-danger">This email is invalid</p>
+</div>
+
+<!-- <div class="field">
+    <p class="control has-icons-left has-icons-right">
+        <input class="input" type="email" placeholder="Email">
+        <span class="icon is-small is-left">
+            <i class="fa fa-envelope"></i>
+        </span>
+        <span class="icon is-small is-right">
+            <i class="fa fa-check"></i>
+        </span>
+    </p>
+</div>
+<div class="field">
+    <p class="control has-icons-left">
+        <input class="input" type="password" placeholder="Password">
+        <span class="icon is-small is-left">
+            <i class="fa fa-lock"></i>
+        </span>
+    </p>
+</div> -->
+
+<h3>Fields</h3>
+<div class="field">
+    <div class="control">
+        <input class="input is-small" type="text" placeholder="Small input">
+    </div>
+</div>
+<div class="field">
+    <div class="control">
+        <input class="input" type="text" placeholder="Normal input">
+    </div>
+</div>
+<div class="field">
+    <div class="control">
+        <input class="input is-medium" type="text" placeholder="Medium input">
+    </div>
+</div>
+<div class="field">
+    <div class="control">
+        <input class="input is-large" type="text" placeholder="Large input">
+    </div>
+</div>
+
+<hr />
+
+<footer>
+    <div class="footer">
+        <p>
+            <strong>Walter Flaschka</strong> 
+        </p>
+        <p>
+            <small>
+                <em>Project:</em> ArtTap Exchange 20170921
+            </small>
+        </p>
+    </div>
+</footer>
+
+
+</body>
+</html>
+
+

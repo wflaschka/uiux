@@ -2,6 +2,17 @@
  * MIXINS
  */
 
+@keyframes spinAround {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+
 @function fade($color, $amount) {
 	$amount: 1 - ($amount / 100);
 	// @debug transparentize($color, $amount);

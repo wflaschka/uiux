@@ -6,7 +6,9 @@
 @import 'setup.scss';
 @import 'variables.scss';
 @import 'mixins.scss';
+	// Does this work?
 	@import 'material-ripple.scss';
+@import "colors.scss";
 @import "fonts.scss";
 @import "typography.scss";
 @import "layout.scss";
@@ -19,6 +21,7 @@
 // Grid system
 @import "sass-flex-mixin.scss";
 @import "flexboxgrid-sass.scss";
+@import "flexboxgrid-extended.scss";
 // @import 'grid.scss';
 
 @import 'responsive.scss';
@@ -30,3 +33,101 @@
 @import "header.scss";
 // @import "accordion.scss";
 
+@import "containers-segments.scss";
+@import "card.scss";
+@import "avatars.scss"; // don't mess with this
+@import "avatars-extended.scss"; // overclass this one
+@import "jquery.modal.scss";
+@import "typography-statistics.scss";
+@import "typography-icons.scss";
+
+// Animations
+@import "animatewithsass/animate.scss";
+
+// Incorporating from old Bulma version
+@import "bulma-prior-version/hearts.scss";
+// @import "bulma-tags.scss";
+@import "bulma-prior-version/tags.scss";
+
+////////////////////////////////////////////////////////////
+// Forms derived from Bulma 0.5.3
+	// NOT used: might conflict with other
+	// Here for reference
+	// @import "bulma-0.5.3/minireset.scss";
+// Remove this during color / variable consolidation step:
+	@import "bulma-0.5.3/variables.scss";
+
+@import "bulma-0.5.3/controls.scss";
+@import "bulma-0.5.3/mixins.scss";
+@import "bulma-0.5.3/form.scss";
+@import "select2/core.scss";
+	// Overwrite Select2 CSS
+	@import "form-select2.scss";
+// Our specific form CSS
+@import "form.scss";
+
+////////////////////////////////////////////////////////////
+// For the layout/design PROTOTYPE website only:
+body#prototype-page-component-only {
+	padding: 5rem;
+}
+
+body#prototype-page {
+	main {
+		padding: 5rem 1rem;
+	}
+}
+// Tags for prototype website
+body#prototype-index-page,
+body#prototype-page-component-only,
+body#prototype-page {
+	line-height: 1.8;
+	tt {
+		background-color: lighten(black, 90%);
+		color: lighten(black, 50%);
+		padding: 0.1rem 0.5rem;
+		border-radius: 3rem;
+	}
+	*[todo] {
+		color: orange;
+		&::before {
+			content: "To-do: ";
+		}
+	}
+	*[red] {
+		color: #cc0000;
+	}
+	em {
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+}
+body#prototype-index-page {
+	a:not(.logo) {
+		margin: 0.5rem 1rem;
+		border: 1px solid green;
+		padding: 0.3rem;
+		line-height: 2;
+		text-decoration: none;
+		border-radius: 5px;
+
+		&:first-of-type {
+			margin-left: 0;
+		}
+
+		&::after {
+			@extend .fa;
+			padding-left: 0.3rem;
+			content: "\f08e";
+		}
+
+		&:hover {
+			background-color: green;
+			color: white;
+			&::after {
+				color: yellow;
+			}
+		}
+
+	}
+}
