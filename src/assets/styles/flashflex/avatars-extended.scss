@@ -1,27 +1,23 @@
-// Avatar mixin
+////////////////////////////////////////////////////
+// AVATAR (extended)
+// Edit this file to fix avatars
+////////////////////////////////////////////////////
 
 .avatar {
     .avatar-status {
 
         @extend .avatar-presence;
-        // height: 0.6em;
-        // width: 0.6em;
 
-        padding: 0.3em 0.5em 0.5em 0.3em;
+        box-sizing: content-box;
+
+        @extend .fa;
+        @extend .fa-plus;
+
+        padding: 0.5em;
         font-size: 0.5em;
+        line-height: 0.5rem;
+        text-indent: -0.08rem;
 
-        // icon handling
-    // padding: $border-width-lg;
-    // padding: 0;
-        vertical-align: middle;
-        text-align: center;
-        // i {
-        //     font-size: 0.6em;
-        //     margin: 0;
-        //     color: rgba(255, 255, 255, 1);
-        // }
-
-        // Status colors
         background: $bg-color-light;
         &.follow {
             background: $primary-color;
@@ -29,6 +25,5 @@
         &.followed {
             background: blue;
         }
-
     }
 }

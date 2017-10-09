@@ -1,5 +1,5 @@
 /**
- * LAYOUT -- high level directives
+ * CARDs
  */
 
 .card {
@@ -94,11 +94,7 @@
 		}
 	}
 	&.masonry {
-		// margin-right: 0rem;
 		margin: 0.5rem;
-		// border: 1px solid red;
-		// width: calc(150px + 1rem);
-		// @extend .col-xs-2;
 
 		.image {
 			width: 150px;
@@ -107,7 +103,6 @@
 			img {
 				width: 150px;
 				height: auto;
-				// max-height: 300px;
 				display: block;
 			}
 		}
@@ -124,14 +119,13 @@
 		.card-avatar {
 			position: absolute;
 			width: 150px;
-		    transform: translate(0, -70%);
+			transform: translate(0, -70%);
 
-    		.avatar {
-			    transform: translate(100%, 0);
-    		}
+			display: flex;
+			justify-content: center;
 		}
 		.content {
-			padding-top: 0.5rem;
+			padding-top: 1rem;
 			height: 120px;
 			width: 100%;
 			text-align: center;

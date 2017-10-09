@@ -71,7 +71,6 @@
 body#prototype-page-component-only {
 	padding: 5rem;
 }
-
 body#prototype-page {
 	main {
 		padding: 5rem 1rem;
@@ -103,7 +102,11 @@ body#prototype-page {
 	}
 }
 body#prototype-index-page {
+	main {
+		padding: 0 2rem 0 2rem;
+	}
 	a:not(.logo) {
+		white-space: nowrap;
 		margin: 0.5rem 1rem;
 		border: 1px solid green;
 		padding: 0.3rem;

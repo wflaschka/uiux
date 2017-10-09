@@ -1,13 +1,16 @@
-// Avatar mixin
-@mixin avatar-base($size: $unit-8) {
+////////////////////////////////////////////////////
+// Avatars
+////////////////////////////////////////////////////
+
+// Mixin for sizing
+@mixin avatar-base($size: $unit-10) {
   font-size: $size / 2;
   height: $size;
   width: $size;
 }
 
-// Avatars
 .avatar {
-  @include avatar-base();
+  @include avatar-base($unit-12);
   background: $primary-color;
   border-radius: 50%;
   color: rgba($light-color, .85);
@@ -19,16 +22,16 @@
   vertical-align: middle;
 
   &.avatar-xs {
-    @include avatar-base($unit-4);
+    @include avatar-base($unit-7);
   }
   &.avatar-sm {
-    @include avatar-base($unit-6);
+    @include avatar-base($unit-9);
   }
   &.avatar-lg {
-    @include avatar-base($unit-12);
+    @include avatar-base($unit-16);
   }
   &.avatar-xl {
-    @include avatar-base($unit-16);
+    @include avatar-base($unit-18);
   }
 
   img {

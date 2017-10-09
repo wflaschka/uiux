@@ -45,17 +45,13 @@ var paths = {
 	scripts: [
 		rootSource   + 'assets/scripts/**/*',
 		'!' + rootSource   + 'assets/scripts/jquery.modal.min.js'
-//		,'node_modules/nouislider/distribute/*.js'
-//		,'node_modules/sweetalert2/dist/*.js'
 	],
 	materializeJs: [],
 	styles: [
 		rootSource    + 'assets/styles/**/*.css'
-//		,'node_modules/nouislider/distribute/*.css'
 	],
 	fonts: [
 		rootSource    + 'assets/fonts/**/*'
-//		,"node_modules/materialize-css/dist/fonts/**/*"
 	],
 	pdfs: [
 		rootSource    + 'assets/pdfs/**/*'
@@ -107,7 +103,9 @@ var sassdocOptions = {
 log("Gulpfile building...")
 log(" ")
 log(" ")
-log("NOTE NOTE NOTE: You'll need to add new template/components to gulpfile!")
+log("NOTE NOTE NOTE:")
+log("    You'll need to add new template/components subfolders to gulpfile!")
+log(" ")
 
 // Clean target directory of everything
 gulp.task('clean', function() {
@@ -156,8 +154,6 @@ gulp.task('pdfs', function() {
 
 // HTML
 gulp.task('html', function(callback) {
-//	return gulp.src(paths.html)
-//		.pipe(gulp.dest(buildTargets.html));
   runSequence(
 	'build-html-index',
 	'build-html-pages',
@@ -202,7 +198,7 @@ gulp.task('materializeJs', function() {
 		.pipe(gulp.dest(buildTargets.scripts));
 });
 
-// TEMPLATING FUNCTIONALITY 20170921
+// TEMPLATING FUNCTIONALITY
 // https://www.npmjs.com/package/gulp-handlebars-master
 // uses https://www.npmjs.com/package/handlebars
 var templateData = {
@@ -297,9 +293,32 @@ var templateData = {
 		}
 	]
 }
+
+// This is a view of the data with only one record,
+// which is used when working with single elements 
+// in templates/components/*/*.html. It uses the same 
+// fieldname 'cards' so the same component can be shown
+// in a multi-element context (i.e., single card / row of 
+// cards).
 var templateDataSingleton = {}
 templateDataSingleton['cards'] = templateData["cards"][0];
 log(templateDataSingleton);
+
+// On some template pages we need a different approach to 
+// a singleton
+templateData['single'] = templateData["cards"][0];
+// From: https://gist.github.com/elidupuis/1468937/246e9215971bf436e747fd22f6f72f7f3a431b04
+// var handlebarsArraySlice = (function(context, block) {
+// 	var ret = "",
+// 		offset = parseInt(block.hash.offset) || 0,
+// 		limit = parseInt(block.hash.limit) || 5,
+// 		i = (offset < context.length) ? offset : 0,
+// 		j = ((limit + offset) < context.length) ? (limit + offset) : context.length;
+// 	for(i,j; i<j; i++) {
+// 		ret += block(context[i]);
+// 	}
+// 	return ret;
+// });
 
 gulp.task('build-html-component-pages', function() {
 	// Master used for components:
@@ -310,12 +329,33 @@ gulp.task('build-html-component-pages', function() {
 	options = {
 		ignorePartials: true, //ignores the unknown partials
 		// batch : Javascript array of filepaths to use as partials
-		batch : [paths.html_templates.partials]
+		batch : [paths.html_templates.partials],
+		helpers: {
+            capitals : function(str){
+                return str.toUpperCase();
+            }
+			// ,slice: function(context, block) {
+			// 	var ret = "",
+			// 		offset = parseInt(block.hash.offset) || 0,
+			// 		limit = parseInt(block.hash.limit) || 5,
+			// 		i = (offset < context.length) ? offset : 0,
+			// 		j = ((limit + offset) < context.length) ? (limit + offset) : context.length;
+			// 	for(i,j; i<j; i++) {
+			// 		ret += block(context[i]);
+			// 	}
+			// 	return ret;
+			// }
+		}
 	}
 
 	return gulp.src(paths.html_templates.components)
-		// .pipe( hbsmaster(master, [], options))
-		.pipe( hbsmaster(master, templateDataSingleton, options))
+		.pipe( 
+			hbsmaster(
+				master, 
+				templateDataSingleton,
+				options
+				)
+			)
 		.pipe(gulp.dest(buildTargets.html + "components/"));
 });
 
@@ -342,10 +382,30 @@ gulp.task('build-html-pages', function() {
 			,paths.html_templates.component_partials + "modals/"
 			,paths.html_templates.component_partials + "typography/"
 			,paths.html_templates.component_partials
-		]
+		],
+		helpers: {
+            capitals : function(str){
+                return str.toUpperCase();
+            }
+			,slice: function(from, to, context, options) {
+				var item = "";
+				for (var i=from, j=to; i<j; i++) {
+					item = item + options.fn(context[i]);
+				}
+				return item;
+//				var ret = "",
+//					offset = parseInt(block.hash.offset) || 0,
+//					limit = parseInt(block.hash.limit) || 5,
+//					i = (offset < context.length) ? offset : 0,
+//					j = ((limit + offset) < context.length) ? (limit + offset) : context.length;
+//				for(i,j; i<j; i++) {
+//					ret += block(context[i]);
+//				}
+//				return ret;
+			}
+		}
 	}
 	return gulp.src(paths.html_templates.pages)
-		// .pipe( hbsmaster(master, [], options))
 		.pipe( hbsmaster(master, templateData, options))
 		.pipe(gulp.dest(buildTargets.html));
 });
