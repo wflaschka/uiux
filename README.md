@@ -42,7 +42,8 @@ Get browsersync for your computer at [https://browsersync.io/](https://browsersy
 
 This repository uses HTML templates to make component development faster, and to permit the combination of components into pages. 
 
-https://www.npmjs.com/package/gulp-handlebars-master
+* https://www.npmjs.com/package/gulp-handlebars-master
+    * Which depends on: https://www.npmjs.com/package/gulp-compile-handlebars
 
 ==NOTE: IMPORTANT WALTER:== Partials and components in nested directories won't show up if included in templates as partials unless the `gulpfile.js` task `build-html-pages` is updated. Add the new directories to scan to the `options` var under `batch`.
 
