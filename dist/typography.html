@@ -6,256 +6,275 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ArtTap UI/UX Patterns</title>
 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/materialize.css">
-    <!-- <link rel="stylesheet" type="text/css" href="./assets/styles/site.css"> -->
+    <link rel="stylesheet" type="text/css" href="/assets/styles/site.css">
 
-    <script src="./assets/scripts/jquery-3.1.1.js"></script>
-    <script src="./assets/scripts/materialize.js"></script>
-    <script type="text/javascript">
-        $( document ).ready(function() {});
-    </script>
+    <script type="text/javascript" src="/assets/scripts/jquery-3.1.1.js"></script>
+    <script type="text/javascript" src="/assets/scripts/site.js"></script>
+    <script type="text/javascript" src="/assets/scripts/jquery.modal.js"></script>
+    <script type="text/javascript" src="/assets/scripts/select2/select2.full.js"></script>
+
+    <!-- <script type="text/javascript" src="/assets/scripts/semantic-ui/api.js"></script> -->
+    <!-- <script type="text/javascript" src="/assets/scripts/semantic-ui/dropdown.js"></script> -->
+    <!-- <script type="text/javascript" src="/assets/scripts/semantic-ui/form.js"></script> -->
+    <!-- <script type="text/javascript" src="/assets/scripts/semantic-ui/transition.js"></script> -->
 
 </head>
-<body>
+<body id="prototype-page">
 
-    <main>
-
-        <div class="navbar-fixed">
-            <nav class="black">
-                <div class="nav-wrapper">
-                    <!-- <a href="index.html" class="center brand-logo"><img class="responsive-img" src="assets/images/graphics/Logo/ArtTap_Logo-Yellow.svg"></a> -->
-                    <!-- <a href="index.html" class="center brand-logo"><img class="sized image fluid" src="assets/images/arttap-square-logo.svg"></a> -->
-                    <a href="index.html" class="center brand-logo"><img class="centered fitted sized image" src="assets/images/graphics/Logo/ArtTap_Logo-Yellow.svg"></a>
-                    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-                    <ul class="right hide-on-mobile">
-                        <li><a class="pink-text text-lighten-4" href="https://www.codeply.com/go/xubNUCJTVG" target="_blank">Codeply testbed</a></li>
-                        <li><a class="pink-text text-lighten-4" href="#">Contact</a></li>
-                    </ul>
-
-                    <ul class="side-nav white" id="mobile-demo">
-                        <!-- <li><img class="centered fitted sized image" src="assets/images/graphics/Logo/ArtTap_Logo-Yellow.svg"></li> -->
-                        <!-- <a href="index.html" class=""><img class="centered fitted sized image" src="assets/images/graphics/Logo/ArtTap_Logo-Yellow.svg"></a> -->
-                        <!-- <ul> -->
-                        <li><a class="pink-text text-lighten-4" href="https://www.codeply.com/go/xubNUCJTVG" target="_blank">Codeply testbed</a></li>
-                        <li><a class="pink-text text-lighten-4" href="#">Contact</a></li>
-                    </ul>
-                    <!-- </div>  -->
-                </div>
-            </nav>
-        </div>
-
-        <div class="container">
-
-            <div class="section">
-                <h1 class="">
-                    Typography 
-                    <a href="index.html" class="btn-floating waves-effect waves-light blue"><i class="material-icons left">home</i></a>
-                </h1>
-                <p>
-                    Notes: WF, remember these are defined from the bottom-up, so bottom of page was first.
-                </p>
-            </div>
-
-
-
-
-            <div class="section">
-                <h3 documentation>Express fractions</h3>
-                <p documentation>Note: Just use standard HTML handling for math.</p>
-                <hr documentation />
-
-                <h1 secondary>
-                    <!-- <span documentation>Vanilla HTML:</span>  -->
-                    I would like them to be 11 <sup>3</sup>&frasl;<sub>8</sub>" long.
-                </h1>
-
-                <!-- <h1 secondary>
-                    <span documentation>CSS Style:</span>
-                    I would like them to be 11 <div class="fraction2">
-                        <span>3</span>
-                        <span class="symbol">/</span>
-                        <span class="bottom">8</span>
-                    </div>" long.
-                </h1> -->
-            </div>
-
-
-            <div class="section">
-                <h3 documentation>Display checkmark/message</h3>
-                <p documentation>TODO: These will use ArtTap logos.</p>
-                <hr documentation />
-
-<section class="level">
-    <div class="level-item">
-
-        <div class="display-action-status grey-text">
-            <i class="large material-icons">info_outline</i>
-            Please complete
-        </div>
-
-    </div>
-    <div class="level-item">
-
-        <div class="display-action-status purple-text">
-            <i class="large material-icons">edit</i>
-            Add bio
-        </div>
-
-    </div>
-    <div class="level-item">
-
-        <div class="display-action-status green-text">
-            <i class="large material-icons">check</i>
-            Complete
-        </div>
-
-    </div>
-    <div class="level-item">
-
-        <div class="display-action-status red-text">
-            <i class="large material-icons">error</i>
-            Did not work
-        </div>
-
-    </div>
-</section>
-
-            </div>
-
-
-
-
-            <div class="section">
-                <h3 documentation>Level component (leveler)</h3>
-                <ul documentation class="browser-default">
-                    <li>Puts items in a horizontal line.</li>
-                    <li>Sub-elements <tt>level-left</tt>, <tt>level-right</tt>, and then the item <tt>level-item</tt></li>
-                    <li>Missing classes: <tt>is-fluid</tt>, <tt>is-narrow</tt>, and does not handle special responsive mobile cases (see bulma's <tt>is-mobile</tt> subclass)
-                </ul>
-                <hr documentation />
-
-<p documentation>Equally spaces:</p>
-<div class="level">
-        <div class="level-item">
-            <h1>1</h1>
-        </div>
-        <div class="level-item">
-            <h1>2</h1>
-        </div>
-        <div class="level-item">
-            <h1>3</h1>
-        </div>
-        <div class="level-item">
-            <h1>4</h1>
-        </div>
-        <div class="level-item">
-            <h1>5</h1>
-        </div>
-</div>
-
-<hr documentation />
-
-<p documentation>Vertically centers, combine left/right items:</p>
-
-<div class="level">
-    <div class="level-left">
-        <div class="level-item">
-            <h1>level item</h1>
-        </div>
-        <div class="level-item">
-            <p>
-                level item 
-                <br />
-                level item 
-            </p>
-        </div>
-        <div class="level-item">
-            <a class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>button</a>
+<header>
+    <div class="header container-fluid">
+        <div class="row middle-xs">
+            <div class="col-xs"></div>
+            <a href="/" class="logo center middle aligned column col-xs center-xs middle-xs">
+                <img class="responsive height" src="assets/images/graphics/Logo/ArtTap_Logo-Yellow.svg">
+            </a>
+            <div class="col-xs"></div>
         </div>
     </div>
-    <div class="level-right">
-        <div class="level-item">
-            <img src="http://placehold.it/120x120" />
-        </div>
-        <div class="level-item">
-            <h3 secondary>150</h3>
-        </div>
-    </div>
-</div>
+</header>
+<main>
+
+<h1>Typography: Statistics</h1>
+
+	<div class="statistics">
+		<h4>
+			Artwork Stats
+		</h4>
+		<div class="statistics-row">
+	
+			<div class="item">
+				<h1>2/25</h1>
+				Sold
+			</div>
+			<div class="item">
+				<h1>2.5k</h1>
+				Views
+			</div>
+			<div class="item">
+				<h1>500</h1>
+				Saved to Collection
+			</div>
+			<div class="item">
+				<h1>250</h1>
+				Hearted
+			</div>
+			<div class="item">
+				<h1>555</h1>
+				Days in Prison
+			</div>
+		</div>
+	</div>
+	<div class="statistics">
+		<h4>
+			Artwork Stats
+		</h4>
+		<div class="statistics-row">
+	
+			<div class="item">
+				<h1>2/25</h1>
+				Sold
+			</div>
+			<div class="item">
+				<h1>2.5k</h1>
+				Views
+			</div>
+			<div class="item">
+				<h1>500</h1>
+				Saved to Collection
+			</div>
+			<div class="item">
+				<h1>250</h1>
+				Hearted
+			</div>
+			<div class="item">
+				<h1>555</h1>
+				Days in Prison
+			</div>
+		</div>
+	</div>
+	<div class="statistics">
+		<h4>
+			Artwork Stats
+		</h4>
+		<div class="statistics-row">
+	
+			<div class="item">
+				<h1>2/25</h1>
+				Sold
+			</div>
+			<div class="item">
+				<h1>2.5k</h1>
+				Views
+			</div>
+			<div class="item">
+				<h1>500</h1>
+				Saved to Collection
+			</div>
+			<div class="item">
+				<h1>250</h1>
+				Hearted
+			</div>
+			<div class="item">
+				<h1>555</h1>
+				Days in Prison
+			</div>
+		</div>
+	</div>
+	<div class="statistics">
+		<h4>
+			Artwork Stats
+		</h4>
+		<div class="statistics-row">
+	
+			<div class="item">
+				<h1>2/25</h1>
+				Sold
+			</div>
+			<div class="item">
+				<h1>2.5k</h1>
+				Views
+			</div>
+			<div class="item">
+				<h1>500</h1>
+				Saved to Collection
+			</div>
+			<div class="item">
+				<h1>250</h1>
+				Hearted
+			</div>
+			<div class="item">
+				<h1>555</h1>
+				Days in Prison
+			</div>
+		</div>
+	</div>
+	<div class="statistics">
+		<h4>
+			Artwork Stats
+		</h4>
+		<div class="statistics-row">
+	
+			<div class="item">
+				<h1>2/25</h1>
+				Sold
+			</div>
+			<div class="item">
+				<h1>2.5k</h1>
+				Views
+			</div>
+			<div class="item">
+				<h1>500</h1>
+				Saved to Collection
+			</div>
+			<div class="item">
+				<h1>250</h1>
+				Hearted
+			</div>
+			<div class="item">
+				<h1>555</h1>
+				Days in Prison
+			</div>
+		</div>
+	</div>
+	<div class="statistics">
+		<h4>
+			Artwork Stats
+		</h4>
+		<div class="statistics-row">
+	
+			<div class="item">
+				<h1>2/25</h1>
+				Sold
+			</div>
+			<div class="item">
+				<h1>2.5k</h1>
+				Views
+			</div>
+			<div class="item">
+				<h1>500</h1>
+				Saved to Collection
+			</div>
+			<div class="item">
+				<h1>250</h1>
+				Hearted
+			</div>
+			<div class="item">
+				<h1>555</h1>
+				Days in Prison
+			</div>
+		</div>
+	</div>
+	<div class="statistics">
+		<h4>
+			Artwork Stats
+		</h4>
+		<div class="statistics-row">
+	
+			<div class="item">
+				<h1>2/25</h1>
+				Sold
+			</div>
+			<div class="item">
+				<h1>2.5k</h1>
+				Views
+			</div>
+			<div class="item">
+				<h1>500</h1>
+				Saved to Collection
+			</div>
+			<div class="item">
+				<h1>250</h1>
+				Hearted
+			</div>
+			<div class="item">
+				<h1>555</h1>
+				Days in Prison
+			</div>
+		</div>
+	</div>
+	<div class="statistics">
+		<h4>
+			Artwork Stats
+		</h4>
+		<div class="statistics-row">
+	
+			<div class="item">
+				<h1>2/25</h1>
+				Sold
+			</div>
+			<div class="item">
+				<h1>2.5k</h1>
+				Views
+			</div>
+			<div class="item">
+				<h1>500</h1>
+				Saved to Collection
+			</div>
+			<div class="item">
+				<h1>250</h1>
+				Hearted
+			</div>
+			<div class="item">
+				<h1>555</h1>
+				Days in Prison
+			</div>
+		</div>
+	</div>
 
 
-
-
-            </div>
-
-            <div class="section">
-                <h3 documentation>Sub-headers <small>needs subheader / inline subhead coloration</small></h3>
-                <hr documentation />
-
-                <h1>Header (h1) primary</h1>
-                <h3>Sub-header (h3) primary</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><hr>
-                <h2>Header (h2) primary</h2>
-                <h4>Sub-header (h4) primary</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><hr>
-                <h3>Header (h3) primary</h3>
-                <h5>Sub-header (h5) primary</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><hr>
-                <h4>Header (h4) primary</h4>
-                <h5>Sub-header (h5) primary</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-<hr documentation />
-
-                <h1 secondary>Header (h1) secondary</h1>
-                <h3 secondary>Sub-header (h3) secondary</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><hr>
-                <h2 secondary>Header (h2) secondary</h2>
-                <h4 secondary>Sub-header (h4) secondary</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><hr>
-                <h3 secondary>Header (h3) secondary</h3>
-                <h5 secondary>Sub-header (h5) secondary</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><hr>
-                <h4 secondary>Header (h4) secondary</h4>
-                <h5 secondary>Sub-header (h5) secondary</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
-
-            <div class="section">
-                <h3 documentation>Headers <small>needs subheader / inline subhead coloration</small></h3>
-                <p documentation>Note: If viewing source, the spans at end of code are to keep from triggering sequential <tt>h1..h6</tt> elements into becoming subheads.</p>
-                <hr documentation />
-
-                <h1>Header (h1) primary <small>inline secondary</small></h1><span></span>
-                <h2>Header (h2) primary <small>inline secondary</small></h2><span></span>
-                <h3>Header (h3) primary <small>inline secondary</small></h3><span></span>
-                <h4>Header (h4) primary <small>inline secondary</small></h4><span></span>
-                <h5>Header (h5) primary <small>inline secondary</small></h5><span></span>
-                <h1 secondary>Header (h1) secondary <small>inline secondary</small></h1><span></span>
-                <h2 secondary>Header (h2) secondary <small>inline secondary</small></h2><span></span>
-                <h3 secondary>Header (h3) secondary <small>inline secondary</small></h3><span></span>
-                <h4 secondary>Header (h4) secondary <small>inline secondary</small></h4><span></span>
-                <h5 secondary>Header (h5) secondary <small>inline secondary</small></h5><span></span>
-            </div>
-
-
-    </main>
-
-    <footer class="page-footer black center-align">
+</main>
+<footer>
+    <div class="footer">
         <p>
             <strong>Walter Flaschka</strong> 
         </p>
         <p>
             <small>
-                <span class="chip green">v2: 20170722</span>
-                <span class="chip orange">v1: 20170502</span>
-                <span class="chip orange">v1: 20170331</span>
-                <span class="chip orange">v1: 20170325</span>
+                <em>Project:</em> ArtTap Exchange 20170921
             </small>
         </p>
-    </footer>
+    </div>
+</footer>
 
 
 </body>

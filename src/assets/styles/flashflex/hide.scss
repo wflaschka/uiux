@@ -1,0 +1,68 @@
+////////////////////////////////////////////////////////////////////
+// HIDE elements based on device
+// Relies on responsive.scss
+////////////////////////////////////////////////////////////////////
+
+.hide-for-phone-only {
+    @include for-phone-only {
+        display: none !important;
+    }
+}
+.hide-for-tablet-portrait {
+    @include for-tablet-portrait {
+        display: none !important;
+    }
+}
+.hide-for-tablet-portrait-down {
+    @include for-tablet-portrait-down {
+        display: none !important;
+    }
+}
+.hide-for-tablet-portrait-up {
+    @include for-tablet-portrait-up {
+        display: none !important;
+    }
+}
+
+.hide-for-tablet-landscape {
+    @include for-tablet-landscape {
+        display: none !important;
+    }
+}
+.hide-for-tablet-landscape-down {
+    @include for-tablet-landscape-down {
+        display: none !important;
+    }
+}
+.hide-for-tablet-landscape-up {
+    @include for-tablet-landscape-up {
+        display: none !important;
+    }
+}
+
+.hide-for-desktop {
+    @include for-desktop {
+        display: none !important;
+    }
+}
+.hide-for-desktop-down {
+    @include for-desktop-down {
+        display: none !important;
+    }
+}
+.hide-for-desktop-up {
+    @include for-desktop-up {
+        display: none !important;
+    }
+}
+
+.hide-for-big-desktop {
+    @include for-big-desktop {
+        display: none !important;
+    }
+}
+.hide-for-big-desktop-down {
+    @include for-big-desktop-down {
+        display: none !important;
+    }
+}

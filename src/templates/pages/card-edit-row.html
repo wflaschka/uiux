@@ -1,0 +1,17 @@
+{{> header-standard }}
+<main>
+
+
+<div class="row">
+	{{#dataset}}
+		{{> card-edit }}
+	{{/dataset}}
+</div>
+
+<p>&nbsp;</p>
+{{#single}}
+	{{> card-edit-empty }}
+{{/single}}
+
+</main>
+{{> footer-standard }}

@@ -1,0 +1,47 @@
+/*! Spectre.css | MIT License | github.com/picturepan2/spectre */
+
+// Core variables and mixins
+@import 'src/variables.scss';
+@import 'src/mixins.scss';
+
+// Reset and dependencies
+@import 'src/normalize.scss';
+@import 'src/base.scss';
+
+// Core classes
+@import 'src/typography.scss';
+@import 'src/asian.scss';
+@import 'src/tables.scss';
+@import 'src/buttons.scss';
+@import 'src/forms.scss';
+@import 'src/labels.scss';
+@import 'src/codes.scss';
+@import 'src/media.scss';
+
+// Layout
+@import 'src/layout.scss';
+@import 'src/navbar.scss';
+@import 'src/panels.scss';
+@import 'src/empty.scss';
+
+// Components
+@import 'src/accordions.scss';
+@import 'src/autocomplete.scss';
+@import 'src/avatars.scss';
+@import 'src/badges.scss';
+@import 'src/bars.scss';
+@import 'src/cards.scss';
+@import 'src/chips.scss';
+@import 'src/dropdowns.scss';
+@import 'src/menus.scss';
+@import 'src/modals.scss';
+@import 'src/navigation.scss';
+@import 'src/popovers.scss';
+@import 'src/steps.scss';
+@import 'src/tiles.scss';
+@import 'src/toasts.scss';
+@import 'src/tooltips.scss';
+
+// Utility classes
+@import 'src/animations.scss';
+@import 'src/utilities.scss';

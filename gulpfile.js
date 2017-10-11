@@ -1,33 +1,38 @@
-// wflaschka 20170719 -- Revision for Semantic-UI
-// wflaschka 20170722 -- Revision for MaterializeCSS
-var gulp = require('gulp');
-var path = require('path');
-var concat = require('gulp-concat');
-var del = require('del');
-var relative = require('relative');
-var debug = require('gulp-debug');
-var runSequence = require('run-sequence');
-var sass = require('gulp-sass');
-var sourcemaps = require('gulp-sourcemaps');
-var autoprefixer = require('gulp-autoprefixer');
-var sassdoc = require('sassdoc');
-var util = require("gulp-util"); // https://github.com/gulpjs/gulp-util
-var log = util.log;
+// Build the UI/UX website assets & template
+// Run all and start watching files with: 
+// 		PROMPT> gulp
+// or run specific builds, e.g.:
+// 		PROMPT> gulp watch
+// 		PROMPT> gulp html
+// 		PROMPT> gulp scripts
+// This works on MacOS and Linux, but hastn' been
+// tested on Windows...
 
-var less = require('gulp-less');
-var cleancss = require('gulp-clean-css');
-var csscomb = require('gulp-csscomb');
-var rename = require('gulp-rename');
+var gulp                 = require('gulp');
+var path                 = require('path');
+var concat               = require('gulp-concat');
+var del                  = require('del');
+var relative             = require('relative');
+var debug                = require('gulp-debug');
+var runSequence          = require('run-sequence');
+var sass                 = require('gulp-sass');
+var sourcemaps           = require('gulp-sourcemaps');
+var autoprefixer         = require('gulp-autoprefixer');
+var sassdoc              = require('sassdoc');
+var util                 = require("gulp-util"); // https://github.com/gulpjs/gulp-util
+var log                  = util.log;
+var less                 = require('gulp-less');
+var cleancss             = require('gulp-clean-css');
+var csscomb              = require('gulp-csscomb');
+var rename               = require('gulp-rename');
 var LessPluginAutoPrefix = require('less-plugin-autoprefix');
-var autoprefix= new LessPluginAutoPrefix({ browsers: ["last 4 versions"] });
-
-// https://semantic-ui.com/introduction/advanced-usage.html
-// var watch_semantic = require('./semantic/tasks/watch');
-// var build_semantic = require('./semantic/tasks/build');
+var autoprefix           = new LessPluginAutoPrefix({ browsers: ["last 4 versions"] });
+var hbsmaster            = require('gulp-handlebars-master');
+var fs                   = require('fs');
 
 // Paths
-var rootTarget = 'dist/';
-var rootSource = 'src/';
+var rootTarget           = 'dist/';
+var rootSource           = 'src/';
 
 var buildTargets = {
 	'scripts'     : rootTarget + 'assets/scripts'
@@ -42,53 +47,15 @@ var buildTargets = {
 };
 var paths = {
 	scripts: [
-		rootSource   + 'assets/scripts/**/*'
-		,'node_modules/nouislider/distribute/*.js'
-		,'node_modules/sweetalert2/dist/*.js'
+		rootSource   + 'assets/scripts/**/*',
+		'!' + rootSource   + 'assets/scripts/jquery.modal.min.js'
 	],
-	materializeJs: [
-		// Order is probably important.
-		// This ordering is from the MaterializeCSS gruntfile
-		 "node_modules/materialize-css/js/initial.js"
-		,"node_modules/materialize-css/js/jquery.easing.1.4.js"
-		,"node_modules/materialize-css/js/animation.js"
-		,"node_modules/materialize-css/js/velocity.min.js"
-		,"node_modules/materialize-css/js/hammer.min.js"
-		,"node_modules/materialize-css/js/jquery.hammer.js"
-		,"node_modules/materialize-css/js/global.js"
-		,"node_modules/materialize-css/js/collapsible.js"
-		,"node_modules/materialize-css/js/dropdown.js"
-		,"node_modules/materialize-css/js/modal.js"
-		,"node_modules/materialize-css/js/materialbox.js"
-		,"node_modules/materialize-css/js/parallax.js"
-		,"node_modules/materialize-css/js/tabs.js"
-		,"node_modules/materialize-css/js/tooltip.js"
-		,"node_modules/materialize-css/js/waves.js"
-		,"node_modules/materialize-css/js/toasts.js"
-		,"node_modules/materialize-css/js/sideNav.js"
-		,"node_modules/materialize-css/js/scrollspy.js"
-		,"node_modules/materialize-css/js/forms.js"
-		,"node_modules/materialize-css/js/slider.js"
-		,"node_modules/materialize-css/js/cards.js"
-		,"node_modules/materialize-css/js/chips.js"
-		,"node_modules/materialize-css/js/pushpin.js"
-		,"node_modules/materialize-css/js/buttons.js"
-		,"node_modules/materialize-css/js/transitions.js"
-		,"node_modules/materialize-css/js/scrollFire.js"
-		,"node_modules/materialize-css/js/date_picker/picker.js"
-		,"node_modules/materialize-css/js/date_picker/picker.date.js"
-		,"node_modules/materialize-css/js/date_picker/picker.time.js"
-		,"node_modules/materialize-css/js/character_counter.js"
-		,"node_modules/materialize-css/js/carousel.js"
-		,"node_modules/materialize-css/js/tapTarget.js"
-	],
+	materializeJs: [],
 	styles: [
 		rootSource    + 'assets/styles/**/*.css'
-		,'node_modules/nouislider/distribute/*.css'
 	],
 	fonts: [
 		rootSource    + 'assets/fonts/**/*'
-		,"node_modules/materialize-css/dist/fonts/**/*"
 	],
 	pdfs: [
 		rootSource    + 'assets/pdfs/**/*'
@@ -99,16 +66,24 @@ var paths = {
 		,'!' + rootSource + 'assets/images/**/*.ai'
 	],
 	sass: [
-//		rootSource    + 'assets/styles/bulma.scss'
-		rootSource    + 'assets/styles/materialize/materialize.scss'
-//		rootSource    + 'assets/styles/site.scss'
+		rootSource    + 'assets/styles/site.scss'
 	],
 	less: [
-//		rootSource    + 'assets/styles/bulma.scss'
 	],
 	html: [
 		rootSource    + '**/*.htm?'
 	],
+	html_templates: {
+		 index: rootSource + 'templates/pages/index.html'
+		,layouts: rootSource + 'templates/layouts/'
+		,partials: rootSource + 'templates/partials/'
+		,pages: [
+			rootSource + 'templates/pages/**/*',
+			'!' + rootSource + 'templates/pages/index.html'
+		]
+		,components: rootSource + 'templates/components/**/*'
+		,component_partials: rootSource + 'templates/components/' // path used for including components into pages
+	},
 	shell: [
 		rootSource + '**/*.sh'
 	]
@@ -130,8 +105,11 @@ var sassdocOptions = {
 ////////////////////////////////////////////////////////////////////////////////////
 // Start work:
 log("Gulpfile building...")
-// log("--paths:"); log(paths);
-// log("--buildTargets:"); log(buildTargets);
+log(" ")
+log(" ")
+log("NOTE NOTE NOTE:")
+log("    You'll need to add new template/components subfolders to gulpfile!")
+log(" ")
 
 // Clean target directory of everything
 gulp.task('clean', function() {
@@ -179,9 +157,12 @@ gulp.task('pdfs', function() {
 });
 
 // HTML
-gulp.task('html', function() {
-	return gulp.src(paths.html)
-		.pipe(gulp.dest(buildTargets.html));
+gulp.task('html', function(callback) {
+  runSequence(
+	'build-html-index',
+	'build-html-pages',
+	'build-html-component-pages',
+	callback);
 });
 
 // FONTS
@@ -196,7 +177,7 @@ gulp.task('shell', function() {
 		.pipe(gulp.dest(buildTargets.shell));
 });
 
-// Less CSS
+// [NOT IN USE] Less/CSS
 gulp.task('less', function() {
     gulp.src(paths.less)
         .pipe(less({
@@ -211,7 +192,7 @@ gulp.task('less', function() {
         .pipe(gulp.dest(buildTargets.styles))
 });
 
-// Handle MaterializeCSS's javascript
+// [NOT IN USE] Handle MaterializeCSS's javascript
 // gulp-concat documentation: https://www.npmjs.com/package/gulp-concat
 gulp.task('materializeJs', function() {
 	return gulp.src(paths.materializeJs)
@@ -221,11 +202,185 @@ gulp.task('materializeJs', function() {
 		.pipe(gulp.dest(buildTargets.scripts));
 });
 
-// import Semantic-UI tasks with custom task names
-// https://semantic-ui.com/introduction/advanced-usage.html
-// gulp.task('watch ui', 'Watch UI for Semantic UI', watch_semantic);
-// gulp.task('build ui', 'Build UI for Semantic UI', build_semantic);
+// TEMPLATING FUNCTIONALITY
+// https://www.npmjs.com/package/gulp-handlebars-master
+// uses https://www.npmjs.com/package/handlebars
+var templateData = {
+	"dataset": [
+		{
+			"image": "/assets/images/artwork/art-1.jpg",
+			"artist": "Camille Oudinot",
+			"title": "Fading Faces",
+			"price": "$930",
+			"from": "New York, NY",
+			"pieces": "1 piece",
+			"selfie": "/assets/images/profiles/person-1.jpg",
+			"follow": "add",
+			"hearts": 55
+		},
+		{
+			"image": "/assets/images/artwork/art-narrow-1.jpg",
+			"artist": "Sethlan Semelon",
+			"title": "Rhapsody in the Beginning of Summer",
+			"price": "$1930",
+			"from": "St. Louisville de la Mar, North Dakota",
+			"pieces": "230 pieces",
+			"selfie": "/assets/images/profiles/person-2.jpg",
+			"follow": "add",
+			"hearts": 23
+		},
+		{
+			"image": "/assets/images/artwork/art-wide-1.jpg",
+			"artist": "Nan Park",
+			"title": "Uncanny Valley",
+			"price": "$450",
+			"from": "Schenectady, NY",
+			"pieces": "15 pieces",
+			"selfie": "/assets/images/profiles/person-3.jpg",
+			"follow": "friend",
+			"hearts": 11
+		},
+		{
+			"image": "/assets/images/artwork/art-3.jpg",
+			"artist": "Jane Do",
+			"title": "Roommate #2",
+			"price": "$633",
+			"from": "New York, NY",
+			"pieces": "22 pieces",
+			"selfie": "/assets/images/profiles/person-1.jpg",
+			"follow": "add",
+			"hearts": 123
+		},
+		{
+			"image": "/assets/images/artwork/art-4.jpg",
+			"artist": "Jephesandra Tawarna",
+			"title": "Getting Coffee / Knife Wound",
+			"price": "$1024",
+			"from": "New York, NY",
+			"pieces": "44 pieces",
+			"selfie": "/assets/images/profiles/person-2.jpg",
+			"follow": "add",
+			"hearts": 61
+		},
+		{
+			"image": "/assets/images/artwork/art-5.jpg",
+			"artist": "Jimothy St. Creus de la Mare",
+			"title": "Oily Water",
+			"price": "$1930",
+			"from": "New York, NY",
+			"pieces": "60 pieces",
+			"selfie": "/assets/images/profiles/person-3.jpg",
+			"follow": "add",
+			"hearts": 31
+		},
+		{
+			"image": "/assets/images/artwork/art-6.jpg",
+			"artist": "Caulie Dempsei Alexandrian",
+			"title": "Lurid Overhead Squish",
+			"price": "$2450",
+			"from": "New York, NY",
+			"pieces": "20 pieces",
+			"selfie": "/assets/images/profiles/person-1.jpg",
+			"follow": "friend",
+			"hearts": 22
+		},
+		{
+			"image": "/assets/images/artwork/art-2.jpg",
+			"artist": "Amy Yu",
+			"title": "First Argument",
+			"price": "$4430",
+			"from": "New York, NY",
+			"pieces": "6 pieces",
+			"selfie": "/assets/images/profiles/person-2.jpg",
+			"follow": "add",
+			"hearts": 1
+		}
+	]
+}
 
+// Set up the template data for use in various contexts.
+var templateDataSingleton = {}
+templateDataSingleton['dataset'] = templateData["dataset"][0];
+log(templateDataSingleton);
+// For single component pages, we'll send just one record:
+templateData['single'] = templateData["dataset"][0];
+// Some templates need to know whether they're 
+// displaying single or in a big group, for example
+// components/details/heart.html & pages/hearts.html
+// because we don't want to repeat the javascript:
+templateData['single']['isSingle'] = true; 
+templateData['cards'] = templateData["dataset"];
+
+
+gulp.task('build-html-component-pages', function() {
+	// Master used for components:
+	var master = paths.html_templates.layouts + 'component-only.html';
+
+	// Options for generation, from:
+	// https://www.npmjs.com/package/gulp-compile-handlebars
+	options = {
+		ignorePartials: true, //ignores the unknown partials
+		// batch : Javascript array of filepaths to use as partials
+		batch : [paths.html_templates.partials],
+		helpers: {
+            capitals : function(str){
+                return str.toUpperCase();
+            }
+		}
+	}
+
+	return gulp.src(paths.html_templates.components)
+		.pipe( 
+			hbsmaster(
+				master, 
+				templateData['single'],
+				options
+				)
+			)
+		.pipe(gulp.dest(buildTargets.html + "components/"));
+});
+
+gulp.task('build-html-index', function() {
+	var master = paths.html_templates.layouts + 'project-index.html';
+	options = {
+		ignorePartials: true, //ignores the unknown partials
+		batch : [paths.html_templates.partials]
+	}
+	return gulp.src(paths.html_templates.index)
+		.pipe( hbsmaster(master, [], options))
+		.pipe(gulp.dest(buildTargets.html));
+});
+
+gulp.task('build-html-pages', function() {
+	var master = paths.html_templates.layouts + 'page.html';
+	options = {
+		ignorePartials: true, //ignores the unknown partials
+		batch : [
+			paths.html_templates.partials
+			,paths.html_templates.component_partials + "headers/"
+			,paths.html_templates.component_partials + "cards/"
+			,paths.html_templates.component_partials + "details/"
+			,paths.html_templates.component_partials + "modals/"
+			,paths.html_templates.component_partials + "typography/"
+			,paths.html_templates.component_partials
+		],
+		helpers: {
+            capitals : function(str){
+                return str.toUpperCase();
+            }
+			,slice: function(from, to, context, options) {
+				var item = "";
+				for (var i=from, j=to; i<j; i++) {
+					item = item + options.fn(context[i]);
+				}
+				return item;
+			}
+		}
+	}
+	return gulp.src(paths.html_templates.pages)
+		.pipe( hbsmaster(master, templateData, options))
+		.pipe(gulp.dest(buildTargets.html));
+});
 
 // Rerun the task when a file changes
 // invoke with: gulp watch
@@ -249,38 +404,7 @@ gulp.task('all', function(callback) {
 	'images', 'scripts', 'styles',
 	'less', 'sass', 'fonts', 'pdfs',
 	'html', 'shell',
-	// 'build ui', // no semantic-ui
-	'materializeJs',
 	callback);
 });
 
-// gulp.task('default', ['watch', 'watch ui']); // no semantic-ui
 gulp.task('default', ['watch']);
-
-
-
-// https://github.com/Semantic-Org/Example-External-Gulpfile/blob/master/gulpfile.js
-// /*******************************
-//             Custom
-// *******************************/
-// 
-// var
-//   gulp         = require('gulp'),
-// 
-//   // require tasks as dependencies
-//   watch        = require('./semantic/tasks/watch'),
-//   build        = require('./semantic/tasks/build')
-// ;
-// 
-// 
-// /*******************************
-//              Tasks
-// *******************************/
-// 
-// 
-// gulp.task('watch-ui', watch);
-// gulp.task('build-ui', build);
-// 
-// // Gulp help descriptions also work
-// // gulp.task('watch-ui', 'Watch UI for Semantic UI', watch);
-// // gulp.task('build-ui', 'Build UI for Semantic UI', build);
