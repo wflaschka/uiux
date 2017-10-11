@@ -1,0 +1,74 @@
+{{> header-standard }}
+<main>
+
+<style type="text/css">
+	.row {
+		/*border: 1px solid red;*/
+	}
+	.column {
+		/*border: 1px solid green;*/
+	}
+</style>
+
+<h5 documentation>(This page is in progress...)</h5><hr documentation>
+
+<div class="row">
+	<div class="column col-xs-9">
+		(Not you? <a>Sign In</a> or <a>Checkout as a Guest</a>)
+	</div>
+	<div class="column col-xs-5">
+		<strong>
+			Order Summary
+		</strong>
+	</div>
+</div>
+
+<div class="row">
+	<div class="column col-xs-4">
+		<h4>Shipping Address</h4>
+		<a>Change</a>
+		{{> typography-address-text }}
+	</div>
+	<div class="column col-xs-5">
+		<h4>Billing Address</h4>
+		<form>
+
+
+
+		</form>
+	</div>
+	<div class="column col-xs-5">
+
+<!-- <ul> -->
+<!-- </ul> -->
+		<div class="row">
+			<div class="col-xs-7">
+				{{#slice 0 1 dataset}}
+					{{> card-square-single }}
+				{{/slice}}
+			</div>
+			<div class="col-xs-7">
+				hi
+				<i class="fa fa-delete"></i>
+			</div>
+		</div>
+
+		<hr />
+
+		<div class="row">
+			<div class="col-xs-7">
+				{{#slice 1 2 dataset}}
+					{{> card-square-single }}
+				{{/slice}}
+			</div>
+			<div class="col-xs-7">
+				<i class="fa fa-delete"></i>
+			</div>
+		</div>
+
+		<hr />
+
+	</div>
+
+</main>
+{{> footer-standard }}

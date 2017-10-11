@@ -1,0 +1,162 @@
+////////////////////////////////////////////////////////////////////
+// MIXINS
+////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////
+// TRUNCATE TEXT https://engageinteractive.co.uk/blog/top-10-scss-mixins
+@mixin truncate($truncation-boundary) {
+    max-width: $truncation-boundary;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+////////////////////////////////////////////////////////////////////
+// SPIN animation (loading icon for Bulma 0.5.3)
+@keyframes spinAround {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+////////////////////////////////////////////////////////////////////
+// FADE COLOR
+@function fade($color, $amount) {
+    $amount: 1 - ($amount / 100);
+    @return transparentize($color, $amount);
+}
+
+////////////////////////////////////////////////////////////////////
+// Clearfix mixin
+@mixin clearfix() {
+    &::after {
+        clear: both;
+        content: "";
+        display: table;
+    }
+}
+
+////////////////////////////////////////////////////////////////////
+// Pick black/white based on background color
+// https://codepen.io/davidhalford/pen/wlDxL
+// 
+// mixin that calculates if text needs to be light or dark
+// depending on the background color passed.
+// Color brightness is determined by the following formula: 
+// ((Red value X 299) + (Green value X 587) + (Blue value X 114)) / 1000
+// 
+// .c000000{background-color:#000000; @include text-contrast(#000000);}
+@mixin text-contrast($n) {
+    $color-brightness: round((red($n) * 299) + (green($n) * 587) + (blue($n) * 114) / 1000);
+    $light-color: round((red(#ffffff) * 299) + (green(#ffffff) * 587) + (blue(#ffffff) * 114) / 1000);
+    
+    @if abs($color-brightness) < ($light-color/2){
+        // color: rgba(255, 255, 255, 0.8) !important;
+        color: white !important;
+    }
+
+    @else {
+        // Default color, or
+        // color: black !important;
+    }
+}
+
+////////////////////////////////////////////////////////////////////
+// MATERIAL DESIGN SHADOWS
+// https://gist.github.com/paulmelnikow/7fcfbe4f68e5df7fe326
+// 
+// A mixin which helps you to add depth to elements according to the Google Material Design spec:
+// http://www.google.com/design/spec/layout/layout-principles.html#layout-principles-dimensionality
+// 
+// Please note that the values given in the specification cannot be used as is. To create the same visual experience
+// the blur parameter has to be doubled.
+// 
+// Adapted from a LESS version at https://medium.com/@Florian/freebie-google-material-design-shadow-helper-2a0501295a2d
+// 
+// Original Author: Florian Kutschera (@gefangenimnetz), Conceptboard GmbH (@conceptboardapp)
+// 
+// Example usage:
+// .card {
+//     width: 95px;
+//     height: 95px;
+//     background: #f4f4f4;
+//     -webkit-transition: all 250ms;
+//     -moz-transition: all 250ms;
+//     transition: all 250ms;
+//     @include box_shadow(1);
+//     &:hover {
+//         @include box_shadow(3);
+//         -webkit-transform: translateY(-5px);
+//         -moz-transform: translateY(-5px);
+//         transform: translateY(-5px);
+//     }
+// }
+@mixin box_shadow ($level) {
+    @if $level == 1 {
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    } @else if $level == 2 {
+            box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    } @else if $level == 3 {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    } @else if $level == 4 {
+            box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    } @else if $level == 5 {
+            box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    }
+}
+@mixin box_shadow_topless ($level) {
+    @if $level == 1 {
+            box-shadow: 0 2px 2px rgba(0,0,0,0.12), 0 2px 1px rgba(0,0,0,0.24);
+    } @else if $level == 2 {
+            box-shadow: 0 3px 3px rgba(0,0,0,0.16), 0 3px 2px rgba(0,0,0,0.23);
+    } @else if $level == 3 {
+            box-shadow: 0 10px 10px rgba(0,0,0,0.19), 0 10px 8px rgba(0,0,0,0.23);
+    } @else if $level == 4 {
+            box-shadow: 0 14px 14px rgba(0,0,0,0.25), 0 14px 10px rgba(0,0,0,0.22);
+    } @else if $level == 5 {
+            box-shadow: 0 19px 19px rgba(0,0,0,0.30), 0 19px 15px rgba(0,0,0,0.22);
+    }
+}
+
+////////////////////////////////////////////////////////////////////
+// Z-INDEXES -- easier handling
+// $z-index is found in variables.scss
+//    .site-header {
+//        z-index: z('site-header');
+//    }
+@function z($name) {
+        @if index($z-indexes, $name) {
+                @return (length($z-indexes) - index($z-indexes, $name)) + 1;
+        } @else {
+                @warn 'There is no item "#{$name}" in this list; choose one of: #{$z-indexes}';
+                @return null;
+        }
+}
+
+////////////////////////////////////////////////////////////////////
+// CONVERT FONT SIZES between px and rem
+@function calculateRem($size) {
+    $remSize: $size / 16px;
+    @return #{$remSize}rem;
+}
+@function px-to-rem($size) {
+    @return calculateRem($size);
+}
+@function rem-to-px($size) {
+    @return strip-units($size) * 16px;
+}
+@function strip-units($number) {
+    @return $number / ($number * 0 + 1);
+}
+// FONT-SIZE with fallback -- might not be needed
+// px declaration as well as the calculated rem value.
+@mixin fontSize($size) {
+    font-size: $size;
+    font-size: calculateRem($size);
+}
+
+

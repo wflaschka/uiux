@@ -1,0 +1,47 @@
+{{> header-public }}
+
+
+<h5 documentation>(This page is in progress...)</h5><hr documentation>
+
+
+{{> modal-basic }}
+
+
+
+<h3>Artists</h3>
+<div class="row cards">
+	{{#dataset}}
+		{{> card-artist }}
+	{{/dataset}}
+</div>
+
+
+<h3>Recent Additions</h3>
+<div class="row masonry-grid">
+	{{#dataset}}
+		{{> card-masonry }}
+	{{/dataset}}
+	{{#dataset}}
+		{{> card-masonry }}
+	{{/dataset}}
+</div>
+
+<script type="text/javascript" src="assets/scripts/masonry.pkgd.min.js"></script>
+<script type="text/javascript" src="assets/scripts/imagesloaded.pkgd.min.js"></script>
+<script type="text/javascript">
+	// https://masonry.desandro.com/layout.html#imagesloaded
+	// init Masonry
+	var $grid = $('.masonry-grid').masonry({
+		"itemSelector": ".card",
+		"columnWidth": 170
+	});
+	// layout Masonry after each image loads
+	$grid.imagesLoaded().progress( function() {
+		$grid.masonry('layout');
+	});
+	
+</script>
+
+
+
+{{> footer-standard }}

@@ -1,0 +1,118 @@
+////////////////////////////////////////////////////////////////////
+// FLASHFLEX Base
+// Custom framework built from 3rd party libraries and 
+// other CSS frameworks.
+// 
+// "Using the best from the rest"
+////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////
+// DEBUGGING SCSS as you work. Examples:
+// @debug "$sm: " $sm;
+// @debug "rem-to-px($sm): " rem-to-px($sm);
+// @debug "rem-to-px($sm) - 1px: " (rem-to-px($sm) - 1px);
+// @warn "We are not working fast enough."
+
+////////////////////////////////////////////////////////////////////
+// BASICS
+	@import 'setup.scss';
+	@import 'mixins.scss';
+	@import 'mixins-bulma.scss';
+	// Mixins that mighte be useful are here: mixins-to-evaluate.scss
+
+////////////////////////////////////////////////////////////////////
+// VARIABLES AND SETTINGS
+	@import 'variables.scss';
+	@import 'variables-font-sizes.scss';
+	@import "colors.scss";
+	@import "fonts.scss";
+	@import "font-awesome.scss";
+
+////////////////////////////////////////////////////////////////////
+// LAYOUT, GRID, and RESPONSIVITY
+	// Grid system
+	@import "sass-flex-mixin.scss";
+	@import "flexboxgrid-sass.scss";
+	// Toplevel page elements (might be removed later)
+	@import "layout.scss";
+	// Responsive library:
+	@import "mediaquery-functions.scss";
+	@import "mediaquery-sass.scss";
+	// ArtTap's mixins for responsivity:
+	@import 'responsive.scss'; // mixins for device sizes
+	@import "hide.scss";  // Hide elements based on device sizes
+
+////////////////////////////////////////////////////////////////////
+// Animations
+// GREATLY simplify this when we're done. We don't need all this.
+	@import "animatewithsass/animate.scss";
+
+////////////////////////////////////////////////////////////////////
+// LAYOUT ELEMENTS
+	////////////////////////////////////////////////////////////////////
+	// General elements
+		@import "media.scss"; // images, etc.
+		@import "column.scss";
+		@import "jquery.modal.scss";
+		@import "containers-segments.scss";
+
+	////////////////////////////////////////////////////////////////////
+	// Typographic
+		@import "typography.scss";
+		@import "typography-statistics.scss";
+		@import "typography-icons.scss";
+
+	////////////////////////////////////////////////////////////////////
+	// ArtTap elements
+		@import "header-navbar.scss";
+		@import "card.scss";
+		// @import "card-row.scss";     // TODO
+		// @import "form-search.scss";  // TODO
+
+// ////////////////////////////////////////////////////////////////////
+// Detail elements
+	@import "avatars.scss";
+	@import "hearts.scss";
+	@import "tags.scss";
+	// @import "floating-badges.scss"; // Might not be needed
+
+////////////////////////////////////////////////////////////
+// FORMS -- derived from Bulma 0.5.3
+	// Remove this during color / variable consolidation step:
+	@import "bulma-0.5.3/variables.scss";
+
+	// Settings from Bulma
+	@import "bulma-0.5.3/controls.scss";
+	@import "bulma-0.5.3/mixins.scss";
+	@import "bulma-0.5.3/form.scss";
+
+	// Bulma 0.5.3 wants these variables
+	// This is for 'form-select2.scss':
+		$speed: 1s;
+		$border: $input-border-color;
+		$border-hover: $input-hover-border-color;
+	// Used by 'form.scss', consolidate these later in colors/variables files
+		$checkbox-offset: -15px;
+		$checkbox-width: 15px;
+		$checkbox-height: 15px;
+		$checkbox-border: 1px;
+		$checkbox-inner-padding: 2px;
+		$is-large-multiplier: 1.5; 
+		$input: $gray-color-dark;
+		$transition-duration: .4s;
+		$shadow-offset-x: 4px;
+		$shadow-offset-y: 4px;
+		$shadow-spread: 10px;
+		$shadow-color: $gray-color-light;
+		$primary-box-shadow: $shadow-offset-x $shadow-offset-y $shadow-spread $shadow-color;
+
+	// Select2 pulldowns and tags
+		@import "select2/core.scss";
+		@import "form-select2.scss";
+
+	// Our specific form CSS
+		@import "form.scss";
+
+////////////////////////////////////////////////////////////
+// PROTOTYPE settings -- ONLY for the UI/UX website
+	@import "prototype-ui-ux-website.scss";

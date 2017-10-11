@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ArtTap UI/UX Patterns</title>
+
+    <link rel="stylesheet" type="text/css" href="/assets/styles/site.css">
+
+    <script type="text/javascript" src="/assets/scripts/jquery-3.1.1.js"></script>
+    <script type="text/javascript" src="/assets/scripts/site.js"></script>
+    <script type="text/javascript" src="/assets/scripts/jquery.modal.js"></script>
+    <script type="text/javascript" src="/assets/scripts/select2/select2.full.js"></script>
+
+    <!-- <script type="text/javascript" src="/assets/scripts/semantic-ui/api.js"></script> -->
+    <!-- <script type="text/javascript" src="/assets/scripts/semantic-ui/dropdown.js"></script> -->
+    <!-- <script type="text/javascript" src="/assets/scripts/semantic-ui/form.js"></script> -->
+    <!-- <script type="text/javascript" src="/assets/scripts/semantic-ui/transition.js"></script> -->
+
+</head>
+<body id="prototype-page">
+
+<header>
+    <div class="header container-fluid">
+        <div class="row middle-xs">
+            <div class="col-xs"></div>
+            <a href="/" class="logo center middle aligned column col-xs center-xs middle-xs">
+                <img class="responsive height" src="assets/images/graphics/Logo/ArtTap_Logo-Yellow.svg">
+            </a>
+            <div class="col-xs"></div>
+        </div>
+    </div>
+</header>
+<main>
+
+<h2>Masonry via Javascript</h2>
+<!--
+	https://github.com/desandro/masonry
+	Docs:
+	https://masonry.desandro.com/
+		data-masonry='{ "itemSelector": ".card", "columnWidth": 170 }'
+	https://github.com/desandro/imagesloaded
+-->
+<div class="row masonry-grid">
+		<div class="card masonry">
+			<div class="image" style="background-image: url('/assets/images/artwork/art-1.jpg');">
+				<img src="/assets/images/artwork/art-1.jpg">
+			</div>
+			<div class="content">
+				<div class="hearts">
+					<i class="fa fa-heart-o"></i>
+				</div>
+				<div class="artist">
+					Camille Oudinot
+				</div>
+				<div class="title">
+					Fading Faces
+				</div>
+				<div class="price">
+					$930
+				</div>
+			</div>
+		</div>
+		<div class="card masonry">
+			<div class="image" style="background-image: url('/assets/images/artwork/art-narrow-1.jpg');">
+				<img src="/assets/images/artwork/art-narrow-1.jpg">
+			</div>
+			<div class="content">
+				<div class="hearts">
+					<i class="fa fa-heart-o"></i>
+				</div>
+				<div class="artist">
+					Sethlan Semelon
+				</div>
+				<div class="title">
+					Rhapsody in the Beginning of Summer
+				</div>
+				<div class="price">
+					$1930
+				</div>
+			</div>
+		</div>
+		<div class="card masonry">
+			<div class="image" style="background-image: url('/assets/images/artwork/art-wide-1.jpg');">
+				<img src="/assets/images/artwork/art-wide-1.jpg">
+			</div>
+			<div class="content">
+				<div class="hearts">
+					<i class="fa fa-heart-o"></i>
+				</div>
+				<div class="artist">
+					Nan Park
+				</div>
+				<div class="title">
+					Uncanny Valley
+				</div>
+				<div class="price">
+					$450
+				</div>
+			</div>
+		</div>
+		<div class="card masonry">
+			<div class="image" style="background-image: url('/assets/images/artwork/art-3.jpg');">
+				<img src="/assets/images/artwork/art-3.jpg">
+			</div>
+			<div class="content">
+				<div class="hearts">
+					<i class="fa fa-heart-o"></i>
+				</div>
+				<div class="artist">
+					Jane Do
+				</div>
+				<div class="title">
+					Roommate #2
+				</div>
+				<div class="price">
+					$633
+				</div>
+			</div>
+		</div>
+		<div class="card masonry">
+			<div class="image" style="background-image: url('/assets/images/artwork/art-4.jpg');">
+				<img src="/assets/images/artwork/art-4.jpg">
+			</div>
+			<div class="content">
+				<div class="hearts">
+					<i class="fa fa-heart-o"></i>
+				</div>
+				<div class="artist">
+					Jephesandra Tawarna
+				</div>
+				<div class="title">
+					Getting Coffee / Knife Wound
+				</div>
+				<div class="price">
+					$1024
+				</div>
+			</div>
+		</div>
+		<div class="card masonry">
+			<div class="image" style="background-image: url('/assets/images/artwork/art-5.jpg');">
+				<img src="/assets/images/artwork/art-5.jpg">
+			</div>
+			<div class="content">
+				<div class="hearts">
+					<i class="fa fa-heart-o"></i>
+				</div>
+				<div class="artist">
+					Jimothy St. Creus de la Mare
+				</div>
+				<div class="title">
+					Oily Water
+				</div>
+				<div class="price">
+					$1930
+				</div>
+			</div>
+		</div>
+		<div class="card masonry">
+			<div class="image" style="background-image: url('/assets/images/artwork/art-6.jpg');">
+				<img src="/assets/images/artwork/art-6.jpg">
+			</div>
+			<div class="content">
+				<div class="hearts">
+					<i class="fa fa-heart-o"></i>
+				</div>
+				<div class="artist">
+					Caulie Dempsei Alexandrian
+				</div>
+				<div class="title">
+					Lurid Overhead Squish
+				</div>
+				<div class="price">
+					$2450
+				</div>
+			</div>
+		</div>
+		<div class="card masonry">
+			<div class="image" style="background-image: url('/assets/images/artwork/art-2.jpg');">
+				<img src="/assets/images/artwork/art-2.jpg">
+			</div>
+			<div class="content">
+				<div class="hearts">
+					<i class="fa fa-heart-o"></i>
+				</div>
+				<div class="artist">
+					Amy Yu
+				</div>
+				<div class="title">
+					First Argument
+				</div>
+				<div class="price">
+					$4430
+				</div>
+			</div>
+		</div>
+		<div class="card masonry">
+			<div class="image" style="background-image: url('/assets/images/artwork/art-1.jpg');">
+				<img src="/assets/images/artwork/art-1.jpg">
+			</div>
+			<div class="content">
+				<div class="hearts">
+					<i class="fa fa-heart-o"></i>
+				</div>
+				<div class="artist">
+					Camille Oudinot
+				</div>
+				<div class="title">
+					Fading Faces
+				</div>
+				<div class="price">
+					$930
+				</div>
+			</div>
+		</div>
+		<div class="card masonry">
+			<div class="image" style="background-image: url('/assets/images/artwork/art-narrow-1.jpg');">
+				<img src="/assets/images/artwork/art-narrow-1.jpg">
+			</div>
+			<div class="content">
+				<div class="hearts">
+					<i class="fa fa-heart-o"></i>
+				</div>
+				<div class="artist">
+					Sethlan Semelon
+				</div>
+				<div class="title">
+					Rhapsody in the Beginning of Summer
+				</div>
+				<div class="price">
+					$1930
+				</div>
+			</div>
+		</div>
+		<div class="card masonry">
+			<div class="image" style="background-image: url('/assets/images/artwork/art-wide-1.jpg');">
+				<img src="/assets/images/artwork/art-wide-1.jpg">
+			</div>
+			<div class="content">
+				<div class="hearts">
+					<i class="fa fa-heart-o"></i>
+				</div>
+				<div class="artist">
+					Nan Park
+				</div>
+				<div class="title">
+					Uncanny Valley
+				</div>
+				<div class="price">
+					$450
+				</div>
+			</div>
+		</div>
+		<div class="card masonry">
+			<div class="image" style="background-image: url('/assets/images/artwork/art-3.jpg');">
+				<img src="/assets/images/artwork/art-3.jpg">
+			</div>
+			<div class="content">
+				<div class="hearts">
+					<i class="fa fa-heart-o"></i>
+				</div>
+				<div class="artist">
+					Jane Do
+				</div>
+				<div class="title">
+					Roommate #2
+				</div>
+				<div class="price">
+					$633
+				</div>
+			</div>
+		</div>
+		<div class="card masonry">
+			<div class="image" style="background-image: url('/assets/images/artwork/art-4.jpg');">
+				<img src="/assets/images/artwork/art-4.jpg">
+			</div>
+			<div class="content">
+				<div class="hearts">
+					<i class="fa fa-heart-o"></i>
+				</div>
+				<div class="artist">
+					Jephesandra Tawarna
+				</div>
+				<div class="title">
+					Getting Coffee / Knife Wound
+				</div>
+				<div class="price">
+					$1024
+				</div>
+			</div>
+		</div>
+		<div class="card masonry">
+			<div class="image" style="background-image: url('/assets/images/artwork/art-5.jpg');">
+				<img src="/assets/images/artwork/art-5.jpg">
+			</div>
+			<div class="content">
+				<div class="hearts">
+					<i class="fa fa-heart-o"></i>
+				</div>
+				<div class="artist">
+					Jimothy St. Creus de la Mare
+				</div>
+				<div class="title">
+					Oily Water
+				</div>
+				<div class="price">
+					$1930
+				</div>
+			</div>
+		</div>
+		<div class="card masonry">
+			<div class="image" style="background-image: url('/assets/images/artwork/art-6.jpg');">
+				<img src="/assets/images/artwork/art-6.jpg">
+			</div>
+			<div class="content">
+				<div class="hearts">
+					<i class="fa fa-heart-o"></i>
+				</div>
+				<div class="artist">
+					Caulie Dempsei Alexandrian
+				</div>
+				<div class="title">
+					Lurid Overhead Squish
+				</div>
+				<div class="price">
+					$2450
+				</div>
+			</div>
+		</div>
+		<div class="card masonry">
+			<div class="image" style="background-image: url('/assets/images/artwork/art-2.jpg');">
+				<img src="/assets/images/artwork/art-2.jpg">
+			</div>
+			<div class="content">
+				<div class="hearts">
+					<i class="fa fa-heart-o"></i>
+				</div>
+				<div class="artist">
+					Amy Yu
+				</div>
+				<div class="title">
+					First Argument
+				</div>
+				<div class="price">
+					$4430
+				</div>
+			</div>
+		</div>
+</div>
+
+<script type="text/javascript" src="assets/scripts/masonry.pkgd.min.js"></script>
+<script type="text/javascript" src="assets/scripts/imagesloaded.pkgd.min.js"></script>
+<script type="text/javascript">
+	// https://masonry.desandro.com/layout.html#imagesloaded
+	// init Masonry
+	var $grid = $('.masonry-grid').masonry({
+		"itemSelector": ".card",
+		"columnWidth": 170
+	});
+	// layout Masonry after each image loads
+	$grid.imagesLoaded().progress( function() {
+		$grid.masonry('layout');
+	});
+	
+</script>
+
+</main>
+<footer>
+    <div class="footer">
+        <p>
+            <strong>Walter Flaschka</strong> 
+        </p>
+        <p>
+            <small>
+                <em>Project:</em> ArtTap Exchange 20170921
+            </small>
+        </p>
+    </div>
+</footer>
+
+
+</body>
+</html>
+
+

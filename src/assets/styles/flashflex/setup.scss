@@ -1,0 +1,27 @@
+////////////////////////////////////////////////////////////////////
+// SETUP
+// The default CSS is reset.
+// Adding to this as we learn we need new things.
+////////////////////////////////////////////////////////////////////
+
+html {
+  font-size: 16px;
+	font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+////////////////////////////////////////////////////////////////////
+// IMPORTANT: How to measure elements
+// For precision, measure including the border & padding.
+* {
+  box-sizing: border-box;
+
+  &:before,
+  &:after {
+    box-sizing: border-box;
+  }
+}

@@ -1,0 +1,49 @@
+/**
+ * COLOR SETTINGS
+ */
+
+
+// These are for Spectre avatar include
+$border-width: $unit-o !default;
+$border-width-lg: $unit-h !default;
+
+// Core variables
+// Colors
+// Core colors
+$white: #ffffff;
+$black: #000000;
+$red: #ff0000;
+$primary-color: #E09D00 !default;
+$primary-color-dark: darken($primary-color, 3%) !default;
+$primary-color-light: lighten($primary-color, 3%) !default;
+$secondary-color: lighten($primary-color, 40%) !default;
+$secondary-color-dark: darken($secondary-color, 3%) !default;
+$secondary-color-light: lighten($secondary-color, 3%) !default;
+
+$link-color: $primary-color !default;
+$link-color-dark: darken($link-color, 5%) !default;
+
+// Gray colors
+$dark-color: #454d5d !default;
+$light-color: #fff !default;
+$gray-color: lighten($dark-color, 40%) !default;
+$gray-color-dark: darken($gray-color, 20%) !default;
+$gray-color-light: lighten($gray-color, 20%) !default;
+$gray: $gray-color;
+
+$border-color: lighten($dark-color, 60%) !default;
+$border-color-dark: darken($border-color, 10%) !default;
+$bg-color: lighten($dark-color, 66%) !default;
+$bg-color-dark: darken($bg-color, 3%) !default;
+$bg-color-light: $light-color !default;
+
+// Control colors
+$success-color: #32b643 !default;
+$warning-color: #ffb700 !default;
+$error-color: #e85600 !default;
+
+// Other colors
+$code-color: #e06870 !default;
+$highlight-color: #ffe9b3 !default;
+$body-bg: $bg-color-light !default;
+$body-font-color: lighten($dark-color, 5%) !default;

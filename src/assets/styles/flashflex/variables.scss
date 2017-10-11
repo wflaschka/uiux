@@ -1,0 +1,69 @@
+////////////////////////////////////////////////////////////////////
+// VARIABLES FOR FRAMEWORK
+////////////////////////////////////////////////////////////////////
+
+// Site base: 1 rem should = 16px
+
+////////////////////////////////////////////////////////////////////
+// Z-INDEXES used in the site with the mixin z("sizename")
+// Usage: .top-navigation-bar { z-index: z('site-header'); }
+	$z-indexes: (
+		"modal",
+		"site-header",
+		"slide-in",
+		"main-content-box",
+		"default",
+		"site-footer"
+	);
+
+////////////////////////////////////////////////////////////////////
+// SHADOWS -- from ArtTap
+// However, we're also using the shadow mixins from 'mixins.scss'
+	$shadow: 0 2px 2px 0 rgba(0,0,0,0.24), 0 0 2px 0 rgba(0,0,0,0.12);
+
+////////////////////////////////////////////////////////////////////
+// BOX RADIUS -- used by Bulma 0.5.3
+	$radius: 2px;
+
+////////////////////////////////////////////////////////////////////
+// BREAKPOINTS
+	// From Robyn 20170912, except I added the tablet landscape
+	$breakpoints-from-ArtTap-Designer-Mobile: 360px;
+	$breakpoints-from-ArtTap-Designer-Tablet: 768px;
+	$breakpoints-from-ArtTap-Designer-TabletLandscape: 900px;
+	$breakpoints-from-ArtTap-Designer-Desktop: 1280px;
+	$breakpoints-from-ArtTap-Designer-DesktopBig: 1800px;
+	// The sizes above, converted to REM for flexboxgrid-sass framework
+	// Only used in responsive.scss
+	$fBG_xs: 37.5rem;
+	$fBG_sm: 48rem;
+	$fBG_md: 56rem;
+	$fBG_lg: 80em;
+	$fBG_xl: 112rem;
+
+////////////////////////////////////////////////////////////////////
+// Page element heights
+// These are used for math when we're laying out full-height pages
+	$page-element-nagbar-height: 20px;
+	$page-element-header-height: 60px;
+	$page-element-header-mobile-height: 50px;
+	$page-element-footer-height: 60px;
+	$page-element-footer-offset: 5rem;
+
+////////////////////////////////////////////////////////////////////
+// FONTS AND TEXT STYLES
+
+	////////////////////////////////////////////////////////////////////
+	// Font families
+		$font-family-header: "Portrait Web", Georgia;
+		$font-family-header-secondary: "Helvetica Neue", "Helvetica", "Arial", sans-serif !default;
+		$font-family-monospace: Menlo, Consolas, Monaco, "Lucida Console", "Fira Mono", monospace;
+		$font-family-sans-serif: Helvetica, Arial, sans-serif !default;
+		$font-family-body: $font-family-sans-serif;
+
+	////////////////////////////////////////////////////////////////////
+	// Font sizes
+		// Other font-size settings are set in 
+		// the file 'variable-font-sizes.scss'
+		// because it's a mess right now.
+

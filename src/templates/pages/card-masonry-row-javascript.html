@@ -1,0 +1,38 @@
+{{> header-standard }}
+<main>
+
+<h2>Masonry via Javascript</h2>
+<!--
+	https://github.com/desandro/masonry
+	Docs:
+	https://masonry.desandro.com/
+		data-masonry='{ "itemSelector": ".card", "columnWidth": 170 }'
+	https://github.com/desandro/imagesloaded
+-->
+<div class="row masonry-grid">
+	{{#dataset}}
+		{{> card-masonry }}
+	{{/dataset}}
+	{{#dataset}}
+		{{> card-masonry }}
+	{{/dataset}}
+</div>
+
+<script type="text/javascript" src="assets/scripts/masonry.pkgd.min.js"></script>
+<script type="text/javascript" src="assets/scripts/imagesloaded.pkgd.min.js"></script>
+<script type="text/javascript">
+	// https://masonry.desandro.com/layout.html#imagesloaded
+	// init Masonry
+	var $grid = $('.masonry-grid').masonry({
+		"itemSelector": ".card",
+		"columnWidth": 170
+	});
+	// layout Masonry after each image loads
+	$grid.imagesLoaded().progress( function() {
+		$grid.masonry('layout');
+	});
+	
+</script>
+
+</main>
+{{> footer-standard }}
