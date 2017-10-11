@@ -19064,4 +19064,8 @@ body#prototype-index-page a:not(.logo):hover::after {
   color: yellow;
 }
 
+body#prototype-index-page a:not(.logo):not([href]) {
+  border-style: dashed;
+}
+
 /*# sourceMappingURL=maps/site.css.map */

@@ -67,5 +67,8 @@ body#prototype-index-page {
             }
         }
 
+        &:not([href]) {
+            border-style: dashed;
+        }
     }
 }
