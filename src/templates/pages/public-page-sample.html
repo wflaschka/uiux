@@ -1,20 +1,31 @@
 {{> header-public }}
 
+
+<h5 documentation>(This page is in progress...)</h5><hr documentation>
+
+
 {{> modal-basic }}
 
 
 
 <h3>Artists</h3>
-<div class="row">
-	{{> card-artist }}
+<div class="row cards">
+	{{#dataset}}
+		{{> card-artist }}
+	{{/dataset}}
 </div>
 
 
 <h3>Recent Additions</h3>
 <div class="row masonry-grid">
-	{{> card-masonry }}
-	{{> card-masonry }}
+	{{#dataset}}
+		{{> card-masonry }}
+	{{/dataset}}
+	{{#dataset}}
+		{{> card-masonry }}
+	{{/dataset}}
 </div>
+
 <script type="text/javascript" src="assets/scripts/masonry.pkgd.min.js"></script>
 <script type="text/javascript" src="assets/scripts/imagesloaded.pkgd.min.js"></script>
 <script type="text/javascript">
@@ -31,8 +42,6 @@
 	
 </script>
 
-{{> typography-form }}
 
-<hr />
 
 {{> footer-standard }}

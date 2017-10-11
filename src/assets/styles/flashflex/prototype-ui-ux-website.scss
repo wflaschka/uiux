@@ -1,0 +1,71 @@
+////////////////////////////////////////////////////////////////////
+// PROTOTYPE STYLES
+// Only for the UI/UX prototype website, and mostly the landing page.
+////////////////////////////////////////////////////////////////////
+
+body#prototype-page-component-only {
+    padding: 5rem;
+}
+body#prototype-page {
+    main {
+        padding: 5rem 1rem;
+    }
+}
+// Tags for prototype website
+body#prototype-index-page,
+body#prototype-page-component-only,
+body#prototype-page {
+    line-height: 1.8;
+    tt {
+        background-color: lighten(black, 90%);
+        color: lighten(black, 50%);
+        padding: 0.1rem 0.5rem;
+        border-radius: 3rem;
+    }
+    *[todo] {
+        color: orange;
+        &::before {
+            content: "To-do: ";
+        }
+    }
+    *[red] {
+        color: #cc0000;
+    }
+    em {
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+}
+body#prototype-index-page {
+    main {
+        padding: 0 2rem 0 2rem;
+    }
+    a:not(.logo) {
+        white-space: nowrap;
+        margin: 0.5rem 1rem;
+        border: 1px solid green;
+        padding: 0.3rem;
+        line-height: 2;
+        text-decoration: none;
+        border-radius: 5px;
+
+        &:first-of-type {
+            margin-left: 0;
+        }
+
+        &::after {
+            @extend .fa;
+            padding-left: 0.3rem;
+            content: "\f08e";
+        }
+
+        &:hover {
+            background-color: green;
+            color: white;
+            &::after {
+                color: yellow;
+            }
+        }
+
+    }
+}

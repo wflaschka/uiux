@@ -10,8 +10,12 @@
 	https://github.com/desandro/imagesloaded
 -->
 <div class="row masonry-grid">
-	{{> card-masonry }}
-	{{> card-masonry }}
+	{{#dataset}}
+		{{> card-masonry }}
+	{{/dataset}}
+	{{#dataset}}
+		{{> card-masonry }}
+	{{/dataset}}
 </div>
 
 <script type="text/javascript" src="assets/scripts/masonry.pkgd.min.js"></script>

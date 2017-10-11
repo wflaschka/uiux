@@ -5,6 +5,9 @@
 // -- Start editing -- //
 
 // Set the number of columns you want to use on your layout.
+// NOTE: This was set to 12 columns, which is the library's 
+// default -- offsets &etc end at 12. I set this to 14 to 
+// make layout sizes more precise.
 $flexboxgrid-grid-columns: 14 !default;
 
 // Set the gutter between columns.

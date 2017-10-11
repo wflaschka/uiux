@@ -1,8 +1,12 @@
-// wflaschka 20170719 -- Revision for Semantic-UI
-// wflaschka 20170722 -- Revision for MaterializeCSS
-// wflaschka 20170910 -- Revision for Spectre.less
-// wflaschka 20170915 -- Revision for flashflex "Steal all the things!"
-// wflaschka 20170921 -- Revision for html templates
+// Build the UI/UX website assets & template
+// Run all and start watching files with: 
+// 		PROMPT> gulp
+// or run specific builds, e.g.:
+// 		PROMPT> gulp watch
+// 		PROMPT> gulp html
+// 		PROMPT> gulp scripts
+// This works on MacOS and Linux, but hastn' been
+// tested on Windows...
 
 var gulp                 = require('gulp');
 var path                 = require('path');
@@ -173,7 +177,7 @@ gulp.task('shell', function() {
 		.pipe(gulp.dest(buildTargets.shell));
 });
 
-// Less CSS
+// [NOT IN USE] Less/CSS
 gulp.task('less', function() {
     gulp.src(paths.less)
         .pipe(less({
@@ -188,7 +192,7 @@ gulp.task('less', function() {
         .pipe(gulp.dest(buildTargets.styles))
 });
 
-// Handle MaterializeCSS's javascript
+// [NOT IN USE] Handle MaterializeCSS's javascript
 // gulp-concat documentation: https://www.npmjs.com/package/gulp-concat
 gulp.task('materializeJs', function() {
 	return gulp.src(paths.materializeJs)
@@ -202,7 +206,7 @@ gulp.task('materializeJs', function() {
 // https://www.npmjs.com/package/gulp-handlebars-master
 // uses https://www.npmjs.com/package/handlebars
 var templateData = {
-	"cards": [
+	"dataset": [
 		{
 			"image": "/assets/images/artwork/art-1.jpg",
 			"artist": "Camille Oudinot",
@@ -294,31 +298,19 @@ var templateData = {
 	]
 }
 
-// This is a view of the data with only one record,
-// which is used when working with single elements 
-// in templates/components/*/*.html. It uses the same 
-// fieldname 'cards' so the same component can be shown
-// in a multi-element context (i.e., single card / row of 
-// cards).
+// Set up the template data for use in various contexts.
 var templateDataSingleton = {}
-templateDataSingleton['cards'] = templateData["cards"][0];
+templateDataSingleton['dataset'] = templateData["dataset"][0];
 log(templateDataSingleton);
+// For single component pages, we'll send just one record:
+templateData['single'] = templateData["dataset"][0];
+// Some templates need to know whether they're 
+// displaying single or in a big group, for example
+// components/details/heart.html & pages/hearts.html
+// because we don't want to repeat the javascript:
+templateData['single']['isSingle'] = true; 
+templateData['cards'] = templateData["dataset"];
 
-// On some template pages we need a different approach to 
-// a singleton
-templateData['single'] = templateData["cards"][0];
-// From: https://gist.github.com/elidupuis/1468937/246e9215971bf436e747fd22f6f72f7f3a431b04
-// var handlebarsArraySlice = (function(context, block) {
-// 	var ret = "",
-// 		offset = parseInt(block.hash.offset) || 0,
-// 		limit = parseInt(block.hash.limit) || 5,
-// 		i = (offset < context.length) ? offset : 0,
-// 		j = ((limit + offset) < context.length) ? (limit + offset) : context.length;
-// 	for(i,j; i<j; i++) {
-// 		ret += block(context[i]);
-// 	}
-// 	return ret;
-// });
 
 gulp.task('build-html-component-pages', function() {
 	// Master used for components:
@@ -334,17 +326,6 @@ gulp.task('build-html-component-pages', function() {
             capitals : function(str){
                 return str.toUpperCase();
             }
-			// ,slice: function(context, block) {
-			// 	var ret = "",
-			// 		offset = parseInt(block.hash.offset) || 0,
-			// 		limit = parseInt(block.hash.limit) || 5,
-			// 		i = (offset < context.length) ? offset : 0,
-			// 		j = ((limit + offset) < context.length) ? (limit + offset) : context.length;
-			// 	for(i,j; i<j; i++) {
-			// 		ret += block(context[i]);
-			// 	}
-			// 	return ret;
-			// }
 		}
 	}
 
@@ -352,7 +333,7 @@ gulp.task('build-html-component-pages', function() {
 		.pipe( 
 			hbsmaster(
 				master, 
-				templateDataSingleton,
+				templateData['single'],
 				options
 				)
 			)
@@ -393,15 +374,6 @@ gulp.task('build-html-pages', function() {
 					item = item + options.fn(context[i]);
 				}
 				return item;
-//				var ret = "",
-//					offset = parseInt(block.hash.offset) || 0,
-//					limit = parseInt(block.hash.limit) || 5,
-//					i = (offset < context.length) ? offset : 0,
-//					j = ((limit + offset) < context.length) ? (limit + offset) : context.length;
-//				for(i,j; i<j; i++) {
-//					ret += block(context[i]);
-//				}
-//				return ret;
 			}
 		}
 	}
@@ -432,7 +404,6 @@ gulp.task('all', function(callback) {
 	'images', 'scripts', 'styles',
 	'less', 'sass', 'fonts', 'pdfs',
 	'html', 'shell',
-	'materializeJs',
 	callback);
 });
 

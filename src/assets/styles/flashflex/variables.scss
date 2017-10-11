@@ -1,109 +1,69 @@
-/**
- * VARIABLES
- */
+////////////////////////////////////////////////////////////////////
+// VARIABLES FOR FRAMEWORK
+////////////////////////////////////////////////////////////////////
 
+// Site base: 1 rem should = 16px
 
-$shadow: 0 2px 2px 0 rgba(0,0,0,0.24), 0 0 2px 0 rgba(0,0,0,0.12);
+////////////////////////////////////////////////////////////////////
+// Z-INDEXES used in the site with the mixin z("sizename")
+// Usage: .top-navigation-bar { z-index: z('site-header'); }
+	$z-indexes: (
+		"modal",
+		"site-header",
+		"slide-in",
+		"main-content-box",
+		"default",
+		"site-footer"
+	);
 
-// Font size definition approach via Bulma
-$size-1: 3rem !default
-$size-2: 2.5rem !default
-$size-3: 2rem !default
-$size-4: 1.5rem !default
-$size-5: 1.25rem !default
-$size-6: 1rem !default
-$size-7: 0.75rem !default
+////////////////////////////////////////////////////////////////////
+// SHADOWS -- from ArtTap
+// However, we're also using the shadow mixins from 'mixins.scss'
+	$shadow: 0 2px 2px 0 rgba(0,0,0,0.24), 0 0 2px 0 rgba(0,0,0,0.12);
 
-$weight-light: 300 !default
-$weight-normal: 400 !default
-$weight-semibold: 500 !default
-$weight-bold: 700 !default
+////////////////////////////////////////////////////////////////////
+// BOX RADIUS -- used by Bulma 0.5.3
+	$radius: 2px;
 
-$size-small: $size-7 !default
-$size-normal: $size-6 !default
-$size-medium: $size-5 !default
-$size-large: $size-4 !default
+////////////////////////////////////////////////////////////////////
+// BREAKPOINTS
+	// From Robyn 20170912, except I added the tablet landscape
+	$breakpoints-from-ArtTap-Designer-Mobile: 360px;
+	$breakpoints-from-ArtTap-Designer-Tablet: 768px;
+	$breakpoints-from-ArtTap-Designer-TabletLandscape: 900px;
+	$breakpoints-from-ArtTap-Designer-Desktop: 1280px;
+	$breakpoints-from-ArtTap-Designer-DesktopBig: 1800px;
+	// The sizes above, converted to REM for flexboxgrid-sass framework
+	// Only used in responsive.scss
+	$fBG_xs: 37.5rem;
+	$fBG_sm: 48rem;
+	$fBG_md: 56rem;
+	$fBG_lg: 80em;
+	$fBG_xl: 112rem;
 
-$font-size-small: $size-small;
-$font-size-normal: $size-normal;
-$font-size-medium: $size-medium;
-$font-size-large: $size-large;
+////////////////////////////////////////////////////////////////////
+// Page element heights
+// These are used for math when we're laying out full-height pages
+	$page-element-nagbar-height: 20px;
+	$page-element-header-height: 60px;
+	$page-element-header-mobile-height: 50px;
+	$page-element-footer-height: 60px;
+	$page-element-footer-offset: 5rem;
 
-$font-weight-bold: $weight-bold;
+////////////////////////////////////////////////////////////////////
+// FONTS AND TEXT STYLES
 
-// Bulma's default radius for many elements
-$radius: 2px;
+	////////////////////////////////////////////////////////////////////
+	// Font families
+		$font-family-header: "Portrait Web", Georgia;
+		$font-family-header-secondary: "Helvetica Neue", "Helvetica", "Arial", sans-serif !default;
+		$font-family-monospace: Menlo, Consolas, Monaco, "Lucida Console", "Fira Mono", monospace;
+		$font-family-sans-serif: Helvetica, Arial, sans-serif !default;
+		$font-family-body: $font-family-sans-serif;
 
-// FONTS
-$roboto-font-path: "../fonts/" !default;
-$font-family-monospace: Menlo, Consolas, Monaco, "Lucida Console", "Fira Mono", monospace;
-$font-family-header: "Portrait Web", Georgia;
-$font-family-header-secondary: "Helvetica Neue", "Helvetica", "Arial", sans-serif !default;
-$font-family-sans-serif: Helvetica, Arial, sans-serif !default;
-$font-family-body: $font-family-sans-serif;
+	////////////////////////////////////////////////////////////////////
+	// Font sizes
+		// Other font-size settings are set in 
+		// the file 'variable-font-sizes.scss'
+		// because it's a mess right now.
 
-
-// Breakpoints
-// From Robyn 20170912 except the tablet landscape
-$breakPointMobile: 360px;
-$breakPointTablet: 768px;
-$breakPointTabletLandscape: 900px;
-$breakPointDesktop: 1280px;
-$breakPointDesktopBig: 1800px;
-
-// // Above renamed for flexboxgrid-sass framework
-// $xs: 22rem;
-// $sm: 48rem;
-// $md: 56rem;
-// $lg: 80em;
-// $xl: 112rem;
-
-// Above renamed for flexboxgrid-sass framework
-$xs: 37.5rem;
-$sm: 48rem;
-$md: 56rem;
-$lg: 80em;
-$xl: 112rem;
-
-// Measures
-// 1 rem should = 16px
-// $sizeRem: 16px;
-// $pxPerRem: 16;
-
-// Header Styles
-$margin-bottom-divisor: 3;
-$secondary-header-multiplier: 0.6;
-$off-black: rgba(0, 0, 0, 0.87) !default;
-$h1-fontsize: 4.2rem !default;
-$h2-fontsize: 3.56rem !default;
-$h3-fontsize: 2.92rem !default;
-$h4-fontsize: 2.28rem !default;
-$h5-fontsize: 1.64rem !default;
-$h6-fontsize: 1rem !default;
-
-
-// Spectre UNIT SIZES (fix later)
-// Unit sizes
-$unit-o: .05rem !default;
-$unit-h: .1rem !default;
-$unit-1: .2rem !default;
-$unit-2: .4rem !default;
-$unit-3: .6rem !default;
-$unit-4: .8rem !default;
-$unit-5: 1rem !default;
-$unit-6: 1.2rem !default;
-$unit-7: 1.4rem !default;
-$unit-8: 1.6rem !default;
-$unit-9: 1.8rem !default;
-$unit-10: 2rem !default;
-$unit-12: 2.4rem !default;
-$unit-16: 3.2rem !default;
-$unit-18: 4rem !default;
-$unit-20: 5rem !default;
-
-// Z-index
-$zindex-0: 1 !default;
-$zindex-1: 100 !default;
-$zindex-2: 200 !default;
-$zindex-3: 300 !default;
-$zindex-4: 400 !default;

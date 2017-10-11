@@ -1,18 +1,37 @@
-# at-ui-ux2
+# ArtTap UI/UX Patterns
 
-ArtTap UI/UX patterns for Marketplace project.
+*Point of contact:* Walter Flaschka wflaschka@gmail.com. Best methods for contact are the `#arttap` [Slack](https://slack.com/), [email](wflaschka@gmail.com), or texting the Google+ account for wflaschka@gmail.com.
 
-* **Update:** `20170921` This version uses `flashbox` which borrows the best concepts from all frameworks, but does it from scratch without creating tons of CSS conflicts down the line. Pull in concepts, code, and supporting libraries as needed.
-* ~~**Update:** `20170722 123106` This version of the AT-UI-UX repo (v2) uses [MaterializeCSS](http://materializecss.com/) instead of [Semantic UI](http://www.semantic-ui.com).~~
-* ~~This version of the AT-UI-UX repo (v2) uses [Semantic UI](http://www.semantic-ui.com) instead of [Bulma](http://bulma.io) because it has a wider range of components and pre-built interactions. The overhead for Bulma (e.g. getting dropdown menus to work, borrowing from Spectre.css, etc.) started to outweigh the benefits of having the lean framework. Bulma version is moved to `src-bulma/` but the gulpfile doesn't look at it ATM (20170719 110322).~~
+## Overview
+
+In this project we are building the HTML, Javascript, and CSS for the ArtTap web pages. This repository has workflow automation so we can build each *component* individually, and then combine those components into full *pages*. 
+
+*We are using the prototypes available at [this InVisionApp project](https://projects.invisionapp.com/d/main#/projects) to design the UI/UX.* If you do not have access to the InVisionApp project it may need to be shared with you. Contact wflaschka@gmail.com for assistance.
+
+This project uses npm, [Gulp.js](https://gulpjs.com/), and [Browsersync](https://www.browsersync.io/) to automate the development workflow. The idea of the workflow: 
+
+> We edit a piece of HTML or tweak a line of SCSS, hit *save*, and the browser window refreshes itself to show the changes.
+
+## Which framework?
+
+**Custom framework.** We are saving work doing it this way.
+
+During design iterations, several CSS frameworks were implemented (Semantic UI, Bulma, Spectre CSS, MaterializeCSS). All of them have a few pieces we need, but no single framework has every piece. Some of the frameworks were very complicated, with many interdependencies to learn; some of the frameworks were difficult to extend or customize. Most of the work turned into *undoing* or *debugging* these complicated frameworks so our own UI/UX could work properly.
+
+Since the ArtTap design is highly structured with few variations, we are using a custom CSS framework called **flashflex** that leverages third-party CSS libraries and borrows elements from the other frameworks. This has resulted in faster progress since it eliminates (mostly) the "fix broken or overly complicated code" step from the workflow and lets us concentrate on adding new things.
 
 ## Install
 
-Install with git:
+Instructions work on MacOS and probably Linux. Follow the same general steps for Windows. Please contact Walter with any problems you may experience.
+
+Install this repo with git:
 
 ```sh
 git clone https://github.com/wflaschka/at-ui-ux2.git at-ui-ux
+cd at-ui-ux
 ```
+
+If you don't have access, the repo may need to be shared with you.
 
 Install npm dependencies:
 
@@ -23,7 +42,7 @@ npm update
 Compile with `gulp`:
 
 ```sh
-gulp #cleans dist/, builds to /dist, watches /src
+gulp 
 ```
 
 Run browsersync for updates while developing:
@@ -34,18 +53,17 @@ cd dist && ./browsersync.sh
 After browsersync, you'll have a server running (probably on port `3000`) and you can load:
 
 * Project landing page http://localhost:3000
-* SassDocs for the project: http://localhost:3000/assets/styles/sassdoc/
 
-Get browsersync for your computer at [https://browsersync.io/](https://browsersync.io/).
+Browsersync is not included in this repository. It can be installed from [https://browsersync.io/](https://browsersync.io/).
 
 ## HTML templates
 
-This repository uses HTML templates to make component development faster, and to permit the combination of components into pages. 
+The `gulpfile.js` uses [Handlebars.js](http://handlebarsjs.com/) to build the HTML templates.
 
 * https://www.npmjs.com/package/gulp-handlebars-master
     * Which depends on: https://www.npmjs.com/package/gulp-compile-handlebars
 
-==NOTE: IMPORTANT WALTER:== Partials and components in nested directories won't show up if included in templates as partials unless the `gulpfile.js` task `build-html-pages` is updated. Add the new directories to scan to the `options` var under `batch`.
+==NOTE:== Partials in directories nested under `src/templates/components/` will not show up when included in templates unless the `gulpfile.js` task `build-html-pages` is updated. Any new component directories should be added to the `options` var under `batch`.
 
 Refer to partials and components in external files by their filename (without path):
 
@@ -58,33 +76,58 @@ Templates, partials, and components are stored in project as:
 
 * `src/`
     * `templates/` -- holds all the HTML that generates the `dist/*.html`
-        * `layouts/` -- main template(s) to use; variations for component display and full-page display
-            - `component-only.html` -- only use this for components
-            - `project-index.html` -- landing page, currently
-            - `page.html` -- multi-component and -partial pages, e.g. full page builds
+        * `layouts/` -- master page template(s)
+            - `component-only.html` -- this is what shows individual components
+            - `project-index.html` -- only used by the landing page
+            - `page.html` -- any multi-component and multi-partial pages
+        * **`components/`** -- all the individual website components, for example the HTML code for a user avatar is in `components/details/avatar.html`
         * `partials/` -- repeating pieces for layouts like JS / CSS includes, footer, etc.
-        * `components/` -- all the website components to be shown individually or aggregated into pages
         * `pages/` -- full pages that have multiple components together
 
 ## Library dependencies
 
-* Masonry grids
+It's not required to use `npm` to pull in external CSS or javascript libraries. Once we have the UI/UX settled with this project, the asset 
+compilation step will be moved to Laravel's webmix. 
+
+When we need to include an external library, these are the general rules:
+
+1. Place the SCSS version of CSS into `src/assets/styles/flashflex/` and `@import` it in the `_base.scss` file. Gulp compiles this to `site.css` which is included on all template pages.
+2. Place javascript into `src/assets/scripts/` and simply link them in `/templates/layouts/*.html` with `<script type="text/javascript" src="/assets/scripts/*.js"></script>`.
+3. Add the links to the external library to the list below (website and/or github)
+
+### Current dependencies
+
+* Masonry grid
     * https://github.com/desandro/masonry
     * Docs https://masonry.desandro.com/
     * Subdependency https://github.com/desandro/imagesloaded
-* CSS
+* Fontawesome
+    * For some icons
+    * http://fontawesome.io/
+* CSS Frameworks
     * Flexboxgrid-sass
+        * A very basic flexbox grid system which we can extend as needed
         * http://hugeinc.github.io/flexboxgrid-sass/
         * https://github.com/hugeinc/flexboxgrid-sass
-    * Fontawesome
     * Spectre CSS framework
         * For some components like Avatar
+        * Other components may be pulled in during development
+        * https://picturepan2.github.io/spectre/
         * https://github.com/picturepan2/spectre
+    * Bulma CSS framework
+        * For some components like forms
+        * Other components may be pulled in during development
+        * http://bulma.io/
 * Select2
+    * Select form element replacement and tag editor
     * https://select2.org/
     * https://github.com/select2/select2
-* Maybe
-    * Image cropping https://github.com/fengyuanchen/cropper
+* Modals
+    * http://jquerymodal.com/
+    * https://github.com/kylefox/jquery-modal
+* Things we need
+    * Image cropping, maybe: https://github.com/fengyuanchen/cropper
+    * Very simple text formatter for `textarea` form elements that we can limit to bold and italic
 
 ***
 

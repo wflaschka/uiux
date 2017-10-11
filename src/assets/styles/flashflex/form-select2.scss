@@ -1,22 +1,16 @@
-/**
-* Select2 with Bulma
-* https://stackoverflow.com/questions/43396252/bulma-css-with-select2-jquery-plugin
-* Documentation https://select2.org/
-*
-* This overwrites the directives supplied from select2/core.scss:
-*/
-
-// We'll rewrite these vars later
-// and define them in variables.scss
-$speed: 1s;
-$border: $input-border-color;
-$border-hover: $input-hover-border-color;
+////////////////////////////////////////////////////////////////////
+// Select2 STYLES to conform to Bulma 0.5.3
+// This overwrites the directives supplied from select2/core.scss
+// 
+// https://stackoverflow.com/questions/43396252/bulma-css-with-select2-jquery-plugin
+// Select2 documentation: https://select2.org/
+////////////////////////////////////////////////////////////////////
 
 .select2-wrapper {
 
     // Bulma 0.5.3 adds a right-floated down arrow 
     // using a CSS hack. Remove this for Tag input
-    // boxes.
+    // boxes:
     &.select-tags {
         &:after {
             border: none;
@@ -26,7 +20,6 @@ $border-hover: $input-hover-border-color;
     .select2-container {
         .select2-selection {
             transition: border-color $speed;
-            // font-family: $family-sans-serif;
             height: 2.285em;
             line-height: 1.5;
             font-size: 1rem;
@@ -71,8 +64,6 @@ $border-hover: $input-hover-border-color;
             }
             .select2-selection__arrow {
                 display: none;
-                // height: 100%;
-                // top: 0px;
             }
 
         }
