@@ -1,60 +1,77 @@
-/**
- * Responsive handling
- */
+////////////////////////////////////////////////////////////////////
+// RESPONSIVE MIXINS
+// Usage:
+//      .some-element {
+//          width: 50vw;
+//          @include for-phone-only {
+//              width: 80vw;
+//          }
+//      }
+////////////////////////////////////////////////////////////////////
 
-// @debug "$sm: " $sm;
-// @debug "rem-to-px($sm): " rem-to-px($sm);
-// @debug "rem-to-px($sm) - 1px: " (rem-to-px($sm) - 1px);
+////////////////////////////////////////////////////////////////////
+// Placeholders
+$for-phone-only            : (max, rem-to-px($fBG_xs));
+$for-tablet-portrait       : (inside, rem-to-px($fBG_xs), (rem-to-px($fBG_sm) - 1px));
+$for-tablet-portrait-up    : (min, rem-to-px($fBG_sm));
+$for-tablet-portrait-down  : (max, rem-to-px($fBG_sm));
+$for-tablet-landscape      : (inside, rem-to-px($fBG_sm), (rem-to-px($fBG_lg) - 1px));
+$for-tablet-landscape-up   : (min, rem-to-px($fBG_md));
+$for-tablet-landscape-down : (max, rem-to-px($fBG_md));
+$for-desktop               : (inside, rem-to-px($fBG_lg), (rem-to-px($fBG_xl) - 1px));
+$for-desktop-up            : (min, rem-to-px($fBG_lg));
+$for-desktop-down          : (max, rem-to-px($fBG_xl));
+$for-big-desktop           : (min, rem-to-px($fBG_xl));
+$for-big-desktop-up        : (min, rem-to-px($fBG_xl));
 
-$for-phone-only            : (max, rem-to-px($xs));
-$for-tablet-portrait       : (inside, rem-to-px($xs), (rem-to-px($sm) - 1px));
-$for-tablet-portrait-up    : (min, rem-to-px($sm));
-$for-tablet-portrait-down  : (max, rem-to-px($sm));
-$for-tablet-landscape      : (inside, rem-to-px($sm), (rem-to-px($lg) - 1px));
-$for-tablet-landscape-up   : (min, rem-to-px($md));
-$for-tablet-landscape-down : (max, rem-to-px($md));
-$for-desktop               : (inside, rem-to-px($lg), (rem-to-px($xl) - 1px));
-$for-desktop-up            : (min, rem-to-px($lg));
-$for-desktop-down          : (max, rem-to-px($xl));
-$for-big-desktop           : (min, rem-to-px($xl));
-$for-big-desktop-up        : (min, rem-to-px($xl));
+////////////////////////////////////////////////////////////////////
+// RESPONSIVITY
 
-@mixin for-phone-only {
-    @include mq($for-phone-only) { @content; }
-}
-@mixin for-tablet-portrait {
-    @include mq($for-tablet-portrait) { @content; }
-}
-@mixin for-tablet-portrait-up {
-    @include mq($for-tablet-portrait-up) { @content; }
-}
-@mixin for-tablet-portrait-down {
-    @include mq($for-tablet-portrait-down) { @content; }
-}
+    ////////////////////////////////////////////////////////////////////
+    // TINY screens
+    @mixin for-phone-only {
+        @include mq($for-phone-only) { @content; }
+    }
+    @mixin for-tablet-portrait {
+        @include mq($for-tablet-portrait) { @content; }
+    }
+    @mixin for-tablet-portrait-up {
+        @include mq($for-tablet-portrait-up) { @content; }
+    }
+    @mixin for-tablet-portrait-down {
+        @include mq($for-tablet-portrait-down) { @content; }
+    }
 
-@mixin for-tablet-landscape {
-    @include mq($for-tablet-landscape) { @content; }
-}
-@mixin for-tablet-landscape-up {
-    @include mq($for-tablet-landscape-up) { @content; }
-}
-@mixin for-tablet-landscape-down {
-    @include mq($for-tablet-landscape-down) { @content; }
-}
+    ////////////////////////////////////////////////////////////////////
+    // TABLET screens
+    @mixin for-tablet-landscape {
+        @include mq($for-tablet-landscape) { @content; }
+    }
+    @mixin for-tablet-landscape-up {
+        @include mq($for-tablet-landscape-up) { @content; }
+    }
+    @mixin for-tablet-landscape-down {
+        @include mq($for-tablet-landscape-down) { @content; }
+    }
 
-@mixin for-desktop {
-    @include mq($for-desktop) { @content; }
-}
-@mixin for-desktop-up {
-    @include mq($for-desktop-up) { @content; }
-}
-@mixin for-desktop-down {
-    @include mq($for-desktop-down) { @content; }
-}
+    ////////////////////////////////////////////////////////////////////
+    // DESKTOP screens
+    @mixin for-desktop {
+        @include mq($for-desktop) { @content; }
+    }
+    @mixin for-desktop-up {
+        @include mq($for-desktop-up) { @content; }
+    }
+    @mixin for-desktop-down {
+        @include mq($for-desktop-down) { @content; }
+    }
 
-@mixin for-big-desktop {
-    @include mq($for-big-desktop) { @content; }
-}
-@mixin for-big-desktop-down {
-    @include mq($for-big-desktop-up) { @content; }
-}
+    ////////////////////////////////////////////////////////////////////
+    // BIG DESKTOP screens
+    @mixin for-big-desktop {
+        @include mq($for-big-desktop) { @content; }
+    }
+    @mixin for-big-desktop-down {
+        @include mq($for-big-desktop-up) { @content; }
+    }
+

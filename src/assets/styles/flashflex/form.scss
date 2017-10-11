@@ -1,30 +1,17 @@
-/**
-* FORM markup
-* Forms start with Bulma 0.5.3, see docs: http://bulma.io/documentation/form/general/
-* We use Bulma because it's flexbox based and easy to extend,
-* while the other frameworks offer so many variations it becomes
-* very difficult to extend the styles for ArtTap.
-*
-* NOTE:
-* COLORS and VARIABLES will be consolidated into colors.scss and variables.scss
-*/
+////////////////////////////////////////////////////////////////////
+// FORM CSS
+// 
+// Forms start with Bulma 0.5.3, see docs: http://bulma.io/documentation/form/general/
+// We use Bulma because it's flexbox based and easy to extend,
+// while the other frameworks offer so many variations it becomes
+// very difficult to extend the styles for ArtTap.
+// 
+// NOTE:
+// COLORS and VARIABLES will be consolidated into colors.scss and variables.scss
+////////////////////////////////////////////////////////////////////
 
-// For required for ArtTap's fancy checkboxes and radios:
-	$checkbox-offset: -15px;
-	$checkbox-width: 15px;
-	$checkbox-height: 15px;
-	$checkbox-border: 1px;
-	$checkbox-inner-padding: 2px;
-	$is-large-multiplier: 1.5; 
 
-$input: $gray-color-dark;
-$transition-duration: .4s;
-$shadow-offset-x: 4px;
-$shadow-offset-y: 4px;
-$shadow-spread: 10px;
-$shadow-color: $gray-color-light;
-$primary-box-shadow: $shadow-offset-x $shadow-offset-y $shadow-spread $shadow-color;
-
+////////////////////////////////////////////////////////////////////
 // An extra span in form labels is used for "optional" or "required" etc.
 // <label>Label Name <span>Please do this soon</span></label>
 label {
@@ -37,6 +24,7 @@ label {
 	}
 }
 
+////////////////////////////////////////////////////////////////////
 // Checkbox and Radio handling
 // Set positioning for labels and checkbox/radio elements
 // * except `is-colorball-checkbox` which is special (defined later)

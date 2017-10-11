@@ -1,10 +1,11 @@
-/**
- * VARIABLES
- */
+////////////////////////////////////////////////////////////////////
+// SETUP
+// The default CSS is reset.
+// Adding to this as we learn we need new things.
+////////////////////////////////////////////////////////////////////
 
-// https://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/
 html {
-  font-size: 16px; /* Sets up the Base 10 stuff */
+  font-size: 16px;
 	font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
@@ -13,12 +14,9 @@ body {
 	padding: 0;
 }
 
-span {
-	// display: inline-block;
-}
-
-
-// From Bulma 0.5.3 minireset.scss
+////////////////////////////////////////////////////////////////////
+// IMPORTANT: How to measure elements
+// For precision, measure including the border & padding.
 * {
   box-sizing: border-box;
 

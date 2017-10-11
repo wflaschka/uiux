@@ -1,20 +1,24 @@
-/**
- * LAYOUT -- high level directives
- */
+////////////////////////////////////////////////////////////////////
+// LAYOUT
+// This makes sure that footer is always at bottom of page
+// by having main content area = 100vh - (header, nagbar, footer height)
+// This might change for the real ArtTap layouts.
+// Useful (for now) for the UI/UX project.
+// NOTE: Does not handle presence of "nagbar" or responsive changes.
+////////////////////////////////////////////////////////////////////
 
 main {
 	@extend .wrapper;
 
-	// Debug
-	// border: 1px solid red;
-	// SOOO weird: needs a border or else it won't show properly
+	// ?? Somehow makes it a "real" box
 	border: 1px solid rgba(0, 0, 0, 0);
 	
 
-	// Press the footer to the bottom on empty pages:
-	// Full view height, minus header, minus footer
 	height: 100%;
-	min-height: calc(100vh - 63px - 68px - 2rem);
+	min-height: calc(
+		100vh - 
+		$page-element-header-height - 
+		$page-element-footer-height);
 
 	margin: 0;
 	padding: 0;
@@ -23,7 +27,8 @@ main {
 footer {
 	@extend .container-fluid;
 	background: gray;
-	margin-top: 2rem;
+	margin-top: $page-element-footer-offset;
+	height: $page-element-footer-height;
 
 	* {
 		margin: 0;

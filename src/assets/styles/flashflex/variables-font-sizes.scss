@@ -1,0 +1,69 @@
+////////////////////////////////////////////////////////////////////
+// VARIABLES for font sizes
+// 
+// This mess is here because all the frameworks use
+// different conventions / units of measure for fonts.
+// This will be cleaned up when we stop importing new 
+// elements from other CSS frameworks.
+////////////////////////////////////////////////////////////////////
+
+	////////////////////////////////////////////////////////////////////
+	// Header variables (derived via Bulma 0.5.3)
+		$margin-bottom-divisor: 3;
+		$secondary-header-multiplier: 0.6;
+		$off-black: rgba(0, 0, 0, 0.87) !default;
+		$h1-fontsize: 4.2rem !default;
+		$h2-fontsize: 3.56rem !default;
+		$h3-fontsize: 2.92rem !default;
+		$h4-fontsize: 2.28rem !default;
+		$h5-fontsize: 1.64rem !default;
+		$h6-fontsize: 1rem !default;
+
+	////////////////////////////////////////////////////////////////////
+	// Font size definition approach via Bulma 0.5.3
+		$size-1: 3rem !default;
+		$size-2: 2.5rem !default;
+		$size-3: 2rem !default;
+		$size-4: 1.5rem !default;
+		$size-5: 1.25rem !default;
+		$size-6: 1rem !default;
+		$size-7: 0.75rem !default;
+
+		$weight-light: 300 !default;
+		$weight-normal: 400 !default;
+		$weight-semibold: 500 !default;
+		$weight-bold: 700 !default;
+
+		$size-small: $size-7 !default;
+		$size-normal: $size-6 !default;
+		$size-medium: $size-5 !default;
+		$size-large: $size-4 !default;
+
+		$font-size-small: $size-small;
+		$font-size-normal: $size-normal;
+		$font-size-medium: $size-medium;
+		$font-size-large: $size-large;
+
+		$font-weight-bold: $weight-bold;
+
+
+// UNIT SIZES -- used by SpectreCSS
+// I.e., for 'avatars.scss'
+// We need to replace these later when we're done.
+	$unit-o: .05rem !default;
+	$unit-h: .1rem !default;
+	$unit-1: .2rem !default;
+	$unit-2: .4rem !default;
+	$unit-3: .6rem !default;
+	$unit-4: .8rem !default;
+	$unit-5: 1rem !default;
+	$unit-6: 1.2rem !default;
+	$unit-7: 1.4rem !default;
+	$unit-8: 1.6rem !default;
+	$unit-9: 1.8rem !default;
+	$unit-10: 2rem !default;
+	$unit-12: 2.4rem !default;
+	$unit-16: 3.2rem !default;
+	$unit-18: 4rem !default;
+	$unit-20: 5rem !default;
+

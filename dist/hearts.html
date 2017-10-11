@@ -34,68 +34,65 @@
 </header>
 <main>
 
-
-<!--
-	file:///Users/flash/Dropbox/Websites/Reference/spectre.css/spectre/components.html#avatars
--->
-
-<!-- 	<div class="heart">
-		<span class="heart-number is-grey">61</span>
-		<span class="icon"><i class="fa fa-heart"></i></span>
-	</div> -->
-
 	<div class="heart">
 		<span class="heart-number">55</span>
 		<i class="icon fa fa-heart"></i>
 	</div>
+	
+		<script type="text/javascript">
+			$( document ).ready(function() {
+				$('.heart').click(function(){
+					$(this).toggleClass( "is-hearted" );
+					$(this).toggleClass( "is-being-clicked" );
+					setTimeout(function(){
+						$('.heart').removeClass("is-being-clicked");
+					}, 750);
+	
+					// Toggle text just for visuals
+					if ($(this).hasClass("is-hearted")) {
+						$(this).find('.heart-number').html("63");
+					} else {
+						$(this).find('.heart-number').html("62");
+					}
+				});
+			});
+		</script>
 	<div class="heart">
 		<span class="heart-number">23</span>
 		<i class="icon fa fa-heart"></i>
 	</div>
+	
 	<div class="heart">
 		<span class="heart-number">11</span>
 		<i class="icon fa fa-heart"></i>
 	</div>
+	
 	<div class="heart">
 		<span class="heart-number">123</span>
 		<i class="icon fa fa-heart"></i>
 	</div>
+	
 	<div class="heart">
 		<span class="heart-number">61</span>
 		<i class="icon fa fa-heart"></i>
 	</div>
+	
 	<div class="heart">
 		<span class="heart-number">31</span>
 		<i class="icon fa fa-heart"></i>
 	</div>
+	
 	<div class="heart">
 		<span class="heart-number">22</span>
 		<i class="icon fa fa-heart"></i>
 	</div>
+	
 	<div class="heart">
 		<span class="heart-number">1</span>
 		<i class="icon fa fa-heart"></i>
 	</div>
+	
 
-
-<script type="text/javascript">
-	$( document ).ready(function() {
-		$('.heart').click(function(){
-			$(this).toggleClass( "is-hearted" );
-			$(this).toggleClass( "is-being-clicked" );
-			setTimeout(function(){
-				$('.heart').removeClass("is-being-clicked");
-			}, 750);
-
-			// Toggle text just for visuals
-			if ($(this).hasClass("is-hearted")) {
-				$(this).find('.heart-number').html("63");
-			} else {
-				$(this).find('.heart-number').html("62");
-			}
-		});
-	});
-</script>
 
 
 </main>
