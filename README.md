@@ -130,3 +130,4 @@ When we need to include an external library, these are the general rules:
 * Things we need
     * Image cropping, maybe: https://github.com/fengyuanchen/cropper
     * Very simple text formatter for `textarea` form elements that we can limit to bold and italic
+

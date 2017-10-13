@@ -20,7 +20,6 @@
 	.content {
 		height: 4rem;
 		width: 150px;
-		// border: 1px solid red;
 		margin-top: 0.8rem;
 
 		font-size: 13px;
@@ -28,10 +27,6 @@
 		line-height: 18px;
 		div {
 			@include truncate(100%);
-			// overflow: hidden;
-			// text-overflow: ellipsis;
-			// white-space: nowrap;
-
 			&.hearts {
 				float: right;
 			}
@@ -69,13 +64,12 @@
 				justify-content: center;
 
 				height: 100%;
-				// border: 1px solid red;
 			}
 		}
 
 		&.empty {
 			.image {
-				background-color: $gray-color-light;
+				background-color: color(gray-light);
 				display: flex;
 				flex-direction: column;
 				justify-content: center;

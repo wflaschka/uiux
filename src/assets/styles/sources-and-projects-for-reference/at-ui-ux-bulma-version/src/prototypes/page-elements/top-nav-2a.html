@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ArtTap UI/UX Patterns</title>
+
+	<link rel="stylesheet" type="text/css" href="../../assets/styles/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/styles/bulma.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/styles/site.css">
+	<script type="text/javascript" src="../../assets/scripts/jquery-3.1.1.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+	<h1 class="title is-1">
+		Header Nav
+		<a href="/" class="tag is-warning is-icon">
+			Home
+			<span class="icon is-small">
+				<i class="fa fa-arrow-up"></i>
+			</span>
+		</a>
+	</h1>
+
+	<section class="content is-large">
+		<p>
+			<em>Styles:</em> <tt>src/assets/styles/pages/header-nav.scss</tt>
+			<br>
+			<em>Markup:</em> <tt>src/prototypes/page-elements/top-nav-2.html</tt>
+		</p>
+		<p>
+			Bulma's <a href="http://bulma.io/documentation/components/nav/" target="_blank">default nav definition</a>.
+		</p>
+
+	</section>
+
+	<div class="box">
+		<h3 class="subtitle is-3">Example</h3>
+		<hr>
+<header>
+	<nav role="navigation">
+		<ul>
+			<li>
+				<a href="/">
+					<div>
+						Home
+						<span>there's no place like it</span>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="/blog">
+					<div>
+						Blog
+						<span>my thoughts rock</span>
+					</div>
+				</a><div>
+					<ul>
+						<li><a href="#">Me</a></li>
+						<li><a href="#">Gaming</a></li>
+						<li><a href="#">Sport</a></li>
+						<li><a href="#">Web Design</a></li>
+						<li><a href="#">Web Development</a></li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<a href="/contact">
+					<div>
+						Contact
+						<span>drop me a line</span>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="/forum">
+					<div>
+						Forum
+						<span>chat with others</span>
+					</div>
+				</a>
+			</li>
+		</ul>
+	</nav>
+</header>
+
+<style type="text/css">
+	* {margin: 0;padding: 0;outline: none;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+*:after, *:before { -webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section {  display: block;}
+html {font-size: 100%;height: auto !important;height: 100%;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;}
+.clear {display: block;	}
+.clear::after {clear: both;content: ".";display: block;height: 1px;visibility: hidden;}
+	
+
+	header {
+		background: linear-gradient(to left,rgba(54,194,182,0.96) 0,rgba(62,188,207,0.96) 100%);
+		border-bottom: 1px solid rgba(0,0,0,.1);
+		box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+ 		display: block; 
+ 		position: fixed; 
+		width: 100%;
+		z-index: 1000;
+	}
+	
+	header > nav > ul {
+ 		display: flex; 
+ 		flex-wrap: wrap; 
+ 		justify-content: flex-start; 
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	
+		header > nav > ul > li {
+ 			flex: 0 1 auto; 
+			margin: 3px  ;
+ 			padding: 0; 
+ 			position: relative; 
+ 			transition: all linear 0.1s;	 
+		}
+		
+			header > nav > ul > li:hover {
+				background: rgba(58,162,173,1);
+			}
+			
+			header > nav > ul > li a + div {
+				background: linear-gradient(to bottom,rgba(58,162,173,1) 0,rgba(62,188,207,0.96) 100%);;
+				border-radius: 0 0 2px 2px;
+				box-shadow: 0 3px 1px rgba(0,0,0,.05);
+				display: none;
+				font-size: 1rem;
+				position: absolute;
+				width: 195px;
+			}
+			
+				header > nav > ul > li:hover a + div {
+					display: block;
+				}
+				
+				header > nav > ul > li a + div > ul {
+					list-style-type: none;	
+				}
+				
+					header > nav > ul > li a + div > ul > li {
+						margin: 0;
+						padding: 0;
+					}
+					
+						header > nav > ul > li a + div > ul > li > a {
+							color: rgba(255,255,255,.9);
+							display: block;	
+							font-size: .75rem;
+							letter-spacing: 1.5px;
+							padding: .25rem 1.5rem;
+							text-decoration: none;
+							text-transform: uppercase;
+						}
+						
+							header > nav > ul > li a + div > ul > li:hover > a {
+								background-color: rgba(0,0,0,.15);	
+							}
+	
+			header > nav > ul > li > a {
+				align-items: flex-start;
+				color: #fff;
+				display: flex;
+				font-size: 1.55rem;
+				font-weight: 200;
+				letter-spacing: 1px;
+				max-width: 130px;
+				padding: 1rem 1.5rem;
+				text-decoration: none;
+				text-shadow: 0 1px 1px rgba(0,0,0,.1);
+				transition: all linear 0.1s;
+			}
+			
+				header > nav > ul > li > a > div > span {
+					color: rgba(255,255,255,.75);
+					display: block;
+					font-family: Georgia, "Times New Roman", Times, serif;
+					font-size: .7rem;	
+					font-style: italic;
+					line-height: 1rem;
+					max-width: 260px;
+				}
+
+@media (min-width: 990px) {
+  header > nav > ul > li > a {
+    max-width: 500px;
+    font-size: 1.7rem;
+	line-height: 2rem;
+  }
+  
+  header > nav > ul > li > a > div > span {
+	  margin: 4px 0 0;  
+  }
+}
+</style>
+
+</div>
+
+	<div class="box">
+		<h3 class="subtitle is-3">Fully loaded</h3>
+		<hr>
+
+
+<nav class="header nav has-shadow">
+
+	<div class="nav-left">
+		<a class="nav-item has-text-centered">
+			<span class="icon">
+				<i class="fa fa-bars"></i>
+			</span>
+		</a>
+		<a class="nav-item is-tab has-text-centered">
+			Home
+		</a>
+
+		<a class="nav-item is-tab has-text-centered">
+			Apply as an Artist
+		</a>
+	</div>
+	<div class="nav-center">
+		<div class="nav-item">
+			<a href="#" class="nav-item">
+				<img src="../../assets/images/ArtTap-Logo-Pumpkin.png" class="logo">
+			</a>
+		</div>
+	</div>
+	<div class="nav-right">
+		<div class="nav-item">
+			<a class="nav-item is-3">
+				<span>0</span> 
+				<span class="icon">
+					<i class="fa fa-shopping-cart"></i>
+				</span>
+			</a>
+			<a class="nav-item is-3">
+				<span class="icon">
+					<i class="fa fa-search"></i>
+				</span>
+			</a>
+			<div class="nav-item nav-item-buttons is-4">
+
+				<div class="is-hidden-touch">
+
+					<a href="#" class="is-admin-user button is-black is-small has-icon">
+						<span class="icon is-small"><i class="fa fa-user-circle-o"></i></span>
+						<span>Admin</span>
+					</a>
+					<a href="#" class="is-merchant-user button is-info is-small has-icon">
+						<span class="icon is-small"><i class="fa fa-magic"></i></span>
+						<span>Merchant</span>
+					</a>
+				</div>
+				<div class="is-hidden-desktop">
+					<a href="#" class="button is-black is-small has-icon">
+						<span class="icon is-small"><i class="fa fa-user-circle-o"></i></span>
+					</a>
+					<a href="#" class="button is-info is-small has-icon">
+						<span class="icon is-small"><i class="fa fa-magic"></i></span>
+					</a>
+				</div>
+
+			</div>
+		</div>
+		<div class="nav-item nav-item-profile is-clicked">
+			<div class="profile-picture">
+				<img src="../../assets/images/profiles/person-1.jpg" class="profile-picture fluid image">
+			</div>
+			<h3 class="is-hidden-touch">
+				Vincene Collura
+				<span class="tag">
+					5
+				</span>
+			</h3>
+			<span class="icon">
+				<i class="fa fa-angle-down"></i>
+			</span>
+<aside class="dropdown">
+<p>some content</p>
+<p>some content</p>
+<p>some content</p>
+<p>some content</p>
+						<!-- <p class="menu-label">
+							General
+						</p>
+						<ul class="menu-list">
+							<li><a>Dashboard</a></li>
+							<li><a>Customers</a></li>
+						</ul>
+						<p class="menu-label">
+							Administration
+						</p>
+						<ul class="menu-list">
+							<li><a>Team Settings</a></li>
+							<li>
+								<a class="is-active">Manage Your Team</a>
+								<ul>
+									<li><a>Members</a></li>
+									<li><a>Plugins</a></li>
+									<li><a>Add a member</a></li>
+								</ul>
+							</li>
+							<li><a>Invitations</a></li>
+							<li><a>Cloud Storage Environment Settings</a></li>
+							<li><a>Authentication</a></li>
+						</ul>
+						<p class="menu-label">
+							Transactions
+						</p>
+						<ul class="menu-list">
+							<li><a>Payments</a></li>
+							<li><a>Transfers</a></li>
+							<li><a>Balance</a></li>
+						</ul> -->
+					</aside>
+		</div>
+	</div>
+</nav>
+
+
+
+
+
+
+			<div class="nav-right nav-menu">
+
+					<!--  -->
+
+<!-- 
+
+<script type="text/javascript">
+	$( document ).ready(function() {
+		$('div.nav-item-profile').click(function(){
+			console.log("Clicked it!");
+			$('aside.menu.dropdown').toggle();	
+		})
+	});
+</script>
+ -->
+
+	
+
+<!-- 	
+<style type="text/css">
+aside.menu.dropdown {
+	box-shadow: 0 0 8px #777;
+	left: 0;
+	position: absolute;
+	top: 100%;
+	z-index: 1000;
+}
+
+	
+</style>
+ -->
+
+</div>
+</div>
+
+</body>
+</html>

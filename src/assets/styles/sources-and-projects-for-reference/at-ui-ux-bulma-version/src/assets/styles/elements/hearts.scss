@@ -1,0 +1,51 @@
+
+div.heart {
+
+	font-family: $family-sans-serif;
+	text-align: right;
+
+	.heart-number {
+		color: $grey;
+	}
+
+	&:hover .icon .fa {
+		@include pulse(
+			$duration: .5s,
+			$count: 1,
+			$delay: 0s,
+			$function: ease, 
+			$fill: both
+		);
+	}
+
+	// TBD
+	// NOTE: Need flexbox tooltip solution
+	// &:hover .heart-number {
+	// 	@include hui_tooltip(
+	// 		$content: attr(data-tooltip), 
+	// 		$direction: top
+	// 	);
+	// }
+
+	.icon .fa {
+		color: $grey;
+		cursor: pointer;
+	}
+
+	&.is-hearted {
+		.icon .fa {
+			color: $red;
+		}
+	}
+	&.is-being-clicked {
+		.icon .fa {
+			@include rubberBand(
+				$duration: .5s,
+				$count: 1,
+				$delay: 0s,
+				$function: ease, 
+				$fill: both
+			);
+		}
+	}
+}

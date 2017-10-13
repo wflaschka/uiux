@@ -1,0 +1,275 @@
+////////////////////////////////////////////////////////////////////
+// BUTTONS -- extended from Bulma 0.5.3
+////////////////////////////////////////////////////////////////////
+
+// The button sizes use mixins so they can be used at different breakpoints
+@mixin button-small {
+    border-radius: $radius-small;
+    font-size: $size-small;
+}
+
+@mixin button-medium {
+    font-size: $size-medium;
+}
+
+@mixin button-large {
+    font-size: $size-large;
+}
+
+.button {
+    @include control;
+    @include unselectable;
+
+    background-color: color(black);
+    border-color: color(black);
+    color: color-inverse(black);
+    cursor: pointer;
+    justify-content: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
+    white-space: nowrap;
+
+    border-radius: 0px;
+    text-decoration: none;
+
+    strong {
+        color: inherit;
+    }
+
+    .icon {
+        &,
+        &.is-small,
+        &.is-medium,
+        &.is-large {
+            height: 1.5em;
+            width: 1.5em;
+        }
+
+        &:first-child:not(:last-child) {
+            margin-left: calc(-0.375em - 1px);
+            margin-right: 0.1875em;
+        }
+
+        &:last-child:not(:first-child) {
+            margin-left: 0.1875em;
+            margin-right: calc(-0.375em - 1px);
+        }
+
+        &:first-child:last-child {
+            margin-left: calc(-0.375em - 1px);
+            margin-right: calc(-0.375em - 1px);
+        }
+    }
+
+    // States
+    &:hover,
+    &.is-hovered {
+        border-color: $button-hover-border-color;
+        color: $button-hover-color;
+    }
+
+    &:focus,
+    &.is-focused {
+        border-color: $button-focus-border-color;
+        color: $button-focus-color;
+
+        &:not(:active) {
+            box-shadow: $button-focus-box-shadow-size $button-focus-box-shadow-color;
+        }
+    }
+
+    &:active,
+    &.is-active {
+        border-color: $button-active-border-color;
+        color: $button-active-color;
+    }
+
+    // Colors
+    // NOTE: This generates SCSS warnings on compile but that's okay 
+    // because we're not using most of these colors for buttons...
+    // @each $name, $pair in $colors {
+    @each $name in $colorsBasic {
+        $pair: map-get($colors, $name);
+        $color: nth($pair, 1);
+        $color-invert: nth($pair, 2);
+
+        &.is-#{$name} {
+            background-color: $color;
+            border-color: transparent;
+            color: $color-invert;
+
+            &:hover,
+            &.is-hovered {
+                background-color: color($name#{-dark});
+                border-color: transparent;
+                color: color-invert($name#{-dark});
+            }
+
+            &:focus,
+            &.is-focused {
+                border-color: transparent;
+                color: $color-invert;
+
+                &:not(:active) {
+                    box-shadow: $shadow;
+                }
+            }
+
+            &:active,
+            &.is-active {
+                background-color: color($name#{-dark});
+                border-color: transparent;
+                color: color-invert($name#{-dark});
+            }
+
+            &[disabled] {
+                background-color: transparentize($color, 0.2);
+                border-color: transparent;
+                box-shadow: none;
+            }
+
+            &.is-inverted {
+                background-color: $color-invert;
+                color: $color;
+
+                &:hover {
+                    background-color: color-invert($name#{-dark});
+                }
+
+                &[disabled] {
+                    background-color: $color-invert;
+                    border-color: transparent;
+                    box-shadow: none;
+                    color: $color;
+                }
+            }
+
+            &.is-loading {
+                &:after {
+                    border-color: transparent transparent $color-invert $color-invert !important;
+                }
+            }
+
+            &.is-outlined {
+                background-color: transparent;
+                border-color: $color;
+                color: $color;
+
+                &:hover,
+                &:focus {
+                    background-color: $color;
+                    border-color: $color;
+                    color: $color-invert;
+                }
+
+                &.is-loading {
+                    &:after {
+                        border-color: transparent transparent $color $color !important;
+                    }
+                }
+
+                &[disabled] {
+                    background-color: transparent;
+                    border-color: $color;
+                    box-shadow: none;
+                    color: $color;
+                }
+            }
+
+            &.is-inverted.is-outlined {
+                background-color: transparent;
+                border-color: $color-invert;
+                color: $color-invert;
+
+                &:hover,
+                &:focus {
+                    background-color: $color-invert;
+                    color: $color;
+                }
+
+                &[disabled] {
+                    background-color: transparent;
+                    border-color: $color-invert;
+                    box-shadow: none;
+                    color: $color-invert;
+                }
+            }
+        }
+    }
+
+    // Sizes
+    &.is-small {
+        @include button-small;
+    }
+
+    &.is-medium {
+        @include button-medium;
+    }
+
+    &.is-large {
+        @include button-large;
+    }
+
+    // Modifiers
+    &[disabled] {
+        background-color: $button-disabled-background-color;
+        border-color: $button-disabled-border-color;
+        box-shadow: $button-disabled-shadow;
+        opacity: $button-disabled-opacity;
+    }
+
+    &.is-fullwidth {
+        display: flex;
+        width: 100%;
+    }
+
+    &.is-loading {
+        color: transparent !important;
+        pointer-events: none;
+
+        &:after {
+            @include loader;
+            @include center(1em);
+
+            position: absolute !important;
+        }
+    }
+
+    &.is-static {
+        background-color: $button-static-background-color;
+        border-color: $button-static-border-color;
+        color: $button-static-color;
+        box-shadow: none;
+        pointer-events: none;
+    }
+
+    // is-link overwrites "color" loop above
+    &.is-link {
+        background-color: transparent;
+        border-color: transparent;
+        color: color(link);
+        text-decoration: underline;
+
+        &:hover,
+        &.is-hovered,
+        &:focus,
+        &.is-focused {
+            background-color: lighten(color(gray-light), 30%);
+            color: color(link);
+        }
+
+        &:active,
+        &.is-active {
+            background-color: lighten(color(gray-light), 30%);
+            color: color(link-dark);
+        }
+
+        &[disabled] {
+            background-color: transparent;
+            border-color: transparent;
+            box-shadow: none;
+        }
+    }
+
+}
