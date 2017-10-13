@@ -1,49 +1,109 @@
-/**
- * COLOR SETTINGS
- */
+////////////////////////////////////////////////////////////////////
+// COLORS
+// Walter started cleaning up color settings 20171013.
+// See the names of colors in the $color map below.
+// 
+// SCSS loops are used to generate the *-light and *-dark versions
+// of every color, as well as the classes:
+// 	.COLORNAME { background-color: COLOR; color: COLOR-INVERSE-FOR-CONTRAST; }
+// 	.COLORNAME-TEXT { color: COLOR; }
+// 	
+// Colors are "translated" for Bulma components in 'bulma-0.5.3/color-translate.scss'
+////////////////////////////////////////////////////////////////////
+
+// Colormap functions
+// .class { color: color(green); }
+@function color($key) {
+	@if map-has-key($colors, $key) {
+		@return nth(map-get($colors, $key), 1);
+	}
+
+	@warn "Unknown `#{$key}` in $colors.";
+	@return null;
+}
+@function color-inverse($key) {
+	@if map-has-key($colors, $key) {
+		@return nth(map-get($colors, $key), 2);
+	}
+
+	@warn "Unknown `#{$key}` in $colors.";
+	@return null;
+}
+
+// Build the color map
+@function contrastColor($n) {
+    $color-brightness: round((red($n) * 299) + (green($n) * 587) + (blue($n) * 114) / 1000);
+    $light-color: round((red(#ffffff) * 299) + (green(#ffffff) * 587) + (blue(#ffffff) * 114) / 1000);
+    @if abs($color-brightness) < ($light-color/2){
+        @return #ffffff;
+    }
+    @else {
+        @return #141414;
+    }
+}
+
+$colors: (
+	primary    : (#E09D00, contrastColor(#E09D00)),
+	secondary  : (#141414, contrastColor(#141414)),
+	text       : (transparentize(#141414, 0.13), transparentize(#ffffff, 0.13)),
+	link       : (#E09D00, contrastColor(#E09D00)),
+	white      : (#ffffff, contrastColor(#ffffff)),
+	gray       : (#8B8B8B, contrastColor(#8B8B8B)),
+	black      : (#141414, contrastColor(#141414)),
+	green      : (#BCCE38, contrastColor(#BCCE38)),
+	greentree  : (#34863D, contrastColor(#34863D)),
+	bluesea    : (#408C98, contrastColor(#408C98)),
+	bluesky    : (#A0D5E5, contrastColor(#A0D5E5)),
+	blueroyal  : (#425CAB, contrastColor(#425CAB)),
+	purple     : (#6C449E, contrastColor(#6C449E)),
+	magenta    : (#A22173, contrastColor(#A22173)),
+	red        : (#D92F1D, contrastColor(#D92F1D)),
+	orange     : (#F9922C, contrastColor(#F9922C)),
+	yellow     : (#FCEA44, contrastColor(#FCEA44)),
+	eggshell   : (#FAEFCF, contrastColor(#FAEFCF)),
+	brown      : (#7C4D38, contrastColor(#7C4D38))
+);
+// Use this list for color loops in elements. This 
+// will avoid errors that are created by by dynamically-added
+// colors in $colors map:
+$colorsBasic: (primary secondary text link white gray black green greentree bluesea bluesky blueroyal purple magenta red orange yellow eggshell brown);
+
+// Create *-light and *-dark versions of each color in $colors map
+@each $name, $pair in $colors {
+	$this-color: nth($pair, 1);
+	$this-color-invert: nth($pair, 2);
+
+	$colors: map-merge($colors, (
+		$name#{-light}: (
+			lighten($this-color, 10%),
+			contrastColor(lighten($this-color, 10%))
+		)
+	));
+	$colors: map-merge($colors, (
+		$name#{-dark}: (
+			darken($this-color, 10%),
+			contrastColor(darken($this-color, 10%))
+		)
+	));
+}
+// @debug $colors;
+// @debug "primary color: " color(primary);
+// @debug "primary color (darker): " color(primary-dark);
+// @debug "primary color (inverse): " color-inverse(primary);
 
 
-// These are for Spectre avatar include
-$border-width: $unit-o !default;
-$border-width-lg: $unit-h !default;
 
-// Core variables
-// Colors
-// Core colors
-$white: #ffffff;
-$black: #000000;
-$red: #ff0000;
-$primary-color: #E09D00 !default;
-$primary-color-dark: darken($primary-color, 3%) !default;
-$primary-color-light: lighten($primary-color, 3%) !default;
-$secondary-color: lighten($primary-color, 40%) !default;
-$secondary-color-dark: darken($secondary-color, 3%) !default;
-$secondary-color-light: lighten($secondary-color, 3%) !default;
+// Color classes
+@each $name, $pair in $colors {
+	$this-color: nth($pair, 1);
+	$this-color-invert: nth($pair, 2);
 
-$link-color: $primary-color !default;
-$link-color-dark: darken($link-color, 5%) !default;
+	*.#{$name} {
+		color: $this-color-invert;
+		background-color: $this-color;
+	}
+	*.#{$name}-text {
+		color: $this-color-invert;
+	}
+}
 
-// Gray colors
-$dark-color: #454d5d !default;
-$light-color: #fff !default;
-$gray-color: lighten($dark-color, 40%) !default;
-$gray-color-dark: darken($gray-color, 20%) !default;
-$gray-color-light: lighten($gray-color, 20%) !default;
-$gray: $gray-color;
-
-$border-color: lighten($dark-color, 60%) !default;
-$border-color-dark: darken($border-color, 10%) !default;
-$bg-color: lighten($dark-color, 66%) !default;
-$bg-color-dark: darken($bg-color, 3%) !default;
-$bg-color-light: $light-color !default;
-
-// Control colors
-$success-color: #32b643 !default;
-$warning-color: #ffb700 !default;
-$error-color: #e85600 !default;
-
-// Other colors
-$code-color: #e06870 !default;
-$highlight-color: #ffe9b3 !default;
-$body-bg: $bg-color-light !default;
-$body-font-color: lighten($dark-color, 5%) !default;

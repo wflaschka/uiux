@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>COMPANY Landing</title>
+	<link rel="stylesheet" type="text/css" href="../../assets/styles/bulma.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/styles/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/styles/pages/landing.css">
+	<!-- <link rel="stylesheet" type="text/css" href="../../assets/styles/animate.css"> -->
+
+	<!-- https://github.com/miniMAC/magic -->
+	<link rel="stylesheet" type="text/css" href="../../assets/styles/magic-master/magic.css">
+	<script type="text/javascript" src="../../assets/scripts/background-check/background-check.js"></script>
+	<script type="text/javascript">
+
+		document.addEventListener('DOMContentLoaded', function () {
+			BackgroundCheck.init({
+				targets: '#marquee div.hero-head',
+				images: '#marquee'
+			});
+		});
+	</script>
+	<script type="text/javascript" src="../../assets/scripts/jquery-3.1.1.js"></script>
+	<script type="text/javascript" src="../../assets/scripts/pages/marketplace-common-ui.js"></script>
+</head>
+<body id="app">
+
+	<!-- HARBINGER XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+	<div id="harbinger-panel" class="level is-fixed-top has-fixed-top">
+		<div class="level-item">
+			Art for good. For every purchase on Art Tap, an arts charity of your choice receives a donation.
+		</div>
+		<div class="level-right">
+			<div class="level-item">
+				<i class="icon fa fa-close"></i>
+			</div>
+		</div>
+	</div>
+	<!-- HARBINGER XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+
+	<!-- HEADER MENU XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+	<!--
+	<header id="masthead" class="site-header clearer" role="banner">
+		<nav class="nav has-shadow is-fixed-top has-fixed-top has-shadow">
+			<div class="header-logo container">
+				<div class="nav-left">
+					<div class="nav-item">
+						<div class="site-logo"><img src="../../assets/images/logo.png"></div>
+					</div>
+				</div>
+				<div class="nav-right">
+					<div class="nav-item">
+						<a target="_blank" href="http://www.ersvp.com/r/ruckus/regmain">Register</a>
+					</div>
+					<div class="nav-item">
+						<ul>
+							<li class="nav-menu">Option 1</li>
+							<li class="nav-menu">Option 2</li>
+							<li class="nav-menu">Option 3</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+-->
+<!-- HEADER MENU XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+
+<!-- MARQUEE XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+<section id="marquee" class="hero is-warning is-medium">
+	<!-- is-large -->
+	<!-- Hero header: will stick at the top -->
+	<div class="hero-head">
+		<header class="nav">
+			 <!-- has-shadow -->
+			<div class="container is-fluid">
+				<div class="nav-left">
+					<a class="nav-item has-text-centered">
+						<span class="icon">
+							<i class="fa fa-bars"></i>
+						</span>
+					</a>
+					<a class="nav-item has-text-centered">
+						Home
+					</a>
+					<a class="nav-item has-text-centered">
+						Apply as an Artist
+					</a>
+				</div>
+
+				<div class="nav-center">
+					<div class="nav-item">
+						<a href="#">Art Tap LOGO</a>
+					</div>
+				</div>
+
+				<div class="nav-right nav-menu">
+					 <!-- is-active -->
+					<a class="nav-item is-3">
+						<span>Sign In / Register</span> 
+						<span class="icon">
+							<i class="fa fa-user"></i>
+						</span>
+					</a>
+					<a class="nav-item is-3">
+						<span>0</span> 
+						<span class="icon">
+							<i class="fa fa-shopping-cart"></i>
+						</span>
+					</a>
+					<a class="nav-item is-3">
+						<span class="icon">
+							<i class="fa fa-search"></i>
+						</span>
+					</a>
+<!-- 					<span class="nav-item">
+						<a class="button is-success is-inverted">
+							<span class="icon">
+								<i class="fa fa-github"></i>
+							</span>
+							<span>Download</span>
+						</a>
+					</span> -->
+				</div>
+			</div>
+		</header>
+	</div>
+
+	<!-- Hero content: will be in the middle -->
+	<div class="hero-body">
+		<!-- <div class="container has-text-centered">
+			<h1 class="title">
+				Title
+			</h1>
+			<h2 class="subtitle">
+				Subtitle
+			</h2>
+		</div> -->
+		<div class="column is-pulled-left">
+<!-- 			<span class="icon">
+				<i class="fa fa-chevron-left"></i>
+			</span> -->
+		</div>
+		<div class="callout column is-4 is-pulled-right">
+			<div class="columns">
+				<div class="column"></div>
+				<div class="column is-10">
+					<div class="content">
+						<h1 class="title is-2">New exhibit from Mahshid Fasthi</h1>
+						<p>
+							See Mahshid's latest award-winning work and discover the secrets to her creative approach.
+						</p>
+						<a href="#" class="button has-icon is-cta-button is-paddingless is-marginless">
+							<span>Discover Now</span>
+							<span class="icon">
+								<i class="fa fa-angle-right"></i>
+							</span>
+						</a>
+					</div>
+				</div>
+				<div class="column">
+<!-- 					<span class="icon">
+						<i class="fa fa-chevron-right"></i>
+					</span> -->
+				</div>
+		</div>
+	</div>
+
+	<!-- Hero footer: will stick at the bottom -->
+	<!-- <div class="hero-foot">
+		<nav class="tabs is-boxed is-fullwidth">
+			<div class="container">
+				<ul>
+					<li class="is-active"><a>Overview</a></li>
+					<li><a>Modifiers</a></li>
+					<li><a>Grid</a></li>
+					<li><a>Elements</a></li>
+					<li><a>Components</a></li>
+					<li><a>Layout</a></li>
+				</ul>
+			</div>
+		</nav>
+	</div> -->
+</section>
+<!-- MARQUEE XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+
+<!-- SEARCH XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+<section id="search-bar" class="container is-fluid">
+	<!-- LEVEL XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+	<div class="column">
+		<div id="search-bar-level-1" class="level">
+			<div class="level-left">
+				<div class="level-item">
+					<h3 class="title is-3">Search Artwork</h3>
+				</div>
+				<div class="level-item">
+					<a class="button is-cta-button is-white">
+						<span>Or get matched to art</span> 
+						<span class="icon"><i class="fa fa-angle-right"></i></span>
+					</a>
+				</div>
+			</div>
+			<div class="level-right">
+				<div class="level-item">
+					<div class="control is-grouped">
+						<p class="control">
+							<a class="button is-cta-button">
+								0 Pieces found
+							</a>
+						</p>
+						<p class="control">
+							<a class="button is-cta-button is-white">
+								<span class="icon"><i class="fa fa-repeat"></i></span>
+								<span>Reset filters</span>
+							</a>
+						</p>
+						<p class="control">
+							<a class="button is-cta-button is-white">
+								<span>See all artwork </span>
+								<span class="icon"><i class="fa fa-angle-right"></i></span>
+							</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- LEVEL XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+	<nav class="column">
+		<div id="search-bar-level-2" class="columns">
+			<div class="column has-padding-extra">
+				<p class="heading">Medium</p>
+				<div class="control">
+					<div class="select is-fullwidth">
+						<select name="x" class="select">
+							<option>All Mediums</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="column has-padding-extra">
+				<p class="heading">Subject</p>
+				<div class="control">
+					<div class="select is-fullwidth">
+						<select name="x" class="select">
+							<option>All Subjects</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="column has-padding-extra is-3">
+				<p class="heading">
+					Price
+					<span class="is-pulled-right">
+						<span class="tag is-gray is-small">No min</span> &ndash; <span class="tag is-gray is-small">No max</span>
+					</span>
+				</p>
+				<div class="control">
+					<div class="select is-fullwidth">
+						<select name="x" class="select">
+							<option>All Mediums</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="column has-padding-extra">
+				<p class="heading">Size</p>
+				<div class="control">
+					<div class="select is-fullwidth">
+						<select name="x" class="select">
+							<option>All Sizes</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="column has-padding-extra is-2">
+				<div class="control">
+					<a type="submit" name="" class="button is-black is-medium is-fullwidth has-icon">
+						<span>Save results</span>
+						<span class="icon"><i class="fa fa-star"></i></span>
+					</a>
+				</div>
+			</div>
+
+		</div>
+	</nav>
+</section>
+<!-- SEARCH XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+
+<!-- CARD TEST XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+<section id="card-tests" class="section">
+
+	<div class="content">
+		<h2 class="title is-2">Artwork cards <span id="tag-card-test" class="tag is-primary">card test</span></h2>
+		<h4 class="subtitle is-4">Various compositions</h4>
+		<p>TODO: Responsive sizing</p> 
+	</div>
+
+	<div class="columns">
+
+		<!-- <div class="column is-4">
+			<div class="card media-card">
+				<div class="card-image">
+					<figure class="image">
+						<img src="../../assets/images/artwork/art-1.jpg" class="">
+					</figure>
+				</div>
+				<div class="card-content">
+					<div class="media">
+						<div class="media-left">
+							<figure class="image" style="height: 40px; width: 40px;">
+								<img src="http://bulma.io/images/placeholders/96x96.png" alt="Image">
+							</figure>
+						</div>
+						<div class="media-content">
+							<p class="title is-4">John Smith</p>
+							<p class="subtitle is-6">@johnsmith</p>
+						</div>
+					</div>
+					<div class="content">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+						<a>#css</a> <a>#responsive</a>
+						<br>
+						<small>11:09 PM - 1 Jan 2016</small>
+					</div>
+				</div>
+			</div>
+		</div> -->
+
+		<!-- <div class="column is-4">
+			<div class="card media-card">
+				<div class="card-image">
+					<figure class="image">
+						<img src="../../assets/images/artwork/art-2.jpg" class="">
+					</figure>
+				</div>
+				<div class="card-content">
+					<div class="content">
+						<p class="title is-4">John Smith</p>
+						<p class="subtitle is-6">
+							<strong>
+								Title of Image in Acrylic
+								<br />
+								$120
+							</strong>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div> -->
+
+
+	
+		<div class="column is-4">
+			<div class="card media-card">
+				<div class="card-image" style="background-image: url('../../assets/images/artwork/art-1.jpg');">
+					<figure class="image">
+						<img src="../../assets/images/artwork/art-1.jpg" class="superimposed">
+					</figure>
+				</div>
+				<div class="card-content content is-small">
+							<div class="is-pulled-right">
+								<span class="icon icon-favorite">
+									<i class="fa fa-heart"></i>
+								</span>
+							</div>
+						<p class="">
+							<strong>John Smith</strong>
+							<br />
+								Title of Image in Acrylic
+								<br />
+								$120
+						</p>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="column is-4">
+			<div class="card media-card">
+				<div class="card-image" style="background-image: url('../../assets/images/artwork/art-3.jpg');">
+					<figure class="image">
+						<img src="../../assets/images/artwork/art-3.jpg" class="superimposed">
+					</figure>
+				</div>
+				<div class="card-content content is-small">
+							<div class="is-pulled-right">
+								<span class="icon icon-favorite">
+									<i class="fa fa-heart"></i>
+								</span>
+							</div>
+						<p class="">
+							<strong>John Smith</strong>
+							<br />
+								Title of Image in Acrylic
+								<br />
+								$120
+						</p>
+				</div>
+			</div>
+		</div>
+
+
+
+		<!-- <div class="column is-4">
+			<div class="card media-card">
+				<div class="card-image" style="background-image: url('../../assets/images/artwork/art-3.jpg');">
+					<figure class="image">
+						<img src="../../assets/images/artwork/art-3.jpg" class="superimposed">
+					</figure>
+				</div>
+				<div class="card-content content is-small">
+						<p class="">
+							<div class="is-pulled-right">
+								<span class="icon icon-favorite">
+									<i class="fa fa-heart"></i>
+								</span>
+							</div>
+							<strong>John Smith</strong>
+							<br />
+								Title of Image in Acrylic
+								<br />
+								$120
+						</p>
+				</div>
+			</div>
+		</div> -->
+
+		<div class="column is-4">
+			<div class="card media-card">
+				<div class="card-image" style="background-image: url('../../assets/images/artwork/art-narrow-1.jpg');">
+					<figure class="image">
+						<img src="../../assets/images/artwork/art-narrow-1.jpg" class="superimposed">
+					</figure>
+				</div>
+				<div class="card-content content is-small">
+					<!-- <div class="content is-small"> -->
+						<p class="">
+							<div class="is-pulled-right">
+								<span class="icon icon-favorite">
+									<i class="fa fa-heart"></i>
+								</span>
+							</div>
+							<strong>John Smith</strong>
+							<br />
+								Title of Image in Acrylic
+								<br />
+								$120
+						</p>
+					<!-- </div> -->
+				</div>
+			</div>
+		</div>
+
+
+
+	</div>
+</section>
+<!-- CARD TEST XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+
+<!-- BLURBS XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+<section id="blurbs" class="section">
+	<h2 class="title is-2">Art Tap is Breaking Down Walls</h2>
+	<div class="columns">
+		<div class="column is-4">
+			<div class="content">
+				<ul>
+					<li>Lorem ipsum dolor sit amet,</li>
+					<li>tempor incididunt ut labore et dolore</li>
+					<li>quis nostrud exercitation ullamco laboris nisi</li>
+				</ul>
+			</div>
+		</div>
+		<!-- <div class="column"></div> -->
+		<div class="column is-4">
+			<div class="content">
+				<ul>
+					<li>Lorem ipsum dolor sit amet,</li>
+					<li>tempor incididunt ut labore et dolore</li>
+					<li>quis nostrud exercitation ullamco laboris nisi</li>
+				</ul>
+			</div>
+		</div>
+		<!-- <div class="column"></div> -->
+		<div class="column is-4">
+			<div class="content">
+				<ul>
+					<li>consequat. Duis aute irure dolor</li>
+					<li>cillum dolore eu fugiat nulla pariatur</li>
+					<li>proident, sunt in culpa qui</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- BLURBS XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+
+<!-- CAROUSEL XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+<section id="carousel" class="section">
+	<div class="container">
+		<div class="level">
+			<div class="level-left">
+				<div class="level-item">
+					<h2 class="title is-2">Newest Pieces</h2>
+				</div>
+			</div>
+			<div class="level-right">
+				<div class="level-item">
+					<a href="#" class="bullet is-white is-cta-button has-icon">
+						<span>See All</span>
+						<span class="icon"><i class="fa fa-angle-right"></i></span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="columns">
+		<div class="column is-4">
+			<div class="card media-card">
+				<div class="card-image" style="background-image: url('../../assets/images/artwork/art-3.jpg');">
+					<figure class="image">
+						<img src="../../assets/images/artwork/art-3.jpg" class="superimposed">
+					</figure>
+				</div>
+				<div class="card-content content is-small">
+							<div class="is-pulled-right">
+								<span class="icon icon-favorite">
+									<i class="fa fa-heart"></i>
+								</span>
+							</div>
+						<p class="">
+							<strong>John Smith</strong>
+							<br />
+								Title of Image in Acrylic
+								<br />
+								$120
+						</p>
+				</div>
+			</div>
+		</div>
+		<div class="column is-4">
+			<div class="card media-card">
+				<div class="card-image" style="background-image: url('../../assets/images/artwork/art-4.jpg');">
+					<figure class="image">
+						<img src="../../assets/images/artwork/art-4.jpg" class="superimposed">
+					</figure>
+				</div>
+				<div class="card-content content is-small">
+							<div class="is-pulled-right">
+								<span class="icon icon-favorite">
+									<i class="fa fa-heart"></i>
+								</span>
+							</div>
+						<p class="">
+							<strong>John Smith</strong>
+							<br />
+								Title of Image in Acrylic
+								<br />
+								$120
+						</p>
+				</div>
+			</div>
+		</div>
+		<div class="column is-4">
+			<div class="card media-card">
+				<div class="card-image" style="background-image: url('../../assets/images/artwork/art-5.jpg');">
+					<figure class="image">
+						<img src="../../assets/images/artwork/art-5.jpg" class="superimposed">
+					</figure>
+				</div>
+				<div class="card-content content is-small">
+							<div class="is-pulled-right">
+								<span class="icon icon-favorite">
+									<i class="fa fa-heart"></i>
+								</span>
+							</div>
+						<p class="">
+							<strong>John Smith</strong>
+							<br />
+								Title of Image in Acrylic
+								<br />
+								$120
+						</p>
+				</div>
+			</div>
+		</div>
+		<div class="column is-4">
+			<div class="card media-card">
+				<div class="card-image" style="background-image: url('../../assets/images/artwork/art-6.jpg');">
+					<figure class="image">
+						<img src="../../assets/images/artwork/art-6.jpg" class="superimposed">
+					</figure>
+				</div>
+				<div class="card-content content is-small">
+							<div class="is-pulled-right">
+								<span class="icon icon-favorite">
+									<i class="fa fa-heart"></i>
+								</span>
+							</div>
+						<p class="">
+							<strong>John Smith</strong>
+							<br />
+								Title of Image in Acrylic
+								<br />
+								$120
+						</p>
+				</div>
+			</div>
+		</div>
+</div>
+
+</section>
+<!-- CAROUSEL XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+
+<!-- CURATED XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+<section id="curated" class="section">
+
+<div id="curated-1" class="columns">
+
+	<div class="column">
+		<div class="card">
+			<!-- <div class="card-image">
+				<figure class="image">
+					<img src="../../assets/images/artwork/art-2.jpg" class="">
+				</figure>
+			</div> -->
+			<div class="card-content">
+				<p>
+					<strong>
+						My selects
+					</strong>
+				</p>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua.
+				</p>
+				<div class="container">
+				<!-- <div class="content is-small"> -->
+
+					<article class="media">
+						<figure class="media-left">
+							<p class="image is-64x64">
+								<img src="../../assets/images/artwork/art-3.jpg" class="">
+							</p>
+						</figure>
+
+						<div class="media-content">
+							<div class="content">
+								<p>
+									Curated by
+									<br />
+									<strong>
+										Vincenne Collura
+									</strong>
+								</p>
+							</div>
+							<a href="#" class="button has-icon is-cta-button is-paddingless is-marginless">
+								<span>Discover Now</span>
+								<span class="icon">
+									<i class="fa fa-angle-right"></i>
+								</span>
+							</a>
+						</div>
+					</article>
+				<!-- </div> -->
+				</div>
+			</div>
+		</div>
+	</div>
+		<div class="column">
+			<div class="card media-card">
+				<div class="card-image" style="background-image: url('../../assets/images/artwork/art-1.jpg');">
+					<figure class="image">
+						<img src="../../assets/images/artwork/art-1.jpg" class="superimposed">
+					</figure>
+				</div>
+				<div class="card-content content is-small">
+							<div class="is-pulled-right">
+								<span class="icon icon-favorite">
+									<i class="fa fa-heart"></i>
+								</span>
+							</div>
+						<p class="">
+							<strong>John Smith</strong>
+							<br />
+								Title of Image in Acrylic
+								<br />
+								$120
+						</p>
+				</div>
+			</div>
+		</div>
+		<div class="column">
+			<div class="card media-card">
+				<div class="card-image" style="background-image: url('../../assets/images/artwork/art-3.jpg');">
+					<figure class="image">
+						<img src="../../assets/images/artwork/art-3.jpg" class="superimposed">
+					</figure>
+				</div>
+				<div class="card-content content is-small">
+							<div class="is-pulled-right">
+								<span class="icon icon-favorite">
+									<i class="fa fa-heart"></i>
+								</span>
+							</div>
+						<p class="">
+							<strong>John Smith</strong>
+							<br />
+								Title of Image in Acrylic
+								<br />
+								$120
+						</p>
+				</div>
+			</div>
+		</div>
+		<div class="column">
+			<div class="card media-card">
+				<div class="card-image" style="background-image: url('../../assets/images/artwork/art-6.jpg');">
+					<figure class="image">
+						<img src="../../assets/images/artwork/art-6.jpg" class="superimposed">
+					</figure>
+				</div>
+				<div class="card-content content is-small">
+							<div class="is-pulled-right">
+								<span class="icon icon-favorite">
+									<i class="fa fa-heart"></i>
+								</span>
+							</div>
+						<p class="">
+							<strong>John Smith</strong>
+							<br />
+								Title of Image in Acrylic
+								<br />
+								$120
+						</p>
+				</div>
+			</div>
+		</div>
+		<div class="column">
+			<div class="card media-card">
+				<div class="card-image" style="background-image: url('../../assets/images/artwork/art-2.jpg');">
+					<figure class="image">
+						<img src="../../assets/images/artwork/art-2.jpg" class="superimposed">
+					</figure>
+				</div>
+				<div class="card-content content is-small">
+							<div class="is-pulled-right">
+								<span class="icon icon-favorite">
+									<i class="fa fa-heart"></i>
+								</span>
+							</div>
+						<p class="">
+							<strong>John Smith</strong>
+							<br />
+								Title of Image in Acrylic
+								<br />
+								$120
+						</p>
+				</div>
+			</div>
+		</div>
+
+
+</div>
+
+</section>
+<!-- CURATED XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+
+<!-- ARTISTS XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+<!-- ARTISTS XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+
+<!-- BUDGET? XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+<!-- BUDGET? XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+
+<!-- SHOW ME ALL ARTWORK XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+<!-- SHOW ME ALL ARTWORK XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+
+<!-- TILES XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+<section class="section">
+	<div class="tile is-ancestor">
+		<div class="tile is-vertical is-8">
+			<div class="tile">
+				<div class="tile is-parent is-vertical">
+					<article class="tile is-child notification is-primary">
+						<p class="title">Vertical...</p>
+						<p class="subtitle">Top tile</p>
+					</article>
+					<article class="tile is-child notification is-warning">
+						<p class="title">...tiles</p>
+						<p class="subtitle">Bottom tile</p>
+					</article>
+				</div>
+				<div class="tile is-parent">
+					<article class="tile is-child notification is-info">
+						<p class="title">Middle tile</p>
+						<p class="subtitle">With an image</p>
+						<figure class="image">
+							<img src="http://bulma.io/images/placeholders/640x480.png">
+						</figure>
+					</article>
+				</div>
+			</div>
+			<div class="tile is-parent">
+				<article class="tile is-child notification is-danger">
+					<p class="title">Wide tile</p>
+					<p class="subtitle">Aligned with the right tile</p>
+					<div class="content">
+						<!-- Content -->
+					</div>
+				</article>
+			</div>
+		</div>
+		<div class="tile is-parent">
+			<article class="tile is-child notification is-success">
+				<div class="content">
+					<p class="title">Tall tile</p>
+					<p class="subtitle">With even more content</p>
+					<div class="content">
+						<!-- Content -->
+					</div>
+				</div>
+			</article>
+		</div>
+	</div>
+</section>
+<!-- TILES XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+
+<!-- FOOTER XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+<footer class="footer">
+	<div class="container">
+		<div class="content has-text-centered">
+			<p>
+				<strong>SITE</strong> by <a href="http://jgthms.com">COMPANY</a>
+				The website content is &copy; copyright 2017.
+			</p>
+			<p>
+				<a class="icon" href="#">
+					<i class="fa fa-facebook"></i>
+				</a>
+				<a class="icon" href="#">
+					<i class="fa fa-pinterest"></i>
+				</a>
+				<a class="icon" href="#">
+					<i class="fa fa-twitter"></i>
+				</a>
+				<a class="icon" href="#">
+					<i class="fa fa-linkedin"></i>
+				</a>
+			</p>
+		</div>
+	</div>
+</footer>
+<!-- FOOTER XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+
+
+</body>
+</html>

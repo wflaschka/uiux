@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ArtTap UI/UX Patterns</title>
+
+	<script type="text/javascript" src="../../assets/scripts/jquery-3.1.1.js"></script>
+
+
+	<!-- Spectre to Bulma -->
+	<link rel="stylesheet" type="text/css" href="../../assets/styles/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/styles/bulma.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/styles/site.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/styles/bulma-dropdown-menu.css">
+
+	<!-- Spectre (works) 20170501 -->
+	<!-- <link rel="stylesheet" type="text/css" href="../../assets/styles/spectre.min.css"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="../../assets/styles/spectre-icons.min.css"> -->
+
+</head>
+<body>
+
+
+<article class="message is-motd">
+  <div class="message-header">
+    <p>Hello World</p>
+    <button class="delete"></button>
+  </div>
+</article>
+<script type="text/javascript">
+	$( document ).ready(function() {
+		$('.message.is-motd button.delete').on('click', function(){
+			$('.message.is-motd').toggleClass('dismissable-close');
+		});
+	});
+</script>
+
+<div id="app" class="container">
+
+	<h1 class="title is-1">
+		MoTD Panel
+		<a href="/" class="tag is-warning is-icon">
+			Home
+			<span class="icon is-small">
+				<i class="fa fa-arrow-up"></i>
+			</span>
+		</a>
+	</h1>
+
+	<section class="container is-medium">
+		<p>
+			<em>Note:</em> 
+			Dismissable panel at the very top of the page. 
+			Based on Bulma messages. 
+			<em>Would be nice to make it slide up.</em>
+			<tt>On the enterprise site, we need to set cookie to remember it was dismissed.</tt>
+		</p>
+		<p>
+			<em>Markup:</em> <tt>src/prototypes/interactive/motd.html</tt>
+			<br>
+			<em>css:</em> <tt>src/assets/styles/interactive/motd.scss</tt>
+		</p>
+
+	</section>
+
+</div>
+
+
+
+<div class="section">
+<p>Something that should move up when the dismissable item above is x'd out.</p>
+</div>
+
+
+
+</body>
+</html>

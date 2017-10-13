@@ -1,0 +1,11 @@
+
+.tag {
+	font-family: $family-sans-serif;
+
+	&.is-system {
+		border-radius: 0px;
+		font-weight: bold;
+		border: 1px solid black;
+		background-color: white;
+	}
+}

@@ -1,0 +1,67 @@
+// Statistics / Horizontal via Semantic-UI
+
+$center-elements: false;
+$is-debug: false;
+
+.statistics {
+
+	.statistic {
+		flex-direction: row;
+		align-items: center;
+		vertical-align: middle;
+
+		@if ($is-debug) {
+			border: 1px solid red;
+		}
+
+		@if ($center-elements) {
+			text-align: center;
+			justify-content: center;
+		}
+
+		.title {
+			display: flex;
+			width: 100%;
+			margin: 0px;
+
+			@if ($center-elements) {
+				justify-content: center;
+			}
+			@if ($is-debug) {
+				border: 1px solid red;
+			}
+		}
+
+		.is-statistic-number, .is-statistic-label {
+			display: inline-block;
+			margin: 0px;
+			padding: 0px;
+
+			@if ($is-debug) {
+				border: 1px solid red;
+			}
+		}
+		.is-statistic-number {
+			font-weight: bold;
+			font-size: $size-1;
+			font-face: $family-sans-serif;
+		}
+		.is-statistic-label {
+			font-size: $size-7;
+			line-height: $size-6;
+			font-face: $family-sans-serif;
+			text-align: left;
+		}
+
+		.button {
+			display: flex;
+			width: 100%;
+		}
+
+		// Spacing between the boxes
+		&:not(:last-child) {
+			padding-right: 2em;
+		}
+	}
+
+}
