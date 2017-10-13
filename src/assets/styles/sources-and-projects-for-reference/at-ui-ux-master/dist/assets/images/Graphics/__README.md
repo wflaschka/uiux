@@ -1,1 +1,0 @@
-These are from `Pages for Code` dropbox provided by client.
