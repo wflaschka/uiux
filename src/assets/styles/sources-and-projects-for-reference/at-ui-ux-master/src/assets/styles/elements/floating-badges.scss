@@ -1,0 +1,38 @@
+// Was in elements/spectre-borrowed/floating-badges.scss (badges.less)
+// file:///Users/flash/Desktop/DOCUMENTATION/spectre/components.html#badges
+
+.badge {
+   position:relative;
+}
+
+.badge[data-badge]:after {
+	background-clip: padding-box;
+	border-radius: 1rem;
+	content:attr(data-badge);
+	font-size: $size-small;
+	height: 1rem;
+	line-height: 1;
+	min-width: 1rem;
+	padding: .1rem .2rem;
+	position:absolute;
+	right:-0.5rem;
+	text-align: center;
+	text-align:center;
+	top:-0.5rem;
+	white-space: nowrap;
+
+	// default colors
+	background: $grey-darker;
+	color: $white;
+}
+
+// Color variations
+@each $name, $pair in $colors {
+	$color: nth($pair, 1);
+	$color-invert: nth($pair, 2);
+
+	.badge[data-badge].is-#{$name}-badge:after {
+		background: $color;
+		color: $color-invert;
+	}
+}

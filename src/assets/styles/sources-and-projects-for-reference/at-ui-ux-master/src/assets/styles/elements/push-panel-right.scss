@@ -1,0 +1,38 @@
+/**
+ * Push Panel (from Right)
+ */
+
+// Set panel-width; the rest is derived
+$panel-width: 35%;
+
+
+$panel-slide-end: (100% / (100% - $panel-width));
+$multiplier: (100%/$panel-width);
+$panel-offscreen: $multiplier * 100%;
+$panel-onscreen: ($panel-offscreen / $panel-slide-end);
+
+#push-panel-right
+{
+	// -webkit-transition: -webkit-transform 0.2s ease-in; 
+	transition: transform 0.2s ease-in; 
+	position: absolute; 
+	left: 0; 
+	top: 0; 
+	width: $panel-width;
+	height: 100%;
+	background-color: $grey-lighter; 
+	// transform: translate3d(250%,0,0);
+	transform: translate3d($panel-offscreen,0,0);
+	&.sliding{
+		transform: translate3d($panel-onscreen,0,0); // move back to view
+	}
+}
+
+
+#app {
+	transition: transform 0.2s ease-in;  // smooth move
+	&.sliding {
+		transform: translate3d(-$panel-width,0,0); //move to the right make room for left panel
+	}
+}
+

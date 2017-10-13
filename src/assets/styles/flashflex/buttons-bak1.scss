@@ -1,0 +1,58 @@
+////////////////////////////////////////////////////////////////////
+// BUTTONS -- extended from Bulma 0.5.3
+////////////////////////////////////////////////////////////////////
+
+.button {
+	border-radius: 0px;
+	text-decoration: none;
+
+	// Button level 1
+	&.is-primary {
+		// box-shadow: 5px 5px 10px $grey-light;
+		box-shadow: $primary-box-shadow;
+		text-transform: uppercase;
+		font-weight: bold;
+		&:hover {
+			color: $orange-invert;
+			background-color: $orange;
+			// border-color: $grey-darker;
+			// background-color: $white;
+		}
+	}
+
+	// Button level 2
+	&.is-info.is-outlined {
+		text-transform: uppercase;
+		font-weight: medium;
+		&:hover {
+			color: $grey-darker;
+			border-color: $grey-darker;
+			background-color: $white;
+		}
+	}
+
+	// Button level 3
+	&.is-link {
+		color: $orange;
+		text-decoration: none;
+		&:hover {
+			color: darken($orange, 5%);
+			text-decoration: underline;
+			background-color: transparent;
+			// border-bottom: 1px inherit dotted;
+		}
+	}
+
+	// General for buttons, but 20170525 used in search form size pulldown
+	&.has-shadow {
+		box-shadow: $primary-box-shadow;
+		&.is-depressed {
+			box-shadow: none;
+		}
+	}
+	&.is-depressed {
+		opacity: 0.6;
+	}
+
+
+}

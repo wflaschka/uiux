@@ -1,0 +1,106 @@
+// Translate colors for Bulma settings
+
+$primary-color: color(primary);
+$primary-color-dark: color(primary-dark);
+$primary-color-light: color(primary-light);
+$secondary-color: color(secondary);
+$secondary-color-dark: color(secondary-dark);
+$secondary-color-light: color(secondary-light);
+
+
+$link-color: color(link) !default;
+$link-color-dark: darken($link-color, 5%) !default;
+$link-hover: darken($link-color, 10%) !default;
+$link-hover-border: darken($link-color, 10%) !default;
+$link-focus: darken($link-color, 10%) !default;
+$link-focus-border: darken($link-color, 15%) !default;
+$link-focus-hover: darken($link-color, 10%) !default;
+$link-active: darken($link-color, 10%) !default;
+$link-active-border: darken($link-color, 10%) !default;
+
+
+// for bulma buttons
+$grey-darker: color(gray-dark) !default;
+$grey-lighter: color(gray-light) !default;
+$link: $link-color;
+$text: color(text);
+$text-strong: color(text);
+$grey: color(gray);
+$background: color(white);
+$white-ter: color(white);
+
+
+// Gray colors
+$dark-color: color(gray-dark);
+$light-color: color(white);
+$gray-color: color(gray);
+$gray-color-dark: color(gray-dark);
+$gray-color-light: color(gray-light);
+$gray: color(gray);
+
+$border-color: color(gray);
+$border-color-dark: color(gray);
+$bg-color: color(gray-light);
+$bg-color-dark: color(gray-dark);
+$bg-color-light: color(gray-light);
+
+// Control colors
+$success-color: color(green);
+$warning-color: color(orange);
+$error-color: color(red);
+
+// Other colors
+$code-color: color(gray-light);
+$highlight-color: color(primary-light);
+$body-bg: color(white);
+$body-font-color: color(text);
+
+
+
+
+
+
+///// to remap
+// $dark-color: #454d5d !default;
+// $light-color: #fff !default;
+
+
+// // Core variables
+// // Colors
+
+// $link-color: $primary-color !default;
+// $link-color-dark: darken($link-color, 5%) !default;
+// $link-hover: darken($link-color, 10%) !default;
+// $link-hover-border: darken($link-color, 10%) !default;
+// $link-focus: darken(red, 10%) !default;
+// $link-focus-border: darken(red, 15%) !default;
+// $link-focus-hover: darken(red, 10%) !default;
+// $link-active: darken(orange, 10%) !default;
+// $link-active-border: darken(orange, 10%) !default;
+
+// // Gray colors
+// $dark-color: #454d5d !default;
+// $light-color: #fff !default;
+// $gray-color: lighten($dark-color, 40%) !default;
+// $gray-color-dark: darken($gray-color, 20%) !default;
+// $gray-color-light: lighten($gray-color, 20%) !default;
+// $gray: $gray-color;
+
+// $border-color: lighten($dark-color, 60%) !default;
+// $border-color-dark: darken($border-color, 10%) !default;
+// $bg-color: lighten($dark-color, 66%) !default;
+// $bg-color-dark: darken($bg-color, 3%) !default;
+// $bg-color-light: $light-color !default;
+
+// // Control colors
+// $success-color: #32b643 !default;
+// $warning-color: #ffb700 !default;
+// $error-color: #e85600 !default;
+
+// // Other colors
+// $code-color: #e06870 !default;
+// $highlight-color: #ffe9b3 !default;
+// $body-bg: $bg-color-light !default;
+// $body-font-color: lighten($dark-color, 5%) !default;
+
+

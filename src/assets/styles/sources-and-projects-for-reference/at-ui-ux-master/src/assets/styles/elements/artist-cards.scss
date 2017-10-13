@@ -1,0 +1,53 @@
+/**
+ * Artist Card: .artist-card
+ * Subclassed off of .media-card (art-cards.scss)
+ */
+
+$artist-card-height: 20rem;
+$artist-card-max-width: 20rem;
+$artist-card-min-width: 10rem;
+$artist-card-image-max-height: 13rem;
+$artist-card-image-max-width: $artist-card-max-width;
+// $shrink-divisor: 1.5;
+
+.artist-card {
+
+	height: $artist-card-height;
+	min-width: $artist-card-min-width;
+	max-width: $artist-card-max-width;
+
+	// border: 1px solid $grey;
+	box-shadow: $primary-box-shadow;
+
+	margin: 0rem 1rem 0rem 0rem;
+
+	.card-content {
+		padding: 1rem 0px 0px 0px;
+		text-overflow: ellipsis;
+		margin: 0 auto;
+
+		.card-info {
+			.card-following, .card-views {
+				margin-right: 0.5rem;
+			}
+		}
+	}
+
+	figure.avatar {
+		margin-right: 0.5rem;
+	}
+
+	>figure {
+		height: $artist-card-image-max-height;
+		width: auto;
+		
+		img {
+			box-shadow: none;
+			height: $artist-card-image-max-height;
+
+			&.is-wide {
+				width: $artist-card-max-width;
+			}
+		}
+	}
+}
