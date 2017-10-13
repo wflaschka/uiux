@@ -16927,6 +16927,41 @@ img.contain, img.contained {
   justify-content: center;
 }
 
+.card-row {
+  position: relative;
+  margin: 0;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.row-fade {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  z-index: 1000;
+}
+
+.row-fade:after, .row-fade.right:after {
+  content: '';
+  position: absolute;
+  left: 95%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 100%);
+}
+
+.row-fade.left:before {
+  z-index: 1000;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 95%;
+  bottom: 0;
+  background: linear-gradient(to right, white 0%, rgba(125, 185, 232, 0) 100%);
+}
+
 .blocker {
   position: fixed;
   top: 0;
