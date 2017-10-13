@@ -1,0 +1,85 @@
+// http://hackingui.com/front-end/10-best-scss-utilities/
+// <span class="tooltip-label" data-tooltip="A tooltip!">Hover over me</span>
+// span.tooltip-label { @include hui_tooltip(ARGS); }
+// NOTE: 20170327 Doesn't appear to work for flexbox 
+
+@mixin hui_tooltip($content: attr(data-tooltip), $direction: top) {
+  position: relative;
+  &:before, &:after {
+    display: none;
+    z-index: 98;
+  }
+  &:hover {
+    &:after { // for text bubble
+      content: $content;
+      display: block;
+      position: absolute;
+      height: 12px; // (makes total height including padding 22px)
+      padding: 6px;
+      font-size: 12px;
+      white-space: nowrap;
+      color: #fff;
+      // @include text-shadow(1px 1px #000);
+      background-color: #222;
+    }
+    @if ($direction == 'top'){
+      &:before {
+        @include triangle(down, 6px, #222);
+        top: -6px; margin-top: 0;
+        left: 47%;
+      }
+      &:after {
+        top: -28px;
+        left: 47%; margin-left: -20px;
+      }
+    }
+    @else if ($direction == 'bottom'){
+      &:before {
+        @include triangle(up, 6px, #222);
+        top: auto; margin-top: 0;
+        bottom: -6px;
+        left: 47%;
+      }
+      &:after {
+        bottom: -28px;
+        left: 47%; margin-left: -20px;
+      }
+    }
+  }
+}
+
+
+// Dependency: Triangle
+/*
+## Triangle
+* @include triangle within a pseudo element and add positioning properties (ie. top, left)
+* $direction: up, down, left, right
+*/
+@mixin triangle($direction, $size: 8px, $color: #222) {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 0;
+    width: 0;
+    @if ($direction == 'up') {
+        border-bottom: $size solid $color;
+        border-left: $size solid transparent;
+        border-right: $size solid transparent;
+        border-top: none;
+    } @else if ($direction == 'down') {
+        border-top: $size solid $color;
+        border-left: $size solid transparent;
+        border-right: $size solid transparent;
+        border-bottom: none;
+    } @else if ($direction == 'left') {
+        border-top: $size solid transparent;
+        border-bottom: $size solid transparent;
+        border-right: $size solid $color;
+        border-left: none;
+    } @else if ($direction == 'right') {
+        border-top: $size solid transparent;
+        border-bottom: $size solid transparent;
+        border-left: $size solid $color;
+        border-right: none;
+    }
+}

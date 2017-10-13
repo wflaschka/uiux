@@ -1,0 +1,21 @@
+@font-face {
+	font-family: 'Portrait Web';
+	src: url('../fonts/commercial-type-1703-LWFBVL-web/Portrait-Regular-Web.eot');
+	src: url('../fonts/commercial-type-1703-LWFBVL-web/Portrait-Regular-Web.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/commercial-type-1703-LWFBVL-web/Portrait-Regular-Web.woff2') format('woff2'),
+	url('../fonts/commercial-type-1703-LWFBVL-web/Portrait-Regular-Web.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: normal;
+}
+
+// A CSS class using the font:
+
+// .Portrait-Regular-Web {
+// font-family: 'Portrait Web';
+// font-weight: 400;
+// font-style: normal;
+// font-stretch: normal;
+// }
+$family-serif-title: 'Portrait Web', Georgia;
+

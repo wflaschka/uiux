@@ -1,0 +1,30 @@
+// Core variables and mixins
+
+
+.btn {
+	// Button Primary
+
+	&.btn-danger {
+		background: @control-color-danger;
+		border-color: darken(@control-color-danger, 20%);
+		color: @light-color;
+		&:focus,
+		&:hover {
+			background: darken(@control-color-danger, 2%);
+			border-color: darken(@control-color-danger, 5%);
+			color: @light-color;
+		}
+		&:active,
+		&.active {
+			background: darken(@control-color-danger, 4%);
+			border-color: darken(@control-color-danger, 7%);
+			color: @light-color;
+		}
+		&.loading {
+			&::after {
+				border-bottom-color: @light-color;
+				border-left-color: @light-color;
+			}
+		}
+	}
+}

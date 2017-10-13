@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ArtTap UI/UX Patterns</title>
+
+	<script type="text/javascript" src="../../assets/scripts/jquery-3.1.1.js"></script>
+
+
+	<!-- Spectre to Bulma -->
+	<link rel="stylesheet" type="text/css" href="../../assets/styles/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/styles/bulma.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/styles/site.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/styles/bulma-menu.css">
+
+	<!-- Spectre (works) 20170501 -->
+	<!-- <link rel="stylesheet" type="text/css" href="../../assets/styles/spectre.min.css"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="../../assets/styles/spectre-icons.min.css"> -->
+
+</head>
+<body>
+
+<div class="container">
+
+	<h1 class="title is-1">
+		Dropdowns
+		<a href="/" class="tag is-warning is-icon">
+			Home
+			<span class="icon is-small">
+				<i class="fa fa-arrow-up"></i>
+			</span>
+		</a>
+	</h1>
+
+	<section class="content is-medium">
+		<p>
+			<em>Note:</em> 
+			See <a href="spectre-dropdowns.html">Spectre version of dropdown.</a>
+		</p>
+		<p>
+			<em>Markup:</em> <tt>src/prototypes/interactive/dropdown.html</tt>
+			<br>
+			<em>css:</em> 
+			<br>
+			<tt>src/assets/styles/interactive/bulma-menu.less</tt>
+			<tt>src/assets/styles/interactive/bulma-dropdowns.less</tt>
+		</p>
+
+	</section>
+
+	<div class="box">
+		<h3 class="subtitle is-3">Dropdown</h3>
+		<hr>
+
+		<div id="example" class="columns">
+			<div class="column is-5">
+				
+					<aside class="menu">
+						<p class="menu-label">
+							General
+						</p>
+						<ul class="menu-list">
+							<li><a>Dashboard</a></li>
+							<li><a>Customers</a></li>
+						</ul>
+						<p class="menu-label">
+							Administration
+						</p>
+						<ul class="menu-list">
+							<li><a>Team Settings</a></li>
+							<li>
+								<a class="is-active">Manage Your Team</a>
+								<ul>
+									<li><a>Members</a></li>
+									<li><a>Plugins</a></li>
+									<li><a>Add a member</a></li>
+								</ul>
+							</li>
+							<li><a>Invitations</a></li>
+							<li><a>Cloud Storage Environment Settings</a></li>
+							<li><a>Authentication</a></li>
+						</ul>
+						<p class="menu-label">
+							Transactions
+						</p>
+						<ul class="menu-list">
+							<li><a>Payments</a></li>
+							<li><a>Transfers</a></li>
+							<li><a>Balance</a></li>
+						</ul>
+					</aside>
+				
+			</div>
+			<div class="column is-3">
+				<div class="dropdown dropdown-right">
+					<a class="button is-warning dropdown-toggle" tabindex="0">
+						<span>Menu One</span>
+						<span class="icon is-small">
+							<i class="fa fa-arrow-down"></i>
+						</span>
+					</a>
+					<aside class="menu">
+						<ul class="menu-list">
+							<li><a>Right</a></li>
+							<li><a>Aligned</a></li>
+							<li><a>Menu</a></li>
+						</ul>
+					</aside>
+				</div>
+			</div>
+			<div class="column is-1"></div>
+			<div class="column is-3">
+
+				<div class="dropdown">
+					<a class="button is-warning dropdown-toggle" tabindex="1">
+						<span>Menu Two</span>
+						<span class="icon is-small">
+							<i class="fa fa-arrow-down"></i>
+						</span>
+					</a>
+					<aside class="menu">
+						<p class="menu-label">
+							General
+						</p>
+						<ul class="menu-list">
+							<li><a>Dashboard</a></li>
+							<li><a>Customers</a></li>
+						</ul>
+						<p class="menu-label">
+							Administration
+						</p>
+						<ul class="menu-list">
+							<li><a>Team Settings</a></li>
+							<li>
+								<a class="is-active">Manage Your Team</a>
+								<ul>
+									<li><a>Members</a></li>
+									<li><a>Plugins</a></li>
+									<li><a>Add a member</a></li>
+								</ul>
+							</li>
+							<li><a>Invitations</a></li>
+							<li><a>Cloud Storage Environment Settings</a></li>
+							<li><a>Authentication</a></li>
+						</ul>
+						<p class="menu-label">
+							Transactions
+						</p>
+						<ul class="menu-list">
+							<li><a>Payments</a></li>
+							<li><a>Transfers</a></li>
+							<li><a>Balance</a></li>
+						</ul>
+					</aside>
+				</div>
+
+			</div>
+		</div>
+
+
+	</div>
+
+
+
+
+</div>
+
+</body>
+</html>

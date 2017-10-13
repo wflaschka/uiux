@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+<style>
+	*{
+		margin:0;
+		padding:0;
+	}
+
+	#leftpanel
+	{
+		-webkit-transition: -webkit-transform 0.2s ease-in; 
+		position: absolute; 
+		left: 0; top: 0; 
+		width: 40%; 
+		height: 100%;
+		background: #ffcccc; 
+		-webkit-transform: translate3d(-100%,0,0); // hide it outside canvas by move it far to left
+		transform: translate3d(-100%,0,0);
+	}
+
+	#leftpanel.sliding{
+		-webkit-transform: translate3d(0,0,0); // move back to view
+	}
+
+	#mainpanel {
+		position: absolute;
+		background: #cecece;
+		top:0;
+		left:0;
+		-webkit-transition: -webkit-transform 0.2s ease-in;  // smooth move
+	}
+
+	#mainpanel.sliding {
+		-webkit-transform: translate3d(40%,0,0); //move to the right make room for left panel
+	}
+
+	#menubtn:hover{
+		background-color: red;
+		color: white;
+	}
+	#menubtn{
+		/*position: absolute;  */
+		/*top:4px; left:4px;*/
+		width:120px; 
+		height:40px; 
+		line-height: 40px;
+		text-align: center;
+		/*opacity: 0.5;*/
+		display: block;
+		background-color: gray;
+		border: 1px solid black;
+		margin: 20px;
+	}
+</style>
+
+<script type="text/javascript" src="../../assets/scripts/jquery-3.1.1.js"></script>
+
+<body>
+
+	<div id="leftpanel" onclick="$('#leftpanel,#mainpanel').toggleClass('sliding')"> 
+		<div id="about">
+			<h3>Myteezine ver <span id="version">1.5.0</span><br> Written by Mytee<br>  </h3> 
+			<h4>Copyright © 2013-2014 <a href="http://intcloud.mobi">IntCloud</a> All rights reserved</h4>
+		</div>
+	</div>
+
+	<div id="mainpanel" style="width:100%; height:100%; overflow:hidden;">
+		<div id="menubtn" onclick="$('#leftpanel,#mainpanel').toggleClass('sliding')">Slide me</div>
+		<br>
+		<h1> this is the main screen. </h1>
+
+	</div>
+
+</body>
+</html>
