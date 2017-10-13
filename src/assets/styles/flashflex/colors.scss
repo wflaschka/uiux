@@ -11,8 +11,8 @@
 // Colors are "translated" for Bulma components in 'bulma-0.5.3/color-translate.scss'
 ////////////////////////////////////////////////////////////////////
 
-// Colormap function
-// .class { color: color(greentree); }
+// Colormap functions
+// .class { color: color(green); }
 @function color($key) {
 	@if map-has-key($colors, $key) {
 		@return nth(map-get($colors, $key), 1);
@@ -30,70 +30,45 @@
 	@return null;
 }
 
-
-// ArtTap palette
-$color-white:      #ffffff;
-$color-gray:       #8B8B8B;
-$color-black:      #141414;;
-$color-green:      #BCCE38;
-$color-greentree:  #34863D;
-$color-bluesea:    #408C98;
-$color-bluesky:    #A0D5E5;
-$color-blueroyal:  #425CAB;
-$color-purple:     #6C449E;
-$color-magenta:    #A22173;
-$color-red:        #D92F1D;
-$color-orange:     #F9922C;
-$color-yellow:     #FCEA44;
-$color-eggshell:   #FAEFCF;
-$color-brown:      #7C4D38;
-
-// UI colors
-$color-primary:    #E09D00 !default;
-$color-secondary:  $color-black;
-$color-text:       transparentize($color-black, 0.87);
-$color-link:       $color-primary;
-
-// Shades
-// $color-primary-dark: darken($color-primary, 3%) !default;
-// $color-primary-light: lighten($color-primary, 3%) !default;
-// $color-secondary-dark: darken($color-secondary, 3%) !default;
-// $color-secondary-light: lighten($color-secondary, 3%) !default;
-
 // Build the color map
 @function contrastColor($n) {
     $color-brightness: round((red($n) * 299) + (green($n) * 587) + (blue($n) * 114) / 1000);
     $light-color: round((red(#ffffff) * 299) + (green(#ffffff) * 587) + (blue(#ffffff) * 114) / 1000);
     @if abs($color-brightness) < ($light-color/2){
-        @return $color-white;
+        @return #ffffff;
     }
     @else {
-        @return $color-black;
+        @return #141414;
     }
 }
 
 $colors: (
-	primary    : ($color-primary, contrastColor($color-primary)),
-	secondary  : ($color-secondary, contrastColor($color-secondary)),
-	text       : ($color-text, contrastColor($color-text)),
-	link       : ($color-link, contrastColor($color-link)),
-	white      : ($color-white, contrastColor($color-white)),
-	gray       : ($color-gray, contrastColor($color-gray)),
-	black      : ($color-black, contrastColor($color-black)),
-	green      : ($color-green, contrastColor($color-green)),
-	greentree  : ($color-greentree, contrastColor($color-greentree)),
-	bluesea    : ($color-bluesea, contrastColor($color-bluesea)),
-	bluesky    : ($color-bluesky, contrastColor($color-bluesky)),
-	blueroyal  : ($color-blueroyal, contrastColor($color-blueroyal)),
-	purple     : ($color-purple, contrastColor($color-purple)),
-	magenta    : ($color-magenta, contrastColor($color-magenta)),
-	red        : ($color-red, contrastColor($color-red)),
-	orange     : ($color-orange, contrastColor($color-orange)),
-	yellow     : ($color-yellow, contrastColor($color-yellow)),
-	eggshell   : ($color-eggshell, contrastColor($color-eggshell)),
-	brown      : ($color-brown, contrastColor($color-brown))
+	primary    : (#E09D00, contrastColor(#E09D00)),
+	secondary  : (#141414, contrastColor(#141414)),
+	text       : (transparentize(#141414, 0.13), transparentize(#ffffff, 0.13)),
+	link       : (#E09D00, contrastColor(#E09D00)),
+	white      : (#ffffff, contrastColor(#ffffff)),
+	gray       : (#8B8B8B, contrastColor(#8B8B8B)),
+	black      : (#141414, contrastColor(#141414)),
+	green      : (#BCCE38, contrastColor(#BCCE38)),
+	greentree  : (#34863D, contrastColor(#34863D)),
+	bluesea    : (#408C98, contrastColor(#408C98)),
+	bluesky    : (#A0D5E5, contrastColor(#A0D5E5)),
+	blueroyal  : (#425CAB, contrastColor(#425CAB)),
+	purple     : (#6C449E, contrastColor(#6C449E)),
+	magenta    : (#A22173, contrastColor(#A22173)),
+	red        : (#D92F1D, contrastColor(#D92F1D)),
+	orange     : (#F9922C, contrastColor(#F9922C)),
+	yellow     : (#FCEA44, contrastColor(#FCEA44)),
+	eggshell   : (#FAEFCF, contrastColor(#FAEFCF)),
+	brown      : (#7C4D38, contrastColor(#7C4D38))
 );
+// Use this list for color loops in elements. This 
+// will avoid errors that are created by by dynamically-added
+// colors in $colors map:
+$colorsBasic: (primary secondary text link white gray black green greentree bluesea bluesky blueroyal purple magenta red orange yellow eggshell brown);
 
+// Create *-light and *-dark versions of each color in $colors map
 @each $name, $pair in $colors {
 	$this-color: nth($pair, 1);
 	$this-color-invert: nth($pair, 2);
