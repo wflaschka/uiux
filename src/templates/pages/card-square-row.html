@@ -1,13 +1,29 @@
 {{> header-standard }}
 <main>
 
+	<h3 documentation>With right fade</h3>
+	<div class="row-fade">
+		<div class="row card-row">
+			{{#dataset}}
+				{{> card-square-single }}
+			{{/dataset}}
+			<div class="fader"></div>
+		</div>
+	</div>
 
-<div class="row">
-	{{#dataset}}
-		{{> card-square-single }}
-	{{/dataset}}
-</div>
+	<h3 documentation>With fade on both sides</h3>
+	<div class="row-fade right left">
+		<div class="row card-row">
+			{{#dataset}}
+				{{> card-square-single }}
+			{{/dataset}}
+			<div class="fader"></div>
+		</div>
+	</div>
 
+<p documentation>
+	Probably will need JS to make fades appear interactively.
+</p>
 
 </main>
 {{> footer-standard }}
