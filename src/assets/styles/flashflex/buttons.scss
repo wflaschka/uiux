@@ -88,7 +88,9 @@
     // Colors
     // NOTE: This generates SCSS warnings on compile but that's okay 
     // because we're not using most of these colors for buttons...
-    @each $name, $pair in $colors {
+    // @each $name, $pair in $colors {
+    @each $name in $colorsBasic {
+        $pair: map-get($colors, $name);
         $color: nth($pair, 1);
         $color-invert: nth($pair, 2);
 
