@@ -2,6 +2,7 @@ gulpsample/
 vendor/
 node_modules/
 *-snapshot-*/
+semantic/
 
 # GENERAL .gitignore
 
