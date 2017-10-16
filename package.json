@@ -54,13 +54,13 @@
   },
   "dependencies": {
     "animatewithsass": "^3.2.1",
-    "bulma": "^0.4.0",
+    "bulma": "^0.4.4",
     "droply": "0.0.3",
-    "gulp-vuejs": "^1.0.2",
-    "materialize-css": "^0.100.1",
+    "gulp-vuejs": "^1.0.7",
+    "materialize-css": "^0.100.2",
     "nouislider": "^9.2.0",
-    "semantic-ui": "^2.2.11",
+    "semantic-ui": "^2.2.13",
     "spectre.css": "^0.2.15",
-    "sweetalert2": "^6.6.2"
+    "sweetalert2": "^6.10.2"
   }
 }

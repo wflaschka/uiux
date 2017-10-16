@@ -15,6 +15,7 @@
 
 ////////////////////////////////////////////////////////////////////
 // BASICS
+	@import '_normalize';
 	@import 'setup.scss';
 	@import 'mixins.scss';
 	@import 'mixins-bulma.scss';
@@ -120,6 +121,16 @@
 	$border-width: $unit-o !default;
 	$border-width-lg: $unit-h !default;
 	@import "avatars.scss";
+
+
+// ////////////////////////////////////////////////////////////////////
+// 3rd Party Libraries
+	// Slick Slider
+	@import "slick";
+	@import "slick-theme";
+	// Customization Slick Slider for landing page
+	@import "slider-landing";
+
 
 ////////////////////////////////////////////////////////////
 // PROTOTYPE settings -- ONLY for the UI/UX website
