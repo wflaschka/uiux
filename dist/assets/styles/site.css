@@ -1,14 +1,444 @@
+@charset "UTF-8";
 /**
  * SCSS setup for SITE
  */
+/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Add the correct display in IE 9-.
+ */
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+figcaption,
+figure,
+main {
+  /* 1 */
+  display: block;
+}
+
+/**
+ * Add the correct margin in IE 8.
+ */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+b,
+strong {
+  font-weight: inherit;
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+audio,
+video {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+img {
+  border-style: none;
+}
+
+/**
+ * Hide the overflow in IE.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+details,
+menu {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Scripting
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+canvas {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in IE.
+ */
+template {
+  display: none;
+}
+
+/* Hidden
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10-.
+ */
+[hidden] {
+  display: none;
+}
+
 html {
   font-size: 16px;
   font-family: "Helvetica Neue", Arial, sans-serif;
-}
-
-body {
-  margin: 0;
-  padding: 0;
 }
 
 * {
@@ -564,7 +994,9 @@ body {
   font-style: normal;
 }
 
-.fa, header .icon-hamburger, .header .icon-hamburger, .navigation-dropdown ul li .icon-disclosure, .navigation-dropdown ul li.active .icon-disclosure, .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .select2-selection__choice__remove::after, .avatar .avatar-status, body#prototype-index-page a:not(.logo)::after {
+.fa, header .icon-hamburger, .header .icon-hamburger, .navigation-dropdown ul li .icon-disclosure,
+.account-navigation-dropdown ul li .icon-disclosure, .navigation-dropdown ul li.active .icon-disclosure,
+.account-navigation-dropdown ul li.active .icon-disclosure, .account-navigation-trigger-hamburger .icon-disclosure, .account-navigation-trigger-hamburger .icon-disclosure.active, .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .select2-selection__choice__remove::after, .avatar .avatar-status, body#prototype-index-page a:not(.logo)::after {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
@@ -637,11 +1069,13 @@ body {
   float: right;
 }
 
-.fa.fa-pull-left, header .fa-pull-left.icon-hamburger, .header .fa-pull-left.icon-hamburger, .navigation-dropdown ul li .fa-pull-left.icon-disclosure, .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .fa-pull-left.select2-selection__choice__remove::after, .avatar .fa-pull-left.avatar-status, body#prototype-index-page a.fa-pull-left:not(.logo)::after {
+.fa.fa-pull-left, header .fa-pull-left.icon-hamburger, .header .fa-pull-left.icon-hamburger, .navigation-dropdown ul li .fa-pull-left.icon-disclosure,
+.account-navigation-dropdown ul li .fa-pull-left.icon-disclosure, .account-navigation-trigger-hamburger .fa-pull-left.icon-disclosure, .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .fa-pull-left.select2-selection__choice__remove::after, .avatar .fa-pull-left.avatar-status, body#prototype-index-page a.fa-pull-left:not(.logo)::after {
   margin-right: .3em;
 }
 
-.fa.fa-pull-right, header .fa-pull-right.icon-hamburger, .header .fa-pull-right.icon-hamburger, .navigation-dropdown ul li .fa-pull-right.icon-disclosure, .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .fa-pull-right.select2-selection__choice__remove::after, .avatar .fa-pull-right.avatar-status, body#prototype-index-page a.fa-pull-right:not(.logo)::after {
+.fa.fa-pull-right, header .fa-pull-right.icon-hamburger, .header .fa-pull-right.icon-hamburger, .navigation-dropdown ul li .fa-pull-right.icon-disclosure,
+.account-navigation-dropdown ul li .fa-pull-right.icon-disclosure, .account-navigation-trigger-hamburger .fa-pull-right.icon-disclosure, .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .fa-pull-right.select2-selection__choice__remove::after, .avatar .fa-pull-right.avatar-status, body#prototype-index-page a.fa-pull-right:not(.logo)::after {
   margin-left: .3em;
 }
 
@@ -654,11 +1088,13 @@ body {
   float: left;
 }
 
-.fa.pull-left, header .pull-left.icon-hamburger, .header .pull-left.icon-hamburger, .navigation-dropdown ul li .pull-left.icon-disclosure, .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .pull-left.select2-selection__choice__remove::after, .avatar .pull-left.avatar-status, body#prototype-index-page a.pull-left:not(.logo)::after {
+.fa.pull-left, header .pull-left.icon-hamburger, .header .pull-left.icon-hamburger, .navigation-dropdown ul li .pull-left.icon-disclosure,
+.account-navigation-dropdown ul li .pull-left.icon-disclosure, .account-navigation-trigger-hamburger .pull-left.icon-disclosure, .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .pull-left.select2-selection__choice__remove::after, .avatar .pull-left.avatar-status, body#prototype-index-page a.pull-left:not(.logo)::after {
   margin-right: .3em;
 }
 
-.fa.pull-right, header .pull-right.icon-hamburger, .header .pull-right.icon-hamburger, .navigation-dropdown ul li .pull-right.icon-disclosure, .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .pull-right.select2-selection__choice__remove::after, .avatar .pull-right.avatar-status, body#prototype-index-page a.pull-right:not(.logo)::after {
+.fa.pull-right, header .pull-right.icon-hamburger, .header .pull-right.icon-hamburger, .navigation-dropdown ul li .pull-right.icon-disclosure,
+.account-navigation-dropdown ul li .pull-right.icon-disclosure, .account-navigation-trigger-hamburger .pull-right.icon-disclosure, .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .pull-right.select2-selection__choice__remove::after, .avatar .pull-right.avatar-status, body#prototype-index-page a.pull-right:not(.logo)::after {
   margin-left: .3em;
 }
 
@@ -1228,11 +1664,13 @@ header .icon-hamburger.active:before,
   content: "\f076";
 }
 
-.fa-chevron-up:before, .navigation-dropdown ul li.active .icon-disclosure:before {
+.fa-chevron-up:before, .navigation-dropdown ul li.active .icon-disclosure:before,
+.account-navigation-dropdown ul li.active .icon-disclosure:before, .account-navigation-trigger-hamburger .icon-disclosure.active:before {
   content: "\f077";
 }
 
-.fa-chevron-down:before, .navigation-dropdown ul li .icon-disclosure:before {
+.fa-chevron-down:before, .navigation-dropdown ul li .icon-disclosure:before,
+.account-navigation-dropdown ul li .icon-disclosure:before, .account-navigation-trigger-hamburger .icon-disclosure:before {
   content: "\f078";
 }
 
@@ -7246,7 +7684,7 @@ header .icon-hamburger:before,
 main {
   border: 1px solid transparent;
   height: 100%;
-  min-height: calc( 100vh -  $page-element-header-height -  $page-element-footer-height);
+  min-height: calc( 100vh -  $page-element-header-height -  $page-element-footer-height);
   margin: 0;
   padding: 0;
 }
@@ -7309,13 +7747,13 @@ footer > div {
   }
 }
 
-@media screen and (max-width: 1791px) and (min-width: 1281px) {
+@media screen and (max-width: 1919px) and (min-width: 1281px) {
   .hide-for-desktop {
     display: none !important;
   }
 }
 
-@media screen and (max-width: 1792px) {
+@media screen and (max-width: 1920px) {
   .hide-for-desktop-down {
     display: none !important;
   }
@@ -7327,13 +7765,13 @@ footer > div {
   }
 }
 
-@media screen and (min-width: 1793px) {
+@media screen and (min-width: 1921px) {
   .hide-for-big-desktop {
     display: none !important;
   }
 }
 
-@media screen and (min-width: 1793px) {
+@media screen and (min-width: 1921px) {
   .hide-for-big-desktop-down {
     display: none !important;
   }
@@ -7548,11 +7986,11 @@ footer > div {
     transform: skewX(-0.78125deg) skewY(-0.78125deg);
   }
   77.7% {
-    -webkit-transform: skewX(0.39062deg) skewY(0.39062deg);
-    -moz-transform: skewX(0.39062deg) skewY(0.39062deg);
-    -ms-transform: skewX(0.39062deg) skewY(0.39062deg);
-    -o-transform: skewX(0.39062deg) skewY(0.39062deg);
-    transform: skewX(0.39062deg) skewY(0.39062deg);
+    -webkit-transform: skewX(0.39063deg) skewY(0.39063deg);
+    -moz-transform: skewX(0.39063deg) skewY(0.39063deg);
+    -ms-transform: skewX(0.39063deg) skewY(0.39063deg);
+    -o-transform: skewX(0.39063deg) skewY(0.39063deg);
+    transform: skewX(0.39063deg) skewY(0.39063deg);
   }
   88.8% {
     -webkit-transform: skewX(-0.19531deg) skewY(-0.19531deg);
@@ -7614,11 +8052,11 @@ footer > div {
     transform: skewX(-0.78125deg) skewY(-0.78125deg);
   }
   77.7% {
-    -webkit-transform: skewX(0.39062deg) skewY(0.39062deg);
-    -moz-transform: skewX(0.39062deg) skewY(0.39062deg);
-    -ms-transform: skewX(0.39062deg) skewY(0.39062deg);
-    -o-transform: skewX(0.39062deg) skewY(0.39062deg);
-    transform: skewX(0.39062deg) skewY(0.39062deg);
+    -webkit-transform: skewX(0.39063deg) skewY(0.39063deg);
+    -moz-transform: skewX(0.39063deg) skewY(0.39063deg);
+    -ms-transform: skewX(0.39063deg) skewY(0.39063deg);
+    -o-transform: skewX(0.39063deg) skewY(0.39063deg);
+    transform: skewX(0.39063deg) skewY(0.39063deg);
   }
   88.8% {
     -webkit-transform: skewX(-0.19531deg) skewY(-0.19531deg);
@@ -7680,11 +8118,11 @@ footer > div {
     transform: skewX(-0.78125deg) skewY(-0.78125deg);
   }
   77.7% {
-    -webkit-transform: skewX(0.39062deg) skewY(0.39062deg);
-    -moz-transform: skewX(0.39062deg) skewY(0.39062deg);
-    -ms-transform: skewX(0.39062deg) skewY(0.39062deg);
-    -o-transform: skewX(0.39062deg) skewY(0.39062deg);
-    transform: skewX(0.39062deg) skewY(0.39062deg);
+    -webkit-transform: skewX(0.39063deg) skewY(0.39063deg);
+    -moz-transform: skewX(0.39063deg) skewY(0.39063deg);
+    -ms-transform: skewX(0.39063deg) skewY(0.39063deg);
+    -o-transform: skewX(0.39063deg) skewY(0.39063deg);
+    transform: skewX(0.39063deg) skewY(0.39063deg);
   }
   88.8% {
     -webkit-transform: skewX(-0.19531deg) skewY(-0.19531deg);
@@ -7746,11 +8184,11 @@ footer > div {
     transform: skewX(-0.78125deg) skewY(-0.78125deg);
   }
   77.7% {
-    -webkit-transform: skewX(0.39062deg) skewY(0.39062deg);
-    -moz-transform: skewX(0.39062deg) skewY(0.39062deg);
-    -ms-transform: skewX(0.39062deg) skewY(0.39062deg);
-    -o-transform: skewX(0.39062deg) skewY(0.39062deg);
-    transform: skewX(0.39062deg) skewY(0.39062deg);
+    -webkit-transform: skewX(0.39063deg) skewY(0.39063deg);
+    -moz-transform: skewX(0.39063deg) skewY(0.39063deg);
+    -ms-transform: skewX(0.39063deg) skewY(0.39063deg);
+    -o-transform: skewX(0.39063deg) skewY(0.39063deg);
+    transform: skewX(0.39063deg) skewY(0.39063deg);
   }
   88.8% {
     -webkit-transform: skewX(-0.19531deg) skewY(-0.19531deg);
@@ -7812,11 +8250,11 @@ footer > div {
     transform: skewX(-0.78125deg) skewY(-0.78125deg);
   }
   77.7% {
-    -webkit-transform: skewX(0.39062deg) skewY(0.39062deg);
-    -moz-transform: skewX(0.39062deg) skewY(0.39062deg);
-    -ms-transform: skewX(0.39062deg) skewY(0.39062deg);
-    -o-transform: skewX(0.39062deg) skewY(0.39062deg);
-    transform: skewX(0.39062deg) skewY(0.39062deg);
+    -webkit-transform: skewX(0.39063deg) skewY(0.39063deg);
+    -moz-transform: skewX(0.39063deg) skewY(0.39063deg);
+    -ms-transform: skewX(0.39063deg) skewY(0.39063deg);
+    -o-transform: skewX(0.39063deg) skewY(0.39063deg);
+    transform: skewX(0.39063deg) skewY(0.39063deg);
   }
   88.8% {
     -webkit-transform: skewX(-0.19531deg) skewY(-0.19531deg);
@@ -17234,7 +17672,9 @@ hr[documentation]:before {
   width: 1.5rem;
 }
 
-.icon .fa, .icon header .icon-hamburger, header .icon .icon-hamburger, .icon .header .icon-hamburger, .header .icon .icon-hamburger, .icon .navigation-dropdown ul li .icon-disclosure, .navigation-dropdown ul li .icon .icon-disclosure, .icon .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .select2-selection__choice__remove::after, .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .icon .select2-selection__choice__remove::after, .icon .avatar .avatar-status, .avatar .icon .avatar-status, .icon body#prototype-index-page a:not(.logo)::after, body#prototype-index-page .icon a:not(.logo)::after {
+.icon .fa, .icon header .icon-hamburger, header .icon .icon-hamburger, .icon .header .icon-hamburger, .header .icon .icon-hamburger, .icon .navigation-dropdown ul li .icon-disclosure, .navigation-dropdown ul li .icon .icon-disclosure, .icon
+.account-navigation-dropdown ul li .icon-disclosure,
+.account-navigation-dropdown ul li .icon .icon-disclosure, .icon .account-navigation-trigger-hamburger .icon-disclosure, .account-navigation-trigger-hamburger .icon .icon-disclosure, .icon .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .select2-selection__choice__remove::after, .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .icon .select2-selection__choice__remove::after, .icon .avatar .avatar-status, .avatar .icon .avatar-status, .icon body#prototype-index-page a:not(.logo)::after, body#prototype-index-page .icon a:not(.logo)::after {
   font-size: 21px;
 }
 
@@ -17243,7 +17683,9 @@ hr[documentation]:before {
   width: 1rem;
 }
 
-.icon.is-small .fa, .icon.is-small header .icon-hamburger, header .icon.is-small .icon-hamburger, .icon.is-small .header .icon-hamburger, .header .icon.is-small .icon-hamburger, .icon.is-small .navigation-dropdown ul li .icon-disclosure, .navigation-dropdown ul li .icon.is-small .icon-disclosure, .icon.is-small .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .select2-selection__choice__remove::after, .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .icon.is-small .select2-selection__choice__remove::after, .icon.is-small .avatar .avatar-status, .avatar .icon.is-small .avatar-status, .icon.is-small body#prototype-index-page a:not(.logo)::after, body#prototype-index-page .icon.is-small a:not(.logo)::after {
+.icon.is-small .fa, .icon.is-small header .icon-hamburger, header .icon.is-small .icon-hamburger, .icon.is-small .header .icon-hamburger, .header .icon.is-small .icon-hamburger, .icon.is-small .navigation-dropdown ul li .icon-disclosure, .navigation-dropdown ul li .icon.is-small .icon-disclosure, .icon.is-small
+.account-navigation-dropdown ul li .icon-disclosure,
+.account-navigation-dropdown ul li .icon.is-small .icon-disclosure, .icon.is-small .account-navigation-trigger-hamburger .icon-disclosure, .account-navigation-trigger-hamburger .icon.is-small .icon-disclosure, .icon.is-small .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .select2-selection__choice__remove::after, .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .icon.is-small .select2-selection__choice__remove::after, .icon.is-small .avatar .avatar-status, .avatar .icon.is-small .avatar-status, .icon.is-small body#prototype-index-page a:not(.logo)::after, body#prototype-index-page .icon.is-small a:not(.logo)::after {
   font-size: 14px;
 }
 
@@ -17252,7 +17694,9 @@ hr[documentation]:before {
   width: 2rem;
 }
 
-.icon.is-medium .fa, .icon.is-medium header .icon-hamburger, header .icon.is-medium .icon-hamburger, .icon.is-medium .header .icon-hamburger, .header .icon.is-medium .icon-hamburger, .icon.is-medium .navigation-dropdown ul li .icon-disclosure, .navigation-dropdown ul li .icon.is-medium .icon-disclosure, .icon.is-medium .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .select2-selection__choice__remove::after, .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .icon.is-medium .select2-selection__choice__remove::after, .icon.is-medium .avatar .avatar-status, .avatar .icon.is-medium .avatar-status, .icon.is-medium body#prototype-index-page a:not(.logo)::after, body#prototype-index-page .icon.is-medium a:not(.logo)::after {
+.icon.is-medium .fa, .icon.is-medium header .icon-hamburger, header .icon.is-medium .icon-hamburger, .icon.is-medium .header .icon-hamburger, .header .icon.is-medium .icon-hamburger, .icon.is-medium .navigation-dropdown ul li .icon-disclosure, .navigation-dropdown ul li .icon.is-medium .icon-disclosure, .icon.is-medium
+.account-navigation-dropdown ul li .icon-disclosure,
+.account-navigation-dropdown ul li .icon.is-medium .icon-disclosure, .icon.is-medium .account-navigation-trigger-hamburger .icon-disclosure, .account-navigation-trigger-hamburger .icon.is-medium .icon-disclosure, .icon.is-medium .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .select2-selection__choice__remove::after, .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .icon.is-medium .select2-selection__choice__remove::after, .icon.is-medium .avatar .avatar-status, .avatar .icon.is-medium .avatar-status, .icon.is-medium body#prototype-index-page a:not(.logo)::after, body#prototype-index-page .icon.is-medium a:not(.logo)::after {
   font-size: 28px;
 }
 
@@ -17261,7 +17705,9 @@ hr[documentation]:before {
   width: 3rem;
 }
 
-.icon.is-large .fa, .icon.is-large header .icon-hamburger, header .icon.is-large .icon-hamburger, .icon.is-large .header .icon-hamburger, .header .icon.is-large .icon-hamburger, .icon.is-large .navigation-dropdown ul li .icon-disclosure, .navigation-dropdown ul li .icon.is-large .icon-disclosure, .icon.is-large .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .select2-selection__choice__remove::after, .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .icon.is-large .select2-selection__choice__remove::after, .icon.is-large .avatar .avatar-status, .avatar .icon.is-large .avatar-status, .icon.is-large body#prototype-index-page a:not(.logo)::after, body#prototype-index-page .icon.is-large a:not(.logo)::after {
+.icon.is-large .fa, .icon.is-large header .icon-hamburger, header .icon.is-large .icon-hamburger, .icon.is-large .header .icon-hamburger, .header .icon.is-large .icon-hamburger, .icon.is-large .navigation-dropdown ul li .icon-disclosure, .navigation-dropdown ul li .icon.is-large .icon-disclosure, .icon.is-large
+.account-navigation-dropdown ul li .icon-disclosure,
+.account-navigation-dropdown ul li .icon.is-large .icon-disclosure, .icon.is-large .account-navigation-trigger-hamburger .icon-disclosure, .account-navigation-trigger-hamburger .icon.is-large .icon-disclosure, .icon.is-large .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .select2-selection__choice__remove::after, .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .icon.is-large .select2-selection__choice__remove::after, .icon.is-large .avatar .avatar-status, .avatar .icon.is-large .avatar-status, .icon.is-large body#prototype-index-page a:not(.logo)::after, body#prototype-index-page .icon.is-large a:not(.logo)::after {
   font-size: 42px;
 }
 
@@ -17298,7 +17744,8 @@ header .row .column.logo img, .header .row .column.logo img {
   margin: 0 auto;
 }
 
-.navigation-dropdown {
+.navigation-dropdown,
+.account-navigation-dropdown {
   display: none;
   position: absolute;
   left: 0;
@@ -17311,78 +17758,116 @@ header .row .column.logo img, .header .row .column.logo img {
 }
 
 @media screen and (max-width: 768px) {
-  .navigation-dropdown {
+  .navigation-dropdown,
+  .account-navigation-dropdown {
     top: 53px;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .navigation-dropdown {
+  .navigation-dropdown,
+  .account-navigation-dropdown {
     width: 80vw;
   }
 }
 
 @media screen and (max-width: 767px) and (min-width: 601px) {
-  .navigation-dropdown {
+  .navigation-dropdown,
+  .account-navigation-dropdown {
     width: 50vw;
   }
 }
 
 @media screen and (max-width: 1279px) and (min-width: 769px) {
-  .navigation-dropdown {
+  .navigation-dropdown,
+  .account-navigation-dropdown {
     width: 40vw;
   }
 }
 
-@media screen and (max-width: 1791px) and (min-width: 1281px) {
-  .navigation-dropdown {
+@media screen and (max-width: 1919px) and (min-width: 1281px) {
+  .navigation-dropdown,
+  .account-navigation-dropdown {
     width: 25vw;
   }
 }
 
-@media screen and (min-width: 1793px) {
-  .navigation-dropdown {
+@media screen and (min-width: 1921px) {
+  .navigation-dropdown,
+  .account-navigation-dropdown {
     width: 15vw;
   }
 }
 
-.navigation-dropdown ul {
+.navigation-dropdown ul,
+.account-navigation-dropdown ul {
   list-style: none;
   padding: 0;
   color: gray;
   font-size: 1rem;
 }
 
-.navigation-dropdown ul li {
+.navigation-dropdown ul li,
+.account-navigation-dropdown ul li {
   flex: 0 1 auto;
   margin: 0;
   padding: 0;
   position: relative;
   transition: all linear 1s;
-  padding: 1rem;
+  padding: 1rem 3rem;
 }
 
-.navigation-dropdown ul li.active {
+.navigation-dropdown ul li.active,
+.account-navigation-dropdown ul li.active {
   color: black;
 }
 
-.navigation-dropdown ul li .icon-disclosure {
+.navigation-dropdown ul li .icon-disclosure,
+.account-navigation-dropdown ul li .icon-disclosure {
   float: right;
 }
 
-.navigation-dropdown ul li ul {
+.navigation-dropdown ul li ul,
+.account-navigation-dropdown ul li ul {
   display: none;
   padding: 1rem 0 0 0;
 }
 
-.navigation-dropdown ul li ul li {
+.navigation-dropdown ul li ul li,
+.account-navigation-dropdown ul li ul li {
   font-size: 0.9rem;
   padding-left: 2rem;
 }
 
-.navigation-dropdown ul li.active ul {
+.navigation-dropdown ul li.active ul,
+.account-navigation-dropdown ul li.active ul {
   display: flex;
   flex-direction: column;
+}
+
+.navigation-dropdown .count,
+.account-navigation-dropdown .count {
+  display: inline-block;
+  color: #ffffff;
+  background-color: #E09D00;
+  height: 22px;
+  font-size: .8rem;
+  position: absolute;
+  width: 22px;
+  transform: translate(-150%, 16%);
+  text-align: center;
+  border-radius: 50%;
+}
+
+.account-navigation-dropdown {
+  text-align: left;
+  left: auto;
+  top: 57px;
+  right: 0px;
+}
+
+.account-navigation-trigger-hamburger {
+  position: relative;
 }
 
 /**
@@ -17889,7 +18374,9 @@ header .row .column.logo img, .header .row .column.logo img {
   font-size: 1.25rem;
 }
 
-.file.is-medium .file-icon .fa, .file.is-medium .file-icon header .icon-hamburger, header .file.is-medium .file-icon .icon-hamburger, .file.is-medium .file-icon .header .icon-hamburger, .header .file.is-medium .file-icon .icon-hamburger, .file.is-medium .file-icon .navigation-dropdown ul li .icon-disclosure, .navigation-dropdown ul li .file.is-medium .file-icon .icon-disclosure, .file.is-medium .file-icon .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .select2-selection__choice__remove::after, .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .file.is-medium .file-icon .select2-selection__choice__remove::after, .file.is-medium .file-icon .avatar .avatar-status, .avatar .file.is-medium .file-icon .avatar-status, .file.is-medium .file-icon body#prototype-index-page a:not(.logo)::after, body#prototype-index-page .file.is-medium .file-icon a:not(.logo)::after {
+.file.is-medium .file-icon .fa, .file.is-medium .file-icon header .icon-hamburger, header .file.is-medium .file-icon .icon-hamburger, .file.is-medium .file-icon .header .icon-hamburger, .header .file.is-medium .file-icon .icon-hamburger, .file.is-medium .file-icon .navigation-dropdown ul li .icon-disclosure, .navigation-dropdown ul li .file.is-medium .file-icon .icon-disclosure, .file.is-medium .file-icon
+.account-navigation-dropdown ul li .icon-disclosure,
+.account-navigation-dropdown ul li .file.is-medium .file-icon .icon-disclosure, .file.is-medium .file-icon .account-navigation-trigger-hamburger .icon-disclosure, .account-navigation-trigger-hamburger .file.is-medium .file-icon .icon-disclosure, .file.is-medium .file-icon .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .select2-selection__choice__remove::after, .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .file.is-medium .file-icon .select2-selection__choice__remove::after, .file.is-medium .file-icon .avatar .avatar-status, .avatar .file.is-medium .file-icon .avatar-status, .file.is-medium .file-icon body#prototype-index-page a:not(.logo)::after, body#prototype-index-page .file.is-medium .file-icon a:not(.logo)::after {
   font-size: 21px;
 }
 
@@ -17897,7 +18384,9 @@ header .row .column.logo img, .header .row .column.logo img {
   font-size: 1.5rem;
 }
 
-.file.is-large .file-icon .fa, .file.is-large .file-icon header .icon-hamburger, header .file.is-large .file-icon .icon-hamburger, .file.is-large .file-icon .header .icon-hamburger, .header .file.is-large .file-icon .icon-hamburger, .file.is-large .file-icon .navigation-dropdown ul li .icon-disclosure, .navigation-dropdown ul li .file.is-large .file-icon .icon-disclosure, .file.is-large .file-icon .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .select2-selection__choice__remove::after, .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .file.is-large .file-icon .select2-selection__choice__remove::after, .file.is-large .file-icon .avatar .avatar-status, .avatar .file.is-large .file-icon .avatar-status, .file.is-large .file-icon body#prototype-index-page a:not(.logo)::after, body#prototype-index-page .file.is-large .file-icon a:not(.logo)::after {
+.file.is-large .file-icon .fa, .file.is-large .file-icon header .icon-hamburger, header .file.is-large .file-icon .icon-hamburger, .file.is-large .file-icon .header .icon-hamburger, .header .file.is-large .file-icon .icon-hamburger, .file.is-large .file-icon .navigation-dropdown ul li .icon-disclosure, .navigation-dropdown ul li .file.is-large .file-icon .icon-disclosure, .file.is-large .file-icon
+.account-navigation-dropdown ul li .icon-disclosure,
+.account-navigation-dropdown ul li .file.is-large .file-icon .icon-disclosure, .file.is-large .file-icon .account-navigation-trigger-hamburger .icon-disclosure, .account-navigation-trigger-hamburger .file.is-large .file-icon .icon-disclosure, .file.is-large .file-icon .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .select2-selection__choice__remove::after, .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .file.is-large .file-icon .select2-selection__choice__remove::after, .file.is-large .file-icon .avatar .avatar-status, .avatar .file.is-large .file-icon .avatar-status, .file.is-large .file-icon body#prototype-index-page a:not(.logo)::after, body#prototype-index-page .file.is-large .file-icon a:not(.logo)::after {
   font-size: 28px;
 }
 
@@ -17938,19 +18427,27 @@ header .row .column.logo img, .header .row .column.logo img {
   width: 1.5em;
 }
 
-.file.is-boxed .file-icon .fa, .file.is-boxed .file-icon header .icon-hamburger, header .file.is-boxed .file-icon .icon-hamburger, .file.is-boxed .file-icon .header .icon-hamburger, .header .file.is-boxed .file-icon .icon-hamburger, .file.is-boxed .file-icon .navigation-dropdown ul li .icon-disclosure, .navigation-dropdown ul li .file.is-boxed .file-icon .icon-disclosure, .file.is-boxed .file-icon .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .select2-selection__choice__remove::after, .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .file.is-boxed .file-icon .select2-selection__choice__remove::after, .file.is-boxed .file-icon .avatar .avatar-status, .avatar .file.is-boxed .file-icon .avatar-status, .file.is-boxed .file-icon body#prototype-index-page a:not(.logo)::after, body#prototype-index-page .file.is-boxed .file-icon a:not(.logo)::after {
+.file.is-boxed .file-icon .fa, .file.is-boxed .file-icon header .icon-hamburger, header .file.is-boxed .file-icon .icon-hamburger, .file.is-boxed .file-icon .header .icon-hamburger, .header .file.is-boxed .file-icon .icon-hamburger, .file.is-boxed .file-icon .navigation-dropdown ul li .icon-disclosure, .navigation-dropdown ul li .file.is-boxed .file-icon .icon-disclosure, .file.is-boxed .file-icon
+.account-navigation-dropdown ul li .icon-disclosure,
+.account-navigation-dropdown ul li .file.is-boxed .file-icon .icon-disclosure, .file.is-boxed .file-icon .account-navigation-trigger-hamburger .icon-disclosure, .account-navigation-trigger-hamburger .file.is-boxed .file-icon .icon-disclosure, .file.is-boxed .file-icon .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .select2-selection__choice__remove::after, .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .file.is-boxed .file-icon .select2-selection__choice__remove::after, .file.is-boxed .file-icon .avatar .avatar-status, .avatar .file.is-boxed .file-icon .avatar-status, .file.is-boxed .file-icon body#prototype-index-page a:not(.logo)::after, body#prototype-index-page .file.is-boxed .file-icon a:not(.logo)::after {
   font-size: 21px;
 }
 
-.file.is-boxed.is-small .file-icon .fa, .file.is-boxed.is-small .file-icon header .icon-hamburger, header .file.is-boxed.is-small .file-icon .icon-hamburger, .file.is-boxed.is-small .file-icon .header .icon-hamburger, .header .file.is-boxed.is-small .file-icon .icon-hamburger, .file.is-boxed.is-small .file-icon .navigation-dropdown ul li .icon-disclosure, .navigation-dropdown ul li .file.is-boxed.is-small .file-icon .icon-disclosure, .file.is-boxed.is-small .file-icon .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .select2-selection__choice__remove::after, .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .file.is-boxed.is-small .file-icon .select2-selection__choice__remove::after, .file.is-boxed.is-small .file-icon .avatar .avatar-status, .avatar .file.is-boxed.is-small .file-icon .avatar-status, .file.is-boxed.is-small .file-icon body#prototype-index-page a:not(.logo)::after, body#prototype-index-page .file.is-boxed.is-small .file-icon a:not(.logo)::after {
+.file.is-boxed.is-small .file-icon .fa, .file.is-boxed.is-small .file-icon header .icon-hamburger, header .file.is-boxed.is-small .file-icon .icon-hamburger, .file.is-boxed.is-small .file-icon .header .icon-hamburger, .header .file.is-boxed.is-small .file-icon .icon-hamburger, .file.is-boxed.is-small .file-icon .navigation-dropdown ul li .icon-disclosure, .navigation-dropdown ul li .file.is-boxed.is-small .file-icon .icon-disclosure, .file.is-boxed.is-small .file-icon
+.account-navigation-dropdown ul li .icon-disclosure,
+.account-navigation-dropdown ul li .file.is-boxed.is-small .file-icon .icon-disclosure, .file.is-boxed.is-small .file-icon .account-navigation-trigger-hamburger .icon-disclosure, .account-navigation-trigger-hamburger .file.is-boxed.is-small .file-icon .icon-disclosure, .file.is-boxed.is-small .file-icon .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .select2-selection__choice__remove::after, .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .file.is-boxed.is-small .file-icon .select2-selection__choice__remove::after, .file.is-boxed.is-small .file-icon .avatar .avatar-status, .avatar .file.is-boxed.is-small .file-icon .avatar-status, .file.is-boxed.is-small .file-icon body#prototype-index-page a:not(.logo)::after, body#prototype-index-page .file.is-boxed.is-small .file-icon a:not(.logo)::after {
   font-size: 14px;
 }
 
-.file.is-boxed.is-medium .file-icon .fa, .file.is-boxed.is-medium .file-icon header .icon-hamburger, header .file.is-boxed.is-medium .file-icon .icon-hamburger, .file.is-boxed.is-medium .file-icon .header .icon-hamburger, .header .file.is-boxed.is-medium .file-icon .icon-hamburger, .file.is-boxed.is-medium .file-icon .navigation-dropdown ul li .icon-disclosure, .navigation-dropdown ul li .file.is-boxed.is-medium .file-icon .icon-disclosure, .file.is-boxed.is-medium .file-icon .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .select2-selection__choice__remove::after, .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .file.is-boxed.is-medium .file-icon .select2-selection__choice__remove::after, .file.is-boxed.is-medium .file-icon .avatar .avatar-status, .avatar .file.is-boxed.is-medium .file-icon .avatar-status, .file.is-boxed.is-medium .file-icon body#prototype-index-page a:not(.logo)::after, body#prototype-index-page .file.is-boxed.is-medium .file-icon a:not(.logo)::after {
+.file.is-boxed.is-medium .file-icon .fa, .file.is-boxed.is-medium .file-icon header .icon-hamburger, header .file.is-boxed.is-medium .file-icon .icon-hamburger, .file.is-boxed.is-medium .file-icon .header .icon-hamburger, .header .file.is-boxed.is-medium .file-icon .icon-hamburger, .file.is-boxed.is-medium .file-icon .navigation-dropdown ul li .icon-disclosure, .navigation-dropdown ul li .file.is-boxed.is-medium .file-icon .icon-disclosure, .file.is-boxed.is-medium .file-icon
+.account-navigation-dropdown ul li .icon-disclosure,
+.account-navigation-dropdown ul li .file.is-boxed.is-medium .file-icon .icon-disclosure, .file.is-boxed.is-medium .file-icon .account-navigation-trigger-hamburger .icon-disclosure, .account-navigation-trigger-hamburger .file.is-boxed.is-medium .file-icon .icon-disclosure, .file.is-boxed.is-medium .file-icon .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .select2-selection__choice__remove::after, .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .file.is-boxed.is-medium .file-icon .select2-selection__choice__remove::after, .file.is-boxed.is-medium .file-icon .avatar .avatar-status, .avatar .file.is-boxed.is-medium .file-icon .avatar-status, .file.is-boxed.is-medium .file-icon body#prototype-index-page a:not(.logo)::after, body#prototype-index-page .file.is-boxed.is-medium .file-icon a:not(.logo)::after {
   font-size: 28px;
 }
 
-.file.is-boxed.is-large .file-icon .fa, .file.is-boxed.is-large .file-icon header .icon-hamburger, header .file.is-boxed.is-large .file-icon .icon-hamburger, .file.is-boxed.is-large .file-icon .header .icon-hamburger, .header .file.is-boxed.is-large .file-icon .icon-hamburger, .file.is-boxed.is-large .file-icon .navigation-dropdown ul li .icon-disclosure, .navigation-dropdown ul li .file.is-boxed.is-large .file-icon .icon-disclosure, .file.is-boxed.is-large .file-icon .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .select2-selection__choice__remove::after, .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .file.is-boxed.is-large .file-icon .select2-selection__choice__remove::after, .file.is-boxed.is-large .file-icon .avatar .avatar-status, .avatar .file.is-boxed.is-large .file-icon .avatar-status, .file.is-boxed.is-large .file-icon body#prototype-index-page a:not(.logo)::after, body#prototype-index-page .file.is-boxed.is-large .file-icon a:not(.logo)::after {
+.file.is-boxed.is-large .file-icon .fa, .file.is-boxed.is-large .file-icon header .icon-hamburger, header .file.is-boxed.is-large .file-icon .icon-hamburger, .file.is-boxed.is-large .file-icon .header .icon-hamburger, .header .file.is-boxed.is-large .file-icon .icon-hamburger, .file.is-boxed.is-large .file-icon .navigation-dropdown ul li .icon-disclosure, .navigation-dropdown ul li .file.is-boxed.is-large .file-icon .icon-disclosure, .file.is-boxed.is-large .file-icon
+.account-navigation-dropdown ul li .icon-disclosure,
+.account-navigation-dropdown ul li .file.is-boxed.is-large .file-icon .icon-disclosure, .file.is-boxed.is-large .file-icon .account-navigation-trigger-hamburger .icon-disclosure, .account-navigation-trigger-hamburger .file.is-boxed.is-large .file-icon .icon-disclosure, .file.is-boxed.is-large .file-icon .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .select2-selection__choice__remove::after, .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .file.is-boxed.is-large .file-icon .select2-selection__choice__remove::after, .file.is-boxed.is-large .file-icon .avatar .avatar-status, .avatar .file.is-boxed.is-large .file-icon .avatar-status, .file.is-boxed.is-large .file-icon body#prototype-index-page a:not(.logo)::after, body#prototype-index-page .file.is-boxed.is-large .file-icon a:not(.logo)::after {
   font-size: 35px;
 }
 
@@ -18083,7 +18580,9 @@ header .row .column.logo img, .header .row .column.logo img {
   width: 1em;
 }
 
-.file-icon .fa, .file-icon header .icon-hamburger, header .file-icon .icon-hamburger, .file-icon .header .icon-hamburger, .header .file-icon .icon-hamburger, .file-icon .navigation-dropdown ul li .icon-disclosure, .navigation-dropdown ul li .file-icon .icon-disclosure, .file-icon .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .select2-selection__choice__remove::after, .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .file-icon .select2-selection__choice__remove::after, .file-icon .avatar .avatar-status, .avatar .file-icon .avatar-status, .file-icon body#prototype-index-page a:not(.logo)::after, body#prototype-index-page .file-icon a:not(.logo)::after {
+.file-icon .fa, .file-icon header .icon-hamburger, header .file-icon .icon-hamburger, .file-icon .header .icon-hamburger, .header .file-icon .icon-hamburger, .file-icon .navigation-dropdown ul li .icon-disclosure, .navigation-dropdown ul li .file-icon .icon-disclosure, .file-icon
+.account-navigation-dropdown ul li .icon-disclosure,
+.account-navigation-dropdown ul li .file-icon .icon-disclosure, .file-icon .account-navigation-trigger-hamburger .icon-disclosure, .account-navigation-trigger-hamburger .file-icon .icon-disclosure, .file-icon .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .select2-selection__choice__remove::after, .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .file-icon .select2-selection__choice__remove::after, .file-icon .avatar .avatar-status, .avatar .file-icon .avatar-status, .file-icon body#prototype-index-page a:not(.logo)::after, body#prototype-index-page .file-icon a:not(.logo)::after {
   font-size: 14px;
 }
 
@@ -19508,7 +20007,9 @@ label.checkbox input:checked + span:after, label.radio input:checked + span:afte
   color: #8B8B8B;
 }
 
-.heart:hover .icon .fa, .heart:hover .icon header .icon-hamburger, header .heart:hover .icon .icon-hamburger, .heart:hover .icon .header .icon-hamburger, .header .heart:hover .icon .icon-hamburger, .heart:hover .icon .navigation-dropdown ul li .icon-disclosure, .navigation-dropdown ul li .heart:hover .icon .icon-disclosure, .heart:hover .icon .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .select2-selection__choice__remove::after, .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .heart:hover .icon .select2-selection__choice__remove::after, .heart:hover .icon .avatar .avatar-status, .avatar .heart:hover .icon .avatar-status, .heart:hover .icon body#prototype-index-page a:not(.logo)::after, body#prototype-index-page .heart:hover .icon a:not(.logo)::after {
+.heart:hover .icon .fa, .heart:hover .icon header .icon-hamburger, header .heart:hover .icon .icon-hamburger, .heart:hover .icon .header .icon-hamburger, .header .heart:hover .icon .icon-hamburger, .heart:hover .icon .navigation-dropdown ul li .icon-disclosure, .navigation-dropdown ul li .heart:hover .icon .icon-disclosure, .heart:hover .icon
+.account-navigation-dropdown ul li .icon-disclosure,
+.account-navigation-dropdown ul li .heart:hover .icon .icon-disclosure, .heart:hover .icon .account-navigation-trigger-hamburger .icon-disclosure, .account-navigation-trigger-hamburger .heart:hover .icon .icon-disclosure, .heart:hover .icon .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .select2-selection__choice__remove::after, .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .heart:hover .icon .select2-selection__choice__remove::after, .heart:hover .icon .avatar .avatar-status, .avatar .heart:hover .icon .avatar-status, .heart:hover .icon body#prototype-index-page a:not(.logo)::after, body#prototype-index-page .heart:hover .icon a:not(.logo)::after {
   -webkit-animation-name: pulse;
   -moz-animation-name: pulse;
   -ms-animation-name: pulse;
@@ -19546,16 +20047,22 @@ label.checkbox input:checked + span:after, label.radio input:checked + span:afte
   backface-visibility: hidden;
 }
 
-.heart .icon.fa, .heart header .icon.icon-hamburger, header .heart .icon.icon-hamburger, .heart .header .icon.icon-hamburger, .header .heart .icon.icon-hamburger, .heart .navigation-dropdown ul li .icon.icon-disclosure, .navigation-dropdown ul li .heart .icon.icon-disclosure, .heart .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .icon.select2-selection__choice__remove::after, .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .heart .icon.select2-selection__choice__remove::after, .heart .avatar .icon.avatar-status, .avatar .heart .icon.avatar-status, .heart body#prototype-index-page a.icon:not(.logo)::after, body#prototype-index-page .heart a.icon:not(.logo)::after {
+.heart .icon.fa, .heart header .icon.icon-hamburger, header .heart .icon.icon-hamburger, .heart .header .icon.icon-hamburger, .header .heart .icon.icon-hamburger, .heart .navigation-dropdown ul li .icon.icon-disclosure, .navigation-dropdown ul li .heart .icon.icon-disclosure, .heart
+.account-navigation-dropdown ul li .icon.icon-disclosure,
+.account-navigation-dropdown ul li .heart .icon.icon-disclosure, .heart .account-navigation-trigger-hamburger .icon.icon-disclosure, .account-navigation-trigger-hamburger .heart .icon.icon-disclosure, .heart .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .icon.select2-selection__choice__remove::after, .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .heart .icon.select2-selection__choice__remove::after, .heart .avatar .icon.avatar-status, .avatar .heart .icon.avatar-status, .heart body#prototype-index-page a.icon:not(.logo)::after, body#prototype-index-page .heart a.icon:not(.logo)::after {
   color: #8B8B8B;
   cursor: pointer;
 }
 
-.heart.is-hearted .icon.fa, .heart.is-hearted header .icon.icon-hamburger, header .heart.is-hearted .icon.icon-hamburger, .heart.is-hearted .header .icon.icon-hamburger, .header .heart.is-hearted .icon.icon-hamburger, .heart.is-hearted .navigation-dropdown ul li .icon.icon-disclosure, .navigation-dropdown ul li .heart.is-hearted .icon.icon-disclosure, .heart.is-hearted .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .icon.select2-selection__choice__remove::after, .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .heart.is-hearted .icon.select2-selection__choice__remove::after, .heart.is-hearted .avatar .icon.avatar-status, .avatar .heart.is-hearted .icon.avatar-status, .heart.is-hearted body#prototype-index-page a.icon:not(.logo)::after, body#prototype-index-page .heart.is-hearted a.icon:not(.logo)::after {
+.heart.is-hearted .icon.fa, .heart.is-hearted header .icon.icon-hamburger, header .heart.is-hearted .icon.icon-hamburger, .heart.is-hearted .header .icon.icon-hamburger, .header .heart.is-hearted .icon.icon-hamburger, .heart.is-hearted .navigation-dropdown ul li .icon.icon-disclosure, .navigation-dropdown ul li .heart.is-hearted .icon.icon-disclosure, .heart.is-hearted
+.account-navigation-dropdown ul li .icon.icon-disclosure,
+.account-navigation-dropdown ul li .heart.is-hearted .icon.icon-disclosure, .heart.is-hearted .account-navigation-trigger-hamburger .icon.icon-disclosure, .account-navigation-trigger-hamburger .heart.is-hearted .icon.icon-disclosure, .heart.is-hearted .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .icon.select2-selection__choice__remove::after, .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .heart.is-hearted .icon.select2-selection__choice__remove::after, .heart.is-hearted .avatar .icon.avatar-status, .avatar .heart.is-hearted .icon.avatar-status, .heart.is-hearted body#prototype-index-page a.icon:not(.logo)::after, body#prototype-index-page .heart.is-hearted a.icon:not(.logo)::after {
   color: #ff3860;
 }
 
-.heart.is-being-clicked .icon.fa, .heart.is-being-clicked header .icon.icon-hamburger, header .heart.is-being-clicked .icon.icon-hamburger, .heart.is-being-clicked .header .icon.icon-hamburger, .header .heart.is-being-clicked .icon.icon-hamburger, .heart.is-being-clicked .navigation-dropdown ul li .icon.icon-disclosure, .navigation-dropdown ul li .heart.is-being-clicked .icon.icon-disclosure, .heart.is-being-clicked .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .icon.select2-selection__choice__remove::after, .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .heart.is-being-clicked .icon.select2-selection__choice__remove::after, .heart.is-being-clicked .avatar .icon.avatar-status, .avatar .heart.is-being-clicked .icon.avatar-status, .heart.is-being-clicked body#prototype-index-page a.icon:not(.logo)::after, body#prototype-index-page .heart.is-being-clicked a.icon:not(.logo)::after {
+.heart.is-being-clicked .icon.fa, .heart.is-being-clicked header .icon.icon-hamburger, header .heart.is-being-clicked .icon.icon-hamburger, .heart.is-being-clicked .header .icon.icon-hamburger, .header .heart.is-being-clicked .icon.icon-hamburger, .heart.is-being-clicked .navigation-dropdown ul li .icon.icon-disclosure, .navigation-dropdown ul li .heart.is-being-clicked .icon.icon-disclosure, .heart.is-being-clicked
+.account-navigation-dropdown ul li .icon.icon-disclosure,
+.account-navigation-dropdown ul li .heart.is-being-clicked .icon.icon-disclosure, .heart.is-being-clicked .account-navigation-trigger-hamburger .icon.icon-disclosure, .account-navigation-trigger-hamburger .heart.is-being-clicked .icon.icon-disclosure, .heart.is-being-clicked .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .icon.select2-selection__choice__remove::after, .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .heart.is-being-clicked .icon.select2-selection__choice__remove::after, .heart.is-being-clicked .avatar .icon.avatar-status, .avatar .heart.is-being-clicked .icon.avatar-status, .heart.is-being-clicked body#prototype-index-page a.icon:not(.logo)::after, body#prototype-index-page .heart.is-being-clicked a.icon:not(.logo)::after {
   -webkit-animation-name: rubberBand;
   -moz-animation-name: rubberBand;
   -ms-animation-name: rubberBand;
@@ -21833,6 +22340,298 @@ label.checkbox input:checked + span:after, label.radio input:checked + span:afte
 
 .avatar .avatar-status.followed {
   background: blue;
+}
+
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.slick-list:focus {
+  outline: none;
+}
+
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slick-track:before, .slick-track:after {
+  content: "";
+  display: table;
+}
+
+.slick-track:after {
+  clear: both;
+}
+
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none;
+}
+
+[dir="rtl"] .slick-slide {
+  float: right;
+}
+
+.slick-slide img {
+  display: block;
+}
+
+.slick-slide.slick-loading img {
+  display: none;
+}
+
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+  display: block;
+}
+
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
+/* Slider */
+.slick-loading .slick-list {
+  background: #fff url("../images/ajax-loader.gif") center center no-repeat;
+}
+
+/* Icons */
+@font-face {
+  font-family: "slick";
+  src: url("../fonts/slick/slick.eot");
+  src: url("../fonts/slick/slick.eot?#iefix") format("embedded-opentype"), url("../fonts/slick/slick.woff") format("woff"), url("../fonts/slick/slick.ttf") format("truetype"), url("../fonts/slick/slick.svg#slick") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Arrows */
+.slick-prev,
+.slick-next {
+  position: absolute;
+  display: block;
+  height: 20px;
+  width: 20px;
+  line-height: 0px;
+  font-size: 0px;
+  cursor: pointer;
+  background: transparent;
+  color: transparent;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+.slick-prev:hover, .slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+  outline: none;
+  background: transparent;
+  color: transparent;
+}
+
+.slick-prev:hover:before, .slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before {
+  opacity: 1;
+}
+
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before {
+  opacity: 0.25;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-family: "slick";
+  font-size: 20px;
+  line-height: 1;
+  color: white;
+  opacity: 0.75;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev {
+  left: -25px;
+}
+
+[dir="rtl"] .slick-prev {
+  left: auto;
+  right: -25px;
+}
+
+.slick-prev:before {
+  content: "←";
+}
+
+[dir="rtl"] .slick-prev:before {
+  content: "→";
+}
+
+.slick-next {
+  right: -25px;
+}
+
+[dir="rtl"] .slick-next {
+  left: -25px;
+  right: auto;
+}
+
+.slick-next:before {
+  content: "→";
+}
+
+[dir="rtl"] .slick-next:before {
+  content: "←";
+}
+
+/* Dots */
+.slick-dotted.slick-slider {
+  margin-bottom: 30px;
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: -25px;
+  list-style: none;
+  display: block;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.slick-dots li {
+  position: relative;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.slick-dots li button {
+  border: 0;
+  background: transparent;
+  display: block;
+  height: 20px;
+  width: 20px;
+  outline: none;
+  line-height: 0px;
+  font-size: 0px;
+  color: transparent;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.slick-dots li button:hover, .slick-dots li button:focus {
+  outline: none;
+}
+
+.slick-dots li button:hover:before, .slick-dots li button:focus:before {
+  opacity: 1;
+}
+
+.slick-dots li button:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "•";
+  width: 20px;
+  height: 20px;
+  font-family: "slick";
+  font-size: 6px;
+  line-height: 20px;
+  text-align: center;
+  color: black;
+  opacity: 0.25;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-dots li.slick-active button:before {
+  color: black;
+  opacity: 0.75;
+}
+
+.slick-slide img {
+  width: 100%;
+}
+
+.slick-dots {
+  bottom: 35px;
+}
+
+.slick-dots li button:before {
+  font-size: .7rem;
+  color: #ffffff;
+  opacity: .5;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 1;
 }
 
 body#prototype-page-component-only {

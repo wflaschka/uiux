@@ -35,16 +35,16 @@
 	$breakpoints-from-ArtTap-Designer-DesktopBig: 1800px;
 	// The sizes above, converted to REM for flexboxgrid-sass framework
 	// Only used in responsive.scss
-	$fBG_xs: 37.5rem;
-	$fBG_sm: 48rem;
-	$fBG_md: 56rem;
-	$fBG_lg: 80em;
-	$fBG_xl: 112rem;
+	$fBG_xs: 37.5rem; // 600px
+	$fBG_sm: 48rem; // 768px
+	$fBG_md: 56rem; // 896px
+	$fBG_lg: 80em; // 1280px
+	$fBG_xl: 120rem; // 1920px
 
 ////////////////////////////////////////////////////////////////////
 // Page element heights
 // These are used for math when we're laying out full-height pages
-	$page-element-nagbar-height: 20px;
+	$page-element-navbar-height: 20px;
 	$page-element-header-height: 60px;
 	$page-element-header-mobile-height: 50px;
 	$page-element-footer-height: 60px;

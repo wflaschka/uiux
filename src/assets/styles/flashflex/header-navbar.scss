@@ -43,7 +43,8 @@ header, .header {
 
 }
 
-.navigation-dropdown {
+.navigation-dropdown,
+.account-navigation-dropdown {
 	display: none;
 	position: absolute;
 	left: 0;
@@ -93,7 +94,7 @@ header, .header {
 			transition: all linear 1s;
 
 			// Appearance
-			padding: 1rem;
+			padding: 1rem 3rem;
 			&.active {
 				color: black;
 			}
@@ -128,5 +129,37 @@ header, .header {
 		}
 	}
 
+	.count {
+		display: inline-block;
+	    color: color(white);
+	    background-color: color(primary);
+	    height: 22px;
+	    font-size: .8rem;
+	    position: absolute;
+	    width: 22px;
+	    transform: translate(-150%, 16%);
+	    text-align: center;
+	    border-radius: 50%;
+	}
+
 }
 
+.account-navigation-dropdown {
+	text-align: left;
+	left: auto;
+	top: 57px;
+	right: 0px;
+}
+
+.account-navigation-trigger-hamburger {
+	position: relative;
+	// Disclosure triangle
+	.icon-disclosure {
+		@extend .fa;
+		@extend .fa-chevron-down;
+		&.active {
+			@extend .fa;
+			@extend .fa-chevron-up;
+		}
+	}
+}

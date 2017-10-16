@@ -8,10 +8,10 @@
       "themes": "src/themes/"
     },
     "output": {
-      "packaged": "../dist/assets/semantic-ui/"
-      ,"uncompressed": "../dist/assets/semantic-ui/components-src/"
-      ,"compressed": "../dist/assets/semantic-ui/components/"
-      ,"themes": "../dist/assets/semantic-ui/themes/"
+      "packaged": "../dist/assets/semantic-ui/",
+      "uncompressed": "../dist/assets/semantic-ui/components-src/",
+      "compressed": "../dist/assets/semantic-ui/components/",
+      "themes": "../dist/assets/semantic-ui/themes/"
     },
     "clean": "dist/assets/semantic-ui/"
   },
@@ -69,5 +69,5 @@
     "state",
     "visibility"
   ],
-  "version": "2.2.11"
+  "version": "2.2.13"
 }
