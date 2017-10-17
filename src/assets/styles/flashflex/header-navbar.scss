@@ -2,15 +2,18 @@
  * HEADER
  */
 
-header, .header {
+.header {
     margin: 0;
     padding: 0;
     width: 100%;
     background-color: white;
-    border-top: 3px solid gold;
+    border-top: 3px solid rgb(223, 158, 38);
+    position: relative;
 	z-index: 1000;
 
 	@include box_shadow(2);
+
+	&.no-shadow { box-shadow: none; }
 
 	// Hamburger icon
 	.icon-hamburger {
@@ -36,6 +39,7 @@ header, .header {
 
 	    		img {
 	    			margin: 0 auto;
+	    			max-height: 1.875rem;
 	    		}
 	    	}
 	    }
@@ -52,9 +56,9 @@ header, .header {
 	background-color: white;
 
 	// Positioning: menu height + top border width
-	top: 63px;
+	top: $page-element-header-height;
 	@include for-tablet-portrait-down {
-		top: 53px;
+		top: $page-element-header-mobile-height;
 	}
 
 	@include for-phone-only {
@@ -163,3 +167,102 @@ header, .header {
 		}
 	}
 }
+
+
+
+.search {
+	position: absolute;
+	z-index: 1001;
+	top: $page-element-header-height + 2;
+	@include for-tablet-portrait-down {
+		top: $page-element-header-mobile-height + 2;
+		box-shadow: none;
+	}
+	height: 0px;
+	width: 100%;
+	overflow: hidden;
+	background: #fff;
+	transition: height linear .3s;
+	@include box_shadow(2);
+
+	&.search--open {
+		height: 70vh;
+		@include for-tablet-portrait-down {
+			height: 80vh;
+		}
+
+		.search--form {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	.search--form {
+		width: 75%;
+		@include for-phone-only {
+			width: 90%;
+		}
+		max-width: 900px;
+		margin: 0 auto;
+		padding: 3rem 0 0;
+		opacity: 0;
+		transform: translateY(-2rem);
+		transition: all linear .3s;
+	}
+
+	.search-input--wrap {
+		position: relative;
+		.fa {
+			position: absolute;
+			cursor: pointer;
+			top: -7px;
+			right: -10px;
+			padding: 0.625rem;
+			font-size: 1.8rem;
+			display: none;
+			&:hover {
+				color: color(primary);
+			}
+		}
+	}
+
+	.search--input {
+		border: 0;
+		background: transparent;
+		border-radius: 0;
+		-webkit-appearance: none;
+
+	    font-family: $font-family-header;
+	    font-size: 2.2rem;
+	    line-height: 1;
+	    display: inline-block;
+	    box-sizing: border-box;
+	    width: 100%;
+	    padding: 0 1.875rem 0.3em 0;
+	    margin-bottom: 2rem;
+	    border-bottom: 1px solid #979797;
+	    &:focus { outline: none; }
+	}
+
+	.search--links {
+		padding: 0px;
+		margin: 0px;
+		list-style: none;
+		font-size: .8rem;
+
+		li {
+			margin-bottom: 1rem;
+			a:link,
+			a:visited {
+				color: $link-gray;
+				text-decoration: none;
+			}
+			a:hover,
+			a:active {
+				color: color(primary);
+			}
+		}
+	}
+
+} //.search
+
