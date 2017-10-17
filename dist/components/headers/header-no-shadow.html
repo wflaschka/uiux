@@ -12,18 +12,16 @@
     <script type="text/javascript" src="/assets/scripts/site.js"></script>
     <script type="text/javascript" src="/assets/scripts/jquery.modal.js"></script>
     <script type="text/javascript" src="/assets/scripts/select2/select2.full.js"></script>
-    <script type="text/javascript" src="/assets/scripts/slick.min.js"></script>
 
     <!-- <script type="text/javascript" src="/assets/scripts/semantic-ui/api.js"></script> -->
     <!-- <script type="text/javascript" src="/assets/scripts/semantic-ui/dropdown.js"></script> -->
     <!-- <script type="text/javascript" src="/assets/scripts/semantic-ui/form.js"></script> -->
     <!-- <script type="text/javascript" src="/assets/scripts/semantic-ui/transition.js"></script> -->
-
 </head>
-<body id="prototype-page">
+<body id="prototype-page-component-only">
 
 <header>
-    <div class="header container-fluid">
+    <div class="header no-shadow container-fluid">
         <div class="row middle-xs">
             <div class="col-xs">
                 <div class="row begin-xs middle-xs">
@@ -71,10 +69,10 @@
     </li>
 </div>
 
-                    <div class="search-wrap center middle aligned column col-xs-4">
+                    <div class="center middle aligned column col-xs-4">
                         <div class="box">
                             <i class="fa fa-search"></i>
-                            <span class="hide-on-sm-and-down"><span class="search-wrap-text">Search</span></span>
+                            <span class="hide-on-sm-and-down">Search</span>
                         </div>
                     </div>
 
@@ -87,29 +85,9 @@
                 <div class="row end-xs middle-xs">
                     <div class="account-navigation-trigger-hamburger center middle aligned column col-xs-4 col-sm-8 col-md-8">
                         <div class="box">
-                            <div class="avatar avatar-sm">
-                                <img src="/assets/images/profiles/person-3.jpg">
-                                <div class="avatar-presence online"></div>
-                            </div>
-                            <span class="hide-on-sm-and-down">My Account</span>
-                            <i class="icon-disclosure"></i>
+                            <i class="fa fa-user"></i>
+                            <span class="hide-on-sm-and-down">Sign in | Register</span>
                         </div>
-<div id="account-header-navigation-menu" class="account-navigation-dropdown">
-<ul>
-    <li>Dashboard</li>
-    <li>Artist Profile</li>
-    <li><span class="count count-primary">3</span></badge>Messages</li>
-    <li><span class="count count-primary">2</span>Orders</li>
-    <li>Payment Options</li>
-    <li>Shipping</li>
-    <li>Collections</li>
-    <li>Hearts</li>
-    <li>Art Match</li>
-    <li>Follows</li>
-    <li>Support</li>
-    <li>Sign Out</li>
-</div>
-
                     </div>
                     <div class="center middle aligned column col-xs-4 col-md-4">
                         <div class="box">
@@ -121,77 +99,9 @@
             </div>
         </div>
     </div>
-</header>
-
-<div class="search">
-    <form class="search--form" action="">
-        <div class="search-input--wrap">
-            <input class="search--input" name="search" type="search" placeholder="Search ArtTap.com" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
-            <span class="fa fa-chevron-right search--submit"></span>
-        </div>
-
-
-        <div class="row">
-            <div class="col-xs-6 col-sm-4 col-md-3 col-xl-4">
-                <ul class="search--links">
-                    <li>Recent Searches</li>
-                    <li><a href="#">Painting</a></li>
-                    <li><a href="#">Photography</a></li>
-                    <li><a href="#">Prints &amp; Multiples </a></li>
-                    <li><a href="#">Art Under $500</a></li>
-                </ul>
-            </div>
-            <div class="col-xs-6 col-sm-4 col-md-3 col-xl-4">
-                <ul class="search--links">
-                    <li>Recent Searches</li>
-                    <li><a href="#">Painting</a></li>
-                    <li><a href="#">Photography</a></li>
-                    <li><a href="#">Prints &amp; Multiples </a></li>
-                    <li><a href="#">Art Under $500</a></li>
-                    <li><a href="#">Art Under $1000</a></li>
-                    <li><a href="#">Art Under $2500</a></li>
-                    <li><a href="#">Art Under $5000</a></li>
-                </ul>
-            </div>
-        </div>
-    </form>
-</div><!-- .search -->
-
 
     <script type="text/javascript">
         defer(function () {
-
-            // Header Navi search click toggle text and form
-            $('.search-wrap').on( "click", function(e) {
-                $('.search').toggleClass('search--open');
-                $('.search-wrap .fa').toggleClass('fa-close');
-                if ( $('.search-wrap-text').text() == "Search")
-                   $('.search-wrap-text').text("Close")
-                else
-                   $('.search-wrap-text').text("Search");
-            });
-
-            function searchInputChecker(){
-                // When typing in text fields check if value is valid or not
-                // $( '.search--input' ).blur( function() { checkSearchInputValue(); });
-                $( '.search--input' ).keyup( function() { checkSearchInputValue(); });
-            }
-            function checkSearchInputValue(){
-                // If search input has value, show arrow else hide
-                if ( ( !$( '.search--input').val() == '') ) {
-                    $('.search--submit').show();
-                } else {
-                    $('.search--submit').hide();
-                }
-            }
-            searchInputChecker();
-
-            // submit search form on click right arrow
-            $('.search--submit').on( "click", function(e) {
-                $(this).closest('form').submit();
-                e.preventDefault();
-            });
-
 
             $('.navigation-dropdown li').has('ul').click(function(){
                 submenu = $(this).find('ul');
@@ -245,6 +155,7 @@
 
         });
     </script>
+</header>
 
 
 </body>
