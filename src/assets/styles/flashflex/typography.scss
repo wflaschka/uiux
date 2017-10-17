@@ -96,6 +96,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+// Modal
+h1 { 
+    font-size: $h1-modal-fontsize; 
+    margin-top: 0px;
+}
+
+
 ////////////////////////////////////////////////////////////////////
 // ui.arttap.com dev site stylings
 // Elements with `documentation` get special styling to distinguish
