@@ -1,0 +1,31 @@
+{{> header-logged-in }}
+<main>
+
+<div id="basic" style="display:none;">
+	<h1>Are you sure you'd like to sign out?</h1>
+	<a href="#" class="button is-black is-fullwidth is-medium mb20">No, Thanks</a>
+	<a href="#" class="button is-gray is-outlined is-fullwidth is-medium mb20">Yes, Please</a>
+</div>
+
+<p>
+	<a href="#basic" rel="modal:open">Signout</a>
+</p>
+
+<script type="text/javascript">
+	$.modal.defaults = {
+		closeExisting : true,      // Close existing modals. Set this to false if you need to stack multiple modal instances.
+		escapeClose   : true,      // Allows the user to close the modal by pressing `ESC`
+		clickClose    : true,      // Allows the user to close the modal by clicking the overlay
+		closeText     : '',        // Text content for the close <a> tag.
+		closeClass    : '',        // Add additional class(es) to the close <a> tag.
+		showClose     : false,      // Shows a (X) icon/link in the top-right corner
+		modalClass    : "modal small",   // CSS class added to the element being displayed in the modal.
+		blockerClass  : "blocker", // CSS class added to the overlay (blocker).
+		spinnerHtml   : null,      // HTML appended to the default spinner during AJAX requests.
+		showSpinner   : true,      // Enable/disable the default spinner during AJAX requests.
+		fadeDuration  : 250,       // Number of milliseconds the fade transition takes (null means no transition)
+		fadeDelay     : 0.8        // Point during the overlay's fade-in that the modal begins to fade in (.5 = 50%, 1.5 = 150%, etc.)
+	};
+</script>
+
+</main>

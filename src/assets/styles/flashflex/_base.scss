@@ -57,6 +57,7 @@
 		@import "row.scss";
 		@import "jquery.modal.scss";
 		@import "containers-segments.scss";
+		@import "custom-classes.scss";
 
 	////////////////////////////////////////////////////////////////////
 	// Typographic
@@ -126,10 +127,10 @@
 // ////////////////////////////////////////////////////////////////////
 // 3rd Party Libraries
 	// Slick Slider
-	@import "slick";
-	@import "slick-theme";
+	@import "slick.scss";
+	@import "slick-theme.scss";
 	// Customization Slick Slider for landing page
-	@import "slider-landing";
+	@import "slider-landing.scss";
 
 
 ////////////////////////////////////////////////////////////
