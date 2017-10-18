@@ -7707,6 +7707,78 @@ footer > div {
   Media Query Classes for hide elements
 **********************/
 @media screen and (max-width: 600px) {
+  .hide-on-xs {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 767px) and (min-width: 601px) {
+  .hide-on-sm {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .hide-on-sm-up {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hide-on-sm-down {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 1279px) and (min-width: 769px) {
+  .hide-on-sm-ls {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 897px) {
+  .hide-on-sm-ls-up {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 896px) {
+  .hide-on-sm-ls-down {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 1919px) and (min-width: 1281px) {
+  .hide-on-md {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 1281px) {
+  .hide-on-md-up {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 1920px) {
+  .hide-on-md-down {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 1921px) {
+  .hide-on-lg {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 1921px) {
+  .hide-on-lg-down {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
   .hide-for-phone-only {
     display: none !important;
   }
@@ -17913,7 +17985,6 @@ hr[documentation]:before {
 .account-navigation-dropdown {
   text-align: left;
   left: auto;
-  top: 57px;
   right: 0px;
 }
 
@@ -17921,11 +17992,23 @@ hr[documentation]:before {
   position: relative;
 }
 
+.search-wrap--opened {
+  display: none;
+}
+
+.search-wrap.active .search-wrap--opened {
+  display: block;
+}
+
+.search-wrap.active .search-wrap--closed {
+  display: none;
+}
+
 .search {
+  display: none;
   position: absolute;
   z-index: 1001;
   top: 62px;
-  height: 0px;
   width: 100%;
   overflow: hidden;
   background: #fff;
@@ -17940,27 +18023,11 @@ hr[documentation]:before {
   }
 }
 
-.search.search--open {
-  height: 70vh;
-}
-
-@media screen and (max-width: 768px) {
-  .search.search--open {
-    height: 80vh;
-  }
-}
-
-.search.search--open .search--form {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 .search .search--form {
   width: 75%;
   max-width: 900px;
   margin: 0 auto;
-  padding: 3rem 0 0;
-  opacity: 0;
+  padding: 5.5rem 0 0;
   transform: translateY(-2rem);
   transition: all linear .3s;
 }
@@ -17978,6 +18045,7 @@ hr[documentation]:before {
 .search .search-input--wrap .fa, .search .search-input--wrap .header .icon-hamburger, .header .search .search-input--wrap .icon-hamburger, .search .search-input--wrap .navigation-dropdown ul li .icon-disclosure, .navigation-dropdown ul li .search .search-input--wrap .icon-disclosure, .search .search-input--wrap
 .account-navigation-dropdown ul li .icon-disclosure,
 .account-navigation-dropdown ul li .search .search-input--wrap .icon-disclosure, .search .search-input--wrap .account-navigation-trigger-hamburger .icon-disclosure, .account-navigation-trigger-hamburger .search .search-input--wrap .icon-disclosure, .search .search-input--wrap .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .select2-selection__choice__remove::after, .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .search .search-input--wrap .select2-selection__choice__remove::after, .search .search-input--wrap .avatar .avatar-status, .avatar .search .search-input--wrap .avatar-status, .search .search-input--wrap body#prototype-index-page a:not(.logo)::after, body#prototype-index-page .search .search-input--wrap a:not(.logo)::after {
+  color: #333;
   position: absolute;
   cursor: pointer;
   top: -7px;
@@ -17994,18 +18062,19 @@ hr[documentation]:before {
 }
 
 .search .search--input {
+  color: #333;
   border: 0;
   background: transparent;
   border-radius: 0;
   -webkit-appearance: none;
   font-family: "Portrait Web", Georgia;
-  font-size: 2.2rem;
-  line-height: 1;
+  font-size: 1.875rem;
+  line-height: 2rem;
   display: inline-block;
   box-sizing: border-box;
   width: 100%;
-  padding: 0 1.875rem 0.3em 0;
-  margin-bottom: 2rem;
+  padding: 0 1.875rem 0.8125rem 0;
+  margin-bottom: 2.625rem;
   border-bottom: 1px solid #979797;
 }
 
@@ -18021,7 +18090,7 @@ hr[documentation]:before {
 }
 
 .search .search--links li {
-  margin-bottom: 1rem;
+  margin-bottom: 1.125rem;
 }
 
 .search .search--links li a:link,
