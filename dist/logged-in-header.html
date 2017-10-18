@@ -31,53 +31,58 @@
                         <i class="icon-hamburger"></i>
                         <!-- <i class="icon-hamburger-active"></i> -->
                     </div>
-<div id="header-navigation-menu" class="navigation-dropdown">
-<ul>
-    <li>Home</li>
-    <li>Newest Work</li>
-    <li>
-        Popular Searches
-        <i class="icon-disclosure"></i>
-        <ul>
-            <li>Paintings</li>
-            <li>Photographs</li>
-            <li>Prints &amp; Multiples</li>
-            <li>Under $500</li>
-            <li>Under $1000</li>
-            <li>Under $2500</li>
-        </ul>
-    </li>
-    <li>
-        Featured Artists
-        <i class="icon-disclosure"></i>
-        <ul>
-            <li>Alex Kwok</li>
-            <li>Camille Oudinot</li>
-            <li>Eloise Dumas</li>
-            <li>Lorraine Simms</li>
-            <li>Shelley Reeves</li>
-        </ul>
-    </li>
-    <li>About Art Tap</li>
-    <li>
-        Support
-        <i class="icon-disclosure"></i>
-        <ul>
-            <li>Support</li>
-            <li>FAQs</li>
-            <li>Partnerships</li>
-            <li>Contact Us</li>
-        </ul>
-    </li>
-</div>
-
+                    <div id="header-navigation-menu" class="navigation-dropdown">
+                        <ul>
+                            <li>Home</li>
+                            <li>Newest Work</li>
+                            <li>
+                                Popular Searches
+                                <i class="icon-disclosure"></i>
+                                <ul>
+                                    <li>Paintings</li>
+                                    <li>Photographs</li>
+                                    <li>Prints &amp; Multiples</li>
+                                    <li>Under $500</li>
+                                    <li>Under $1000</li>
+                                    <li>Under $2500</li>
+                                </ul>
+                            </li>
+                            <li>
+                                Featured Artists
+                                <i class="icon-disclosure"></i>
+                                <ul>
+                                    <li>Alex Kwok</li>
+                                    <li>Camille Oudinot</li>
+                                    <li>Eloise Dumas</li>
+                                    <li>Lorraine Simms</li>
+                                    <li>Shelley Reeves</li>
+                                </ul>
+                            </li>
+                            <li>About Art Tap</li>
+                            <li>
+                                Support
+                                <i class="icon-disclosure"></i>
+                                <ul>
+                                    <li>Support</li>
+                                    <li>FAQs</li>
+                                    <li>Partnerships</li>
+                                    <li>Contact Us</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
                     <div class="search-wrap center middle aligned column col-xs-4">
                         <div class="box">
-                            <i class="fa fa-search"></i>
-                            <span class="hide-on-sm-and-down"><span class="search-wrap-text">Search</span></span>
+                            <div class="search-wrap--closed">
+                                <i class="fa fa-search"></i>
+                                <span class="hide-on-sm-down">Search</span>
+                            </div>
+                            <div class="search-wrap--opened">
+                                <i class="fa fa-close"></i>
+                                <span class="hide-on-sm-down">Close</span>
+                            </div>
                         </div>
                     </div>
-
                 </div>
             </div>
             <a href="/" class="logo center middle aligned column col-xs center-xs middle-xs">
@@ -91,30 +96,30 @@
                                 <img src="/assets/images/profiles/person-3.jpg">
                                 <div class="avatar-presence online"></div>
                             </div>
-                            <span class="hide-on-sm-and-down">My Account</span>
-                            <i class="icon-disclosure"></i>
+                            <span class="hide-on-sm-down">My Account</span>
+                            <i class="icon-disclosure hide-on-sm-down"></i>
                         </div>
-<div id="account-header-navigation-menu" class="account-navigation-dropdown">
-<ul>
-    <li>Dashboard</li>
-    <li>Artist Profile</li>
-    <li><span class="count count-primary">3</span></badge>Messages</li>
-    <li><span class="count count-primary">2</span>Orders</li>
-    <li>Payment Options</li>
-    <li>Shipping</li>
-    <li>Collections</li>
-    <li>Hearts</li>
-    <li>Art Match</li>
-    <li>Follows</li>
-    <li>Support</li>
-    <li>Sign Out</li>
-</div>
-
+                    </div>
+                    <div id="account-header-navigation-menu" class="account-navigation-dropdown">
+                        <ul>
+                            <li>Dashboard</li>
+                            <li>Artist Profile</li>
+                            <li><span class="count count-primary">3</span></badge>Messages</li>
+                            <li><span class="count count-primary">2</span>Orders</li>
+                            <li>Payment Options</li>
+                            <li>Shipping</li>
+                            <li>Collections</li>
+                            <li>Hearts</li>
+                            <li>Art Match</li>
+                            <li>Follows</li>
+                            <li>Support</li>
+                            <li>Sign Out</li>
+                        </ul>
                     </div>
                     <div class="center middle aligned column col-xs-4 col-md-4">
                         <div class="box">
                             <i class="fa fa-shopping-cart"></i>
-                            <span class="hide-on-sm-and-down">Cart</span>
+                            <span class="hide-on-sm-down">Cart</span>
                         </div>
                     </div>
                 </div>
@@ -161,15 +166,48 @@
     <script type="text/javascript">
         defer(function () {
 
-            // Header Navi search click toggle text and form
-            $('.search-wrap').on( "click", function(e) {
-                $('.search').toggleClass('search--open');
-                $('.search-wrap .fa').toggleClass('fa-close');
-                if ( $('.search-wrap-text').text() == "Search")
-                   $('.search-wrap-text').text("Close")
-                else
-                   $('.search-wrap-text').text("Search");
-            });
+    // https://stackoverflow.com/questions/1403615/use-jquery-to-hide-a-div-when-the-user-clicks-outside-of-it/7385673#7385673
+    var nav = 0;
+    $(document).on("click", function(e) {
+        if ( nav == 1 ) {
+            console.log('1')
+
+            var container = $("#header-navigation-menu, .navigation-trigger-hamburger");
+
+            // if the target of the click isn't the container nor a descendant of the container
+            if (!container.is(e.target) && container.has(e.target).length === 0) {
+                $('.navigation-dropdown').slideUp('slow');
+                $('.navigation-trigger-hamburger, .navigation-trigger-hamburger .icon-hamburger').removeClass('active');
+                nav = 0;
+            }
+
+
+        } else if ( nav == 2 ) {
+            console.log('2')
+
+            var container = $("#account-header-navigation-menu, .account-navigation-trigger-hamburger");
+
+            // if the target of the click isn't the container nor a descendant of the container
+            if (!container.is(e.target) && container.has(e.target).length === 0) {
+                $('.account-navigation-dropdown').slideUp('slow');
+                $('.account-navigation-trigger-hamburger, .account-navigation-trigger-hamburger .icon-disclosure').removeClass('active');
+                nav = 0;
+            }
+
+        } else if ( nav == 3 ) {
+            console.log('3');
+
+            var container = $(".search, .search-wrap");
+
+            // if the target of the click isn't the container nor a descendant of the container
+            if (!container.is(e.target) && container.has(e.target).length === 0) {
+                $('.search').slideUp('slow');
+                $('.search-wrap').removeClass('active');
+                nav = 0;
+            }
+        }
+    });
+
 
             function searchInputChecker(){
                 // When typing in text fields check if value is valid or not
@@ -193,6 +231,25 @@
             });
 
 
+
+            // Header Navi search click toggle text and form
+            $('.search-wrap').on( "click", function(e) {
+                $('.navigation-dropdown, .account-navigation-dropdown').slideUp('slow');
+                $('.navigation-trigger-hamburger, .account-navigation-trigger-hamburger, .navigation-trigger-hamburger .icon-hamburger, .account-navigation-trigger-hamburger .icon-disclosure').removeClass('active');
+
+                if ($('.search').is(':hidden')) {
+                    $('.search').slideDown('slow');
+                    $(this).toggleClass("active");
+                    nav = 3;
+                } else {
+                    $('.search').slideUp('slow');
+                    $(this).toggleClass("active");
+                    nav = 0;
+                }
+                e.preventDefault();
+            });
+
+
             $('.navigation-dropdown li').has('ul').click(function(){
                 submenu = $(this).find('ul');
                 if (submenu.is(':hidden')) {
@@ -205,16 +262,22 @@
             });
 
             $('.navigation-trigger-hamburger').click(function() {
+                $('.search, .account-navigation-dropdown').slideUp('slow');
+                $('.search-wrap, .account-navigation-trigger-hamburger, .account-navigation-trigger-hamburger .icon-disclosure').removeClass('active');
+
                 console.log("Hamburger clicked!");
                 if ($('.navigation-dropdown').is(':hidden')) {
                     $('.navigation-dropdown').slideDown('slow');
                     $(this).toggleClass("active");
                     $(this).find('.icon-hamburger').toggleClass("active");
                     console.log("Hamburger slide down...");
+                    nav = 1;
                 } else {
                     $('.navigation-dropdown').slideUp('slow');
-                    console.log("Hamburger slide up...");
+                    $(this).toggleClass("active");
                     $(this).find('.icon-hamburger').toggleClass("active");
+                    console.log("Hamburger slide up...");
+                    nav = 0;
                 }
             });
 
@@ -230,16 +293,22 @@
             });
 
             $('.account-navigation-trigger-hamburger').click(function() {
+                $('.search, .navigation-dropdown').slideUp('slow');
+                $('.search-wrap, .navigation-trigger-hamburger, .navigation-trigger-hamburger .icon-hamburger').removeClass('active');
+
                 console.log("Hamburger clicked!");
                 if ($('.account-navigation-dropdown').is(':hidden')) {
                     $('.account-navigation-dropdown').slideDown('slow');
                     $(this).toggleClass("active");
                     $(this).find('.icon-disclosure').toggleClass("active");
                     console.log("Hamburger slide down...");
+                    nav = 2;
                 } else {
                     $('.account-navigation-dropdown').slideUp('slow');
-                    console.log("Hamburger slide up...");
+                    $(this).toggleClass("active");
                     $(this).find('.icon-disclosure').toggleClass("active");
+                    console.log("Hamburger slide up...");
+                    nav = 0;
                 }
             });
 

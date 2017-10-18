@@ -81,54 +81,16 @@ $for-big-desktop-up        : (min, rem-to-px($fBG_xl));
 /*********************
   Media Query Classes for hide elements
 **********************/
-// .hide-on-small-only, .hide-on-small-and-down {
-//   @media #{$small-and-down} {
-//     display: none !important;
-//   }
-// }
-// .hide-on-med-and-down {
-//   @media #{$medium-and-down} {
-//     display: none !important;
-//   }
-// }
-// .hide-on-med-and-up {
-//   @media #{$medium-and-up} {
-//     display: none !important;
-//   }
-// }
-// .hide-on-med-only {
-//   @media only screen and (min-width: $small-screen) and (max-width: $medium-screen) {
-//     display: none !important;
-//   }
-// }
-// .hide-on-large-only {
-//   @media #{$large-and-up} {
-//     display: none !important;
-//   }
-// }
-// .show-on-large {
-//   @media #{$large-and-up} {
-//     display: block !important;
-//   }
-// }
-// .show-on-medium {
-//   @media only screen and (min-width: $small-screen) and (max-width: $medium-screen) {
-//     display: block !important;
-//   }
-// }
-// .show-on-small {
-//   @media #{$small-and-down} {
-//     display: block !important;
-//   }
-// }
-// .show-on-medium-and-up {
-//   @media #{$medium-and-up} {
-//     display: block !important;
-//   }
-// }
-// .show-on-medium-and-down {
-//   @media #{$medium-and-down} {
-//     display: block !important;
-//   }
-// }
 
+.hide-on-xs             { @include for-phone-only               { display: none !important; } }
+.hide-on-sm             { @include for-tablet-portrait          { display: none !important; } }
+.hide-on-sm-up          { @include for-tablet-portrait-up       { display: none !important; } }
+.hide-on-sm-down        { @include for-tablet-portrait-down     { display: none !important; } }
+.hide-on-sm-ls          { @include for-tablet-landscape         { display: none !important; } }
+.hide-on-sm-ls-up       { @include for-tablet-landscape-up      { display: none !important; } }
+.hide-on-sm-ls-down     { @include for-tablet-landscape-down    { display: none !important; } }
+.hide-on-md             { @include for-desktop                  { display: none !important; } }
+.hide-on-md-up          { @include for-desktop-up               { display: none !important; } }
+.hide-on-md-down        { @include for-desktop-down             { display: none !important; } }
+.hide-on-lg             { @include for-big-desktop              { display: none !important; } }
+.hide-on-lg-down        { @include for-big-desktop-down         { display: none !important; } }
