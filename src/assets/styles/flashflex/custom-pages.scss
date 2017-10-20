@@ -1,0 +1,144 @@
+///////////////////////////////////////////////////////////////////
+// Product
+
+.product-detail {
+	font-size: 0.9375rem;
+	.product-detail__artist-name {
+		font-family: $font-family-header;
+		line-height: 2rem;
+		font-size: 2.1875rem;
+		@include for-tablet-portrait-down {
+			font-size: 1.875rem;
+		}
+	}
+
+	.product-detail__follow-wrap {
+		font-size: 0.8125rem;
+		margin-bottom: 1.25rem;
+		.product-detail__follow-artist {
+			margin-right: 1rem;
+			font-weight: bold;
+		}
+		.product-detail__followers {
+			color: color(gray);
+		}
+	}
+
+	.product-detail__descrption {
+		margin-bottom: 1.5625rem;
+		line-height: 1.3125rem;
+		.product-detail__descrption-date {
+			font-style: italic;
+		}
+		.product-detail__descrption-type {
+			color: color(gray);
+		}
+		.product-detail__descrption-sizes {
+			color: color(gray);
+		}
+		.product-detail__descrption-edition-number {
+			color: color(gray);
+		}
+	}
+
+	.product-detail__gallery-price {
+		margin-bottom: 1.25rem;
+		line-height: 1.5rem;
+		.product-detail__gallery-price-discounted {
+			font-size: 1.25rem;
+		}
+		.product-detail__gallery-price-regular {
+			color: color(gray);
+		}
+		.product-detail__gallery-info {
+			color: color(black);
+			font-size: 1.25rem;
+			margin-left: 1rem;
+		}
+	}
+
+	.product-detail__edition-number {
+		margin-bottom: 0.625rem;
+		.product-detail__edition-number-only {
+			font-weight: 500;
+		}	
+	}
+
+	.product-detail__add-to-cart {
+		margin: 1.25rem 0;
+	}
+}
+
+
+///////////////////////////////////////////////////////////////////
+// Apply as an Artist
+
+.apply-artist {
+	
+	h1, h2, ,h3 ,h4 {
+		font-weight: normal;
+	}
+
+	h1 {
+		font-size: 2.8125rem;
+		line-height: 3.4375rem;
+		margin-bottom: 2.5rem;
+	}
+
+	.apply-artist__text-wrap {
+		margin: 0 26%;
+		h4 {
+			font-weight: normal;
+		}
+		p {
+			margin-top: 0px;
+			font-size: 0.9375rem;
+		}
+	}
+
+	.apply-artist__how-it-works {
+		margin-bottom: 3.125rem;
+		padding-bottom: 5rem;
+		border-bottom: 1px solid #ccc;
+	}
+
+}
+
+
+
+///////////////////////////////////////////////////////////////////
+// Misc Elements
+
+.add-to-collection {
+	position: relative;
+	.add-to-collection__create {
+		display: none;
+		position: absolute;
+		top: 44px;
+		left: 0px;
+		width: 100%;
+		background: white;
+		padding: 1rem;
+		border: 1px solid #ccc;	
+	}
+	.add-to-collection_saved-collection {
+		color: color(gray);
+		font-size: 0.8125rem;
+		margin-top: 0.625rem
+	}
+}
+
+
+.absolute-box {
+	position: absolute;
+	top: 7.5rem;
+	right: 7.5rem;
+	.box-inner {
+		padding: 0 40px 10px;
+		box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16);
+		border-top: 3px solid #E09D00;
+		background-color: #fff;
+	}
+}
+
+

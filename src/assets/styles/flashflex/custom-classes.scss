@@ -21,5 +21,72 @@
 	color: $placeholder-color;
 }
 
+.mb10 { margin-bottom: 0.625rem }
 .mb20 { margin-bottom: 1.25rem }
+.mb30 { margin-bottom: 1.875rem }
+.mt10 { margin-top: 0.625rem }
+.mt20 { margin-top: 1.25rem }
+.mt30 { margin-top: 1.875rem }
+.mt40 { margin-top: 2.5rem }
+.mt50 { margin-top: 3.125rem; }
+.mr20 { margin-right: 1.25rem }
+.mr30 { margin-right: 1.875rem }
+.mr40 { margin-right: 2.5rem }
+.mr50 { margin-right: 3.125rem; }
+.pt40 { padding-top: 2.5rem }
 
+.pt50 { padding-top: 50px; }
+.pr50 { padding-right: 50px; }
+.pb50 { padding-bottom: 50px; }
+.pl50 { padding-left: 50px; }
+
+.pt0 { padding-top: 0px !important; }
+.pr0 { padding-right: 0px !important; }
+.pb0 { padding-bottom: 0px !important; }
+.pl0 { padding-left: 0px !important; }
+.pad0 { padding: 0px !important; }
+
+
+.br1 { border-right: 1px solid #ccc; }
+.bl1 { border-left: 1px solid #ccc; }
+
+
+.link-primary {
+  &:link,
+  &:visited {
+    color: color(primary);
+    text-decoration: none;
+  }
+  &:active,
+  &:hover {
+    color: lighten(color(primary), 4%);
+  }
+}
+
+.link-black {
+  &:link,
+  &:visited {
+    color: color(black);
+    text-decoration: none;
+  }
+  &:active,
+  &:hover {
+    color: lighten(color(black), 15%);
+  }
+}
+
+.ib { display: inline-block; }
+
+.col-flex {
+  display: flex;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem; 
+}
+
+.fw-normal { font-weight: normal; }
+
+.ql-editor {
+  min-height: 200px;
+}
+
+.hide { display: none; }

@@ -72,6 +72,10 @@
 		// @import "card-row.scss";     // TODO
 		// @import "form-search.scss";  // TODO
 
+	// ArtTap Pages
+	@import "custom-pages.scss";
+
+
 ////////////////////////////////////////////////////////////
 // FORMS -- derived from Bulma 0.5.3
 	// Remove this during color / variable consolidation step:
@@ -131,6 +135,9 @@
 	@import "slick-theme.scss";
 	// Customization Slick Slider for landing page
 	@import "slider-landing.scss";
+
+	// Quill is a modern rich text editor
+	@import "quill.snow";
 
 
 ////////////////////////////////////////////////////////////
