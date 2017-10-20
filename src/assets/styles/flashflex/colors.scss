@@ -8,6 +8,10 @@
 // 	.COLORNAME { background-color: COLOR; color: COLOR-INVERSE-FOR-CONTRAST; }
 // 	.COLORNAME-TEXT { color: COLOR; }
 // 	
+// 	Reference colors in CSS with the name of the color:
+// 		color: color(text);
+// 		border-color: color(gray);
+// 	
 // Colors are "translated" for Bulma components in 'bulma-0.5.3/color-translate.scss'
 ////////////////////////////////////////////////////////////////////
 
@@ -45,7 +49,7 @@
 $colors: (
 	primary    : (#E09D00, contrastColor(#E09D00)),
 	secondary  : (#141414, contrastColor(#141414)),
-	text       : (transparentize(#141414, 0.13), transparentize(#ffffff, 0.13)),
+	text       : (transparentize(#191919, 0.13), transparentize(#ffffff, 0.13)),
 	link       : (#E09D00, contrastColor(#E09D00)),
 	white      : (#ffffff, contrastColor(#ffffff)),
 	gray       : (#8B8B8B, contrastColor(#8B8B8B)),

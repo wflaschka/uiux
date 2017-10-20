@@ -96,7 +96,7 @@ $button-static-border-color: $grey-lighter !default;
     color: $button-focus-color;
 
     &:not(:active) {
-      box-shadow: $button-focus-box-shadow-size $button-focus-box-shadow-color;
+      box-shadow: 0 0 0 0.125em color(black);
     }
   }
 

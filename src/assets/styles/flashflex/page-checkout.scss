@@ -1,0 +1,38 @@
+///////////////////////////////////////////////////////////////////
+// Checkout pages
+
+.checkout-page {
+
+	.step {
+		margin: 0;
+		padding: 0;
+	}
+
+	.checkout-prompt {
+		border-bottom: 1px solid color(gray-light);
+		padding-bottom: 1rem;
+		margin-bottom: 1rem;
+	}
+	.checkout-prompt-box:not(.active) {
+		border-top: 1px solid color(gray-light);
+		padding: 1rem 0;
+		margin: 1rem 0 1rem 0;
+		border-bottom: 1px solid rgba(0, 0, 0, 0);
+
+		&:last-of-type {
+			border-bottom: 1px solid color(gray-light);
+		}
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		margin: 0;
+
+		// Change prompt
+		a.change {
+			font-family: $font-family-body;
+			font-size: 1rem;
+			float: right;
+		}
+	}
+
+}

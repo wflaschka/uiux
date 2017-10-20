@@ -19,6 +19,20 @@
             justify-content: center;
         }
     }
+
+    &.is-padded {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    &.is-extra-padded {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    &.has-left-border {
+        border-left: 1px solid color(gray-light);
+    }
 }
 
 .column.centered {
