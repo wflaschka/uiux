@@ -34,246 +34,234 @@
         </div>
     </div>
 </header>
+<style type="text/css">
+    .column {
+        /*border: 1px dotted red;*/
+    }
+</style>
 <main>
 
-<style type="text/css">
-	.row {
-		/*border: 1px solid red;*/
-	}
-	.column {
-		/*border: 1px solid green;*/
-	}
-</style>
+    <!--
+        Below: 
+        ".checkout-page" might be in the body, or somewhere.
+        It's used by flashflex/page-checkout.scss as a selector.
+    -->
+    <div class="row checkout-page">
+        <div class="address column col-xs-10">
+            <div class="checkout-prompt">
+                <strong>Checkout | Robyn Asquini </strong>
+                (Not you? <a>Sign In</a> or <a>Checkout as a Guest</a>)
+            </div>
+            <span class="step">Step 1</span>
+            <div class="row checkout-prompt-box active">
+                <div class="column col-xs-6">
+                    <h4>
+                        Shipping Address
+                        <a class="change">Change</a>
+                    </h4>
+                    <p>
+                    	<strong>Robyn Asquini</strong>
+                    
+                    	<br />123 Main Street
+                    	<br />Apt. A1
+                    	<br />New York, NY 10055
+                    	<br />United States
+                    	<br />(555) 555-5555
+                    </p>
+                </div>
+                <div class="column has-left-border is-extra-padded col-xs-8">
+                    <h4>Billing Address</h4>
+                    <form>
+                    
+                    	<div class="field">
+                    		<label class="label">First Name</label>
+                    		<div class="control">
+                    			<input class="input" type="fname" placeholder="" value="">
+                    		</div>
+                    	</div>
+                    	<div class="field">
+                    		<label class="label">Last Name</label>
+                    		<div class="control">
+                    			<input class="input" type="lname" placeholder="" value="">
+                    		</div>
+                    	</div>
+                    	<div class="field">
+                    		<label class="label">Address Line 1</label>
+                    		<div class="control">
+                    			<input class="input" type="subject" placeholder="" value="">
+                    		</div>
+                    	</div>
+                    	<div class="field">
+                    		<label class="label">Address Line 2 <span>Optional</span></label>
+                    		<div class="control">
+                    			<input class="input" type="subject" placeholder="Apt., Suite, etc." value="">
+                    		</div>
+                    	</div>
+                    	<div class="field">
+                    		<label class="label">State</label>
+                    		<div class="control">
+                    			<div class="select select2-wrapper is-fullwidth">
+                    				<select class="select2">
+                    					<option value="">State</option>
+                    					<option value="AL">Alabama</option>
+                    					<option value="AK">Alaska</option>
+                    					<option value="AZ">Arizona</option>
+                    					<option value="AR">Arkansas</option>
+                    					<option value="CA">California</option>
+                    					<option value="CO">Colorado</option>
+                    					<option value="CT">Connecticut</option>
+                    					<option value="DE">Delaware</option>
+                    					<option value="DC">District Of Columbia</option>
+                    					<option value="FL">Florida</option>
+                    					<option value="GA">Georgia</option>
+                    					<option value="HI">Hawaii</option>
+                    					<option value="ID">Idaho</option>
+                    					<option value="IL">Illinois</option>
+                    					<option value="IN">Indiana</option>
+                    					<option value="IA">Iowa</option>
+                    					<option value="KS">Kansas</option>
+                    					<option value="KY">Kentucky</option>
+                    					<option value="LA">Louisiana</option>
+                    					<option value="ME">Maine</option>
+                    					<option value="MD">Maryland</option>
+                    					<option value="MA">Massachusetts</option>
+                    					<option value="MI">Michigan</option>
+                    					<option value="MN">Minnesota</option>
+                    					<option value="MS">Mississippi</option>
+                    					<option value="MO">Missouri</option>
+                    					<option value="MT">Montana</option>
+                    					<option value="NE">Nebraska</option>
+                    					<option value="NV">Nevada</option>
+                    					<option value="NH">New Hampshire</option>
+                    					<option value="NJ">New Jersey</option>
+                    					<option value="NM">New Mexico</option>
+                    					<option value="NY">New York</option>
+                    					<option value="NC">North Carolina</option>
+                    					<option value="ND">North Dakota</option>
+                    					<option value="OH">Ohio</option>
+                    					<option value="OK">Oklahoma</option>
+                    					<option value="OR">Oregon</option>
+                    					<option value="PA">Pennsylvania</option>
+                    					<option value="RI">Rhode Island</option>
+                    					<option value="SC">South Carolina</option>
+                    					<option value="SD">South Dakota</option>
+                    					<option value="TN">Tennessee</option>
+                    					<option value="TX">Texas</option>
+                    					<option value="UT">Utah</option>
+                    					<option value="VT">Vermont</option>
+                    					<option value="VA">Virginia</option>
+                    					<option value="WA">Washington</option>
+                    					<option value="WV">West Virginia</option>
+                    					<option value="WI">Wisconsin</option>
+                    					<option value="WY">Wyoming</option>
+                    				</select>
+                    			</div>
+                    		</div>
+                    	</div>
+                    	<div class="field">
+                    		<label class="label">State / Province</label>
+                    		<div class="control">
+                    			<input class="input" name="province" placeholder="" value="">
+                    		</div>
+                    	</div>
+                    	<div class="field">
+                    		<label class="label">City</label>
+                    		<div class="control">
+                    			<input class="input" name="city" placeholder="" value="">
+                    		</div>
+                    	</div>
+                    	<div class="field">
+                    		<label class="label">Phone Number</label>
+                    		<div class="control">
+                    			<input class="input" name="phone" placeholder="" value="">
+                    		</div>
+                    	</div>
+                    	<div class="field">
+                    		<div class="control">
+                    			<label class="checkbox" for="save_info">
+                    				<input type="checkbox" id="save_info" name="save_info">
+                    				<span></span>
+                    				Save this information for next time
+                    			</label>
+                    		</div>
+                    	</div>
+                    	<div class="field">
+                    		<div class="control">
+                    			<button class="button is-fullwidth">Submit</button>
+                    		</div>
+                    	</div>
+                    
+                    </form>
+                    
+                    <script type="text/javascript">
+                        $(document).ready(function() {
+                            $('select.select2').select2();
+                        });
+                    </script>
+                </div>
+            </div>
 
-<h5 documentation>(This page is in progress...)</h5><hr documentation>
+            <div class="checkout-prompt-box">
+                <span class="step">Step 2</span>
+                <h4>Payment Method</h4>
+            </div>
 
-<div class="row">
-	<div class="column col-xs-9">
-		<strong>Checkout | Robyn Asquini </strong>
-		(Not you? <a>Sign In</a> or <a>Checkout as a Guest</a>)
-	</div>
-	<div class="column col-xs-5">
-		<strong>
-			Order Summary
-		</strong>
-	</div>
-</div>
+            <div class="checkout-prompt-box">
+                <span class="step">Step 3</span>
+                <h4>Review Items and Shipping</h4>
+            </div>
 
-<div class="row">
-	<div class="column col-xs-4">
-		<h4>Shipping Address</h4>
-		<a>Change</a>
-		<p>
-			<strong>Robyn Asquini</strong>
-		
-			<br />123 Main Street
-			<br />Apt. A1
-			<br />New York, NY 10055
-			<br />United States
-			<br />(555) 555-5555
-		</p>
-	</div>
-	<div class="column col-xs-5">
-		<h4>Billing Address</h4>
-		<form>
-
-<div class="field">
-    <label class="label">First Name</label>
-    <div class="control">
-        <input class="input" type="fname" placeholder="" value="">
-    </div>
-</div>
-<div class="field">
-    <label class="label">Last Name</label>
-    <div class="control">
-        <input class="input" type="lname" placeholder="" value="">
-    </div>
-</div>
-<div class="field">
-    <label class="label">Address Line 1</label>
-    <div class="control">
-        <input class="input" type="subject" placeholder="" value="">
-    </div>
-</div>
-<div class="field">
-    <label class="label">Address Line 2 <span>Optional</span></label>
-    <div class="control">
-        <input class="input" type="subject" placeholder="Apt., Suite, etc." value="">
-    </div>
-</div>
-<div class="field">
-    <label class="label">State</label>
-    <div class="control">
-        <div class="select select2-wrapper is-fullwidth">
-            <select class="select2">
-                <option value="">State</option>
-                <option value="AL">Alabama</option>
-                <option value="AK">Alaska</option>
-                <option value="AZ">Arizona</option>
-                <option value="AR">Arkansas</option>
-                <option value="CA">California</option>
-                <option value="CO">Colorado</option>
-                <option value="CT">Connecticut</option>
-                <option value="DE">Delaware</option>
-                <option value="DC">District Of Columbia</option>
-                <option value="FL">Florida</option>
-                <option value="GA">Georgia</option>
-                <option value="HI">Hawaii</option>
-                <option value="ID">Idaho</option>
-                <option value="IL">Illinois</option>
-                <option value="IN">Indiana</option>
-                <option value="IA">Iowa</option>
-                <option value="KS">Kansas</option>
-                <option value="KY">Kentucky</option>
-                <option value="LA">Louisiana</option>
-                <option value="ME">Maine</option>
-                <option value="MD">Maryland</option>
-                <option value="MA">Massachusetts</option>
-                <option value="MI">Michigan</option>
-                <option value="MN">Minnesota</option>
-                <option value="MS">Mississippi</option>
-                <option value="MO">Missouri</option>
-                <option value="MT">Montana</option>
-                <option value="NE">Nebraska</option>
-                <option value="NV">Nevada</option>
-                <option value="NH">New Hampshire</option>
-                <option value="NJ">New Jersey</option>
-                <option value="NM">New Mexico</option>
-                <option value="NY">New York</option>
-                <option value="NC">North Carolina</option>
-                <option value="ND">North Dakota</option>
-                <option value="OH">Ohio</option>
-                <option value="OK">Oklahoma</option>
-                <option value="OR">Oregon</option>
-                <option value="PA">Pennsylvania</option>
-                <option value="RI">Rhode Island</option>
-                <option value="SC">South Carolina</option>
-                <option value="SD">South Dakota</option>
-                <option value="TN">Tennessee</option>
-                <option value="TX">Texas</option>
-                <option value="UT">Utah</option>
-                <option value="VT">Vermont</option>
-                <option value="VA">Virginia</option>
-                <option value="WA">Washington</option>
-                <option value="WV">West Virginia</option>
-                <option value="WI">Wisconsin</option>
-                <option value="WY">Wyoming</option>
-            </select>
+        </div>
+        <div class="summary column has-left-border is-padded col-xs-4">
+            <div class="checkout-prompt">
+                <strong>Order Summary</strong>
+            </div>
+                <div class="card checkout">
+                    <div class="left">
+                        <div class="image" style="background-image: url('/assets/images/artwork/art-1.jpg');">
+                            <img src="/assets/images/artwork/art-1.jpg">
+                        </div>
+                        <div class="content">
+                            <div class="artist">
+                                Camille Oudinot
+                            </div>
+                            <div class="title">
+                                Fading Faces
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <i class="fa fa-2x fa-close"></i>
+                        <div class="price">
+                            $930
+                        </div>
+                    </div>
+                </div>
+                <div class="card checkout">
+                    <div class="left">
+                        <div class="image" style="background-image: url('/assets/images/artwork/art-narrow-1.jpg');">
+                            <img src="/assets/images/artwork/art-narrow-1.jpg">
+                        </div>
+                        <div class="content">
+                            <div class="artist">
+                                Sethlan Semelon
+                            </div>
+                            <div class="title">
+                                Rhapsody in the Beginning of Summer
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <i class="fa fa-2x fa-close"></i>
+                        <div class="price">
+                            $1930
+                        </div>
+                    </div>
+                </div>
         </div>
     </div>
-</div>
-<div class="field">
-    <label class="label">State / Province</label>
-    <div class="control">
-        <input class="input" name="province" placeholder="" value="">
-    </div>
-</div>
-<div class="field">
-    <label class="label">City</label>
-    <div class="control">
-        <input class="input" name="city" placeholder="" value="">
-    </div>
-</div>
-<div class="field">
-    <label class="label">Phone Number</label>
-    <div class="control">
-        <input class="input" name="phone" placeholder="" value="">
-    </div>
-</div>
-<div class="field">
-    <div class="control">
-        <label class="checkbox" for="save_info">
-            <input type="checkbox" id="save_info" name="save_info">
-            <span></span>
-            Save this information for next time
-        </label>
-    </div>
-</div>
-<div class="field">
-	<div class="control">
-		<button class="button is-link">Submit</button>
-	</div>
-</div>
-
-
-
-		</form>
-	</div>
-	<div class="column col-xs-5">
-
-<!-- <ul> -->
-<!-- </ul> -->
-		<div class="row">
-			<div class="col-xs-7">
-					
-					<div class="card square">
-						<div class="image" style="background-image: url('/assets/images/artwork/art-1.jpg');">
-							<img src="/assets/images/artwork/art-1.jpg">
-						</div>
-						<div class="content">
-							<div class="hearts">
-								<i class="fa fa-heart-o"></i>
-							</div>
-							<div class="artist">
-								Camille Oudinot
-							</div>
-							<div class="title">
-								Fading Faces
-							</div>
-							<div class="price">
-								$930
-							</div>
-						</div>
-					</div>
-			</div>
-			<div class="col-xs-7">
-				hi
-				<i class="fa fa-delete"></i>
-			</div>
-		</div>
-
-		<hr />
-
-		<div class="row">
-			<div class="col-xs-7">
-					
-					<div class="card square">
-						<div class="image" style="background-image: url('/assets/images/artwork/art-narrow-1.jpg');">
-							<img src="/assets/images/artwork/art-narrow-1.jpg">
-						</div>
-						<div class="content">
-							<div class="hearts">
-								<i class="fa fa-heart-o"></i>
-							</div>
-							<div class="artist">
-								Sethlan Semelon
-							</div>
-							<div class="title">
-								Rhapsody in the Beginning of Summer
-							</div>
-							<div class="price">
-								$1930
-							</div>
-						</div>
-					</div>
-			</div>
-			<div class="col-xs-7">
-				<i class="fa fa-delete"></i>
-			</div>
-		</div>
-
-		<hr />
-
-	</div>
 
 </main>
-
-<script type="text/javascript">
-    $(document).ready(function() {
-        $('select.select2').select2();
-    });
-</script>
-
 <footer>
     <div class="footer">
         <p>

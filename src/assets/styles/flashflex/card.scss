@@ -1,6 +1,6 @@
-/**
- * CARDs
- */
+////////////////////////////////////////////////////////////////////
+// CARDS
+////////////////////////////////////////////////////////////////////
 
 .card {
 	&:not(:last-of-type) {
@@ -20,16 +20,26 @@
 	.content {
 		height: 4rem;
 		width: 150px;
-		margin-top: 0.8rem;
+
+		margin-top: 12.8px;
 
 		font-size: 13px;
 		font-weight: 500;
 		line-height: 18px;
+
 		div {
 			@include truncate(100%);
+			padding-right: 0.2rem;
+			padding-left: 0.2rem;
 			&.hearts {
 				float: right;
 			}
+
+			&.artist { }
+			&.title {
+				font-style: italic;
+			}
+			&.price { }
 		}
 	}
 
@@ -39,6 +49,41 @@
 		.image {
 			width: 150px;
 			height: 150px;
+		}
+	}
+	&.checkout {
+		@extend .square;
+		height: 216px;
+		display: flex;
+		flex-direction: row;
+
+		border-bottom: 1px solid color(gray);
+		margin-top: 22px; // same as padding under price
+		margin-right: 0; // because it's vertical not row
+
+		.content {
+			height: default;
+		}
+		.left {
+			display: flex;
+			flex: 1 1 auto;
+			flex-direction: column;
+			flex-direction: space-between;
+		}
+		.right {
+			display: flex;
+			flex-direction: column;
+			flex: 1 1 auto;
+
+			text-align: right;
+			justify-content: space-between;
+
+			.price {
+				padding-bottom: 22px;
+				font-size: 13px;
+				font-weight: 500;
+				line-height: 18px;
+			}
 		}
 	}
 	&.edit {

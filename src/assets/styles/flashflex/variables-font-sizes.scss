@@ -12,11 +12,20 @@
 		$margin-bottom-divisor: 3;
 		$secondary-header-multiplier: 0.6;
 		$off-black: rgba(0, 0, 0, 0.87) !default;
-		$h1-fontsize: 4.2rem !default;
-		$h2-fontsize: 3.56rem !default;
-		$h3-fontsize: 2.92rem !default;
-		$h4-fontsize: 2.28rem !default;
-		$h5-fontsize: 1.64rem !default;
+		// Original sizing before 2017-10-20
+		// $h1-fontsize: 4.2rem !default;
+		// $h2-fontsize: 3.56rem !default;
+		// $h3-fontsize: 2.92rem !default;
+		// $h4-fontsize: 2.28rem !default;
+		// $h5-fontsize: 1.64rem !default;
+		// $h6-fontsize: 1rem !default;
+
+		// WF sizing set: 2017-10-20
+		$h1-fontsize: 3.6rem !default;
+		$h2-fontsize: 3rem !default;
+		$h3-fontsize: 2.5rem !default;
+		$h4-fontsize: 2rem !default;
+		$h5-fontsize: 1.5rem !default;
 		$h6-fontsize: 1rem !default;
 
 	////////////////////////////////////////////////////////////////////
