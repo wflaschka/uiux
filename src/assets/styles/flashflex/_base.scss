@@ -57,7 +57,6 @@
 		@import "row.scss";
 		@import "jquery.modal.scss";
 		@import "containers-segments.scss";
-		@import "custom-classes.scss";
 
 	////////////////////////////////////////////////////////////////////
 	// Typographic
@@ -68,13 +67,25 @@
 	////////////////////////////////////////////////////////////////////
 	// ArtTap elements
 		@import "header-navbar.scss";
+		@import "footer.scss";
 		@import "card.scss";
 		// @import "card-row.scss";     // TODO
 		// @import "form-search.scss";  // TODO
 
-	// ArtTap Pages
-	@import "custom-pages.scss";
-	@import "page-checkout.scss";
+
+
+////////////////////////////////////////////////////////////////////
+// Page Specific
+	@import "pages/checkout.scss";
+	@import "pages/apply-artist.scss";
+	@import "pages/product.scss";
+
+
+////////////////////////////////////////////////////////////////////
+// Utilities
+	@import "utilities/spacing.scss";
+	@import "utilities/links.scss";
+	@import "utilities/text.scss";
 
 
 ////////////////////////////////////////////////////////////

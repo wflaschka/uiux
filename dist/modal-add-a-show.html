@@ -328,7 +328,7 @@
 
 <div class="add-a-show">
 
-<h1 class="modal__main-title">Add a Show</h1>
+<h1 class="is-large">Add a Show</h1>
 
 <div class="field">
     <div class="control">
@@ -346,9 +346,9 @@
 </div>
 
 
-<div class="add-a-show__past">
+<div class="add-a-show-past">
 
-    <h3 class="modal__sub-title">Details</h3>
+    <h3>Details</h3>
     <div class="row mb20">
         <div class="col-xs-14 col-sm-6">
             <div class="row">
@@ -506,7 +506,7 @@
     </div>
 
 
-    <h3 class="modal__sub-title">Location</h3>
+    <h3>Location</h3>
     <div class="row mb30">
         <div class="col-xs-14 col-sm-5">
             <div class="field">
@@ -553,13 +553,13 @@
         </div>
       </div>
     </div>
-</div><!-- .add-a-show__past -->
+</div><!-- .add-a-show-past -->
 
 
 
 
-<div class="add-a-show__upcoming">
-    <h3 class="modal__sub-title">Time</h3>
+<div class="add-a-show-upcoming">
+    <h3>Time</h3>
     <p>Starts on Sun, January 1, 2017 at 1:00 PM.</p>
     <div class="row mb30">
         <div class="col-sm-2">
@@ -1006,7 +1006,7 @@
         </div><!-- .col -->
     </div><!-- row -->
 
-    <h3 class="modal__sub-title">Details</h3>
+    <h3>Details</h3>
     <div class="row mb20">
         <div class="col-xs-14 col-sm-6">
             <div class="row">
@@ -1164,7 +1164,7 @@
     </div>
 
 
-    <h3 class="modal__sub-title">Location</h3>
+    <h3>Location</h3>
     <div class="row mb30">
         <div class="col-xs-14 col-sm-5">
             <div class="field">
@@ -1223,7 +1223,7 @@
     </div>
 
 
-    <h3 class="modal__sub-title">Promotion Details</h3>
+    <h3>Promotion Details</h3>
     <p class="color-gray"><small>Add some promotional photos for the show.</small></p>
 
     <div class="row mb30">
@@ -1351,7 +1351,7 @@
         </div>
       </div>
     </div>
-</div><!-- .add-a-show__upcoming -->
+</div><!-- .add-a-show-upcoming -->
 
 
 </div><!-- .add-a-show -->
@@ -1380,7 +1380,7 @@
 
         $('#basic').on($.modal.OPEN, function(event, modal) {
             $('select.select2').select2();
-            $('.add-a-show__past').hide();
+            $('.add-a-show-past').hide();
         });
 
         var toolbarOptions = [
@@ -1397,8 +1397,8 @@
         $("input[name$='show']").click(function() {
             var divShow = $(this).attr( 'data-show' );
             var divHide = $(this).attr( 'data-hide' );
-            $('.add-a-show__' + divHide).hide();
-            $('.add-a-show__' + divShow).show();
+            $('.add-a-show-' + divHide).hide();
+            $('.add-a-show-' + divShow).show();
         });
 
     });
