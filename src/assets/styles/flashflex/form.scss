@@ -123,3 +123,59 @@ label {
 		}
 	}
 }
+
+
+// Input Placeholder Text Color
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+	color: $color-placeholder;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	color: $color-placeholder;
+	opacity: 1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+	color: $color-placeholder;
+	opacity: 1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+	color: $color-placeholder;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+	color: $color-placeholder;
+}
+
+
+// Matching elements with Prototype Designs
+.label {
+    font-size: inherit;
+    font-weight: normal;
+    color: color(black);
+
+	&:not(:last-child) {
+	    margin-bottom: 0.3em;
+	}
+}
+
+
+.input,
+.textarea,
+select { font-size: inherit; }
+
+.input,
+.textarea,
+.select select,
+.select2-wrapper .select2-container .select2-selection {
+    min-height: 2.875rem;
+    color: color(black);
+    box-shadow: none;
+    border-radius: 0px;
+    border-color: $color-border;
+}
+
+// Select arrow position fix because of changing height match with prototype
+.select:not(.is-multiple)::after {
+    top: 1.4375rem;
+}
+
+// rich text editor
+.ql-editor { min-height: 12.5rem; }

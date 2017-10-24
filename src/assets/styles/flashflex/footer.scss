@@ -1,0 +1,62 @@
+////////////////////////////////////////////////////////////////////
+// FOOTER
+
+footer {
+	font-size: 0.8125rem;
+	background-color: #F7F7F7;
+	padding: 2.1875rem 0;
+
+	a {
+		@extend .link-black;
+	}
+
+	.row-primary {
+		margin-bottom: 0.9375rem;
+		border-bottom: 1px solid $color-border;
+	}
+
+	.links {
+		margin: 0px;
+		padding: 0px 0 0.9375rem;
+		list-style: none;
+		li {
+			margin-bottom: .5rem;
+			&.heading {
+				font-weight: 600;
+			}
+		}
+	}
+
+	.subscribe {
+		font-size: 0.9375rem;
+		padding-bottom: 0.9375rem;
+		h5 {
+			font-size: 1.5625rem;
+			margin: 0px 0 5px;
+		}
+		.desc {
+			font-size: 0.8125rem;
+			margin-bottom: 0.8125rem;
+		}
+	}
+
+	.copyright-links {
+		margin-top: 0.625rem;
+		a:not(:first-child) {
+			margin-left: 2.5rem;
+		}
+	}
+
+	.social-links {
+		font-size: 1.4rem;
+		text-align: center;
+		a:not(:first-child) {
+			margin-left: 3.1rem;
+		}
+	}
+
+	.copyright-text {
+		text-align: right;
+		margin-top: 0.625rem;
+	}
+}
