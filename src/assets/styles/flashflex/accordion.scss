@@ -1,0 +1,62 @@
+////////////////////////////////////////////////////////////////////
+// ACCORDION
+
+.accordion {
+
+	margin: 0;
+	
+	dt {
+  		border-top: 1px solid $color-border;
+  		padding: 1rem 1.5rem 1rem 0;
+  		cursor: pointer;
+  		font-weight: 600;
+  		position: relative;
+  		&:hover {
+  			color: lighten(black, 40%);
+  		}
+		&:first-of-type {
+			border-top: 0;
+		}
+		&:last-of-type:not(.active) {
+  			border-bottom: 1px solid $color-border;
+		}
+
+		.icon {
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			z-index: 1;
+		}
+
+		&.active {
+			.fa-plus:before { content: "\f068"; }
+		}
+
+	}
+
+	dd {
+		margin: 0;
+		padding: 0 5rem 1.875rem 0;
+		p:first-of-type {
+			margin-top: 0;
+		}
+		.info-helpful {
+			font-size: 0.75rem;
+			display: flex;
+			.info {
+				display: inline-flex;
+				align-items: center;	
+			}
+			.button {
+				min-height: 2rem;
+				margin-left: 1.2rem;
+			}
+		}
+
+		&:last-of-type {
+  			border-bottom: 1px solid $color-border;
+		}
+	}
+
+}
