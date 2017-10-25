@@ -72,21 +72,17 @@
 		// @import "card-row.scss";     // TODO
 		// @import "form-search.scss";  // TODO
 
+  ////////////////////////////////////////////////////////////////////
+  // Page Specific
+	  @import "pages/checkout.scss";
+	  @import "pages/apply-artist.scss";
+	  @import "pages/product.scss";
 
-
-////////////////////////////////////////////////////////////////////
-// Page Specific
-	@import "pages/checkout.scss";
-	@import "pages/apply-artist.scss";
-	@import "pages/product.scss";
-
-
-////////////////////////////////////////////////////////////////////
-// Utilities
-	@import "utilities/spacing.scss";
-	@import "utilities/links.scss";
-	@import "utilities/text.scss";
-
+  ////////////////////////////////////////////////////////////////////
+  // Utilities
+	  @import "utilities/spacing.scss";
+	  @import "utilities/links.scss";
+	  @import "utilities/text.scss";
 
 ////////////////////////////////////////////////////////////
 // FORMS -- derived from Bulma 0.5.3
