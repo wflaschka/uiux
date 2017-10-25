@@ -1,0 +1,22 @@
+////////////////////////////////////////////////////////////////////
+// SIDEBAR
+
+.sidebar {
+	background-color: #F7F7F7;
+	ul {
+		padding: 0;
+		margin: 4rem 0 0 5rem;
+		list-style: none;
+		li {
+			margin-bottom: 2rem;
+			a {
+				@extend .link-sidebar;
+			}
+			&.active {
+				a {
+					@extend .link-black;
+				}
+			}
+		}
+	}
+}

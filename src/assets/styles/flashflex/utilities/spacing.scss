@@ -16,8 +16,10 @@
   .mr#{$i}0 { margin-right: ($i * 10) / 16 + rem !important; }
   .mb#{$i}0 { margin-bottom: ($i * 10) / 16 + rem !important; }
   .ml#{$i}0 { margin-left: ($i * 10) / 16 + rem !important; }
+  .mar#{$i}0 { margin: ($i * 10) / 16 + rem !important; }
   .pt#{$i}0 { padding-top: ($i * 10) / 16 + rem !important; }
   .pr#{$i}0 { padding-right: ($i * 10) / 16 + rem !important; }
   .pb#{$i}0 { padding-bottom: ($i * 10) / 16 + rem !important; }
   .pl#{$i}0 { padding-left: ($i * 10) / 16 + rem !important; }
+  .pad#{$i}0 { padding: ($i * 10) / 16 + rem !important; }
 }
