@@ -52,7 +52,8 @@ var paths = {
 	],
 	materializeJs: [],
 	styles: [
-		rootSource    + 'assets/styles/**/*.css'
+		rootSource + 'assets/styles/**/*.css'
+//		,'node_modules/nouislider/distribute/*.css'
 	],
 	fonts: [
 		rootSource    + 'assets/fonts/**/*'

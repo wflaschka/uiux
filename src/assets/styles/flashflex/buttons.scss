@@ -1,8 +1,18 @@
 ////////////////////////////////////////////////////////////////////
 // BUTTONS -- extended from Bulma 0.5.3
 ////////////////////////////////////////////////////////////////////
+// EXAMPLE:
+// 
+// <a class="button dropdown-toggle" tabindex="1">
+//     Mediums
+//     <span class="icon">
+//         <i class="fa fa-angle-double-down"></i>
+//     </span>
+// </a>
 
-// The button sizes use mixins so they can be used at different breakpoints
+////////////////////////////////////////////////////////////////////
+// The button sizes use mixins so they can be used 
+// at different breakpoints
 @mixin button-small {
     border-radius: $radius-small;
     font-size: $size-small;
@@ -38,19 +48,26 @@
     }
 
     .icon {
-        &,
-        &.is-small,
-        &.is-medium,
-        &.is-large {
-            height: 1.5em;
-            width: 1.5em;
-        }
+        color: inherit;
+        // color: color(black);
 
+        // left/right icons don't work but might need to.
+        // This won't work unless "Text Stuff" is in span
+        // like "<span>Text Stuff</span>"
+        // 
+        // <a class="button dropdown-toggle" tabindex="1">
+        //     Mediums
+        //     <span class="icon">
+        //         <i class="fa fa-angle-double-down"></i>
+        //     </span>
+        // </a>
+        &.icon-left,
         &:first-child:not(:last-child) {
             margin-left: calc(-0.375em - 1px);
             margin-right: 0.1875em;
         }
 
+        &.icon-right,
         &:last-child:not(:first-child) {
             margin-left: 0.1875em;
             margin-right: calc(-0.375em - 1px);
@@ -67,12 +84,18 @@
     &.is-hovered {
         border-color: color(black);
         color: color-inverse(black);
+        .icon, .icon .fa {
+            color: color-inverse(black);
+        }
     }
 
     &:focus,
     &.is-focused {
         border-color: color(black);
         color: color-inverse(black);
+        .icon, .icon .fa {
+            color: color-inverse(black);
+        }
 
         &:not(:active) {
             box-shadow: 0 0 0 0.125em color(black);
@@ -83,6 +106,9 @@
     &.is-active {
         border-color: color(black);
         color: color-inverse(black);
+        .icon, .icon .fa {
+            color: color-inverse(black);
+        }
     }
 
     // Colors
@@ -98,6 +124,9 @@
             background-color: $color;
             border-color: transparent;
             color: $color-invert;
+            .icon, .icon .fa {
+                color: $color-invert;
+            }
 
             &:hover,
             &.is-hovered {
