@@ -1,0 +1,67 @@
+////////////////////////////////////////////////////////////////////
+// SEARCH FORM -- extras for noUiSlider
+////////////////////////////////////////////////////////////////////
+
+form.is-search-form {
+    .noUi-container {
+        padding: 0px 0.5rem;
+    }
+
+    .noUi-horizontal {
+        height: 2px;
+        margin: 3px 0 3px 0;
+    }
+    .noUi-target {
+        background: color(gray-light);
+        border-radius: 4px;
+        // border: 1px solid #D3D3D3;
+        // box-shadow: inset 0 1px 1px #F0F0F0, 0 3px 6px -5px #BBB;
+        box-shadow: none;
+        border: none;
+    }
+    .noUi-connect {
+        background: color(gray-dark);
+        box-shadow: none;
+        // box-shadow: inset 0 0 3px rgba(51, 51, 51, 0.45);
+        -webkit-transition: background 450ms;
+        transition: background 450ms;
+    }
+    .noUi-base {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        z-index: 1;
+        /* Fix 401 */
+    }
+    .noUi-handle {
+        border: 1px solid color(gray-dark);
+        border-radius: 100%;
+        background: color(gray-dark);
+        cursor: default;
+        box-shadow: none;
+        // box-shadow: inset 0 0 1px #FFF, inset 0 1px 7px #EBEBEB, 0 3px 6px -3px #BBB;
+    }
+    .noUi-horizontal .noUi-handle {
+        width: 15px;
+        height: 15px;
+        left: -14px;
+        top: -6px;
+        &.noUi-handle-lower {
+            // So going to "0" on left doesn't mean ball goes off the line
+            left: -1px;
+        }
+    }
+    .noUi-handle:before,
+    .noUi-handle:after {
+        display: none;
+        // content: "";
+        // display: block;
+        // position: absolute;
+        // height: 14px;
+        // width: 1px;
+        // background: #E8E7E6;
+        // left: 14px;
+        // top: 6px;
+    }
+
+}
