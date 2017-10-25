@@ -1,0 +1,27 @@
+//
+// Links
+//
+
+.link-primary {
+  &:link,
+  &:visited {
+    color: color(primary);
+    text-decoration: none;
+  }
+  &:active,
+  &:hover {
+    color: lighten(color(primary), 4%);
+  }
+}
+
+.link-black {
+  &:link,
+  &:visited {
+    color: color(black);
+    text-decoration: none;
+  }
+  &:active,
+  &:hover {
+    color: lighten(color(black), 15%);
+  }
+}

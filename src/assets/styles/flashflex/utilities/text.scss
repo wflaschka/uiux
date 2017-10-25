@@ -1,0 +1,29 @@
+//
+// Text
+//
+
+// Alignment
+
+.text-justify  { text-align: justify !important; }
+.text-nowrap   { white-space: nowrap !important; }
+.text-right    { text-align: right !important; }
+.text-left     { text-align: left !important; }
+.text-center   { text-align: center !important; }
+
+// Transformation
+
+.text-lowercase  { text-transform: lowercase !important; }
+.text-uppercase  { text-transform: uppercase !important; }
+.text-capitalize { text-transform: capitalize !important; }
+
+// Weight and italics
+
+.fw-light    { font-weight: 300 !important; }
+.fw-normal   { font-weight: 400 !important; }
+.fw-bold     { font-weight: 700 !important; }
+.font-italic { font-style: italic !important; }
+
+// Colors
+.text-white { color: color(white) !important; }
+.text-black { color: color(black) !important; }
+.text-gray { color: color(gray) !important; }

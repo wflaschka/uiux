@@ -1,0 +1,90 @@
+///////////////////////////////////////////////////////////////////
+// Product pages
+
+.product-detail {
+
+	.artist-name {
+		font-family: $font-family-header;
+		line-height: 2rem;
+		font-size: 2.1875rem;
+		@include for-tablet-portrait-down {
+			font-size: 1.875rem;
+		}
+	}
+
+	.follow-wrap {
+		font-size: 0.8125rem;
+		margin-bottom: 1.25rem;
+		.follow-artist {
+			margin-right: 1rem;
+			font-weight: bold;
+		}
+		.followers {
+			color: color(gray);
+		}
+	}
+
+	.descrption {
+		margin-bottom: 1.5625rem;
+		line-height: 1.3125rem;
+		.descrption-date {
+			font-style: italic;
+		}
+		.descrption-type {
+			color: color(gray);
+		}
+		.descrption-sizes {
+			color: color(gray);
+		}
+		.descrption-edition-number {
+			color: color(gray);
+		}
+	}
+
+	.gallery-price {
+		margin-bottom: 1.25rem;
+		line-height: 1.5rem;
+		.gallery-price-discounted {
+			font-size: 1.25rem;
+		}
+		.gallery-price-regular {
+			color: color(gray);
+		}
+		.gallery-info {
+			color: color(black);
+			font-size: 1.25rem;
+			margin-left: 1rem;
+		}
+	}
+
+	.edition-number {
+		margin-bottom: 0.625rem;
+		.edition-number-only {
+			font-weight: 500;
+		}	
+	}
+
+	.add-to-cart {
+		margin: 1.25rem 0;
+	}
+
+	.add-to-collection {
+		position: relative;
+		.create {
+			display: none;
+			position: absolute;
+			top: 44px;
+			left: 0px;
+			width: 100%;
+			background: white;
+			padding: 1rem;
+			border: 1px solid #ccc;	
+		}
+		.saved-collection {
+			color: color(gray);
+			font-size: 0.8125rem;
+			margin-top: 0.625rem
+		}
+	}
+	
+}
