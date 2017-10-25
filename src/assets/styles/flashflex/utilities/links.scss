@@ -25,3 +25,16 @@
     color: lighten(color(black), 15%);
   }
 }
+
+
+.link-sidebar {
+  &:link,
+  &:visited {
+    color: color(gray);
+    text-decoration: none;
+  }
+  &:active,
+  &:hover {
+    color: lighten(color(gray), 15%);
+  }
+}

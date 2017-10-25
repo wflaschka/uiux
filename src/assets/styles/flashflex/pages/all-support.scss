@@ -1,0 +1,9 @@
+///////////////////////////////////////////////////////////////////
+// All Support pages
+
+.page-all-support {
+	padding: 3.125rem 0;
+	.input-search {
+		@include search-input;
+	}
+}

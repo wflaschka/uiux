@@ -1,0 +1,28 @@
+///////////////////////////////////////////////////////////////////
+// FAQ pages
+
+.page-faq {
+	padding: 3.125rem;
+
+    .title {
+    	position: relative;
+	    h2 {
+	    	margin: 0;
+	    }
+    }
+	.search-support {
+		position: absolute;
+		right: 0px;
+		top: 0px;
+		min-width: 20rem;
+		.icon {
+			position: absolute;
+			left: 0.5rem;
+			top: 0.625rem;
+			z-index: 1;
+		}
+		input {
+			padding-left: 2.2rem;
+		}
+	}
+}

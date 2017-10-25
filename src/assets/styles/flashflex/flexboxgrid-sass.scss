@@ -51,6 +51,13 @@ $half-gutter-width: $flexboxgrid-gutter-width * .5;
     padding-right: 0.5rem;
     padding-left: 0.5rem;
   }
+  &.nopad-l {
+    // used in page FAQ
+    padding-left: 0.5rem;
+  }
+  &.nopad-r {
+    padding-right: 0.5rem;
+  }
 }
 
 
