@@ -1,0 +1,41 @@
+////////////////////////////////////////////////////////////////////
+// SIZE MENU
+////////////////////////////////////////////////////////////////////
+
+aside.menu.is-size-menu {
+    // display: flex;
+    flex-direction: column;
+    width: 20rem;
+
+    .level {
+        &:last-of-type {
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    .button {
+        &.is-depressed {
+            @extend .is-gray-light;
+        }
+        &:not(.is-depressed) {
+            @extend .is-black;
+        }
+    }
+
+    .noUi-container {
+        width: 90%;
+        margin: 0 auto;
+        label {
+            font-size: $size-6;
+            margin: 0rem 0rem 0.25rem 0rem;
+        }
+        span {
+            color: color(gray-light);
+            font-size: $size-7;
+            padding-right: 0.25rem;
+        }
+        .noUi-horizontal {
+            margin-bottom: 2rem;
+        }
+    }
+}

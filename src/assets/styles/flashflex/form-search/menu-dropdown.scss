@@ -1,3 +1,9 @@
+////////////////////////////////////////////////////////////////////
+// Dropdowns
+// Was: bulma-dropdown-menu.scss
+// Derived from Bulma 0.5.?
+////////////////////////////////////////////////////////////////////
+
 // Z-index
 $zindex-0: 1;
 $zindex-1: 100;
@@ -26,7 +32,10 @@ $zindex-4: 400;
 
         animation: slide-down-menu .2s ease 1;
         display: none;
+
         position: absolute;
+        top: $search-bar-height;
+
         background: white;
         border: 1px solid #dedede;
         border-radius: 2px;
@@ -49,7 +58,8 @@ $zindex-4: 400;
     &.active .menu,
     .dropdown-toggle:focus + .menu,
     .menu:hover {
-        display: block;
+        // display: block;
+        display: flex;
     }
 
 }
