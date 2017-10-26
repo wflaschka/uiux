@@ -57,7 +57,6 @@
 		@import "row.scss";
 		@import "jquery.modal.scss";
 		@import "containers-segments.scss";
-		@import "custom-classes.scss";
 
 	////////////////////////////////////////////////////////////////////
 	// Typographic
@@ -68,15 +67,22 @@
 	////////////////////////////////////////////////////////////////////
 	// ArtTap elements
 		@import "header-navbar.scss";
+		@import "footer.scss";
 		@import "card.scss";
 		// @import "card-row.scss";     // TODO
-		// @import "form-search.scss";  // TODO
+		@import "form-search/_index.scss";
 
 	////////////////////////////////////////////////////////////////////
-	// ArtTap Pages
-	@import "custom-pages.scss";
-	@import "page-checkout.scss";
+	// Page Specific
+		@import "pages/checkout.scss";
+		@import "pages/apply-artist.scss";
+		@import "pages/product.scss";
 
+	////////////////////////////////////////////////////////////////////
+	// Utilities
+		@import "utilities/spacing.scss";
+		@import "utilities/links.scss";
+		@import "utilities/text.scss";
 
 ////////////////////////////////////////////////////////////
 // FORMS -- derived from Bulma 0.5.3
@@ -88,6 +94,7 @@
 	@import "bulma-0.5.3/controls.scss";
 	@import "bulma-0.5.3/mixins.scss";
 	@import "bulma-0.5.3/form.scss";
+	@import "level.scss";
 
 	// Bulma 0.5.3 wants these variables
 	// This is for 'form-select2.scss':
@@ -116,18 +123,19 @@
 	// Our specific form CSS
 		@import "form.scss";
 
-// ////////////////////////////////////////////////////////////////////
-// Detail elements
-	@import "hearts.scss";
-	@import "tags.scss";
-	@import "bulma-0.5.3/button.scss";
-	@import "buttons.scss";
-	// @import "floating-badges.scss"; // Might not be needed
 
-	// These are for Spectre avatar include
-	$border-width: $unit-o !default;
-	$border-width-lg: $unit-h !default;
-	@import "avatars.scss";
+	// ////////////////////////////////////////////////////////////////////
+	// Detail elements
+		@import "hearts.scss";
+		@import "tags.scss";
+		@import "bulma-0.5.3/button.scss";
+		@import "buttons.scss";
+		// @import "floating-badges.scss"; // Might not be needed
+
+		// These are for Spectre avatar include
+		$border-width: $unit-o !default;
+		$border-width-lg: $unit-h !default;
+		@import "avatars.scss";
 
 
 // ////////////////////////////////////////////////////////////////////

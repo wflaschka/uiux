@@ -1,8 +1,18 @@
 ////////////////////////////////////////////////////////////////////
 // BUTTONS -- extended from Bulma 0.5.3
 ////////////////////////////////////////////////////////////////////
+// EXAMPLE:
+// 
+// <a class="button dropdown-toggle" tabindex="1">
+//     Mediums
+//     <span class="icon">
+//         <i class="fa fa-angle-double-down"></i>
+//     </span>
+// </a>
 
-// The button sizes use mixins so they can be used at different breakpoints
+////////////////////////////////////////////////////////////////////
+// The button sizes use mixins so they can be used 
+// at different breakpoints
 @mixin button-small {
     border-radius: $radius-small;
     font-size: $size-small;
@@ -38,19 +48,26 @@
     }
 
     .icon {
-        &,
-        &.is-small,
-        &.is-medium,
-        &.is-large {
-            height: 1.5em;
-            width: 1.5em;
-        }
+        color: inherit;
+        // color: color(black);
 
+        // left/right icons don't work but might need to.
+        // This won't work unless "Text Stuff" is in span
+        // like "<span>Text Stuff</span>"
+        // 
+        // <a class="button dropdown-toggle" tabindex="1">
+        //     Mediums
+        //     <span class="icon">
+        //         <i class="fa fa-angle-double-down"></i>
+        //     </span>
+        // </a>
+        &.icon-left,
         &:first-child:not(:last-child) {
             margin-left: calc(-0.375em - 1px);
             margin-right: 0.1875em;
         }
 
+        &.icon-right,
         &:last-child:not(:first-child) {
             margin-left: 0.1875em;
             margin-right: calc(-0.375em - 1px);
@@ -62,27 +79,40 @@
         }
     }
 
-    // States
-    &:hover,
-    &.is-hovered {
-        border-color: color(black);
-        color: color-inverse(black);
-    }
-
-    &:focus,
-    &.is-focused {
-        border-color: color(black);
-        color: color-inverse(black);
-
-        &:not(:active) {
-            box-shadow: 0 0 0 0.125em color(black);
+    // States for the button: hover, focus, active
+    // All are disabled if the button is styled with 'has-no-states' class.
+    &:not(.has-no-states) {
+        // States
+        &:hover,
+        &.is-hovered {
+            border-color: color(black);
+            color: color-inverse(black);
+            .icon, .icon .fa {
+                color: color-inverse(black);
+            }
         }
-    }
 
-    &:active,
-    &.is-active {
-        border-color: color(black);
-        color: color-inverse(black);
+        &:focus,
+        &.is-focused {
+            border-color: color(black);
+            color: color-inverse(black);
+            .icon, .icon .fa {
+                color: color-inverse(black);
+            }
+
+            &:not(:active) {
+                box-shadow: 0 0 0 0.125em color(black);
+            }
+        }
+
+        &:active,
+        &.is-active {
+            border-color: color(black);
+            color: color-inverse(black);
+            .icon, .icon .fa {
+                color: color-inverse(black);
+            }
+        }
     }
 
     // Colors
@@ -98,29 +128,37 @@
             background-color: $color;
             border-color: transparent;
             color: $color-invert;
-
-            &:hover,
-            &.is-hovered {
-                background-color: color($name#{-dark});
-                border-color: transparent;
-                color: color-invert($name#{-dark});
-            }
-
-            &:focus,
-            &.is-focused {
-                border-color: transparent;
+            .icon, .icon .fa {
                 color: $color-invert;
-
-                &:not(:active) {
-                    box-shadow: $shadow;
-                }
             }
 
-            &:active,
-            &.is-active {
-                background-color: color($name#{-dark});
-                border-color: transparent;
-                color: color-invert($name#{-dark});
+            // States for the button: hover, focus, active
+            // All are disabled if the button is styled with 'has-no-states' class.
+            &:not(.has-no-states) {
+
+                &:hover,
+                &.is-hovered {
+                    background-color: color($name#{-dark});
+                    border-color: transparent;
+                    color: color-invert($name#{-dark});
+                }
+
+                &:focus,
+                &.is-focused {
+                    border-color: transparent;
+                    color: $color-invert;
+
+                    &:not(:active) {
+                        box-shadow: $shadow;
+                    }
+                }
+
+                &:active,
+                &.is-active {
+                    background-color: color($name#{-dark});
+                    border-color: transparent;
+                    color: color-invert($name#{-dark});
+                }
             }
 
             &[disabled] {
@@ -133,8 +171,12 @@
                 background-color: $color-invert;
                 color: $color;
 
-                &:hover {
-                    background-color: color-invert($name#{-dark});
+                // States for the button: hover, focus, active
+                // All are disabled if the button is styled with 'has-no-states' class.
+                &:not(.has-no-states) {
+                    &:hover {
+                        background-color: color-invert($name#{-dark});
+                    }
                 }
 
                 &[disabled] {
@@ -156,11 +198,15 @@
                 border-color: $color;
                 color: $color;
 
-                &:hover,
-                &:focus {
-                    background-color: $color;
-                    border-color: $color;
-                    color: $color-invert;
+                // States for the button: hover, focus, active
+                // All are disabled if the button is styled with 'has-no-states' class.
+                &:not(.has-no-states) {
+                    &:hover,
+                    &:focus {
+                        background-color: $color;
+                        border-color: $color;
+                        color: $color-invert;
+                    }
                 }
 
                 &.is-loading {
@@ -182,10 +228,14 @@
                 border-color: $color-invert;
                 color: $color-invert;
 
-                &:hover,
-                &:focus {
-                    background-color: $color-invert;
-                    color: $color;
+                // States for the button: hover, focus, active
+                // All are disabled if the button is styled with 'has-no-states' class.
+                &:not(.has-no-states) {
+                    &:hover,
+                    &:focus {
+                        background-color: $color-invert;
+                        color: $color;
+                    }
                 }
 
                 &[disabled] {
@@ -272,4 +322,9 @@
         }
     }
 
+}
+
+.button:not(.is-small):not(.is-large):not(.is-medium) {
+    font-size: inherit;
+    min-height: 2.875rem; //46px
 }
