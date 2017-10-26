@@ -1,0 +1,28 @@
+////////////////////////////////////////////////////////////////////
+// FORM SEARCH BAR
+// 
+// Dependencies: noUiSlider css/js
+////////////////////////////////////////////////////////////////////
+
+form.is-search-form {
+	border: 1px dotted color(gray);
+
+    @import "variables.scss";
+
+    // Menu and dropdown layout 
+	@import "menu.scss";
+    @import "menu-dropdown.scss";
+	@import "menu-color.scss";
+	@import "menu-price.scss";
+	@import "menu-medium.scss";
+	@import "menu-more.scss";
+	// Size menu:
+    @import "../noUiSlider/nouislider.scss";
+	@import "noui-extras.scss";
+	@import "menu-size.scss";
+
+    // Forms
+    @import "form.scss";
+    @import "form-colorballs.scss";
+
+}

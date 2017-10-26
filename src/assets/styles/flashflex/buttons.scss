@@ -79,35 +79,39 @@
         }
     }
 
-    // States
-    &:hover,
-    &.is-hovered {
-        border-color: color(black);
-        color: color-inverse(black);
-        .icon, .icon .fa {
+    // States for the button: hover, focus, active
+    // All are disabled if the button is styled with 'has-no-states' class.
+    &:not(.has-no-states) {
+        // States
+        &:hover,
+        &.is-hovered {
+            border-color: color(black);
             color: color-inverse(black);
-        }
-    }
-
-    &:focus,
-    &.is-focused {
-        border-color: color(black);
-        color: color-inverse(black);
-        .icon, .icon .fa {
-            color: color-inverse(black);
+            .icon, .icon .fa {
+                color: color-inverse(black);
+            }
         }
 
-        &:not(:active) {
-            box-shadow: 0 0 0 0.125em color(black);
-        }
-    }
-
-    &:active,
-    &.is-active {
-        border-color: color(black);
-        color: color-inverse(black);
-        .icon, .icon .fa {
+        &:focus,
+        &.is-focused {
+            border-color: color(black);
             color: color-inverse(black);
+            .icon, .icon .fa {
+                color: color-inverse(black);
+            }
+
+            &:not(:active) {
+                box-shadow: 0 0 0 0.125em color(black);
+            }
+        }
+
+        &:active,
+        &.is-active {
+            border-color: color(black);
+            color: color-inverse(black);
+            .icon, .icon .fa {
+                color: color-inverse(black);
+            }
         }
     }
 
@@ -128,28 +132,33 @@
                 color: $color-invert;
             }
 
-            &:hover,
-            &.is-hovered {
-                background-color: color($name#{-dark});
-                border-color: transparent;
-                color: color-invert($name#{-dark});
-            }
+            // States for the button: hover, focus, active
+            // All are disabled if the button is styled with 'has-no-states' class.
+            &:not(.has-no-states) {
 
-            &:focus,
-            &.is-focused {
-                border-color: transparent;
-                color: $color-invert;
-
-                &:not(:active) {
-                    box-shadow: $shadow;
+                &:hover,
+                &.is-hovered {
+                    background-color: color($name#{-dark});
+                    border-color: transparent;
+                    color: color-invert($name#{-dark});
                 }
-            }
 
-            &:active,
-            &.is-active {
-                background-color: color($name#{-dark});
-                border-color: transparent;
-                color: color-invert($name#{-dark});
+                &:focus,
+                &.is-focused {
+                    border-color: transparent;
+                    color: $color-invert;
+
+                    &:not(:active) {
+                        box-shadow: $shadow;
+                    }
+                }
+
+                &:active,
+                &.is-active {
+                    background-color: color($name#{-dark});
+                    border-color: transparent;
+                    color: color-invert($name#{-dark});
+                }
             }
 
             &[disabled] {
@@ -162,8 +171,12 @@
                 background-color: $color-invert;
                 color: $color;
 
-                &:hover {
-                    background-color: color-invert($name#{-dark});
+                // States for the button: hover, focus, active
+                // All are disabled if the button is styled with 'has-no-states' class.
+                &:not(.has-no-states) {
+                    &:hover {
+                        background-color: color-invert($name#{-dark});
+                    }
                 }
 
                 &[disabled] {
@@ -185,11 +198,15 @@
                 border-color: $color;
                 color: $color;
 
-                &:hover,
-                &:focus {
-                    background-color: $color;
-                    border-color: $color;
-                    color: $color-invert;
+                // States for the button: hover, focus, active
+                // All are disabled if the button is styled with 'has-no-states' class.
+                &:not(.has-no-states) {
+                    &:hover,
+                    &:focus {
+                        background-color: $color;
+                        border-color: $color;
+                        color: $color-invert;
+                    }
                 }
 
                 &.is-loading {
@@ -211,10 +228,14 @@
                 border-color: $color-invert;
                 color: $color-invert;
 
-                &:hover,
-                &:focus {
-                    background-color: $color-invert;
-                    color: $color;
+                // States for the button: hover, focus, active
+                // All are disabled if the button is styled with 'has-no-states' class.
+                &:not(.has-no-states) {
+                    &:hover,
+                    &:focus {
+                        background-color: $color-invert;
+                        color: $color;
+                    }
                 }
 
                 &[disabled] {
@@ -303,7 +324,7 @@
 
 }
 
-.button {
+.button:not(.is-small):not(.is-large):not(.is-medium) {
     font-size: inherit;
     min-height: 2.875rem; //46px
 }

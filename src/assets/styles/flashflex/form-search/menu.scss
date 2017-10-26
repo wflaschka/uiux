@@ -1,0 +1,71 @@
+////////////////////////////////////////////////////////////////////
+// MENU DROPDOWN for searchbar
+////////////////////////////////////////////////////////////////////
+
+.row {
+    justify-content: space-between;
+}
+
+.nav-item.column {
+    &:not(:last-of-type) {
+        margin-right: 0.5em;
+    }
+
+    // height: 48px;
+    display: flex;
+    flex: 1 0 auto;
+
+    >.button {
+        height: $search-bar-height !important;
+
+        &.dropdown-toggle {
+            @extend .button;
+            @extend .is-fullwidth;
+            @extend .is-outlined;
+            @extend .is-gray;
+
+
+            justify-content: space-between;
+            span {
+                flex: 1 0 auto;
+            }
+            span.icon {
+                flex: 0 0 auto;
+            }
+        }
+        .button-search {
+            @extend .is-fullwidth;
+            display: flex;
+            flex-direction: row;
+            // color: color(white);
+            // @extend .is-primary;
+
+            .icon {
+                // display: inline-block;
+                // display: block;
+                .fa {
+                    color: color(black);
+                }
+            }
+        }
+    }
+
+    aside.menu {
+        // font-size: 0.8rem;
+        padding: 1rem 0.5rem 0.25rem 0.5rem;
+        margin-top: none;
+        white-space: nowrap;
+
+        ul.menu-list {
+            -webkit-padding-start: 0; //wtf
+            list-style: none;
+            margin: 0px;
+            
+            li {
+                align-items: left;
+                display: flex;
+                padding: 1rem 0;
+            }
+        }
+    }
+}

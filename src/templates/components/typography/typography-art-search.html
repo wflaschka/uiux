@@ -1,6 +1,4 @@
 
-<link rel="stylesheet" type="text/css" href="/assets/styles/nouislider.css">
-
 <form class="is-search-form is-fullwidth">
     <!-- <nav class="nav"> -->
     <nav class="row">
@@ -14,7 +12,7 @@
                     <i class="fa fa-angle-double-down"></i>
                 </span>
             </a>
-            <aside class="menu">
+            <aside class="menu is-medium-menu">
                 <ul class="menu-list">
                     <li class="">
                         <label class="checkbox" for="input-painting">
@@ -87,12 +85,13 @@
                     <i class="fa fa-angle-double-down"></i>
                 </span>
             </a>
-            <aside class="menu">
+            <aside class="menu is-price-menu">
                 <script type="text/javascript">
                     $( document ).ready(function() {
                         $('#input-price-all').on('change', function() { priceMinMax(0,10000); });
                         $('#input-price-lt500').on('change', function() { priceMinMax(0,500); });
-                        $('#input-price-1t25').on('change', function() { priceMinMax(0,2500); });
+                        $('#input-price-lt10').on('change', function() { priceMinMax(0,1000); });
+                        $('#input-price-1t25').on('change', function() { priceMinMax(1000,2500); });
                         $('#input-price-25t5').on('change', function() { priceMinMax(2500,5000); });
                         $('#input-price-5t10').on('change', function() { priceMinMax(5000,10000); });
                         function priceMinMax(min, max) {
@@ -104,9 +103,9 @@
                 </script>
                 <ul class="menu-list">
                     <li>
-                        &dollar; <input name="input-price-min" id="input-price-min" class="input is-small is-dollar-input" type="text" placeholder="0">
-                        &ndash;
-                        &dollar; <input name="input-price-max" id="input-price-max" class="input is-small is-dollar-input" type="text" placeholder="10000">
+                        <span>&dollar;</span> <input name="input-price-min" id="input-price-min" class="input is-small is-dollar-input" type="text" placeholder="0">
+                        <span>&ndash;</span>
+                        <span>&dollar;</span> <input name="input-price-max" id="input-price-max" class="input is-small is-dollar-input" type="text" placeholder="10000">
                     </li>
                     <li class="">
                         <label class="radio" for="input-price-all">
@@ -120,6 +119,13 @@
                             <input type="radio" id="input-price-lt500" name="input-price-span">
                             <span></span>
                             Under $500
+                        </label>
+                    </li>
+                    <li>
+                        <label class="radio" for="input-price-lt10">
+                            <input type="radio" id="input-price-lt10" name="input-price-span">
+                            <span></span>
+                            Under $1000
                         </label>
                     </li>
                     <li>
@@ -168,14 +174,12 @@
                         </div>
                     </div>
                     <div class="level-right">
-                        <div class="level-item">
-                            <a id="size-set-in" class="button is-small has-shadow is-depressed">
-                                Inches
-                            </a>
-                            <a id="size-set-cm" class="button is-small has-shadow">
-                                Centimeters
-                            </a>
-                        </div>
+                        <a id="size-set-in" class="is-depressed button has-no-states is-outlined is-gray is-small">
+                            Inches
+                        </a>
+                        <a id="size-set-cm" class="button has-no-states is-outlined is-gray is-small">
+                            Centimeters
+                        </a>
                     </div>
                 </div>
                 <!-- Form inputs -->
@@ -188,7 +192,7 @@
                 <div class="noUi-container">
                     <label>Height</label>
                     <div id="height-slider-handles" class="noUi-target noUi-ltr noUi-horizontal"></div>
-                    <div class="level">
+                    <!-- <div class="level">
                         <div class="level-left">
                             <div class="level-item">
                                 <span class="sizeMinHeight"></span>
@@ -201,10 +205,10 @@
                                 <span class="sizeMeasureInorCm">in</span>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <label>Width</label>
                     <div id="width-slider-handles" class="noUi-target noUi-ltr noUi-horizontal"></div>
-                    <div class="level">
+                    <!-- <div class="level">
                         <div class="level-left">
                             <div class="level-item">
                                 <span class="sizeMinWidth"></span>
@@ -217,7 +221,7 @@
                                 <span class="sizeMeasureInorCm">in</span>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </aside>
         </div>
@@ -293,7 +297,6 @@
                     <input type="checkbox" id="input-color-select-brown" name="input-color-select-brown">
                     <span></span>
                 </label>
-
             </aside>
         </div>
 
@@ -307,7 +310,8 @@
                 </span>
             </a>
             <aside class="menu row is-more-menu">
-                <div class="col-xs-3">
+                <!-- <div class="row"> -->
+                <div class="column">
                     <strong>Subject</strong>
                     <ul class="menu-list">
                         <li class="">
@@ -319,7 +323,7 @@
                         </li>
                         <li>
                             <label class="checkbox" for="input-subject-figurative">
-                                <input type="checkbox" id="input-subject-figurative" name="input-subject-figurative">
+                                <input checked="checked" type="checkbox" id="input-subject-figurative" name="input-subject-figurative">
                                 <span></span>
                                 Figurative
                             </label>
@@ -333,7 +337,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-xs-3">
+                <div class="column">
                     <strong>Number of Editions</strong>
                     <ul class="menu-list">
                         <li class="">
@@ -359,7 +363,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-xs-3">
+                <div class="column">
                     <strong>Time Period</strong>
                     <ul class="menu-list">
                         <li class="">
@@ -385,7 +389,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-xs-3">
+                <div class="column">
                     <strong>Other</strong>
                     <ul class="menu-list">
                         <li class="">
@@ -411,6 +415,7 @@
                         </li>
                     </ul>
                 </div>
+                <!-- </div> -->
             </aside>
         </div>
 
@@ -440,30 +445,33 @@
             width:  { min: 0, max: 120 },
             height: { min: 0, max: 120 },
         };
+        var measureLabel = "in";
         console.log("width.min: %s", minMax.width.min);
         console.log("height.max: %s", minMax.height.max)
 
 
         // CONVERSION CONVERSION CONVERSION CONVERSION CONVERSION CONVERSION 
         // 1 in = 2.54 cm
-        $('#size-set-in, #size-set-cm').on('click', function() {
-
-            $('#size-set-in, #size-set-cm').toggleClass('is-depressed');
-
-            if ($('#size-set-in').hasClass('is-depressed')) {
-                $('#sizeInchOrCentimeter').val('in');
-                $('span.sizeMeasureInorCm').text('in');
-            } else {
-                $('#sizeInchOrCentimeter').val('cm');
-                $('span.sizeMeasureInorCm').text('cm');
-            }
-            setSizeMeasureLabel('sizeMinWidth', $('#sizeMinWidth').val());
-            setSizeMeasureLabel('sizeMaxWidth', $('#sizeMaxWidth').val());
-            setSizeMeasureLabel('sizeMinHeight', $('#sizeMinHeight').val());
-            setSizeMeasureLabel('sizeMaxHeight', $('#sizeMaxHeight').val());
-
-            // console.log("Value of #sizeInchOrCentimeter: %s", $('#sizeInchOrCentimeter').val());
+        $('#size-set-in').on('click', function() {
+            measureLabel = "in";
+            $('#size-set-in').addClass('is-depressed');
+            $('#size-set-cm').removeClass('is-depressed');
+            fixToolTips();
         });
+        $('#size-set-cm').on('click', function() {
+            measureLabel = "cm";
+            $('#size-set-cm').addClass('is-depressed');
+            $('#size-set-in').removeClass('is-depressed');
+            fixToolTips();
+        });
+
+        function fixToolTips() {
+            // Can't trigger to rebuild tooltip, so replace the text:
+            $('#width-slider-handles .noUi-handle-lower .noUi-tooltip').text(formatTooltipHandle($('#sizeMinWidth').val()));
+            $('#width-slider-handles .noUi-handle-upper .noUi-tooltip').text(formatTooltipHandle($('#sizeMaxWidth').val()));
+            $('#height-slider-handles .noUi-handle-lower .noUi-tooltip').text(formatTooltipHandle($('#sizeMinHeight').val()));
+            $('#height-slider-handles .noUi-handle-upper .noUi-tooltip').text(formatTooltipHandle($('#sizeMaxHeight').val()));
+        };
 
         // All sizes checkbox -- when it changes to 'checked' status
         $('#sizeAllSizes').on('change', function() {
@@ -472,21 +480,17 @@
                 $('#sizeMaxWidth').val(minMax.width.max).trigger('change');
                 $('#sizeMinHeight').val(minMax.height.min).trigger('change');
                 $('#sizeMaxHeight').val(minMax.height.max).trigger('change');
-                setSizeMeasureLabel('sizeMinWidth', $('#sizeMinWidth').val());
-                setSizeMeasureLabel('sizeMaxWidth', $('#sizeMaxWidth').val());
-                setSizeMeasureLabel('sizeMinHeight', $('#sizeMinHeight').val());
-                setSizeMeasureLabel('sizeMaxHeight', $('#sizeMaxHeight').val());
+                
+                // setSizeMeasureLabel('sizeMinWidth', $('#sizeMinWidth').val());
+                // setSizeMeasureLabel('sizeMaxWidth', $('#sizeMaxWidth').val());
+                // setSizeMeasureLabel('sizeMinHeight', $('#sizeMinHeight').val());
+                // setSizeMeasureLabel('sizeMaxHeight', $('#sizeMaxHeight').val());
             }
         });
         // Check or uncheck "all sizes" checkbox based on user's slider changes
         function uncheckAllSizes() {
             // Fires after slider UI change
             // Only uncheck if width/height values no longer min/max
-            // console.warn("uncheckAllSizes() has fired!");
-            // console.warn("-- #sizeMinWidth: %s", $('#sizeMinWidth').val());
-            // console.warn("-- #sizeMaxWidth: %s", $('#sizeMaxWidth').val());
-            // console.warn("-- #sizeMinHeight: %s", $('#sizeMinHeight').val());
-            // console.warn("-- #sizeMaxHeight: %s", $('#sizeMaxHeight').val());
             if (
                 minMax.width.min  != $('#sizeMinWidth').val() ||
                 minMax.width.max  != $('#sizeMaxWidth').val() ||
@@ -500,15 +504,35 @@
         }
 
         // DISPLAY CURRENT MEASURES -- as either 'in' or 'cm' and change cm value
-        function setSizeMeasureLabel(measureName, value) {
-            console.log("Changing `%s` to %s", measureName, value);
-            if ($('#size-set-in').hasClass('is-depressed')) {
-                newValue = value;
-            } else {
-                // cm
-                newValue = Math.round(value * 2.54);
+        // function setSizeMeasureLabel(measureName, value) {
+        //     console.log("Changing `%s` to %s", measureName, value);
+        //     if ($('#size-set-in').hasClass('is-depressed')) {
+        //         newValue = value;
+        //         measureLabel = "in";
+        //     } else {
+        //         // cm
+        //         newValue = Math.round(value * 2.54);
+        //         measureLabel = "cm";
+        //     }
+        //     $('span.'+measureName).text(newValue);
+        // }
+
+        // FORMAT MIN/MAX HANDLES
+        function formatTooltipHandle(value) {
+            value = Math.round(parseInt(value));
+            valueInInches = value;
+
+            if ('cm' == measureLabel) {
+                value = value * 2.54;
             }
-            $('span.'+measureName).text(newValue);
+            value = Math.round(parseInt(value));
+            if (0 == valueInInches) {
+                value = "Min 0";
+            }
+            if (120 == valueInInches) {
+                value = "Max " + value;
+            }
+            return value + " " + measureLabel;
         }
 
         // SLIDER SETTING SLIDER SETTING SLIDER SETTING SLIDER SETTING SLIDER SETTING 
@@ -520,6 +544,13 @@
         noUiSlider.create(handlesSliderWidth, {
             start: [ 20, 100 ],
             connect: true,
+            // tooltips: [ false, wNumb({ decimals: 1 }), true ],
+            // tooltips: [formatTooltipMinHandle, formatTooltipMaxHandle],
+            // https://github.com/algolia/react-nouislider/issues/20#issuecomment-209517590
+            tooltips: [
+                { to: formatTooltipHandle },
+                { to: formatTooltipHandle }
+            ],
             range: {
                 'min': [ minMax.width.min ],
                 'max': [ minMax.width.max ]
@@ -529,6 +560,10 @@
         noUiSlider.create(handlesSliderHeight, {
             start: [ 20, 100 ],
             connect: true,
+            tooltips: [
+                { to: formatTooltipHandle },
+                { to: formatTooltipHandle }
+            ],
             range: {
                 'min': [ minMax.height.min ],
                 'max': [ minMax.height.max ]
@@ -544,10 +579,10 @@
             var value = values[handle];
             if ( handle ) {
                 sizeMaxWidth.value = Math.round(value);
-                setSizeMeasureLabel('sizeMaxWidth', sizeMaxWidth.value);
+                // setSizeMeasureLabel('sizeMaxWidth', sizeMaxWidth.value);
             } else {
                 sizeMinWidth.value = Math.round(value);
-                setSizeMeasureLabel('sizeMinWidth', sizeMinWidth.value);
+                // setSizeMeasureLabel('sizeMinWidth', sizeMinWidth.value);
             }
             // If slider changes, see if we must uncheck the "All sizes" checkbox
             uncheckAllSizes();
@@ -564,10 +599,10 @@
             var value = values[handle];
             if ( handle ) {
                 sizeMaxHeight.value = Math.round(value);
-                setSizeMeasureLabel('sizeMaxHeight', sizeMaxHeight.value);
+                // setSizeMeasureLabel('sizeMaxHeight', sizeMaxHeight.value);
             } else {
                 sizeMinHeight.value = Math.round(value);
-                setSizeMeasureLabel('sizeMinHeight', sizeMinHeight.value);
+                // setSizeMeasureLabel('sizeMinHeight', sizeMinHeight.value);
             }
             // If slider changes, see if we must uncheck the "All sizes" checkbox
             uncheckAllSizes();
