@@ -34,4 +34,29 @@ $(document).ready(function() {
     //     }
     // });
 
+
+
+    // Accordion JS
+    function openFirstPanel(){
+        $('.accordion > dt:first-child').addClass('active').next().slideDown();
+    }
+
+    var allPanels = $('.accordion > dt');
+    allPanels.next().hide(); // hide all dd elements
+    // openFirstPanel(); // open first dd element on load
+
+    $('.accordion > dt').click(function() {
+        $this = $(this);
+        $target =  $this.next();
+
+        if ( $this.hasClass('active') ) {
+            $this.removeClass('active').next().slideUp();
+        } else {
+            $this.parents('.accordion').find('dt').removeClass('active').next().slideUp();
+            $this.addClass('active').next().slideDown();
+        }
+
+        return false;
+    });
+
 });

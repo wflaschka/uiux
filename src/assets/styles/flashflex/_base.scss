@@ -68,7 +68,9 @@
 	// ArtTap elements
 		@import "header-navbar.scss";
 		@import "footer.scss";
+		@import "sidebar.scss";
 		@import "card.scss";
+		@import "accordion.scss";
 		// @import "card-row.scss";     // TODO
 		@import "form-search/_index.scss";
 
@@ -77,12 +79,17 @@
 		@import "pages/checkout.scss";
 		@import "pages/apply-artist.scss";
 		@import "pages/product.scss";
+		@import "pages/faq.scss";
+		@import "pages/all-support.scss";
+
 
 	////////////////////////////////////////////////////////////////////
 	// Utilities
 		@import "utilities/spacing.scss";
 		@import "utilities/links.scss";
 		@import "utilities/text.scss";
+		@import "utilities/boxes.scss";
+
 
 ////////////////////////////////////////////////////////////
 // FORMS -- derived from Bulma 0.5.3

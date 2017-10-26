@@ -118,6 +118,22 @@ h1, h2, h3, h4, h5, h6 {
         }
     }
 
+    &.has-border {
+        padding-bottom: 1rem;
+        border-bottom: 1px solid $color-border;
+    }
+
+    &.has-link {
+        position: relative;
+        padding-right: 1rem;
+        .see-more {
+            font-size: 0.8125rem;
+            position: absolute;
+            right: 0;
+            @extend .link-primary;
+        }   
+    }
+
     & + h1[secondary],
     & + h2[secondary],
     & + h3[secondary],
