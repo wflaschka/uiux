@@ -36,6 +36,7 @@ $(document).ready(function() {
 
 
 
+    ////////////////////////////////////////////////////////////////////
     // Accordion JS
     function openFirstPanel(){
         $('.accordion > dt:first-child').addClass('active').next().slideDown();
@@ -45,7 +46,7 @@ $(document).ready(function() {
     allPanels.next().hide(); // hide all dd elements
     // openFirstPanel(); // open first dd element on load
 
-    $('.accordion > dt').click(function() {
+    $('.accordion > dt').on( "click", function(e) {
         $this = $(this);
         $target =  $this.next();
 
@@ -57,6 +58,13 @@ $(document).ready(function() {
         }
 
         return false;
+    });
+    
+    ////////////////////////////////////////////////////////////////////
+    // See More
+    $('.see-more .fade-info-action a').on( "click", function(e) {
+        $(this).closest('.see-more').addClass('active');
+        e.preventDefault();
     });
 
 });

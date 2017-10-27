@@ -105,6 +105,8 @@
 			// Disclosure triangle
 			.icon-disclosure {
 				float: right;
+				position: relative;
+				top: p(7);
 				@include at;
 				@extend .at-arrows-down;
 			}
@@ -157,6 +159,9 @@
 	position: relative;
 	// Disclosure triangle
 	.icon-disclosure {
+		position: relative;
+		top: p(2);
+		left: p(5);
 		@include at;
 		@extend .at-arrows-down;
 	}

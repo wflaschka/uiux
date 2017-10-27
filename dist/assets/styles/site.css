@@ -17830,7 +17830,7 @@ h1.has-link, h2.has-link, h3.has-link, h4.has-link, h5.has-link, h6.has-link {
   padding-right: 5rem;
 }
 
-h1.has-link .see-more, h2.has-link .see-more, h3.has-link .see-more, h4.has-link .see-more, h5.has-link .see-more, h6.has-link .see-more {
+h1.has-link a, h2.has-link a, h3.has-link a, h4.has-link a, h5.has-link a, h6.has-link a {
   font-size: 0.8125rem;
   position: absolute;
   right: 0;
@@ -18119,6 +18119,8 @@ hr[documentation]:before {
 .navigation-dropdown ul li .icon-disclosure,
 .account-navigation-dropdown ul li .icon-disclosure {
   float: right;
+  position: relative;
+  top: 0.4375rem;
   font-family: "arttap" !important;
   font-style: normal !important;
   font-weight: normal !important;
@@ -18186,6 +18188,9 @@ hr[documentation]:before {
 }
 
 .account-navigation-trigger-hamburger .icon-disclosure {
+  position: relative;
+  top: 0.125rem;
+  left: 0.3125rem;
   font-family: "arttap" !important;
   font-style: normal !important;
   font-weight: normal !important;
@@ -20259,12 +20264,12 @@ form.is-search-form label.is-colorball-checkbox.is-color-eggshell input:checked 
   padding: 3.125rem !important;
 }
 
-.link-primary:link, h1.has-link .see-more:link, h2.has-link .see-more:link, h3.has-link .see-more:link, h4.has-link .see-more:link, h5.has-link .see-more:link, h6.has-link .see-more:link, .link-primary:visited, h1.has-link .see-more:visited, h2.has-link .see-more:visited, h3.has-link .see-more:visited, h4.has-link .see-more:visited, h5.has-link .see-more:visited, h6.has-link .see-more:visited {
+.link-primary:link, h1.has-link a:link, h2.has-link a:link, h3.has-link a:link, h4.has-link a:link, h5.has-link a:link, h6.has-link a:link, .link-primary:visited, h1.has-link a:visited, h2.has-link a:visited, h3.has-link a:visited, h4.has-link a:visited, h5.has-link a:visited, h6.has-link a:visited {
   color: #E09D00;
   text-decoration: none;
 }
 
-.link-primary:active, h1.has-link .see-more:active, h2.has-link .see-more:active, h3.has-link .see-more:active, h4.has-link .see-more:active, h5.has-link .see-more:active, h6.has-link .see-more:active, .link-primary:hover, h1.has-link .see-more:hover, h2.has-link .see-more:hover, h3.has-link .see-more:hover, h4.has-link .see-more:hover, h5.has-link .see-more:hover, h6.has-link .see-more:hover {
+.link-primary:active, h1.has-link a:active, h2.has-link a:active, h3.has-link a:active, h4.has-link a:active, h5.has-link a:active, h6.has-link a:active, .link-primary:hover, h1.has-link a:hover, h2.has-link a:hover, h3.has-link a:hover, h4.has-link a:hover, h5.has-link a:hover, h6.has-link a:hover {
   color: #f4ab00;
 }
 
@@ -24930,6 +24935,68 @@ select {
 
 .avatar .avatar-status.followed {
   background: blue;
+}
+
+.see-more .fade-info {
+  position: relative;
+  height: 18.75rem;
+  overflow: hidden;
+}
+
+.see-more .fade-info:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 75%;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 100%);
+}
+
+.see-more.active .fade-info {
+  height: auto;
+}
+
+.see-more.active .fade-info:after {
+  display: none;
+}
+
+.see-more.active .action {
+  display: none;
+}
+
+.see-more .action {
+  position: relative;
+  text-align: left;
+}
+
+.see-more .action:after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  background-color: #d9d9d9;
+}
+
+.see-more .action a {
+  position: relative;
+  z-index: 1;
+  font-size: 0.8125rem;
+  color: #8B8B8B;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.625rem 1.875rem;
+  border: 1px solid #d9d9d9;
+  background-color: #ffffff;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.see-more .action a:hover, .see-more .action a:focus {
+  color: #E09D00;
+  border-color: #E09D00;
 }
 
 /* Slider */

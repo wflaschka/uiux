@@ -126,7 +126,7 @@ h1, h2, h3, h4, h5, h6 {
     &.has-link {
         position: relative;
         padding-right: 5rem;
-        .see-more {
+        a {
             font-size: 0.8125rem;
             position: absolute;
             right: 0;
