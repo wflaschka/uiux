@@ -329,7 +329,7 @@
 
 <div id="basic" style="display:none;">
 	<a href="#" rel="modal:close" class="close-modal">
-		<i class="fa fa-close"></i>
+		<i class="at at-arrows-remove"></i>
 	</a>
 
 <div class="row">
@@ -366,7 +366,7 @@
 
             <div class="gallery-price">
                 <div class="gallery-price-discounted">$2,300.00 <small>USD</small></div>
-                <div class="gallery-price-regular">Reg. Gallery Price <s>$3,067.00</s> USD <i class="fa fa-question-circle gallery-info"></i></div>
+                <div class="gallery-price-regular">Reg. Gallery Price <s>$3,067.00</s> USD <i class="fa fa-question-circle gallery-info tooltip"><span class="text">tooltip text</span></i></div>
             </div>
 
             <div class="edition-number">
@@ -382,7 +382,7 @@
                 <div class="field">
                     <div class="control">
                         <div class="select is-fullwidth select2-wrapper">
-                            <select>
+                            <select class="select2">
                                 <option value="">1 / 25</option>
                                 <option value="AL">2 / 25</option>
                                 <option value="AK">3 / 25</option>
@@ -440,20 +440,28 @@
 
 
 <script type="text/javascript">
-	$.modal.defaults = {
-		closeExisting : true,      // Close existing modals. Set this to false if you need to stack multiple modal instances.
-		escapeClose   : true,      // Allows the user to close the modal by pressing `ESC`
-		clickClose    : true,      // Allows the user to close the modal by clicking the overlay
-		closeText     : '',        // Text content for the close <a> tag.
-		closeClass    : '',        // Add additional class(es) to the close <a> tag.
-		showClose     : true,      // Shows a (X) icon/link in the top-right corner
-		modalClass    : "modal",   // CSS class added to the element being displayed in the modal.
-		blockerClass  : "blocker", // CSS class added to the overlay (blocker).
-		spinnerHtml   : null,      // HTML appended to the default spinner during AJAX requests.
-		showSpinner   : true,      // Enable/disable the default spinner during AJAX requests.
-		fadeDuration  : 250,       // Number of milliseconds the fade transition takes (null means no transition)
-		fadeDelay     : 0.8        // Point during the overlay's fade-in that the modal begins to fade in (.5 = 50%, 1.5 = 150%, etc.)
-	};
+    defer(function () {
+
+    	$.modal.defaults = {
+    		closeExisting : true,      // Close existing modals. Set this to false if you need to stack multiple modal instances.
+    		escapeClose   : true,      // Allows the user to close the modal by pressing `ESC`
+    		clickClose    : true,      // Allows the user to close the modal by clicking the overlay
+    		closeText     : '',        // Text content for the close <a> tag.
+    		closeClass    : '',        // Add additional class(es) to the close <a> tag.
+    		showClose     : true,      // Shows a (X) icon/link in the top-right corner
+    		modalClass    : "modal",   // CSS class added to the element being displayed in the modal.
+    		blockerClass  : "blocker", // CSS class added to the overlay (blocker).
+    		spinnerHtml   : null,      // HTML appended to the default spinner during AJAX requests.
+    		showSpinner   : true,      // Enable/disable the default spinner during AJAX requests.
+    		fadeDuration  : 250,       // Number of milliseconds the fade transition takes (null means no transition)
+    		fadeDelay     : 0.8        // Point during the overlay's fade-in that the modal begins to fade in (.5 = 50%, 1.5 = 150%, etc.)
+    	};
+
+        $('#basic').on($.modal.OPEN, function(event, modal) {
+            $('select.select2').select2();
+        });
+
+    });
 </script>
 
 
