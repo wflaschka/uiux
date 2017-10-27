@@ -165,15 +165,22 @@ select { font-size: inherit; }
 .textarea,
 .select select,
 .select2-wrapper .select2-container .select2-selection {
-    min-height: 2.875rem;
     color: color(black);
     box-shadow: none;
     border-radius: 0px;
     border-color: $color-border;
 }
 
+.input:not(.is-small):not(.is-large):not(.is-medium),
+.textarea:not(.is-small):not(.is-large):not(.is-medium),
+.select select:not(.is-small):not(.is-large):not(.is-medium),
+.select2-wrapper .select2-container .select2-selection:not(.is-small):not(.is-large):not(.is-medium) {
+    min-height: 2.875rem;
+}
+
+
 // Select arrow position fix because of changing height match with prototype
-.select:not(.is-multiple)::after {
+.select:not(.is-multiple):not(.is-small):not(.is-large):not(.is-medium)::after {
     top: 1.4375rem;
 }
 

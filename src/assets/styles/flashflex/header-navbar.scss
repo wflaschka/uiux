@@ -17,7 +17,8 @@
 	.icon-hamburger {
 		@extend .fa;
 		&.active {
-			@extend .fa-times;
+			@include at;
+			@extend .at-arrows-remove;
 		}
 		@extend .fa-bars;
 	}
@@ -104,12 +105,14 @@
 			// Disclosure triangle
 			.icon-disclosure {
 				float: right;
-				@extend .fa;
-				@extend .fa-chevron-down;
+				position: relative;
+				top: p(7);
+				@include at;
+				@extend .at-arrows-down;
 			}
 			&.active .icon-disclosure {
-				@extend .fa;
-				@extend .fa-chevron-up;
+				@include at;
+				@extend .at-arrows-up;
 			}
 
 			// Disclosure subnavigation lists
@@ -156,21 +159,24 @@
 	position: relative;
 	// Disclosure triangle
 	.icon-disclosure {
-		@extend .fa;
-		@extend .fa-chevron-down;
-		&.active {
-			@extend .fa;
-			@extend .fa-chevron-up;
-		}
+		position: relative;
+		top: p(2);
+		left: p(5);
+		@include at;
+		@extend .at-arrows-down;
+	}
+	&.active .icon-disclosure {
+		@include at;
+		@extend .at-arrows-up;
 	}
 }
 
 
-.search-wrap--opened { display: none; }
+.search-wrap-opened { display: none; }
 .search-wrap {
 	&.active {
-		.search-wrap--opened { display: block; }
-		.search-wrap--closed { display: none; }
+		.search-wrap-opened { display: block; }
+		.search-wrap-closed { display: none; }
 	}
 }
 
@@ -209,7 +215,7 @@
 	transition: height linear .3s;
 	@include box_shadow(2);
 
-	.search--form {
+	.search-form {
 		width: 75%;
 		@include for-phone-only {
 			width: 90%;
@@ -221,16 +227,15 @@
 		transition: all linear .3s;
 	}
 
-	.search-input--wrap {
+	.search-input-wrap {
 		position: relative;
-		.fa {
+		.at {
 			color: #333;
 			position: absolute;
 			cursor: pointer;
-			top: -7px;
-			right: -10px;
-			padding: 0.625rem;
-			font-size: 1.8rem;
+			top: 0px;
+			right: 0px;
+			font-size: 1.3rem;
 			display: none;
 			&:hover {
 				color: color(primary);
@@ -238,11 +243,11 @@
 		}
 	}
 
-	.search--input {
+	.search-input {
 		@include search-input;
 	}
 
-	.search--links {
+	.search-links {
 		padding: 0px;
 		margin: 0px;
 		list-style: none;
