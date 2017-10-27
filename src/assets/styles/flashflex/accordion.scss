@@ -21,7 +21,7 @@
   			border-bottom: 1px solid $color-border;
 		}
 
-		.icon {
+		.at {
 			position: absolute;
 			right: 0;
 			top: 50%;
@@ -30,7 +30,7 @@
 		}
 
 		&.active {
-			.fa-plus:before { content: "\f068"; }
+			.at-arrows-plus:before { content: "\64"; }
 		}
 
 	}
@@ -49,7 +49,7 @@
 				align-items: center;	
 			}
 			.button {
-				min-height: 2rem;
+				min-height: 2rem !important;
 				margin-left: 1.2rem;
 			}
 		}

@@ -160,3 +160,16 @@
 }
 
 
+////////////////////////////////////////////////////////////////////
+// Px to Em Functions
+// Ref: https://css-tricks.com/snippets/sass/px-to-em-functions/
+// To easily use padding, margin, font sizes in pixel
+// how to use
+// .box { padding: p(20) }
+// result: .box { padding: 1.25rem; } which is equal to 20px
+//
+
+$browser-context: 16; // Default
+@function p($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}rem;
+}

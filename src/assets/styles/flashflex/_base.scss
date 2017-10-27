@@ -28,6 +28,7 @@
 	@import "colors.scss";
 	@import "fonts.scss";
 	@import "font-awesome.scss";
+	@import "font-arttap.scss";
 
 ////////////////////////////////////////////////////////////////////
 // LAYOUT, GRID, and RESPONSIVITY
@@ -143,6 +144,8 @@
 		$border-width: $unit-o !default;
 		$border-width-lg: $unit-h !default;
 		@import "avatars.scss";
+		@import "see-more.scss";
+		@import "tooltip.scss";
 
 
 // ////////////////////////////////////////////////////////////////////
