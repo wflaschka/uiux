@@ -17668,6 +17668,7 @@ img.contain, img.contained {
 }
 
 .modal a.close-modal {
+  text-decoration: none;
   position: absolute;
   top: 1.5rem;
   right: 0.5rem;
@@ -24997,6 +24998,43 @@ select {
 .see-more .action a:hover, .see-more .action a:focus {
   color: #E09D00;
   border-color: #E09D00;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .text {
+  visibility: hidden;
+  width: 7.5rem;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 0.375rem;
+  padding: 0.625rem 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 120%;
+  left: 50%;
+  margin-left: -3.75rem;
+  font-size: 0.8125rem;
+  line-height: 1rem;
+}
+
+.tooltip .text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -0.3125rem;
+  border-width: 0.3125rem;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.tooltip:hover .text {
+  visibility: visible;
 }
 
 /* Slider */
