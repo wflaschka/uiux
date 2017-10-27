@@ -20,6 +20,12 @@
     <!-- <script type="text/javascript" src="/assets/scripts/semantic-ui/form.js"></script> -->
     <!-- <script type="text/javascript" src="/assets/scripts/semantic-ui/transition.js"></script> -->
 
+    <link href="/assets/images/favicon.png" rel="icon" type="image/x-icon" />
+    <!--
+        rel="mask-icon" to use icon for safari
+        more info at http://caniuse.com/#search=favicon
+    -->
+    <link href="/assets/images/favicon.svg" color="#DF9E26">
 </head>
 <body id="prototype-page">
 
@@ -74,12 +80,12 @@
                     </div>
                     <div class="search-wrap center middle aligned column col-xs-4">
                         <div class="box">
-                            <div class="search-wrap--closed">
+                            <div class="search-wrap-closed">
                                 <i class="fa fa-search"></i>
                                 <span class="hide-on-sm-down">Search</span>
                             </div>
-                            <div class="search-wrap--opened">
-                                <i class="fa fa-close"></i>
+                            <div class="search-wrap-opened">
+                                <i class="at-arrows-remove"></i>
                                 <span class="hide-on-sm-down">Close</span>
                             </div>
                         </div>
@@ -130,16 +136,16 @@
 </header>
 
 <div class="search">
-    <form class="search--form" action="">
-        <div class="search-input--wrap">
-            <input class="search--input" name="search" type="search" placeholder="Search ArtTap.com" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
-            <span class="fa fa-chevron-right search--submit"></span>
+    <form class="search-form" action="">
+        <div class="search-input-wrap">
+            <input class="search-input" name="search" type="search" placeholder="Search ArtTap.com" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+            <span class="at at-arrows-right search-submit"></span>
         </div>
 
 
         <div class="row">
             <div class="col-xs-6 col-sm-4 col-md-3 col-xl-4">
-                <ul class="search--links">
+                <ul class="search-links">
                     <li>Recent Searches</li>
                     <li><a href="#">Painting</a></li>
                     <li><a href="#">Photography</a></li>
@@ -148,7 +154,7 @@
                 </ul>
             </div>
             <div class="col-xs-6 col-sm-4 col-md-3 col-xl-4">
-                <ul class="search--links">
+                <ul class="search-links">
                     <li>Recent Searches</li>
                     <li><a href="#">Painting</a></li>
                     <li><a href="#">Photography</a></li>
@@ -213,20 +219,20 @@
             function searchInputChecker(){
                 // When typing in text fields check if value is valid or not
                 // $( '.search--input' ).blur( function() { checkSearchInputValue(); });
-                $( '.search--input' ).keyup( function() { checkSearchInputValue(); });
+                $( '.search-input' ).keyup( function() { checkSearchInputValue(); });
             }
             function checkSearchInputValue(){
                 // If search input has value, show arrow else hide
-                if ( ( !$( '.search--input').val() == '') ) {
-                    $('.search--submit').show();
+                if ( ( !$( '.search-input').val() == '') ) {
+                    $('.search-submit').show();
                 } else {
-                    $('.search--submit').hide();
+                    $('.search-submit').hide();
                 }
             }
             searchInputChecker();
 
             // submit search form on click right arrow
-            $('.search--submit').on( "click", function(e) {
+            $('.search-submit').on( "click", function(e) {
                 $(this).closest('form').submit();
                 e.preventDefault();
             });
@@ -504,10 +510,10 @@
                 <a href="#">Copyright</a>
             </div>
             <div class="col-xs-14 col-sm-6 social-links">
-                <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-pinterest-p"></i></a>
-                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="at at-facebook"></i></a>
+                <a href="#"><i class="at at-twitter"></i></a>
+                <a href="#"><i class="at at-pinterest"></i></a>
+                <a href="#"><i class="at at-instagram"></i></a>
                 <a href="#"><i class="fa fa-linkedin"></i></a>
             </div>
             <div class="col-xs-14 col-sm-4 copyright-text">
