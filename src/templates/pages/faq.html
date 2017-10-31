@@ -1,5 +1,7 @@
 {{> header-logged-in }}
 
+<div class="page-faq page has-sidebar">
+
 <div class="container-fluid nopad-l">
     <div class="row">
         <aside class="sidebar col-sm-3 pl0">
@@ -15,13 +17,18 @@
             </ul>
         </aside>
         <div class="col-sm-11">
-            <div class="page-faq">
 
-                <div class="title">
-                    <h2 class="has-border">FAQs</h2>
-                    <div class="search-support">
-                        <i class="fa fa-search icon"></i>
-                        <input class="input" type="text" placeholder="Search Support">
+            <div class="main-content">
+
+                <div class="page-title">
+                    <h1 class="has-border">FAQs</h1>
+                    <div class="with-page-title">
+                        <div class="control has-icons-left">
+                            <input class="input" type="text" placeholder="Search Support">
+                            <span class="icon is-small is-left">
+                                <i class="fa fa-search"></i>
+                            </span>
+                        </div>
                     </div>
                 </div>
 
@@ -106,11 +113,13 @@
                 <h4 class="mt50">Still need our help?</h4>
                 <p>Contact us and we’ll get back to you as soon as possible.</p>
                 <button class="button min-w25">Contact Us</button>
+            </div><!-- .main-content -->
 
-            </div><!-- .page-faq -->
         </div>
     </div>
 </div>
+
+</div><!-- .page-faq -->
 
 
 {{> footer-standard }}

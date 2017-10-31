@@ -1,0 +1,37 @@
+///////////////////////////////////////////////////////////////////
+// Common repeative styles for pages
+
+.page {
+
+	&.has-sidebar {
+		.main-content {
+			padding: p(50);
+		}
+	}
+
+	.main-content {
+
+		.page-title {
+	    	position: relative;
+	    	.link-back {
+	    		@extend .link-gray;
+	    		font-size: p(13);
+				top: -30px;
+				position: absolute;
+	    	}
+		    h1 {
+		    	margin: 0;
+		    	font-size: p(48);
+		    }
+		    .with-page-title {
+		    	// Element with page title positioned top right. e.g: button or search box
+				position: absolute;
+				right: 0px;
+				top: 0px;
+				min-width: 20rem;
+		    }
+	    }
+	    
+	}
+
+}

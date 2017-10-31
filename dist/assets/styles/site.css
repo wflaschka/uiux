@@ -18631,6 +18631,167 @@ footer .copyright-text {
   border-bottom: 1px solid #d9d9d9;
 }
 
+.inbox-actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5625rem 0;
+}
+
+.inbox-actions .col-left,
+.inbox-actions .col-right {
+  display: flex;
+}
+
+.inbox-actions .messages-search {
+  min-width: 20rem;
+}
+
+.inbox .message {
+  background-color: #f7f7f7;
+  display: flex;
+  padding: 0.9375rem 0;
+  border-bottom: 1px solid #d9d9d9;
+  justify-content: space-between;
+}
+
+.inbox .message.new {
+  background-color: #fff;
+}
+
+.inbox .message:first-child {
+  border-top: 1px solid #d9d9d9;
+}
+
+.inbox .message > div {
+  display: flex;
+}
+
+.inbox .message .user-wrap {
+  width: 21.875rem;
+}
+
+.inbox .message .user-wrap .checkbox-wrap {
+  padding-left: 0.6875rem;
+  position: relative;
+  top: -5px;
+}
+
+.inbox .message .user-wrap .user {
+  max-width: 11.25rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 1.25rem;
+  font-weight: 500;
+}
+
+.inbox .message .user-wrap .online-presence {
+  display: inline-block;
+  border-radius: 50%;
+  height: .6rem;
+  width: .6rem;
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.inbox .message .user-wrap .online-presence.online {
+  background: #BCCE38;
+}
+
+.inbox .message .user-wrap .online-presence.busy {
+  background: #D92F1D;
+}
+
+.inbox .message .user-wrap .online-presence.away {
+  background: #F9922C;
+}
+
+.inbox .message .subject-wrap {
+  flex: 1 100%;
+  max-width: 700px;
+}
+
+.inbox .message .subject-wrap .subject {
+  padding-right: 0.625rem;
+  font-weight: 500;
+  max-width: 25rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.inbox .message .subject-wrap .message-body {
+  max-width: 25rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.inbox .message .date {
+  padding-left: 1.25rem;
+  padding-right: 0.3125rem;
+  width: 160px;
+  max-width: 11.25rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  justify-content: flex-end;
+}
+
+.inbox .message .date .at {
+  font-size: 0.6rem;
+  transform: translateY(7px);
+  margin-left: 5px;
+}
+
+.inbox-message {
+  margin: 30px 0;
+}
+
+.inbox-message .message {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.inbox-message .message.reply {
+  border-bottom: none;
+  display: none;
+}
+
+.inbox-message .message.reply .button-send {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.inbox-message .message.reply .button-send a {
+  min-width: 12.5rem;
+  margin-top: 30px;
+}
+
+.inbox-message .message-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.inbox-message .message-header .user {
+  display: flex;
+  align-items: center;
+}
+
+.inbox-message .message-header .user .user-info {
+  padding: 0px 20px;
+}
+
+.inbox-message .message-header .actions {
+  display: flex;
+  align-items: center;
+}
+
+.inbox-message .message-header .actions .button-reply {
+  min-width: 9.375rem;
+}
+
 form.is-search-form {
   border: 1px dotted #8B8B8B;
   /*! nouislider - 10.0.0 - 2017-05-28 14:52:48 */
@@ -19781,6 +19942,32 @@ form.is-search-form label.is-colorball-checkbox.is-color-eggshell input:checked 
   border-color: #f3d88a;
 }
 
+.page.has-sidebar .main-content {
+  padding: 3.125rem;
+}
+
+.page .main-content .page-title {
+  position: relative;
+}
+
+.page .main-content .page-title .link-back {
+  font-size: 0.8125rem;
+  top: -30px;
+  position: absolute;
+}
+
+.page .main-content .page-title h1 {
+  margin: 0;
+  font-size: 3rem;
+}
+
+.page .main-content .page-title .with-page-title {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  min-width: 20rem;
+}
+
 .checkout-page .step {
   margin: 0;
   padding: 0;
@@ -19970,36 +20157,6 @@ form.is-search-form label.is-colorball-checkbox.is-color-eggshell input:checked 
   margin-top: 0.625rem;
 }
 
-.page-faq {
-  padding: 3.125rem;
-}
-
-.page-faq .title {
-  position: relative;
-}
-
-.page-faq .title h2 {
-  margin: 0;
-}
-
-.page-faq .search-support {
-  position: absolute;
-  right: 0px;
-  top: 0px;
-  min-width: 20rem;
-}
-
-.page-faq .search-support .icon {
-  position: absolute;
-  left: 0.5rem;
-  top: 0.625rem;
-  z-index: 1;
-}
-
-.page-faq .search-support input {
-  padding-left: 2.2rem;
-}
-
 .page-all-support {
   padding: 3.125rem 0;
 }
@@ -20023,6 +20180,10 @@ form.is-search-form label.is-colorball-checkbox.is-color-eggshell input:checked 
 
 .page-all-support .input-search:focus {
   outline: none;
+}
+
+.page-artist-inbox-message .main-content {
+  max-width: 43.75rem;
 }
 
 .pt0 {
@@ -20274,21 +20435,21 @@ form.is-search-form label.is-colorball-checkbox.is-color-eggshell input:checked 
   color: #f4ab00;
 }
 
-.link-black:link, footer a:link, .sidebar ul li.active a:link, .link-black:visited, footer a:visited, .sidebar ul li.active a:visited {
+.link-black:link, footer a:link, .sidebar ul li.active a:link, .inbox .message .subject-wrap a:link, .link-black:visited, footer a:visited, .sidebar ul li.active a:visited, .inbox .message .subject-wrap a:visited {
   color: #141414;
   text-decoration: none;
 }
 
-.link-black:active, footer a:active, .sidebar ul li.active a:active, .link-black:hover, footer a:hover, .sidebar ul li.active a:hover {
+.link-black:active, footer a:active, .sidebar ul li.active a:active, .inbox .message .subject-wrap a:active, .link-black:hover, footer a:hover, .sidebar ul li.active a:hover, .inbox .message .subject-wrap a:hover {
   color: #3a3a3a;
 }
 
-.link-sidebar:link, .sidebar ul li a:link, .link-sidebar:visited, .sidebar ul li a:visited {
+.link-gray:link, .sidebar ul li a:link, .page .main-content .page-title .link-back:link, .link-gray:visited, .sidebar ul li a:visited, .page .main-content .page-title .link-back:visited {
   color: #8B8B8B;
   text-decoration: none;
 }
 
-.link-sidebar:active, .sidebar ul li a:active, .link-sidebar:hover, .sidebar ul li a:hover {
+.link-gray:active, .sidebar ul li a:active, .page .main-content .page-title .link-back:active, .link-gray:hover, .sidebar ul li a:hover, .page .main-content .page-title .link-back:hover {
   color: #b1b1b1;
 }
 
@@ -22507,12 +22668,31 @@ select {
   min-height: 2.875rem;
 }
 
+.control.has-icons-left .input:not(.is-small):not(.is-large):not(.is-medium) ~ .icon, .control.has-icons-left .select2-container .select2-dropdown .select2-search .select2-search__field:not(.is-small):not(.is-large):not(.is-medium) ~ .icon, .select2-container .select2-dropdown .select2-search .control.has-icons-left .select2-search__field:not(.is-small):not(.is-large):not(.is-medium) ~ .icon,
+.control.has-icons-left .select:not(.is-small):not(.is-large):not(.is-medium) ~ .icon,
+.control.has-icons-right .input:not(.is-small):not(.is-large):not(.is-medium) ~ .icon,
+.control.has-icons-right .select2-container .select2-dropdown .select2-search .select2-search__field:not(.is-small):not(.is-large):not(.is-medium) ~ .icon, .select2-container .select2-dropdown .select2-search
+.control.has-icons-right .select2-search__field:not(.is-small):not(.is-large):not(.is-medium) ~ .icon,
+.control.has-icons-right .select:not(.is-small):not(.is-large):not(.is-medium) ~ .icon {
+  top: 5px;
+}
+
 .select:not(.is-multiple):not(.is-small):not(.is-large):not(.is-medium)::after {
   top: 1.4375rem;
 }
 
 .ql-editor {
   min-height: 12.5rem;
+}
+
+.radio-check-square {
+  padding: 0.525rem 0.625rem 0.325rem;
+  border: 1px solid #d9d9d9;
+  min-height: 2.875rem;
+}
+
+.radio-check-square.empty {
+  padding: 0.125rem 0.625rem 0.625rem;
 }
 
 .heart .heart-number {

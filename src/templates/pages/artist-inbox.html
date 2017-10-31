@@ -1,0 +1,266 @@
+{{> header-logged-in }}
+
+<div id="basic" style="display:none;">
+    <a href="#" rel="modal:close" class="close-modal">
+        <i class="at at-arrows-remove"></i>
+    </a>
+    <h1>Send a Message</h1>
+
+    <div class="field">
+        <label class="label">To</label>
+        <div class="control">
+            <input class="input" type="text" placeholder="" value="">
+        </div>
+    </div>
+
+    <div class="field">
+        <label class="label">Subject <i><small class="color-gray fw-normal">Optional</small></i></label>
+        <div class="control">
+            <input class="input" type="text" placeholder="" value="">
+        </div>
+    </div>
+
+    <div class="field">
+        <label class="label">Message</label>
+        <div class="artwork-description-editor">
+            <p><br></p>
+        </div>
+    </div>
+
+    <a href="#" class="button is-black is-fullwidth mb20">Send</a>
+</div><!-- #basic modal -->
+
+<div class="page-artist-inbox page has-sidebar">
+
+<div class="container-fluid nopad-l">
+    <div class="row">
+        <aside class="sidebar col-sm-3 pl0">
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Artist Profile</a></li>
+                <li class="active"><a href="#">Messages</a></li>
+                <li><a href="#">Orders</a></li>
+                <li><a href="#">Payment Options</a></li>
+                <li><a href="#">Shipping</a></li>
+                <li><a href="#">Collections</a></li>
+                <li><a href="#">Hearts</a></li>
+                <li><a href="#">Art Match</a></li>
+                <li><a href="#">Follows</a></li>
+                <li><a href="#">Hearts</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Sign Out</a></li>
+            </ul>
+        </aside>
+        <div class="col-sm-11">
+
+            <div class="main-content">
+
+                <div class="page-title">
+                    <h1 class="has-border">Messages</h1>
+                    <a href="#basic" rel="modal:open" class="button with-page-title">New Message</a>
+                </div>
+
+                <div class="inbox-actions">
+                    <div class="col-left">
+                        <div class="control mr10">
+                            <div class="radio-check-square empty">
+                                <label class="checkbox" for="input-3">
+                                    <input type="checkbox" id="input-3" name="input-3">
+                                    <span></span>
+                                </label>
+                            </div>
+                        </div>
+                        <button class="button is-gray is-outlined mr10"><i class="fa fa-trash"></i></button>
+                        <div class="control">
+                            <div class="select">
+                                <select>
+                                    <option>All Messages</option>
+                                    <option>With options</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-right">
+                        <div class="control has-icons-left">
+                            <input class="input messages-search" type="text" placeholder="Search Support">
+                            <span class="icon is-small is-left">
+                                <i class="fa fa-search"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div><!-- .inbox-actions -->
+
+                <div class="inbox">
+                    <div class="message new">
+                        <div class="user-wrap">
+                            <div class="checkbox-wrap">
+                                <label class="checkbox">
+                                    <input type="checkbox">
+                                    <span></span>
+                                </label>
+                            </div>
+                            <div class="user">Alexander Kwok</div>
+                            <div class="online-presence away"></div>
+                        </div>
+                        <div class="subject-wrap">
+                            <div class="subject"><a href="artist-inbox-message.html">Subject check writing to check writing Subject</a></div>
+                            <div class="message-body"><a href="artist-inbox-message.html">hello. I'm writing to check writing to check writing to check writing to check writing to check writing to check</a></div>
+                        </div>
+                        <div class="date">
+                            Wednesday
+                            <i class="at at-arrows-right"></i>
+                        </div>
+                    </div>
+
+                    <div class="message new">
+                        <div class="user-wrap">
+                            <div class="checkbox-wrap">
+                                <label class="checkbox">
+                                    <input type="checkbox">
+                                    <span></span>
+                                </label>
+                            </div>
+                            <div class="user">Alexander Kwok</div>
+                            <div class="online-presence online"></div>
+                        </div>
+                        <div class="subject-wrap">
+                            <div class="subject">Subject check writing to check writing Subject check writing Subject</div>
+                            <div class="message-body">hello. I'm writing to</div>
+                        </div>
+                        <div class="date">
+                            Tuesday
+                            <i class="at at-arrows-right"></i>
+                        </div>
+                    </div>
+
+                    <div class="message">
+                        <div class="user-wrap">
+                            <div class="checkbox-wrap">
+                                <label class="checkbox">
+                                    <input type="checkbox">
+                                    <span></span>
+                                </label>
+                            </div>
+                            <div class="user">Alexander Kwok</div>
+                            <div class="online-presence busy"></div>
+                        </div>
+                        <div class="subject-wrap">
+                            <div class="subject">Subject </div>
+                            <div class="message-body">hello. I'm writing to check writing to check writing to check writing to check writing to check writing to check</div>
+                        </div>
+                        <div class="date">
+                            Monday
+                            <i class="at at-arrows-right"></i>
+                        </div>
+                    </div>
+
+                    <div class="message">
+                        <div class="user-wrap">
+                            <div class="checkbox-wrap">
+                                <label class="checkbox">
+                                    <input type="checkbox">
+                                    <span></span>
+                                </label>
+                            </div>
+                            <div class="user">Alexander Kwok</div>
+                            <div class="online-presence away"></div>
+                        </div>
+                        <div class="subject-wrap">
+                            <div class="subject">Subject </div>
+                            <div class="message-body">hello. I'm writing to check writing to check writing to check writing to check writing to check writing to check</div>
+                        </div>
+                        <div class="date">
+                            July 28
+                            <i class="at at-arrows-right"></i>
+                        </div>
+                    </div>
+
+                    <div class="message">
+                        <div class="user-wrap">
+                            <div class="checkbox-wrap">
+                                <label class="checkbox">
+                                    <input type="checkbox">
+                                    <span></span>
+                                </label>
+                            </div>
+                            <div class="user">Alexander Kwok</div>
+                            <div class="online-presence away"></div>
+                        </div>
+                        <div class="subject-wrap">
+                            <div class="subject">Subject </div>
+                            <div class="message-body">hello. I'm writing to check writing to check writing to check writing to check writing to check writing to check</div>
+                        </div>
+                        <div class="date">
+                            June 19
+                            <i class="at at-arrows-right"></i>
+                        </div>
+                    </div>
+
+                    <div class="message">
+                        <div class="user-wrap">
+                            <div class="checkbox-wrap">
+                                <label class="checkbox">
+                                    <input type="checkbox">
+                                    <span></span>
+                                </label>
+                            </div>
+                            <div class="user">Alexander Kwok</div>
+                            <div class="online-presence away"></div>
+                        </div>
+                        <div class="subject-wrap">
+                            <div class="subject">Subject </div>
+                            <div class="message-body">hello. I'm writing to check writing to check writing to check writing to check writing to check writing to check</div>
+                        </div>
+                        <div class="date">
+                            April 21
+                            <i class="at at-arrows-right"></i>
+                        </div>
+                    </div>
+                </div><!-- .inbox -->
+
+            </div><!-- .main-content -->
+
+        </div>
+    </div>
+</div>
+
+</div><!-- .page-faq -->
+
+<script>
+    defer(function () {
+
+        $.modal.defaults = {
+            closeExisting : true,      // Close existing modals. Set this to false if you need to stack multiple modal instances.
+            escapeClose   : true,      // Allows the user to close the modal by pressing `ESC`
+            clickClose    : true,      // Allows the user to close the modal by clicking the overlay
+            closeText     : '',        // Text content for the close <a> tag.
+            closeClass    : '',        // Add additional class(es) to the close <a> tag.
+            showClose     : true,      // Shows a (X) icon/link in the top-right corner
+            modalClass    : "modal small",   // CSS class added to the element being displayed in the modal.
+            blockerClass  : "blocker", // CSS class added to the overlay (blocker).
+            spinnerHtml   : null,      // HTML appended to the default spinner during AJAX requests.
+            showSpinner   : true,      // Enable/disable the default spinner during AJAX requests.
+            fadeDuration  : 250,       // Number of milliseconds the fade transition takes (null means no transition)
+            fadeDelay     : 0.8        // Point during the overlay's fade-in that the modal begins to fade in (.5 = 50%, 1.5 = 150%, etc.)
+        };
+
+        $('#basic').on($.modal.OPEN, function(event, modal) {
+            $('select.select2').select2();
+        });
+
+        var toolbarOptions = [
+            ['bold', 'italic'],        // toggled buttons
+        ];
+
+        var editor = new Quill('.artwork-description-editor', {
+            modules: {
+                toolbar: toolbarOptions
+            },
+            theme: 'snow'
+        });
+
+    });
+</script>
+
+{{> footer-standard }}
