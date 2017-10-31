@@ -137,9 +137,9 @@ gulp.task('sass', function () {
 
 	return gulp
 		.src(paths.sass)
-//		.pipe(sourcemaps.init())
+		.pipe(sourcemaps.init())
 		.pipe(sass(sassOptions).on('error', sass.logError))
-//		.pipe(sourcemaps.write('/maps'))
+		.pipe(sourcemaps.write('/maps'))
 		.pipe(gulp.dest(buildTargets.styles))
 		.pipe(sassdoc(sassdocOptions))
 		.resume();
@@ -197,9 +197,9 @@ gulp.task('less', function() {
 // gulp-concat documentation: https://www.npmjs.com/package/gulp-concat
 gulp.task('materializeJs', function() {
 	return gulp.src(paths.materializeJs)
-//		.pipe(sourcemaps.init())
+		.pipe(sourcemaps.init())
 			.pipe(concat('materialize.js'))
-//		.pipe(sourcemaps.write())
+		.pipe(sourcemaps.write())
 		.pipe(gulp.dest(buildTargets.scripts));
 });
 
