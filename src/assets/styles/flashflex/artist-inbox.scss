@@ -1,0 +1,96 @@
+.inbox-actions {
+    display: flex;
+    justify-content: space-between;
+    padding: p(25) 0;
+
+    .col-left,
+    .col-right {
+    	display: flex;
+    }
+
+    .messages-search {
+    	min-width: 20rem;
+    }
+}
+
+.inbox {
+	.message {
+		&.new { background-color: #fff; }
+		background-color: #f7f7f7;
+		display: flex;
+		padding: p(15) 0;
+		border-bottom: 1px solid $color-border;
+		justify-content: space-between;
+		&:first-child {
+			border-top: 1px solid $color-border;
+		}
+
+		> div {
+			display: flex;
+		}
+
+		.user-wrap {
+			width: p(350);
+			.checkbox-wrap {
+				padding-left: p(11);
+				position: relative;
+				top: -5px;
+			}
+			.user {
+				@include truncate(p(180));
+				padding-left: p(20);
+				font-weight: $weight-semibold;
+			}
+			.online-presence {
+				display: inline-block;
+				border-radius: 50%;
+				height: .6rem;
+				width: .6rem;
+				margin-left: p(8);
+				margin-top: p(8);
+
+		        &.online {
+		            background: #BCCE38;
+		        }
+
+		        &.busy {
+		            background: #D92F1D;
+		        }
+
+		        &.away {
+		            background: #F9922C;
+		        }
+			}
+		}
+
+		.subject-wrap {
+			flex: 1 100%;
+			max-width: 700px;
+			a {
+				@extend .link-black;
+			}
+			.subject {
+				padding-right: p(10);
+				font-weight: $weight-semibold;
+				@include truncate(p(400));
+			}
+			.message-body {
+				@include truncate(p(400));
+			}
+		}
+
+		.date {
+			padding-left: p(20);
+			padding-right: p(5);
+			width: 160px;
+			@include truncate(p(180));
+			justify-content: flex-end;
+			.at {
+				font-size: 0.6rem;
+				transform: translateY(7px);
+				margin-left: 5px;
+			}
+		}
+
+	}// .message
+}// .inbox
