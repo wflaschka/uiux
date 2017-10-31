@@ -169,14 +169,21 @@ select { font-size: inherit; }
     box-shadow: none;
     border-radius: 0px;
     border-color: $color-border;
+	&:not(.is-small):not(.is-large):not(.is-medium) {
+		min-height: 2.875rem;
+	}
 }
 
-.input:not(.is-small):not(.is-large):not(.is-medium),
-.textarea:not(.is-small):not(.is-large):not(.is-medium),
-.select select:not(.is-small):not(.is-large):not(.is-medium),
-.select2-wrapper .select2-container .select2-selection:not(.is-small):not(.is-large):not(.is-medium) {
-    min-height: 2.875rem;
+.control.has-icons-left .input,
+.control.has-icons-left .select,
+.control.has-icons-right .input,
+.control.has-icons-right .select {
+	&:not(.is-small):not(.is-large):not(.is-medium) ~ .icon {
+		// font-size: 1.5rem;
+		top: 5px;	
+	}
 }
+
 
 
 // Select arrow position fix because of changing height match with prototype
@@ -184,5 +191,15 @@ select { font-size: inherit; }
     top: 1.4375rem;
 }
 
-// rich text editor
+// Rich text editor
 .ql-editor { min-height: 12.5rem; }
+
+// Radio, Check with button style, used in messages/inbox
+.radio-check-square {
+    padding: 0.525rem 0.625rem 0.325rem;
+    border: 1px solid $color-border;
+    min-height: 2.875rem;
+    &.empty {
+    	padding: p(2) p(10) p(10);
+    }
+}

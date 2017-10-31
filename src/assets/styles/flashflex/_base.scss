@@ -72,16 +72,20 @@
 		@import "sidebar.scss";
 		@import "card.scss";
 		@import "accordion.scss";
+		@import "artist-inbox.scss";
+		@import "artist-inbox-message.scss";
 		// @import "card-row.scss";     // TODO
 		@import "form-search/_index.scss";
 
 	////////////////////////////////////////////////////////////////////
 	// Page Specific
+		@import "pages/pages.scss";
 		@import "pages/checkout.scss";
 		@import "pages/apply-artist.scss";
 		@import "pages/product.scss";
 		@import "pages/faq.scss";
 		@import "pages/all-support.scss";
+		@import "pages/artist-inbox-message.scss";
 
 
 	////////////////////////////////////////////////////////////////////
