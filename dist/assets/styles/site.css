@@ -18792,6 +18792,37 @@ footer .copyright-text {
   min-width: 9.375rem;
 }
 
+.orders-block {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f7f7f7;
+  border: 1px solid #f7f7f7;
+  padding: 0.9375rem;
+  font-weight: 500;
+  margin-bottom: 1.875rem;
+}
+
+.orders-block.is-cancel {
+  border-color: #f00;
+  background-color: #FBEEEC;
+}
+
+.orders-block .user {
+  display: flex;
+}
+
+.orders-block .user .info {
+  padding-left: 0.625rem;
+}
+
+.orders-block .total {
+  text-align: right;
+}
+
+.orders-block .total .detail {
+  font-weight: normal;
+}
+
 form.is-search-form {
   border: 1px dotted #8B8B8B;
   /*! nouislider - 10.0.0 - 2017-05-28 14:52:48 */
@@ -20493,6 +20524,10 @@ form.is-search-form label.is-colorball-checkbox.is-color-eggshell input:checked 
   font-weight: 400 !important;
 }
 
+.fw-sbold {
+  font-weight: 500 !important;
+}
+
 .fw-bold {
   font-weight: 700 !important;
 }
@@ -20511,6 +20546,10 @@ form.is-search-form label.is-colorball-checkbox.is-color-eggshell input:checked 
 
 .text-gray {
   color: #8B8B8B !important;
+}
+
+.text-muted {
+  color: #bbb !important;
 }
 
 .min-w25 {
@@ -26692,3 +26731,5 @@ body#prototype-index-page a:not(.logo):hover::after {
 body#prototype-index-page a:not(.logo):not([href]) {
   border-style: dashed;
 }
+
+/*# sourceMappingURL=maps/site.css.map */
