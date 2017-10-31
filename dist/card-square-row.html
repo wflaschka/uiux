@@ -45,14 +45,14 @@
 	<h3 documentation>With right fade</h3>
 	<div class="row-fade">
 		<div class="row card-row">
-				
 				<div class="card square">
 					<div class="image" style="background-image: url('/assets/images/artwork/art-1.jpg');">
 						<img src="/assets/images/artwork/art-1.jpg">
 					</div>
 					<div class="content">
-						<div class="hearts">
-							<i class="fa fa-heart-o"></i>
+						<div class="heart">
+							<!-- <span class="heart-number">55</span> -->
+							<i class="icon fa fa-heart"></i>
 						</div>
 						<div class="artist">
 							Camille Oudinot
@@ -62,17 +62,37 @@
 						</div>
 						<div class="price">
 							$930
+							<span class="currency"><s>$930</s></span>
 						</div>
 					</div>
 				</div>
 				
+					<script type="text/javascript">
+						$( document ).ready(function() {
+							$('.heart').click(function(){
+								$(this).toggleClass( "is-hearted" );
+								$(this).toggleClass( "is-being-clicked" );
+								setTimeout(function(){
+									$('.heart').removeClass("is-being-clicked");
+								}, 750);
+				
+								// Toggle text just for visuals
+								if ($(this).hasClass("is-hearted")) {
+									$(this).find('.heart-number').html("63");
+								} else {
+									$(this).find('.heart-number').html("62");
+								}
+							});
+						});
+					</script>
 				<div class="card square">
 					<div class="image" style="background-image: url('/assets/images/artwork/art-narrow-1.jpg');">
 						<img src="/assets/images/artwork/art-narrow-1.jpg">
 					</div>
 					<div class="content">
-						<div class="hearts">
-							<i class="fa fa-heart-o"></i>
+						<div class="heart">
+							<!-- <span class="heart-number">23</span> -->
+							<i class="icon fa fa-heart"></i>
 						</div>
 						<div class="artist">
 							Sethlan Semelon
@@ -82,6 +102,7 @@
 						</div>
 						<div class="price">
 							$1930
+							<span class="currency"><s>$1930</s></span>
 						</div>
 					</div>
 				</div>
@@ -91,8 +112,9 @@
 						<img src="/assets/images/artwork/art-wide-1.jpg">
 					</div>
 					<div class="content">
-						<div class="hearts">
-							<i class="fa fa-heart-o"></i>
+						<div class="heart">
+							<!-- <span class="heart-number">11</span> -->
+							<i class="icon fa fa-heart"></i>
 						</div>
 						<div class="artist">
 							Nan Park
@@ -102,6 +124,7 @@
 						</div>
 						<div class="price">
 							$450
+							<span class="currency"><s>$450</s></span>
 						</div>
 					</div>
 				</div>
@@ -111,8 +134,9 @@
 						<img src="/assets/images/artwork/art-3.jpg">
 					</div>
 					<div class="content">
-						<div class="hearts">
-							<i class="fa fa-heart-o"></i>
+						<div class="heart">
+							<!-- <span class="heart-number">123</span> -->
+							<i class="icon fa fa-heart"></i>
 						</div>
 						<div class="artist">
 							Jane Do
@@ -122,6 +146,7 @@
 						</div>
 						<div class="price">
 							$633
+							<span class="currency"><s>$633</s></span>
 						</div>
 					</div>
 				</div>
@@ -131,8 +156,9 @@
 						<img src="/assets/images/artwork/art-4.jpg">
 					</div>
 					<div class="content">
-						<div class="hearts">
-							<i class="fa fa-heart-o"></i>
+						<div class="heart">
+							<!-- <span class="heart-number">61</span> -->
+							<i class="icon fa fa-heart"></i>
 						</div>
 						<div class="artist">
 							Jephesandra Tawarna
@@ -142,6 +168,7 @@
 						</div>
 						<div class="price">
 							$1024
+							<span class="currency"><s>$1024</s></span>
 						</div>
 					</div>
 				</div>
@@ -151,8 +178,9 @@
 						<img src="/assets/images/artwork/art-5.jpg">
 					</div>
 					<div class="content">
-						<div class="hearts">
-							<i class="fa fa-heart-o"></i>
+						<div class="heart">
+							<!-- <span class="heart-number">31</span> -->
+							<i class="icon fa fa-heart"></i>
 						</div>
 						<div class="artist">
 							Jimothy St. Creus de la Mare
@@ -162,6 +190,7 @@
 						</div>
 						<div class="price">
 							$1930
+							<span class="currency"><s>$1930</s></span>
 						</div>
 					</div>
 				</div>
@@ -171,8 +200,9 @@
 						<img src="/assets/images/artwork/art-6.jpg">
 					</div>
 					<div class="content">
-						<div class="hearts">
-							<i class="fa fa-heart-o"></i>
+						<div class="heart">
+							<!-- <span class="heart-number">22</span> -->
+							<i class="icon fa fa-heart"></i>
 						</div>
 						<div class="artist">
 							Caulie Dempsei Alexandrian
@@ -182,6 +212,7 @@
 						</div>
 						<div class="price">
 							$2450
+							<span class="currency"><s>$2450</s></span>
 						</div>
 					</div>
 				</div>
@@ -191,8 +222,9 @@
 						<img src="/assets/images/artwork/art-2.jpg">
 					</div>
 					<div class="content">
-						<div class="hearts">
-							<i class="fa fa-heart-o"></i>
+						<div class="heart">
+							<!-- <span class="heart-number">1</span> -->
+							<i class="icon fa fa-heart"></i>
 						</div>
 						<div class="artist">
 							Amy Yu
@@ -202,9 +234,11 @@
 						</div>
 						<div class="price">
 							$4430
+							<span class="currency"><s>$4430</s></span>
 						</div>
 					</div>
 				</div>
+				
 			<div class="fader"></div>
 		</div>
 	</div>
@@ -212,14 +246,14 @@
 	<h3 documentation>With fade on both sides</h3>
 	<div class="row-fade right left">
 		<div class="row card-row">
-				
 				<div class="card square">
 					<div class="image" style="background-image: url('/assets/images/artwork/art-1.jpg');">
 						<img src="/assets/images/artwork/art-1.jpg">
 					</div>
 					<div class="content">
-						<div class="hearts">
-							<i class="fa fa-heart-o"></i>
+						<div class="heart">
+							<!-- <span class="heart-number">55</span> -->
+							<i class="icon fa fa-heart"></i>
 						</div>
 						<div class="artist">
 							Camille Oudinot
@@ -229,17 +263,37 @@
 						</div>
 						<div class="price">
 							$930
+							<span class="currency"><s>$930</s></span>
 						</div>
 					</div>
 				</div>
 				
+					<script type="text/javascript">
+						$( document ).ready(function() {
+							$('.heart').click(function(){
+								$(this).toggleClass( "is-hearted" );
+								$(this).toggleClass( "is-being-clicked" );
+								setTimeout(function(){
+									$('.heart').removeClass("is-being-clicked");
+								}, 750);
+				
+								// Toggle text just for visuals
+								if ($(this).hasClass("is-hearted")) {
+									$(this).find('.heart-number').html("63");
+								} else {
+									$(this).find('.heart-number').html("62");
+								}
+							});
+						});
+					</script>
 				<div class="card square">
 					<div class="image" style="background-image: url('/assets/images/artwork/art-narrow-1.jpg');">
 						<img src="/assets/images/artwork/art-narrow-1.jpg">
 					</div>
 					<div class="content">
-						<div class="hearts">
-							<i class="fa fa-heart-o"></i>
+						<div class="heart">
+							<!-- <span class="heart-number">23</span> -->
+							<i class="icon fa fa-heart"></i>
 						</div>
 						<div class="artist">
 							Sethlan Semelon
@@ -249,6 +303,7 @@
 						</div>
 						<div class="price">
 							$1930
+							<span class="currency"><s>$1930</s></span>
 						</div>
 					</div>
 				</div>
@@ -258,8 +313,9 @@
 						<img src="/assets/images/artwork/art-wide-1.jpg">
 					</div>
 					<div class="content">
-						<div class="hearts">
-							<i class="fa fa-heart-o"></i>
+						<div class="heart">
+							<!-- <span class="heart-number">11</span> -->
+							<i class="icon fa fa-heart"></i>
 						</div>
 						<div class="artist">
 							Nan Park
@@ -269,6 +325,7 @@
 						</div>
 						<div class="price">
 							$450
+							<span class="currency"><s>$450</s></span>
 						</div>
 					</div>
 				</div>
@@ -278,8 +335,9 @@
 						<img src="/assets/images/artwork/art-3.jpg">
 					</div>
 					<div class="content">
-						<div class="hearts">
-							<i class="fa fa-heart-o"></i>
+						<div class="heart">
+							<!-- <span class="heart-number">123</span> -->
+							<i class="icon fa fa-heart"></i>
 						</div>
 						<div class="artist">
 							Jane Do
@@ -289,6 +347,7 @@
 						</div>
 						<div class="price">
 							$633
+							<span class="currency"><s>$633</s></span>
 						</div>
 					</div>
 				</div>
@@ -298,8 +357,9 @@
 						<img src="/assets/images/artwork/art-4.jpg">
 					</div>
 					<div class="content">
-						<div class="hearts">
-							<i class="fa fa-heart-o"></i>
+						<div class="heart">
+							<!-- <span class="heart-number">61</span> -->
+							<i class="icon fa fa-heart"></i>
 						</div>
 						<div class="artist">
 							Jephesandra Tawarna
@@ -309,6 +369,7 @@
 						</div>
 						<div class="price">
 							$1024
+							<span class="currency"><s>$1024</s></span>
 						</div>
 					</div>
 				</div>
@@ -318,8 +379,9 @@
 						<img src="/assets/images/artwork/art-5.jpg">
 					</div>
 					<div class="content">
-						<div class="hearts">
-							<i class="fa fa-heart-o"></i>
+						<div class="heart">
+							<!-- <span class="heart-number">31</span> -->
+							<i class="icon fa fa-heart"></i>
 						</div>
 						<div class="artist">
 							Jimothy St. Creus de la Mare
@@ -329,6 +391,7 @@
 						</div>
 						<div class="price">
 							$1930
+							<span class="currency"><s>$1930</s></span>
 						</div>
 					</div>
 				</div>
@@ -338,8 +401,9 @@
 						<img src="/assets/images/artwork/art-6.jpg">
 					</div>
 					<div class="content">
-						<div class="hearts">
-							<i class="fa fa-heart-o"></i>
+						<div class="heart">
+							<!-- <span class="heart-number">22</span> -->
+							<i class="icon fa fa-heart"></i>
 						</div>
 						<div class="artist">
 							Caulie Dempsei Alexandrian
@@ -349,6 +413,7 @@
 						</div>
 						<div class="price">
 							$2450
+							<span class="currency"><s>$2450</s></span>
 						</div>
 					</div>
 				</div>
@@ -358,8 +423,9 @@
 						<img src="/assets/images/artwork/art-2.jpg">
 					</div>
 					<div class="content">
-						<div class="hearts">
-							<i class="fa fa-heart-o"></i>
+						<div class="heart">
+							<!-- <span class="heart-number">1</span> -->
+							<i class="icon fa fa-heart"></i>
 						</div>
 						<div class="artist">
 							Amy Yu
@@ -369,9 +435,11 @@
 						</div>
 						<div class="price">
 							$4430
+							<span class="currency"><s>$4430</s></span>
 						</div>
 					</div>
 				</div>
+				
 			<div class="fader"></div>
 		</div>
 	</div>
@@ -381,6 +449,26 @@
 </p>
 
 </main>
+
+	<script type="text/javascript">
+		$( document ).ready(function() {
+			$('.heart').click(function(){
+				$(this).toggleClass( "is-hearted" );
+				$(this).toggleClass( "is-being-clicked" );
+				setTimeout(function(){
+					$('.heart').removeClass("is-being-clicked");
+				}, 750);
+
+				// Toggle text just for visuals
+				if ($(this).hasClass("is-hearted")) {
+					$(this).find('.heart-number').html("63");
+				} else {
+					$(this).find('.heart-number').html("62");
+				}
+			});
+		});
+	</script>
+
 <footer>
     <div class="container-fluid">
 
