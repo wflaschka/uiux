@@ -1,0 +1,31 @@
+////////////////////////////////////////////////////////////////////
+// Orders Block
+
+.orders-block {
+	display: flex;
+	justify-content: space-between;
+	background-color: #f7f7f7;
+	border: 1px solid #f7f7f7;
+	padding: p(15);
+	font-weight: $weight-semibold;
+	margin-bottom: p(30);
+	&.is-cancel {
+		border-color: #f00;
+		background-color: #FBEEEC;
+	}
+
+	.user {
+		display: flex;
+		.info {
+			padding-left: p(10);
+		}
+	}
+
+	.total {
+		text-align: right;
+		
+		.detail {
+			font-weight: normal;
+		}
+	}
+}
