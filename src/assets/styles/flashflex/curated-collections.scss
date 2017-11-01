@@ -1,0 +1,36 @@
+.curated-collections {
+	display: flex;
+	justify-content: space-between;
+
+
+	.block-curated {
+		.user {
+		    display: flex;
+		    align-items: center;
+		    margin-bottom: p(20);
+		    .avatar {
+		    	margin-right: p(20);
+		    }
+		    .user-info {
+		    	.name {
+		    		font-weight: $weight-semibold;
+		    	}
+		    	.by,
+		    	.total {
+		    		font-size: p(13);
+		    	}
+		    }
+		}
+	}
+
+	.sep {
+		width: 1px;
+		background-color: $color-border;
+	}
+
+	.slider-card {
+		width: 320px;
+	}
+
+}
+

@@ -18403,6 +18403,10 @@ footer .copyright-text {
   margin-bottom: 2rem;
 }
 
+.card {
+  width: 150px;
+}
+
 .card:not(:last-of-type) {
   margin-right: 1rem;
 }
@@ -18569,6 +18573,85 @@ footer .copyright-text {
   height: 120px;
   width: 100%;
   text-align: center;
+}
+
+.slider-card {
+  margin-bottom: 1.25rem;
+  /* Dots */
+}
+
+.slider-card:hover .slick-prev:before,
+.slider-card:hover .slick-next:before {
+  display: block;
+}
+
+.slider-card .slick-prev,
+.slider-card .slick-next {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.75) 100%);
+  height: 100%;
+  width: 60px;
+  z-index: 1;
+  transform: initial;
+  top: 0px;
+}
+
+.slider-card .slick-prev:hover,
+.slider-card .slick-next:hover {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 100%);
+}
+
+.slider-card .slick-prev:hover:before,
+.slider-card .slick-next:hover:before {
+  transform: scale(1.3);
+}
+
+.slider-card .slick-prev:focus,
+.slider-card .slick-next:focus {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.75) 100%);
+}
+
+.slider-card .slick-prev:before,
+.slider-card .slick-next:before {
+  font-family: "arttap" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: bold !important;
+  font-size: 1.875rem;
+  opacity: 1;
+  color: #000;
+  display: none;
+  transition: all 0.3s;
+}
+
+.slider-card .slick-prev {
+  background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.75) 100%);
+  left: 0px;
+}
+
+.slider-card .slick-prev:hover {
+  background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, white 100%);
+}
+
+.slider-card .slick-prev:focus {
+  background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, white 100%);
+}
+
+.slider-card .slick-prev:before {
+  content: "\63";
+}
+
+.slider-card .slick-next {
+  right: 0px;
+}
+
+.slider-card .slick-next:before {
+  content: "\68";
 }
 
 .accordion {
@@ -18825,6 +18908,39 @@ footer .copyright-text {
 
 .orders-block .total .detail {
   font-weight: normal;
+}
+
+.curated-collections {
+  display: flex;
+  justify-content: space-between;
+}
+
+.curated-collections .block-curated .user {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.curated-collections .block-curated .user .avatar {
+  margin-right: 1.25rem;
+}
+
+.curated-collections .block-curated .user .user-info .name {
+  font-weight: 500;
+}
+
+.curated-collections .block-curated .user .user-info .by,
+.curated-collections .block-curated .user .user-info .total {
+  font-size: 0.8125rem;
+}
+
+.curated-collections .sep {
+  width: 1px;
+  background-color: #d9d9d9;
+}
+
+.curated-collections .slider-card {
+  width: 320px;
 }
 
 form.is-search-form {
