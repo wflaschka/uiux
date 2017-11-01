@@ -7819,7 +7819,7 @@ html {
 main {
   border: 1px solid transparent;
   height: 100%;
-  min-height: calc( 100vh -  $page-element-header-height -  $page-element-footer-height);
+  min-height: calc( 100vh -  $page-element-header-height -  $page-element-footer-height);
   margin: 0;
   padding: 0;
 }
@@ -7897,6 +7897,10 @@ main {
   .hide-on-lg-down {
     display: none !important;
   }
+}
+
+.hide, .hidden {
+  display: none;
 }
 
 @media screen and (max-width: 600px) {
@@ -8180,11 +8184,11 @@ main {
     transform: skewX(-0.78125deg) skewY(-0.78125deg);
   }
   77.7% {
-    -webkit-transform: skewX(0.39063deg) skewY(0.39063deg);
-    -moz-transform: skewX(0.39063deg) skewY(0.39063deg);
-    -ms-transform: skewX(0.39063deg) skewY(0.39063deg);
-    -o-transform: skewX(0.39063deg) skewY(0.39063deg);
-    transform: skewX(0.39063deg) skewY(0.39063deg);
+    -webkit-transform: skewX(0.39062deg) skewY(0.39062deg);
+    -moz-transform: skewX(0.39062deg) skewY(0.39062deg);
+    -ms-transform: skewX(0.39062deg) skewY(0.39062deg);
+    -o-transform: skewX(0.39062deg) skewY(0.39062deg);
+    transform: skewX(0.39062deg) skewY(0.39062deg);
   }
   88.8% {
     -webkit-transform: skewX(-0.19531deg) skewY(-0.19531deg);
@@ -8246,11 +8250,11 @@ main {
     transform: skewX(-0.78125deg) skewY(-0.78125deg);
   }
   77.7% {
-    -webkit-transform: skewX(0.39063deg) skewY(0.39063deg);
-    -moz-transform: skewX(0.39063deg) skewY(0.39063deg);
-    -ms-transform: skewX(0.39063deg) skewY(0.39063deg);
-    -o-transform: skewX(0.39063deg) skewY(0.39063deg);
-    transform: skewX(0.39063deg) skewY(0.39063deg);
+    -webkit-transform: skewX(0.39062deg) skewY(0.39062deg);
+    -moz-transform: skewX(0.39062deg) skewY(0.39062deg);
+    -ms-transform: skewX(0.39062deg) skewY(0.39062deg);
+    -o-transform: skewX(0.39062deg) skewY(0.39062deg);
+    transform: skewX(0.39062deg) skewY(0.39062deg);
   }
   88.8% {
     -webkit-transform: skewX(-0.19531deg) skewY(-0.19531deg);
@@ -8312,11 +8316,11 @@ main {
     transform: skewX(-0.78125deg) skewY(-0.78125deg);
   }
   77.7% {
-    -webkit-transform: skewX(0.39063deg) skewY(0.39063deg);
-    -moz-transform: skewX(0.39063deg) skewY(0.39063deg);
-    -ms-transform: skewX(0.39063deg) skewY(0.39063deg);
-    -o-transform: skewX(0.39063deg) skewY(0.39063deg);
-    transform: skewX(0.39063deg) skewY(0.39063deg);
+    -webkit-transform: skewX(0.39062deg) skewY(0.39062deg);
+    -moz-transform: skewX(0.39062deg) skewY(0.39062deg);
+    -ms-transform: skewX(0.39062deg) skewY(0.39062deg);
+    -o-transform: skewX(0.39062deg) skewY(0.39062deg);
+    transform: skewX(0.39062deg) skewY(0.39062deg);
   }
   88.8% {
     -webkit-transform: skewX(-0.19531deg) skewY(-0.19531deg);
@@ -8378,11 +8382,11 @@ main {
     transform: skewX(-0.78125deg) skewY(-0.78125deg);
   }
   77.7% {
-    -webkit-transform: skewX(0.39063deg) skewY(0.39063deg);
-    -moz-transform: skewX(0.39063deg) skewY(0.39063deg);
-    -ms-transform: skewX(0.39063deg) skewY(0.39063deg);
-    -o-transform: skewX(0.39063deg) skewY(0.39063deg);
-    transform: skewX(0.39063deg) skewY(0.39063deg);
+    -webkit-transform: skewX(0.39062deg) skewY(0.39062deg);
+    -moz-transform: skewX(0.39062deg) skewY(0.39062deg);
+    -ms-transform: skewX(0.39062deg) skewY(0.39062deg);
+    -o-transform: skewX(0.39062deg) skewY(0.39062deg);
+    transform: skewX(0.39062deg) skewY(0.39062deg);
   }
   88.8% {
     -webkit-transform: skewX(-0.19531deg) skewY(-0.19531deg);
@@ -8444,11 +8448,11 @@ main {
     transform: skewX(-0.78125deg) skewY(-0.78125deg);
   }
   77.7% {
-    -webkit-transform: skewX(0.39063deg) skewY(0.39063deg);
-    -moz-transform: skewX(0.39063deg) skewY(0.39063deg);
-    -ms-transform: skewX(0.39063deg) skewY(0.39063deg);
-    -o-transform: skewX(0.39063deg) skewY(0.39063deg);
-    transform: skewX(0.39063deg) skewY(0.39063deg);
+    -webkit-transform: skewX(0.39062deg) skewY(0.39062deg);
+    -moz-transform: skewX(0.39062deg) skewY(0.39062deg);
+    -ms-transform: skewX(0.39062deg) skewY(0.39062deg);
+    -o-transform: skewX(0.39062deg) skewY(0.39062deg);
+    transform: skewX(0.39062deg) skewY(0.39062deg);
   }
   88.8% {
     -webkit-transform: skewX(-0.19531deg) skewY(-0.19531deg);
@@ -18432,8 +18436,8 @@ footer .copyright-text {
   padding-left: 0.2rem;
 }
 
-.card .content div.hearts {
-  float: right;
+.card .content div.heart {
+  float: right !important;
 }
 
 .card .content div.title {
@@ -22738,7 +22742,7 @@ select {
   color: #8B8B8B;
 }
 
-.heart:hover .icon .fa, .heart:hover .icon .header .icon-hamburger, .header .heart:hover .icon .icon-hamburger, .heart:hover .icon .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .select2-selection__choice__remove::after, .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .heart:hover .icon .select2-selection__choice__remove::after, .heart:hover .icon .avatar .avatar-status, .avatar .heart:hover .icon .avatar-status, .heart:hover .icon body#prototype-index-page a:not(.logo)::after, body#prototype-index-page .heart:hover .icon a:not(.logo)::after {
+.heart:hover .icon {
   -webkit-animation-name: pulse;
   -moz-animation-name: pulse;
   -ms-animation-name: pulse;
@@ -22776,16 +22780,16 @@ select {
   backface-visibility: hidden;
 }
 
-.heart .icon.fa, .heart .header .icon.icon-hamburger, .header .heart .icon.icon-hamburger, .heart .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .icon.select2-selection__choice__remove::after, .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .heart .icon.select2-selection__choice__remove::after, .heart .avatar .icon.avatar-status, .avatar .heart .icon.avatar-status, .heart body#prototype-index-page a.icon:not(.logo)::after, body#prototype-index-page .heart a.icon:not(.logo)::after {
+.heart .icon {
   color: #8B8B8B;
   cursor: pointer;
 }
 
-.heart.is-hearted .icon.fa, .heart.is-hearted .header .icon.icon-hamburger, .header .heart.is-hearted .icon.icon-hamburger, .heart.is-hearted .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .icon.select2-selection__choice__remove::after, .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .heart.is-hearted .icon.select2-selection__choice__remove::after, .heart.is-hearted .avatar .icon.avatar-status, .avatar .heart.is-hearted .icon.avatar-status, .heart.is-hearted body#prototype-index-page a.icon:not(.logo)::after, body#prototype-index-page .heart.is-hearted a.icon:not(.logo)::after {
-  color: #ff3860;
+.heart.is-hearted .icon {
+  color: #D92F1D;
 }
 
-.heart.is-being-clicked .icon.fa, .heart.is-being-clicked .header .icon.icon-hamburger, .header .heart.is-being-clicked .icon.icon-hamburger, .heart.is-being-clicked .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .icon.select2-selection__choice__remove::after, .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .heart.is-being-clicked .icon.select2-selection__choice__remove::after, .heart.is-being-clicked .avatar .icon.avatar-status, .avatar .heart.is-being-clicked .icon.avatar-status, .heart.is-being-clicked body#prototype-index-page a.icon:not(.logo)::after, body#prototype-index-page .heart.is-being-clicked a.icon:not(.logo)::after {
+.heart.is-being-clicked .icon {
   -webkit-animation-name: rubberBand;
   -moz-animation-name: rubberBand;
   -ms-animation-name: rubberBand;
