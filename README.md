@@ -2,6 +2,15 @@
 
 *Point of contact:* Walter Flaschka wflaschka@gmail.com. Best methods for contact are the `#arttap` [Slack](https://slack.com/), [email](wflaschka@gmail.com), or texting the Google+ account for wflaschka@gmail.com.
 
+## Merging master into branch
+
+```sh
+git checkout master
+git pull
+git checkout mobiledevicesupport
+git merge master
+```
+
 ## Overview
 
 In this project we are building the HTML, Javascript, and CSS for the ArtTap web pages. This repository has workflow automation so we can build each *component* individually, and then combine those components into full prototype *pages*. 

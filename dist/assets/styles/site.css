@@ -7899,6 +7899,10 @@ main {
   }
 }
 
+.hide, .hidden {
+  display: none;
+}
+
 @media screen and (max-width: 600px) {
   .hide-for-phone-only {
     display: none !important;
@@ -18399,6 +18403,10 @@ footer .copyright-text {
   margin-bottom: 2rem;
 }
 
+.card {
+  width: 150px;
+}
+
 .card:not(:last-of-type) {
   margin-right: 1rem;
 }
@@ -18432,8 +18440,8 @@ footer .copyright-text {
   padding-left: 0.2rem;
 }
 
-.card .content div.hearts {
-  float: right;
+.card .content div.heart {
+  float: right !important;
 }
 
 .card .content div.title {
@@ -18565,6 +18573,85 @@ footer .copyright-text {
   height: 120px;
   width: 100%;
   text-align: center;
+}
+
+.slider-card {
+  margin-bottom: 1.25rem;
+  /* Dots */
+}
+
+.slider-card:hover .slick-prev:before,
+.slider-card:hover .slick-next:before {
+  display: block;
+}
+
+.slider-card .slick-prev,
+.slider-card .slick-next {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.75) 100%);
+  height: 100%;
+  width: 60px;
+  z-index: 1;
+  transform: initial;
+  top: 0px;
+}
+
+.slider-card .slick-prev:hover,
+.slider-card .slick-next:hover {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 100%);
+}
+
+.slider-card .slick-prev:hover:before,
+.slider-card .slick-next:hover:before {
+  transform: scale(1.3);
+}
+
+.slider-card .slick-prev:focus,
+.slider-card .slick-next:focus {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.75) 100%);
+}
+
+.slider-card .slick-prev:before,
+.slider-card .slick-next:before {
+  font-family: "arttap" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: bold !important;
+  font-size: 1.875rem;
+  opacity: 1;
+  color: #000;
+  display: none;
+  transition: all 0.3s;
+}
+
+.slider-card .slick-prev {
+  background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.75) 100%);
+  left: 0px;
+}
+
+.slider-card .slick-prev:hover {
+  background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, white 100%);
+}
+
+.slider-card .slick-prev:focus {
+  background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, white 100%);
+}
+
+.slider-card .slick-prev:before {
+  content: "\63";
+}
+
+.slider-card .slick-next {
+  right: 0px;
+}
+
+.slider-card .slick-next:before {
+  content: "\68";
 }
 
 .accordion {
@@ -18821,6 +18908,39 @@ footer .copyright-text {
 
 .orders-block .total .detail {
   font-weight: normal;
+}
+
+.curated-collections {
+  display: flex;
+  justify-content: space-between;
+}
+
+.curated-collections .block-curated .user {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.curated-collections .block-curated .user .avatar {
+  margin-right: 1.25rem;
+}
+
+.curated-collections .block-curated .user .user-info .name {
+  font-weight: 500;
+}
+
+.curated-collections .block-curated .user .user-info .by,
+.curated-collections .block-curated .user .user-info .total {
+  font-size: 0.8125rem;
+}
+
+.curated-collections .sep {
+  width: 1px;
+  background-color: #d9d9d9;
+}
+
+.curated-collections .slider-card {
+  width: 320px;
 }
 
 form.is-search-form {
@@ -22738,7 +22858,7 @@ select {
   color: #8B8B8B;
 }
 
-.heart:hover .icon .fa, .heart:hover .icon .header .icon-hamburger, .header .heart:hover .icon .icon-hamburger, .heart:hover .icon .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .select2-selection__choice__remove::after, .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .heart:hover .icon .select2-selection__choice__remove::after, .heart:hover .icon .avatar .avatar-status, .avatar .heart:hover .icon .avatar-status, .heart:hover .icon body#prototype-index-page a:not(.logo)::after, body#prototype-index-page .heart:hover .icon a:not(.logo)::after {
+.heart:hover .icon {
   -webkit-animation-name: pulse;
   -moz-animation-name: pulse;
   -ms-animation-name: pulse;
@@ -22776,16 +22896,16 @@ select {
   backface-visibility: hidden;
 }
 
-.heart .icon.fa, .heart .header .icon.icon-hamburger, .header .heart .icon.icon-hamburger, .heart .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .icon.select2-selection__choice__remove::after, .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .heart .icon.select2-selection__choice__remove::after, .heart .avatar .icon.avatar-status, .avatar .heart .icon.avatar-status, .heart body#prototype-index-page a.icon:not(.logo)::after, body#prototype-index-page .heart a.icon:not(.logo)::after {
+.heart .icon {
   color: #8B8B8B;
   cursor: pointer;
 }
 
-.heart.is-hearted .icon.fa, .heart.is-hearted .header .icon.icon-hamburger, .header .heart.is-hearted .icon.icon-hamburger, .heart.is-hearted .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .icon.select2-selection__choice__remove::after, .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .heart.is-hearted .icon.select2-selection__choice__remove::after, .heart.is-hearted .avatar .icon.avatar-status, .avatar .heart.is-hearted .icon.avatar-status, .heart.is-hearted body#prototype-index-page a.icon:not(.logo)::after, body#prototype-index-page .heart.is-hearted a.icon:not(.logo)::after {
-  color: #ff3860;
+.heart.is-hearted .icon {
+  color: #D92F1D;
 }
 
-.heart.is-being-clicked .icon.fa, .heart.is-being-clicked .header .icon.icon-hamburger, .header .heart.is-being-clicked .icon.icon-hamburger, .heart.is-being-clicked .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .icon.select2-selection__choice__remove::after, .select2-wrapper .select2-container .select2-selection .select2-selection__rendered .select2-selection__choice .heart.is-being-clicked .icon.select2-selection__choice__remove::after, .heart.is-being-clicked .avatar .icon.avatar-status, .avatar .heart.is-being-clicked .icon.avatar-status, .heart.is-being-clicked body#prototype-index-page a.icon:not(.logo)::after, body#prototype-index-page .heart.is-being-clicked a.icon:not(.logo)::after {
+.heart.is-being-clicked .icon {
   -webkit-animation-name: rubberBand;
   -moz-animation-name: rubberBand;
   -ms-animation-name: rubberBand;
