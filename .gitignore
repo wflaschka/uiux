@@ -3,6 +3,7 @@ vendor/
 node_modules/
 *-snapshot-*/
 semantic/
+site.css.map
 
 # GENERAL .gitignore
 
