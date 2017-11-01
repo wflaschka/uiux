@@ -3,6 +3,10 @@
 // Relies on responsive.scss
 ////////////////////////////////////////////////////////////////////
 
+.hide, .hidden {
+    display: none;
+}
+
 .hide-for-phone-only {
     @include for-phone-only {
         display: none !important;

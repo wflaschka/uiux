@@ -1,13 +1,10 @@
-
 .heart {
-
-	// text-align: right;
 
 	.heart-number {
 		color: $gray-color;
 	}
 
-	&:hover .icon .fa {
+	&:hover .icon {
 		@include pulse(
 			$duration: .5s,
 			$count: 1,
@@ -17,18 +14,18 @@
 		);
 	}
 
-	.icon.fa {
-		color: $gray-color;
+	.icon {
+		color: color(gray);
 		cursor: pointer;
 	}
 
 	&.is-hearted {
-		.icon.fa {
-			color: $red;
+		.icon {
+			color: color(red);
 		}
 	}
 	&.is-being-clicked {
-		.icon.fa {
+		.icon {
 			@include rubberBand(
 				$duration: .5s,
 				$count: 1,
