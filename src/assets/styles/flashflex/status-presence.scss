@@ -1,0 +1,11 @@
+.at.status-presence {
+	display: inline-block;
+	border-radius: 50%;
+	height: .6rem;
+	width: .6rem;
+
+    &.is-online { background: #bcce38; }
+    &.is-busy { background: #d92f1d; }
+    &.is-away { background: #f9922c; }
+
+}
