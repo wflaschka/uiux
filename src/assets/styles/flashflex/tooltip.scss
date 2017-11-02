@@ -9,6 +9,9 @@
 
 	.text {
 	    visibility: hidden;
+	    opacity: 0;
+	    transition: opacity 0.5s;
+
 	    width: p(120);
 	    background-color: black;
 	    color: #fff;
@@ -16,7 +19,8 @@
 	    border-radius: p(6);
 	    padding: p(10) 0;
 	    position: absolute;
-	    z-index: 1;
+	    // z-index: 1;
+	    z-index: z('tooltip'); 
 	    bottom: 120%;
 	    left: 50%;
 	    margin-left: p(-60);
@@ -35,6 +39,7 @@
 	}
 	&:hover .text {
 	    visibility: visible;
+	    opacity: 1;
 	}
 
 }

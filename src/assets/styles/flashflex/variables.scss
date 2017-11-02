@@ -6,14 +6,21 @@
 
 ////////////////////////////////////////////////////////////////////
 // Z-INDEXES used in the site with the mixin z("sizename")
-// Usage: .top-navigation-bar { z-index: z('site-header'); }
+// The higher in position on the list, the higher the z-index. 
+// Usage: 
+// .top-navigation-bar { 
+// 		z-index: z('site-header'); 
+// }
 	$z-indexes: (
+		"tooltip"
 		"modal",
 		"site-header",
 		"slide-in",
+		"dropdown-menus",
+		"search-form",
 		"main-content-box",
 		"default",
-		"site-footer"
+		"site-footer",
 	);
 
 ////////////////////////////////////////////////////////////////////
