@@ -4,6 +4,7 @@ node_modules/
 *-snapshot-*/
 semantic/
 site.css.map
+dist/assets/styles/maps/site.css.map
 
 # GENERAL .gitignore
 
