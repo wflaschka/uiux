@@ -18644,167 +18644,6 @@ footer .copyright-text {
   border-bottom: 1px solid #d9d9d9;
 }
 
-.inbox-actions {
-  display: flex;
-  justify-content: space-between;
-  padding: 1.5625rem 0;
-}
-
-.inbox-actions .col-left,
-.inbox-actions .col-right {
-  display: flex;
-}
-
-.inbox-actions .messages-search {
-  min-width: 20rem;
-}
-
-.inbox .message {
-  background-color: #f7f7f7;
-  display: flex;
-  padding: 0.9375rem 0;
-  border-bottom: 1px solid #d9d9d9;
-  justify-content: space-between;
-}
-
-.inbox .message.new {
-  background-color: #fff;
-}
-
-.inbox .message:first-child {
-  border-top: 1px solid #d9d9d9;
-}
-
-.inbox .message > div {
-  display: flex;
-}
-
-.inbox .message .user-wrap {
-  width: 21.875rem;
-}
-
-.inbox .message .user-wrap .checkbox-wrap {
-  padding-left: 0.6875rem;
-  position: relative;
-  top: -5px;
-}
-
-.inbox .message .user-wrap .user {
-  max-width: 11.25rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  padding-left: 1.25rem;
-  font-weight: 500;
-}
-
-.inbox .message .user-wrap .online-presence {
-  display: inline-block;
-  border-radius: 50%;
-  height: .6rem;
-  width: .6rem;
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
-}
-
-.inbox .message .user-wrap .online-presence.online {
-  background: #BCCE38;
-}
-
-.inbox .message .user-wrap .online-presence.busy {
-  background: #D92F1D;
-}
-
-.inbox .message .user-wrap .online-presence.away {
-  background: #F9922C;
-}
-
-.inbox .message .subject-wrap {
-  flex: 1 100%;
-  max-width: 700px;
-}
-
-.inbox .message .subject-wrap .subject {
-  padding-right: 0.625rem;
-  font-weight: 500;
-  max-width: 25rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.inbox .message .subject-wrap .message-body {
-  max-width: 25rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.inbox .message .date {
-  padding-left: 1.25rem;
-  padding-right: 0.3125rem;
-  width: 160px;
-  max-width: 11.25rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  justify-content: flex-end;
-}
-
-.inbox .message .date .at {
-  font-size: 0.6rem;
-  transform: translateY(7px);
-  margin-left: 5px;
-}
-
-.inbox-message {
-  margin: 30px 0;
-}
-
-.inbox-message .message {
-  margin-bottom: 30px;
-  border-bottom: 1px solid #d9d9d9;
-}
-
-.inbox-message .message.reply {
-  border-bottom: none;
-  display: none;
-}
-
-.inbox-message .message.reply .button-send {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.inbox-message .message.reply .button-send a {
-  min-width: 12.5rem;
-  margin-top: 30px;
-}
-
-.inbox-message .message-header {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 30px;
-}
-
-.inbox-message .message-header .user {
-  display: flex;
-  align-items: center;
-}
-
-.inbox-message .message-header .user .user-info {
-  padding: 0px 20px;
-}
-
-.inbox-message .message-header .actions {
-  display: flex;
-  align-items: center;
-}
-
-.inbox-message .message-header .actions .button-reply {
-  min-width: 9.375rem;
-}
-
 .at.order {
   display: flex;
   justify-content: space-between;
@@ -20017,6 +19856,151 @@ form.is-search-form label.is-colorball-checkbox.is-color-eggshell span::after {
 
 form.is-search-form label.is-colorball-checkbox.is-color-eggshell input:checked + span:before {
   border-color: #f3d88a;
+}
+
+.at.status-presence {
+  display: inline-block;
+  border-radius: 50%;
+  height: .6rem;
+  width: .6rem;
+}
+
+.at.status-presence.is-online {
+  background: #bcce38;
+}
+
+.at.status-presence.is-busy {
+  background: #d92f1d;
+}
+
+.at.status-presence.is-away {
+  background: #f9922c;
+}
+
+.see-more .fade-info {
+  position: relative;
+  height: 18.75rem;
+  overflow: hidden;
+}
+
+.see-more .fade-info:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 75%;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 100%);
+}
+
+.see-more.active .fade-info {
+  height: auto;
+}
+
+.see-more.active .fade-info:after {
+  display: none;
+}
+
+.see-more.active .action {
+  display: none;
+}
+
+.see-more .action {
+  position: relative;
+  text-align: left;
+}
+
+.see-more .action:after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  background-color: #d9d9d9;
+}
+
+.see-more .action a {
+  position: relative;
+  z-index: 1;
+  font-size: 0.8125rem;
+  color: #8B8B8B;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.625rem 1.875rem;
+  border: 1px solid #d9d9d9;
+  background-color: #ffffff;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.see-more .action a:hover, .see-more .action a:focus {
+  color: #E09D00;
+  border-color: #E09D00;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .text {
+  visibility: hidden;
+  width: 7.5rem;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 0.375rem;
+  padding: 0.625rem 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 120%;
+  left: 50%;
+  margin-left: -3.75rem;
+  font-size: 0.8125rem;
+  line-height: 1rem;
+}
+
+.tooltip .text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -0.3125rem;
+  border-width: 0.3125rem;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.tooltip:hover .text {
+  visibility: visible;
+}
+
+.at.follows {
+  text-align: center;
+}
+
+.at.follows .avatar {
+  margin-bottom: 0.625rem;
+}
+
+.at.follows .name {
+  font-weight: 500;
+}
+
+.at.follows .type {
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+
+.at.progress {
+  background: #eeeeef;
+}
+
+.at.progress .bar {
+  height: 0.3125rem;
+  background-color: #E09D00;
+  transition: all 0.3s ease;
 }
 
 .page.has-sidebar .main-content {
@@ -25213,139 +25197,165 @@ select {
   background: black;
 }
 
-.at.status-presence {
+.inbox-actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5625rem 0;
+}
+
+.inbox-actions .col-left,
+.inbox-actions .col-right {
+  display: flex;
+}
+
+.inbox-actions .messages-search {
+  min-width: 20rem;
+}
+
+.inbox .message {
+  background-color: #f7f7f7;
+  display: flex;
+  padding: 0.9375rem 0;
+  border-bottom: 1px solid #d9d9d9;
+  justify-content: space-between;
+}
+
+.inbox .message.new {
+  background-color: #fff;
+}
+
+.inbox .message:first-child {
+  border-top: 1px solid #d9d9d9;
+}
+
+.inbox .message > div {
+  display: flex;
+}
+
+.inbox .message .user-wrap {
+  width: 21.875rem;
+}
+
+.inbox .message .user-wrap .checkbox-wrap {
+  padding-left: 0.6875rem;
+  position: relative;
+  top: -5px;
+}
+
+.inbox .message .user-wrap .user {
+  max-width: 11.25rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 1.25rem;
+  font-weight: 500;
+}
+
+.inbox .message .user-wrap .online-presence {
   display: inline-block;
   border-radius: 50%;
   height: .6rem;
   width: .6rem;
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
 }
 
-.at.status-presence.is-online {
-  background: #bcce38;
+.inbox .message .user-wrap .online-presence.online {
+  background: #BCCE38;
 }
 
-.at.status-presence.is-busy {
-  background: #d92f1d;
+.inbox .message .user-wrap .online-presence.busy {
+  background: #D92F1D;
 }
 
-.at.status-presence.is-away {
-  background: #f9922c;
+.inbox .message .user-wrap .online-presence.away {
+  background: #F9922C;
 }
 
-.see-more .fade-info {
-  position: relative;
-  height: 18.75rem;
+.inbox .message .subject-wrap {
+  flex: 1 100%;
+  max-width: 700px;
+}
+
+.inbox .message .subject-wrap .subject {
+  padding-right: 0.625rem;
+  font-weight: 500;
+  max-width: 25rem;
+  white-space: nowrap;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.see-more .fade-info:after {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 75%;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 100%);
+.inbox .message .subject-wrap .message-body {
+  max-width: 25rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.see-more.active .fade-info {
-  height: auto;
+.inbox .message .date {
+  padding-left: 1.25rem;
+  padding-right: 0.3125rem;
+  width: 160px;
+  max-width: 11.25rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  justify-content: flex-end;
 }
 
-.see-more.active .fade-info:after {
+.inbox .message .date .at {
+  font-size: 0.6rem;
+  transform: translateY(7px);
+  margin-left: 5px;
+}
+
+.inbox-message {
+  margin: 30px 0;
+}
+
+.inbox-message .message {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.inbox-message .message.reply {
+  border-bottom: none;
   display: none;
 }
 
-.see-more.active .action {
-  display: none;
+.inbox-message .message.reply .button-send {
+  display: flex;
+  justify-content: flex-end;
 }
 
-.see-more .action {
-  position: relative;
-  text-align: left;
+.inbox-message .message.reply .button-send a {
+  min-width: 12.5rem;
+  margin-top: 30px;
 }
 
-.see-more .action:after {
-  content: '';
-  position: absolute;
-  height: 1px;
-  width: 100%;
-  top: 50%;
-  left: 0;
-  background-color: #d9d9d9;
+.inbox-message .message-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
 }
 
-.see-more .action a {
-  position: relative;
-  z-index: 1;
-  font-size: 0.8125rem;
-  color: #8B8B8B;
-  text-decoration: none;
-  display: inline-block;
-  padding: 0.625rem 1.875rem;
-  border: 1px solid #d9d9d9;
-  background-color: #ffffff;
-  left: 50%;
-  transform: translateX(-50%);
+.inbox-message .message-header .user {
+  display: flex;
+  align-items: center;
 }
 
-.see-more .action a:hover, .see-more .action a:focus {
-  color: #E09D00;
-  border-color: #E09D00;
+.inbox-message .message-header .user .user-info {
+  padding: 0px 20px;
 }
 
-.tooltip {
-  position: relative;
-  display: inline-block;
+.inbox-message .message-header .actions {
+  display: flex;
+  align-items: center;
 }
 
-.tooltip .text {
-  visibility: hidden;
-  width: 7.5rem;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  border-radius: 0.375rem;
-  padding: 0.625rem 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 120%;
-  left: 50%;
-  margin-left: -3.75rem;
-  font-size: 0.8125rem;
-  line-height: 1rem;
-}
-
-.tooltip .text::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -0.3125rem;
-  border-width: 0.3125rem;
-  border-style: solid;
-  border-color: black transparent transparent transparent;
-}
-
-.tooltip:hover .text {
-  visibility: visible;
-}
-
-.at.follows {
-  text-align: center;
-}
-
-.at.follows .avatar {
-  margin-bottom: 0.625rem;
-}
-
-.at.follows .name {
-  font-weight: 500;
-}
-
-.at.follows .type {
-  font-size: 0.8125rem;
-  font-weight: 500;
+.inbox-message .message-header .actions .button-reply {
+  min-width: 9.375rem;
 }
 
 /* Slider */

@@ -72,12 +72,15 @@
 		@import "sidebar.scss";
 		@import "card.scss";
 		@import "accordion.scss";
-		@import "artist-inbox.scss";
-		@import "artist-inbox-message.scss";
-		@import "orders.scss";
+		@import "order.scss";
 		@import "curated-collections.scss";
 		// @import "card-row.scss";     // TODO
 		@import "form-search/_index.scss";
+		@import "status-presence.scss";
+		@import "see-more.scss";
+		@import "tooltip.scss";
+		@import "follows.scss";
+		@import "progress.scss";
 
 	////////////////////////////////////////////////////////////////////
 	// Page Specific
@@ -150,10 +153,9 @@
 		$border-width: $unit-o !default;
 		$border-width-lg: $unit-h !default;
 		@import "avatars.scss";
-		@import "status-presence.scss";
-		@import "see-more.scss";
-		@import "tooltip.scss";
-		@import "follows.scss";
+		@import "artist-inbox.scss";
+		@import "artist-inbox-message.scss";
+
 
 
 // ////////////////////////////////////////////////////////////////////

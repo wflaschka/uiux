@@ -1,0 +1,10 @@
+<div class="at progress" data-percent="25">
+	<div class="bar"></div>
+</div>
+
+<script>
+	defer(function(){
+		var dataPercent = $('.at.progress').attr('data-percent');
+    	$('.at.progress .bar').width(dataPercent + '%');
+	});
+</script>
