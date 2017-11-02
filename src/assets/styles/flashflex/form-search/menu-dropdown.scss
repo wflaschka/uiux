@@ -4,14 +4,6 @@
 // Derived from Bulma 0.5.?
 ////////////////////////////////////////////////////////////////////
 
-// Z-index
-$zindex-0: 1;
-$zindex-1: 100;
-$zindex-2: 200;
-$zindex-3: 300;
-$zindex-4: 400;
-
-
 @keyframes slide-down-menu {
     0% {
         opacity: 0;
@@ -40,7 +32,7 @@ $zindex-4: 400;
         border: 1px solid #dedede;
         border-radius: 2px;
         min-width: 100%;
-        z-index: $zindex-1;
+        z-index: z('search-form');
 
         .menu-label {
             padding: 0.5em 0.75em 0em 0.75em;

@@ -7819,7 +7819,7 @@ html {
 main {
   border: 1px solid transparent;
   height: 100%;
-  min-height: calc( 100vh -  $page-element-header-height -  $page-element-footer-height);
+  min-height: calc( 100vh -  $page-element-header-height -  $page-element-footer-height);
   margin: 0;
   padding: 0;
 }
@@ -8184,11 +8184,11 @@ main {
     transform: skewX(-0.78125deg) skewY(-0.78125deg);
   }
   77.7% {
-    -webkit-transform: skewX(0.39063deg) skewY(0.39063deg);
-    -moz-transform: skewX(0.39063deg) skewY(0.39063deg);
-    -ms-transform: skewX(0.39063deg) skewY(0.39063deg);
-    -o-transform: skewX(0.39063deg) skewY(0.39063deg);
-    transform: skewX(0.39063deg) skewY(0.39063deg);
+    -webkit-transform: skewX(0.39062deg) skewY(0.39062deg);
+    -moz-transform: skewX(0.39062deg) skewY(0.39062deg);
+    -ms-transform: skewX(0.39062deg) skewY(0.39062deg);
+    -o-transform: skewX(0.39062deg) skewY(0.39062deg);
+    transform: skewX(0.39062deg) skewY(0.39062deg);
   }
   88.8% {
     -webkit-transform: skewX(-0.19531deg) skewY(-0.19531deg);
@@ -8250,11 +8250,11 @@ main {
     transform: skewX(-0.78125deg) skewY(-0.78125deg);
   }
   77.7% {
-    -webkit-transform: skewX(0.39063deg) skewY(0.39063deg);
-    -moz-transform: skewX(0.39063deg) skewY(0.39063deg);
-    -ms-transform: skewX(0.39063deg) skewY(0.39063deg);
-    -o-transform: skewX(0.39063deg) skewY(0.39063deg);
-    transform: skewX(0.39063deg) skewY(0.39063deg);
+    -webkit-transform: skewX(0.39062deg) skewY(0.39062deg);
+    -moz-transform: skewX(0.39062deg) skewY(0.39062deg);
+    -ms-transform: skewX(0.39062deg) skewY(0.39062deg);
+    -o-transform: skewX(0.39062deg) skewY(0.39062deg);
+    transform: skewX(0.39062deg) skewY(0.39062deg);
   }
   88.8% {
     -webkit-transform: skewX(-0.19531deg) skewY(-0.19531deg);
@@ -8316,11 +8316,11 @@ main {
     transform: skewX(-0.78125deg) skewY(-0.78125deg);
   }
   77.7% {
-    -webkit-transform: skewX(0.39063deg) skewY(0.39063deg);
-    -moz-transform: skewX(0.39063deg) skewY(0.39063deg);
-    -ms-transform: skewX(0.39063deg) skewY(0.39063deg);
-    -o-transform: skewX(0.39063deg) skewY(0.39063deg);
-    transform: skewX(0.39063deg) skewY(0.39063deg);
+    -webkit-transform: skewX(0.39062deg) skewY(0.39062deg);
+    -moz-transform: skewX(0.39062deg) skewY(0.39062deg);
+    -ms-transform: skewX(0.39062deg) skewY(0.39062deg);
+    -o-transform: skewX(0.39062deg) skewY(0.39062deg);
+    transform: skewX(0.39062deg) skewY(0.39062deg);
   }
   88.8% {
     -webkit-transform: skewX(-0.19531deg) skewY(-0.19531deg);
@@ -8382,11 +8382,11 @@ main {
     transform: skewX(-0.78125deg) skewY(-0.78125deg);
   }
   77.7% {
-    -webkit-transform: skewX(0.39063deg) skewY(0.39063deg);
-    -moz-transform: skewX(0.39063deg) skewY(0.39063deg);
-    -ms-transform: skewX(0.39063deg) skewY(0.39063deg);
-    -o-transform: skewX(0.39063deg) skewY(0.39063deg);
-    transform: skewX(0.39063deg) skewY(0.39063deg);
+    -webkit-transform: skewX(0.39062deg) skewY(0.39062deg);
+    -moz-transform: skewX(0.39062deg) skewY(0.39062deg);
+    -ms-transform: skewX(0.39062deg) skewY(0.39062deg);
+    -o-transform: skewX(0.39062deg) skewY(0.39062deg);
+    transform: skewX(0.39062deg) skewY(0.39062deg);
   }
   88.8% {
     -webkit-transform: skewX(-0.19531deg) skewY(-0.19531deg);
@@ -8448,11 +8448,11 @@ main {
     transform: skewX(-0.78125deg) skewY(-0.78125deg);
   }
   77.7% {
-    -webkit-transform: skewX(0.39063deg) skewY(0.39063deg);
-    -moz-transform: skewX(0.39063deg) skewY(0.39063deg);
-    -ms-transform: skewX(0.39063deg) skewY(0.39063deg);
-    -o-transform: skewX(0.39063deg) skewY(0.39063deg);
-    transform: skewX(0.39063deg) skewY(0.39063deg);
+    -webkit-transform: skewX(0.39062deg) skewY(0.39062deg);
+    -moz-transform: skewX(0.39062deg) skewY(0.39062deg);
+    -ms-transform: skewX(0.39062deg) skewY(0.39062deg);
+    -o-transform: skewX(0.39062deg) skewY(0.39062deg);
+    transform: skewX(0.39062deg) skewY(0.39062deg);
   }
   88.8% {
     -webkit-transform: skewX(-0.19531deg) skewY(-0.19531deg);
@@ -17599,7 +17599,7 @@ img.contain, img.contained {
   position: relative;
   margin: 0;
   padding: 0;
-  z-index: 1000;
+  z-index: 2;
 }
 
 .row-fade:after, .row-fade.right:after {
@@ -18728,7 +18728,7 @@ footer .copyright-text {
 }
 
 form.is-search-form {
-  border: 1px dotted #8B8B8B;
+  z-index: 4;
   /*! nouislider - 10.0.0 - 2017-05-28 14:52:48 */
   /* Functional styling;
  * These styles are required for noUiSlider to function.
@@ -18846,7 +18846,7 @@ form.is-search-form .dropdown .menu {
   border: 1px solid #dedede;
   border-radius: 2px;
   min-width: 100%;
-  z-index: 100;
+  z-index: 4;
 }
 
 form.is-search-form .dropdown .menu .menu-label {
@@ -19965,6 +19965,8 @@ form.is-search-form label.is-colorball-checkbox.is-color-eggshell input:checked 
 
 .tooltip .text {
   visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s;
   width: 7.5rem;
   background-color: black;
   color: #fff;
@@ -19972,7 +19974,6 @@ form.is-search-form label.is-colorball-checkbox.is-color-eggshell input:checked 
   border-radius: 0.375rem;
   padding: 0.625rem 0;
   position: absolute;
-  z-index: 1;
   bottom: 120%;
   left: 50%;
   margin-left: -3.75rem;
@@ -19993,6 +19994,7 @@ form.is-search-form label.is-colorball-checkbox.is-color-eggshell input:checked 
 
 .tooltip:hover .text {
   visibility: visible;
+  opacity: 1;
 }
 
 .at.follows {
