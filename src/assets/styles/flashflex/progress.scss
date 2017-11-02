@@ -1,0 +1,13 @@
+////////////////////////////////////////////////////////////////////
+// Progress
+
+.at.progress {
+    background: #eeeeef;
+
+	.bar {
+	    height: p(5);
+	    background-color: color(primary);
+	    transition: all .3s ease,;
+	}
+
+}

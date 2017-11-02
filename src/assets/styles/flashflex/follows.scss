@@ -1,0 +1,16 @@
+////////////////////////////////////////////////////////////////////
+// Follows
+
+.at.follows {
+	text-align: center;
+
+	.avatar { margin-bottom: p(10); }
+
+	.name { font-weight: $weight-semibold; }
+	
+	.type {
+		font-size: p(13);
+		font-weight: $weight-semibold;
+		@extend .text-muted;
+	}
+}
