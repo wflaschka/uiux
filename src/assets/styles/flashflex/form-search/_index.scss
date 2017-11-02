@@ -5,8 +5,9 @@
 ////////////////////////////////////////////////////////////////////
 
 form.is-search-form {
-	border: 1px dotted color(gray);
+	// border: 1px dotted color(gray);
 
+	z-index: z('search-form');
     @import "variables.scss";
 
     // Menu and dropdown layout 
