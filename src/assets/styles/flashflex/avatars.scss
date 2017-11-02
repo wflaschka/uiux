@@ -101,20 +101,22 @@
 
         box-sizing: content-box;
 
-        @extend .fa;
-        @extend .fa-plus;
+        @include at;
+        @extend .at-arrows-plus;
 
-        padding: 0.5em;
-        font-size: 0.5em;
-        line-height: 0.5rem;
-        text-indent: -0.08rem;
+        color: white;
+        padding: 0.5rem;
+        font-size: p(9);
+        line-height: p(5);
+        text-indent: p(-1);
 
         background: $bg-color-light;
         &.follow {
             background: $primary-color;
         }
         &.followed {
-            background: blue;
+            background: black;
+            @extend .at-arrows-minus;
         }
     }
 }
