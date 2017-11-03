@@ -25160,6 +25160,187 @@ select {
   min-height: 2.875rem;
 }
 
+.tabs {
+  -webkit-overflow-scrolling: touch;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  align-items: stretch;
+  display: flex;
+  font-size: 1rem;
+  justify-content: space-between;
+  overflow: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.tabs:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.tabs a {
+  align-items: center;
+  border-bottom-color: #a5a5a5;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  color: rgba(25, 25, 25, 0.87);
+  display: flex;
+  justify-content: center;
+  margin-bottom: -1px;
+  padding: 0.5em 1em;
+  vertical-align: top;
+}
+
+.tabs a:hover {
+  border-bottom-color: rgba(25, 25, 25, 0.87);
+  color: rgba(25, 25, 25, 0.87);
+}
+
+.tabs li {
+  display: block;
+}
+
+.tabs li.is-active a {
+  border-bottom-color: #E09D00;
+  color: #E09D00;
+}
+
+.tabs ul {
+  align-items: center;
+  border-bottom-color: #a5a5a5;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  display: flex;
+  flex-grow: 1;
+  flex-shrink: 0;
+  justify-content: flex-start;
+}
+
+.tabs ul.is-left {
+  padding-right: 0.75em;
+}
+
+.tabs ul.is-center {
+  flex: none;
+  justify-content: center;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+}
+
+.tabs ul.is-right {
+  justify-content: flex-end;
+  padding-left: 0.75em;
+}
+
+.tabs .icon:first-child {
+  margin-right: 0.5em;
+}
+
+.tabs .icon:last-child {
+  margin-left: 0.5em;
+}
+
+.tabs.is-centered ul {
+  justify-content: center;
+}
+
+.tabs.is-right ul {
+  justify-content: flex-end;
+}
+
+.tabs.is-boxed a {
+  border: 1px solid transparent;
+  border-radius: 2px 2px 0 0;
+}
+
+.tabs.is-boxed:hover {
+  background-color: #ffffff;
+  border-bottom-color: #a5a5a5;
+}
+
+.tabs.is-boxed li.is-active a {
+  background-color: white;
+  border-color: #a5a5a5;
+  border-bottom-color: transparent !important;
+}
+
+.tabs.is-fullwidth li, form.is-search-form .nav-item.column > .tabs.dropdown-toggle.button li, form.is-search-form .nav-item.column > .button .tabs.button-search li {
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+.tabs.is-toggle a {
+  border-color: #a5a5a5;
+  border-style: solid;
+  border-width: 1px;
+  margin-bottom: 0;
+  position: relative;
+}
+
+.tabs.is-toggle a:hover {
+  background-color: #ffffff;
+  border-color: #b5b5b5;
+  z-index: 2;
+}
+
+.tabs.is-toggle li + li {
+  margin-left: -1px;
+}
+
+.tabs.is-toggle li:first-child a {
+  border-radius: 2px 0 0 2px;
+}
+
+.tabs.is-toggle li:last-child a {
+  border-radius: 0 2px 2px 0;
+}
+
+.tabs.is-toggle li.is-active a {
+  background-color: #E09D00;
+  border-color: #E09D00;
+  color: findColorInvert(#00d1b2);
+  z-index: 1;
+}
+
+.tabs.is-toggle ul {
+  border-bottom: none;
+}
+
+.tabs.is-small {
+  font-size: 0.75rem;
+}
+
+.tabs.is-medium {
+  font-size: 1.25rem;
+}
+
+.tabs.is-large {
+  font-size: 1.5rem;
+}
+
+.tabs ul {
+  padding: 0;
+}
+
+.tabs a {
+  cursor: pointer;
+  padding: 0.625rem 3.75rem;
+}
+
+.tabs-container {
+  margin: auto;
+}
+
+.tabs-container .tab-content {
+  display: none;
+}
+
+.tabs-container .tab-content.is-active {
+  display: inherit;
+}
+
 .avatar {
   font-size: 1.2rem;
   height: 2.4rem;

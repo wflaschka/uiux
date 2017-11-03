@@ -1,0 +1,23 @@
+.tabs {
+
+    ul {
+        padding: 0;
+    }
+
+    a {
+        cursor: pointer;
+        padding: p(10) p(60);
+    }
+}
+
+.tabs-container {
+    margin: auto;
+
+    .tab-content {
+        display: none;
+    }
+
+    .tab-content.is-active {
+        display: inherit;
+    }
+}
