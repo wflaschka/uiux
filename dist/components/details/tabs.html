@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ArtTap UI/UX Patterns</title>
+
+    <link rel="stylesheet" type="text/css" href="/assets/styles/site.css">
+
+    <script type="text/javascript" src="/assets/scripts/jquery-3.1.1.js"></script>
+    <script type="text/javascript" src="/assets/scripts/site.js"></script>
+    <script type="text/javascript" src="/assets/scripts/jquery.modal.js"></script>
+    <script type="text/javascript" src="/assets/scripts/select2/select2.full.js"></script>
+    <script type="text/javascript" src="/assets/scripts/slick.min.js"></script>
+    <script type="text/javascript" src="/assets/scripts/quill.min.js"></script>
+
+    <!-- <script type="text/javascript" src="/assets/scripts/semantic-ui/api.js"></script> -->
+    <!-- <script type="text/javascript" src="/assets/scripts/semantic-ui/dropdown.js"></script> -->
+    <!-- <script type="text/javascript" src="/assets/scripts/semantic-ui/form.js"></script> -->
+    <!-- <script type="text/javascript" src="/assets/scripts/semantic-ui/transition.js"></script> -->
+</head>
+<body id="prototype-page-component-only">
+
+<div class="tabs is-centered">
+	<ul>
+		<li data-tab="tab_artwork" class="is-active"><a>Artwork</a></li>
+		<li data-tab="tab_biography"><a>Biography</a></li>
+		<li data-tab="tab_shows"><a>Shows</a></li>
+		<li data-tab="tab_social"><a>Social</a></li>
+	</ul>
+</div><!-- .tabs -->
+
+<div class="tabs-container" style="max-width: 580px;">
+
+	<div id="tab_artwork" class="tab-content is-active">
+		<p>Artwork</p>
+	</div><!-- #tab_artwork -->
+
+	<div id="tab_biography" class="tab-content">
+		<div class="see-more">
+			<div class="fade-info text-left">
+				<p>My artwork takes the form of tangible representation on paper in questioning the role of the photographic image in the contemporary art world. Through extensive research and informed instincts, my projects seek to articulate the aesthetic tension created between performative aspect and emotional response through the conscious awareness of the camera. The aesthetics in my artwork seek to enable an initial visual seduction of mechanical perfection and superficial relationships, which establish itself as a façade against the poetics of imperfect beauty and capricious nature of inter-human behaviour.</p>
+
+				<p>My artwork takes the form of tangible representation on paper in questioning the role of the photographic image in the contemporary art world. Through extensive research and informed instincts, my projects seek to articulate the aesthetic tension created between performative aspect and emotional response through the conscious awareness of the camera. The aesthetics in my artwork seek to enable an initial visual seduction of mechanical perfection and superficial relationships, which establish itself as a façade against the poetics of imperfect beauty and capricious nature of inter-human behaviour.</p>
+
+				<p>My artwork takes the form of tangible representation on paper in questioning the role of the photographic image in the contemporary art world. Through extensive research and informed instincts, my projects seek to articulate the aesthetic tension created between performative aspect and emotional response through the conscious awareness of the camera. The aesthetics in my artwork seek to enable an initial visual seduction of mechanical perfection and superficial relationships, which establish itself as a façade against the poetics of imperfect beauty and capricious nature of inter-human behaviour.</p>
+			</div>
+			<div class="action fade-info-action"><a href="#">See More</a></div>
+		</div>
+	</div><!-- #tab_biography -->
+
+	<div id="tab_shows" class="tab-content">
+		<div class="see-more">
+			<div class="fade-info text-left">
+				<div>Solo Shows</div>
+				<p>2017 - Blue.Seventeen, Gallery Name Philipp von Rosen Galerie, New York (Upcoming)</p>
+				<p>2014 - Yelena Popova | Drying Time, Paradise  Row, London</p>
+
+				<hr>
+
+				<div>Group Shows</div>
+				<p>2017 - Blue.Seventeen, Osnova Gallery, Moscow</p>
+
+				<hr>
+
+				<div>Fair History</div>
+				<p>2017 - Blue.Seventeen, Gallery Name Philipp von Rosen Galerie, New York (Upcoming)</p>
+				<p>2017 - Philipp von Rosen Galerie at Art Cologne 2017, Köln</p>
+				<p>2016 - Philipp von Rosen Galerie at Art Cologne 2016, Köln</p>
+				<p>2014 - Paradise Row at Art Brussels 2014</p>
+			</div>
+			<div class="action fade-info-action"><a href="#">See More</a></div>
+		</div>
+	</div><!-- #tab_shows -->
+
+	<div id="tab_social" class="tab-content">
+		<p>Social</p>
+	</div><!-- #tab_social -->
+
+</div><!-- .tabs-container -->
+
+<script>
+	defer(function() {
+		$('.tabs li').on( "click", function(e) {
+			var tab_id = $(this).attr('data-tab');
+
+			$('.tabs li').removeClass('is-active');
+			$('.tab-content').removeClass('is-active');
+
+			$(this).addClass('is-active');
+			$("#"+tab_id).addClass('is-active');
+		})
+	});
+</script>
+
+</body>
+</html>
+
+
