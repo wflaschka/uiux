@@ -5,13 +5,11 @@
 	width: 300px;
 	margin-bottom: 2rem;
 
+	h4 { margin: 0px; }
+
 	.item {
 		display: flex;
 		align-items: center;
-
-		h4, h5, h6 {
-			margin: 0;
-		}
 		
 		.large {
 			font-size: 50px;
