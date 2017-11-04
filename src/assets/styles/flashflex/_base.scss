@@ -158,8 +158,9 @@
 		$border-width: $unit-o !default;
 		$border-width-lg: $unit-h !default;
 		@import "avatars.scss";
-		@import "artist-inbox.scss";
-		@import "artist-inbox-message.scss";
+		@import "dropdown.scss";
+		@import "inbox.scss";
+		@import "inbox-message.scss";
 
 
 
