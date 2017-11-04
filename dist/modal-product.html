@@ -34,61 +34,96 @@
         <div class="row middle-xs">
             <div class="col-xs">
                 <div class="row begin-xs middle-xs">
-                    <div class="navigation-trigger-hamburger centered middle aligned column col-xs-4 col-sm-2 col-md-3">
-                        <i class="icon-hamburger"></i>
-                        <!-- <i class="icon-hamburger-active"></i> -->
-                    </div>
-                    <div id="header-navigation-menu" class="navigation-dropdown">
-                        <ul>
-                            <li>Home</li>
-                            <li>Newest Work</li>
-                            <li>
-                                Popular Searches
-                                <i class="icon-disclosure"></i>
+                    <div class="centered middle aligned column col-xs-4 col-sm-2 col-md-3">
+                        <div class="at dropdown mr50">
+                            <i class="fa fa-bars opener hide-on-open"></i>
+                            <i class="at at-arrows-remove opener show-on-open"></i>
+                            <div class="content navigation-dropdown main-menu">
                                 <ul>
-                                    <li>Paintings</li>
-                                    <li>Photographs</li>
-                                    <li>Prints &amp; Multiples</li>
-                                    <li>Under $500</li>
-                                    <li>Under $1000</li>
-                                    <li>Under $2500</li>
+                                    <li>Home</li>
+                                    <li>Newest Work</li>
+                                    <li>
+                                        Popular Searches
+                                        <i class="icon-disclosure"></i>
+                                        <ul>
+                                            <li>Paintings</li>
+                                            <li>Photographs</li>
+                                            <li>Prints &amp; Multiples</li>
+                                            <li>Under $500</li>
+                                            <li>Under $1000</li>
+                                            <li>Under $2500</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        Featured Artists
+                                        <i class="icon-disclosure"></i>
+                                        <ul>
+                                            <li>Alex Kwok</li>
+                                            <li>Camille Oudinot</li>
+                                            <li>Eloise Dumas</li>
+                                            <li>Lorraine Simms</li>
+                                            <li>Shelley Reeves</li>
+                                        </ul>
+                                    </li>
+                                    <li>About Art Tap</li>
+                                    <li>
+                                        Support
+                                        <i class="icon-disclosure"></i>
+                                        <ul>
+                                            <li>Support</li>
+                                            <li>FAQs</li>
+                                            <li>Partnerships</li>
+                                            <li>Contact Us</li>
+                                        </ul>
+                                    </li>
                                 </ul>
-                            </li>
-                            <li>
-                                Featured Artists
-                                <i class="icon-disclosure"></i>
-                                <ul>
-                                    <li>Alex Kwok</li>
-                                    <li>Camille Oudinot</li>
-                                    <li>Eloise Dumas</li>
-                                    <li>Lorraine Simms</li>
-                                    <li>Shelley Reeves</li>
-                                </ul>
-                            </li>
-                            <li>About Art Tap</li>
-                            <li>
-                                Support
-                                <i class="icon-disclosure"></i>
-                                <ul>
-                                    <li>Support</li>
-                                    <li>FAQs</li>
-                                    <li>Partnerships</li>
-                                    <li>Contact Us</li>
-                                </ul>
-                            </li>
-                        </ul>
+                            </div>
+                        </div><!-- .at.at.dropdown -->
                     </div>
                     <div class="search-wrap center middle aligned column col-xs-4">
-                        <div class="box">
-                            <div class="search-wrap-closed">
+                        <div class="at dropdown">
+                            <span class="opener hide-on-open">
                                 <i class="fa fa-search"></i>
                                 <span class="hide-on-sm-down">Search</span>
-                            </div>
-                            <div class="search-wrap-opened">
+                            </span>
+                            <span class="opener show-on-open">
                                 <i class="at-arrows-remove"></i>
                                 <span class="hide-on-sm-down">Close</span>
-                            </div>
-                        </div>
+                            </span>
+                            <div class="content search">
+                                <form class="search-form" action="">
+                                    <div class="search-input-wrap">
+                                        <input class="search-input" name="search" type="search" placeholder="Search ArtTap.com" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+                                        <span class="at at-arrows-right search-submit"></span>
+                                    </div>
+
+
+                                    <div class="row">
+                                        <div class="col-xs-6 col-sm-4 col-md-3 col-xl-4">
+                                            <ul class="search-links">
+                                                <li>Recent Searches</li>
+                                                <li><a href="#">Painting</a></li>
+                                                <li><a href="#">Photography</a></li>
+                                                <li><a href="#">Prints &amp; Multiples </a></li>
+                                                <li><a href="#">Art Under $500</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-4 col-md-3 col-xl-4">
+                                            <ul class="search-links">
+                                                <li>Recent Searches</li>
+                                                <li><a href="#">Painting</a></li>
+                                                <li><a href="#">Photography</a></li>
+                                                <li><a href="#">Prints &amp; Multiples </a></li>
+                                                <li><a href="#">Art Under $500</a></li>
+                                                <li><a href="#">Art Under $1000</a></li>
+                                                <li><a href="#">Art Under $2500</a></li>
+                                                <li><a href="#">Art Under $5000</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div><!-- .search -->
+                        </div><!-- .at.at.dropdown -->
                     </div>
                 </div>
             </div>
@@ -97,31 +132,36 @@
             </a>
             <div class="col-xs">
                 <div class="row end-xs middle-xs">
-                    <div class="account-navigation-trigger-hamburger center middle aligned column col-xs-4 col-sm-8 col-md-8">
+                    <div class="center middle aligned column col-xs-4 col-sm-8 col-md-8">
                         <div class="box">
-                            <div class="avatar avatar-sm">
-                                <img src="/assets/images/profiles/person-3.jpg">
-                                <div class="avatar-presence online"></div>
-                            </div>
-                            <span class="hide-on-sm-down">My Account</span>
-                            <i class="icon-disclosure hide-on-sm-down"></i>
+                            <div class="at dropdown mr50">
+                                <div class="opener">
+                                    <div class="avatar avatar-sm">
+                                        <img src="/assets/images/profiles/person-3.jpg">
+                                        <div class="avatar-presence online"></div>
+                                    </div>
+                                    <span class="hide-on-sm-down">My Account</span>
+                                    <i class="at at-arrows-down opener hide-on-open hide-on-sm-down"></i>
+                                    <i class="at at-arrows-up opener show-on-open hide-on-sm-down"></i>
+                                </div>
+                                <div class="content navigation-dropdown">
+                                    <ul>
+                                        <li>Dashboard</li>
+                                        <li>Artist Profile</li>
+                                        <li><span class="count count-primary">3</span></badge>Messages</li>
+                                        <li><span class="count count-primary">2</span>Orders</li>
+                                        <li>Payment Options</li>
+                                        <li>Shipping</li>
+                                        <li>Collections</li>
+                                        <li>Hearts</li>
+                                        <li>Art Match</li>
+                                        <li>Follows</li>
+                                        <li>Support</li>
+                                        <li>Sign Out</li>
+                                    </ul>
+                                </div>
+                            </div><!-- .at.at.dropdown -->
                         </div>
-                    </div>
-                    <div id="account-header-navigation-menu" class="account-navigation-dropdown">
-                        <ul>
-                            <li>Dashboard</li>
-                            <li>Artist Profile</li>
-                            <li><span class="count count-primary">3</span></badge>Messages</li>
-                            <li><span class="count count-primary">2</span>Orders</li>
-                            <li>Payment Options</li>
-                            <li>Shipping</li>
-                            <li>Collections</li>
-                            <li>Hearts</li>
-                            <li>Art Match</li>
-                            <li>Follows</li>
-                            <li>Support</li>
-                            <li>Sign Out</li>
-                        </ul>
                     </div>
                     <div class="center middle aligned column col-xs-4 col-md-4">
                         <div class="box">
@@ -135,86 +175,8 @@
     </div>
 </header>
 
-<div class="search">
-    <form class="search-form" action="">
-        <div class="search-input-wrap">
-            <input class="search-input" name="search" type="search" placeholder="Search ArtTap.com" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
-            <span class="at at-arrows-right search-submit"></span>
-        </div>
-
-
-        <div class="row">
-            <div class="col-xs-6 col-sm-4 col-md-3 col-xl-4">
-                <ul class="search-links">
-                    <li>Recent Searches</li>
-                    <li><a href="#">Painting</a></li>
-                    <li><a href="#">Photography</a></li>
-                    <li><a href="#">Prints &amp; Multiples </a></li>
-                    <li><a href="#">Art Under $500</a></li>
-                </ul>
-            </div>
-            <div class="col-xs-6 col-sm-4 col-md-3 col-xl-4">
-                <ul class="search-links">
-                    <li>Recent Searches</li>
-                    <li><a href="#">Painting</a></li>
-                    <li><a href="#">Photography</a></li>
-                    <li><a href="#">Prints &amp; Multiples </a></li>
-                    <li><a href="#">Art Under $500</a></li>
-                    <li><a href="#">Art Under $1000</a></li>
-                    <li><a href="#">Art Under $2500</a></li>
-                    <li><a href="#">Art Under $5000</a></li>
-                </ul>
-            </div>
-        </div>
-    </form>
-</div><!-- .search -->
-
-
     <script type="text/javascript">
         defer(function () {
-
-    // https://stackoverflow.com/questions/1403615/use-jquery-to-hide-a-div-when-the-user-clicks-outside-of-it/7385673#7385673
-    var nav = 0;
-    $(document).on("click", function(e) {
-        if ( nav == 1 ) {
-            console.log('1')
-
-            var container = $("#header-navigation-menu, .navigation-trigger-hamburger");
-
-            // if the target of the click isn't the container nor a descendant of the container
-            if (!container.is(e.target) && container.has(e.target).length === 0) {
-                $('.navigation-dropdown').slideUp('slow');
-                $('.navigation-trigger-hamburger, .navigation-trigger-hamburger .icon-hamburger').removeClass('active');
-                nav = 0;
-            }
-
-
-        } else if ( nav == 2 ) {
-            console.log('2')
-
-            var container = $("#account-header-navigation-menu, .account-navigation-trigger-hamburger");
-
-            // if the target of the click isn't the container nor a descendant of the container
-            if (!container.is(e.target) && container.has(e.target).length === 0) {
-                $('.account-navigation-dropdown').slideUp('slow');
-                $('.account-navigation-trigger-hamburger, .account-navigation-trigger-hamburger .icon-disclosure').removeClass('active');
-                nav = 0;
-            }
-
-        } else if ( nav == 3 ) {
-            console.log('3');
-
-            var container = $(".search, .search-wrap");
-
-            // if the target of the click isn't the container nor a descendant of the container
-            if (!container.is(e.target) && container.has(e.target).length === 0) {
-                $('.search').slideUp('slow');
-                $('.search-wrap').removeClass('active');
-                nav = 0;
-            }
-        }
-    });
-
 
             function searchInputChecker(){
                 // When typing in text fields check if value is valid or not
@@ -237,26 +199,6 @@
                 e.preventDefault();
             });
 
-
-
-            // Header Navi search click toggle text and form
-            $('.search-wrap').on( "click", function(e) {
-                $('.navigation-dropdown, .account-navigation-dropdown').slideUp('slow');
-                $('.navigation-trigger-hamburger, .account-navigation-trigger-hamburger, .navigation-trigger-hamburger .icon-hamburger, .account-navigation-trigger-hamburger .icon-disclosure').removeClass('active');
-
-                if ($('.search').is(':hidden')) {
-                    $('.search').slideDown('slow');
-                    $(this).toggleClass("active");
-                    nav = 3;
-                } else {
-                    $('.search').slideUp('slow');
-                    $(this).toggleClass("active");
-                    nav = 0;
-                }
-                e.preventDefault();
-            });
-
-
             $('.navigation-dropdown li').has('ul').click(function(){
                 submenu = $(this).find('ul');
                 if (submenu.is(':hidden')) {
@@ -265,57 +207,6 @@
                 } else {
                     submenu.slideUp('slow');
                     $(this).removeClass('active');
-                }
-            });
-
-            $('.navigation-trigger-hamburger').click(function() {
-                $('.search, .account-navigation-dropdown').slideUp('slow');
-                $('.search-wrap, .account-navigation-trigger-hamburger, .account-navigation-trigger-hamburger .icon-disclosure').removeClass('active');
-
-                console.log("Hamburger clicked!");
-                if ($('.navigation-dropdown').is(':hidden')) {
-                    $('.navigation-dropdown').slideDown('slow');
-                    $(this).toggleClass("active");
-                    $(this).find('.icon-hamburger').toggleClass("active");
-                    console.log("Hamburger slide down...");
-                    nav = 1;
-                } else {
-                    $('.navigation-dropdown').slideUp('slow');
-                    $(this).toggleClass("active");
-                    $(this).find('.icon-hamburger').toggleClass("active");
-                    console.log("Hamburger slide up...");
-                    nav = 0;
-                }
-            });
-
-            $('.account-navigation-dropdown li').has('ul').click(function(){
-                submenu = $(this).find('ul');
-                if (submenu.is(':hidden')) {
-                    submenu.slideDown('slow');
-                    $(this).addClass('active');
-                } else {
-                    submenu.slideUp('slow');
-                    $(this).removeClass('active');
-                }
-            });
-
-            $('.account-navigation-trigger-hamburger').click(function() {
-                $('.search, .navigation-dropdown').slideUp('slow');
-                $('.search-wrap, .navigation-trigger-hamburger, .navigation-trigger-hamburger .icon-hamburger').removeClass('active');
-
-                console.log("Hamburger clicked!");
-                if ($('.account-navigation-dropdown').is(':hidden')) {
-                    $('.account-navigation-dropdown').slideDown('slow');
-                    $(this).toggleClass("active");
-                    $(this).find('.icon-disclosure').toggleClass("active");
-                    console.log("Hamburger slide down...");
-                    nav = 2;
-                } else {
-                    $('.account-navigation-dropdown').slideUp('slow');
-                    $(this).toggleClass("active");
-                    $(this).find('.icon-disclosure').toggleClass("active");
-                    console.log("Hamburger slide up...");
-                    nav = 0;
                 }
             });
 
@@ -398,33 +289,37 @@
             </div>
 
             <div class="add-to-collection">
-
-                <button class="button is-gray is-outlined">Add to Collection</button>
+                
+                <div class="at dropdown">
+                    <button class="button is-gray is-outlined opener">Add to Collection</button>
+                    <div class="content">
+                        <div class="create">
+                            <div class="field">
+                                <div class="control">
+                                    <input class="input" type="name" placeholder="Name of Collection" value="">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="control">
+                                    <label class="radio mr30">
+                                        <input type="radio" name="question">
+                                        <span></span>
+                                        Public
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="question">
+                                        <span></span>
+                                        Private
+                                    </label>
+                                </div>
+                            </div>
+                            <button class="button is-fullwidth is-black">Create Collection</button>
+                        </div>
+                    </div>
+                </div><!-- .at.at.dropdown -->
                 <button class="button is-gray is-outlined"><i class="fa fa-heart"></i></button>
                 <div class="saved-collection">50 Saved to Collection  | heart 60</div>
 
-                <div class="create">
-                    <div class="field">
-                        <div class="control">
-                            <input class="input" type="name" placeholder="Name of Collection" value="">
-                        </div>
-                    </div>
-                    <div class="field">
-                        <div class="control">
-                            <label class="radio mr30">
-                                <input type="radio" name="question">
-                                <span></span>
-                                Public
-                            </label>
-                            <label class="radio">
-                                <input type="radio" name="question">
-                                <span></span>
-                                Private
-                            </label>
-                        </div>
-                    </div>
-                    <button class="button is-fullwidth is-black">Create Collection</button>
-                </div>
             </div><!-- .add-to-collection -->
 
             <a href="#" class="link-primary mt20 ib">See Full Details</a>
