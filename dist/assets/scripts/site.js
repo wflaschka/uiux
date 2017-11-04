@@ -60,11 +60,58 @@ $(document).ready(function() {
         return false;
     });
     
+    
     ////////////////////////////////////////////////////////////////////
     // See More
     $('.see-more .fade-info-action a').on( "click", function(e) {
         $(this).closest('.see-more').addClass('active');
         e.preventDefault();
     });
+
+
+
+    ////////////////////////////////////////////////////////////////////
+    // Custom Dropdown
+    // Check if any dropdown is open;
+    // If clicked outside of container of that dropdown then hide that dropdown
+    // If another dropdown clicked, then hide others all dropdown except this one clicked
+    //
+
+    // On Click opener
+    $('.opener').on('click', function(e) {
+        e.stopPropagation();
+
+        // get the active dropdown and dropdown content
+        var dropdown = $(this).parents('.at.dropdown'),
+            content = $(this).parents('.at.dropdown').find('.content');
+
+        // Remove class from all dropdown except active
+        $('.at.dropdown').not(dropdown).removeClass('open');
+        // Hide all dropdown content except active
+        $('.at.dropdown .content').not(content).slideUp('slow');
+
+        // Check if active dropdown has class 'open'
+        if ( dropdown.hasClass('open') ) {
+            // then remove class and hide it
+            dropdown.removeClass('open');
+            content.slideUp('slow');
+        } else {
+            // else add class and show it
+            dropdown.addClass('open');
+            content.slideDown('slow');
+        }
+    });
+
+});
+
+$(document).click(function(e) {
+
+    // for Dropdown
+    var dropdownContainer = $('.at.dropdown');
+    // if the target of the click isn't the container nor a descendant of the container
+    if (!dropdownContainer.is(e.target) && dropdownContainer.has(e.target).length === 0) {
+        $('.at.dropdown').removeClass('open');
+        $('.at.dropdown .content').slideUp('slow');
+    }
 
 });

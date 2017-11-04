@@ -4070,8 +4070,7 @@ html {
   content: "\61";
 }
 
-.at-arrows-down:before, .navigation-dropdown ul li .icon-disclosure:before,
-.account-navigation-dropdown ul li .icon-disclosure:before, .account-navigation-trigger-hamburger .icon-disclosure:before {
+.at-arrows-down:before, .navigation-dropdown ul li .icon-disclosure:before {
   content: "\62";
 }
 
@@ -4099,8 +4098,7 @@ html {
   content: "\68";
 }
 
-.at-arrows-up:before, .navigation-dropdown ul li.active .icon-disclosure:before,
-.account-navigation-dropdown ul li.active .icon-disclosure:before, .account-navigation-trigger-hamburger.active .icon-disclosure:before {
+.at-arrows-up:before, .navigation-dropdown ul li.active .icon-disclosure:before {
   content: "\69";
 }
 
@@ -18067,71 +18065,64 @@ hr[documentation]:before {
   max-height: 1.875rem;
 }
 
-.navigation-dropdown,
-.account-navigation-dropdown {
-  display: none;
-  position: absolute;
-  left: 0;
+.navigation-dropdown {
   z-index: 1500;
   background-color: white;
-  top: 60px;
+  text-align: left;
+  transform: translateY(16px);
   padding-top: 1rem;
   padding-bottom: 1rem;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 2px rgba(0, 0, 0, 0.23);
 }
 
+.navigation-dropdown.main-menu {
+  left: -23px;
+}
+
 @media screen and (max-width: 768px) {
-  .navigation-dropdown,
-  .account-navigation-dropdown {
+  .navigation-dropdown {
     top: 50px;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .navigation-dropdown,
-  .account-navigation-dropdown {
+  .navigation-dropdown {
     width: 80vw;
   }
 }
 
 @media screen and (max-width: 767px) and (min-width: 601px) {
-  .navigation-dropdown,
-  .account-navigation-dropdown {
+  .navigation-dropdown {
     width: 50vw;
   }
 }
 
 @media screen and (max-width: 1279px) and (min-width: 769px) {
-  .navigation-dropdown,
-  .account-navigation-dropdown {
+  .navigation-dropdown {
     width: 40vw;
   }
 }
 
 @media screen and (max-width: 1919px) and (min-width: 1281px) {
-  .navigation-dropdown,
-  .account-navigation-dropdown {
+  .navigation-dropdown {
     width: 25vw;
   }
 }
 
 @media screen and (min-width: 1921px) {
-  .navigation-dropdown,
-  .account-navigation-dropdown {
+  .navigation-dropdown {
     width: 15vw;
   }
 }
 
-.navigation-dropdown ul,
-.account-navigation-dropdown ul {
+.navigation-dropdown ul {
   list-style: none;
   padding: 0;
   color: gray;
   font-size: 1rem;
 }
 
-.navigation-dropdown ul li,
-.account-navigation-dropdown ul li {
+.navigation-dropdown ul li {
   flex: 0 1 auto;
   margin: 0;
   padding: 0;
@@ -18140,13 +18131,11 @@ hr[documentation]:before {
   padding: 1rem 3rem;
 }
 
-.navigation-dropdown ul li.active,
-.account-navigation-dropdown ul li.active {
+.navigation-dropdown ul li.active {
   color: black;
 }
 
-.navigation-dropdown ul li .icon-disclosure,
-.account-navigation-dropdown ul li .icon-disclosure {
+.navigation-dropdown ul li .icon-disclosure {
   float: right;
   position: relative;
   top: 0.4375rem;
@@ -18161,8 +18150,7 @@ hr[documentation]:before {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.navigation-dropdown ul li.active .icon-disclosure,
-.account-navigation-dropdown ul li.active .icon-disclosure {
+.navigation-dropdown ul li.active .icon-disclosure {
   font-family: "arttap" !important;
   font-style: normal !important;
   font-weight: normal !important;
@@ -18174,26 +18162,22 @@ hr[documentation]:before {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.navigation-dropdown ul li ul,
-.account-navigation-dropdown ul li ul {
+.navigation-dropdown ul li ul {
   display: none;
   padding: 1rem 0 0 0;
 }
 
-.navigation-dropdown ul li ul li,
-.account-navigation-dropdown ul li ul li {
+.navigation-dropdown ul li ul li {
   font-size: 0.9rem;
   padding-left: 2rem;
 }
 
-.navigation-dropdown ul li.active ul,
-.account-navigation-dropdown ul li.active ul {
+.navigation-dropdown ul li.active ul {
   display: flex;
   flex-direction: column;
 }
 
-.navigation-dropdown .count,
-.account-navigation-dropdown .count {
+.navigation-dropdown .count {
   display: inline-block;
   color: #ffffff;
   background-color: #E09D00;
@@ -18206,60 +18190,11 @@ hr[documentation]:before {
   border-radius: 50%;
 }
 
-.account-navigation-dropdown {
-  text-align: left;
-  left: auto;
-  right: 0px;
-}
-
-.account-navigation-trigger-hamburger {
-  position: relative;
-}
-
-.account-navigation-trigger-hamburger .icon-disclosure {
-  position: relative;
-  top: 0.125rem;
-  left: 0.3125rem;
-  font-family: "arttap" !important;
-  font-style: normal !important;
-  font-weight: normal !important;
-  font-variant: normal !important;
-  text-transform: none !important;
-  speak: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.account-navigation-trigger-hamburger.active .icon-disclosure {
-  font-family: "arttap" !important;
-  font-style: normal !important;
-  font-weight: normal !important;
-  font-variant: normal !important;
-  text-transform: none !important;
-  speak: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.search-wrap-opened {
-  display: none;
-}
-
-.search-wrap.active .search-wrap-opened {
-  display: block;
-}
-
-.search-wrap.active .search-wrap-closed {
-  display: none;
-}
-
 .search {
-  display: none;
-  position: absolute;
-  z-index: 1001;
-  top: 62px;
+  text-align: left;
+  z-index: 1500;
+  left: 0px;
+  transform: translateY(16px);
   width: 100%;
   overflow: hidden;
   background: #fff;
@@ -18269,7 +18204,6 @@ hr[documentation]:before {
 
 @media screen and (max-width: 768px) {
   .search {
-    top: 52px;
     box-shadow: none;
   }
 }
@@ -20282,11 +20216,7 @@ form.is-search-form label.is-colorball-checkbox.is-color-eggshell input:checked 
 }
 
 .product-detail .add-to-collection .create {
-  display: none;
-  position: absolute;
-  top: 44px;
-  left: 0px;
-  width: 100%;
+  width: 21.25rem;
   background: white;
   padding: 1rem;
   border: 1px solid #ccc;
@@ -25456,6 +25386,39 @@ select {
 
 .avatar .avatar-status.followed {
   background: black;
+}
+
+.at.dropdown {
+  display: inline-block;
+}
+
+.at.dropdown.open .show-on-open {
+  display: inline-block;
+}
+
+.at.dropdown.open .hide-on-open {
+  display: none;
+}
+
+.at.dropdown .opener {
+  cursor: pointer;
+}
+
+.at.dropdown .opener.at-arrows-remove, .at.dropdown .header .opener.icon-hamburger.active, .header .at.dropdown .opener.icon-hamburger.active {
+  font-size: 0.75rem;
+}
+
+.at.dropdown .show-on-open {
+  display: none;
+}
+
+.at.dropdown .hide-on-open {
+  display: inline-block;
+}
+
+.at.dropdown .content {
+  position: absolute;
+  display: none;
 }
 
 .inbox-actions {

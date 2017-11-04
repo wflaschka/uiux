@@ -1,0 +1,39 @@
+////////////////////////////////////////////////////////////////////
+// Dropdown
+
+.at.dropdown {
+    // position: relative;
+    display: inline-block;
+
+    &.open {
+
+        .show-on-open {
+            display: inline-block;
+        }
+
+        .hide-on-open {
+            display: none;
+        }
+    }
+
+    .opener {
+        cursor: pointer;
+        &.at-arrows-remove {
+            // resizing arrows remove dude to size issue.
+            font-size: p(12);
+        }
+    }
+
+    .show-on-open {
+        display: none;
+    }
+
+    .hide-on-open {
+        display: inline-block;
+    }
+
+    .content {
+        position: absolute;
+        display: none;
+    }
+}
