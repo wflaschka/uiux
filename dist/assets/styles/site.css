@@ -17903,8 +17903,32 @@ h6 + h6[secondary] {
   border-bottom: 1px solid #333;
 }
 
+@keyframes blinker {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.2;
+  }
+}
+
+[discussion] {
+  color: #ff0000 !important;
+  opacity: 1;
+  animation: blinker 3s linear infinite;
+}
+
 [documentation] {
   color: #2196F3 !important;
+}
+
+[documentation][padded] {
+  padding: 1rem;
+  margin: 1rem;
+}
+
+[documentation][bordered] {
+  border: 1px dotted #2196F3 !important;
 }
 
 hr[documentation] {
@@ -17951,12 +17975,13 @@ hr[documentation]:before {
   flex-direction: column;
   flex-grow: 1;
   font-size: 1rem;
+  padding: 0 0.5rem 0 0.5rem;
+  white-space: nowrap;
 }
 
-.statistics .statistics-row .item h1 {
+.statistics .statistics-row .item h1, .statistics .statistics-row .item h2, .statistics .statistics-row .item h3, .statistics .statistics-row .item h4, .statistics .statistics-row .item h5, .statistics .statistics-row .item h6 {
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-weight: normal;
-  line-height: 3.6rem;
   margin: 0;
 }
 
@@ -18032,6 +18057,12 @@ hr[documentation]:before {
 
 .header.no-shadow {
   box-shadow: none;
+}
+
+.header a {
+  font-weight: normal;
+  color: rgba(25, 25, 25, 0.87);
+  text-decoration: none;
 }
 
 .header .icon-hamburger.active {
@@ -18576,6 +18607,10 @@ footer .copyright-text {
   height: 240px;
   width: 150px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+}
+
+.card.artist a {
+  text-decoration: none;
 }
 
 .card.artist .image {
@@ -19974,6 +20009,7 @@ form.is-search-form label.is-colorball-checkbox.is-color-eggshell input:checked 
   border-radius: 0.375rem;
   padding: 0.625rem 0;
   position: absolute;
+  z-index: 9;
   bottom: 120%;
   left: 50%;
   margin-left: -3.75rem;
@@ -25191,6 +25227,10 @@ select {
   z-index: 2;
 }
 
+.avatar {
+  background: #E09D00;
+}
+
 .avatar .avatar-status {
   box-sizing: content-box;
   font-family: "arttap" !important;
@@ -25207,7 +25247,7 @@ select {
   font-size: 0.5625rem;
   line-height: 0.3125rem;
   text-indent: -0.0625rem;
-  background: #a5a5a5;
+  transition: background-color 0.5s ease;
 }
 
 .avatar .avatar-status.follow {
@@ -25215,7 +25255,7 @@ select {
 }
 
 .avatar .avatar-status.followed {
-  background: black;
+  background: #141414;
 }
 
 .inbox-actions {
