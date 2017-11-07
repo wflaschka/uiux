@@ -192,3 +192,51 @@ hr[documentation] {
         border-radius: 20px; 
     }
 }
+
+// Reset List Style
+.list-unstyled {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+
+// single line separator
+.sep {
+    height: 1px;
+    background-color: $color-border;
+    margin: 0  0 p(30);
+}
+
+// single line separator with overlay text
+.sep-text {
+    position: relative;
+    border-bottom: 1px solid $color-border;
+    margin: p(20) 0;
+
+    span {
+        color: color(gray);
+        position: absolute;
+        left: 50%;
+        background: white;
+        padding: 0 15px;
+        transform: translateX(-50%);
+        top: -13px;
+    }
+}
+
+// Success Check with Circle Round Border 
+.success-check {
+    border: 2px solid #53c14a;
+    color: #53c14a;
+    border-radius: 50%;
+    padding: p(17);
+    font-weight: normal;
+    font-size: p(25);
+}
+
+// icons fonts size
+
+.at.at-arrows-remove {
+    font-size: p(10); // remove size is bigger than normal icons so resizing to 10px
+}

@@ -35,7 +35,10 @@
 	    &:focus {
 			background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.75) 100%);
 	    }
-	    &.slick-disabled:before {
+	    &.slick-disabled {
+	    	display: none !important;
+	    	&:before {
+	    	}
 	    }
 	    &:before {
 	    	@include at;

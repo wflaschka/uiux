@@ -80,6 +80,7 @@
                             </div>
                         </div><!-- .at.at.dropdown -->
                     </div>
+
                     <div class="search-wrap center middle aligned column col-xs-4">
                         <div class="at dropdown">
                             <span class="opener hide-on-open">
@@ -87,7 +88,7 @@
                                 <span class="hide-on-sm-down">Search</span>
                             </span>
                             <span class="opener show-on-open">
-                                <i class="at-arrows-remove"></i>
+                                <i class="at at-arrows-remove"></i>
                                 <span class="hide-on-sm-down">Close</span>
                             </span>
                             <div class="content search">
@@ -125,93 +126,72 @@
                             </div><!-- .search -->
                         </div><!-- .at.at.dropdown -->
                     </div>
+                    <div class="hide-on-md-and-down center middle aligned column col-md-5">
+                        <div class="box">
+                            <a class="link-black" href="apply-as-an-artist.html">Apply as an Artist</a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <a href="/" class="logo center middle aligned column col-xs center-xs middle-xs">
-                <img class="responsive height" src="/assets/images/graphics/Logo/ArtTap_Logo-Yellow.svg">
+                <img class="responsive height" src="assets/images/graphics/Logo/ArtTap_Logo-Yellow.svg">
             </a>
             <div class="col-xs">
                 <div class="row end-xs middle-xs">
                     <div class="center middle aligned column col-xs-4 col-sm-8 col-md-8">
                         <div class="box">
-                            <div class="at dropdown mr50">
-                                <div class="opener">
-                                    <div class="avatar avatar-sm">
-                                        <img src="/assets/images/profiles/person-3.jpg">
-                                        <div class="avatar-presence online"></div>
-                                    </div>
-                                    <span class="hide-on-sm-down">My Account</span>
-                                    <i class="at at-arrows-down opener hide-on-open hide-on-sm-down"></i>
-                                    <i class="at at-arrows-up opener show-on-open hide-on-sm-down"></i>
-                                </div>
-                                <div class="content navigation-dropdown">
-                                    <ul>
-                                        <li>Dashboard</li>
-                                        <li>Artist Profile</li>
-                                        <li><span class="count count-primary">3</span></badge>Messages</li>
-                                        <li><span class="count count-primary">2</span>Orders</li>
-                                        <li>Payment Options</li>
-                                        <li>Shipping</li>
-                                        <li>Collections</li>
-                                        <li>Hearts</li>
-                                        <li>Art Match</li>
-                                        <li>Follows</li>
-                                        <li>Support</li>
-                                        <li>Sign Out</li>
-                                    </ul>
-                                </div>
-                            </div><!-- .at.at.dropdown -->
+                            <a class="link-black" href="register.html"><i class="fa fa-user"></i> <span class="hide-on-sm-down">Sign in | Register</span></a>
                         </div>
                     </div>
                     <div class="center middle aligned column col-xs-4 col-md-4">
                         <div class="box">
                             <i class="fa fa-shopping-cart"></i>
-                            <span class="hide-on-sm-down">Cart</span>
+                            <span class="hide-on-sm-and-down">Cart</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</header>
 
-    <script type="text/javascript">
-        defer(function () {
+<script type="text/javascript">
+    defer(function () {
 
-            function searchInputChecker(){
-                // When typing in text fields check if value is valid or not
-                // $( '.search--input' ).blur( function() { checkSearchInputValue(); });
-                $( '.search-input' ).keyup( function() { checkSearchInputValue(); });
+        function searchInputChecker(){
+            // When typing in text fields check if value is valid or not
+            // $( '.search--input' ).blur( function() { checkSearchInputValue(); });
+            $( '.search-input' ).keyup( function() { checkSearchInputValue(); });
+        }
+        function checkSearchInputValue(){
+            // If search input has value, show arrow else hide
+            if ( ( !$( '.search-input').val() == '') ) {
+                $('.search-submit').show();
+            } else {
+                $('.search-submit').hide();
             }
-            function checkSearchInputValue(){
-                // If search input has value, show arrow else hide
-                if ( ( !$( '.search-input').val() == '') ) {
-                    $('.search-submit').show();
-                } else {
-                    $('.search-submit').hide();
-                }
-            }
-            searchInputChecker();
+        }
+        searchInputChecker();
 
-            // submit search form on click right arrow
-            $('.search-submit').on( "click", function(e) {
-                $(this).closest('form').submit();
-                e.preventDefault();
-            });
-
-            $('.navigation-dropdown li').has('ul').click(function(){
-                submenu = $(this).find('ul');
-                if (submenu.is(':hidden')) {
-                    submenu.slideDown('slow');
-                    $(this).addClass('active');
-                } else {
-                    submenu.slideUp('slow');
-                    $(this).removeClass('active');
-                }
-            });
-
+        // submit search form on click right arrow
+        $('.search-submit').on( "click", function(e) {
+            $(this).closest('form').submit();
+            e.preventDefault();
         });
-    </script>
+
+        $('.navigation-dropdown li').has('ul').click(function(){
+            submenu = $(this).find('ul');
+            if (submenu.is(':hidden')) {
+                submenu.slideDown('slow');
+                $(this).addClass('active');
+            } else {
+                submenu.slideUp('slow');
+                $(this).removeClass('active');
+            }
+        });
+
+    });
+</script>
+</header>
 
 <div class="pt40"></div>
 
@@ -375,9 +355,6 @@
 </div><!-- .apply-artist -->
 
 
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
 <footer>
     <div class="container-fluid">
 

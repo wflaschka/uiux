@@ -1,8 +1,121 @@
 {{> header-no-shadow }}
-<div class="row">
-  <div class="col-xs-8">
-    <div class="box">
-      <img class="responsive" src="../../assets/images/graphics/register-login.jpg">
-    </div>
-  </div>
+
+<div class="page-register page">
+
+<div class="container-fluid pl0">
+	<div class="row middle-xs">
+	  <div class="col-xs-8 pl0">
+	    <div class="box">
+	      <img class="responsive" src="../../assets/images/graphics/register-login.jpg">
+	    </div>
+	  </div>
+	  <div class="col-xs-offset-2 col-xs-3">
+	    <div class="box">
+
+			<div class="section-page is-register" style="display: non;">
+				<h4>Register</h4>
+				<p>Discover curated art for less. Buy pieces directly from professional artists.</p>
+				<div class="sep"></div>
+				<div class="field">
+					<label class="label">Name</label>
+					<div class="control">
+						<input class="input" type="name" placeholder="" value="">
+					</div>
+				</div>
+				<div class="field">
+					<label class="label">Email</label>
+					<div class="control">
+						<input class="input" type="name" placeholder="" value="">
+					</div>
+				</div>
+				<div class="field">
+					<label class="label">Password</label>
+					<div class="control">
+						<input class="input" type="name" placeholder="" value="">
+					</div>
+				</div>
+				<a class="button is-fullwidth mt30 page-change" data-page="is-registered">Register</a>
+				<div class="sep-text"><span>or</span></div>
+				<a class="button is-blueroyal is-fullwidth mb10">Sign Up with Facebook</a>
+				<a class="button is-bluesea is-fullwidth">Sign Up with Linked</a>
+				<p class="text-center">in Already have an account? <a class="link-primary page-change" data-page="is-sign-in" href="#">Sign In</a></p>
+				<div class="text-center"><a class="link-black" href="#">Terms of Use</a> and <a class="link-black" href="#">Privacy Policy</a></div>
+			</div><!-- .section-register -->
+
+
+			<div class="section-page is-registered" style="display: none;">
+				<h4>Register</h4>
+				<p>Discover curated art for less. Buy pieces directly from professional artists.</p>
+				<div class="sep"></div>
+				<div class="text-center mb40">
+					<i class="fa fa-check success-check"></i>
+					<p>Success! Check your mailbox.</p>
+				</div>
+				<a class="button is-fullwidth" href="index.html">Discover Art</a>
+				<div class="text-center mt50"><a class="link-black" href="#">Terms of Use</a> and <a class="link-black" href="#">Privacy Policy</a></div>
+			</div><!-- .section-register -->
+
+
+			<div class="section-page is-sign-in" style="display: none;">
+				<h4>Sign In</h4>
+				<p>Discover curated art for less. Buy pieces directly from professional artists.</p>
+				<div class="sep"></div>
+				<div class="field">
+					<label class="label">Email</label>
+					<div class="control">
+						<input class="input" type="name" placeholder="" value="">
+					</div>
+				</div>
+				<div class="field">
+					<label class="label">Password <a class="pull-right link-primary page-change" data-page="is-reset-password" href="#">Forgot your password?</a></label>
+					<div class="control">
+						<input class="input" type="name" placeholder="" value="">
+					</div>
+				</div>
+				<a class="button is-fullwidth mt30" href="index.html">Sign In</a>
+				<p class="text-center">Don't have an account? <a class="link-primary page-change" data-page="is-register" href="#">Register</a></p>
+				<div class="text-center"><a class="link-black" href="#">Terms of Use</a> and <a class="link-black" href="#">Privacy Policy</a></div>
+			</div><!-- .section-sign-in -->
+
+
+			<div class="section-page is-reset-password" style="display: none;">
+				<h4>Reset Password</h4>
+				<p>Please enter your email address.</p>
+				<div class="sep"></div>
+				<div class="field">
+					<label class="label">Email</label>
+					<div class="control">
+						<input class="input" type="name" placeholder="" value="">
+					</div>
+				</div>
+				<a class="button is-fullwidth mt30 page-change" data-page="is-reset-password-sent">Reset</a>
+				<p class="text-center">Don't have an account? <a class="link-primary page-change" data-page="is-register" href="#">Register</a></p>
+			</div><!-- .section-reset-password -->
+
+			<div class="section-page is-reset-password-sent" style="display: none;">
+				<h4>Thank You!</h4>
+				<p>We've sent you an email with a link to reset your password.</p>
+				<div class="sep"></div>
+				<a class="button is-fullwidth" href="index.html">Discover Art</a>
+			</div><!-- .section-reset-password-sent -->
+
+	    </div>
+	  </div>
+	</div>
 </div>
+
+</div><!-- .page-register -->
+
+<script>
+
+defer(function() {
+	$('.page-change').on( "click", function(e) {
+		var page = ".section-page." + $(this).attr('data-page');
+		console.log(page);
+
+		$('.section-page').hide();
+		$(page).show();
+	})
+});
+
+</script>

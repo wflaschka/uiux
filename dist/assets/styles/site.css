@@ -17924,6 +17924,47 @@ hr[documentation]:before {
   border-radius: 20px;
 }
 
+.list-unstyled {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.sep {
+  height: 1px;
+  background-color: #d9d9d9;
+  margin: 0 0 1.875rem;
+}
+
+.sep-text {
+  position: relative;
+  border-bottom: 1px solid #d9d9d9;
+  margin: 1.25rem 0;
+}
+
+.sep-text span {
+  color: #8B8B8B;
+  position: absolute;
+  left: 50%;
+  background: white;
+  padding: 0 15px;
+  transform: translateX(-50%);
+  top: -13px;
+}
+
+.success-check {
+  border: 2px solid #53c14a;
+  color: #53c14a;
+  border-radius: 50%;
+  padding: 1.0625rem;
+  font-weight: normal;
+  font-size: 1.5625rem;
+}
+
+.at.at-arrows-remove, .header .at.icon-hamburger.active {
+  font-size: 0.625rem;
+}
+
 .statistics {
   width: 100%;
   margin-bottom: 2rem;
@@ -18510,6 +18551,7 @@ footer .copyright-text {
   height: 240px;
   width: 150px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+  margin-bottom: 2px;
 }
 
 .card.artist .image {
@@ -18531,6 +18573,10 @@ footer .copyright-text {
   height: 120px;
   width: 100%;
   text-align: center;
+}
+
+.at.slider .card {
+  width: 150px !important;
 }
 
 .at.accordion {
@@ -25256,7 +25302,7 @@ select {
 
 .tabs a {
   cursor: pointer;
-  padding: 0.625rem 3.75rem;
+  padding: 0.625rem 5rem;
 }
 
 .tabs-container {
@@ -25269,6 +25315,18 @@ select {
 
 .tabs-container .tab-content.is-active {
   display: inherit;
+}
+
+.show {
+  margin-bottom: 2.5rem;
+}
+
+.show .title {
+  font-weight: 500;
+}
+
+.show ul li {
+  margin-bottom: 1.25rem;
 }
 
 .avatar {
@@ -25889,6 +25947,11 @@ select {
 .at.slider .slick-prev:focus,
 .at.slider .slick-next:focus {
   background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.75) 100%);
+}
+
+.at.slider .slick-prev.slick-disabled,
+.at.slider .slick-next.slick-disabled {
+  display: none !important;
 }
 
 .at.slider .slick-prev:before,
@@ -27135,6 +27198,12 @@ body#prototype-index-page a:not(.logo):hover::after {
 
 body#prototype-index-page a:not(.logo):not([href]) {
   border-style: dashed;
+}
+
+body#prototype-index-page .new {
+  font-weight: bold;
+  font-style: italic;
+  color: red;
 }
 
 /*# sourceMappingURL=maps/site.css.map */
