@@ -149,6 +149,10 @@
 		}
 	}
 	&.artist {
+		a {
+			text-decoration: none;
+		}
+
 		height: 240px;
 		width: 150px;
 		box-shadow: $shadow;
