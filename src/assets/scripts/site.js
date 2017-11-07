@@ -35,6 +35,11 @@ $(document).ready(function() {
     // });
 
 
+    $('.header-banner .close').on('click', function(){
+        $(this).closest('.header-banner').hide();
+    });
+
+
 
     ////////////////////////////////////////////////////////////////////
     // Accordion JS
@@ -83,12 +88,12 @@ $(document).ready(function() {
 
         // get the active dropdown and dropdown content
         var dropdown = $(this).parents('.at.dropdown'),
-            content = $(this).parents('.at.dropdown').find('.content');
+            content = $(this).parents('.at.dropdown').find('.dropdown-content');
 
         // Remove class from all dropdown except active
         $('.at.dropdown').not(dropdown).removeClass('open');
         // Hide all dropdown content except active
-        $('.at.dropdown .content').not(content).slideUp('slow');
+        $('.at.dropdown .dropdown-content').not(content).slideUp('slow');
 
         // Check if active dropdown has class 'open'
         if ( dropdown.hasClass('open') ) {
@@ -138,7 +143,7 @@ $(document).click(function(e) {
     // if the target of the click isn't the container nor a descendant of the container
     if (!dropdownContainer.is(e.target) && dropdownContainer.has(e.target).length === 0) {
         $('.at.dropdown').removeClass('open');
-        $('.at.dropdown .content').slideUp('slow');
+        $('.at.dropdown .dropdown-content').slideUp('slow');
     }
 
 });
