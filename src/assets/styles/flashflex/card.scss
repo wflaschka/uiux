@@ -152,6 +152,7 @@
 		height: 240px;
 		width: 150px;
 		box-shadow: $shadow;
+		margin-bottom: 2px; // when using in slick slider, shadow not visible, so added margin 2px to fix the shadow issue.
 		.image {
 			box-shadow: none;
 			height: 120px;
@@ -171,5 +172,12 @@
 			width: 100%;
 			text-align: center;
 		}
+	}
+}
+
+.at.slider {
+	.card {
+		// force width for card in slider to replace auto width given by slider.
+		width: 150px !important;
 	}
 }
