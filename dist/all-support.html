@@ -87,7 +87,7 @@
                                 <span class="hide-on-sm-down">Search</span>
                             </span>
                             <span class="opener show-on-open">
-                                <i class="at-arrows-remove"></i>
+                                <i class="at at-arrows-remove"></i>
                                 <span class="hide-on-sm-down">Close</span>
                             </span>
                             <div class="content search">
@@ -175,43 +175,43 @@
     </div>
 </header>
 
-    <script type="text/javascript">
-        defer(function () {
+<script type="text/javascript">
+    defer(function () {
 
-            function searchInputChecker(){
-                // When typing in text fields check if value is valid or not
-                // $( '.search--input' ).blur( function() { checkSearchInputValue(); });
-                $( '.search-input' ).keyup( function() { checkSearchInputValue(); });
+        function searchInputChecker(){
+            // When typing in text fields check if value is valid or not
+            // $( '.search--input' ).blur( function() { checkSearchInputValue(); });
+            $( '.search-input' ).keyup( function() { checkSearchInputValue(); });
+        }
+        function checkSearchInputValue(){
+            // If search input has value, show arrow else hide
+            if ( ( !$( '.search-input').val() == '') ) {
+                $('.search-submit').show();
+            } else {
+                $('.search-submit').hide();
             }
-            function checkSearchInputValue(){
-                // If search input has value, show arrow else hide
-                if ( ( !$( '.search-input').val() == '') ) {
-                    $('.search-submit').show();
-                } else {
-                    $('.search-submit').hide();
-                }
-            }
-            searchInputChecker();
+        }
+        searchInputChecker();
 
-            // submit search form on click right arrow
-            $('.search-submit').on( "click", function(e) {
-                $(this).closest('form').submit();
-                e.preventDefault();
-            });
-
-            $('.navigation-dropdown li').has('ul').click(function(){
-                submenu = $(this).find('ul');
-                if (submenu.is(':hidden')) {
-                    submenu.slideDown('slow');
-                    $(this).addClass('active');
-                } else {
-                    submenu.slideUp('slow');
-                    $(this).removeClass('active');
-                }
-            });
-
+        // submit search form on click right arrow
+        $('.search-submit').on( "click", function(e) {
+            $(this).closest('form').submit();
+            e.preventDefault();
         });
-    </script>
+
+        $('.navigation-dropdown li').has('ul').click(function(){
+            submenu = $(this).find('ul');
+            if (submenu.is(':hidden')) {
+                submenu.slideDown('slow');
+                $(this).addClass('active');
+            } else {
+                submenu.slideUp('slow');
+                $(this).removeClass('active');
+            }
+        });
+
+    });
+</script>
 
 <div class="page-all-support">
 
@@ -398,9 +398,6 @@
 </div><!-- .page-all-support -->
 
 
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
 <footer>
     <div class="container-fluid">
 

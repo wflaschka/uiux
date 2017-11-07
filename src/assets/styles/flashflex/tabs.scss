@@ -6,7 +6,7 @@
 
     a {
         cursor: pointer;
-        padding: p(10) p(60);
+        padding: p(10) p(80);
     }
 }
 
@@ -19,5 +19,17 @@
 
     .tab-content.is-active {
         display: inherit;
+    }
+}
+
+.show {
+    margin-bottom: p(40);
+    .title {
+        font-weight: $weight-semibold;
+    }
+    ul {
+        li {
+            margin-bottom: p(20);
+        }
     }
 }

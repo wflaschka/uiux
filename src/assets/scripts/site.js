@@ -102,6 +102,33 @@ $(document).ready(function() {
         }
     });
 
+    // Tabs
+    $('.tabs li').on( "click", function(e) {
+        var tab_id = $(this).attr('data-tab');
+
+        $('.tabs li').removeClass('is-active');
+        $('.tab-content').removeClass('is-active');
+
+        $(this).addClass('is-active');
+        $("#"+tab_id).addClass('is-active');
+    })
+
+    // check if Slider exist then run to avoid errors
+    if ( $('.at.slider.slide7').length ) {
+        $('.at.slider.slide7').slick({
+            infinite: false,
+            slidesToShow: 7,
+            slidesToScroll: 7
+        });
+    }
+    if ( $('.at.slider.slide8').length ) {
+        $('.at.slider.slide8').slick({
+            infinite: false,
+            slidesToShow: 8,
+            slidesToScroll: 8
+        });
+    }
+
 });
 
 $(document).click(function(e) {
