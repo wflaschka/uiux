@@ -7,186 +7,192 @@
     background-color: white;
     border-top: 3px solid rgb(223, 158, 38);
     position: relative;
-	z-index: 1000;
+    z-index: 1000;
 
-	@include box_shadow(2);
+    @include box_shadow(2);
 
-	&.no-shadow { box-shadow: none; }
+    &.no-shadow { box-shadow: none; }
 
-	// Hamburger icon
-	.icon-hamburger {
-		@extend .fa;
-		&.active {
-			@include at;
-			@extend .at-arrows-remove;
-		}
-		@extend .fa-bars;
-	}
+    a {
+        font-weight: normal;
+        color: color(text);
+        text-decoration: none;
+    }
+
+    // Hamburger icon
+    .icon-hamburger {
+        @extend .fa;
+        &.active {
+            @include at;
+            @extend .at-arrows-remove;
+        }
+        @extend .fa-bars;
+    }
 
     .row {
-	    .column {
-	    	padding: 0;
-	    	height: $page-element-header-height;
+        .column {
+            padding: 0;
+            height: $page-element-header-height;
 
-			@include for-tablet-portrait-down {
-				height: $page-element-header-mobile-height;
-			}
+            @include for-tablet-portrait-down {
+                height: $page-element-header-mobile-height;
+            }
 
-	    	&.logo {
-	    		padding: 0.4rem 0 0.2rem 0;
-	    		margin: 0;
+            &.logo {
+                padding: 0.4rem 0 0.2rem 0;
+                margin: 0;
 
-	    		img {
-	    			margin: 0 auto;
-	    			max-height: 1.875rem;
-	    		}
-	    	}
-	    }
+                img {
+                    margin: 0 auto;
+                    max-height: 1.875rem;
+                }
+            }
+        }
     }
 
 }
 
 .navigation-dropdown,
 .account-navigation-dropdown {
-	display: none;
-	position: absolute;
-	left: 0;
-	z-index: 1500;
-	background-color: white;
+    display: none;
+    position: absolute;
+    left: 0;
+    z-index: 1500;
+    background-color: white;
 
-	// Positioning: menu height + top border width
-	top: $page-element-header-height;
-	@include for-tablet-portrait-down {
-		top: $page-element-header-mobile-height;
-	}
+    // Positioning: menu height + top border width
+    top: $page-element-header-height;
+    @include for-tablet-portrait-down {
+        top: $page-element-header-mobile-height;
+    }
 
-	@include for-phone-only {
-		width: 80vw;
-	}
-	@include for-tablet-portrait {
-		width: 50vw;
-	}
-	@include for-tablet-landscape {
-		width: 40vw;
-	}
-	@include for-desktop {
-		width: 25vw;
-	}
-	@include for-big-desktop {
-		width: 15vw;
-	}
+    @include for-phone-only {
+        width: 80vw;
+    }
+    @include for-tablet-portrait {
+        width: 50vw;
+    }
+    @include for-tablet-landscape {
+        width: 40vw;
+    }
+    @include for-desktop {
+        width: 25vw;
+    }
+    @include for-big-desktop {
+        width: 15vw;
+    }
 
-	padding-top: 1rem;
-	padding-bottom: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 
-	// Shadows
-	@include box_shadow_topless(2);
+    // Shadows
+    @include box_shadow_topless(2);
 
 
-	ul {
-		list-style: none;
-		padding: 0;
-		color: gray;
-		font-size: 1rem;
+    ul {
+        list-style: none;
+        padding: 0;
+        color: gray;
+        font-size: 1rem;
 
-		li {
-			flex: 0 1 auto;
-			margin: 0;
-			padding: 0;
-			position: relative;
-			transition: all linear 1s;
+        li {
+            flex: 0 1 auto;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            transition: all linear 1s;
 
-			// Appearance
-			padding: 1rem 3rem;
-			&.active {
-				color: black;
-			}
+            // Appearance
+            padding: 1rem 3rem;
+            &.active {
+                color: black;
+            }
 
-			// Disclosure triangle
-			.icon-disclosure {
-				float: right;
-				position: relative;
-				top: p(7);
-				@include at;
-				@extend .at-arrows-down;
-			}
-			&.active .icon-disclosure {
-				@include at;
-				@extend .at-arrows-up;
-			}
+            // Disclosure triangle
+            .icon-disclosure {
+                float: right;
+                position: relative;
+                top: p(7);
+                @include at;
+                @extend .at-arrows-down;
+            }
+            &.active .icon-disclosure {
+                @include at;
+                @extend .at-arrows-up;
+            }
 
-			// Disclosure subnavigation lists
-			ul {
-				display: none;
-				padding: 1rem 0 0 0;
+            // Disclosure subnavigation lists
+            ul {
+                display: none;
+                padding: 1rem 0 0 0;
 
-				li {
-					font-size: 0.9rem;
-					// margin: 0;
-					padding-left: 2rem;
-					// text-indent: 0;
-				}
-			}
-			&.active ul {
-				display: flex;
-				flex-direction: column;
-			}
-		}
-	}
+                li {
+                    font-size: 0.9rem;
+                    // margin: 0;
+                    padding-left: 2rem;
+                    // text-indent: 0;
+                }
+            }
+            &.active ul {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
 
-	.count {
-		display: inline-block;
-	    color: color(white);
-	    background-color: color(primary);
-	    height: 22px;
-	    font-size: .8rem;
-	    position: absolute;
-	    width: 22px;
-	    transform: translate(-150%, 16%);
-	    text-align: center;
-	    border-radius: 50%;
-	}
+    .count {
+        display: inline-block;
+        color: color(white);
+        background-color: color(primary);
+        height: 22px;
+        font-size: .8rem;
+        position: absolute;
+        width: 22px;
+        transform: translate(-150%, 16%);
+        text-align: center;
+        border-radius: 50%;
+    }
 
 }
 
 .account-navigation-dropdown {
-	text-align: left;
-	left: auto;
-	right: 0px;
+    text-align: left;
+    left: auto;
+    right: 0px;
 }
 
 .account-navigation-trigger-hamburger {
-	position: relative;
-	// Disclosure triangle
-	.icon-disclosure {
-		position: relative;
-		top: p(2);
-		left: p(5);
-		@include at;
-		@extend .at-arrows-down;
-	}
-	&.active .icon-disclosure {
-		@include at;
-		@extend .at-arrows-up;
-	}
+    position: relative;
+    // Disclosure triangle
+    .icon-disclosure {
+        position: relative;
+        top: p(2);
+        left: p(5);
+        @include at;
+        @extend .at-arrows-down;
+    }
+    &.active .icon-disclosure {
+        @include at;
+        @extend .at-arrows-up;
+    }
 }
 
 
 .search-wrap-opened { display: none; }
 .search-wrap {
-	&.active {
-		.search-wrap-opened { display: block; }
-		.search-wrap-closed { display: none; }
-	}
+    &.active {
+        .search-wrap-opened { display: block; }
+        .search-wrap-closed { display: none; }
+    }
 }
 
 
 @mixin search-input {
-	color: #333;
-	border: 0;
-	background: transparent;
-	border-radius: 0;
-	-webkit-appearance: none;
+    color: #333;
+    border: 0;
+    background: transparent;
+    border-radius: 0;
+    -webkit-appearance: none;
 
     font-family: $font-family-header;
     font-size: 1.875rem;
@@ -201,71 +207,71 @@
 }
 
 .search {
-	display: none;
-	position: absolute;
-	z-index: 1001;
-	top: $page-element-header-height + 2;
-	@include for-tablet-portrait-down {
-		top: $page-element-header-mobile-height + 2;
-		box-shadow: none;
-	}
-	width: 100%;
-	overflow: hidden;
-	background: #fff;
-	transition: height linear .3s;
-	@include box_shadow(2);
+    display: none;
+    position: absolute;
+    z-index: 1001;
+    top: $page-element-header-height + 2;
+    @include for-tablet-portrait-down {
+        top: $page-element-header-mobile-height + 2;
+        box-shadow: none;
+    }
+    width: 100%;
+    overflow: hidden;
+    background: #fff;
+    transition: height linear .3s;
+    @include box_shadow(2);
 
-	.search-form {
-		width: 75%;
-		@include for-phone-only {
-			width: 90%;
-		}
-		max-width: 900px;
-		margin: 0 auto;
-		padding: 5.5rem 0 0;
-		transform: translateY(-2rem);
-		transition: all linear .3s;
-	}
+    .search-form {
+        width: 75%;
+        @include for-phone-only {
+            width: 90%;
+        }
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 5.5rem 0 0;
+        transform: translateY(-2rem);
+        transition: all linear .3s;
+    }
 
-	.search-input-wrap {
-		position: relative;
-		.at {
-			color: #333;
-			position: absolute;
-			cursor: pointer;
-			top: 0px;
-			right: 0px;
-			font-size: 1.3rem;
-			display: none;
-			&:hover {
-				color: color(primary);
-			}
-		}
-	}
+    .search-input-wrap {
+        position: relative;
+        .at {
+            color: #333;
+            position: absolute;
+            cursor: pointer;
+            top: 0px;
+            right: 0px;
+            font-size: 1.3rem;
+            display: none;
+            &:hover {
+                color: color(primary);
+            }
+        }
+    }
 
-	.search-input {
-		@include search-input;
-	}
+    .search-input {
+        @include search-input;
+    }
 
-	.search-links {
-		padding: 0px;
-		margin: 0px;
-		list-style: none;
-		font-size: .8rem;
+    .search-links {
+        padding: 0px;
+        margin: 0px;
+        list-style: none;
+        font-size: .8rem;
 
-		li {
-			margin-bottom: 1.125rem;
-			a:link,
-			a:visited {
-				color: $link-gray;
-				text-decoration: none;
-			}
-			a:hover,
-			a:active {
-				color: color(primary);
-			}
-		}
-	}
+        li {
+            margin-bottom: 1.125rem;
+            a:link,
+            a:visited {
+                color: $link-gray;
+                text-decoration: none;
+            }
+            a:hover,
+            a:active {
+                color: color(primary);
+            }
+        }
+    }
 
 } //.search
 
