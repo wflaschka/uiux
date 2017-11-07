@@ -45,6 +45,8 @@
   flex-shrink: 0;
   justify-content: center;
 
+  // border: 1px solid red !important;
+
   .title,
   .subtitle {
     margin-bottom: 0;
@@ -56,6 +58,7 @@
   flex-basis: auto;
   flex-grow: 0;
   flex-shrink: 0;
+  // flex-direction: row;
 
   .level-item {
     // Modifiers

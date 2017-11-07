@@ -96,6 +96,7 @@
 // Edit this
 
 .avatar {
+    background: color(primary);
     .avatar-status {
         @extend .avatar-presence;
 
@@ -110,12 +111,13 @@
         line-height: p(5);
         text-indent: p(-1);
 
-        background: $bg-color-light;
+        transition: background-color 0.5s ease;
+
         &.follow {
-            background: $primary-color;
+            background: color(primary);
         }
         &.followed {
-            background: black;
+            background: color(black);
             @extend .at-arrows-minus;
         }
     }
