@@ -171,8 +171,30 @@ h1, h2, h3, h4, h5, h6 {
 // ui.arttap.com dev site stylings
 // Elements with `documentation` get special styling to distinguish
 // from the proper UI/UX of ArtTap. These might be out of date.
+@keyframes blinker {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0.2;
+    }
+}
+[discussion] {
+    color: #ff0000 !important;
+    opacity: 1;
+    // transition: opacity 0.5s linear;
+    animation: blinker 3s linear infinite;
+}
 [documentation] {
     color: #2196F3 !important;
+    &[padded] {
+        padding: 1rem;
+        margin: 1rem;
+    }
+    &[bordered] {
+        border: 1px dotted #2196F3 !important;
+    }
 }
 hr[documentation] {
     // https://codepen.io/ibrahimjabbari/pen/ozinB
