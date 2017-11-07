@@ -52,140 +52,110 @@
 
 }
 
-.navigation-dropdown,
-.account-navigation-dropdown {
-    display: none;
-    position: absolute;
-    left: 0;
-    z-index: 1500;
-    background-color: white;
+.navigation-dropdown {
+	z-index: 1500;
+	background-color: white;
+	text-align: left;
 
-    // Positioning: menu height + top border width
-    top: $page-element-header-height;
-    @include for-tablet-portrait-down {
-        top: $page-element-header-mobile-height;
-    }
+	&.main-menu {
+		left: -23px;
+	}
 
-    @include for-phone-only {
-        width: 80vw;
-    }
-    @include for-tablet-portrait {
-        width: 50vw;
-    }
-    @include for-tablet-landscape {
-        width: 40vw;
-    }
-    @include for-desktop {
-        width: 25vw;
-    }
-    @include for-big-desktop {
-        width: 15vw;
-    }
+	// Positioning: menu height + top border width
+	transform: translateY(16px);
+	// top: $page-element-header-height + -17;
+	@include for-tablet-portrait-down {
+		top: $page-element-header-mobile-height;
+	}
 
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+	@include for-phone-only {
+		width: 80vw;
+	}
+	@include for-tablet-portrait {
+		width: 50vw;
+	}
+	@include for-tablet-landscape {
+		width: 40vw;
+	}
+	@include for-desktop {
+		width: 25vw;
+	}
+	@include for-big-desktop {
+		width: 15vw;
+	}
 
-    // Shadows
-    @include box_shadow_topless(2);
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+
+	// Shadows
+	@include box_shadow_topless(2);
 
 
-    ul {
-        list-style: none;
-        padding: 0;
-        color: gray;
-        font-size: 1rem;
+	ul {
+		list-style: none;
+		padding: 0;
+		color: gray;
+		font-size: 1rem;
 
-        li {
-            flex: 0 1 auto;
-            margin: 0;
-            padding: 0;
-            position: relative;
-            transition: all linear 1s;
+		li {
+			flex: 0 1 auto;
+			margin: 0;
+			padding: 0;
+			position: relative;
+			transition: all linear 1s;
 
-            // Appearance
-            padding: 1rem 3rem;
-            &.active {
-                color: black;
-            }
+			// Appearance
+			padding: 1rem 3rem;
+			&.active {
+				color: black;
+			}
 
-            // Disclosure triangle
-            .icon-disclosure {
-                float: right;
-                position: relative;
-                top: p(7);
-                @include at;
-                @extend .at-arrows-down;
-            }
-            &.active .icon-disclosure {
-                @include at;
-                @extend .at-arrows-up;
-            }
+			// Disclosure triangle
+			.icon-disclosure {
+				float: right;
+				position: relative;
+				top: p(7);
+				@include at;
+				@extend .at-arrows-down;
+			}
+			&.active .icon-disclosure {
+				@include at;
+				@extend .at-arrows-up;
+			}
 
-            // Disclosure subnavigation lists
-            ul {
-                display: none;
-                padding: 1rem 0 0 0;
+			// Disclosure subnavigation lists
+			ul {
+				display: none;
+				padding: 1rem 0 0 0;
 
-                li {
-                    font-size: 0.9rem;
-                    // margin: 0;
-                    padding-left: 2rem;
-                    // text-indent: 0;
-                }
-            }
-            &.active ul {
-                display: flex;
-                flex-direction: column;
-            }
-        }
-    }
+				li {
+					font-size: 0.9rem;
+					// margin: 0;
+					padding-left: 2rem;
+					// text-indent: 0;
+				}
+			}
+			&.active ul {
+				display: flex;
+				flex-direction: column;
+			}
+		}
+	}
 
-    .count {
-        display: inline-block;
-        color: color(white);
-        background-color: color(primary);
-        height: 22px;
-        font-size: .8rem;
-        position: absolute;
-        width: 22px;
-        transform: translate(-150%, 16%);
-        text-align: center;
-        border-radius: 50%;
-    }
+	.count {
+		display: inline-block;
+	    color: color(white);
+	    background-color: color(primary);
+	    height: 22px;
+	    font-size: .8rem;
+	    position: absolute;
+	    width: 22px;
+	    transform: translate(-150%, 16%);
+	    text-align: center;
+	    border-radius: 50%;
+	}
 
 }
-
-.account-navigation-dropdown {
-    text-align: left;
-    left: auto;
-    right: 0px;
-}
-
-.account-navigation-trigger-hamburger {
-    position: relative;
-    // Disclosure triangle
-    .icon-disclosure {
-        position: relative;
-        top: p(2);
-        left: p(5);
-        @include at;
-        @extend .at-arrows-down;
-    }
-    &.active .icon-disclosure {
-        @include at;
-        @extend .at-arrows-up;
-    }
-}
-
-
-.search-wrap-opened { display: none; }
-.search-wrap {
-    &.active {
-        .search-wrap-opened { display: block; }
-        .search-wrap-closed { display: none; }
-    }
-}
-
 
 @mixin search-input {
     color: #333;
@@ -207,6 +177,7 @@
 }
 
 .search {
+<<<<<<< HEAD
     display: none;
     position: absolute;
     z-index: 1001;
@@ -272,6 +243,74 @@
             }
         }
     }
+=======
+	text-align: left;
+	z-index: 1500;
+	left: 0px;
+	transform: translateY(16px);
+	// top: $page-element-header-height + 2;
+	@include for-tablet-portrait-down {
+		// top: $page-element-header-mobile-height + 2;
+		box-shadow: none;
+	}
+	width: 100%;
+	overflow: hidden;
+	background: #fff;
+	transition: height linear .3s;
+	@include box_shadow(2);
+
+	.search-form {
+		width: 75%;
+		@include for-phone-only {
+			width: 90%;
+		}
+		max-width: 900px;
+		margin: 0 auto;
+		padding: 5.5rem 0 0;
+		transform: translateY(-2rem);
+		transition: all linear .3s;
+	}
+
+	.search-input-wrap {
+		position: relative;
+		.at {
+			color: #333;
+			position: absolute;
+			cursor: pointer;
+			top: 0px;
+			right: 0px;
+			font-size: 1.3rem;
+			display: none;
+			&:hover {
+				color: color(primary);
+			}
+		}
+	}
+
+	.search-input {
+		@include search-input;
+	}
+
+	.search-links {
+		padding: 0px;
+		margin: 0px;
+		list-style: none;
+		font-size: .8rem;
+
+		li {
+			margin-bottom: 1.125rem;
+			a:link,
+			a:visited {
+				color: $link-gray;
+				text-decoration: none;
+			}
+			a:hover,
+			a:active {
+				color: color(primary);
+			}
+		}
+	}
+>>>>>>> 03d5df9cda6824b35a57e07badea044d0c6a0eeb
 
 } //.search
 
