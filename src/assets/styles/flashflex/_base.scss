@@ -82,6 +82,8 @@
 		@import "tooltip.scss";
 		@import "follows.scss";
 		@import "progress.scss";
+		@import "user-header.scss";
+
 
 	////////////////////////////////////////////////////////////////////
 	// Page Specific
@@ -148,14 +150,17 @@
 		@import "tags.scss";
 		@import "bulma-0.5.3/button.scss";
 		@import "buttons.scss";
+		@import "bulma-0.5.3/tabs.scss";
+		@import "tabs.scss";
 		// @import "floating-badges.scss"; // Might not be needed
 
 		// These are for Spectre avatar include
 		$border-width: $unit-o !default;
 		$border-width-lg: $unit-h !default;
 		@import "avatars.scss";
-		@import "artist-inbox.scss";
-		@import "artist-inbox-message.scss";
+		@import "dropdown.scss";
+		@import "inbox.scss";
+		@import "inbox-message.scss";
 
 
 
