@@ -14,12 +14,16 @@
 	.col-left {
 		width: 50%;
 	}
-	
+
 	.col-right {
 		width: 50%;
 		padding: 0 p(70) p(30);
-		display: flex;
+		display: none;
 		flex-direction: column;
 		justify-content: space-between;
+		&.is-active {
+			display: flex;
+		}
 	}
+
 }
