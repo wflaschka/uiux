@@ -21,7 +21,7 @@
 
 	&.is-hearted {
 		.icon {
-			color: color(red);
+			color: color(red) !important;
 		}
 	}
 	&.is-being-clicked {
@@ -35,4 +35,11 @@
 			);
 		}
 	}
+
+	// Square heart buttons
+	&.button {
+		@extend .is-gray;
+		@extend .is-outlined;
+	}
+
 }
