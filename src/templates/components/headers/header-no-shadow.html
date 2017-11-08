@@ -1,4 +1,9 @@
 <header>
+    <div class="header-banner">
+        <div></div>
+        <div class="text-center">Art for good. Art Tap donates 1% of profits to art charities.</div>
+        <a class="close link-black" href="#"><i class="at at-arrows-remove"></i></a>
+    </div>
     <div class="header no-shadow container-fluid">
         <div class="row middle-xs">
             <div class="col-xs">
@@ -7,8 +12,8 @@
                         <div class="at dropdown mr50">
                             <i class="fa fa-bars opener hide-on-open"></i>
                             <i class="at at-arrows-remove opener show-on-open"></i>
-                            <div class="content navigation-dropdown main-menu">
-                                <ul>
+                            <div class="dropdown-content navigation-dropdown main-menu">
+                                <ul class="menu">
                                     <li>Home</li>
                                     <li>Newest Work</li>
                                     <li>
@@ -60,7 +65,7 @@
                                 <i class="at at-arrows-remove"></i>
                                 <span class="hide-on-sm-down">Close</span>
                             </span>
-                            <div class="content search">
+                            <div class="dropdown-content search">
                                 <form class="search-form" action="">
                                     <div class="search-input-wrap">
                                         <input class="search-input" name="search" type="search" placeholder="Search ArtTap.com" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
@@ -70,7 +75,7 @@
 
                                     <div class="row">
                                         <div class="col-xs-6 col-sm-4 col-md-3 col-xl-4">
-                                            <ul class="search-links">
+                                            <ul class="list-unstyled navbar-links">
                                                 <li>Recent Searches</li>
                                                 <li><a href="#">Painting</a></li>
                                                 <li><a href="#">Photography</a></li>
@@ -79,8 +84,8 @@
                                             </ul>
                                         </div>
                                         <div class="col-xs-6 col-sm-4 col-md-3 col-xl-4">
-                                            <ul class="search-links">
-                                                <li>Recent Searches</li>
+                                            <ul class="list-unstyled navbar-links">
+                                                <li>Popular Searches</li>
                                                 <li><a href="#">Painting</a></li>
                                                 <li><a href="#">Photography</a></li>
                                                 <li><a href="#">Prints &amp; Multiples </a></li>
@@ -114,8 +119,41 @@
                     </div>
                     <div class="center middle aligned column col-xs-4 col-md-4">
                         <div class="box">
-                            <i class="fa fa-shopping-cart"></i>
-                            <span class="hide-on-sm-and-down">Cart</span>
+                            <div class="at dropdown">
+                                <span class="opener hide-on-open">
+                                    <i class="fa fa-shopping-cart"></i>
+                                    <span class="hide-on-sm-down">Cart</span>
+                                </span>
+                                <span class="opener show-on-open">
+                                    <i class="at at-arrows-remove"></i>
+                                    <span class="hide-on-sm-down">Close</span>
+                                </span>
+                                <div class="dropdown-content navigation-dropdown cart">
+                                    <p>Your Cart is Empty</p>
+                                    <div class="sep mb10"></div>
+                                    <p><a class="link-primary" href="register.html">Sign In</a> to see items you may have added previously.</p>
+                                    <a class="button is-black is-fullwidth mb40" href="#">Continue Shopping</a>
+                                    <div class="cart-links">
+                                        <ul class="list-unstyled navbar-links">
+                                            <li>Recent Searches</li>
+                                            <li><a href="#">Painting</a></li>
+                                            <li><a href="#">Photography</a></li>
+                                            <li><a href="#">Prints &amp; Multiples </a></li>
+                                            <li><a href="#">Art Under $500</a></li>
+                                        </ul>
+                                        <ul class="list-unstyled navbar-links">
+                                            <li>Popular Searches</li>
+                                            <li><a href="#">Painting</a></li>
+                                            <li><a href="#">Photography</a></li>
+                                            <li><a href="#">Prints &amp; Multiples </a></li>
+                                            <li><a href="#">Art Under $500</a></li>
+                                            <li><a href="#">Art Under $1000</a></li>
+                                            <li><a href="#">Art Under $2500</a></li>
+                                            <li><a href="#">Art Under $5000</a></li>
+                                        </ul>
+                                    </div>
+                                </div><!-- .cart -->
+                            </div><!-- .at.at.dropdown -->
                         </div>
                     </div>
                 </div>
