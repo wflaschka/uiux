@@ -1,0 +1,142 @@
+////////////////////////////////////////////////////////////////////
+// ARTTAP ICONS ALIASED
+// To overwrite default FontAwesome versions
+////////////////////////////////////////////////////////////////////
+
+// Mixin is based on font-arttap.scss @mixin 'at'
+@mixin pseudo-before-for-aliases() {
+    &:before {
+        font-family: "arttap" !important;
+        font-style: normal !important;
+        font-weight: normal !important;
+        font-variant: normal !important;
+        text-transform: none !important;
+        speak: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+.icon {
+    // AT-4-SQUARES
+    &.squares, &.4-squares, &.fa-th-large { 
+        @extend .at-4-squares;
+        @include pseudo-before-for-aliases();
+    }
+    // AT-ARROWS-DOWN
+    &.arrow-down, &.fa-arrow-down, &.fa-chevron-down { 
+        @extend .at-arrows-down;
+        @include pseudo-before-for-aliases();
+    }
+    // AT-ARROWS-LEFT
+    &.arrow-left, &.fa-arrow-left, &.fa-chevron-left { 
+        @extend .at-arrows-left;
+        @include pseudo-before-for-aliases();
+    }
+    // AT-ARROWS-MINUS
+    &.minus, &.fa-minus { 
+        @extend .at-arrows-minus;
+        @include pseudo-before-for-aliases();
+    }
+    // AT-ARROWS-PLUS
+    &.add, &.plus, &.fa-plus { 
+        @extend .at-arrows-plus;
+        @include pseudo-before-for-aliases();
+    }
+    // AT-ARROWS-QUESTION
+    &.question, &.help, &.fa-question, &.fa-question-circle, &.fa-question-circle-o { 
+        @extend .at-arrows-question;
+        @include pseudo-before-for-aliases();
+    }
+    // AT-ARROWS-REMOVE
+    &.remove, &.fa-times, &.fa-x { 
+        @extend .at-arrows-remove;
+        @include pseudo-before-for-aliases();
+    }
+    // AT-ARROWS-RIGHT
+    &.arrow-right, &.fa-arrow-right, &.fa-chevron-right { 
+        @extend .at-arrows-right;
+        @include pseudo-before-for-aliases();
+    }
+    // AT-ARROWS-UP
+    &.arrow-up, &.fa-arrow-up, &.fa-chevron-up { 
+        @extend .at-arrows-up;
+        @include pseudo-before-for-aliases();
+    }
+    // AT-ARTWORK
+    &.artwork { 
+        @extend .at-artwork;
+        @include pseudo-before-for-aliases();
+    }
+    // AT-BELL
+    &.bell, &.fa-bell, &.fa-bell-o { 
+        @extend .at-bell;
+        @include pseudo-before-for-aliases();
+    }
+    // AT-CARD
+    &.card, &.fa-credit-card, &.fa-credit-card-alt { 
+        @extend .at-card;
+        @include pseudo-before-for-aliases();
+    }
+    // AT-COPYPASTE
+    &.copypaste { 
+        @extend .at-copypaste;
+        @include pseudo-before-for-aliases();
+    }
+    // AT-DOCUMENT
+    &.document, &.fa-file-text, &.fa-file, &.fa-file-text-o, &.file-o { 
+        @extend .at-document;
+        @include pseudo-before-for-aliases();
+    }
+    // AT-EMAIL
+    &.email { 
+        @extend .at-email;
+        @include pseudo-before-for-aliases();
+    }
+    // AT-FACEBOOK
+    &.facebook, &.fa-facebook, &.fa-facebook-official, &.fa-facebook-square { 
+        @extend .at-facebook;
+        @include pseudo-before-for-aliases();
+    }
+    // AT-INSTAGRAM
+    &.instagram, &.fa-instagram { 
+        @extend .at-instagram;
+        @include pseudo-before-for-aliases();
+    }
+    // AT-MAIL
+    &.mail, &.fa-envelope, &.fa-envelope-o { 
+        @extend .at-mail;
+        @include pseudo-before-for-aliases();
+    }
+    // AT-PINTEREST
+    &.pinterest, &.fa-pinterest, &.fa-pinterest-p, &.fa-pinterest-square { 
+        @extend .at-pinterest;
+        @include pseudo-before-for-aliases();
+    }
+    // AT-SPEECH
+    &.speech, &.comment, &.fa-commenting-o, &.fa-commenting, &.fa-comments-o, &.fa-comment, &.fa-comments, &.fa-comment { 
+        @extend .at-speech;
+        @include pseudo-before-for-aliases();
+    }
+    // AT-TAG
+    &.tag, &.fa-tag { 
+        @extend .at-tag;
+        @include pseudo-before-for-aliases();
+    }
+    // AT-TWITTER
+    &.twitter, &.fa-twitter { 
+        @extend .at-twitter;
+        @include pseudo-before-for-aliases();
+    }
+    // AT-TWO-ARROWS
+    &.exchange, &.arrows, &.two-arrows, &.fa-arrows-h, &.fa-exchange { 
+        @extend .at-two-arrows;
+        @include pseudo-before-for-aliases();
+    }
+    // AT-UPLOAD
+    &.upload, &.fa-upload { 
+        @extend .at-upload;
+        @include pseudo-before-for-aliases();
+    }
+}
