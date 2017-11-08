@@ -5,6 +5,7 @@ node_modules/
 semantic/
 site.css.map
 dist/assets/styles/maps/site.css.map
+dist/*
 
 # GENERAL .gitignore
 
