@@ -4032,6 +4032,22 @@ html {
  */
 /* FONT PATH
  * -------------------------- */
+.at-2x {
+  font-size: 1rem !important;
+}
+
+.at-3x {
+  font-size: 2rem !important;
+}
+
+.at-4x {
+  font-size: 3rem !important;
+}
+
+.at-5x {
+  font-size: 4rem !important;
+}
+
 @font-face {
   font-family: "arttap";
   src: url("../fonts/arttap/arttap.eot");
@@ -18295,6 +18311,7 @@ hr[documentation]:before {
 .navigation-dropdown ul.menu li ul {
   display: none;
   padding: 1rem 0 0 0;
+  list-style: none;
 }
 
 .navigation-dropdown ul.menu li ul li {
