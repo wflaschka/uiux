@@ -1,0 +1,129 @@
+///////////////////////////////////////////////////////////////////
+// Product pages
+// Temporary version simplifies and creates 
+// components for the PHP side.
+///////////////////////////////////////////////////////////////////
+
+div.product-wf {
+	width: 80vw;
+	@include for-tablet-portrait-down {
+		width: 90vw;
+	}
+
+	.row {
+		padding: 1rem;
+
+		.image {
+			display: flex;
+			flex: 1 1 60%;
+			align-items: center;
+			justify-content: center;
+			img {
+				max-height: 80vh;
+			}
+		}
+		.detail {
+			padding: 0 0 0 2rem;
+			flex: 1 1 40%;
+		}
+
+		@include for-tablet-portrait-down {
+			flex-direction: column;
+			.image {
+				flex: 1 1 100%;
+				margin-bottom: 1.5rem;
+			}
+			.detail {
+				flex: 1 1 100%;
+				padding: 0;
+			}
+		}
+	}
+}
+
+
+div.product-wf .row .detail {
+
+	h2 {
+		border: none;
+		line-height: 2rem;
+		font-size: 2.1875rem;
+		@include for-tablet-portrait-down {
+			font-size: 1.875rem;
+		}
+	}
+
+	// .follow-wrap {...} -->moved to artist-follow-toggle.scss
+
+	.description {
+		margin-bottom: 1.5625rem;
+		line-height: 1.3125rem;
+		.title {
+			font-style: italic;
+		}
+		.series,
+		.type,
+		.sizes,
+		.edition {
+			color: color(gray);
+		}
+	}
+
+	.gallery-price {
+		margin-bottom: 1.25rem;
+		line-height: 1.5rem;
+		.discounted {
+			font-size: 1.25rem;
+		}
+		.regular {
+			color: color(gray);
+		}
+		.tooltip {
+			margin-left: 1rem;
+		}
+	}
+
+	.edition-number {
+		margin-bottom: 0.625rem;
+		flex-direction: column;
+
+		.prompt {
+			@extend .level;
+			padding: 0;
+			margin: 0 !important;
+			div {
+				@extend .level-item;
+				padding: 0;
+				margin: 0;
+			}
+		}
+	}
+
+	button.add-to-cart {
+		@extend .button;
+		@extend .is-fullwidth;
+		@extend .is-black;
+		margin: 1.25rem 0;
+	}
+
+	// Dropdown
+	.add-to-collection {
+		position: relative;
+		.create {
+			width: p(340);
+			background: white;
+			padding: 1rem;
+			border: 1px solid #ccc;	
+		}
+	}
+
+	.saved-collection {
+		color: color(gray);
+		font-size: 0.8125rem;
+		margin-top: 0.625rem
+	}
+
+	.link-full-details	{
+		margin-top: 1.25rem;
+	}
+}
