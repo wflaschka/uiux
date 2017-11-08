@@ -2,6 +2,20 @@
  * HEADER
  */
 
+.header-banner {
+	height: 40px;
+	justify-content: space-between;
+	display: flex;
+	align-items: center;
+	background-color: #F7F7F7;
+	.close {
+		padding-right: p(20);
+		.at {
+			font-size: 13px;
+		}
+	}
+}
+
 .header {
     width: 100%;
     background-color: white;
@@ -50,6 +64,23 @@
         }
     }
 
+    // Recent & Popular Searches
+	.navbar-links {
+		font-size: .8rem;
+
+		li {
+			margin-bottom: 1.125rem;
+			a:link,
+			a:visited {
+				color: $link-gray;
+				text-decoration: none;
+			}
+			a:hover,
+			a:active {
+				color: color(primary);
+			}
+		}
+	}
 }
 
 .navigation-dropdown {
@@ -60,6 +91,31 @@
 	&.main-menu {
 		left: -23px;
 	}
+
+
+
+	&.cart {
+		left: auto;
+		right: 0;
+		padding: p(10) p(40);
+		.cart-links {
+			display: flex;
+			justify-content: space-between;
+			ul {
+				padding-right: p(30);
+			}
+		}
+
+		.success-check {
+			padding: .7625rem; //resize check size inside navbar cart
+		}
+
+		.card {
+			width: auto;
+		}
+
+	}
+
 
 	// Positioning: menu height + top border width
 	transform: translateY(16px);
@@ -91,7 +147,7 @@
 	@include box_shadow_topless(2);
 
 
-	ul {
+	ul.menu {
 		list-style: none;
 		padding: 0;
 		color: gray;
@@ -127,6 +183,7 @@
 			ul {
 				display: none;
 				padding: 1rem 0 0 0;
+				list-style: none;
 
 				li {
 					font-size: 0.9rem;
@@ -224,24 +281,6 @@
 		@include search-input;
 	}
 
-	.search-links {
-		padding: 0px;
-		margin: 0px;
-		list-style: none;
-		font-size: .8rem;
-
-		li {
-			margin-bottom: 1.125rem;
-			a:link,
-			a:visited {
-				color: $link-gray;
-				text-decoration: none;
-			}
-			a:hover,
-			a:active {
-				color: color(primary);
-			}
-		}
-	}
 } //.search
+
 

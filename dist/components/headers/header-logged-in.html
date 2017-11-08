@@ -23,6 +23,11 @@
 <body id="prototype-page-component-only">
 
 <header>
+    <div class="header-banner">
+        <div></div>
+        <div class="text-center">Art for good. Art Tap donates 1% of profits to art charities.</div>
+        <a class="close link-black" href="#"><i class="at at-arrows-remove"></i></a>
+    </div>
     <div class="header container-fluid">
         <div class="row middle-xs">
             <div class="col-xs">
@@ -31,8 +36,8 @@
                         <div class="at dropdown mr50">
                             <i class="fa fa-bars opener hide-on-open"></i>
                             <i class="at at-arrows-remove opener show-on-open"></i>
-                            <div class="content navigation-dropdown main-menu">
-                                <ul>
+                            <div class="dropdown-content navigation-dropdown main-menu">
+                                <ul class="menu">
                                     <li>Home</li>
                                     <li>Newest Work</li>
                                     <li>
@@ -73,6 +78,7 @@
                             </div>
                         </div><!-- .at.at.dropdown -->
                     </div>
+
                     <div class="search-wrap center middle aligned column col-xs-4">
                         <div class="at dropdown">
                             <span class="opener hide-on-open">
@@ -83,7 +89,7 @@
                                 <i class="at at-arrows-remove"></i>
                                 <span class="hide-on-sm-down">Close</span>
                             </span>
-                            <div class="content search">
+                            <div class="dropdown-content search">
                                 <form class="search-form" action="">
                                     <div class="search-input-wrap">
                                         <input class="search-input" name="search" type="search" placeholder="Search ArtTap.com" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
@@ -93,7 +99,7 @@
 
                                     <div class="row">
                                         <div class="col-xs-6 col-sm-4 col-md-3 col-xl-4">
-                                            <ul class="search-links">
+                                            <ul class="list-unstyled navbar-links">
                                                 <li>Recent Searches</li>
                                                 <li><a href="#">Painting</a></li>
                                                 <li><a href="#">Photography</a></li>
@@ -102,8 +108,8 @@
                                             </ul>
                                         </div>
                                         <div class="col-xs-6 col-sm-4 col-md-3 col-xl-4">
-                                            <ul class="search-links">
-                                                <li>Recent Searches</li>
+                                            <ul class="list-unstyled navbar-links">
+                                                <li>Popular Searches</li>
                                                 <li><a href="#">Painting</a></li>
                                                 <li><a href="#">Photography</a></li>
                                                 <li><a href="#">Prints &amp; Multiples </a></li>
@@ -137,8 +143,8 @@
                                     <i class="at at-arrows-down opener hide-on-open hide-on-sm-down"></i>
                                     <i class="at at-arrows-up opener show-on-open hide-on-sm-down"></i>
                                 </div>
-                                <div class="content navigation-dropdown">
-                                    <ul>
+                                <div class="dropdown-content navigation-dropdown">
+                                    <ul class="menu">
                                         <li>Dashboard</li>
                                         <li>Artist Profile</li>
                                         <li><span class="count count-primary">3</span></badge>Messages</li>
@@ -158,8 +164,47 @@
                     </div>
                     <div class="center middle aligned column col-xs-4 col-md-4">
                         <div class="box">
-                            <i class="fa fa-shopping-cart"></i>
-                            <span class="hide-on-sm-down">Cart</span>
+                            <div class="at dropdown">
+                                <span class="opener hide-on-open">
+                                    <i class="fa fa-shopping-cart"></i>
+                                    <span class="hide-on-sm-down">Cart</span>
+                                </span>
+                                <span class="opener show-on-open">
+                                    <i class="at at-arrows-remove"></i>
+                                    <span class="hide-on-sm-down">Close</span>
+                                </span>
+                                <div class="dropdown-content navigation-dropdown cart">
+                                    <p><i class="fa fa-check success-check pull-left"></i> Success! This piece has been added to your cart.</p>
+                                    <div class="sep mb10"></div>
+                                    <div class="card checkout">
+                                        <div class="left">
+                                            <div class="image" style="background-image: url('/assets/images/artwork/art-1.jpg');">
+                                                <img src="/assets/images/artwork/art-1.jpg">
+                                            </div>
+                                            <div class="content">
+                                                <div class="artist">
+                                                    Camille Oudinot
+                                                </div>
+                                                <div class="title">
+                                                    Fading Faces
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="right">
+                                            <i class="at at-2x at-arrows-remove"></i>
+                                            <div class="price">
+                                                $930
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex-between mb10 mt10">
+                                        <div>Subtotal</div>
+                                        <div>$1352.00</div>
+                                    </div>
+                                    <a class="button is-black is-fullwidth mb20" href="#">Checkout</a>
+                                    <a class="button is-gray is-outlined is-fullwidth mb30" href="#">Continue Shopping</a>
+                                </div><!-- .cart -->
+                            </div><!-- .at.at.dropdown -->
                         </div>
                     </div>
                 </div>
