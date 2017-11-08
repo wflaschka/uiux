@@ -1,0 +1,33 @@
+////////////////////////////////////////////////////////////////////
+// ARTIST FOLLOW TOGGLE
+// The one-liner with "[+] Follow Artist       160 Followers"
+////////////////////////////////////////////////////////////////////
+
+.follow-artist {
+    font-size: 0.8125rem;
+    margin-bottom: 1.25rem;
+    .follow {
+        margin-right: 1rem;
+        font-weight: bold;
+
+        .icon {
+            @extend .fa;
+            @extend .icon;
+        }
+    }
+    .followers {
+        color: color(gray);
+    }
+}
+.follow-artist:not(.is-followed) .icon {
+    @extend .fa-plus-circle;
+}
+.follow-artist.is-followed {
+    a {
+        color: color(black);
+    }
+    .icon {
+        @extend .fa-check-circle;
+        color: color(black);
+    }
+}
