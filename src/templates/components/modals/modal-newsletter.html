@@ -1,0 +1,70 @@
+<main>
+
+<div id="basic" style="display:none;">
+	<a href="#" rel="modal:close" class="close-modal"><i class="at at-2x at-arrows-remove"></i></a>
+	<div class="flex-between">
+		<div class="col-left">
+			<img class="responsive" src="/assets/images/newsletter.jpg">
+		</div>
+		<div class="col-right subscribe" style="display: non;">
+			<div></div>
+			<div>
+				<h1>Become an Art Connoisseur</h1>
+				<p>Subscribe to our newsletter for insider info on new art, news, events and more.</p>
+				<div class="sep"></div>
+				<div class="field mb20">
+					<label class="label">Email</label>
+					<div class="control">
+						<input class="input" type="input">
+					</div>
+				</div>
+				<a href="#" class="button is-black is-fullwidth mb20 subscribe-now">Subscribe Now</a>
+				<div class="text-center"><small><a class="link-primary" href="#">I'm not interested in art.</a></small></div>
+			</div>
+			<div class="text-center">
+				<small><a class="link-black" href="#">Terms of Use</a> and <a class="link-black" href="#">Privacy Policy</a></small>
+			</div>
+		</div>
+
+		<div class="col-right subscribe-success" style="display: none;">
+			<div></div>
+			<div>
+				<h1>Become an Art Connoisseur</h1>
+				<p>Subscribe to our newsletter for insider info on new art, news, events and more.</p>
+				<div class="sep mb40"></div>
+				<div class="text-center"><i class="fa fa-check success-check"></i></div>
+				<p class="text-center mb50">Success! Check your mailbox</p>
+				<a href="#" class="button is-black is-fullwidth">Discover Art</a>
+			</div>
+			<div></div>
+		</div>
+	</div>
+</div>
+
+<p>
+	<a href="#basic" rel="modal:open">News Letter</a>
+</p>
+
+<script type="text/javascript">
+	$.modal.defaults = {
+		closeExisting : true,      // Close existing modals. Set this to false if you need to stack multiple modal instances.
+		escapeClose   : true,      // Allows the user to close the modal by pressing `ESC`
+		clickClose    : true,      // Allows the user to close the modal by clicking the overlay
+		closeText     : '',        // Text content for the close <a> tag.
+		closeClass    : '',        // Add additional class(es) to the close <a> tag.
+		showClose     : false,      // Shows a (X) icon/link in the top-right corner
+		modalClass    : "modal newsletter",   // CSS class added to the element being displayed in the modal.
+		blockerClass  : "blocker", // CSS class added to the overlay (blocker).
+		spinnerHtml   : null,      // HTML appended to the default spinner during AJAX requests.
+		showSpinner   : true,      // Enable/disable the default spinner during AJAX requests.
+		fadeDuration  : 250,       // Number of milliseconds the fade transition takes (null means no transition)
+		fadeDelay     : 0.8        // Point during the overlay's fade-in that the modal begins to fade in (.5 = 50%, 1.5 = 150%, etc.)
+	};
+
+	$('.subscribe-now').on('click', function(){
+		$('.subscribe').hide();
+		$('.subscribe-success').show();
+	});
+</script>
+
+</main>

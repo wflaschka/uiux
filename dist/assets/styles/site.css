@@ -20152,6 +20152,29 @@ form.is-search-form label.is-colorball-checkbox.is-color-eggshell input:checked 
   margin-left: 0.125rem;
 }
 
+.modal.newsletter {
+  padding: 0;
+  width: 950px;
+}
+
+.modal.newsletter h1 {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.modal.newsletter .col-left {
+  width: 50%;
+}
+
+.modal.newsletter .col-right {
+  width: 50%;
+  padding: 0 4.375rem 1.875rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .page.has-sidebar .main-content {
   padding: 3.125rem;
 }
