@@ -6,7 +6,7 @@
 		<div class="col-left">
 			<img class="responsive" src="/assets/images/newsletter.jpg">
 		</div>
-		<div class="col-right subscribe" style="display: non;">
+		<div class="col-right subscribe is-active">
 			<div></div>
 			<div>
 				<h1>Become an Art Connoisseur</h1>
@@ -26,7 +26,7 @@
 			</div>
 		</div>
 
-		<div class="col-right subscribe-success" style="display: none;">
+		<div class="col-right subscribe-success">
 			<div></div>
 			<div>
 				<h1>Become an Art Connoisseur</h1>
@@ -62,8 +62,8 @@
 	};
 
 	$('.subscribe-now').on('click', function(){
-		$('.subscribe').hide();
-		$('.subscribe-success').show();
+		$('.subscribe').removeClass('is-active');
+		$('.subscribe-success').addClass('is-active');
 	});
 </script>
 
