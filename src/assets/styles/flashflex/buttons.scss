@@ -37,6 +37,7 @@
     justify-content: center;
     padding-left: 1rem;
     padding-right: 1rem;
+    // margin-bottom: p(10);
     text-align: center;
     white-space: nowrap;
 
@@ -326,5 +327,9 @@
 
 .button:not(.is-small):not(.is-large):not(.is-medium) {
     font-size: inherit;
-    min-height: 2.875rem; //46px
+    min-height: p(46); //46px
+}
+
+.button:not(.is-small):not(.is-large):not(.is-medium):not(:last-child) {
+    margin-bottom: p(10);
 }

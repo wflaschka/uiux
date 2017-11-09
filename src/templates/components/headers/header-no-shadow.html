@@ -1,7 +1,7 @@
 <header>
     <div class="header-banner">
-        <div></div>
-        <div class="text-center">Art for good. Art Tap donates 1% of profits to art charities.</div>
+        <!-- On using class `text` it gets conflict with globally defined class text, so using banner-text -->
+        <div class="banner-text">Art for good. Art Tap donates 1% of profits to art charities.</div>
         <a class="close link-black" href="#"><i class="at at-arrows-remove"></i></a>
     </div>
     <div class="header no-shadow container-fluid">
@@ -9,7 +9,7 @@
             <div class="col-xs">
                 <div class="row begin-xs middle-xs">
                     <div class="centered middle aligned column col-xs-4 col-sm-2 col-md-3">
-                        <div class="at dropdown mr50">
+                        <div class="at dropdown">
                             <i class="fa fa-bars opener hide-on-open"></i>
                             <i class="at at-arrows-remove opener show-on-open"></i>
                             <div class="dropdown-content navigation-dropdown main-menu">
@@ -74,7 +74,7 @@
 
 
                                     <div class="row">
-                                        <div class="col-xs-6 col-sm-4 col-md-3 col-xl-4">
+                                        <div class="col-xs-7 col-sm-4 col-md-3 col-xl-4">
                                             <ul class="list-unstyled navbar-links">
                                                 <li>Recent Searches</li>
                                                 <li><a href="#">Painting</a></li>
@@ -83,7 +83,7 @@
                                                 <li><a href="#">Art Under $500</a></li>
                                             </ul>
                                         </div>
-                                        <div class="col-xs-6 col-sm-4 col-md-3 col-xl-4">
+                                        <div class="col-xs-7 col-sm-4 col-md-3 col-xl-4">
                                             <ul class="list-unstyled navbar-links">
                                                 <li>Popular Searches</li>
                                                 <li><a href="#">Painting</a></li>
@@ -100,7 +100,7 @@
                             </div><!-- .search -->
                         </div><!-- .at.at.dropdown -->
                     </div>
-                    <div class="hide-on-md-and-down center middle aligned column col-md-5">
+                    <div class="hide-on-md-down center middle aligned column col-md-5">
                         <div class="box">
                             <a class="link-black" href="apply-as-an-artist.html">Apply as an Artist</a>
                         </div>
@@ -130,9 +130,10 @@
                                 </span>
                                 <div class="dropdown-content navigation-dropdown cart">
                                     <p>Your Cart is Empty</p>
-                                    <div class="sep mb10"></div>
-                                    <p><a class="link-primary" href="register.html">Sign In</a> to see items you may have added previously.</p>
-                                    <a class="button is-black is-fullwidth mb40" href="#">Continue Shopping</a>
+                                    <div class="sep small"></div>
+                                    <p><a  href="register.html">Sign In</a> to see items you may have added previously.</p>
+                                    <a class="button is-black is-fullwidth" href="#">Continue Shopping</a>
+
                                     <div class="cart-links">
                                         <ul class="list-unstyled navbar-links">
                                             <li>Recent Searches</li>
