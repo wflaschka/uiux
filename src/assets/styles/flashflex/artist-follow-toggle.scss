@@ -6,28 +6,34 @@
 .follow-artist {
     font-size: 0.8125rem;
     margin-bottom: 1.25rem;
-    .follow {
+    a {
         margin-right: 1rem;
         font-weight: bold;
 
-        .icon {
-            @extend .fa;
-            @extend .icon;
+        &.follow {
+            .icon {
+                @extend .plus;
+            }
+        }
+        &.followed {
+            color: color(black);
+            .icon {
+                @extend .minus;
+            }
         }
     }
     .followers {
         color: color(gray);
     }
 }
-.follow-artist:not(.is-followed) .icon {
-    @extend .fa-plus-circle;
-}
-.follow-artist.is-followed {
-    a {
-        color: color(black);
-    }
-    .icon {
-        @extend .fa-check-circle;
-        color: color(black);
-    }
-}
+// .follow-artist:not(.is-followed) .icon {
+//     @extend .fa-plus-circle;
+// }
+// .follow-artist.is-followed {
+//     a {
+//         color: color(black);
+//     }
+//     .icon {
+//         @extend .fa-check-circle;
+//     }
+// }
