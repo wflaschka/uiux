@@ -2,8 +2,7 @@
 // Links
 ////////////////////////////////////////////////////////////////////
 
-a,
-.link-primary {
+a {
   &:link,
   &:visited {
     color: color(primary);
@@ -19,11 +18,11 @@ a,
   &:link,
   &:visited {
     color: color(black);
-    text-decoration: none;
   }
   &:active,
   &:hover {
-    color: lighten(color(black), 15%);
+    color: color(primary);
+    // color: lighten(color(black), 15%);
   }
 }
 
@@ -32,10 +31,10 @@ a,
   &:link,
   &:visited {
     color: color(gray);
-    text-decoration: none;
   }
   &:active,
   &:hover {
-    color: lighten(color(gray), 15%);
+    color: color(primary);
+    // color: lighten(color(gray), 15%);
   }
 }

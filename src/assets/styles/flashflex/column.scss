@@ -39,6 +39,13 @@
     @extend .column.aligned.center;
 }
 
+.flex {
+  @include flexbox();
+  @include flex(0, 1, auto);
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+}
+
 .col-flex {
   display: flex;
   padding-right: 0.5rem;

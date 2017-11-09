@@ -1,7 +1,7 @@
 <header>
     <div class="header-banner">
-        <div></div>
-        <div class="text-center">Art for good. Art Tap donates 1% of profits to art charities.</div>
+        <!-- On using class `text` it gets conflict with globally defined class text, so using banner-text -->
+        <div class="banner-text">Art for good. Art Tap donates 1% of profits to art charities.</div>
         <a class="close link-black" href="#"><i class="at at-arrows-remove"></i></a>
     </div>
     <div class="header container-fluid">
@@ -9,7 +9,7 @@
             <div class="col-xs">
                 <div class="row begin-xs middle-xs">
                     <div class="centered middle aligned column col-xs-4 col-sm-2 col-md-3">
-                        <div class="at dropdown mr50">
+                        <div class="at dropdown">
                             <i class="fa fa-bars opener hide-on-open"></i>
                             <i class="at at-arrows-remove opener show-on-open"></i>
                             <div class="dropdown-content navigation-dropdown main-menu">
@@ -74,7 +74,7 @@
 
 
                                     <div class="row">
-                                        <div class="col-xs-6 col-sm-4 col-md-3 col-xl-4">
+                                        <div class="col-xs-7 col-sm-4 col-md-3 col-xl-4">
                                             <ul class="list-unstyled navbar-links">
                                                 <li>Recent Searches</li>
                                                 <li><a href="#">Painting</a></li>
@@ -83,7 +83,7 @@
                                                 <li><a href="#">Art Under $500</a></li>
                                             </ul>
                                         </div>
-                                        <div class="col-xs-6 col-sm-4 col-md-3 col-xl-4">
+                                        <div class="col-xs-7 col-sm-4 col-md-3 col-xl-4">
                                             <ul class="list-unstyled navbar-links">
                                                 <li>Popular Searches</li>
                                                 <li><a href="#">Painting</a></li>
@@ -109,7 +109,7 @@
                 <div class="row end-xs middle-xs">
                     <div class="center middle aligned column col-xs-4 col-sm-8 col-md-8">
                         <div class="box">
-                            <div class="at dropdown mr50">
+                            <div class="at dropdown">
                                 <div class="opener">
                                     <div class="avatar avatar-sm">
                                         <img src="/assets/images/profiles/person-3.jpg">
@@ -151,7 +151,7 @@
                                 </span>
                                 <div class="dropdown-content navigation-dropdown cart">
                                     <p><i class="fa fa-check success-check pull-left"></i> Success! This piece has been added to your cart.</p>
-                                    <div class="sep mb10"></div>
+                                    <div class="sep small"></div>
                                     <div class="card checkout">
                                         <div class="left">
                                             <div class="image" style="background-image: url('/assets/images/artwork/art-1.jpg');">
@@ -173,12 +173,12 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="flex-between mb10 mt10">
+                                    <div class="subtotal">
                                         <div>Subtotal</div>
                                         <div>$1352.00</div>
                                     </div>
-                                    <a class="button is-black is-fullwidth mb20" href="#">Checkout</a>
-                                    <a class="button is-gray is-outlined is-fullwidth mb30" href="#">Continue Shopping</a>
+                                    <a class="button is-black is-fullwidth" href="#">Checkout</a>
+                                    <a class="button is-gray is-outlined is-fullwidth" href="#">Continue Shopping</a>
                                 </div><!-- .cart -->
                             </div><!-- .at.at.dropdown -->
                         </div>
