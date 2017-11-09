@@ -65,12 +65,14 @@ $colors: (
 	orange     : (#F9922C, contrastColor(#F9922C)),
 	yellow     : (#FCEA44, contrastColor(#FCEA44)),
 	eggshell   : (#FAEFCF, contrastColor(#FAEFCF)),
-	brown      : (#7C4D38, contrastColor(#7C4D38))
+	brown      : (#7C4D38, contrastColor(#7C4D38)),
+	facebook   : (#43609C, contrastColor(#43609C)),
+	linkedin   : (#177EB8, contrastColor(#177EB8))
 );
 // Use this list for color loops in elements. This 
 // will avoid errors that are created by by dynamically-added
 // colors in $colors map:
-$colorsBasic: (primary secondary text link white gray black green greentree bluesea bluesky blueroyal purple magenta red orange yellow eggshell brown);
+$colorsBasic: (primary secondary text link white gray black green greentree bluesea bluesky blueroyal purple magenta red orange yellow eggshell brown facebook linkedin);
 
 // Create *-light and *-dark versions of each color in $colors map
 @each $name, $pair in $colors {
