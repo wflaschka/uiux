@@ -3,6 +3,10 @@
 
 .page {
 
+	// for demo purpose to match layout with prototype 1280px
+	max-width: 1280px;
+	margin: 0 auto;
+
 	&.has-sidebar {
 		.main-content {
 			padding: p(50);
