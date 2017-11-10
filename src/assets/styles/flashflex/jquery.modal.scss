@@ -81,3 +81,18 @@
 
 
 .select2-container.select2-container--open { z-index: 9999; }
+
+
+////////////////////////////////////////////////////
+// Modal -- extended for ArtTap
+// For Mobile
+
+@include for-phone-only {
+    .blocker {
+        padding: 0;
+        .modal {
+            width: 100%;
+            padding: p(20);
+        }
+    }
+}

@@ -1,165 +1,196 @@
-{{> header-public }}
+<div class="page-apply-artist page">
+    {{> header-public }}
 
-<div class="pt40"></div>
+    <div class="main">
+        
+        <div class="image"></div>
+        
+        <h1>Professionally curated art.<br>
+        Free promotional tools for artists.<br>
+        Access to a large network of buyers.</h1>
 
-<div class="apply-artist">
-
-    <div class="wrapper container-fluid">
-
-        <div class="absolute-box col-sm-4">
+        <div class="form-wrapper">
             <div class="box-inner">
-                <p>Apply now to sell and promote your work through Art Tap or <a href="#" >see how it works</a></p>
+                
+                <p>Apply now to sell and promote your work through Art Tap or 
+                    <a href="#modalHowItWorks" rel="modal:open" class="hide-on-sm-ls-up">see how it works</a>
+                    <a href="#" data-scroll-to="#howItWorks" class="scroll-to hide-on-sm-ls-down">see how it works</a>
+                </p>
 
-                <div class="field">
-                    <label class="label">First Name</label>
-                    <div class="control">
-                        <input class="input" type="name" placeholder="" value="">
+                <div class="field-wrapper">
+                    <div class="field">
+                        <label class="label">First Name</label>
+                        <div class="control">
+                            <input class="input" type="input">
+                        </div>
                     </div>
-                </div>
-
-                <div class="field">
-                    <label class="label">Last Name</label>
-                    <div class="control">
-                        <input class="input" type="name" placeholder="" value="">
+                    <div class="field">
+                        <label class="label">Last Name</label>
+                        <div class="control">
+                            <input class="input" type="input">
+                        </div>
                     </div>
-                </div>
-
-                <div class="field">
-                    <label class="label">Email</label>
-                    <div class="control">
-                        <input class="input" type="name" placeholder="" value="">
+                    <div class="field">
+                        <label class="label">Email</label>
+                        <div class="control">
+                            <input class="input" type="input">
+                        </div>
                     </div>
-                </div>
-
-                <div class="field">
-                    <label class="label">Phone <span>Optional</span></label>
-                    <div class="control">
-                        <input class="input" type="name" placeholder="" value="">
+                    <div class="field">
+                        <label class="label">Phone <span>Optional</span></label>
+                        <div class="control">
+                            <input class="input" type="input">
+                        </div>
                     </div>
-                </div>
+                </div><!-- .field-wrapper -->
 
-                <button class="button is-black mt20 is-fullwidth">Apply For Free</button>
+                <button class="button is-black is-fullwidth">Apply For Free</button>
 
                 <p><small>By clicking apply, you accept our <br><a href="#" class="link-black"><b>Terms of Use</b></a> and <a href="#" class="link-black"><b>Privacy Policy</b></a></small></p>
                 <p><small>Questions? <a href="#" >Contact Us</a></small></p>
 
             </div>
-        </div><!-- .absolute-box -->
+        </div><!-- .form-wrapper -->
+    </div><!-- .main -->
 
 
-        <h1>Professionally curated art.<br>
-        Free promotional tools for artists.<br>
-        Access to a large network of buyers.</h1>
+    <div id="howItWorks" class="how-it-works hide-on-sm-ls-down">
+        <h3>How It Works</h3>
 
-        <div class="col-sm-10">
-            <img class="responsive" src="/assets/images/graphics/register-login.jpg">
-        </div>
-
-        <div class="how-it-works">
-            <h3>How It Works</h3>
-
-            <div class="row mt40">
-                <div class="col-lg-5 step1">
-                    <p>Step 1</p>
-                    <p>Fill out the free application and our curators will review your work. There are no monthly or annual fees to maintain an Art Tap account. We only receive a commission when your work is sold.</p>
-                </div>
-                <div class="col-lg-5 step2">
-                    <p>Step 2</p>
-                    <p>Once approved, build a personalized artist page. Fill out a profile, upload your art, and post news and events. We allow artists the flexibility to price, sell, and ship artworks on their terms.</p>
-                </div>
-                <div class="col-lg-4 step3">
-                    <p>Step 3</p>
-                    <p>Sell pieces easily and securely through Art Tap to a large network of art buyers. Access our online resources and exclusive events. Best of all, spend more time creating and less time marketing.</p>
-                </div>
+        <div class="group-step">
+            <div class="step">
+                <div class="title">Step 1</div>
+                <p>Fill out the free application and our curators will review your work. There are no monthly or annual fees to maintain an Art Tap account. We only receive a commission when your work is sold.</p>
+            </div>
+            <div class="step">
+                <div class="title">Step 2</div>
+                <p>Once approved, build a personalized artist page. Fill out a profile, upload your art, and post news and events. We allow artists the flexibility to price, sell, and ship artworks on their terms.</p>
+            </div>
+            <div class="step">
+                <div class="title">Step 3</div>
+                <p>Sell pieces easily and securely through Art Tap to a large network of art buyers. Access our online resources and exclusive events. Best of all, spend more time creating and less time marketing.</p>
             </div>
         </div>
+    </div><!-- .how-it-works -->
+
+
+    <div class="artist-benefits">
 
         <h3>Artist Benefits</h3>
 
-    </div><!-- .wrapper -->
-
-    <div class="container-fluid nopad">
-        <div class="row middle-xs mt50">
-            <div class="col-sm-7 pad0">
-                <img class="responsive" src="/assets/images/page/apply-artist/quality.jpg">
-            </div>
-            <div class="col-sm-7">
-                <div class="text-wrap">
+        <div class="cross-image-text">
+            <div class="group">
+                <div class="image">
+                    <img src="/assets/images/page/apply-artist/quality.jpg">
+                </div>
+                <div class="group-text">
                     <h4>Quality</h4>
                     <p>Our dedicated team of curators carfully select emerging and prominent artists to exhibit on Art Tap, always ensuring your work is placed amongst other professional works.</p>
                 </div>
             </div>
-        </div>
 
-        <div class="row middle-xs">
-            <div class="col-sm-7">
-                <div class="text-wrap">
+            <div class="group">
+                <div class="image">
+                    <img src="/assets/images/page/apply-artist/flexibility.jpg">
+                </div>
+                <div class="group-text">
                     <h4>Flexibility</h4>
                     <p>We offer artists the flexibility to price, sell, and ship artworks on their terms. Artists do not need to sign an exclusivity contract to sell through Art Tap. </p>
                 </div>
             </div>
-            <div class="col-sm-7 pad0">
-                <img class="responsive" src="/assets/images/page/apply-artist/flexibility.jpg">
-            </div>
-        </div>
 
-        <div class="row middle-xs">
-            <div class="col-sm-7 pad0">
-                <img class="responsive" src="/assets/images/page/apply-artist/more-profit.jpg">
-            </div>
-            <div class="col-sm-7">
-                <div class="text-wrap">
+            <div class="group">
+                <div class="image">
+                    <img src="/assets/images/page/apply-artist/more-profit.jpg">
+                </div>
+                <div class="group-text">
                     <h4>More Profit</h4>
                     <p>Traditional galleries receive over 50% commission on the sale of each piece. Alternatively, Art Tap receieves less than 30% commission while fulfilling gallery responsibilities at no added cost.</p>
                 </div>
             </div>
-        </div>
 
-        <div class="row middle-xs">
-            <div class="col-sm-7">
-                <div class="text-wrap">
+            <div class="group">
+                <div class="image">
+                    <img src="/assets/images/page/apply-artist/promotion.jpg">
+                </div>
+                <div class="group-text">
                     <h4>Promotion</h4>
                     <p>Our team will promote your upcoming events and feature you and your work for free through our various marketing channels.</p>
                 </div>
             </div>
-            <div class="col-sm-7 pad0">
-                <img class="responsive" src="/assets/images/page/apply-artist/promotion.jpg">
-            </div>
-        </div>
 
-        <div class="row middle-xs">
-            <div class="col-sm-7 pad0">
-                <img class="responsive" src="/assets/images/page/apply-artist/community.jpg">
-            </div>
-            <div class="col-sm-7">
-                <div class="text-wrap">
+            <div class="group">
+                <div class="image">
+                    <img src="/assets/images/page/apply-artist/community.jpg">
+                </div>
+                <div class="group-text">
                     <h4>Community</h4>
                     <p>By registering, artists join a supportive worldwide community. There are always opportunities to meet prospective buyers and learn from other artists and art enthusiasts.</p>
                 </div>
             </div>
-        </div>
 
-        <div class="row middle-xs">
-            <div class="col-sm-7">
-                <div class="text-wrap">
+            <div class="group">
+                <div class="image">
+                    <img src="/assets/images/page/apply-artist/trust.jpg">
+                </div>
+                <div class="group-text">
                     <h4>Trust</h4>
                     <p>All transactions and payment information is 100% secure.</p>
                 </div>
             </div>
-            <div class="col-sm-7 pad0">
-                <img class="responsive" src="/assets/images/page/apply-artist/trust.jpg">
-            </div>
-        </div>
+        </div><!-- .cross-image-text -->
 
-        <div class="row center-xs mt40 mb30">
-          <div class="col-xs-4">
+        <div class="btn-apply">
             <button class="button is-black is-fullwidth">Apply For Free</button>
-          </div>
         </div>
 
-    </div><!-- .container-fluid -->
+    </div><!-- .artist-benefits -->
 
-</div><!-- .apply-artist -->
-
+</div><!-- .page-apply-artist -->
 
 {{> footer-standard }}
+
+
+<div id="modalHowItWorks" style="display:none;">
+    <a href="#" rel="modal:close" class="close-modal"><i class="at at-arrows-remove"></i></a>
+    <div class="how-it-works">
+        <h3>How It Works</h3>
+
+        <div class="group-step">
+            <div class="step">
+                <div class="title">Step 1</div>
+                <p>Fill out the free application and our curators will review your work. There are no monthly or annual fees to maintain an Art Tap account. We only receive a commission when your work is sold.</p>
+            </div>
+            <div class="step">
+                <div class="title">Step 2</div>
+                <p>Once approved, build a personalized artist page. Fill out a profile, upload your art, and post news and events. We allow artists the flexibility to price, sell, and ship artworks on their terms.</p>
+            </div>
+            <div class="step">
+                <div class="title">Step 3</div>
+                <p>Sell pieces easily and securely through Art Tap to a large network of art buyers. Access our online resources and exclusive events. Best of all, spend more time creating and less time marketing.</p>
+            </div>
+        </div>
+    </div><!-- .how-it-works -->
+</div>
+
+
+<script type="text/javascript">
+    defer(function () {
+
+        $.modal.defaults = {
+            closeExisting : true,      // Close existing modals. Set this to false if you need to stack multiple modal instances.
+            escapeClose   : true,      // Allows the user to close the modal by pressing `ESC`
+            clickClose    : true,      // Allows the user to close the modal by clicking the overlay
+            closeText     : '',        // Text content for the close <a> tag.
+            closeClass    : '',        // Add additional class(es) to the close <a> tag.
+            showClose     : true,      // Shows a (X) icon/link in the top-right corner
+            modalClass    : "modal",   // CSS class added to the element being displayed in the modal.
+            blockerClass  : "blocker", // CSS class added to the overlay (blocker).
+            spinnerHtml   : null,      // HTML appended to the default spinner during AJAX requests.
+            showSpinner   : true,      // Enable/disable the default spinner during AJAX requests.
+            fadeDuration  : 250,       // Number of milliseconds the fade transition takes (null means no transition)
+            fadeDelay     : 0.8        // Point during the overlay's fade-in that the modal begins to fade in (.5 = 50%, 1.5 = 150%, etc.)
+        };
+
+    });
+</script>

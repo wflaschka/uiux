@@ -134,6 +134,18 @@ $(document).ready(function() {
         });
     }
 
+
+    // Scroll to Element
+    // Usage
+    // <a data-scroll-to="#foo" class="scroll-to"> -- will target id foo element
+    // <a data-scroll-to=".foo" class="scroll-to"> -- will target class foo element
+    // <div id="foo">
+    // <div class="foo">
+    // 
+    $(document).on( 'click', '.scroll-to', function(e) {
+        $('html, body').animate( {scrollTop: $($(this).attr('data-scroll-to')).offset().top -30 }, 1000);
+    });
+
 });
 
 $(document).click(function(e) {
