@@ -131,7 +131,6 @@ h1, h2, h3, h4, h5, h6 {
             position: absolute;
             right: 0;
             top: 0;
-            @extend .link-primary;
         }   
     }
 
@@ -228,6 +227,15 @@ hr[documentation] {
     height: 1px;
     background-color: $color-border;
     margin: 0  0 p(30);
+    &.small {
+        margin-bottom: p(15);
+    }
+    &.medium {
+        margin-bottom: p(45);
+    }
+    &.large {
+        margin-bottom: p(60);
+    }
 }
 
 // single line separator with overlay text
@@ -239,11 +247,11 @@ hr[documentation] {
     span {
         color: color(gray);
         position: absolute;
-        left: 50%;
         background: white;
-        padding: 0 15px;
+        padding: 0 p(15);
+        top: p(-13);
+        left: 50%;
         transform: translateX(-50%);
-        top: -13px;
     }
 }
 
