@@ -1,0 +1,85 @@
+////////////////////////////////////////////////////////////////////
+// Cross Image / Text - Used on Apply as an Artist page. 
+
+.cross-image-text {
+	
+	h4 {
+		font-size: p(30);
+		line-height: p(32);
+		margin-bottom: p(10);
+	}
+
+	.group {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+
+		.image {
+			order: 1;
+			flex: 1 1 100%;
+
+			img {
+				@extend .responsive;
+			}
+		}
+
+		.group-text {
+			order: 2;
+			flex: 1 1 100%;
+			padding: 0px p(20) p(55);
+
+			p {
+				font-size: 0.85rem;
+				line-height: 1.4rem;
+				margin-top: 0px;
+			}
+		}
+
+		&:last-child {
+			.group-text {
+				padding-bottom: p(15);
+			}
+		}
+	}
+
+
+
+	@include for-tablet-landscape-up {
+
+		h4 {
+			font-size: 2rem;
+			margin-bottom: 1.125rem;
+		}
+
+		.group {
+			flex-direction: row;
+
+			.image {
+				flex: 1 1 50%;
+			}
+
+			.group-text {
+				flex: 1 1 50%;
+			    align-self: center;
+			    padding: 0 10%;
+			}
+
+			&:nth-child(even) {
+				.image {
+					order: 2;
+				}
+				.group-text {
+					order: 1;
+				}
+			}
+		}
+	}
+
+	@include for-desktop-up {
+
+		h4 {
+			font-size: p(35);
+		}
+	}
+
+}// .cross-image-text
