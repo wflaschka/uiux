@@ -3,14 +3,26 @@
  */
 
 .header-banner {
-	height: 40px;
-	justify-content: space-between;
-	display: flex;
-	align-items: center;
-	background-color: #F7F7F7;
+	text-align: center;
+	position: relative;
+	background-color: #f7f7f7;
     z-index: z('site-header') + 1; 
+
+	.banner-text {
+		display: inline-block;
+		padding: 6px 0;
+		@include for-phone-only {
+			width: 180px;
+			padding: 5px 0;
+			font-size: 13px;
+		}
+	}
+
 	.close {
-		padding-right: p(20);
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: p(20);
 		.at {
 			font-size: 13px;
 		}
@@ -71,14 +83,8 @@
 
 		li {
 			margin-bottom: 1.125rem;
-			a:link,
-			a:visited {
-				color: $link-gray;
-				text-decoration: none;
-			}
-			a:hover,
-			a:active {
-				color: color(primary);
+			a {
+				@extend .link-gray;
 			}
 		}
 	}
@@ -91,18 +97,26 @@
 	text-align: left;
 
 	&.main-menu {
-		left: -23px;
+		left: 0;
 	}
 
 	&.cart {
 		left: auto;
 		right: 0;
 		padding: p(10) p(40);
+		@include for-phone-only {
+			width: 100%;
+			padding-left: p(20);
+			padding-right: p(20);
+		}
+
 		.cart-links {
+			margin-top: p(40);
 			display: flex;
 			justify-content: space-between;
 			ul {
 				padding-right: p(30);
+				flex: 1 1 100%;
 			}
 		}
 
@@ -114,14 +128,21 @@
 			width: auto;
 		}
 
+		.subtotal {
+			display: flex;
+			justify-content: space-between;
+			margin: p(10) 0;
+		}
+
 	}
 
 
 	// Positioning: menu height + top border width
-	transform: translateY(16px);
+	transform: translateY(15px);
 	// top: $page-element-header-height + -17;
 	@include for-tablet-portrait-down {
-		top: $page-element-header-mobile-height;
+		// top: $page-element-header-mobile-height;
+		top: 34px;
 	}
 
 	@include for-phone-only {
@@ -266,7 +287,8 @@
 	// top: $page-element-header-height + 2;
 	@include for-tablet-portrait-down {
 		// top: $page-element-header-mobile-height + 2;
-		box-shadow: none;
+		// box-shadow: none;
+		transform: translateY(11px);
 	}
 	width: 100%;
 	overflow: hidden;
@@ -276,14 +298,16 @@
 
 	.search-form {
 		width: 75%;
-		@include for-phone-only {
-			width: 90%;
-		}
 		max-width: 900px;
 		margin: 0 auto;
 		padding: 5.5rem 0 0;
 		transform: translateY(-2rem);
 		transition: all linear .3s;
+		@include for-phone-only {
+			width: 100%;
+			padding-left: p(20);
+			padding-right: p(20);
+		}
 	}
 
 	.search-input-wrap {
