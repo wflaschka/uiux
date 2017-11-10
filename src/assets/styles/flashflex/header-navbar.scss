@@ -8,6 +8,7 @@
 	display: flex;
 	align-items: center;
 	background-color: #F7F7F7;
+    z-index: z('site-header') + 1; 
 	.close {
 		padding-right: p(20);
 		.at {
@@ -21,7 +22,7 @@
     background-color: white;
     border-top: 3px solid rgb(223, 158, 38);
     position: relative;
-    z-index: 1000;
+    z-index: z('site-header'); 
 
     @include box_shadow(2);
 
@@ -84,15 +85,14 @@
 }
 
 .navigation-dropdown {
-	z-index: 1500;
+	// z-index: 1500;
+	z-index: z('site-header-dropdown'); 
 	background-color: white;
 	text-align: left;
 
 	&.main-menu {
 		left: -23px;
 	}
-
-
 
 	&.cart {
 		left: auto;
@@ -142,6 +142,30 @@
 
 	padding-top: 1rem;
 	padding-bottom: 1rem;
+
+	// Registration dropdown
+	&.register {
+		left: auto;
+		right: 0;
+		padding: p(10) p(40) p(40) p(40);
+
+		@include for-phone-only {
+			width: 100vw;
+		}
+		@include for-tablet-portrait {
+			width: 70vw;
+		}
+		@include for-tablet-landscape {
+			width: 45vw;
+		}
+		@include for-desktop {
+			width: 40vw;
+		}
+		@include for-big-desktop {
+			width: 25vw;
+		}
+	}
+
 
 	// Shadows
 	@include box_shadow_topless(2);
@@ -235,7 +259,8 @@
 
 .search {
 	text-align: left;
-	z-index: 1500;
+	// z-index: 1500;
+	z-index: z('site-header-dropdown'); 
 	left: 0px;
 	transform: translateY(16px);
 	// top: $page-element-header-height + 2;
