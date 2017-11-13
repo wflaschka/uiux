@@ -1,0 +1,158 @@
+<div class="at-flash-wrapper">
+
+    <h4>Simple Flash Messages with Text, flash-title, List Items</h4>
+
+    <div class="at-flash-block">
+        <div class="at flash">
+            <i class="close flash-icon"></i>
+            <p>Paragraph</p>
+        </div>
+    </div>
+
+    <div class="at-flash-block">
+        <div class="at flash">
+            <div class="flash-title">flash-title</div>
+            <p>Paragraph</p>
+        </div>
+    </div>
+
+    <div class="at-flash-block">
+        <div class="at flash">
+            <ul class="list">
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+            </ul>
+        </div>
+    </div>
+
+    <h4>Full Width Flash</h4>
+    <div class="at-flash-block">
+        <div class="at flash is-fullwidth">
+            <i class="close flash-icon"></i>
+            <div class="flash-title">flash-title</div>
+            <p>Paragraph</p>
+            <ul class="list">
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+            </ul>
+        </div>
+    </div>
+
+    <h4>Success</h4>
+    <div class="at-flash-block">
+        <div class="at flash success">
+            <i class="close flash-icon"></i>
+            <div class="flash-title">You are eligible for a reward</div>
+            <p>Go to your special offers page to see now. <a class="flash-link" href="#">Flash Link</a></p>
+        </div>
+    </div>
+
+    <h4>Error</h4>
+    <div class="at-flash-block">
+        <div class="at flash error">
+            <i class="close flash-icon"></i>
+            <div class="flash-title">We're sorry we can't apply that discount.</div>
+            <p>That offer has expired <a class="flash-link" href="#">Flash Link</a></p>
+        </div>
+    </div>
+
+    <h4>Warning</h4>
+    <div class="at-flash-block">
+        <div class="at flash warning">
+            <i class="close flash-icon"></i>
+            <div class="flash-title">You must register before you can do that!</div>
+            <p>Visit our registration page, then try again <a class="flash-link" href="#">Flash Link</a></p>
+        </div>
+    </div>
+
+    <h4>Info</h4>
+    <div class="at-flash-block">
+        <div class="at flash info">
+            <i class="close flash-icon"></i>
+            <div class="flash-title">Was this what you wanted?</div>
+            <ul class="list">
+                <li>It's good to see you again.</li>
+                <li>Did you know it's been a while? <a class="flash-link" href="#">Flash Link</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <h4>A message can contain an icon.</h4>
+    <div class="at-flash-block">
+        <div class="at flash has-icon">
+            <i class="flash-icon close"></i>
+            <i class="flash-icon at-mail"></i>
+            <div class="content">
+                <div class="flash-title">Just one second</div>
+                <p>We're fetching <i class="icon at-mail"></i> that content for you.</p>
+            </div>
+        </div>
+    </div>
+
+    <h4>Flash with Square Card</h4>
+    <div class="at-flash-block">
+        <div class="at flash">
+            <i class="flash-icon close"></i>
+            <div class="card square">
+                <div class="image" style="background-image: url('{{image}}');">
+                    <img src="{{image}}">
+                </div>
+                <div class="content">
+                    <div class="heart">
+                        <!-- <span class="heart-number">{{ hearts }}</span> -->
+                        <i class="icon fa fa-heart"></i>
+                    </div>
+                    <div class="artist">
+                        {{artist}}
+                    </div>
+                    <div class="title">
+                        {{title}}
+                    </div>
+                    <div class="price">
+                        {{price}}
+                        <span class="currency"><s>{{price}}</s></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h4>Flash with Avatar</h4>
+    <div class="at-flash-block">
+        <div class="at flash">
+            <i class="flash-icon close"></i>
+            <div class="avatar avatar-xl">
+                <img src="{{selfie}}">
+                <div class="avatar-status follow"></div>
+            </div>
+        </div>
+    </div>
+
+    <h4>Flash with Card Artist</h4>
+    <div class="at-flash-block">
+        <div class="at flash">
+            <i class="flash-icon close"></i>
+            <div class="card artist">
+                <div class="image" style="background-image: url('{{image}}');">
+                    <img src="{{image}}">
+                </div>
+                <div class="card-avatar">
+                    {{> avatar }}
+                </div>
+                <div class="content">
+                    <div class="artist">
+                        {{artist}}
+                    </div>
+                    <div class="from">
+                        {{from}}
+                    </div>
+                    <div class="pieces">
+                        {{pieces}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
