@@ -135,6 +135,7 @@ $(document).ready(function() {
     }
 
 
+    ////////////////////////////////////////////////////////////
     // Scroll to Element
     // Usage
     // <a data-scroll-to="#foo" class="scroll-to"> -- will target id foo element
@@ -144,6 +145,18 @@ $(document).ready(function() {
     // 
     $(document).on( 'click', '.scroll-to', function(e) {
         $('html, body').animate( {scrollTop: $($(this).attr('data-scroll-to')).offset().top -30 }, 1000);
+    });
+
+
+    ////////////////////////////////////////////////////////////
+    // Flash Messages
+    // hide flash message
+    //
+    $('.flash .close')
+    .on('click', function() {
+        $(this)
+        .closest('.flash')
+        .fadeOut();
     });
 
 });
