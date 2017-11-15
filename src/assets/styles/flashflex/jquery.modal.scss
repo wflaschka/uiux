@@ -33,6 +33,9 @@
     &.small {
         max-width: 600px;
     }
+    &.medium {
+        max-width: 800px;
+    }
     // &.small {
     //     max-width: 500px;
     // }
@@ -93,6 +96,15 @@
         .modal {
             width: 100%;
             padding: p(20);
+            a.close-modal {
+                top: p(-4);
+                right: 0;
+            }
         }
     }
+}
+
+// For Cropper Image Editor
+.modal-cropper.modal {
+    // max-width: 500px;
 }

@@ -15,7 +15,7 @@
 
 ////////////////////////////////////////////////////////////////////
 // BASICS
-	@import '_normalize';
+	@import 'normalize.scss';
 	@import 'setup.scss';
 	@import 'mixins.scss';
 	@import 'mixins-bulma.scss';
@@ -179,12 +179,17 @@
 	@import "slick-slider/slick.scss";
 	@import "slick-slider/slick-theme.scss";
 	// Common slider for ArtTap elements
-	@import "slider-at.scss";
+	@import "slick-slider/slider-at.scss";
 	// Customization Slick Slider for landing page
-	@import "slider-landing.scss";
+	@import "slick-slider/slider-landing.scss";
 
 	// Quill is a modern rich text editor, convert element into RTF.
-	@import "quill.snow";
+	@import "quill.snow.scss";
+
+	// A simple jQuery image cropping plugin.
+	@import "cropper/cropper.scss";
+	// Customized Cropper for ArtTap
+	@import "cropper/at-cropper.scss";
 
 
 ////////////////////////////////////////////////////////////
