@@ -123,18 +123,6 @@
 
 				.links {
 					flex: 1 1 auto;
-
-					li {
-						margin-bottom: .5rem;
-
-						&.title {
-							font-weight: $weight-semibold;
-						}
-
-						&:last-child {
-							margin-bottom: 0;
-						}
-					}
 				}
 
 				.legal-links {

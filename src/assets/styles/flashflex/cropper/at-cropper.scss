@@ -1,0 +1,13 @@
+.at.image-cropper {
+    margin-bottom: p(20);
+    img {
+        max-width: 100%;
+    }
+}
+
+.cropper-btn {
+    text-align: right;
+    .button {
+        margin-left: p(10);
+    }
+}
