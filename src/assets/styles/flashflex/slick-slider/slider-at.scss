@@ -2,7 +2,10 @@
 // Slider ArtTap - Common slider for ArtTap elements.
 
 .at.slider {
-	margin-bottom: p(20);
+
+	&.has-space {
+		margin-bottom: p(50);
+	}
 
 	&:hover {
 		.slick-prev,

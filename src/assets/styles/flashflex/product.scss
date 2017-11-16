@@ -1,0 +1,146 @@
+///////////////////////////////////////////////////////////////////
+// Product Iamge + Detail Layout
+// Mobile First
+///////////////////////////////////////////////////////////////////
+
+.product-container {
+	display: flex;
+	flex-direction: column;
+
+	.product-image {
+
+		.slick-slider {
+			.slick-slide {
+				img {
+		    		@include box_shadow(2);
+					width: auto;
+				}
+			}
+		}
+
+	    .slick-dots {
+	    	bottom: -35px;
+	        li {
+	        	margin: 0;
+	            button {
+	                &:before {
+	                    font-size: .5rem;
+	                }
+	            }
+	        }
+	    }
+	}
+
+	.product-detail {
+
+		.description {
+			margin-bottom: p(25);
+			line-height: 1.3125rem;
+
+			.title {
+				font-style: italic;
+			}
+
+			.series,
+			.type,
+			.sizes,
+			.edition {
+				color: color(gray);
+			}
+		}
+
+		.gallery-price {
+			margin-bottom: p(20);
+			line-height: 1.5rem;
+
+			.discounted {
+				font-size: 1.25rem;
+			}
+
+			.regular {
+				color: color(gray);
+			}
+
+			.icon.tooltip {
+				color: color(black);
+				font-size: 1.25rem;
+				margin-left: 1rem;
+			}
+		}
+
+		.edition-number {
+			margin-bottom: p(30);
+
+			.prompt {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				margin-bottom: p(5);
+			}
+
+			.edition-remain {
+				font-weight: $weight-semibold;
+			}
+		}
+
+		.add-to-cart {
+			margin: 1.25rem 0 !important;
+		}
+
+		.add-to-collection {
+			display: flex;
+			position: relative;
+
+			.at.dropdown {
+				flex: 1 1 100%;
+
+				.dropdown-content {
+					width: 100%;
+					padding: 1rem;
+					border: 1px solid $color-border;
+				}
+			}
+
+			.heart,
+			.upload {
+				margin-left: p(10);
+			}
+		}
+
+		.saved-collection {
+			color: color(gray);
+			font-size: p(13);
+			margin-top: 0.625rem;
+		}
+
+		.at.accordion {
+			p {
+				font-size: p(13);
+			}
+		}
+	}
+
+	@include for-tablet-portrait-up {
+
+	flex-direction: row;
+
+		.product-image {
+			flex: 1 1 70%;
+			width: 70%;
+			padding: 0 40px;
+
+			img {
+				max-height: calc(100vh - 250px);
+				margin: 0 auto;
+			}
+		}
+
+		.product-detail {
+			flex: 1 1 380px;
+
+			h4 {
+				margin-top: 0;
+			}
+		}
+	}
+}

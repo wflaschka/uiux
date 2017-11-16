@@ -16,6 +16,22 @@
 		}
 	}
 
+	#content {
+		margin: p(20);
+	}
+
+	.section {
+		&.has-border {
+			margin-bottom: p(50);
+			padding-bottom: p(50);
+			border-bottom: 1px solid $color-border;
+		}
+
+		h2 {
+			margin-bottom: 1.5rem;
+		}
+	}
+
 	.main-content {
 
 		.page-title {
@@ -41,4 +57,21 @@
 	    
 	}
 
+	// For Mobile first approach
+	// First define layout for mobile view
+	// then go larger devices
+	@include for-tablet-portrait-up {
+
+	}
+
+	@include for-tablet-landscape-up {
+		#content {
+			margin: p(50) p(40) p(40);
+		}
+	}
+
+	@include for-desktop-up {
+	}
 }
+
+

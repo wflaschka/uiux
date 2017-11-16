@@ -186,10 +186,3 @@
 		}
 	}
 }
-
-.at.slider {
-	.card {
-		// force width for card in slider to replace auto width given by slider.
-		width: 150px !important;
-	}
-}

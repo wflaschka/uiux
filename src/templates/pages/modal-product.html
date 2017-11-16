@@ -1,58 +1,44 @@
-{{> header-logged-in }}
-<main>
-
-<p>
-	<a href="#basic" rel="modal:open">Product Modal</a>
-</p>
+<p><a href="#basic" rel="modal:open">Product Modal</a></p>
 
 <div id="basic" style="display:none;">
 	<a href="#" rel="modal:close" class="close-modal"><i class="at at-arrows-remove"></i></a>
 
-<div class="row">
-    
-  <div class="col-lg-10 col-sm-8 col-xs-12">
-    <div class="row center-sm">
-      <div class="col-lg-8 col-sm-8 col-xs-12">
-        <div class="box">
-            <img class="responsive" src="../../assets/images/artwork/art-1.jpg">
+    <div class="product-container">
+        <div class="product-image">
+            <div class="product-slider">
+                <div><img class="responsive" src="../../assets/images/artwork/art-1.jpg"></div>
+                <div><img class="responsive" src="../../assets/images/artwork/art-2.jpg"></div>
+                <div><img class="responsive" src="../../assets/images/artwork/art-3.jpg"></div>
+                <div><img class="responsive" src="../../assets/images/artwork/art-4.jpg"></div>
+                <div><img class="responsive" src="../../assets/images/artwork/art-5.jpg"></div>
+                <div><img class="responsive" src="../../assets/images/artwork/art-6.jpg"></div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-sm-6 col-md-4 col-lg-4 col-xs-12">
-    <div class="box">
 
         <div class="product-detail">
 
-            <div class="artist-name">Alex Kwok</div>
+            <h4>Alex Kwok</h4>
+            {{> follow-artist-toggle-single}}
 
-            <div class="follow-wrap">
-                <span class="follow-artist"><a href="#" ><i class="fa fa-plus-circle"></i> Follow Artist</a></span>
-                <span class="followers">60 Followers</span>
-            </div>
-
-
-            <div class="descrption">
-                <div class="descrption-date">Tesselation_02, 2013</div>
-                <div class="descrption-type">Giclee Photograph</div>
-                <div class="descrption-sizes">9 <small>9/16</small> × 12 <small>1/2</small> in (24.3 × 31.8 cm)</div>
-                <div class="descrption-edition-number">Limited Edition of 25</div>
+            <div class="description">
+                <div class="title">Tesselation_02, 2013</div>
+                <div class="series">Tesselations Series</div>
+                <div class="type">Giclee Photograph</div>
+                <div class="sizes">9 <small>9/16</small> × 12 <small>1/2</small> in (24.3 × 31.8 cm)</div>
+                <div class="edition">Limited Edition of 25</div>
             </div>
 
             <div class="gallery-price">
-                <div class="gallery-price-discounted">$2,300.00 <small>USD</small></div>
-                <div class="gallery-price-regular">Reg. Gallery Price <s>$3,067.00</s> USD <i class="fa fa-question-circle gallery-info tooltip"><span class="text">tooltip text</span></i></div>
+                <div class="discounted">$2,300.00 <small>USD</small></div>
+                <div class="regular">Reg. Gallery Price <s>$3,067.00</s> USD 
+                    {{> icon-info }}
+                </div>
             </div>
 
             <div class="edition-number">
-                <div class="row">
-                    <div class="col-xs-9">
-                        <span class="edition-number-text">Select Edition Number</span>
-                    </div>
-                    <div class="col-xs-5 text-right">
-                        <span class="edition-number-remain">Only 4 left!</span>
-                    </div>
+                <div class="prompt">
+                    <div class="edition-text">Select Edition Number</div>
+                    <div class="edition-remain">Only 4 left!</div>
                 </div>
 
                 <div class="field">
@@ -67,61 +53,34 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div><!-- .edition-number -->
 
-            <div class="add-to-cart">
-                <button class="button is-fullwidth is-black">Add to Cart</button>
-            </div>
+            {{> add-to-cart-button }}
 
-            <div class="add-to-collection">
-                
-                <div class="at dropdown">
-                    <button class="button is-gray is-outlined opener">Add to Collection</button>
-                    <div class="dropdown-content">
-                        <div class="create">
-                            <div class="field">
-                                <div class="control">
-                                    <input class="input" type="name" placeholder="Name of Collection" value="">
-                                </div>
-                            </div>
-                            <div class="field">
-                                <div class="control">
-                                    <label class="radio mr30">
-                                        <input type="radio" name="question">
-                                        <span></span>
-                                        Public
-                                    </label>
-                                    <label class="radio">
-                                        <input type="radio" name="question">
-                                        <span></span>
-                                        Private
-                                    </label>
-                                </div>
-                            </div>
-                            <button class="button is-fullwidth is-black">Create Collection</button>
-                        </div>
-                    </div>
-                </div><!-- .at.at.dropdown -->
-                <button class="button is-gray is-outlined"><i class="fa fa-heart"></i></button>
-                <div class="saved-collection">50 Saved to Collection  | heart 60</div>
+            {{> add-to-collection }}
 
-            </div><!-- .add-to-collection -->
+            <div class="saved-collection">50 Saved to Collection  | <i class="fa fa-heart-o"></i> 60</div>
 
-            <a href="#" class="mt20 ib">See Full Details</a>
+            <div class="sep"></div>
 
+            <dl class="at accordion">
+                <dt>About?<i class="at at-arrows-plus"></i></dt>
+                <dd>
+                    <p>This painting is made to question a fast-paced lifestyle. Dogs racing around a track are employed to represent a critique of the human act concerning daily life at work. Run The Circle...</p>
+                </dd>
+
+                <dt>Shipping and Delivery<i class="at at-arrows-plus"></i></dt>
+                <dd>
+                    <p>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</p>
+                </dd>
+            </dl>
         </div><!-- .product-detail -->
-
-    </div>
-  </div>
-</div><!-- .row -->
+    </div><!-- .product-container -->
 
 </div><!-- modal -->
 
-
-
 <script type="text/javascript">
     defer(function () {
-
     	$.modal.defaults = {
     		closeExisting : true,      // Close existing modals. Set this to false if you need to stack multiple modal instances.
     		escapeClose   : true,      // Allows the user to close the modal by pressing `ESC`
@@ -137,13 +96,20 @@
     		fadeDelay     : 0.8        // Point during the overlay's fade-in that the modal begins to fade in (.5 = 50%, 1.5 = 150%, etc.)
     	};
 
-        $('#basic').on($.modal.OPEN, function(event, modal) {
-            $('select.select2').select2();
+        $("#basic").show().modal({
+            escapeClose: false,
+            clickClose: false,
+            showClose: false
         });
+        
+        $('#basic').on($.modal.OPEN, function(event, modal) {
+            $('.product-slider').slick({
+                dots: true,
+                arrows: false,
+                adaptiveHeight: true
+            });
+        });
+
 
     });
 </script>
-
-
-</main>
-{{> footer-standard }}

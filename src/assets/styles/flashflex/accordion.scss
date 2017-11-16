@@ -4,7 +4,13 @@
 .at.accordion {
 
 	margin: 0;
-	
+
+	&.has-info {
+		dd {
+			padding: 0 5rem 1.875rem 0;
+		}
+	}
+
 	dt {
   		border-top: 1px solid $color-border;
   		padding: 1rem 1.5rem 1rem 0;
@@ -37,7 +43,8 @@
 
 	dd {
 		margin: 0;
-		padding: 0 5rem 1.875rem 0;
+		padding: 0 1rem 0 0;
+		
 		p:first-of-type {
 			margin-top: 0;
 		}

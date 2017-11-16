@@ -1,558 +1,370 @@
+<div class="page-artist page">
 {{> header-public }}
 
-<div class="page-artist page">
+<div id="content">
 
-<div class="xmain-content">
-
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-xs-14">
-
-<div class="at slider slide8 mt50 mb50">
-    {{#dataset}}
-        {{> card-unlabeled }}
-    {{/dataset}}
-    {{#dataset}}
-        {{> card-unlabeled }}
-    {{/dataset}}
-    {{#dataset}}
-        {{> card-unlabeled }}
-    {{/dataset}}
-    {{#dataset}}
-        {{> card-unlabeled }}
-    {{/dataset}}
-    {{#dataset}}
-        {{> card-unlabeled }}
-    {{/dataset}}
-</div><!-- .at slider -->
-
-<div class="at user-header">
-    <div class="user">
-        <div class="avatar avatar-xl">
-            <img src="/assets/images/profiles/person-3.jpg">
-            <div class="avatar-status follow"></div>
-        </div>
-        <div class="info">
-            <h4>Alexander Kwok
-                <img src="/assets/images/signatures/alex-kwok.png">
-            </h4>
-            <div class="place">From New York, USA <a  href="#">Message Artist</a></div>
-        </div>
-    </div><!-- .user -->
-
-    <div class="stats">
-        <div><b>31</b> Total <i class="fa fa-heart-o"></i></div>
-        <div><b>325</b> Following</div>
-        <div><b>30</b> Followers</div>
-    </div>
-</div><!-- .at.user-header -->
+    <div class="at slider has-space">
+        {{#dataset}}
+            {{> card-unlabeled }}
+        {{/dataset}}
+        {{#dataset}}
+            {{> card-unlabeled }}
+        {{/dataset}}
+        {{#dataset}}
+            {{> card-unlabeled }}
+        {{/dataset}}
+        {{#dataset}}
+            {{> card-unlabeled }}
+        {{/dataset}}
+        {{#dataset}}
+            {{> card-unlabeled }}
+        {{/dataset}}
+    </div><!-- .at slider -->
 
 
-<div class="tabs is-centered">
-    <ul>
-        <li data-tab="tab_artwork" class="is-active"><a>Artwork</a></li>
-        <li data-tab="tab_biography"><a>Biography</a></li>
-        <li data-tab="tab_shows"><a>Shows</a></li>
-        <li data-tab="tab_social"><a>Social</a></li>
-    </ul>
-</div><!-- .tabs -->
-
-<div class="tabs-container"">
-
-    <div id="tab_artwork" class="tab-content is-active">
-        <div class="row masonry-grid">
-            {{#dataset}}
-                {{> card-masonry }}
-            {{/dataset}}
-            {{#dataset}}
-                {{> card-masonry }}
-            {{/dataset}}
-            {{#dataset}}
-                {{> card-masonry }}
-            {{/dataset}}
-        </div>
-    </div><!-- #tab_artwork -->
-
-    <div id="tab_biography" class="tab-content" style="max-width: 700px; margin: auto;">
-        <div class="see-more">
-            <div class="fade-info text-left">
-                <p class="mt0">My artwork takes the form of tangible representation on paper in questioning the role of the photographic image in the contemporary art world. Through extensive research and informed instincts, my projects seek to articulate the aesthetic tension created between performative aspect and emotional response through the conscious awareness of the camera. The aesthetics in my artwork seek to enable an initial visual seduction of mechanical perfection and superficial relationships, which establish itself as a façade against the poetics of imperfect beauty and capricious nature of inter-human behaviour.</p>
-
-                <p>My artwork takes the form of tangible representation on paper in questioning the role of the photographic image in the contemporary art world. Through extensive research and informed instincts, my projects seek to articulate the aesthetic tension created between performative aspect and emotional response through the conscious awareness of the camera. The aesthetics in my artwork seek to enable an initial visual seduction of mechanical perfection and superficial relationships, which establish itself as a façade against the poetics of imperfect beauty and capricious nature of inter-human behaviour.</p>
-
-                <p>My artwork takes the form of tangible representation on paper in questioning the role of the photographic image in the contemporary art world. Through extensive research and informed instincts, my projects seek to articulate the aesthetic tension created between performative aspect and emotional response through the conscious awareness of the camera. The aesthetics in my artwork seek to enable an initial visual seduction of mechanical perfection and superficial relationships, which establish itself as a façade against the poetics of imperfect beauty and capricious nature of inter-human behaviour.</p>
-            </div>
-            <div class="action fade-info-action"><a href="#">See More</a></div>
-        </div>
-    </div><!-- #tab_biography -->
-
-    <div id="tab_shows" class="tab-content" style="max-width: 700px; margin: auto;">
-        <div class="see-more">
-            <div class="fade-info text-left">
-                <div class="show">
-                    <div class="title">Solo Shows</div>
-                    <ul class="list-unstyled">
-                        <li>2017 - Blue.Seventeen, Gallery Name Philipp von Rosen Galerie, New York (Upcoming)</li>
-                        <li>2014 - Yelena Popova | Drying Time, Paradise  Row, London</li>
-                    </ul>
-                </div>
-
-                <div class="show">
-                    <div class="title">Group Shows</div>
-                    <ul class="list-unstyled">
-                        <li>2017 - Blue.Seventeen, Osnova Gallery, Moscow</li>
-                    </ul>
-                </div>
-
-                <div class="show">
-                    <div class="title">Fair History</div>
-                    <ul class="list-unstyled">
-                        <li>2017 - Blue.Seventeen, Gallery Name Philipp von Rosen Galerie, New York (Upcoming)</li>
-                        <li>2017 - Philipp von Rosen Galerie at Art Cologne 2017, Köln</li>
-                        <li>2016 - Philipp von Rosen Galerie at Art Cologne 2016, Köln</li>
-                        <li>2014 - Paradise Row at Art Brussels 2014</li>
-                    </ul>
+    <section class="section section-user has-border">
+        <div class="at user-header">
+            <div class="avatar-container">
+                <div class="avatar avatar-xl">
+                    <img src="/assets/images/profiles/person-3.jpg">
+                    <div class="avatar-status follow"></div>
                 </div>
             </div>
-            <div class="action fade-info-action"><a href="#">See More</a></div>
-        </div>
-    </div><!-- #tab_shows -->
 
-    <div id="tab_social" class="tab-content" style="max-width: 700px; margin: auto;">
-        <p>Social</p>
-    </div><!-- #tab_social -->
+            <div class="user-container">
+                <div class="user">
+                    <div class="info">
+                        <h4>Alexa Kwok
+                            <img src="/assets/images/signatures/alex-kwok.png">
+                        </h4>
+                        <div class="place">From New York, USA <a  href="#">Message Artist</a></div>
+                    </div>
+                </div><!-- .user -->
+                <div class="stats">
+                    <div><b>31</b> Total <i class="fa fa-heart-o"></i></div>
+                    <div><b>325</b> Following</div>
+                    <div><b>30</b> Followers</div>
+                </div>
+            </div>
+        </div><!-- .at.user-header -->
 
-</div><!-- .tabs-container -->
+        <div class="tabs is-centered">
+            <ul>
+                <li data-tab="tab_artwork" class="is-active"><a>Artwork</a></li>
+                <li data-tab="tab_biography"><a>Biography</a></li>
+                <li data-tab="tab_shows"><a>Shows</a></li>
+                <li data-tab="tab_social"><a>Social</a></li>
+            </ul>
+        </div><!-- .tabs -->
 
-<div class="sep mt50 mb50"></div>
+        <div class="tabs-container"">
+            <div id="tab_artwork" class="tab-content is-active">
+                <div class="row masonry-grid">
+                    {{#dataset}}
+                        {{> card-masonry }}
+                    {{/dataset}}
+                    {{#dataset}}
+                        {{> card-masonry }}
+                    {{/dataset}}
+                    {{#dataset}}
+                        {{> card-masonry }}
+                    {{/dataset}}
+                </div>
+            </div><!-- #tab_artwork -->
 
-<h2>Related Artwork</h2>
-<div class="mb30 mt20">
-    <span class="tag">
-        Giclée
-        <a href="#" class="link-black delete">
-            <i class="at at-arrows-remove"></i>
-        </a>
-    </span>
-    <span class="tag">Pencil</span>
-    <span class="tag">Watercolor</span>
-    <span class="tag">Collage</span>
-    <span class="tag">Photo</span>
-    <span class="tag">Giclée</span>
-    <span class="tag">Oil and Canvas</span>
-    <span class="tag">Photo</span>
-</div>
+            <div id="tab_biography" class="tab-content" style="max-width: 700px; margin: auto;">
+                <div class="see-more">
+                    <div class="fade-info text-left">
+                        <p>My artwork takes the form of tangible representation on paper in questioning the role of the photographic image in the contemporary art world. Through extensive research and informed instincts, my projects seek to articulate the aesthetic tension created between performative aspect and emotional response through the conscious awareness of the camera. The aesthetics in my artwork seek to enable an initial visual seduction of mechanical perfection and superficial relationships, which establish itself as a façade against the poetics of imperfect beauty and capricious nature of inter-human behaviour.</p>
 
-<div class="at slider slide8">
-    <div class="card square">
-        <div class="image" style="background-image: url('/assets/images/artwork/art-1.jpg');">
-            <img src="/assets/images/artwork/art-1.jpg">
-        </div>
-        <div class="content">
-            <div class="heart">
-                <!-- <span class="heart-number">55</span> -->
-                <i class="icon fa fa-heart"></i>
-            </div>
-            <div class="artist">
-                Camille Oudinot
-            </div>
-            <div class="title">
-                Fading Faces
-            </div>
-            <div class="price">
-                $930
-                <span class="currency"><s>$930</s></span>
-            </div>
-        </div>
-    </div>
-    <div class="card square">
-        <div class="image" style="background-image: url('/assets/images/artwork/art-narrow-1.jpg');">
-            <img src="/assets/images/artwork/art-narrow-1.jpg">
-        </div>
-        <div class="content">
-            <div class="heart">
-                <!-- <span class="heart-number">23</span> -->
-                <i class="icon fa fa-heart"></i>
-            </div>
-            <div class="artist">
-                Sethlan Semelon
-            </div>
-            <div class="title">
-                Rhapsody in the Beginning of Summer
-            </div>
-            <div class="price">
-                $1930
-                <span class="currency"><s>$1930</s></span>
-            </div>
-        </div>
-    </div>
-    <div class="card square">
-        <div class="image" style="background-image: url('/assets/images/artwork/art-wide-1.jpg');">
-            <img src="/assets/images/artwork/art-wide-1.jpg">
-        </div>
-        <div class="content">
-            <div class="heart">
-                <!-- <span class="heart-number">11</span> -->
-                <i class="icon fa fa-heart"></i>
-            </div>
-            <div class="artist">
-                Nan Park
-            </div>
-            <div class="title">
-                Uncanny Valley
-            </div>
-            <div class="price">
-                $450
-                <span class="currency"><s>$450</s></span>
-            </div>
-        </div>
-    </div>
-    <div class="card square">
-        <div class="image" style="background-image: url('/assets/images/artwork/art-3.jpg');">
-            <img src="/assets/images/artwork/art-3.jpg">
-        </div>
-        <div class="content">
-            <div class="heart">
-                <!-- <span class="heart-number">123</span> -->
-                <i class="icon fa fa-heart"></i>
-            </div>
-            <div class="artist">
-                Jane Do
-            </div>
-            <div class="title">
-                Roommate #2
-            </div>
-            <div class="price">
-                $633
-                <span class="currency"><s>$633</s></span>
-            </div>
-        </div>
-    </div>
-    <div class="card square">
-        <div class="image" style="background-image: url('/assets/images/artwork/art-4.jpg');">
-            <img src="/assets/images/artwork/art-4.jpg">
-        </div>
-        <div class="content">
-            <div class="heart">
-                <!-- <span class="heart-number">61</span> -->
-                <i class="icon fa fa-heart"></i>
-            </div>
-            <div class="artist">
-                Jephesandra Tawarna
-            </div>
-            <div class="title">
-                Getting Coffee / Knife Wound
-            </div>
-            <div class="price">
-                $1024
-                <span class="currency"><s>$1024</s></span>
-            </div>
-        </div>
-    </div>
-    <div class="card square">
-        <div class="image" style="background-image: url('/assets/images/artwork/art-5.jpg');">
-            <img src="/assets/images/artwork/art-5.jpg">
-        </div>
-        <div class="content">
-            <div class="heart">
-                <!-- <span class="heart-number">31</span> -->
-                <i class="icon fa fa-heart"></i>
-            </div>
-            <div class="artist">
-                Jimothy St. Creus de la Mare
-            </div>
-            <div class="title">
-                Oily Water
-            </div>
-            <div class="price">
-                $1930
-                <span class="currency"><s>$1930</s></span>
-            </div>
-        </div>
-    </div>
-    <div class="card square">
-        <div class="image" style="background-image: url('/assets/images/artwork/art-6.jpg');">
-            <img src="/assets/images/artwork/art-6.jpg">
-        </div>
-        <div class="content">
-            <div class="heart">
-                <!-- <span class="heart-number">22</span> -->
-                <i class="icon fa fa-heart"></i>
-            </div>
-            <div class="artist">
-                Caulie Dempsei Alexandrian
-            </div>
-            <div class="title">
-                Lurid Overhead Squish
-            </div>
-            <div class="price">
-                $2450
-                <span class="currency"><s>$2450</s></span>
-            </div>
-        </div>
-    </div>
-    <div class="card square">
-        <div class="image" style="background-image: url('/assets/images/artwork/art-2.jpg');">
-            <img src="/assets/images/artwork/art-2.jpg">
-        </div>
-        <div class="content">
-            <div class="heart">
-                <!-- <span class="heart-number">1</span> -->
-                <i class="icon fa fa-heart"></i>
-            </div>
-            <div class="artist">
-                Amy Yu
-            </div>
-            <div class="title">
-                First Argument
-            </div>
-            <div class="price">
-                $4430
-                <span class="currency"><s>$4430</s></span>
-            </div>
-        </div>
-    </div>
-    <div class="card square">
-        <div class="image" style="background-image: url('/assets/images/artwork/art-5.jpg');">
-            <img src="/assets/images/artwork/art-5.jpg">
-        </div>
-        <div class="content">
-            <div class="heart">
-                <!-- <span class="heart-number">31</span> -->
-                <i class="icon fa fa-heart"></i>
-            </div>
-            <div class="artist">
-                Jimothy St. Creus de la Mare
-            </div>
-            <div class="title">
-                Oily Water
-            </div>
-            <div class="price">
-                $1930
-                <span class="currency"><s>$1930</s></span>
-            </div>
-        </div>
-    </div>
-    <div class="card square">
-        <div class="image" style="background-image: url('/assets/images/artwork/art-6.jpg');">
-            <img src="/assets/images/artwork/art-6.jpg">
-        </div>
-        <div class="content">
-            <div class="heart">
-                <!-- <span class="heart-number">22</span> -->
-                <i class="icon fa fa-heart"></i>
-            </div>
-            <div class="artist">
-                Caulie Dempsei Alexandrian
-            </div>
-            <div class="title">
-                Lurid Overhead Squish
-            </div>
-            <div class="price">
-                $2450
-                <span class="currency"><s>$2450</s></span>
-            </div>
-        </div>
-    </div>
-    <div class="card square">
-        <div class="image" style="background-image: url('/assets/images/artwork/art-2.jpg');">
-            <img src="/assets/images/artwork/art-2.jpg">
-        </div>
-        <div class="content">
-            <div class="heart">
-                <!-- <span class="heart-number">1</span> -->
-                <i class="icon fa fa-heart"></i>
-            </div>
-            <div class="artist">
-                Amy Yu
-            </div>
-            <div class="title">
-                First Argument
-            </div>
-            <div class="price">
-                $4430
-                <span class="currency"><s>$4430</s></span>
-            </div>
-        </div>
-    </div>
-    <div class="card square">
-        <div class="image" style="background-image: url('/assets/images/artwork/art-5.jpg');">
-            <img src="/assets/images/artwork/art-5.jpg">
-        </div>
-        <div class="content">
-            <div class="heart">
-                <!-- <span class="heart-number">31</span> -->
-                <i class="icon fa fa-heart"></i>
-            </div>
-            <div class="artist">
-                Jimothy St. Creus de la Mare
-            </div>
-            <div class="title">
-                Oily Water
-            </div>
-            <div class="price">
-                $1930
-                <span class="currency"><s>$1930</s></span>
-            </div>
-        </div>
-    </div>
-    <div class="card square">
-        <div class="image" style="background-image: url('/assets/images/artwork/art-6.jpg');">
-            <img src="/assets/images/artwork/art-6.jpg">
-        </div>
-        <div class="content">
-            <div class="heart">
-                <!-- <span class="heart-number">22</span> -->
-                <i class="icon fa fa-heart"></i>
-            </div>
-            <div class="artist">
-                Caulie Dempsei Alexandrian
-            </div>
-            <div class="title">
-                Lurid Overhead Squish
-            </div>
-            <div class="price">
-                $2450
-                <span class="currency"><s>$2450</s></span>
-            </div>
-        </div>
-    </div>
-    <div class="card square">
-        <div class="image" style="background-image: url('/assets/images/artwork/art-5.jpg');">
-            <img src="/assets/images/artwork/art-5.jpg">
-        </div>
-        <div class="content">
-            <div class="heart">
-                <!-- <span class="heart-number">31</span> -->
-                <i class="icon fa fa-heart"></i>
-            </div>
-            <div class="artist">
-                Jimothy St. Creus de la Mare
-            </div>
-            <div class="title">
-                Oily Water
-            </div>
-            <div class="price">
-                $1930
-                <span class="currency"><s>$1930</s></span>
-            </div>
-        </div>
-    </div>
-    <div class="card square">
-        <div class="image" style="background-image: url('/assets/images/artwork/art-6.jpg');">
-            <img src="/assets/images/artwork/art-6.jpg">
-        </div>
-        <div class="content">
-            <div class="heart">
-                <!-- <span class="heart-number">22</span> -->
-                <i class="icon fa fa-heart"></i>
-            </div>
-            <div class="artist">
-                Caulie Dempsei Alexandrian
-            </div>
-            <div class="title">
-                Lurid Overhead Squish
-            </div>
-            <div class="price">
-                $2450
-                <span class="currency"><s>$2450</s></span>
-            </div>
-        </div>
-    </div>
-    <div class="card square">
-        <div class="image" style="background-image: url('/assets/images/artwork/art-2.jpg');">
-            <img src="/assets/images/artwork/art-2.jpg">
-        </div>
-        <div class="content">
-            <div class="heart">
-                <!-- <span class="heart-number">1</span> -->
-                <i class="icon fa fa-heart"></i>
-            </div>
-            <div class="artist">
-                Amy Yu
-            </div>
-            <div class="title">
-                First Argument
-            </div>
-            <div class="price">
-                $4430
-                <span class="currency"><s>$4430</s></span>
-            </div>
-        </div>
-    </div>
-    <div class="card square">
-        <div class="image" style="background-image: url('/assets/images/artwork/art-5.jpg');">
-            <img src="/assets/images/artwork/art-5.jpg">
-        </div>
-        <div class="content">
-            <div class="heart">
-                <!-- <span class="heart-number">31</span> -->
-                <i class="icon fa fa-heart"></i>
-            </div>
-            <div class="artist">
-                Jimothy St. Creus de la Mare
-            </div>
-            <div class="title">
-                Oily Water
-            </div>
-            <div class="price">
-                $1930
-                <span class="currency"><s>$1930</s></span>
-            </div>
-        </div>
-    </div>
-    <div class="card square">
-        <div class="image" style="background-image: url('/assets/images/artwork/art-6.jpg');">
-            <img src="/assets/images/artwork/art-6.jpg">
-        </div>
-        <div class="content">
-            <div class="heart">
-                <!-- <span class="heart-number">22</span> -->
-                <i class="icon fa fa-heart"></i>
-            </div>
-            <div class="artist">
-                Caulie Dempsei Alexandrian
-            </div>
-            <div class="title">
-                Lurid Overhead Squish
-            </div>
-            <div class="price">
-                $2450
-                <span class="currency"><s>$2450</s></span>
-            </div>
-        </div>
-    </div>
-</div><!-- at slider -->
+                        <p>My artwork takes the form of tangible representation on paper in questioning the role of the photographic image in the contemporary art world. Through extensive research and informed instincts, my projects seek to articulate the aesthetic tension created between performative aspect and emotional response through the conscious awareness of the camera. The aesthetics in my artwork seek to enable an initial visual seduction of mechanical perfection and superficial relationships, which establish itself as a façade against the poetics of imperfect beauty and capricious nature of inter-human behaviour.</p>
 
-<div class="sep mt50 mb50"></div>
+                        <p>My artwork takes the form of tangible representation on paper in questioning the role of the photographic image in the contemporary art world. Through extensive research and informed instincts, my projects seek to articulate the aesthetic tension created between performative aspect and emotional response through the conscious awareness of the camera. The aesthetics in my artwork seek to enable an initial visual seduction of mechanical perfection and superficial relationships, which establish itself as a façade against the poetics of imperfect beauty and capricious nature of inter-human behaviour.</p>
+                    </div>
+                    <div class="action fade-info-action"><a href="#">See More</a></div>
+                </div>
+            </div><!-- #tab_biography -->
 
-<h2 class="mb30">Related Artist</h2>
+            <div id="tab_shows" class="tab-content" style="max-width: 700px; margin: auto;">
+                <div class="see-more">
+                    <div class="fade-info text-left">
+                        <div class="show">
+                            <div class="title">Solo Shows</div>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <div class="show-date">2017</div>
+                                    <div class="show-detail">Blue.Seventeen, Gallery Name Philipp von Rosen Galerie, New York (Upcoming) <a href="#">See Details</a></div>
+                                </li>
+                                <li>
+                                    <div class="show-date">2014</div>
+                                    <div class="show-detail">Yelena Popova | Drying Time, Paradise  Row, London</div>
+                                </li>
+                            </ul>
+                        </div>
 
-<div class="at slider slide8 mb40">
-    {{#dataset}}
-        {{> card-artist }}
-    {{/dataset}}
-    {{#dataset}}
-        {{> card-artist }}
-    {{/dataset}}
-    {{#dataset}}
-        {{> card-artist }}
-    {{/dataset}}
-    {{#dataset}}
-        {{> card-artist }}
-    {{/dataset}}
-    {{#dataset}}
-        {{> card-artist }}
-    {{/dataset}}
-</div>
+                        <div class="show">
+                            <div class="title">Group Shows</div>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <div class="show-date">2017</div>
+                                    <div class="show-detail">Blue.Seventeen, Osnova Gallery, Moscow <a href="#">See Details</a></div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="show">
+                            <div class="title">Fair History</div>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <div class="show-date">2017</div>
+                                    <div class="show-detail">Blue.Seventeen, Gallery Name Philipp von Rosen Galerie, New York (Upcoming)</div>
+                                </li>
+                                <li>
+                                    <div class="show-date">2017</div>
+                                    <div class="show-detail">Philipp von Rosen Galerie at Art Cologne 2017, Köln</div>
+                                </li>
+                                <li>
+                                    <div class="show-date">2016</div>
+                                    <div class="show-detail">Philipp von Rosen Galerie at Art Cologne 2016, Köln</div>
+                                </li>
+                                <li>
+                                    <div class="show-date">2014</div>
+                                    <div class="show-detail">Paradise Row at Art Brussels 2014</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="action fade-info-action"><a href="#">See More</a></div>
+                </div>
+            </div><!-- #tab_shows -->
+
+            <div id="tab_social" class="tab-content" style="max-width: 700px; margin: auto;">
+                <p>Social</p>
+            </div><!-- #tab_social -->
+        </div><!-- .tabs-container -->
+    </section><!-- .section-user -->
 
 
+    <section class="section section-related-artwork has-border">
+        <h2>Related Artwork</h2>
 
+        <div class="tags-container">
+            <span class="tag">
+                Giclée
+                <a href="#" class="link-black delete"><i class="at at-arrows-remove"></i></a>
+            </span>
+            <span class="tag">Pencil <a href="#" class="link-black delete"><i class="at at-arrows-remove"></i></a></span>
+            <span class="tag">Watercolor <a href="#" class="link-black delete"><i class="at at-arrows-remove"></i></a></span>
+            <span class="tag">Collage <a href="#" class="link-black delete"><i class="at at-arrows-remove"></i></a></span>
+            <span class="tag">Photo</span>
+            <span class="tag">Giclée</span>
         </div>
-    </div><!-- .row -->
-</div><!-- .container-fluid -->
 
-</div><!-- .main-content -->
+        <div class="at slider">
+            <div class="card square">
+                <div class="image" style="background-image: url('/assets/images/artwork/art-1.jpg');">
+                    <img src="/assets/images/artwork/art-1.jpg">
+                </div>
+                <div class="content">
+                    <div class="heart">
+                        <!-- <span class="heart-number">55</span> -->
+                        <i class="icon fa fa-heart"></i>
+                    </div>
+                    <div class="artist">
+                        Camille Oudinot
+                    </div>
+                    <div class="title">
+                        Fading Faces
+                    </div>
+                    <div class="price">
+                        $930
+                        <span class="currency"><s>$930</s></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card square">
+                <div class="image" style="background-image: url('/assets/images/artwork/art-narrow-1.jpg');">
+                    <img src="/assets/images/artwork/art-narrow-1.jpg">
+                </div>
+                <div class="content">
+                    <div class="heart">
+                        <!-- <span class="heart-number">23</span> -->
+                        <i class="icon fa fa-heart"></i>
+                    </div>
+                    <div class="artist">
+                        Sethlan Semelon
+                    </div>
+                    <div class="title">
+                        Rhapsody in the Beginning of Summer
+                    </div>
+                    <div class="price">
+                        $1930
+                        <span class="currency"><s>$1930</s></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card square">
+                <div class="image" style="background-image: url('/assets/images/artwork/art-wide-1.jpg');">
+                    <img src="/assets/images/artwork/art-wide-1.jpg">
+                </div>
+                <div class="content">
+                    <div class="heart">
+                        <!-- <span class="heart-number">11</span> -->
+                        <i class="icon fa fa-heart"></i>
+                    </div>
+                    <div class="artist">
+                        Nan Park
+                    </div>
+                    <div class="title">
+                        Uncanny Valley
+                    </div>
+                    <div class="price">
+                        $450
+                        <span class="currency"><s>$450</s></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card square">
+                <div class="image" style="background-image: url('/assets/images/artwork/art-3.jpg');">
+                    <img src="/assets/images/artwork/art-3.jpg">
+                </div>
+                <div class="content">
+                    <div class="heart">
+                        <!-- <span class="heart-number">123</span> -->
+                        <i class="icon fa fa-heart"></i>
+                    </div>
+                    <div class="artist">
+                        Jane Do
+                    </div>
+                    <div class="title">
+                        Roommate #2
+                    </div>
+                    <div class="price">
+                        $633
+                        <span class="currency"><s>$633</s></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card square">
+                <div class="image" style="background-image: url('/assets/images/artwork/art-4.jpg');">
+                    <img src="/assets/images/artwork/art-4.jpg">
+                </div>
+                <div class="content">
+                    <div class="heart">
+                        <!-- <span class="heart-number">61</span> -->
+                        <i class="icon fa fa-heart"></i>
+                    </div>
+                    <div class="artist">
+                        Jephesandra Tawarna
+                    </div>
+                    <div class="title">
+                        Getting Coffee / Knife Wound
+                    </div>
+                    <div class="price">
+                        $1024
+                        <span class="currency"><s>$1024</s></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card square">
+                <div class="image" style="background-image: url('/assets/images/artwork/art-5.jpg');">
+                    <img src="/assets/images/artwork/art-5.jpg">
+                </div>
+                <div class="content">
+                    <div class="heart">
+                        <!-- <span class="heart-number">31</span> -->
+                        <i class="icon fa fa-heart"></i>
+                    </div>
+                    <div class="artist">
+                        Jimothy St. Creus de la Mare
+                    </div>
+                    <div class="title">
+                        Oily Water
+                    </div>
+                    <div class="price">
+                        $1930
+                        <span class="currency"><s>$1930</s></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card square">
+                <div class="image" style="background-image: url('/assets/images/artwork/art-6.jpg');">
+                    <img src="/assets/images/artwork/art-6.jpg">
+                </div>
+                <div class="content">
+                    <div class="heart">
+                        <!-- <span class="heart-number">22</span> -->
+                        <i class="icon fa fa-heart"></i>
+                    </div>
+                    <div class="artist">
+                        Caulie Dempsei Alexandrian
+                    </div>
+                    <div class="title">
+                        Lurid Overhead Squish
+                    </div>
+                    <div class="price">
+                        $2450
+                        <span class="currency"><s>$2450</s></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card square">
+                <div class="image" style="background-image: url('/assets/images/artwork/art-2.jpg');">
+                    <img src="/assets/images/artwork/art-2.jpg">
+                </div>
+                <div class="content">
+                    <div class="heart">
+                        <!-- <span class="heart-number">1</span> -->
+                        <i class="icon fa fa-heart"></i>
+                    </div>
+                    <div class="artist">
+                        Amy Yu
+                    </div>
+                    <div class="title">
+                        First Argument
+                    </div>
+                    <div class="price">
+                        $4430
+                        <span class="currency"><s>$4430</s></span>
+                    </div>
+                </div>
+            </div>
+        </div><!-- .at.slider -->
+    </section><!-- .section-related-artwork -->
+
+
+    <section class="section section-related-artist">
+        <h2>Related Artist</h2>
+
+        <div class="at slider">
+            {{#dataset}}
+                {{> card-artist }}
+            {{/dataset}}
+            {{#dataset}}
+                {{> card-artist }}
+            {{/dataset}}
+            {{#dataset}}
+                {{> card-artist }}
+            {{/dataset}}
+            {{#dataset}}
+                {{> card-artist }}
+            {{/dataset}}
+            {{#dataset}}
+                {{> card-artist }}
+            {{/dataset}}
+        </div><!-- .at.slider -->
+    </section><!-- .section-related-artist -->
+
+</div><!-- #content -->
+
+{{> footer-standard }}
 </div><!-- .page-artist -->
 
 <script type="text/javascript" src="assets/scripts/masonry.pkgd.min.js"></script>
@@ -608,4 +420,3 @@
     });
 </script>
 
-{{> footer-standard }}

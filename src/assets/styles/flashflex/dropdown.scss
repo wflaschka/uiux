@@ -35,6 +35,7 @@
     .dropdown-content {
         position: absolute;
         background-color: white;
+        z-index: z('dropdown-menus');
         display: none;
     }
 }
