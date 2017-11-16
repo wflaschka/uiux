@@ -204,7 +204,7 @@ $(document).ready(function() {
     // Tags
     // Delete Tag
     ////////////////////////////////////////////////////////////
-    $('.tag .delete')
+    $('.tag .close')
     .on('click', function(e) {
         $(this)
         .closest('.tag')

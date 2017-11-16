@@ -50,7 +50,7 @@
         @include pseudo-before-for-aliases();
     }
     // AT-ARROWS-REMOVE
-    &.remove, &.fa-times, &.fa-x { 
+    &.remove, &.close, &.fa-times, &.fa-x { 
         @extend .at-arrows-remove;
         @include pseudo-before-for-aliases();
     }
