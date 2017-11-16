@@ -241,6 +241,13 @@
 				display: flex;
 				flex-direction: column;
 			}
+
+
+			&.is-admin {
+				border: 1px solid color(gray);
+				background-color: color(white-dark);
+			}
+
 		}
 	}
 
