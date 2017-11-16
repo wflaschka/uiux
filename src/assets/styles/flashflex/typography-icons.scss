@@ -22,6 +22,17 @@
         font-size: 1.25rem;
     }
 
+    // Colors
+    @each $name, $pair in $colors {
+        $this-color: nth($pair, 1);
+        $this-color-invert: nth($pair, 2);
+
+        &.#{$name} {
+            color: $this-color;
+            background-color: rgba(0,0,0,0) !important;
+        }
+    }
+
     // Sizes
     &.is-small {
         height: 1rem;

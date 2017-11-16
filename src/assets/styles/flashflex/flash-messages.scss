@@ -5,8 +5,11 @@
 
 // Main Wrapper of Flash Messages
 .at-flash-wrapper {
+	z-index: z('flash'); 
 	position: absolute;
-	top: 0;
+	// top: 0;
+	// Show it below the header navigation:
+	top: $page-element-header-height + 50px;
 	right: 2rem;
 	text-align: right;
 }
@@ -62,6 +65,10 @@
 		}
 
 	}
+	// 20171115
+	// The PHP library substitutes 'danger' for errors, so WF added &.danger
+	// Probably temporary and the PHP library will be rewritten.
+	&.danger, 
 	&.error {
 		background-color: #FFF6F6;
 		color: #9F3A38;
