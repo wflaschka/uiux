@@ -1,4 +1,10 @@
+///////////////////////////////////////////////////////////////////
+// Tabs - Component
+// Mobile First 
+///////////////////////////////////////////////////////////////////
+
 .tabs {
+        font-size: p(13);
 
     ul {
         padding: 0;
@@ -6,7 +12,26 @@
 
     a {
         cursor: pointer;
-        padding: p(10) p(80);
+        padding: 0.625rem 1.1rem;
+    }
+
+
+    @include for-tablet-portrait-up {
+        font-size: p(15);
+
+        a {
+            padding: 0.625rem 3rem;
+        }
+    }
+
+    @include for-tablet-landscape-up {
+        
+        a {
+            padding: p(10) p(80);
+        }
+    }
+
+    @include for-desktop-up {
     }
 }
 
@@ -14,22 +39,63 @@
     margin: auto;
 
     .tab-content {
+        font-size: p(13);
         display: none;
+        p:first-child {
+            margin-top: 0;
+        }
     }
 
     .tab-content.is-active {
         display: inherit;
     }
+
+    @include for-tablet-portrait-up {
+        .tab-content {
+            font-size: p(15);
+        }
+    }
+
 }
+
 
 .show {
     margin-bottom: p(40);
+
     .title {
         font-weight: $weight-semibold;
     }
+
     ul {
         li {
             margin-bottom: p(20);
+            display: flex;
+
+            .show-date {
+                flex: 1 1 auto;
+                padding-right: p(20);
+            }
+
+            .show-detail {
+                flex: 1 1 100%;
+            }
+
+            a {
+                white-space: nowrap;
+            }
+        }
+    }
+
+    @include for-tablet-portrait-up {
+
+        ul {
+            li {
+
+                .show-date {
+                    flex: 1 1 auto;
+                    padding-right: p(30);
+                }
+            }
         }
     }
 }

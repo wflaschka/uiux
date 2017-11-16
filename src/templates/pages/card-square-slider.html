@@ -1,7 +1,7 @@
-{{> header-standard }}
-<main>
+<div class="page">
+<div id="content">
 
-<div class="at slider slide7">
+<div class="at slider">
 	<div class="card square">
 		<div class="image" style="background-image: url('/assets/images/artwork/art-1.jpg');">
 			<img src="/assets/images/artwork/art-1.jpg">
@@ -382,10 +382,13 @@
 	</div>
 </div><!-- .at slider -->
 
-</main>
+</div>
+</div>
 
-	<script type="text/javascript">
+
+	<script>
         defer (function() {
+        	
             $('.heart').click(function(){
                 $(this).toggleClass( "is-hearted" );
                 $(this).toggleClass( "is-being-clicked" );
@@ -403,5 +406,3 @@
 
 		});
 	</script>
-
-{{> footer-standard }}
