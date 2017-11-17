@@ -1,9 +1,18 @@
+///////////////////////////////////////////////////////////////////
+// Curated Collections - Used on Home Page
+// Mobile First
+///////////////////////////////////////////////////////////////////
+
 .curated-collections {
 	display: flex;
-	justify-content: space-between;
-
+	align-items: stretch;
+	justify-content: space-evenly;
+	flex-flow: column wrap;
 
 	.block-curated {
+		margin-bottom: p(50);
+		width: 340px;
+
 		.user {
 		    display: flex;
 		    align-items: center;
@@ -21,15 +30,40 @@
 		    	}
 		    }
 		}
+
+		.at.slider {
+			margin-bottom: 1rem;
+		}
+
+		.btn-collection {
+			width: calc(100% - 1rem);
+		}
 	}
 
-	.sep {
+	.sep-curated {
+		display: none;
 		width: 1px;
 		background-color: $color-border;
 	}
 
-	.at.slider {
-		width: 320px;
+	// For Mobile first approach
+	// First define layout for mobile view
+	// then go larger devices
+	@include for-tablet-portrait-up {
+		flex-direction: row;
+	}
+
+	@include for-desktop-up {
+		justify-content: space-between;
+		margin-bottom: p(50);
+
+		.block-curated {
+			margin-bottom: 0;
+		}
+
+		.sep-curated {
+			display: initial;
+		}
 	}
 
 }

@@ -1,5 +1,5 @@
-<div class="page-product page">
 {{> header-logged-in }}
+<div class="page-product page">
 
 <div id="content"> 
 
@@ -204,18 +204,20 @@
         <h2>Related Artwork</h2>
 
         <div class="tags-container">
-            <span class="tag">
-                Giclée
-                <a href="#" class="link-black delete"><i class="at at-arrows-remove"></i></a>
-            </span>
-            <span class="tag">Pencil <a href="#" class="link-black delete"><i class="at at-arrows-remove"></i></a></span>
-            <span class="tag">Watercolor <a href="#" class="link-black delete"><i class="at at-arrows-remove"></i></a></span>
-            <span class="tag">Collage <a href="#" class="link-black delete"><i class="at at-arrows-remove"></i></a></span>
             <span class="tag">Photo</span>
             <span class="tag">Giclée</span>
+            <span class="tag">Giclée <a href="#" class="delete"><i class="icon close"></i></a></span>
+            <span class="tag">Oil and Canvas <a href="#" class="delete"><i class="icon close"></i></a></span>
+            <span class="tag">Photo <a href="#" class="delete"><i class="icon close"></i></a></span>
+            <span class="tag">Oil and Canvas <a href="#" class="delete"><i class="icon close"></i></a></span>
+            <span class="tag">Photo <a href="#" class="delete"><i class="icon close"></i></a></span>
+            <span class="tag">Photo</span>
+            <span class="tag">Giclée</span>
+            <span class="tag">Giclée <a href="#" class="delete"><i class="icon close"></i></a></span>
+            <span class="tag">Oil and Canvas <a href="#" class="delete"><i class="icon close"></i></a></span>
         </div>
 
-        <div class="at slider">
+        <div class="at slider is-responsive">
             <div class="card square">
                 <div class="image" style="background-image: url('/assets/images/artwork/art-1.jpg');">
                     <img src="/assets/images/artwork/art-1.jpg">
@@ -398,7 +400,7 @@
     <section class="section section-related-artist">
         <h2>Related Artist</h2>
 
-        <div class="at slider">
+        <div class="at slider is-responsive">
             {{#dataset}}
                 {{> card-artist }}
             {{/dataset}}
@@ -419,8 +421,9 @@
 
 </div><!-- #content -->
 
-{{> footer-standard }}
 </div><!-- .page-product .page -->
+{{> footer-standard }}
+
 
 <script type="text/javascript" src="assets/scripts/masonry.pkgd.min.js"></script>
 <script type="text/javascript" src="assets/scripts/imagesloaded.pkgd.min.js"></script>
