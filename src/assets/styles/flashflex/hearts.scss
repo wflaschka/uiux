@@ -14,14 +14,23 @@
 		);
 	}
 
-	.icon {
-		color: color(gray);
-		cursor: pointer;
+	&:not(.is-hearted) {
+		.icon-heart,
+		.icon {
+			@extend .fa;
+			@extend .fa-heart-o;
+			color: color(gray);
+			cursor: pointer;
+		}
 	}
 
 	&.is-hearted {
+		.icon-heart,
 		.icon {
+			@extend .fa;
+			@extend .fa-heart;
 			color: color(red) !important;
+			cursor: pointer;
 		}
 	}
 	&.is-being-clicked {
