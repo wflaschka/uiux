@@ -49,6 +49,7 @@
 	&.button {
 		@extend .is-gray;
 		@extend .is-outlined;
+		padding-top: 0.5em !important;
 	}
 
 }
