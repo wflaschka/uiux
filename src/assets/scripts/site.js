@@ -127,7 +127,7 @@ $(document).ready(function() {
     ////////////////////////////////////////////////////////////
     // check if Slider exist then run to avoid errors
     if ( $('.at.slider').length ) {
-        $('.at.slider').slick({
+        $('.at.slider.is-responsive').slick({
             infinite: false,
             slidesToShow: 7,
             slidesToScroll: 7,
