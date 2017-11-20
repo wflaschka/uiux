@@ -4,7 +4,8 @@
 .at.footer {
 	font-size: 0.8125rem;
 	background-color: #F7F7F7;
-	margin-top: p(50);
+	// to link sidebar with footer, removed margin top.
+	// margin-top: p(50);
 	padding: 2.1875rem p(20);
 
 	a {

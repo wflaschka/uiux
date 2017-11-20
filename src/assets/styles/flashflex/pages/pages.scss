@@ -11,14 +11,13 @@
 	&.landscape { max-width: 1024px; }
 	&.phone { max-width: 360px; }
 
-	&.has-sidebar {
-		.main-content {
-			padding: p(50);
-		}
+	#wrapper {
+		display: flex;
 	}
 
 	#content {
-		margin: p(20);
+		padding: p(20);
+		width: 100%;
 	}
 
 	.section {
@@ -33,46 +32,55 @@
 		}
 	}
 
-	.main-content {
+	.page-title {
+    	position: relative;
+    	margin-bottom: p(20);
 
-		.page-title {
-	    	position: relative;
-	    	.link-back {
-	    		@extend .link-gray;
-	    		font-size: p(13);
-				top: -30px;
-				position: absolute;
-	    	}
-		    h1 {
-		    	margin: 0;
-		    	font-size: p(48);
-		    }
-		    .with-page-title {
-		    	// Element with page title positioned top right. e.g: button or search box
-				position: absolute;
-				right: 0px;
-				top: 0px;
-				min-width: 20rem;
-		    }
+    	.link-back {
+    		@extend .link-gray;
+    		font-size: p(13);
+			top: -30px;
+			position: absolute;
+    	}
+
+	    h1, h2, h3 {
+	    	margin: 0 0 p(20);
 	    }
-	    
-	}
 
-	// For Mobile first approach
-	// First define layout for mobile view
-	// then go larger devices
-	@include for-tablet-portrait-up {
+	    .with-page-title {
+	    	// Element with page title positioned top right. e.g: button or search box
+			// position: absolute;
+			// right: 0px;
+			// top: 0px;
+			min-width: 18.75rem;
+	    }
+    }
 
-	}
 
-	@include for-tablet-landscape-up {
-		#content {
-			margin: p(50) p(40) p(40);
-		}
-	}
+// For Mobile first approach
+// First define layout for mobile view
+// then go larger devices
+@include for-tablet-portrait-up {
+	.page-title {
 
-	@include for-desktop-up {
+	    .with-page-title {
+	    	// Element with page title positioned top right. e.g: button or search box
+			position: absolute;
+			right: 0px;
+			top: 0px;
+			width: auto;
+	    }
+    }
+}
+
+@include for-tablet-landscape-up {
+	#content {
+		padding: p(50) p(40) p(40);
 	}
+}
+
+@include for-desktop-up {
+}
 }
 
 
