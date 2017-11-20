@@ -8,12 +8,12 @@
 }
 
 body {
+    font-size: 0.9375rem; // Set font size to 15px to match with design prototype
+    line-height: 1.3125rem;
     @include for-phone-only {}
     @include for-tablet-portrait {}
     @include for-tablet-landscape {}
     @include for-desktop {
-        font-size: 0.9375rem; // Set font size to 15px to match with design prototype
-        line-height: 1.3125rem;
     }
 }
 
