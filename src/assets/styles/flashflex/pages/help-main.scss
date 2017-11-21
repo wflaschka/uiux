@@ -1,0 +1,63 @@
+///////////////////////////////////////////////////////////////////
+// Help Page
+
+.page-help {
+
+	.seach-container {
+		display: none;
+	    max-width: 640px;
+	    margin: 0 auto 40px;
+	}
+
+	.input-search {
+		@include search-input;
+	}
+
+	.help-container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+
+		.block-help {
+			width: 100%;
+
+			h4 {
+				margin: 0;
+			}
+		}
+	}
+
+@include for-tablet-portrait-up {
+
+	.help-container {
+		.block-help {
+			max-width: 350px;
+		}
+	}
+
+}
+
+@include for-tablet-landscape-up {
+
+	.page-title {
+		display: none;
+	}
+
+	.seach-container {
+		display: block;
+	}
+
+	.still-need-help {
+		text-align: center;
+	}
+}
+
+@include for-desktop-up {
+	.help-container {
+		&.sb {
+			justify-content: space-between;
+		}
+	}
+}
+
+}// .page-help-main

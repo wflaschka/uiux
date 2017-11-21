@@ -3,12 +3,10 @@
 
 .at.accordion {
 
-	margin: 0;
+	margin: 0 0 p(50);
 
-	&.has-info {
-		dd {
-			padding: 0 5rem 1.875rem 0;
-		}
+	&.no-space {
+		margin-bottom: 0;
 	}
 
 	dt {
@@ -48,22 +46,18 @@
 		p:first-of-type {
 			margin-top: 0;
 		}
-		.info-helpful {
-			font-size: 0.75rem;
-			display: flex;
-			.info {
-				display: inline-flex;
-				align-items: center;	
-			}
-			.button {
-				min-height: 2rem !important;
-				margin-left: 1.2rem;
-			}
-		}
 
 		&:last-of-type {
   			border-bottom: 1px solid $color-border;
 		}
 	}
+
+@include for-tablet-portrait-up {
+
+	dd {
+		padding: 0 5rem 0 0;
+	}
+
+}
 
 }

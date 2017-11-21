@@ -16,8 +16,14 @@
 	}
 
 	#content {
-		padding: p(20);
+		padding: p(20) p(20) p(40);
 		width: 100%;
+	}
+
+	&.compact {
+		#content {
+			font-size: p(13);
+		}
 	}
 
 	.section {
@@ -34,13 +40,11 @@
 
 	.page-title {
     	position: relative;
-    	margin-bottom: p(20);
+    	margin-bottom: p(30);
 
     	.link-back {
-    		@extend .link-gray;
+    		@extend %link-gray;
     		font-size: p(13);
-			top: -30px;
-			position: absolute;
     	}
 
 	    h1, h2, h3 {
@@ -48,11 +52,13 @@
 	    }
 
 	    .with-page-title {
-	    	// Element with page title positioned top right. e.g: button or search box
-			// position: absolute;
-			// right: 0px;
-			// top: 0px;
 			min-width: 18.75rem;
+
+			button {
+				@extend .button;
+				@extend .is-black;
+				@extend .is-fullwidth;
+			}
 	    }
     }
 
@@ -62,6 +68,11 @@
 // then go larger devices
 @include for-tablet-portrait-up {
 	.page-title {
+
+    	.link-back {
+			top: -30px;
+			position: absolute;
+    	}
 
 	    .with-page-title {
 	    	// Element with page title positioned top right. e.g: button or search box
@@ -77,10 +88,14 @@
 	#content {
 		padding: p(50) p(40) p(40);
 	}
+	&.compact {
+		#content {
+			padding: p(50) p(200) p(40) p(120);
+		}
+	}
 }
 
 @include for-desktop-up {
 }
-}
 
-
+}// .page
