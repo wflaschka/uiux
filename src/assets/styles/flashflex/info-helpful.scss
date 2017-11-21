@@ -1,0 +1,19 @@
+////////////////////////////////////////////////////////////////////
+// Was this information helpful block
+
+.info-helpful {
+	font-size: 0.75rem;
+	display: flex;
+	margin-bottom: p(20);
+	align-items: center;
+
+	.info {
+		display: inline-flex;
+	}
+
+	.button {
+		min-height: 2rem !important;
+		margin-left: 1.2rem;
+		margin-bottom: 0 !important;
+	}
+}

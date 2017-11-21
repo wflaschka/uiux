@@ -1,0 +1,23 @@
+////////////////////////////////////////////////////////////////////
+// Still need help block
+
+.still-need-help {
+
+	h4 {
+		margin: 0;
+	}
+
+	.button {
+		width: 100%;
+	}
+
+@include for-tablet-portrait-up {
+
+	.button {
+		width: auto;
+		min-width: p(300);
+	}
+
+}
+
+}

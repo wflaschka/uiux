@@ -8,13 +8,13 @@
 }
 
 body {
-    font-size: 0.9375rem; // Set font size to 15px to match with design prototype
-    line-height: 1.3125rem;
+    font-size: p(15); // Set font size to 15px to match with design prototype
+    line-height: p(21);
+
     @include for-phone-only {}
     @include for-tablet-portrait {}
     @include for-tablet-landscape {}
-    @include for-desktop {
-    }
+    @include for-desktop {}
 }
 
 
@@ -95,6 +95,10 @@ h6 {
         // will keep update others heading as I found pages and their match
         h2 {
             font-size: p(30);
+        }
+        // set h4 to 25px for mobile as in prototype help-main page
+        h4 {
+            font-size: p(25);
         }
     }
 

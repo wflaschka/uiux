@@ -6,15 +6,18 @@
 	// Showing sidebar on desktop and up size
 	display: none;
 	background-color: #F7F7F7;
-	font-size: p(13);
-	min-width: 14%;
+	// font-size: p(13);
+	// min-width: 14%;
+	min-width: 23%;
 
 	ul {
 		padding: 0;
-		margin: 4rem 0 0 1.5rem;
+		// margin: 4rem 0 0 1.5rem;
+		margin: 4rem 0 0 5rem;
 		list-style: none;
 		li {
-			margin-bottom: 1rem;
+			// margin-bottom: 1rem;
+			margin-bottom: 2rem;
 			a {
 				@extend .link-gray;
 			}
@@ -27,19 +30,20 @@
 	}
 
 @include for-tablet-landscape-up {
-	display: flex;
+	// display: flex;
 }
 
 @include for-desktop-up {
-	font-size: inherit;
-	min-width: 23%;
+	display: flex;
+	// font-size: inherit;
+	// min-width: 23%;
 	
-	ul {
-		margin-left: 4rem;
-		li {
-			margin-bottom: 2rem;
-		}
-	}
+	// ul {
+	// 	margin-left: 4rem;
+	// 	li {
+	// 		margin-bottom: 2rem;
+	// 	}
+	// }
 }
 
 }
