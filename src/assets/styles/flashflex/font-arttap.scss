@@ -60,75 +60,99 @@
   @include at;
 }
 
+%at-4-squares:before,
 .at-4-squares:before {
   content: "\61";
 }
+%at-arrows-down:before,
 .at-arrows-down:before {
   content: "\62";
 }
+%at-arrows-left:before,
 .at-arrows-left:before {
   content: "\63";
 }
+%at-arrows-minus:before,
 .at-arrows-minus:before {
   content: "\64";
 }
+%at-arrows-plus:before,
 .at-arrows-plus:before {
   content: "\65";
 }
+%at-arrows-question:before,
 .at-arrows-question:before {
   content: "\66";
 }
+%at-arrows-remove:before,
 .at-arrows-remove:before {
   content: "\67";
 }
+%at-arrows-right:before,
 .at-arrows-right:before {
   content: "\68";
 }
+%at-arrows-up:before,
 .at-arrows-up:before {
   content: "\69";
 }
+%at-artwork:before,
 .at-artwork:before {
   content: "\6a";
 }
+%at-bell:before,
 .at-bell:before {
   content: "\6b";
 }
+%at-card:before,
 .at-card:before {
   content: "\6c";
 }
+%at-copypaste:before,
 .at-copypaste:before {
   content: "\6d";
 }
+%at-document:before,
 .at-document:before {
   content: "\6e";
 }
+%at-email:before,
 .at-email:before {
   content: "\6f";
 }
+%at-facebook:before,
 .at-facebook:before {
   content: "\70";
 }
+%at-instagram:before,
 .at-instagram:before {
   content: "\71";
 }
+%at-mail:before,
 .at-mail:before {
   content: "\72";
 }
+%at-pinterest:before,
 .at-pinterest:before {
   content: "\73";
 }
+%at-speech:before,
 .at-speech:before {
   content: "\74";
 }
+%at-tag:before,
 .at-tag:before {
   content: "\75";
 }
+%at-twitter:before,
 .at-twitter:before {
   content: "\76";
 }
+%at-two-arrows:before,
 .at-two-arrows:before {
   content: "\77";
 }
+%at-upload:before,
 .at-upload:before {
   content: "\78";
 }

@@ -54,7 +54,7 @@
 
                         &::after {
                             // Get the "Close" icon from FontAwesome (for now)
-                            @extend .fa;
+                            @extend %fa;
                             content: "\f00d";
                             margin-left: -12px;
                             color: $gray-color-dark;

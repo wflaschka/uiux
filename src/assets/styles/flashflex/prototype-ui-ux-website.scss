@@ -71,7 +71,7 @@ body#prototype-index-page {
         }
 
         &::after {
-            @extend .fa;
+            @extend %fa;
             padding-left: 0.3rem;
             content: "\f08e";
         }

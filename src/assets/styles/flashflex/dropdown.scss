@@ -17,6 +17,7 @@
     }
 
     .opener {
+        color: color(text);
         cursor: pointer;
         &.at-arrows-remove {
             // resizing arrows remove dude to size issue.
