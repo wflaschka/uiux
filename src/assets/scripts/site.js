@@ -40,9 +40,9 @@ $(document).ready(function() {
     });
 
 
-
-    ////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////
     // Accordion JS
+    ////////////////////////////////////////////////////////////
     function openFirstPanel(){
         $('.at.accordion > dt:first-child').addClass('active').next().slideDown();
     }
@@ -66,22 +66,21 @@ $(document).ready(function() {
     });
     
     
-    ////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////
     // See More
+    ////////////////////////////////////////////////////////////
     $('.see-more .fade-info-action a').on( "click", function(e) {
         $(this).closest('.see-more').addClass('active');
         e.preventDefault();
     });
 
 
-
-    ////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////
     // Custom Dropdown
     // Check if any dropdown is open;
     // If clicked outside of container of that dropdown then hide that dropdown
     // If another dropdown clicked, then hide others all dropdown except this one clicked
-    //
-
+    ////////////////////////////////////////////////////////////
     // On Click opener
     $('.opener').on('click', function(e) {
         e.stopPropagation();
@@ -107,7 +106,10 @@ $(document).ready(function() {
         }
     });
 
+
+    ////////////////////////////////////////////////////////////
     // Tabs
+    ////////////////////////////////////////////////////////////
     $('.tabs li').on( "click", function(e) {
         var tab_id = $(this).attr('data-tab');
 
@@ -118,19 +120,57 @@ $(document).ready(function() {
         $("#"+tab_id).addClass('is-active');
     })
 
+
+
+    ////////////////////////////////////////////////////////////
+    // Slick Slider
+    ////////////////////////////////////////////////////////////
     // check if Slider exist then run to avoid errors
-    if ( $('.at.slider.slide7').length ) {
-        $('.at.slider.slide7').slick({
+    if ( $('.at.slider').length ) {
+        $('.at.slider.is-responsive').slick({
             infinite: false,
             slidesToShow: 7,
-            slidesToScroll: 7
-        });
-    }
-    if ( $('.at.slider.slide8').length ) {
-        $('.at.slider.slide8').slick({
-            infinite: false,
-            slidesToShow: 8,
-            slidesToScroll: 8
+            slidesToScroll: 7,
+            responsive: [
+                {
+                  breakpoint: 1100,
+                  settings: {
+                    slidesToShow: 6,
+                    slidesToScroll: 6
+                  }
+                },
+                {
+                  breakpoint: 950,
+                  settings: {
+                    slidesToShow: 5,
+                    slidesToScroll: 5
+                  }
+                },
+                {
+                  breakpoint: 800,
+                  settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 4
+                  }
+                },
+                {
+                  breakpoint: 650,
+                  settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3
+                  }
+                },
+                {
+                  breakpoint: 530,
+                  settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                  }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
         });
     }
 
@@ -142,7 +182,7 @@ $(document).ready(function() {
     // <a data-scroll-to=".foo" class="scroll-to"> -- will target class foo element
     // <div id="foo">
     // <div class="foo">
-    // 
+    ////////////////////////////////////////////////////////////
     $(document).on( 'click', '.scroll-to', function(e) {
         $('html, body').animate( {scrollTop: $($(this).attr('data-scroll-to')).offset().top -30 }, 1000);
     });
@@ -151,13 +191,27 @@ $(document).ready(function() {
     ////////////////////////////////////////////////////////////
     // Flash Messages
     // hide flash message
-    //
+    ////////////////////////////////////////////////////////////
     $('.flash .close')
     .on('click', function() {
         $(this)
         .closest('.flash')
         .fadeOut();
     });
+
+
+    ////////////////////////////////////////////////////////////
+    // Tags
+    // Delete Tag
+    ////////////////////////////////////////////////////////////
+    $('.tag .close')
+    .on('click', function(e) {
+        $(this)
+        .closest('.tag')
+        .fadeOut();
+        e.preventDefault();
+    });
+
 
 });
 

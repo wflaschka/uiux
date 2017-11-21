@@ -1,0 +1,117 @@
+<!-- Add This div page classes on <body> tag -->
+<div class="page">
+{{> header-logged-in }}
+
+<div id="wrapper">
+    
+    {{> sidebar-standard }}
+
+    <div id="content">
+
+        <div class="page-title">
+            <a class="link-back" href="artist-inbox.html"><i class="icon at-arrows-left"></i> All Messages</a>
+            <h2 class="has-border">Page with Sidebar</h2>
+
+            <!-- Select -->
+            <!-- <div class="with-page-title">
+                <div class="control">
+                    <div class="select is-fullwidth">
+                        <select>
+                            <option>Select dropdown</option>
+                            <option>With options</option>
+                        </select>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- Button -->
+            <div class="with-page-title">
+                <button class="new-message">New Message</button>
+            </div>
+
+            <!-- Search -->
+            <!-- <div class="with-page-title">
+                <div class="control has-icons-left">
+                    <input class="input" type="text" placeholder="Search Support">
+                    <span class="icon is-small is-left">
+                        <i class="fa fa-search"></i>
+                    </span>
+                </div>
+            </div> -->
+        </div><!-- .page-title -->
+
+        {{> still-need-help }}
+
+    </div><!-- #content -->
+
+</div><!-- #wrapper -->
+
+{{> footer-standard }}
+</div><!-- .page -->
+
+
+<div id="basic" style="display:none;">
+    <a href="#" rel="modal:close" class="close-modal">
+        <i class="at at-arrows-remove"></i>
+    </a>
+    <h1>Send a Message</h1>
+
+    <div class="field">
+        <label class="label">To</label>
+        <div class="control">
+            <input class="input" type="text" placeholder="" value="">
+        </div>
+    </div>
+
+    <div class="field">
+        <label class="label">Subject <i><small class="color-gray fw-normal">Optional</small></i></label>
+        <div class="control">
+            <input class="input" type="text" placeholder="" value="">
+        </div>
+    </div>
+
+    <div class="field">
+        <label class="label">Message</label>
+        <div class="artwork-description-editor">
+            <p><br></p>
+        </div>
+    </div>
+
+    <a href="#" class="button is-black is-fullwidth">Send</a>
+</div><!-- #basic modal -->
+
+<script>
+    defer(function () {
+
+        $.modal.defaults = {
+            closeExisting : true,      // Close existing modals. Set this to false if you need to stack multiple modal instances.
+            escapeClose   : true,      // Allows the user to close the modal by pressing `ESC`
+            clickClose    : true,      // Allows the user to close the modal by clicking the overlay
+            closeText     : '',        // Text content for the close <a> tag.
+            closeClass    : '',        // Add additional class(es) to the close <a> tag.
+            showClose     : true,      // Shows a (X) icon/link in the top-right corner
+            modalClass    : "modal small",   // CSS class added to the element being displayed in the modal.
+            blockerClass  : "blocker", // CSS class added to the overlay (blocker).
+            spinnerHtml   : null,      // HTML appended to the default spinner during AJAX requests.
+            showSpinner   : true,      // Enable/disable the default spinner during AJAX requests.
+            fadeDuration  : 250,       // Number of milliseconds the fade transition takes (null means no transition)
+            fadeDelay     : 0.8        // Point during the overlay's fade-in that the modal begins to fade in (.5 = 50%, 1.5 = 150%, etc.)
+        };
+
+        var toolbarOptions = [
+            ['bold', 'italic'],        // toggled buttons
+        ];
+
+        var editor = new Quill('.artwork-description-editor', {
+            modules: {
+                toolbar: toolbarOptions
+            },
+            theme: 'snow'
+        });
+
+        $('.new-message').on('click', function(){
+            $('#basic').modal();
+        });
+
+    });
+</script>

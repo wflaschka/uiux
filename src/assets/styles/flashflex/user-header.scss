@@ -1,35 +1,44 @@
-////////////////////////////////////////////////////////////////////
-// User Header - Artist / Collector
+///////////////////////////////////////////////////////////////////
+// User Header - Artist / Collector - Component
+// Mobile First 
+///////////////////////////////////////////////////////////////////
 
 .at.user-header {
 	display: flex;
-	justify-content: space-between;
 	margin-bottom: p(30);
 
+	.avatar-container {
+		flex: 1 1 auto;
+		padding-right: p(25);
+	}
+
+	.user-container {
+		flex: 1 1 100%;
+	}
+
 	.user {
-		display: flex;
-		align-items: center;
+		margin-bottom: p(20);
 
 		.info {
-			padding: 0 p(20);
 
 			h4 {
-				font-size: p(35);
+				position: relative;
 				margin: 0;
 
 				img {
+					display: none;
 					max-height: p(45);
-					margin-left: p(15);
-					position: relative;
-					top: p(5);
+					position: absolute;
+					right: p(-50);
+					top: p(-15);
 				}
 			}
 
 			.place {
 				font-size: p(13);
 				a {
-					margin-left: p(15);
 					font-weight: $weight-semibold;
+					display: block;
 				}
 			}
 		}// .info
@@ -38,12 +47,9 @@
 	.stats {
 	    display: flex;
 	    justify-content: space-between;
-	    align-items: center;
-	    min-width: p(300);
 		font-size: p(13);
 
 		> div {
-			padding: 0 p(15);
 			line-height: 1.4;
 
 			b {
@@ -52,9 +58,44 @@
 				font-size: p(20);
 			}
 
-			i {
+			.fa {
 				margin-left: p(2);
 			}
 		}
 	}// .stats
+
+	@include for-tablet-portrait-up {
+    	align-items: center;
+
+		.user-container {
+			justify-content: space-between;
+			display: flex;
+		}
+
+		.user {
+			margin-bottom: 0;
+
+			.info {
+
+				h4 {
+
+					img {
+						display: initial;
+					}
+				}
+
+				.place {
+					a {
+						margin-left: p(15);
+						display: initial;
+					}
+				}
+			}
+		}
+
+		.stats {
+	    	min-width: p(300);
+		}
+	}// for-tablet-portrait-up
+
 }// .at.user-header

@@ -14,27 +14,20 @@ a {
   }
 }
 
-.link-black {
-  &:link,
-  &:visited {
-    color: color(black);
+// Usage
+// .link-black;
+@each $linkColor in black, gray {
+  %link-#{$linkColor} {
+    &:link,
+    &:visited {
+      color: color(#{$linkColor});
+    }
+    &:active,
+    &:hover {
+      color: color(primary);
+    }
   }
-  &:active,
-  &:hover {
-    color: color(primary);
-    // color: lighten(color(black), 15%);
-  }
-}
-
-
-.link-gray {
-  &:link,
-  &:visited {
-    color: color(gray);
-  }
-  &:active,
-  &:hover {
-    color: color(primary);
-    // color: lighten(color(gray), 15%);
+  .link-#{$linkColor} {
+    @extend %link-#{$linkColor};
   }
 }

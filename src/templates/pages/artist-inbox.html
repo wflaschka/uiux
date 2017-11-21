@@ -1,5 +1,3 @@
-{{> header-logged-in }}
-
 <div id="basic" style="display:none;">
     <a href="#" rel="modal:close" class="close-modal">
         <i class="at at-arrows-remove"></i>
@@ -30,47 +28,60 @@
     <a href="#" class="button is-black is-fullwidth mb20">Send</a>
 </div><!-- #basic modal -->
 
-<div class="page-artist-inbox page has-sidebar">
+<!-- Add This div page classes on <body> tag -->
+<div class="page-artist-inbox page">
+{{> header-logged-in }}
 
-<div class="container-fluid nopad-l">
-    <div class="row">
-        <aside class="sidebar col-sm-3 pl0">
-            <ul>
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="#">Artist Profile</a></li>
-                <li class="active"><a href="#">Messages</a></li>
-                <li><a href="#">Orders</a></li>
-                <li><a href="#">Payment Options</a></li>
-                <li><a href="#">Shipping</a></li>
-                <li><a href="#">Collections</a></li>
-                <li><a href="#">Hearts</a></li>
-                <li><a href="#">Art Match</a></li>
-                <li><a href="#">Follows</a></li>
-                <li><a href="#">Hearts</a></li>
-                <li><a href="#">Support</a></li>
-                <li><a href="#">Sign Out</a></li>
-            </ul>
-        </aside>
-        <div class="col-sm-11">
+<div id="wrapper">
 
-            <div class="main-content">
+    <aside id="sidebar">
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Artist Profile</a></li>
+            <li class="active"><a href="#">Messages</a></li>
+            <li><a href="#">Orders</a></li>
+            <li><a href="#">Payment Options</a></li>
+            <li><a href="#">Shipping</a></li>
+            <li><a href="#">Collections</a></li>
+            <li><a href="#">Hearts</a></li>
+            <li><a href="#">Art Match</a></li>
+            <li><a href="#">Follows</a></li>
+            <li><a href="#">Hearts</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">Sign Out</a></li>
+        </ul>
+    </aside>
 
-                <div class="page-title">
-                    <h1 class="has-border">Messages</h1>
-                    <a href="#basic" rel="modal:open" class="button with-page-title">New Message</a>
+    <div id="content">
+
+        <div class="page-title">
+            <h2 class="has-border">Messages</h2>
+            <button class="button is-black is-fullwidth with-page-title new-message">New Message</button>
+        </div>
+
+        <div class="inbox has-checkbox">
+
+            <div class="inbox-action">
+                <div class="search-container">
+                    <div class="control has-icons-left">
+                        <input class="input messages-search" type="text" placeholder="Search Support">
+                        <span class="icon is-small is-left">
+                            <i class="fa fa-search"></i>
+                        </span>
+                    </div>
                 </div>
 
-                <div class="inbox-actions">
-                    <div class="col-left">
-                        <div class="control mr10">
-                            <div class="radio-check-square empty">
-                                <label class="checkbox" for="input-3">
-                                    <input type="checkbox" id="input-3" name="input-3">
-                                    <span></span>
-                                </label>
-                            </div>
+                <div class="action-container">
+                    <div class="control">
+                        <div class="radio-check-square empty">
+                            <label class="checkbox" for="input-3">
+                                <input type="checkbox" id="input-3" name="input-3">
+                                <span></span>
+                            </label>
                         </div>
-                        <button class="button is-gray is-outlined mr10"><i class="fa fa-trash"></i></button>
+                    </div>
+                    <button class="button is-gray is-outlined mr10"><i class="fa fa-trash"></i></button>
+                    <div class="select-container">
                         <div class="control">
                             <div class="select">
                                 <select>
@@ -80,152 +91,120 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div><!-- .inbox-action -->
 
-                    <div class="col-right">
-                        <div class="control has-icons-left">
-                            <input class="input messages-search" type="text" placeholder="Search Support">
-                            <span class="icon is-small is-left">
-                                <i class="fa fa-search"></i>
-                            </span>
-                        </div>
+            <div class="message new">
+                <div class="checkbox-container">
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        <span></span>
+                    </label>
+                </div>
+                <div class="message-wrapper">
+                    <div class="user"><span class="online-presence away"></span> Alexander Kwok</div>
+                    <div class="date"><i class="icon at-arrows-right"></i> Wednesday</div>
+                    <div class="subject-container">
+                        <div class="subject"><a href="artist-inbox-message.html">Subject</a></div>
+                        <div class="message-body"><a href="artist-inbox-message.html">hello. I'm writing to check writing to check I'm writing to check writing to check</a></div>
                     </div>
-                </div><!-- .inbox-actions -->
+                </div><!-- .message-wrapper -->
+            </div><!-- .message -->
 
-                <div class="inbox">
-                    <div class="message new">
-                        <div class="user-wrap">
-                            <div class="checkbox-wrap">
-                                <label class="checkbox">
-                                    <input type="checkbox">
-                                    <span></span>
-                                </label>
-                            </div>
-                            <div class="user">Alexander Kwok</div>
-                            <div class="online-presence away"></div>
-                        </div>
-                        <div class="subject-wrap">
-                            <div class="subject"><a href="artist-inbox-message.html">Subject check writing to check writing Subject</a></div>
-                            <div class="message-body"><a href="artist-inbox-message.html">hello. I'm writing to check writing to check writing to check writing to check writing to check writing to check</a></div>
-                        </div>
-                        <div class="date">
-                            Wednesday
-                            <i class="at at-arrows-right"></i>
-                        </div>
+            <div class="message">
+                <div class="checkbox-container">
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        <span></span>
+                    </label>
+                </div>
+                <div class="message-wrapper">
+                    <div class="user"><span class="online-presence busy"></span> Alexander Kwok Alexander Kwok</div>
+                    <div class="date"><i class="icon at-arrows-right"></i> Wednesday Wednesday Wednesday</div>
+                    <div class="subject-container">
+                        <div class="subject"><a href="artist-inbox-message.html">Subject Subject Subject Subject</a></div>
+                        <div class="message-body"><a href="artist-inbox-message.html">hello. I'm writing to check writing to check I'm writing to check writing to check</a></div>
                     </div>
+                </div><!-- .message-wrapper -->
+            </div><!-- .message -->
 
-                    <div class="message new">
-                        <div class="user-wrap">
-                            <div class="checkbox-wrap">
-                                <label class="checkbox">
-                                    <input type="checkbox">
-                                    <span></span>
-                                </label>
-                            </div>
-                            <div class="user">Alexander Kwok</div>
-                            <div class="online-presence online"></div>
-                        </div>
-                        <div class="subject-wrap">
-                            <div class="subject">Subject check writing to check writing Subject check writing Subject</div>
-                            <div class="message-body">hello. I'm writing to</div>
-                        </div>
-                        <div class="date">
-                            Tuesday
-                            <i class="at at-arrows-right"></i>
-                        </div>
+            <div class="message">
+                <div class="checkbox-container">
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        <span></span>
+                    </label>
+                </div>
+                <div class="message-wrapper">
+                    <div class="user"><span class="online-presence online"></span> Alexander Kwok</div>
+                    <div class="date"><i class="icon at-arrows-right"></i> Wednesday</div>
+                    <div class="subject-container">
+                        <div class="subject"><a href="artist-inbox-message.html">Subject</a></div>
+                        <div class="message-body"><a href="artist-inbox-message.html">hello. I'm writing to check writing to check I'm writing to check writing to check</a></div>
                     </div>
+                </div><!-- .message-wrapper -->
+            </div><!-- .message -->
 
-                    <div class="message">
-                        <div class="user-wrap">
-                            <div class="checkbox-wrap">
-                                <label class="checkbox">
-                                    <input type="checkbox">
-                                    <span></span>
-                                </label>
-                            </div>
-                            <div class="user">Alexander Kwok</div>
-                            <div class="online-presence busy"></div>
-                        </div>
-                        <div class="subject-wrap">
-                            <div class="subject">Subject </div>
-                            <div class="message-body">hello. I'm writing to check writing to check writing to check writing to check writing to check writing to check</div>
-                        </div>
-                        <div class="date">
-                            Monday
-                            <i class="at at-arrows-right"></i>
-                        </div>
+            <div class="message new">
+                <div class="checkbox-container">
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        <span></span>
+                    </label>
+                </div>
+                <div class="message-wrapper">
+                    <div class="user"><span class="online-presence away"></span> Alexander Kwok</div>
+                    <div class="date"><i class="icon at-arrows-right"></i> Wednesday</div>
+                    <div class="subject-container">
+                        <div class="subject"><a href="artist-inbox-message.html">Subject</a></div>
+                        <div class="message-body"><a href="artist-inbox-message.html">hello. I'm writing to check writing to check I'm writing to check writing to check</a></div>
                     </div>
+                </div><!-- .message-wrapper -->
+            </div><!-- .message -->
 
-                    <div class="message">
-                        <div class="user-wrap">
-                            <div class="checkbox-wrap">
-                                <label class="checkbox">
-                                    <input type="checkbox">
-                                    <span></span>
-                                </label>
-                            </div>
-                            <div class="user">Alexander Kwok</div>
-                            <div class="online-presence away"></div>
-                        </div>
-                        <div class="subject-wrap">
-                            <div class="subject">Subject </div>
-                            <div class="message-body">hello. I'm writing to check writing to check writing to check writing to check writing to check writing to check</div>
-                        </div>
-                        <div class="date">
-                            July 28
-                            <i class="at at-arrows-right"></i>
-                        </div>
+            <div class="message">
+                <div class="checkbox-container">
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        <span></span>
+                    </label>
+                </div>
+                <div class="message-wrapper">
+                    <div class="user"><span class="online-presence busy"></span> Alexander Kwok Alexander Kwok</div>
+                    <div class="date"><i class="icon at-arrows-right"></i> Wednesday Wednesday Wednesday</div>
+                    <div class="subject-container">
+                        <div class="subject"><a href="artist-inbox-message.html">Subject Subject Subject Subject</a></div>
+                        <div class="message-body"><a href="artist-inbox-message.html">hello. I'm writing to check writing to check I'm writing to check writing to check</a></div>
                     </div>
+                </div><!-- .message-wrapper -->
+            </div><!-- .message -->
 
-                    <div class="message">
-                        <div class="user-wrap">
-                            <div class="checkbox-wrap">
-                                <label class="checkbox">
-                                    <input type="checkbox">
-                                    <span></span>
-                                </label>
-                            </div>
-                            <div class="user">Alexander Kwok</div>
-                            <div class="online-presence away"></div>
-                        </div>
-                        <div class="subject-wrap">
-                            <div class="subject">Subject </div>
-                            <div class="message-body">hello. I'm writing to check writing to check writing to check writing to check writing to check writing to check</div>
-                        </div>
-                        <div class="date">
-                            June 19
-                            <i class="at at-arrows-right"></i>
-                        </div>
+            <div class="message">
+                <div class="checkbox-container">
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        <span></span>
+                    </label>
+                </div>
+                <div class="message-wrapper">
+                    <div class="user"><span class="online-presence online"></span> Alexander Kwok</div>
+                    <div class="date"><i class="icon at-arrows-right"></i> Wednesday</div>
+                    <div class="subject-container">
+                        <div class="subject"><a href="artist-inbox-message.html">Subject</a></div>
+                        <div class="message-body"><a href="artist-inbox-message.html">hello. I'm writing to check writing to check I'm writing to check writing to check</a></div>
                     </div>
+                </div><!-- .message-wrapper -->
+            </div><!-- .message -->
 
-                    <div class="message">
-                        <div class="user-wrap">
-                            <div class="checkbox-wrap">
-                                <label class="checkbox">
-                                    <input type="checkbox">
-                                    <span></span>
-                                </label>
-                            </div>
-                            <div class="user">Alexander Kwok</div>
-                            <div class="online-presence away"></div>
-                        </div>
-                        <div class="subject-wrap">
-                            <div class="subject">Subject </div>
-                            <div class="message-body">hello. I'm writing to check writing to check writing to check writing to check writing to check writing to check</div>
-                        </div>
-                        <div class="date">
-                            April 21
-                            <i class="at at-arrows-right"></i>
-                        </div>
-                    </div>
-                </div><!-- .inbox -->
+        </div><!-- .inbox -->
 
-            </div><!-- .main-content -->
+    </div><!-- #content -->
 
-        </div>
-    </div>
-</div>
+</div><!-- #wrapper -->
 
-</div><!-- .page-faq -->
+{{> footer-standard }}
+</div><!-- .page-artist-inbox .page -->
+
 
 <script>
     defer(function () {
@@ -260,7 +239,9 @@
             theme: 'snow'
         });
 
+        $('.new-message').on('click', function(){
+            $('#basic').modal();
+        });
+
     });
 </script>
-
-{{> footer-standard }}

@@ -15,113 +15,115 @@
 
 ////////////////////////////////////////////////////////////////////
 // BASICS
-	@import 'normalize.scss';
-	@import 'setup.scss';
-	@import 'mixins.scss';
-	@import 'mixins-bulma.scss';
+	@import 
+			'normalize.scss',
+			'setup.scss',
+			'mixins.scss',
+			'mixins-bulma.scss',
 	// Mixins that mighte be useful are here: mixins-to-evaluate.scss
 
 ////////////////////////////////////////////////////////////////////
 // VARIABLES AND SETTINGS
-	@import 'variables.scss';
-	@import 'variables-font-sizes.scss';
-	@import "colors.scss";
-	@import "fonts.scss";
-	@import "font-awesome.scss";
-	@import "font-arttap.scss";
-	@import "font-arttap-icons-aliases.scss";
+			'variables.scss',
+			'variables-font-sizes.scss',
+			"colors.scss",
+			"fonts.scss",
+			"font-awesome.scss",
+			"font-arttap.scss",
+			"font-arttap-icons-aliases.scss",
 
 ////////////////////////////////////////////////////////////////////
 // LAYOUT, GRID, and RESPONSIVITY
 	// Grid system
-	@import "sass-flex-mixin.scss";
-	@import "flexboxgrid-sass.scss";
+			"sass-flex-mixin.scss",
+			"flexboxgrid-sass.scss",
 	// Toplevel page elements (might be removed later)
-	@import "layout.scss";
+			"layout.scss",
 	// Responsive library:
-	@import "mediaquery-functions.scss";
-	@import "mediaquery-sass.scss";
+			"mediaquery-functions.scss",
+			"mediaquery-sass.scss",
 	// ArtTap's mixins for responsivity:
-	@import 'responsive.scss'; // mixins for device sizes
-	@import "hide.scss";  // Hide elements based on device sizes
+			'responsive.scss', // mixins for device sizes
+			"hide.scss",  // Hide elements based on device sizes
 
 ////////////////////////////////////////////////////////////////////
 // Animations
 // GREATLY simplify this when we're done. We don't need all this.
-	@import "animatewithsass/animate.scss";
+			"animatewithsass/animate.scss",
 
 ////////////////////////////////////////////////////////////////////
 // LAYOUT ELEMENTS
 	////////////////////////////////////////////////////////////////////
 	// General elements
-		@import "media.scss"; // images, etc.
-		@import "column.scss";
-		@import "row.scss";
-		@import "jquery.modal.scss";
-		@import "containers-segments.scss";
+			"media.scss", // images, etc.
+			"column.scss",
+			"row.scss",
+			"jquery.modal.scss",
+			"containers-segments.scss",
 
 	////////////////////////////////////////////////////////////////////
 	// Typographic
-		@import "typography.scss";
-		@import "typography-statistics.scss";
-		@import "typography-dashboard-stats.scss";
-		@import "typography-icons.scss";
+			"typography.scss",
+			"typography-statistics.scss",
+			"typography-dashboard-stats.scss",
+			"typography-icons.scss",
 
 	////////////////////////////////////////////////////////////////////
 	// ArtTap elements
-		@import "header-navbar.scss";
-		@import "footer.scss";
-		@import "sidebar.scss";
-		@import "card.scss";
-		@import "accordion.scss";
-		@import "order.scss";
-		@import "curated-collections.scss";
+			"header-navbar.scss",
+			"footer.scss",
+			"sidebar.scss",
+			"card.scss",
+			"accordion.scss",
+			"order.scss",
+			"curated-collections.scss",
 		// @import "card-row.scss";     // TODO
-		@import "form-search/_index.scss";
-		@import "status-presence.scss";
-		@import "see-more.scss";
-		@import "tooltip.scss";
-		@import "follows.scss";
-		@import "progress.scss";
-		@import "user-header.scss";
-		@import "newsletter.scss";
-		@import "cross-image-text.scss";
+			"form-search/_index.scss",
+			"status-presence.scss",
+			"see-more.scss",
+			"tooltip.scss",
+			"follows.scss",
+			"progress.scss",
+			"user-header.scss",
+			"newsletter.scss",
+			"cross-image-text.scss",
+			"info-helpful.scss",
+			"still-need-help.scss",
 
 
 	////////////////////////////////////////////////////////////////////
 	// Page Specific
-		@import "pages/pages.scss";
-		@import "pages/checkout.scss";
-		@import "pages/apply-artist.scss";
-		@import "pages/product.scss";
-		@import "pages/faq.scss";
-		@import "pages/all-support.scss";
-		@import "pages/artist-inbox-message.scss";
-		@import "pages/error-404.scss";
-		@import "pages/register.scss";
+			"pages/pages.scss",
+			"pages/checkout.scss",
+			"pages/apply-artist.scss",
+		// @import "pages/product.scss";
+			"pages/help-main.scss",
+			"pages/artist-inbox-message.scss",
+			"pages/error-404.scss",
+			"pages/register.scss",
 
 		// Temporarily:
-		@import "pages/product-wf.scss";
+			"pages/product-wf.scss",
 
 	////////////////////////////////////////////////////////////////////
 	// Utilities
-		@import "utilities/spacing.scss";
-		@import "utilities/links.scss";
-		@import "utilities/text.scss";
-		@import "utilities/boxes.scss";
+			"utilities/spacing.scss",
+			"utilities/links.scss",
+			"utilities/text.scss",
+			"utilities/boxes.scss",
 
 
 ////////////////////////////////////////////////////////////
 // FORMS -- derived from Bulma 0.5.3
 	// Remove this during color / variable consolidation step:
-	@import "bulma-0.5.3/color-translate.scss";
-	@import "bulma-0.5.3/variables.scss";
+			"bulma-0.5.3/color-translate.scss",
+			"bulma-0.5.3/variables.scss",
 
 	// Settings from Bulma
-	@import "bulma-0.5.3/controls.scss";
-	@import "bulma-0.5.3/mixins.scss";
-	@import "bulma-0.5.3/form.scss";
-	@import "level.scss";
+			"bulma-0.5.3/controls.scss",
+			"bulma-0.5.3/mixins.scss",
+			"bulma-0.5.3/form.scss",
+			"level.scss";
 
 	// Bulma 0.5.3 wants these variables
 	// This is for 'form-select2.scss':
@@ -144,54 +146,57 @@
 		$primary-box-shadow: $shadow-offset-x $shadow-offset-y $shadow-spread $shadow-color;
 
 	// Select2 pulldowns and tags
-		@import "select2/core.scss";
-		@import "form-select2.scss";
+		@import 
+				"select2/core.scss",
+				"form-select2.scss",
 
 	// Our specific form CSS
-		@import "form.scss";
+				"form.scss",
 
 
 	// ////////////////////////////////////////////////////////////////////
 	// Detail elements
-		@import "hearts.scss";
-		@import "tags.scss";
-		@import "bulma-0.5.3/button.scss";
-		@import "buttons.scss";
-		@import "bulma-0.5.3/tabs.scss";
-		@import "tabs.scss";
-		@import "artist-follow-toggle.scss";
+				"hearts.scss",
+				"tags.scss",
+				"bulma-0.5.3/button.scss",
+				"buttons.scss",
+				"bulma-0.5.3/tabs.scss",
+				"tabs.scss",
+				"artist-follow-toggle.scss";
 		// @import "floating-badges.scss"; // Might not be needed
 
 		// These are for Spectre avatar include
 		$border-width: $unit-o !default;
 		$border-width-lg: $unit-h !default;
-		@import "avatars.scss";
-		@import "dropdown.scss";
-		@import "inbox.scss";
-		@import "inbox-message.scss";
-		@import "flash-messages.scss";
+		@import 
+				"avatars.scss",
+				"dropdown.scss",
+				"inbox.scss",
+				"inbox-message.scss",
+				"flash-messages.scss",
+				"product.scss",
 
 
 
 // ////////////////////////////////////////////////////////////////////
 // 3rd Party Libraries
 	// Slick Slider
-	@import "slick-slider/slick.scss";
-	@import "slick-slider/slick-theme.scss";
+				"slick-slider/slick.scss",
+				"slick-slider/slick-theme.scss",
 	// Common slider for ArtTap elements
-	@import "slick-slider/slider-at.scss";
+				"slick-slider/slider-at.scss",
 	// Customization Slick Slider for landing page
-	@import "slick-slider/slider-landing.scss";
+				"slick-slider/slider-landing.scss",
 
 	// Quill is a modern rich text editor, convert element into RTF.
-	@import "quill.snow.scss";
+				"quill.snow.scss",
 
 	// A simple jQuery image cropping plugin.
-	@import "cropper/cropper.scss";
+				"cropper/cropper.scss",
 	// Customized Cropper for ArtTap
-	@import "cropper/at-cropper.scss";
+				"cropper/at-cropper.scss",
 
 
 ////////////////////////////////////////////////////////////
 // PROTOTYPE settings -- ONLY for the UI/UX website
-	@import "prototype-ui-ux-website.scss";
+				"prototype-ui-ux-website.scss";

@@ -1,94 +1,93 @@
+<!-- Add This div page classes on <body> tag -->
+<div class="page-artist-inbox-message page">
 {{> header-logged-in }}
 
-<div class="page-artist-inbox-message page has-sidebar">
+<div id="wrapper">
 
-<div class="container-fluid nopad-l">
-    <div class="row">
-        <aside class="sidebar col-sm-3 pl0">
-            <ul>
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="#">Artist Profile</a></li>
-                <li class="active"><a href="#">Messages</a></li>
-                <li><a href="#">Orders</a></li>
-                <li><a href="#">Payment Options</a></li>
-                <li><a href="#">Shipping</a></li>
-                <li><a href="#">Collections</a></li>
-                <li><a href="#">Hearts</a></li>
-                <li><a href="#">Art Match</a></li>
-                <li><a href="#">Follows</a></li>
-                <li><a href="#">Hearts</a></li>
-                <li><a href="#">Support</a></li>
-                <li><a href="#">Sign Out</a></li>
-            </ul>
-        </aside>
-        <div class="col-sm-11">
+    <aside id="sidebar">
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Artist Profile</a></li>
+            <li class="active"><a href="#">Messages</a></li>
+            <li><a href="#">Orders</a></li>
+            <li><a href="#">Payment Options</a></li>
+            <li><a href="#">Shipping</a></li>
+            <li><a href="#">Collections</a></li>
+            <li><a href="#">Hearts</a></li>
+            <li><a href="#">Art Match</a></li>
+            <li><a href="#">Follows</a></li>
+            <li><a href="#">Hearts</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">Sign Out</a></li>
+        </ul>
+    </aside>
 
-            <div class="main-content">
+    <div id="content">
 
-                <div class="page-title">
-                    <a class="link-back" href="artist-inbox.html"><i class="at at-arrows-left"></i> All Messages</a>
-                    <h1 class="has-border">Messages</h1>
-                </div>
-
-                <div class="inbox-message">
-                    <div class="message">
-                        <div class="message-header">
-                            <div class="user">
-                                <div class="avatar avatar-xl">
-                                    <img src="/assets/images/profiles/person-3.jpg">
-                                    <div class="avatar-status follow"></div>
-                                </div>
-                                <div class="user-info">
-                                    <div class="from">from: Alexander Kwok</div>
-                                    <div class="status">Status Check (Subject line)</div>
-                                </div>
-                            </div>
-
-                            <div class="actions">
-                                <div class="col-right">
-                                    <button data-scroll-to=".reply1" class="button is-black mr10 button-reply">Reply</button>
-                                    <button class="button is-gray is-outlined mr10"><i class="fa fa-trash"></i></button>
-                                </div>
-                            </div>
-                        </div><!-- .message-header -->
-                        <div class="content">
-                            <div class="date-time text-gray">Today at 10:00 AM</div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                            <p>- Alex</p>
-                        </div><!-- .content -->
-                    </div><!-- .message -->
-
-                    <div class="message reply reply1">
-                        <div class="message-header">
-                            <div class="user">
-                                <div class="avatar avatar-xl">
-                                    <img src="/assets/images/profiles/person-2.jpg">
-                                    <div class="avatar-status follow"></div>
-                                </div>
-                                <div class="user-info">
-                                    <div class="from">from: Me</div>
-                                    <div class="status">To: Alexander Kwok</div>
-                                </div>
-                            </div>
-                        </div><!-- .message-header -->
-                        <div class="content">
-                            <div class="artwork-description-editor">
-                                <p><br></p>
-                            </div>
-                            <div class="button-send">
-                                <a href="#" class="button is-black">Send</a>
-                            </div>
-                        </div><!-- .content -->
-                    </div><!-- .message -->
-                </div>
-
-            </div><!-- .main-content -->
-
+        <div class="page-title">
+            <a class="link-back" href="artist-inbox.html"><i class="at at-arrows-left"></i> All Messages</a>
+            <h2 class="has-border">Messages</h2>
         </div>
-    </div>
-</div>
 
-</div><!-- .page-faq -->
+        <div class="inbox-message">
+            <div class="message">
+                <div class="message-header">
+                    <div class="user">
+                        <div class="avatar avatar-xl">
+                            <img src="/assets/images/profiles/person-3.jpg">
+                            <div class="avatar-status follow"></div>
+                        </div>
+                        <div class="user-info">
+                            <div class="from">from: Alexander Kwok</div>
+                            <div class="status">Status Check (Subject line)</div>
+                        </div>
+                    </div>
+
+                    <div class="actions">
+                        <div class="col-right">
+                            <button data-scroll-to=".reply1" class="button is-black mr10 button-reply">Reply</button>
+                            <button class="button is-gray is-outlined mr10"><i class="fa fa-trash"></i></button>
+                        </div>
+                    </div>
+                </div><!-- .message-header -->
+                <div class="content">
+                    <div class="date-time text-gray">Today at 10:00 AM</div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>- Alex</p>
+                </div><!-- .content -->
+            </div><!-- .message -->
+
+            <div class="message reply reply1">
+                <div class="message-header">
+                    <div class="user">
+                        <div class="avatar avatar-xl">
+                            <img src="/assets/images/profiles/person-2.jpg">
+                            <div class="avatar-status follow"></div>
+                        </div>
+                        <div class="user-info">
+                            <div class="from">from: Me</div>
+                            <div class="status">To: Alexander Kwok</div>
+                        </div>
+                    </div>
+                </div><!-- .message-header -->
+                <div class="content">
+                    <div class="artwork-description-editor">
+                        <p><br></p>
+                    </div>
+                    <div class="button-send">
+                        <a href="#" class="button is-black">Send</a>
+                    </div>
+                </div><!-- .content -->
+            </div><!-- .message -->
+        </div>
+
+
+    </div><!-- #content -->
+
+</div><!-- #wrapper -->
+
+{{> footer-standard }}
+</div><!-- .page-artist-inbox-message .page -->
 
 <script>
     defer(function () {
@@ -114,5 +113,3 @@
 
     });
 </script>
-
-{{> footer-standard }}

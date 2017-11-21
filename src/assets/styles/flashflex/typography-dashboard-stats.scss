@@ -1,11 +1,19 @@
 ////////////////////////////////////////////////////////////////////
 // Dashboard Stats
+////////////////////////////////////////////////////////////////////
 
 .at.dashboard-stats {
-	width: 300px;
-	margin-bottom: 2rem;
+	display: flex;
+	align-items: stretch;
+	justify-content: space-between;
+	flex-flow: column wrap;
 
-	h4 { margin: 0px; }
+	.block-stats {
+		margin-bottom: p(70);
+		flex: 1 1;
+	}
+
+	h5 { margin: 0px; }
 
 	.item {
 		display: flex;
@@ -16,4 +24,29 @@
 			margin-right: p(10);
 		}
 	}
+
+
+@include for-tablet-portrait-up {
+	flex-direction: row;
+
+	.block-stats {
+		margin-bottom: 0;
+		margin-right: p(20);
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
 }
+
+@include for-tablet-landscape-up {
+
+	.block-stats {
+		margin-right: p(50);
+	}
+}
+
+@include for-desktop-up {
+}
+
+}// .at.dashboard-stats

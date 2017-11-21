@@ -1,96 +1,185 @@
-.inbox-actions {
-    display: flex;
-    justify-content: space-between;
-    padding: p(25) 0;
-
-    .col-left,
-    .col-right {
-    	display: flex;
-    }
-
-    .messages-search {
-    	min-width: 20rem;
-    }
-}
+///////////////////////////////////////////////////////////////////
+// Inbox
+// Mobile First
+///////////////////////////////////////////////////////////////////
 
 .inbox {
-	.message {
-		&.new { background-color: #fff; }
-		background-color: #f7f7f7;
-		display: flex;
-		padding: p(15) 0;
+
+	&.has-checkbox {
+		.message {
+			.checkbox-container {
+				display: initial;
+			}
+			.message-wrapper {
+				max-width: calc(100% - 2.5rem);
+			}	
+		}
+
+	}
+
+	.inbox-action {
+	    display: flex;
+	    flex-direction: column;
+	    justify-content: space-between;
+	    padding-bottom: p(15);
 		border-bottom: 1px solid $color-border;
-		justify-content: space-between;
-		&:first-child {
-			border-top: 1px solid $color-border;
+
+	    .search-container {
+	    	margin-bottom: p(20);
+
+	    	.messages-search {
+	    		min-width: p(300);
+	    		// max-width: p(390);
+	    	}
+	    }
+
+	    .action-container {
+	    	display: flex;
+
+	    	.control:not(:last-child),
+	    	.button:not(:last-child) {
+	    		margin-right: p(10);
+	    	}
+
+	    	.select-container {
+	    		flex: 1 1 100%;
+	    		.select,
+	    		select {
+	    			width: 100%;
+	    			min-width: p(210);
+	    			// max-width: p(280);
+	    		}
+	    	}
+	    }
+	}// .inbox-action
+
+	.message {
+		display: flex;
+		padding: p(15) 0 p(15) p(15);
+		border-bottom: 1px solid $color-border;
+		background-color: #f7f7f7;
+		&.new { background-color: #fff; }
+
+		.checkbox-container {
+			margin-right: p(15);
+			transform: translateY(p(10));
+			display: none;
 		}
 
-		> div {
+		.message-wrapper {
 			display: flex;
+    		flex-wrap: wrap;
+			flex: 1 1 100%;
+    		max-width: 100%;
 		}
 
-		.user-wrap {
-			width: p(350);
-			.checkbox-wrap {
-				padding-left: p(11);
-				position: relative;
-				top: -5px;
-			}
-			.user {
-				@include truncate(p(180));
-				padding-left: p(20);
-				font-weight: $weight-semibold;
-			}
-			.online-presence {
-				display: inline-block;
-				border-radius: 50%;
-				height: .6rem;
-				width: .6rem;
-				margin-left: p(8);
-				margin-top: p(8);
+		.online-presence {
+			display: inline-flex;
+			border-radius: 50%;
+			height: .6rem;
+			width: .6rem;
+			margin-right: p(4);
+			margin-top: p(8);
 
-		        &.online {
-		            background: #BCCE38;
-		        }
+	        &.online {
+	            background: #BCCE38;
+	        }
 
-		        &.busy {
-		            background: #D92F1D;
-		        }
+	        &.busy {
+	            background: #D92F1D;
+	        }
 
-		        &.away {
-		            background: #F9922C;
-		        }
-			}
+	        &.away {
+	            background: #F9922C;
+	        }
 		}
 
-		.subject-wrap {
-			flex: 1 100%;
-			max-width: 700px;
-			a {
-				@extend .link-black;
-			}
-			.subject {
-				padding-right: p(10);
-				font-weight: $weight-semibold;
-				@include truncate(p(400));
-			}
-			.message-body {
-				@include truncate(p(400));
-			}
-		}
-
+		.user,
 		.date {
-			padding-left: p(20);
-			padding-right: p(5);
-			width: 160px;
-			@include truncate(p(180));
-			justify-content: flex-end;
-			.at {
+			flex: 1 1 50%;
+			@include truncate(50%);
+		}
+		.user {
+			padding-right: p(15);
+		}
+		.date {
+			text-align: right;
+			color: color(gray);
+			.icon {
+				float: right;
 				font-size: 0.6rem;
-				transform: translateY(7px);
-				margin-left: 5px;
 			}
 		}
 
+		.subject-container {
+			display: flex;
+			flex: 1 1 100%;
+			max-width: 100%;
+		}
+		.subject,
+		.message-body {
+			@include truncate(50%);
+		}
+		.subject {
+			font-weight: $weight-semibold;
+			padding-right: p(15);
+			a {
+				@extend %link-black;
+			}
+		}
+		.message-body {
+			color: color(gray);
+			a {
+				@extend %link-gray;
+			}
+		}
 	}// .message
+
+
+@include for-tablet-portrait-up {
+
+	.inbox-action {
+	    flex-direction: row;
+
+	    .search-container {
+	    	margin-bottom: 0;
+	    	order: 2;
+	    }
+
+	    .action-container {
+	    }
+	}// .inbox-action
+
+	.message {
+
+		.checkbox-container {
+			transform: translateY(p(-6));
+		}
+
+		.user,
+		.date {
+			flex-basis: 25%;
+			max-width: 25%;
+		}
+		
+		.date {
+			order: 3;
+			padding-left: p(15);
+		}
+
+		.subject-container {
+		    flex-basis: 50%;
+		    max-width: 50%;
+			transform: translateY(0);
+		}
+	}
+}// for-tablet-portrait-up
+
+
+@include for-tablet-landscape-up {
+}
+
+@include for-desktop-up {
+}
+
 }// .inbox

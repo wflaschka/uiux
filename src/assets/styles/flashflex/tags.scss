@@ -1,3 +1,13 @@
+.tags-container {
+    margin-bottom: p(30);
+    margin-left: -0.25rem;
+
+    @include for-tablet-portrait-down {
+        overflow: hidden;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
 
 .tag {
 	border-radius: 0px;
@@ -25,7 +35,9 @@
     // small {
     //     line-height: 2rem;
     // }
-
+    
+    // setting to 13 as in prototype.
+    font-size: p(13);
 
     .delete,
     .icon.close {
