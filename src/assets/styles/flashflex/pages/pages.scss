@@ -1,5 +1,6 @@
 ///////////////////////////////////////////////////////////////////
 // Common repeative styles for pages
+///////////////////////////////////////////////////////////////////
 
 .page {
 
@@ -10,35 +11,91 @@
 	&.landscape { max-width: 1024px; }
 	&.phone { max-width: 360px; }
 
-	&.has-sidebar {
-		.main-content {
-			padding: p(50);
+	#wrapper {
+		display: flex;
+	}
+
+	#content {
+		padding: p(20) p(20) p(40);
+		width: 100%;
+	}
+
+	&.compact {
+		#content {
+			font-size: p(13);
 		}
 	}
 
-	.main-content {
+	.section {
+		&.has-border {
+			margin-bottom: p(50);
+			padding-bottom: p(50);
+			border-bottom: 1px solid $color-border;
+		}
 
-		.page-title {
-	    	position: relative;
-	    	.link-back {
-	    		@extend .link-gray;
-	    		font-size: p(13);
-				top: -30px;
-				position: absolute;
-	    	}
-		    h1 {
-		    	margin: 0;
-		    	font-size: p(48);
-		    }
-		    .with-page-title {
-		    	// Element with page title positioned top right. e.g: button or search box
-				position: absolute;
-				right: 0px;
-				top: 0px;
-				min-width: 20rem;
-		    }
-	    }
-	    
+		h2 {
+			margin-bottom: 1.5rem;
+		}
 	}
 
+	.page-title {
+    	position: relative;
+    	margin-bottom: p(30);
+
+    	.link-back {
+    		@extend %link-gray;
+    		font-size: p(13);
+    	}
+
+	    h1, h2, h3 {
+	    	margin: 0 0 p(20);
+	    }
+
+	    .with-page-title {
+			min-width: 18.75rem;
+
+			button {
+				@extend .button;
+				@extend .is-black;
+				@extend .is-fullwidth;
+			}
+	    }
+    }
+
+
+// For Mobile first approach
+// First define layout for mobile view
+// then go larger devices
+@include for-tablet-portrait-up {
+	.page-title {
+
+    	.link-back {
+			top: -30px;
+			position: absolute;
+    	}
+
+	    .with-page-title {
+	    	// Element with page title positioned top right. e.g: button or search box
+			position: absolute;
+			right: 0px;
+			top: 0px;
+			width: auto;
+	    }
+    }
 }
+
+@include for-tablet-landscape-up {
+	#content {
+		padding: p(50) p(40) p(40);
+	}
+	&.compact {
+		#content {
+			padding: p(50) p(200) p(40) p(120);
+		}
+	}
+}
+
+@include for-desktop-up {
+}
+
+}// .page
