@@ -1,0 +1,49 @@
+<!-- Add This div page classes on <body> tag -->
+<div class="page page-dashboard">
+{{> header-logged-in }}
+
+<div id="wrapper">
+
+    {{> sidebar-artist }}
+
+    <div id="content">
+
+        <div class="page-title">
+            <h2 class="has-border">Dashboard</h2>
+        </div>
+
+        <section class="section space-large">
+            {{> typography-dashboard-stats }}
+        </section>
+        
+        <section class="section space-large">
+            <h4 class="has-border has-link">Toral Artwork Stats <a href="#">See More</a></h4>
+            {{> typography-statistics-responsive }}
+        </section>
+
+        <section class="section space-large">
+            <h4 class="has-border has-link">Recent Messages <a href="#">See More</a></h4>
+            <div class="inbox hide-action hide-checkbox">
+                {{> inbox }}
+            </div>
+        </section>
+
+        <section class="section space-large">
+            <h4 class="has-border has-link">Recent Followers <a href="#">See More</a></h4>
+            <div class="d-flex flex-wrap mt40">
+                {{> follower }}
+                {{> follower }}
+            </div>
+        </section>
+
+        <section class="section">
+            <h4 class="has-border has-link">Artist Support <a href="#">See More</a></h4>
+            {{> accordion-artist-support }}
+        </section>
+
+    </div><!-- #content -->
+
+</div><!-- #wrapper -->
+
+{{> footer-standard }}
+</div><!-- .page.page-dashboard -->
