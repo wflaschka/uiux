@@ -5,16 +5,22 @@
 
 .inbox {
 
-	&.has-checkbox {
+	&.hide-checkbox {
 		.message {
 			.checkbox-container {
-				display: initial;
+				display: none;
 			}
 			.message-wrapper {
-				max-width: calc(100% - 2.5rem);
-			}	
+    			max-width: 100%;
+			}
 		}
 
+	}
+
+	&.hide-action {
+		.inbox-action {
+			display: none;
+		}
 	}
 
 	.inbox-action {
@@ -63,35 +69,18 @@
 		.checkbox-container {
 			margin-right: p(15);
 			transform: translateY(p(10));
-			display: none;
 		}
 
 		.message-wrapper {
 			display: flex;
     		flex-wrap: wrap;
 			flex: 1 1 100%;
-    		max-width: 100%;
+			max-width: calc(100% - 2.5rem);
 		}
 
-		.online-presence {
-			display: inline-flex;
-			border-radius: 50%;
-			height: .6rem;
-			width: .6rem;
+		.at.status-presence {
 			margin-right: p(4);
 			margin-top: p(8);
-
-	        &.online {
-	            background: #BCCE38;
-	        }
-
-	        &.busy {
-	            background: #D92F1D;
-	        }
-
-	        &.away {
-	            background: #F9922C;
-	        }
 		}
 
 		.user,

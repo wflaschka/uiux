@@ -54,5 +54,13 @@
 
 .flex-between {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+}
+
+.d-flex {
+    display: flex;
+}
+.flex-wrap {
+    flex-wrap: wrap;
 }
