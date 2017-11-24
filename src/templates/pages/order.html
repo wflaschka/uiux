@@ -1,3 +1,82 @@
+<!-- Add This div page classes on <body> tag -->
+<div class="page">
+{{> header-logged-in }}
+
+<div id="wrapper">
+    
+    {{> sidebar-artist }}
+
+    <div id="content">
+
+        <div class="page-title">
+            <h2 class="has-border">Order</h2>
+
+            <div class="with-page-title">
+                <div class="control">
+                    <div class="select is-fullwidth">
+                        <select>
+                            <option>Select dropdown</option>
+                            <option>With options</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div><!-- .page-title -->
+
+        {{> order }}
+
+        <div class="row has-space">
+            <div class="col-xs-14 col-md-10 column has-right-border">
+
+                {{> block-shipping-method }}
+
+                <div class="has-border">Paid to alexkwok@gmail.com</div>
+
+                {{> card-order }}
+                {{> card-order }}
+
+                <p>Add a private note to this order</p>
+
+                <div class="field">
+                    <input type="text" class="input" name="">
+                </div>
+
+            </div>
+
+            <div class="col-xs-14 col-md-4 column has-left-pad">
+                <p>
+                    <b>Shipped On</b><br>
+                    January 22, 2017
+                </p>
+
+                <p>
+                    <b>Arrived to Customer On</b><br>
+                    January 31, 2017
+                </p>
+
+                <p>
+                    <b>Shipped To</b><br>
+                    Robyn Asquini
+                    123 Main Street
+                    Apt. A1
+                    New York, NY 10035
+                    United States
+                </p>
+
+                <button class="button is-fullwidth is-gray is-outlined">Message Collector</button>
+            </div>
+        </div> 
+
+        {{> order-cancel }}
+
+    </div><!-- #content -->
+
+</div><!-- #wrapper -->
+
+{{> footer-standard }}
+</div><!-- .page -->
+
+
 <div id="basic" style="display:none;">
     <a href="#" rel="modal:close" class="close-modal">
         <i class="at at-arrows-remove"></i>
@@ -25,37 +104,8 @@
         </div>
     </div>
 
-    <a href="#" class="button is-black is-fullwidth mb20">Send</a>
+    <a href="#" class="button is-black is-fullwidth">Send</a>
 </div><!-- #basic modal -->
-
-<!-- Add This div page classes on <body> tag -->
-<div class="page-artist-inbox page">
-{{> header-logged-in }}
-
-<div id="wrapper">
-
-    {{> sidebar-artist }}
-
-    <div id="content">
-
-        <div class="page-title">
-            <h2 class="has-border">Messages</h2>
-            <button class="button is-black is-fullwidth with-page-title new-message">New Message</button>
-        </div>
-        
-        <div class="inbox">
-
-            {{> inbox }}
-
-        </div><!-- .inbox -->
-
-    </div><!-- #content -->
-
-</div><!-- #wrapper -->
-
-{{> footer-standard }}
-</div><!-- .page-artist-inbox .page -->
-
 
 <script>
     defer(function () {
@@ -74,10 +124,6 @@
             fadeDuration  : 250,       // Number of milliseconds the fade transition takes (null means no transition)
             fadeDelay     : 0.8        // Point during the overlay's fade-in that the modal begins to fade in (.5 = 50%, 1.5 = 150%, etc.)
         };
-
-        $('#basic').on($.modal.OPEN, function(event, modal) {
-            $('select.select2').select2();
-        });
 
         var toolbarOptions = [
             ['bold', 'italic'],        // toggled buttons

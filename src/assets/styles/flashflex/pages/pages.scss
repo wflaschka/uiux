@@ -33,6 +33,10 @@
 			border-bottom: 1px solid $color-border;
 		}
 
+		&.space-small { margin-bottom: 2rem; }
+		&.space-medium { margin-bottom: 3rem; }
+		&.space-large { margin-bottom: 4rem; }
+
 		h2 {
 			margin-bottom: 1.5rem;
 		}

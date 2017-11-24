@@ -1,31 +1,100 @@
 ////////////////////////////////////////////////////////////////////
 // AT Order
+// Mobile First
+////////////////////////////////////////////////////////////////////
 
 .at.order {
 	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-end;
 	justify-content: space-between;
 	background-color: #f7f7f7;
 	border: 1px solid #f7f7f7;
-	padding: p(15);
+	padding: 1rem;
 	font-weight: $weight-semibold;
-	margin-bottom: p(30);
-	&.is-cancel {
-		border-color: #f00;
-		background-color: #FBEEEC;
-	}
+	margin-bottom: 2rem;
 
-	.user {
-		display: flex;
-		.info {
-			padding-left: p(10);
+	&.is-cancel {
+		border-color: color(red);
+		background-color: #FBEEEC;
+		.receipt {
+			.detail {
+				color: color(red);
+			}
 		}
 	}
 
+	.user,
+	.order {
+		.detail {
+			color: color(gray);
+		}
+	}
+
+	.item {
+		flex: 0 0 50%;
+		margin-bottom: 1rem;
+	}
+
+	.user-container {
+		display: flex;
+		flex-wrap: wrap;
+		flex-basis: 60%;
+
+		.avatar-container {
+			flex: 0 0 100%;
+		}
+	}
+
+	.order {
+		flex-basis: 40%;
+		text-align: right;
+	}
+
 	.total {
+		order: 4;
 		text-align: right;
 		
 		.detail {
 			font-weight: normal;
 		}
 	}
+
+
+@include for-tablet-portrait-up {
+
+	.item {
+		flex-basis: unset;
+		margin-bottom: unset;
+	}
+
+	.user-container {
+		display: flex;
+		flex-basis: unset;
+
+		.avatar-container {
+			flex-basis: unset;
+		}
+
+		.user {
+			padding-left: 1rem;
+		}
+	}
+
+	.order {
+		flex-basis: unset;
+		text-align: left;
+	}
+
+	.total {
+		order: unset;
+	}
 }
+
+@include for-tablet-landscape-up {
+}
+
+@include for-desktop-up {
+}
+
+}// .order
