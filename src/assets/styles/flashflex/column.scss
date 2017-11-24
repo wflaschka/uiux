@@ -2,6 +2,21 @@
 // COLUMN
 ////////////////////////////////////////////////////////////////////
 
+.row {
+    &.has-space {
+        margin-bottom: 3rem;
+    }
+    &.has-space-small {
+        margin-bottom: 2rem;
+    }
+    &.has-space-medium {
+        margin-bottom: 4rem;
+    }
+    &.has-space-large {
+        margin-bottom: 5rem;
+    }
+}
+
 .column {
     &.aligned {
         &.center {
@@ -30,9 +45,28 @@
         padding-right: 1.5rem;
     }
 
-    &.has-left-border {
-        border-left: 1px solid color(gray-light);
+    // &.has-left-border {
+    //     border-left: 1px solid color(gray-light);
+    // }
+
+
+@include for-tablet-portrait-up {
+    &.has-left-pad {
+        padding-left: 1.5rem;
     }
+    &.has-right-pad {
+        padding-right: 1.5rem;
+    }
+    &.has-left-border {
+        padding-left: 1.5rem;
+        border-left: 1px solid $color-border;
+    }
+    &.has-right-border {
+        padding-right: 1.5rem;
+        border-right: 1px solid $color-border;
+    }
+}
+
 }
 
 .column.centered {
