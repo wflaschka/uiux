@@ -1,0 +1,34 @@
+////////////////////////////////////////////////////////////////////
+// Blocks
+////////////////////////////////////////////////////////////////////
+
+.block {
+
+	// Blocks variations
+	&.shipping-method {
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+		@extend .has-border;
+
+		.left {
+			flex: 0 0 50%;
+		}
+		.right {
+			flex: 0 0 50%;
+			text-align: right;
+			font-weight: $weight-semibold;
+		}
+	}
+
+@include for-tablet-portrait-up {
+
+}
+
+@include for-tablet-landscape-up {
+}
+
+@include for-desktop-up {
+}
+
+}// .block

@@ -4,9 +4,10 @@
 
 .card {
 	width: 150px;
-	&:not(:last-of-type) {
-		margin-right: 1rem;
-	}
+	margin-right: 1rem;
+	// &:not(:last-of-type) {
+	// 	margin-right: 1rem;
+	// }
 
 	.image {
 		display: block;
@@ -185,4 +186,71 @@
 			text-align: center;
 		}
 	}
+	&.follower {
+		text-align: center;
+		margin-bottom: 2rem;
+		
+		&:last-child,
+		&:nth-last-child(2) {
+			margin-bottom: 0;
+		}
+
+		.avatar { margin-bottom: p(10); }
+
+		.name { font-weight: $weight-semibold; }
+		
+		.type {
+			color: #999;
+			font-size: p(13);
+			font-weight: $weight-semibold;
+		}
+	}
+	&.order {
+		@extend .square;
+		margin-right: initial;
+		width: auto;
+		display: flex;
+		justify-content: space-between;
+
+		margin-bottom: 1.5rem;
+		padding-bottom: 1.5rem;
+		border-bottom: 1px solid $color-border;
+
+		.content {
+			height: unset;
+		}
+
+		.left {
+			flex: 1 1 auto;
+			display: flex;
+			flex-direction: column;
+		}
+		.right {
+			flex: 1 1 auto;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			text-align: right;
+		}
+
+		.quantity {
+			margin-top: 1rem;
+		}
+		.edition {
+			margin-bottom: 1rem;
+		}
+		&.is-cancel {
+			.order {
+				color: color(red);
+			}
+		}
+	}
+
+@include for-phone-only {
+	margin-right: 0;
+	&:nth-child(odd) {
+		margin-right: 1rem;
+	}
+}
+
 }

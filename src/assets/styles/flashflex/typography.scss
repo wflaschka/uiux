@@ -96,7 +96,7 @@ h6 {
         h2 {
             font-size: p(30);
         }
-        // set h4 to 25px for mobile as in prototype help-main page
+        // set h4 to 25px for mobile as in prototype help-main, typography stats pages 
         h4 {
             font-size: p(25);
         }
@@ -129,11 +129,6 @@ h1, h2, h3, h4, h5, h6 {
             text-transform: none;
             font-style: normal;
         }
-    }
-
-    &.has-border {
-        padding-bottom: .5rem;
-        border-bottom: 1px solid $color-border;
     }
 
     &.has-link {
@@ -176,6 +171,12 @@ h1, h2, h3, h4, h5, h6 {
         padding-bottom: 0.3125rem;
         border-bottom: 1px solid #333;
     }
+}
+
+.has-border {
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid $color-border;
 }
 
 

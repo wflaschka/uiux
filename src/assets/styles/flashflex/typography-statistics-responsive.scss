@@ -2,54 +2,41 @@
 // Dashboard Stats
 ////////////////////////////////////////////////////////////////////
 
-.at.dashboard-stats {
+.at.statistics {
 	display: flex;
-	align-items: stretch;
 	justify-content: space-between;
-	flex-flow: column wrap;
+	flex-wrap: wrap;
+	font-size: p(13);
 
-	.block-stats {
-		margin-bottom: p(70);
-		flex: 1 1;
-
-		&:last-child {
-			margin-bottom: 0;
-		}
-	}
-
-	h4 { margin: 0px; }
+	// .block-stats {
+	// 	margin-bottom: p(70);
+	// 	flex: 1 1;
+	// }
 
 	.item {
-		display: flex;
-		align-items: center;
+		flex: 0 0 50%;
 		margin: 1rem 0;
-		
+
+		&:last-child,
+		&:nth-last-child(2) {
+			margin-bottom: 0;
+		}
+
 		.large {
 			font-size: p(50);
 			line-height: 1;
-			margin-right: p(10);
 		}
 	}
 
 
 @include for-tablet-portrait-up {
-	flex-direction: row;
-
-	.block-stats {
-		margin-bottom: 0;
-		margin-right: p(20);
-
-		&:last-child {
-			margin-right: 0;
-		}
+	.item {
+		flex: 0 0 auto;
 	}
 }
 
 @include for-tablet-landscape-up {
 
-	.block-stats {
-		margin-right: p(50);
-	}
 }
 
 @include for-desktop-up {
