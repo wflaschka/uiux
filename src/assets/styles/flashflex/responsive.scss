@@ -77,6 +77,19 @@ $for-big-desktop-up        : (min, rem-to-px($fBG_xl));
 
 
 
+// Mobile row spacer
+.sep-xs {
+    width: 100%;
+    margin-bottom: 1.5rem;
+
+    @include for-tablet-portrait  {
+        display: none !important;
+    }
+    @include for-tablet-portrait-up  {
+        display: none !important;
+    }
+}
+
 
 /*********************
   Media Query Classes for hide elements
