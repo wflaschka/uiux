@@ -208,3 +208,11 @@ select { font-size: inherit; }
 .field-wrapper {
 	margin-bottom: p(30);
 }
+
+.field.has-space {
+
+	.radio:not(:last-child),
+	.checkbox:not(:last-child) {
+		margin-right: 2rem;
+	}
+}
