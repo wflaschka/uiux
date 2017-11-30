@@ -69,7 +69,7 @@ $(document).ready(function() {
     ////////////////////////////////////////////////////////////
     // See More
     ////////////////////////////////////////////////////////////
-    $('.see-more .fade-info-action a').on( "click", function(e) {
+    $('.see-more .action a').on( "click", function(e) {
         $(this).closest('.see-more').addClass('active');
         e.preventDefault();
     });

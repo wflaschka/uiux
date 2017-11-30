@@ -1,6 +1,10 @@
 <div class="inbox-message">
     <div class="message">
         <div class="message-header">
+            <div class="actions">
+                <button data-scroll-to=".reply1" class="button is-black button-reply">Reply</button>
+                <button class="button is-gray is-outlined"><i class="fa fa-trash"></i></button>
+            </div>
             <div class="user">
                 <div class="avatar avatar-xl">
                     <img src="/assets/images/profiles/person-3.jpg">
@@ -9,13 +13,6 @@
                 <div class="user-info">
                     <div class="from">from: Alexander Kwok</div>
                     <div class="status">Status Check (Subject line)</div>
-                </div>
-            </div>
-
-            <div class="actions">
-                <div class="col-right">
-                    <button data-scroll-to=".reply1" class="button is-black mr10 button-reply">Reply</button>
-                    <button class="button is-gray is-outlined mr10"><i class="fa fa-trash"></i></button>
                 </div>
             </div>
         </div><!-- .message-header -->
@@ -44,11 +41,11 @@
                 <p><br></p>
             </div>
             <div class="button-send">
-                <a href="#" class="button is-black">Send</a>
+                <button class="button is-black">Send</button>
             </div>
         </div><!-- .content -->
     </div><!-- .message -->
-</div>
+</div><!-- .inbox-message -->
 
 <script>
     defer(function () {
