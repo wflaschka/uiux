@@ -25,49 +25,11 @@
 
         {{> order }}
 
-        <div class="row has-space">
-            <div class="col-xs-14 col-md-10 column has-right-border">
-
-                {{> block-shipping-method }}
-
-                <div class="has-border">Paid to alexkwok@gmail.com</div>
-
-                {{> card-order }}
-                {{> card-order }}
-
-                <p>Add a private note to this order</p>
-
-                <div class="field">
-                    <input type="text" class="input" name="">
-                </div>
-
-            </div>
-
-            <div class="col-xs-14 col-md-4 column has-left-pad">
-                <p>
-                    <b>Shipped On</b><br>
-                    January 22, 2017
-                </p>
-
-                <p>
-                    <b>Arrived to Customer On</b><br>
-                    January 31, 2017
-                </p>
-
-                <p>
-                    <b>Shipped To</b><br>
-                    Robyn Asquini
-                    123 Main Street
-                    Apt. A1
-                    New York, NY 10035
-                    United States
-                </p>
-
-                <button class="button is-fullwidth is-gray is-outlined">Message Collector</button>
-            </div>
-        </div> 
+        {{> order-detail }}
 
         {{> order-cancel }}
+
+        {{> order-detail }}
 
     </div><!-- #content -->
 
@@ -75,70 +37,3 @@
 
 {{> footer-standard }}
 </div><!-- .page -->
-
-
-<div id="basic" style="display:none;">
-    <a href="#" rel="modal:close" class="close-modal">
-        <i class="at at-arrows-remove"></i>
-    </a>
-    <h1>Send a Message</h1>
-
-    <div class="field">
-        <label class="label">To</label>
-        <div class="control">
-            <input class="input" type="text" placeholder="" value="">
-        </div>
-    </div>
-
-    <div class="field">
-        <label class="label">Subject <i><small class="color-gray fw-normal">Optional</small></i></label>
-        <div class="control">
-            <input class="input" type="text" placeholder="" value="">
-        </div>
-    </div>
-
-    <div class="field">
-        <label class="label">Message</label>
-        <div class="artwork-description-editor">
-            <p><br></p>
-        </div>
-    </div>
-
-    <a href="#" class="button is-black is-fullwidth">Send</a>
-</div><!-- #basic modal -->
-
-<script>
-    defer(function () {
-
-        $.modal.defaults = {
-            closeExisting : true,      // Close existing modals. Set this to false if you need to stack multiple modal instances.
-            escapeClose   : true,      // Allows the user to close the modal by pressing `ESC`
-            clickClose    : true,      // Allows the user to close the modal by clicking the overlay
-            closeText     : '',        // Text content for the close <a> tag.
-            closeClass    : '',        // Add additional class(es) to the close <a> tag.
-            showClose     : true,      // Shows a (X) icon/link in the top-right corner
-            modalClass    : "modal small",   // CSS class added to the element being displayed in the modal.
-            blockerClass  : "blocker", // CSS class added to the overlay (blocker).
-            spinnerHtml   : null,      // HTML appended to the default spinner during AJAX requests.
-            showSpinner   : true,      // Enable/disable the default spinner during AJAX requests.
-            fadeDuration  : 250,       // Number of milliseconds the fade transition takes (null means no transition)
-            fadeDelay     : 0.8        // Point during the overlay's fade-in that the modal begins to fade in (.5 = 50%, 1.5 = 150%, etc.)
-        };
-
-        var toolbarOptions = [
-            ['bold', 'italic'],        // toggled buttons
-        ];
-
-        var editor = new Quill('.artwork-description-editor', {
-            modules: {
-                toolbar: toolbarOptions
-            },
-            theme: 'snow'
-        });
-
-        $('.new-message').on('click', function(){
-            $('#basic').modal();
-        });
-
-    });
-</script>
