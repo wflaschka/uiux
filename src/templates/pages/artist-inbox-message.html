@@ -13,55 +13,7 @@
             <h2 class="has-border">Messages</h2>
         </div>
 
-        <div class="inbox-message">
-            <div class="message">
-                <div class="message-header">
-                    <div class="actions">
-                        <button data-scroll-to=".reply1" class="button is-black button-reply">Reply</button>
-                        <button class="button is-gray is-outlined"><i class="fa fa-trash"></i></button>
-                    </div>
-                    <div class="user">
-                        <div class="avatar avatar-xl">
-                            <img src="/assets/images/profiles/person-3.jpg">
-                            <div class="avatar-status follow"></div>
-                        </div>
-                        <div class="user-info">
-                            <div class="from">from: Alexander Kwok</div>
-                            <div class="status">Status Check (Subject line)</div>
-                        </div>
-                    </div>
-                </div><!-- .message-header -->
-                <div class="content">
-                    <div class="date-time text-gray">Today at 10:00 AM</div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <p>- Alex</p>
-                </div><!-- .content -->
-            </div><!-- .message -->
-
-            <div class="message reply reply1">
-                <div class="message-header">
-                    <div class="user">
-                        <div class="avatar avatar-xl">
-                            <img src="/assets/images/profiles/person-2.jpg">
-                            <div class="avatar-status follow"></div>
-                        </div>
-                        <div class="user-info">
-                            <div class="from">from: Me</div>
-                            <div class="status">To: Alexander Kwok</div>
-                        </div>
-                    </div>
-                </div><!-- .message-header -->
-                <div class="content">
-                    <div class="artwork-description-editor">
-                        <p><br></p>
-                    </div>
-                    <div class="button-send">
-                        <button class="button is-black">Send</button>
-                    </div>
-                </div><!-- .content -->
-            </div><!-- .message -->
-        </div>
-
+        {{> inbox-message }}
 
     </div><!-- #content -->
 
@@ -70,27 +22,3 @@
 {{> footer-standard }}
 </div><!-- .page-artist-inbox-message .page -->
 
-<script>
-    defer(function () {
-
-        var toolbarOptions = [
-            ['bold', 'italic'],        // toggled buttons
-        ];
-
-        var editor = new Quill('.artwork-description-editor', {
-            modules: {
-                toolbar: toolbarOptions
-            },
-            theme: 'snow'
-        });
-
-
-        $('.button-reply').on( "click", function(e) {
-            $('.message.reply').show();
-            $(this).attr("disabled", 'disabled');
-            $('html, body').animate( {scrollTop: $($(this).attr('data-scroll-to')).offset().top }, 1000);
-            editor.focus(); // Focus to rich text editor
-        });
-
-    });
-</script>

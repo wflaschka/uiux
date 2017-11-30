@@ -119,7 +119,8 @@ label {
 
 		// Fill the span::after when checkbox/radio has been selected
 		input:checked + span:after {
-			background-color: $gray-color-dark;
+			// background-color: $gray-color-dark;
+			background-color: color(black);
 		}
 	}
 }
