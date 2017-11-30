@@ -43,6 +43,7 @@
 
 		.avatar-container {
 			flex: 0 0 100%;
+			margin-bottom: 1rem;
 		}
 	}
 
@@ -74,6 +75,7 @@
 
 		.avatar-container {
 			flex-basis: unset;
+			margin-bottom: unset;
 		}
 
 		.user {
