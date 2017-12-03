@@ -26,7 +26,7 @@
     font-size: $size-large;
 }
 
-.button {
+%button {
     @include control;
     @include unselectable;
 
@@ -323,6 +323,10 @@
         }
     }
 
+}
+
+.button {
+    @extend %button;
 }
 
 .button:not(.is-small):not(.is-large):not(.is-medium) {
