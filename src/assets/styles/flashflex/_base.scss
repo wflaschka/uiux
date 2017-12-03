@@ -16,114 +16,122 @@
 ////////////////////////////////////////////////////////////////////
 // BASICS
 	@import 
-			'normalize.scss',
-			'setup.scss',
-			'mixins.scss',
-			'mixins-bulma.scss',
+			'vendors/normalize',
+			'base/setup',
+			'base/mixins',
+			'vendors/mixins-bulma.scss',
 	// Mixins that mighte be useful are here: mixins-to-evaluate.scss
 
 ////////////////////////////////////////////////////////////////////
 // VARIABLES AND SETTINGS
-			'variables.scss',
-			'variables-font-sizes.scss',
-			"colors.scss",
-			"fonts.scss",
-			"font-awesome.scss",
-			"font-arttap.scss",
-			"font-arttap-icons-aliases.scss",
+			'base/variables',
+			'base/variables-font-sizes',
+			"base/colors",
+			"base/fonts",
+			"vendors/font-awesome.scss",
+			"base/font-arttap",
+			"base/font-arttap-icons-aliases",
 
 ////////////////////////////////////////////////////////////////////
 // LAYOUT, GRID, and RESPONSIVITY
 	// Grid system
-			"sass-flex-mixin.scss",
-			"flexboxgrid-sass.scss",
+			"vendors/sass-flex-mixin.scss",
+			"vendors/flexboxgrid-sass.scss",
 	// Toplevel page elements (might be removed later)
-			"layout.scss",
+			"layout/layout",
 	// Responsive library:
-			"mediaquery-functions.scss",
-			"mediaquery-sass.scss",
+			"vendors/mediaquery-functions.scss",
+			"vendors/mediaquery-sass.scss",
 	// ArtTap's mixins for responsivity:
-			'responsive.scss', // mixins for device sizes
-			"hide.scss",  // Hide elements based on device sizes
+			'base/responsive', // mixins for device sizes
+			"base/hide",  // Hide elements based on device sizes
 
 ////////////////////////////////////////////////////////////////////
 // Animations
 // GREATLY simplify this when we're done. We don't need all this.
-			"animatewithsass/animate.scss",
+			"vendors/animatewithsass/animate.scss",
 
 ////////////////////////////////////////////////////////////////////
 // LAYOUT ELEMENTS
 	////////////////////////////////////////////////////////////////////
 	// General elements
-			"media.scss", // images, etc.
-			"column.scss",
-			"row.scss",
-			"jquery.modal.scss",
+			"layout/column",
+			"layout/row",
+			"components/jquery.modal",
 			"containers-segments.scss",
 
 	////////////////////////////////////////////////////////////////////
 	// Typographic
-			"typography.scss",
-			"typography-statistics.scss",
-			"typography-statistics-responsive.scss",
-			"typography-dashboard-stats.scss",
-			"typography-icons.scss",
+			"base/typography",
+			"base/typography-statistics",
+			"base/typography-statistics-responsive",
+			"base/typography-dashboard-stats",
+			"base/typography-icons",
 
 	////////////////////////////////////////////////////////////////////
-	// ArtTap elements
-			"header-navbar.scss",
-			"footer.scss",
-			"sidebar.scss",
-			"card.scss",
-			"block.scss",
-			"accordion.scss",
-			"order.scss",
-			"curated-collections.scss",
-		// @import "card-row.scss";     // TODO
+	// Layout
+			"layout/header-navbar",
+			"layout/footer",
+			"layout/sidebar",
+
+	////////////////////////////////////////////////////////////////////
+	// Components
+			"components/card",
+			"components/block",
+			"components/accordion",
+			"components/order",
+			"components/curated-collections",
 			"form-search/_index.scss",
-			"status-presence.scss",
-			"see-more.scss",
-			"tooltip.scss",
-			"progress.scss",
-			"user-header.scss",
-			"newsletter.scss",
-			"cross-image-text.scss",
-			"info-helpful.scss",
-			"still-need-help.scss",
+			"components/status-presence",
+			"components/see-more",
+			"components/tooltip",
+			"components/progress",
+			"components/user-header",
+			"components/cross-image-text",
+			"components/info-helpful",
+			"components/still-need-help",
+			"components/product",
+			"components/dropdown",
+			"components/inbox",
+			"components/inbox-message",
+			"components/flash-messages",
+		// @import "card-row.scss";     // TODO
+
 
 	////////////////////////////////////////////////////////////////////
-	// Page Specific
-			"pages/pages.scss",
-			"pages/checkout.scss",
-			"pages/apply-artist.scss",
-		// @import "pages/product.scss";
-			"pages/help-main.scss",
-			"pages/artist-inbox-message.scss",
-			"pages/error-404.scss",
-			"pages/register.scss",
+	// Pages
+			"pages/common",
+			"pages/checkout",
+			"pages/apply-artist",
+			"pages/help-main",
+			"pages/artist-inbox-message",
+			"pages/error-404",
+			"pages/register",
+			"pages/newsletter",
 
 		// Temporarily:
-			"pages/product-wf.scss",
+			"pages/product-wf",
 
 	////////////////////////////////////////////////////////////////////
-	// Utilities
-			"utilities/spacing.scss",
-			"utilities/links.scss",
-			"utilities/text.scss",
-			"utilities/boxes.scss",
+	// Helpers
+			"helpers/media", // images, etc.
+			"helpers/spacing",
+			"helpers/links",
+			"helpers/text",
+			"helpers/boxes",
 
 
 ////////////////////////////////////////////////////////////
 // FORMS -- derived from Bulma 0.5.3
 	// Remove this during color / variable consolidation step:
-			"bulma-0.5.3/color-translate.scss",
-			"bulma-0.5.3/variables.scss",
+			"vendors/bulma-0.5.3/color-translate.scss",
+			"vendors/bulma-0.5.3/variables.scss",
 
 	// Settings from Bulma
-			"bulma-0.5.3/controls.scss",
-			"bulma-0.5.3/mixins.scss",
-			"bulma-0.5.3/form.scss",
-			"level.scss";
+			"vendors/bulma-0.5.3/controls.scss",
+			"vendors/bulma-0.5.3/mixins.scss",
+			"vendors/bulma-0.5.3/form.scss",
+			"vendors/level.scss";
 
 	// Bulma 0.5.3 wants these variables
 	// This is for 'form-select2.scss':
@@ -147,54 +155,49 @@
 
 	// Select2 pulldowns and tags
 		@import 
-				"select2/core.scss",
-				"form-select2.scss",
+				"vendors/select2/core.scss",
+				"vendors/form-select2.scss",
 
 	// Our specific form CSS
-				"form.scss",
+				"components/form",
 
 
-	// ////////////////////////////////////////////////////////////////////
-	// Detail elements
-				"hearts.scss",
-				"tags.scss",
-				"bulma-0.5.3/button.scss",
-				"buttons.scss",
-				"bulma-0.5.3/tabs.scss",
-				"tabs.scss",
-				"artist-follow-toggle.scss";
+	////////////////////////////////////////////////////////////////////
+	// Components
+				"components/hearts",
+				"components/tags",
+				"vendors/bulma-0.5.3/button.scss",
+				"components/buttons",
+				"vendors/bulma-0.5.3/tabs.scss",
+				"components/tabs",
+				"components/artist-follow-toggle";
 		// @import "floating-badges.scss"; // Might not be needed
 
 		// These are for Spectre avatar include
 		$border-width: $unit-o !default;
 		$border-width-lg: $unit-h !default;
 		@import 
-				"avatars.scss",
-				"dropdown.scss",
-				"inbox.scss",
-				"inbox-message.scss",
-				"flash-messages.scss",
-				"product.scss",
+				"components/avatars",
 
 
 
 // ////////////////////////////////////////////////////////////////////
 // 3rd Party Libraries
 	// Slick Slider
-				"slick-slider/slick.scss",
-				"slick-slider/slick-theme.scss",
+				"vendors/slick-slider/slick.scss",
+				"vendors/slick-slider/slick-theme.scss",
 	// Common slider for ArtTap elements
-				"slick-slider/slider-at.scss",
+				"vendors/slick-slider/slider-at.scss",
 	// Customization Slick Slider for landing page
-				"slick-slider/slider-landing.scss",
+				"vendors/slick-slider/slider-landing.scss",
 
 	// Quill is a modern rich text editor, convert element into RTF.
-				"quill.snow.scss",
+				"vendors/quill.snow.scss",
 
 	// A simple jQuery image cropping plugin.
-				"cropper/cropper.scss",
+				"vendors/cropper/cropper.scss",
 	// Customized Cropper for ArtTap
-				"cropper/at-cropper.scss",
+				"vendors/cropper/at-cropper.scss",
 
 
 ////////////////////////////////////////////////////////////

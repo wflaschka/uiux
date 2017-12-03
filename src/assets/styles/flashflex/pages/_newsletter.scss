@@ -1,0 +1,67 @@
+///////////////////////////////////////////////////////////////////
+// News Letter Popup
+// Mobile first approach
+///////////////////////////////////////////////////////////////////
+
+.modal.newsletter {
+	padding: 0;
+
+	.news-wrap {
+		display: flex;
+		flex-direction: column;
+
+		.image {
+			// width: 50%;
+			background: url(../images/newsletter.jpg) no-repeat;
+			background-size: cover;
+			background-position: 0 50%;
+			min-height: 50vw;
+		}
+
+		.content {
+			// width: 50%;
+			padding: p(30) p(20);
+			// padding: 0 p(70) p(30);
+			display: none;
+			flex-direction: column;
+			justify-content: space-between;
+			&.is-active {
+				display: flex;
+			}
+		}
+	}
+
+	h1 {
+		padding: 0;
+		margin: 0;
+		border: 0;
+	}
+
+@include for-tablet-portrait-up {
+	.news-wrap {
+		flex-direction: row;
+
+		.image {
+			width: 50%;
+			background-position: 51% 0%;
+			min-height: 570px;
+		}
+
+		.content {
+			width: 50%;
+			// padding: p(30) p(20);
+			// padding: 0 p(70) p(30);
+			padding: p(100) p(50) p(30);
+			&.is-active {
+			}
+		}
+	}
+}
+
+@include for-tablet-landscape-up {
+}
+
+@include for-desktop-up {
+}
+
+}

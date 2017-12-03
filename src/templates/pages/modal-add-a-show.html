@@ -1,5 +1,3 @@
-{{> header-logged-in }}
-
 <p>
     <a href="#basic" rel="modal:open">Add a Show</a>
 </p>
@@ -14,15 +12,15 @@
 
 <h1 class="is-large">Add a Show</h1>
 
-<div class="field">
+<div class="field has-space">
     <div class="control">
-        <label class="radio mr50">
-            <input type="radio" name="show" data-show="past" data-hide="upcoming">
+        <label class="radio">
+            <input type="radio" id="show_past" name="show" data-show="past" data-hide="upcoming">
             <span></span>
             Past Show
         </label>
         <label class="radio">
-            <input type="radio" name="show" data-show="upcoming" data-hide="past" checked="checked">
+            <input type="radio" id="show_upcoming" name="show" data-show="upcoming" data-hide="past" checked="checked">
             <span></span>
             Upcoming Show
         </label>
@@ -33,10 +31,10 @@
 <div class="add-a-show-past">
 
     <h3>Details</h3>
-    <div class="row mb20">
-        <div class="col-xs-14 col-sm-6">
+    <div class="row has-space-small">
+        <div class="col-xs-14 col-md-7">
             <div class="row">
-                <div class="col-sm-10">
+                <div class="col-xs-14 col-md-9 col-lg-10">
                     <div class="field">
                         <label class="label">Type of Show</label>
                         <div class="control">
@@ -48,7 +46,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4">
+                <div class="sep-xs"></div>
+                <div class="col-xs-14 col-md-5 col-lg-4">
                     <div class="field">
                         <label class="label">Year of Show</label>
                         <div class="control">
@@ -171,7 +170,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-6">
+        <div class="col-xs-14 col-md-7">
             <div class="field">
                 <label class="label">Name of Show</label>
                 <div class="control">
@@ -179,7 +178,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-6">
+        <div class="col-xs-14 col-md-7">
             <div class="field">
                 <label class="label">Name of Venue</label>
                 <div class="control">
@@ -189,10 +188,9 @@
         </div>
     </div>
 
-
     <h3>Location</h3>
-    <div class="row mb30">
-        <div class="col-xs-14 col-sm-5">
+    <div class="row has-space-small">
+        <div class="col-xs-14 col-md-5">
             <div class="field">
                 <label class="label">Country</label>
                 <div class="control">
@@ -204,7 +202,8 @@
                 </div>
             </div>
         </div><!-- .col -->
-        <div class="col-xs-14 col-sm-5">
+        <div class="sep-xs"></div>
+        <div class="col-xs-14 col-md-5">
             <div class="field">
                 <label class="label">State/Province</label>
                 <div class="control">
@@ -216,7 +215,8 @@
                 </div>
             </div>
         </div><!-- .col -->
-        <div class="col-xs-14 col-sm-4">
+        <div class="sep-xs"></div>
+        <div class="col-xs-14 col-md-4">
             <div class="field">
                 <label class="label">City</label>
                 <div class="control">
@@ -230,12 +230,10 @@
         </div><!-- .col -->
     </div><!-- .row -->
 
-    <div class="row center-xs mt40 mb30">
-      <div class="col-xs-4">
-        <div class="box">
-            <button class="button is-black is-fullwidth center middle aligned column col-xs center-xs middle-xs">Save</button>
+    <div class="row center-xs has-space-small">
+        <div class="col-xs-14 col-md-5">
+            <button class="button is-black is-fullwidth">Save</button>
         </div>
-      </div>
     </div>
 </div><!-- .add-a-show-past -->
 
@@ -243,10 +241,11 @@
 
 
 <div class="add-a-show-upcoming">
+
     <h3>Time</h3>
     <p>Starts on Sun, January 1, 2017 at 1:00 PM.</p>
-    <div class="row mb30">
-        <div class="col-sm-2">
+    <div class="row has-space-small">
+        <div class="col-xs-7 col-md-3">
             <div class="field">
                 <label class="label">Month</label>
                 <div class="control">
@@ -269,7 +268,7 @@
                 </div>
             </div>
         </div><!-- .col -->
-        <div class="col-sm-2">
+        <div class="col-xs-7 col-md-3">
             <div class="field">
                 <label class="label">Day</label>
                 <div class="control">
@@ -311,7 +310,10 @@
                 </div>
             </div>
         </div><!-- .col -->
-        <div class="col-sm-2">
+
+        <div class="sep-xs"></div>
+
+        <div class="col-xs-7 col-md-3">
             <div class="field">
                 <label class="label">Year</label>
                 <div class="control">
@@ -430,7 +432,7 @@
                 </div>
             </div>
         </div><!-- .col -->
-        <div class="col-sm-2">
+        <div class="col-xs-7 col-md-3">
             <div class="field">
                 <label class="label">Time</label>
                 <div class="control">
@@ -469,7 +471,7 @@
     <hr>
     <p>Ends on Mon, January 2, 2017 at 1:00 PM.</p>
     <div class="row">
-        <div class="col-sm-2">
+        <div class="col-xs-7 col-md-3">
             <div class="field">
                 <label class="label">Month</label>
                 <div class="control">
@@ -492,7 +494,7 @@
                 </div>
             </div>
         </div><!-- .col -->
-        <div class="col-sm-2">
+        <div class="col-xs-7 col-md-3">
             <div class="field">
                 <label class="label">Day</label>
                 <div class="control">
@@ -534,7 +536,10 @@
                 </div>
             </div>
         </div><!-- .col -->
-        <div class="col-sm-2">
+        
+        <div class="sep-xs"></div>
+
+        <div class="col-xs-7 col-md-3">
             <div class="field">
                 <label class="label">Year</label>
                 <div class="control">
@@ -653,7 +658,7 @@
                 </div>
             </div>
         </div><!-- .col -->
-        <div class="col-sm-2">
+        <div class="col-xs-7 col-md-3">
             <div class="field">
                 <label class="label">Time</label>
                 <div class="control">
@@ -690,11 +695,12 @@
         </div><!-- .col -->
     </div><!-- row -->
 
+
     <h3>Details</h3>
-    <div class="row mb20">
-        <div class="col-xs-14 col-sm-6">
+    <div class="row has-space-small">
+        <div class="col-xs-14 col-md-7">
             <div class="row">
-                <div class="col-sm-10">
+                <div class="col-xs-14 col-md-9 col-lg-10">
                     <div class="field">
                         <label class="label">Type of Show</label>
                         <div class="control">
@@ -706,7 +712,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4">
+                <div class="sep-xs"></div>
+                <div class="col-xs-14 col-md-5 col-lg-4">
                     <div class="field">
                         <label class="label">Year of Show</label>
                         <div class="control">
@@ -829,7 +836,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-6">
+        <div class="col-xs-14 col-md-7">
             <div class="field">
                 <label class="label">Name of Show</label>
                 <div class="control">
@@ -837,7 +844,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-6">
+        <div class="col-xs-14 col-md-7">
             <div class="field">
                 <label class="label">Name of Venue</label>
                 <div class="control">
@@ -847,10 +854,9 @@
         </div>
     </div>
 
-
     <h3>Location</h3>
-    <div class="row mb30">
-        <div class="col-xs-14 col-sm-5">
+    <div class="row has-space-small">
+        <div class="col-xs-14 col-md-5">
             <div class="field">
                 <label class="label">Country</label>
                 <div class="control">
@@ -862,7 +868,8 @@
                 </div>
             </div>
         </div><!-- .col -->
-        <div class="col-xs-14 col-sm-5">
+        <div class="sep-xs"></div>
+        <div class="col-xs-14 col-md-5">
             <div class="field">
                 <label class="label">State/Province</label>
                 <div class="control">
@@ -874,7 +881,8 @@
                 </div>
             </div>
         </div><!-- .col -->
-        <div class="col-xs-14 col-sm-4">
+        <div class="sep-xs"></div>
+        <div class="col-xs-14 col-md-4">
             <div class="field">
                 <label class="label">City</label>
                 <div class="control">
@@ -898,22 +906,21 @@
         </div>
     </div>
 
-    <div class="row center-xs mt20">
-      <div class="col-xs-4">
-        <div class="box">
-            <button class="button is-black is-fullwidth center middle aligned column col-xs center-xs middle-xs">Save</button>
+    <div class="row center-xs has-space-small">
+        <div class="col-xs-14 col-md-5">
+            <button class="button is-black is-fullwidth">Save</button>
         </div>
-      </div>
     </div>
 
 
     <h3>Promotion Details</h3>
     <p class="color-gray"><small>Add some promotional photos for the show.</small></p>
 
-    <div class="row mb30">
+    <div class="row has-space-small">
         <div class="col-flex">
             <div class="card edit empty">
                 <div class="image">
+                    <input type="file" class="input-image" id="" name="file" accept=".jpg,.jpeg,.png,.gif,.bmp,.tiff">
                     <i class="fa fa-4x fa-arrow-up"></i>
                     Add a Photo
                 </div>
@@ -986,8 +993,8 @@
         </div>
     </div><!-- .row -->
 
-    <div class="row mb20">
-        <div class="col-xs-14 col-sm-4">
+    <div class="row has-space-small">
+        <div class="col-xs-14 col-sm-7 col-md-6">
             <div class="field">
                 <label class="label">Address <i><small class="color-gray fw-normal">(optional)</small></i></label>
                 <div class="control">
@@ -995,7 +1002,7 @@
                 </div>
             </div>
         </div><!-- .col -->
-        <div class="col-xs-14 col-sm-4">
+        <div class="col-xs-14 col-sm-7 col-md-6">
             <div class="field">
                 <label class="label">Apt / Suite <i><small class="color-gray fw-normal">(optional)</small></i></label>
                 <div class="control">
@@ -1005,8 +1012,8 @@
         </div><!-- .col -->
     </div><!-- .row -->
 
-    <div class="row mb20">
-        <div class="col-xs-14 col-sm-8">
+    <div class="row has-space-small">
+        <div class="col-xs-14 col-md-12">
             <div class="field">
                 <label class="label">Artwork Description  <i><small class="color-gray fw-normal">Characters: 0/2000</small></i></label>
                 <div class="artwork-description-editor">
@@ -1016,9 +1023,8 @@
         </div><!-- .col -->
     </div><!-- .row -->
 
-
-    <div class="row mb20">
-        <div class="col-xs-14 col-sm-8">
+    <div class="row has-space-small">
+        <div class="col-xs-14 col-md-12">
             <div class="field">
                 <label class="label">Event Website <i><small class="color-gray fw-normal">(optional)</small></i></label>
                 <div class="control">
@@ -1028,18 +1034,14 @@
         </div><!-- .col -->
     </div><!-- .row -->
 
-    <div class="row center-xs mt40 mb30">
-      <div class="col-xs-4">
-        <div class="box">
-            <button class="button is-black is-fullwidth center middle aligned column col-xs center-xs middle-xs">Save</button>
+    <div class="row center-xs has-space-small">
+        <div class="col-xs-14 col-md-5">
+            <button class="button is-black is-fullwidth">Save</button>
         </div>
-      </div>
     </div>
 </div><!-- .add-a-show-upcoming -->
 
-
 </div><!-- .add-a-show -->
-
 
 </div><!-- .modal -->
 
@@ -1054,19 +1056,43 @@
             closeText     : '',        // Text content for the close <a> tag.
             closeClass    : '',        // Add additional class(es) to the close <a> tag.
             showClose     : true,      // Shows a (X) icon/link in the top-right corner
-            modalClass    : "modal",   // CSS class added to the element being displayed in the modal.
+            modalClass    : "modal large",   // CSS class added to the element being displayed in the modal.
             blockerClass  : "blocker", // CSS class added to the overlay (blocker).
             spinnerHtml   : null,      // HTML appended to the default spinner during AJAX requests.
             showSpinner   : true,      // Enable/disable the default spinner during AJAX requests.
             fadeDuration  : 250,       // Number of milliseconds the fade transition takes (null means no transition)
             fadeDelay     : 0.8        // Point during the overlay's fade-in that the modal begins to fade in (.5 = 50%, 1.5 = 150%, etc.)
         };
+        
+        $('#basic').modal();
+
 
         $('#basic').on($.modal.OPEN, function(event, modal) {
             $('select.select2').select2();
             $('.add-a-show-past').hide();
         });
 
+        // 
+        // After modal closed
+        // Destroy select element
+        // Show all tabs - to avoid Select element not having full width if any tab is hide which had Select element.
+        // Uncheck show past
+        // 
+        $('#basic').on($.modal.AFTER_CLOSE, function(event, modal) {
+            $('select.select2').select2('destroy');
+            $('.add-a-show-past, .add-a-show-upcoming').show();
+            $('#show_past').prop('checked', false)
+            $('#show_upcoming').prop('checked', true)
+        });
+
+        $("input[name$='show']").click(function() {
+            var divShow = $(this).attr( 'data-show' );
+            var divHide = $(this).attr( 'data-hide' );
+            $('.add-a-show-' + divHide).hide();
+            $('.add-a-show-' + divShow).show();
+        });
+
+        // Rich Editor
         var toolbarOptions = [
             ['bold', 'italic'],        // toggled buttons
         ];
@@ -1076,13 +1102,6 @@
                 toolbar: toolbarOptions
             },
             theme: 'snow'
-        });
-
-        $("input[name$='show']").click(function() {
-            var divShow = $(this).attr( 'data-show' );
-            var divHide = $(this).attr( 'data-hide' );
-            $('.add-a-show-' + divHide).hide();
-            $('.add-a-show-' + divShow).show();
         });
 
     });

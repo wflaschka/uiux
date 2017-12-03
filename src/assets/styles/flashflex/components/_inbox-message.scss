@@ -1,0 +1,101 @@
+///////////////////////////////////////////////////////////////////
+// Inbox Message / Reply
+// Mobile First
+///////////////////////////////////////////////////////////////////
+
+.inbox-message {
+
+	.message {
+		border-bottom: 1px solid $color-border;
+
+		&:not(:last-child) {
+			margin-bottom: p(30);
+		}
+
+		&.reply {
+			border-bottom: none;
+			display: none;
+
+			.button-send {
+
+				.button {
+					margin-bottom: 0;
+					width: 100%;
+					margin-top: p(30);
+				}
+			}
+		}
+	}
+
+	.message-header {
+		margin-bottom: p(30);
+
+		.user {
+			display: flex;
+			align-items: center;
+
+			.user-info {
+				padding: 0px p(20);
+			}
+		}
+
+		.actions {
+			display: flex;
+			width: 100%;
+			margin-bottom: p(20);
+
+			.button-reply {
+				flex: 1 1 100%;
+				margin-bottom: 0 !important;
+				margin-right: p(20);
+			}
+		}
+	}
+
+
+@include for-tablet-portrait-up {
+
+	.message {
+		border-bottom: 1px solid $color-border;
+
+		&.reply {
+
+			.button-send {
+				display: flex;
+				justify-content: flex-end;
+
+				.button {
+					width: unset;
+					min-width: p(200);
+				}
+			}
+		}
+	}
+
+	.message-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		.actions {
+			width: unset;
+			order: 2;
+			margin-bottom: 0;
+
+			.button-reply {
+				min-width: p(150);
+			}
+		}
+	}
+
+}// for-tablet-portrait-up
+
+
+@include for-tablet-landscape-up {
+}
+
+@include for-desktop-up {
+}
+
+
+}// .inbox-message
