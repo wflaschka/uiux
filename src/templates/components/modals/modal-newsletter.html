@@ -2,12 +2,10 @@
 
 <div id="basic" style="display:none;">
 	<a href="#" rel="modal:close" class="close-modal"><i class="at at-2x at-arrows-remove"></i></a>
-	<div class="flex-between">
-		<div class="col-left">
-			<img class="responsive" src="/assets/images/newsletter.jpg">
-		</div>
-		<div class="col-right subscribe is-active">
-			<div></div>
+	<div class="news-wrap">
+		<div class="image"></div>
+
+		<div class="content subscribe is-active">
 			<div>
 				<h1>Become an Art Connoisseur</h1>
 				<p>Subscribe to our newsletter for insider info on new art, news, events and more.</p>
@@ -19,15 +17,14 @@
 					</div>
 				</div>
 				<a href="#" class="button is-black is-fullwidth subscribe-now">Subscribe Now</a>
-				<div class="text-center"><small><a  href="#">I'm not interested in art.</a></small></div>
+				<div class="text-center"><small><a href="#" rel="modal:close">I'm not interested in art.</a></small></div>
 			</div>
 			<div class="text-center">
 				<small><a class="link-black" href="#">Terms of Use</a> and <a class="link-black" href="#">Privacy Policy</a></small>
 			</div>
 		</div>
 
-		<div class="col-right subscribe-success">
-			<div></div>
+		<div class="content subscribe-success">
 			<div>
 				<h1>Become an Art Connoisseur</h1>
 				<p>Subscribe to our newsletter for insider info on new art, news, events and more.</p>
@@ -36,7 +33,6 @@
 				<p class="text-center">Success! Check your mailbox</p>
 				<a href="#" class="button is-black is-fullwidth">Discover Art</a>
 			</div>
-			<div></div>
 		</div>
 	</div>
 </div>
@@ -53,7 +49,7 @@
 		closeText     : '',        // Text content for the close <a> tag.
 		closeClass    : '',        // Add additional class(es) to the close <a> tag.
 		showClose     : false,      // Shows a (X) icon/link in the top-right corner
-		modalClass    : "modal newsletter",   // CSS class added to the element being displayed in the modal.
+		modalClass    : "modal large newsletter",   // CSS class added to the element being displayed in the modal.
 		blockerClass  : "blocker", // CSS class added to the overlay (blocker).
 		spinnerHtml   : null,      // HTML appended to the default spinner during AJAX requests.
 		showSpinner   : true,      // Enable/disable the default spinner during AJAX requests.
@@ -65,6 +61,9 @@
 		$('.subscribe').removeClass('is-active');
 		$('.subscribe-success').addClass('is-active');
 	});
+
+	$('#basic').modal();
+
 </script>
 
 </main>
