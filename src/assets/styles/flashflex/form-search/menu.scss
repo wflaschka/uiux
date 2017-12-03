@@ -19,7 +19,8 @@
         height: $search-bar-height !important;
 
         &.dropdown-toggle {
-            @extend .button;
+            // @extend %button .is-fullwidth .is-outlined .is-gray;
+            @extend %button;
             @extend .is-fullwidth;
             @extend .is-outlined;
             @extend .is-gray;

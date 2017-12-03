@@ -38,6 +38,11 @@
 
     @include box_shadow(2);
 
+
+    &.impersonated {
+        animation: impersonationPulse 1.5s infinite;
+    }
+
     &.no-shadow { box-shadow: none; }
 
     a {
@@ -339,3 +344,24 @@
 } //.search
 
 
+
+////////////////////////////////////////////////////////////////////
+// Special pulses for users "impersonated" by admins
+@keyframes impersonationPulse {
+  0% {
+    -moz-box-shadow: inset 0 0 5px 0 rgba(red(color(red)), green(color(red)), blue(color(red)), 1);
+    box-shadow: inset 0 0 5px 0 rgba(red(color(red)), green(color(red)), blue(color(red)), 1);
+  }
+  // 50% {
+  //     -moz-box-shadow: inset 0 0 5px 10px rgba(red(color(red)), green(color(red)), blue(color(red)), 0.5);
+  //     box-shadow: inset 0 0 5px 10px rgba(red(color(red)), green(color(red)), blue(color(red)), 0.5);
+  // }
+  75% {
+      -moz-box-shadow: inset 0 0 3px 20px rgba(red(color(red)), green(color(red)), blue(color(red)), 0.0);
+      box-shadow: inset 0 0 3px 20px rgba(red(color(red)), green(color(red)), blue(color(red)), 0.0);
+  }
+  100% {
+      -moz-box-shadow: inset 0 0 5px 0 rgba(red(color(red)), green(color(red)), blue(color(red)), 0);
+      box-shadow: inset 0 0 5px 0 rgba(red(color(red)), green(color(red)), blue(color(red)), 0);
+  }
+}
