@@ -24,6 +24,7 @@ body {
 a {
     font-weight: $weight-semibold;
     color: color(primary);
+    cursor: pointer;
 }
 
 ////////////////////////////////////////////////////////////////////
@@ -198,6 +199,7 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 1;
     // transition: opacity 0.5s linear;
     animation: blinker 3s linear infinite;
+
 }
 [documentation] {
     color: #2196F3 !important;
@@ -207,6 +209,9 @@ h1, h2, h3, h4, h5, h6 {
     }
     &[bordered] {
         border: 1px dotted #2196F3 !important;
+    }
+    &.fa-check-square-o {
+        // font-family: $font-family-sans-serif;
     }
 }
 hr[documentation] {

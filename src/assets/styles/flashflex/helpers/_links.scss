@@ -18,6 +18,7 @@ a {
 // .link-black;
 @each $linkColor in black, gray {
   %link-#{$linkColor} {
+    color: color(#{$linkColor});
     &:link,
     &:visited {
       color: color(#{$linkColor});
