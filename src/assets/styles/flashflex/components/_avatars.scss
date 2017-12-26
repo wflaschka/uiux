@@ -97,10 +97,6 @@
 .avatar {
     background: color(primary);
 
-    &.impersonated {
-        animation: impersonationPulse 1.5s infinite;
-    }
-
     .avatar-status {
         @extend .avatar-presence;
 
@@ -125,21 +121,4 @@
             @extend .at-arrows-minus;
         }
     }
-}
-
-////////////////////////////////////////////////////////////////////
-// Special pulses for users "impersonated" by admins
-@keyframes impersonationPulse {
-  0% {
-    -moz-box-shadow: 0 0 0 0 rgba(red(color(black)), green(color(black)), blue(color(black)), 0.4);
-    box-shadow: 0 0 0 0 rgba(red(color(black)), green(color(black)), blue(color(black)), 0.4);
-  }
-  70% {
-      -moz-box-shadow: 0 0 0 10px rgba(red(color(black)), green(color(black)), blue(color(black)), 0);
-      box-shadow: 0 0 0 10px rgba(red(color(black)), green(color(black)), blue(color(black)), 0);
-  }
-  100% {
-      -moz-box-shadow: 0 0 0 0 rgba(red(color(black)), green(color(black)), blue(color(black)), 0);
-      box-shadow: 0 0 0 0 rgba(red(color(black)), green(color(black)), blue(color(black)), 0);
-  }
 }

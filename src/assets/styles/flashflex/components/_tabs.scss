@@ -4,7 +4,7 @@
 ///////////////////////////////////////////////////////////////////
 
 .tabs {
-        font-size: p(13);
+    font-size: p(13);
 
     ul {
         padding: 0;
@@ -16,24 +16,22 @@
     }
 
 
-    @include for-tablet-portrait-up {
-        font-size: p(15);
+@include for-tablet-portrait-up {
+    font-size: p(15);
 
-        a {
-            padding: 0.625rem 3rem;
-        }
-    }
-
-    @include for-tablet-landscape-up {
-        
-        a {
-            padding: p(10) p(80);
-        }
-    }
-
-    @include for-desktop-up {
+    a {
+        padding: 0.625rem 3rem;
     }
 }
+
+@include for-tablet-landscape-up {
+    a {
+        padding: p(10) p(80);
+    }
+}
+
+}// .tabs
+
 
 .tabs-container {
     margin: auto;
@@ -50,52 +48,118 @@
         display: inherit;
     }
 
-    @include for-tablet-portrait-up {
-        .tab-content {
-            font-size: p(15);
-        }
+@include for-tablet-portrait-up {
+    .tab-content {
+        font-size: p(15);
     }
-
 }
 
+}// .tabs-container
 
-.show {
-    margin-bottom: p(40);
 
-    .title {
-        font-weight: $weight-semibold;
-    }
+.show-container {
 
-    ul {
-        li {
-            margin-bottom: p(20);
-            display: flex;
+    .item {
+        margin-bottom: p(40);
 
-            .show-date {
-                flex: 1 1 auto;
-                padding-right: p(20);
-            }
-
-            .show-detail {
-                flex: 1 1 100%;
-            }
-
-            a {
-                white-space: nowrap;
-            }
+        .title {
+            font-weight: $weight-semibold;
         }
-    }
-
-    @include for-tablet-portrait-up {
 
         ul {
             li {
+                margin-bottom: p(20);
+                display: flex;
 
                 .show-date {
                     flex: 1 1 auto;
+                    padding-right: p(20);
+                }
+
+                .show-detail {
+                    flex: 1 1 100%;
+                }
+
+                a {
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+    
+@include for-tablet-portrait-up {
+    .item {
+        ul {
+            li {
+                .show-date {
                     padding-right: p(30);
                 }
             }
         }
     }
+
 }
+
+}// .show-container
+
+
+.social-container {
+
+    .item {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding: 0 0 1rem 3rem;
+        margin-bottom: 1rem;
+        border-bottom: 1px solid $color-border;
+        @include clearfix();
+
+        i {
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 1.25rem;
+        }
+
+        .time {
+            color: #ccc;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        a {
+            margin-bottom: .5rem;
+        }
+
+        img {
+            order: 5;
+            max-width: 100px;
+        }
+    }
+
+
+@include for-tablet-portrait {
+    .item {
+        display: block;
+
+        img {
+            float: right;
+            margin-left: 1rem;
+        }
+    }
+}
+
+@include for-tablet-portrait-up {
+    .item {
+        display: block;
+
+        img {
+            float: right;
+            margin-left: 1rem;
+        }
+    }
+}
+
+}// .social-container
