@@ -110,7 +110,8 @@ $colorsBasic: (primary secondary text link white gray black green greentree blue
 		background-color: $this-color;
 	}
 	*.#{$name}-text {
-		color: $this-color-invert;
+		// color: $this-color-invert;
+		color: $this-color;
 	}
 }
 

@@ -4,7 +4,25 @@
 	height: p(10);
 	width: p(10);
 
+	// for Messages
+	&.is-read {
+		background: color(white-dark);
+	}
+	&.is-unread {
+		background: color(orange);
+	}
+	&.is-archived {
+		background: color(white-dark);
+	}
+
+
+
+	// for Statuses
     &.is-online { background: #bcce38; }
-    &.is-busy { background: #d92f1d; }
+    &.is-busy { 
+    	// background: #d92f1d; 
+    	background: color(red);
+    }
     &.is-away { background: #f9922c; }
+
 }
