@@ -33,7 +33,12 @@
 			@include truncate(100%);
 			padding-right: 0.2rem;
 			padding-left: 0.2rem;
+
 			&.heart {
+				float: right !important;
+			}
+			// For Merchant > Artwork > Editable card
+			&.edit {
 				float: right !important;
 			}
 
@@ -106,11 +111,37 @@
 			.tool {
 				display: flex;
 				flex-grow: 1;
+				cursor: pointer;
 
 				align-items: center;
 				justify-content: center;
 
 				height: 100%;
+			}
+		}
+
+		&.upload-slot {
+			.image {
+				// background-color: color(gray-light);
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				position: relative;
+
+				input {
+					opacity: 0;
+					position: absolute;
+					width: 100%;
+					height: 125px;
+				}
+			}
+			&.dz-preview {
+				.image {
+					img {
+						display: block;
+					}
+				}
 			}
 		}
 
@@ -246,11 +277,11 @@
 		}
 	}
 
-@include for-phone-only {
-	margin-right: 0;
-	&:nth-child(odd) {
-		margin-right: 1rem;
+	@include for-phone-only {
+		margin-right: 0;
+		&:nth-child(odd) {
+			margin-right: 1rem;
+		}
 	}
-}
 
 }
