@@ -27,3 +27,8 @@ form.is-search-form {
     @import "form-colorballs.scss";
 
 }
+
+form.product-form {
+    @import "variables.scss";
+    @import "form-colorballs.scss";
+}
