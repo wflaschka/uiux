@@ -7,7 +7,7 @@
 ```sh
 git checkout master
 git pull
-git checkout mobiledevicesupport
+git checkout walter
 git merge master
 ```
 
