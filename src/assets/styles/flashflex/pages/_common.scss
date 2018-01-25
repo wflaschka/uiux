@@ -101,6 +101,11 @@
 }
 
 @include for-desktop-up {
+	&.has-sidebar {
+		#content {
+			width: 77%;
+		}
+	}
 }
 
 }// .page
