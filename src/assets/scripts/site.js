@@ -127,51 +127,105 @@ $(document).ready(function() {
     ////////////////////////////////////////////////////////////
     // check if Slider exist then run to avoid errors
     if ( $('.at.slider').length ) {
-        $('.at.slider.is-responsive').slick({
-            infinite: false,
-            slidesToShow: 7,
-            slidesToScroll: 7,
-            responsive: [
-                {
-                  breakpoint: 1100,
-                  settings: {
-                    slidesToShow: 6,
-                    slidesToScroll: 6
-                  }
-                },
-                {
-                  breakpoint: 950,
-                  settings: {
-                    slidesToShow: 5,
-                    slidesToScroll: 5
-                  }
-                },
-                {
-                  breakpoint: 800,
-                  settings: {
-                    slidesToShow: 4,
-                    slidesToScroll: 4
-                  }
-                },
-                {
-                  breakpoint: 650,
-                  settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3
-                  }
-                },
-                {
-                  breakpoint: 530,
-                  settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2
-                  }
-                }
-                // You can unslick at a given breakpoint now by adding:
-                // settings: "unslick"
-                // instead of a settings object
-            ]
-        });
+
+        if ( $('.page').hasClass('has-sidebar') ) {
+            
+            $('.at.slider.is-responsive').slick({
+                infinite: false,
+                slidesToShow: 5,
+                slidesToScroll: 5,
+                responsive: [
+                    {
+                      breakpoint: 1100,
+                      settings: {
+                        slidesToShow: 6,
+                        slidesToScroll: 6
+                      }
+                    },
+                    {
+                      breakpoint: 950,
+                      settings: {
+                        slidesToShow: 5,
+                        slidesToScroll: 5
+                      }
+                    },
+                    {
+                      breakpoint: 800,
+                      settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 4
+                      }
+                    },
+                    {
+                      breakpoint: 650,
+                      settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3
+                      }
+                    },
+                    {
+                      breakpoint: 530,
+                      settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                      }
+                    }
+                    // You can unslick at a given breakpoint now by adding:
+                    // settings: "unslick"
+                    // instead of a settings object
+                ]
+            });
+
+        } else {
+
+            $('.at.slider.is-responsive').slick({
+                infinite: false,
+                slidesToShow: 7,
+                slidesToScroll: 7,
+                responsive: [
+                    {
+                      breakpoint: 1100,
+                      settings: {
+                        slidesToShow: 6,
+                        slidesToScroll: 6
+                      }
+                    },
+                    {
+                      breakpoint: 950,
+                      settings: {
+                        slidesToShow: 5,
+                        slidesToScroll: 5
+                      }
+                    },
+                    {
+                      breakpoint: 800,
+                      settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 4
+                      }
+                    },
+                    {
+                      breakpoint: 650,
+                      settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3
+                      }
+                    },
+                    {
+                      breakpoint: 530,
+                      settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                      }
+                    }
+                    // You can unslick at a given breakpoint now by adding:
+                    // settings: "unslick"
+                    // instead of a settings object
+                ]
+            });
+
+        }
+
     }
 
 
