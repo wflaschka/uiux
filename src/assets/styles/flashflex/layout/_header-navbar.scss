@@ -99,7 +99,8 @@
 	z-index: z('site-header-dropdown') !important; 
 	background-color: white;
 	text-align: left;
-	padding: 1rem 4.5rem 2.5rem;
+	padding: 1rem 2.5rem 2.5rem;
+	// padding: 1rem 4.5rem 2.5rem;
 
 	// Shadows
 	@include box_shadow_topless(2);
@@ -115,7 +116,7 @@
 	&.cart {
 		left: auto;
 		right: 0;
-		padding: 1rem 2.5rem 2.5rem;
+		// padding: 1rem 2.5rem 2.5rem;
 		@include for-phone-only {
 			width: 100%;
 		}

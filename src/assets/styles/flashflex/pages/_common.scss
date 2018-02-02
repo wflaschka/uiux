@@ -13,6 +13,7 @@
 
 	#wrapper {
 		display: flex;
+		min-height: calc(100vh - 345px);
 		// flex-direction: column;
 	}
 
