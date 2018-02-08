@@ -19,29 +19,25 @@
 	.user {
 		margin-bottom: p(20);
 
-		.info {
-
+		.name-sig {
+			display: flex;
+			align-items: center;
+			
 			h4 {
-				position: relative;
-				margin: 0;
-
-				img {
-					display: none;
-					max-height: p(45);
-					position: absolute;
-					right: p(-50);
-					top: p(-15);
-				}
+				margin: 0 p(15) 0 0;
 			}
-
-			.place {
-				font-size: p(13);
-				a {
-					font-weight: $weight-semibold;
-					display: block;
-				}
+			img {
+				max-height: p(40);
 			}
-		}// .info
+		}// .name
+
+		.place {
+			font-size: p(13);
+			a {
+				font-weight: $weight-semibold;
+				display: block;
+			}
+		}
 	}// .user
 
 	.stats {
@@ -75,20 +71,19 @@
 		.user {
 			margin-bottom: 0;
 
-			.info {
-
+			.name-sig {
 				h4 {
 
 					img {
 						display: initial;
 					}
 				}
+			}
 
-				.place {
-					a {
-						margin-left: p(15);
-						display: initial;
-					}
+			.place {
+				a {
+					margin-left: p(15);
+					display: initial;
 				}
 			}
 		}
