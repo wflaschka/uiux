@@ -1,0 +1,27 @@
+<h1>Select2 tag + add new tags</h1>
+
+<h4>Ref URL: <a href="https://select2.org/tagging">Dynamic option creation</a></h4>
+
+<div class="field">
+    <label class="label">Tag Selection (using Select2) Add New Tags</label>
+    <div class="control">
+        <div class="select select-tags is-fullwidth select2-wrapper">
+            <select class="select2 js-example-tags" multiple="multiple">
+                <option>One</option>
+                <option>Two</option>
+                <option>Three</option>
+                <option>Four</option>
+                <option>Five</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(".js-example-tags").select2({
+            placeholder: "Select Tags or Enter Tags to Create new tags",
+            tags: true
+        });
+    });
+</script>
