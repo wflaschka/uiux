@@ -51,6 +51,10 @@
 	// then go larger devices
 	@include for-tablet-portrait-up {
 		flex-direction: row;
+
+		.block-curated:last-child {
+			display: none;
+		}
 	}
 
 	@include for-desktop-up {
@@ -59,6 +63,9 @@
 
 		.block-curated {
 			margin-bottom: 0;
+			&:last-child {
+				display: block;
+			}
 		}
 
 		.sep-curated {
