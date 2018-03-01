@@ -160,6 +160,7 @@
 
 	// Our specific form CSS
 				"components/form",
+				"components/stripe-form",
 
 
 	////////////////////////////////////////////////////////////////////
@@ -171,8 +172,8 @@
 				"vendors/bulma-0.5.3/tabs.scss",
 				"components/apply-thumbnails",
 				"components/tabs",
-				"components/artist-follow-toggle";
-		// @import "floating-badges.scss"; // Might not be needed
+				"components/artist-follow-toggle",
+				"floating-badges.scss"; // Might not be needed
 
 		// These are for Spectre avatar include
 		$border-width: $unit-o !default;
