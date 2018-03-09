@@ -25,9 +25,9 @@
 
 		margin-top: 12.8px;
 
-		font-size: 13px;
-		font-weight: 500;
-		line-height: 18px;
+		// font-size: 13px;
+		// font-weight: 500;
+		// line-height: 18px;
 
 		div {
 			@include truncate(100%);
@@ -284,4 +284,9 @@
 		}
 	}
 
+}
+
+
+.image-upload-dropzone .card {
+	margin-bottom: 1.5rem;
 }

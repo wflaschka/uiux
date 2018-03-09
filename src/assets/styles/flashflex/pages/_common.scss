@@ -5,21 +5,24 @@
 .page {
 
 	// for demo purpose to match layout with prototype 1280px
-	max-width: 1280px;
+	// max-width: 1280px;
 	margin: 0 auto;
 
+	&.t { max-width: 1280px; } // test for prototype match
 	&.landscape { max-width: 1024px; }
 	&.phone { max-width: 360px; }
 
 	#wrapper {
 		display: flex;
-		min-height: calc(100vh - 345px);
 		// flex-direction: column;
 	}
 
 	#content {
 		padding: p(20) p(20) p(40);
+		min-height: calc(100vh - 345px);
 		width: 100%;
+		max-width: 1280px;
+		margin: 0 auto;
 	}
 
 	&.compact {
@@ -30,14 +33,15 @@
 
 	.section {
 		&.has-border {
-			margin-bottom: p(50);
-			padding-bottom: p(50);
+			margin-bottom: 5rem;
+			padding-bottom: 3.5rem;
 			border-bottom: 1px solid $color-border;
 		}
 
 		&.space-small { margin-bottom: 2rem; }
 		&.space-medium { margin-bottom: 3rem; }
 		&.space-large { margin-bottom: 4rem; }
+		&.section-padding-s { padding-bottom: 1.5rem; }
 
 		h2 {
 			margin-bottom: 1.5rem;
@@ -55,6 +59,7 @@
 
 	    h1, h2, h3 {
 	    	margin: 0 0 p(20);
+	    	font-size: 3rem;
 	    }
 
 	    .with-page-title {
