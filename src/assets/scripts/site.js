@@ -74,6 +74,19 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
+    $('.see-more .see-more-content').each(function(){
+        var dh = $(this).attr('data-height');
+        
+        if ( $(this).height() > dh ) {
+            $(this).parents('.see-more').removeClass('active');
+            $(this).height(dh);
+        }
+    });
+
+    // Hiding tab content with jquery because if hide from css, it doesn't get effect of see more elements.
+    $('.tabs-container .tab-content').hide();
+
+
 
     ////////////////////////////////////////////////////////////
     // Custom Dropdown

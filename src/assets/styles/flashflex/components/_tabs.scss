@@ -38,14 +38,15 @@
 
     .tab-content {
         font-size: p(13);
-        display: none;
+        // display: none;
+        // to add see more element need to display to get height
         p:first-child {
             margin-top: 0;
         }
     }
 
     .tab-content.is-active {
-        display: inherit;
+        display: block !important;
     }
 
 @include for-tablet-portrait-up {
@@ -122,7 +123,7 @@
         }
 
         .time {
-            color: #ccc;
+            @extend .text-fade;
             text-decoration: none;
             &:hover {
                 text-decoration: underline;
