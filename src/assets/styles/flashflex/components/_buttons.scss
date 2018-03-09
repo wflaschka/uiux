@@ -327,11 +327,20 @@
 
 .button {
     @extend %button;
+    &.is-black {
+        &:hover,
+        &:focus {
+            background-color: $color-border !important;
+        }
+    }
+    &.is-secondary {
+        color: rgba(0,0,0,0.44) !important;
+    }
 }
 
 .button:not(.is-small):not(.is-large):not(.is-medium) {
     font-size: inherit;
-    min-height: p(46); //46px
+    min-height: p(47); //47px
 }
 
 .button:not(.is-small):not(.is-large):not(.is-medium):not(:last-child) {

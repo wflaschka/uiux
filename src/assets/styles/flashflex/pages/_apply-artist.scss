@@ -4,6 +4,11 @@
 
 .page-apply-artist {
 
+	#content {
+		padding: 0;
+		max-width: none;
+	}
+	
 	h1 {
 		order: 2;
 		font-size: p(25);
@@ -47,15 +52,15 @@
 			margin-bottom: p(15);
 		}
 
-		.group-step {
-			margin-bottom: p(20);
-			.title {
-				font-weight: $weight-semibold;
-			}
-			.step {
-				margin-bottom: p(20);
-			}
-		}
+		// .group-step {
+		// 	margin-bottom: p(20);
+		// 	.title {
+		// 		font-weight: $weight-semibold;
+		// 	}
+		// 	.step {
+		// 		margin-bottom: p(20);
+		// 	}
+		// }
 	}// .how-it-works
 
 	.artist-benefits {
@@ -136,29 +141,29 @@
 				border-bottom: none;
 			}
 
-			.group-step {
-				display: flex;
-				margin-bottom: p(20);
-				padding-bottom: p(60);
-				border-bottom: 1px solid $color-border;
+			// .group-step {
+			// 	display: flex;
+			// 	margin-bottom: p(20);
+			// 	padding-bottom: p(60);
+			// 	border-bottom: 1px solid $color-border;
 
-				.step {
-					margin-bottom: p(20);
-					flex: 1 1 100%;
-				}
-				.step:nth-child(1) {
-					border-right: 1px solid $color-border;
-					padding-right: 3.125rem;
-				}
-				.step:nth-child(2) {
-					padding-right: 3.125rem;
-					padding-left: 3.125rem;
-				}
-				.step:nth-child(3) {
-					border-left: 1px solid $color-border;
-					padding-left: 3.125rem;
-				}
-			}
+			// 	.step {
+			// 		margin-bottom: p(20);
+			// 		flex: 1 1 100%;
+			// 	}
+			// 	.step:nth-child(1) {
+			// 		border-right: 1px solid $color-border;
+			// 		padding-right: 3.125rem;
+			// 	}
+			// 	.step:nth-child(2) {
+			// 		padding-right: 3.125rem;
+			// 		padding-left: 3.125rem;
+			// 	}
+			// 	.step:nth-child(3) {
+			// 		border-left: 1px solid $color-border;
+			// 		padding-left: 3.125rem;
+			// 	}
+			// }
 
 		}// .how-it-works
 

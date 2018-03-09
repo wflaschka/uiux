@@ -123,7 +123,7 @@
         }
 
         .time {
-            color: #ccc;
+            @extend .text-fade;
             text-decoration: none;
             &:hover {
                 text-decoration: underline;

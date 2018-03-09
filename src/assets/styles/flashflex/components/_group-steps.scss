@@ -1,0 +1,45 @@
+///////////////////////////////////////////////////////////////////
+// Group Steps
+// Mobile first approach
+
+.group-step {
+
+	.title {
+		font-weight: $weight-semibold;
+		color: $color-db;
+	}
+	.step {
+		margin-bottom: p(20);
+	}
+}
+
+
+@include for-tablet-landscape-up {
+
+	.group-step {
+		display: flex;
+
+		&.has-border {
+			margin-bottom: p(20);
+			padding-bottom: p(60);
+			border-bottom: 1px solid $color-border;
+		}
+		
+		.step {
+			margin-bottom: p(20);
+			flex: 1 1 100%;
+		}
+		.step:nth-child(1) {
+			border-right: 1px solid $color-border;
+			padding-right: 3.125rem;
+		}
+		.step:nth-child(2) {
+			padding-right: 3.125rem;
+			padding-left: 3.125rem;
+		}
+		.step:nth-child(3) {
+			border-left: 1px solid $color-border;
+			padding-left: 3.125rem;
+		}
+	}
+}

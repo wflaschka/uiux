@@ -9,7 +9,8 @@
 
 body {
     font-size: p(15); // Set font size to 15px to match with design prototype
-    line-height: p(21);
+    line-height: p(26);
+    color: #333;
 
     @include for-phone-only {}
     @include for-tablet-portrait {}
@@ -36,7 +37,7 @@ a {
 h1 { 
     font-size: $h1-fontsize; 
     margin-top: ($h1-fontsize / 2); 
-    line-height: $h1-fontsize; 
+    line-height: p(32);
     &[secondary] {
         font-size: $h1-fontsize * 0.5; 
         margin-top: 0;
@@ -46,7 +47,7 @@ h1 {
 h2 { 
     font-size: $h2-fontsize; 
     margin-top: ($h2-fontsize / 2); 
-    line-height: $h2-fontsize; 
+    line-height: p(32);
     &[secondary] {
         font-size: $h2-fontsize * 0.5; 
         margin-top: 0;
@@ -54,9 +55,9 @@ h2 {
     }
 }
 h3 { 
-    font-size: $h3-fontsize; 
-    margin-top: ($h3-fontsize); 
-    line-height: $h3-fontsize; 
+    font-size: $h1-fontsize;
+    margin-top: ($h1-fontsize);
+    line-height: p(32);
     &[secondary] {
         font-size: $h3-fontsize * 0.5; 
         margin-top: 0;
@@ -66,7 +67,7 @@ h3 {
 h4 { 
     font-size: $h4-fontsize; 
     margin-top: ($h4-fontsize); 
-    line-height: $h4-fontsize; 
+    line-height: p(32);
     &[secondary] {
         font-size: $h4-fontsize * 0.5; 
         margin-top: 0;
@@ -76,7 +77,7 @@ h4 {
 h5 { 
     font-size: $h5-fontsize; 
     margin-top: ($h5-fontsize); 
-    line-height: $h5-fontsize; 
+    line-height: p(32);
     &[secondary] {
         font-size: $h5-fontsize * 0.5; 
         margin-top: 0;
@@ -86,7 +87,7 @@ h5 {
 h6 { 
     font-size: $h6-fontsize; 
     margin-top: ($h6-fontsize); 
-    line-height: $h6-fontsize; 
+    line-height: p(32);
     &[secondary] {
         font-size: $h6-fontsize * 0.5; 
         margin-top: 0;
@@ -108,9 +109,10 @@ h6 {
 
 
 h1, h2, h3, h4, h5, h6 {
-    margin-bottom: 0;
     font-family: $font-family-header;
+    margin-bottom: 2rem;
     font-weight: normal;
+    color: $color-db;
 
     small {
         font-family: $font-family-header-secondary;
@@ -156,6 +158,11 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+h3.styled {
+    color: $color-placeholder;
+    font-size: $h3-fontsize;
+}
+
 .modal {
     h1, h3 {
         font-size: 1.875rem;
@@ -181,6 +188,22 @@ h1, h2, h3, h4, h5, h6 {
     padding-bottom: 1rem;
     margin-bottom: 1rem;
     border-bottom: 1px solid $color-border;
+}
+
+// text-darkblack
+.text-db { color: $color-db }
+// text-fullblack
+.text-fb { color: #000; }
+.text-red { color: #f00; }
+.text-fade { color: rgba(0, 0, 0, 0.44); }
+.fw-m { font-weight: 500; }
+.text-xl {
+    font-size: p(45);
+    line-height: p(16);
+}
+.text-s {
+    font-size: p(13);
+    line-height: p(21);
 }
 
 
@@ -243,6 +266,26 @@ hr[documentation] {
     list-style: none;
 }
 
+
+.at-dots {
+    padding: 0px;
+    list-style: none;
+    li {
+        padding-left: 1.6rem;
+        position: relative;
+        &:before {
+            content: "";
+            display: inline-block;
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            position: absolute;
+            top: 12px;
+            left: 3px;
+            background-color: color(black);
+        }
+    }
+}
 
 // single line separator
 .sep {
