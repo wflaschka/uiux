@@ -74,6 +74,21 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
+    $('.see-more-less .action a').on('click', function(e){
+        $(this).html() == "See More" ? $(this).html('See Less') : $(this).html('See More');
+        e.preventDefault();
+    });
+
+    // $('.see-more-less .action a').on( "click", function(e) {
+    //     if ( $(this).html('See More') ) {
+    //         $(this).html('See Less')
+    //     } else {
+    //         $(this).html('See More')
+    //     }
+    //     // console.log($(this).html());
+    //     e.preventDefault();
+    // });
+
     $('.see-more .see-more-content').each(function(){
         var dh = $(this).attr('data-height');
         

@@ -5,7 +5,7 @@
 
 .at.user-header {
 	display: flex;
-	margin-bottom: p(30);
+	margin-bottom: p(20);
 
 	.avatar-container {
 		flex: 1 1 auto;
@@ -22,9 +22,10 @@
 		.name-sig {
 			display: flex;
 			align-items: center;
+			min-height: p(40);
 			
-			h4 {
-				margin: 0 p(15) 0 0;
+			h2 {
+				margin: 0 p(15) p(-8) 0;
 			}
 			img {
 				max-height: p(40);
@@ -66,6 +67,8 @@
 		.user-container {
 			justify-content: space-between;
 			display: flex;
+			align-items: center;
+			padding-right: p(80);
 		}
 
 		.user {
@@ -89,7 +92,7 @@
 		}
 
 		.stats {
-	    	min-width: p(300);
+	    	min-width: p(240);
 		}
 	}// for-tablet-portrait-up
 
