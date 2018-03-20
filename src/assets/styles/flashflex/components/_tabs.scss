@@ -6,13 +6,32 @@
 .tabs {
     font-size: p(13);
 
+    &:not(:last-child) {
+        margin-bottom: p(19);
+    }
+
     ul {
+        margin-top: p(12);
         padding: 0;
+        border-bottom-color: $color-border;
+        border-bottom-width: 2px;
+        li {
+            &.is-active {
+                a {
+                    border-bottom-color: #000000;
+                    color: #333;
+                }
+            }
+        }
     }
 
     a {
         cursor: pointer;
-        padding: 0.625rem 1.1rem;
+        padding: p(10) 1.1rem;
+        border-bottom-color: $color-border;
+        border-bottom-width: 2px;
+        color: rgba(25, 25, 25, 0.44);
+        margin-bottom: -2px;
     }
 
 
@@ -20,13 +39,13 @@
     font-size: p(15);
 
     a {
-        padding: 0.625rem 3rem;
+        padding: p(8) 3rem;
     }
 }
 
 @include for-tablet-landscape-up {
     a {
-        padding: p(10) p(80);
+        padding: p(8) p(80);
     }
 }
 
@@ -69,7 +88,7 @@
 
         ul {
             li {
-                margin-bottom: p(20);
+                margin-bottom: p(24);
                 display: flex;
 
                 .show-date {

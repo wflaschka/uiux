@@ -3,7 +3,7 @@
 
 <div id="content"> 
 
-    <div class="product-container section has-border">
+    <div class="product-container section has-border is-medium">
         <div class="product-image">
             <div class="product-slider">
                 <div><img class="responsive" src="../../assets/images/artwork/art-1.jpg"></div>
@@ -16,12 +16,12 @@
         </div>
 
         <div class="product-detail">
-            <h4>Alex Kwok</h4>
+            <h2>Alex Kwok</h2>
             {{> follow-artist-toggle-single}}
 
             <div class="description">
                 <div class="title">Tesselation_02, 2013</div>
-                <div class="series">Tesselations Series</div>
+                <!-- <div class="series">Tesselations Series</div> -->
                 <div class="type">Giclee Photograph</div>
                 <div class="sizes">9 <small>9/16</small> × 12 <small>1/2</small> in (24.3 × 31.8 cm)</div>
                 <div class="edition">Limited Edition of 25</div>
@@ -58,9 +58,7 @@
 
             {{> add-to-collection }}
 
-            <div class="saved-collection">50 Saved to Collection  | <i class="fa fa-heart-o"></i> 60</div>
-
-            <div class="sep"></div>
+            <div class="saved-collection">50 Saved to Collection  <span class="ml5 mr10">|</span> <i class="fa fa-heart-o"></i> 60</div>
 
             <dl class="at accordion no-space">
                 <dt>About?<i class="at at-arrows-plus"></i></dt>
@@ -77,31 +75,8 @@
     </div><!-- .product-container -->
 
 
-    <section class="section section-user has-border">
-        <div class="at user-header">
-            <div class="avatar-container">
-                <div class="avatar avatar-xl">
-                    <img src="/assets/images/profiles/person-3.jpg">
-                    <div class="avatar-status follow"></div>
-                </div>
-            </div>
-
-            <div class="user-container">
-                <div class="user">
-                    <div class="info">
-                        <h4>Alexa Kwok
-                            <img src="/assets/images/signatures/alex-kwok.png">
-                        </h4>
-                        <div class="place">From New York, USA <a  href="#">Message Artist</a></div>
-                    </div>
-                </div><!-- .user -->
-                <div class="stats">
-                    <div><b>31</b> Total <i class="fa fa-heart-o"></i></div>
-                    <div><b>325</b> Following</div>
-                    <div><b>30</b> Followers</div>
-                </div>
-            </div>
-        </div><!-- .at.user-header -->
+    <section class="section section-user has-border is-medium">
+        {{> user-header }}
 
         <div class="tabs is-centered">
             <ul>
@@ -200,7 +175,7 @@
     </section><!-- .section-user -->
 
 
-    <section class="section section-related-artwork has-border">
+    <section class="section section-related-artwork has-border is-medium">
         <h2>Related Artwork</h2>
 
         <div class="tags-container">

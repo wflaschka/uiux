@@ -3,12 +3,14 @@
 // The one-liner with "[+] Follow Artist       160 Followers"
 ////////////////////////////////////////////////////////////////////
 .follow-artist {
-    font-size: 0.8125rem;
-    margin-bottom: 1.25rem;
+    font-size: p(13);
+    line-height: p(16);
+    margin-bottom: p(22);
+    
     span {
         cursor: pointer;
         margin-right: 1rem;
-        font-weight: bold;
+        // font-weight: bold;
 
         &.follow {
             color: color(link);
@@ -24,6 +26,6 @@
         }
     }
     .followers {
-        color: color(gray);
+        color: $color-fade;
     }
 }
