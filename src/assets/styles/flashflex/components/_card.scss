@@ -23,26 +23,36 @@
 		height: 4rem;
 		width: 150px;
 
-		margin-top: 12.8px;
+		margin-top: 11px; // match with prototype
+		// margin-top: 12.8px;
 
-		// font-size: 13px;
-		// font-weight: 500;
-		// line-height: 18px;
+		font-size: 13px;
+		line-height: 18px;
+		color: rgba(0, 0, 0, 0.44);
 
 		div {
 			@include truncate(100%);
-			padding-right: 0.2rem;
-			padding-left: 0.2rem;
+
+			// Disabling padding to match with prototype
+			// padding-right: 0.2rem;
+			// padding-left: 0.2rem;
 
 			&.heart {
 				float: right !important;
+				overflow: initial;
+				.icon {
+					width: auto;
+					height: auto;
+				}
 			}
 			// For Merchant > Artwork > Editable card
 			&.edit {
 				float: right !important;
 			}
 
-			&.artist { }
+			&.artist {
+				font-weight: 500;
+			}
 			&.title {
 				font-style: italic;
 			}
@@ -215,6 +225,23 @@
 			height: 120px;
 			width: 100%;
 			text-align: center;
+			padding-left: p(5);
+			padding-right: p(5);
+			.artist {
+				font-weight: 500;
+				color: #333;
+				font-size: p(15);
+				line-height: p(32);
+			}
+			.from {
+				line-height: p(16);
+				color: #333;
+				margin-bottom: p(5);
+			}
+
+			.pieces {
+				line-height: p(16);
+			}
 		}
 	}
 	&.follower {

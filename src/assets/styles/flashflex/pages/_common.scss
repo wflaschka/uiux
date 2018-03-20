@@ -35,16 +35,18 @@
 		&.has-border {
 			margin-bottom: 5rem;
 			padding-bottom: 3.5rem;
-			border-bottom: 1px solid $color-border;
+			border-bottom: 2px solid $color-border;
 		}
 
-		&.space-small { margin-bottom: 2rem; }
-		&.space-medium { margin-bottom: 3rem; }
-		&.space-large { margin-bottom: 4rem; }
+		&.is-small { margin-bottom: 2rem; }
+		&.is-medium { margin-bottom: p(51); }
+		&.is-large { margin-bottom: 4rem; }
 		&.section-padding-s { padding-bottom: 1.5rem; }
 
-		h2 {
-			margin-bottom: 1.5rem;
+		> h1, > h2, > h3 {
+			color: $color-db;
+			font-size: $h1-fontsize;
+			margin-top: ($h1-fontsize);
 		}
 	}
 

@@ -1,6 +1,7 @@
 .tags-container {
-    margin-bottom: p(30);
+    margin-bottom: p(27);
     margin-left: -0.25rem;
+    margin-top: p(-12);
 
     @include for-tablet-portrait-down {
         overflow: hidden;
@@ -11,13 +12,18 @@
 
 .tag {
 	border-radius: 0px;
-	border: 1px solid color(black);
-	background-color: color(white);
+	// border: 1px solid color(black);
+	// background-color: color(white);
+    border: 1px solid $color-border;
+    background-color: #fff;
     margin: 0.1rem 0.25rem;
+    font-size: p(12);
+    line-height: p(32);
+    font-weight: 500;
+    color: #333;
 
     display: inline-flex;
-    height: 2em;
-    line-height: 1.5;
+    height: p(30);
     padding-left: 0.875em;
     padding-right: 0.875em;
     white-space: nowrap;
@@ -36,8 +42,6 @@
     //     line-height: 2rem;
     // }
     
-    // setting to 13 as in prototype.
-    font-size: p(13);
 
     .delete,
     .icon.close {

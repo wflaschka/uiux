@@ -37,7 +37,7 @@ a {
 h1 { 
     font-size: $h1-fontsize; 
     margin-top: ($h1-fontsize / 2); 
-    line-height: p(32);
+    // line-height: p(32);
     &[secondary] {
         font-size: $h1-fontsize * 0.5; 
         margin-top: 0;
@@ -47,7 +47,7 @@ h1 {
 h2 { 
     font-size: $h2-fontsize; 
     margin-top: ($h2-fontsize / 2); 
-    line-height: p(32);
+    // line-height: p(32);
     &[secondary] {
         font-size: $h2-fontsize * 0.5; 
         margin-top: 0;
@@ -55,9 +55,9 @@ h2 {
     }
 }
 h3 { 
-    font-size: $h1-fontsize;
-    margin-top: ($h1-fontsize);
-    line-height: p(32);
+    font-size: $h3-fontsize;
+    margin-top: ($h3-fontsize);
+    // line-height: p(32);
     &[secondary] {
         font-size: $h3-fontsize * 0.5; 
         margin-top: 0;
@@ -67,7 +67,7 @@ h3 {
 h4 { 
     font-size: $h4-fontsize; 
     margin-top: ($h4-fontsize); 
-    line-height: p(32);
+    // line-height: p(32);
     &[secondary] {
         font-size: $h4-fontsize * 0.5; 
         margin-top: 0;
@@ -77,7 +77,7 @@ h4 {
 h5 { 
     font-size: $h5-fontsize; 
     margin-top: ($h5-fontsize); 
-    line-height: p(32);
+    // line-height: p(32);
     &[secondary] {
         font-size: $h5-fontsize * 0.5; 
         margin-top: 0;
@@ -87,7 +87,7 @@ h5 {
 h6 { 
     font-size: $h6-fontsize; 
     margin-top: ($h6-fontsize); 
-    line-height: p(32);
+    // line-height: p(32);
     &[secondary] {
         font-size: $h6-fontsize * 0.5; 
         margin-top: 0;
@@ -110,7 +110,8 @@ h6 {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: $font-family-header;
-    margin-bottom: 2rem;
+    line-height: p(32);
+    margin-bottom: p(35);
     font-weight: normal;
     color: $color-db;
     word-wrap: break-word;
@@ -159,9 +160,15 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-h3.styled {
+
+h3 {
     color: $color-placeholder;
-    font-size: $h3-fontsize;
+}
+
+h3.styled {
+    color: $color-db;
+    font-size: $h1-fontsize;
+    margin-top: ($h1-fontsize);
 }
 
 .modal {
@@ -196,7 +203,7 @@ h3.styled {
 // text-fullblack
 .text-fb { color: #000; }
 .text-red { color: #f00; }
-.text-fade { color: rgba(0, 0, 0, 0.44); }
+.text-fade { color: $color-fade; }
 .fw-m { font-weight: 500; }
 .text-xl {
     font-size: p(45);
