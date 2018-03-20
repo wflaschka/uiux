@@ -2,7 +2,8 @@
 // See More
 ////////////////////////////////////////////////////////////////////
 
-.see-more {
+.see-more,
+.see-more-less {
 
 // Fade style - used for text based elements
 &.fade {
@@ -81,11 +82,13 @@
 	        display: inline-block;
 	        padding: p(10) p(30);
 	        border: 1px solid $color-border;
-	        background-color: color(white);
+	        background-color: #fff;
 			left: 50%;
 			transform: translateX(-50%);
-	        &:hover,
-	        &:focus {
+			text-align: center;
+			min-width: 124px;
+
+	        &:hover {
 	            color: color(primary);
 	            border-color: color(primary);
 	        }
