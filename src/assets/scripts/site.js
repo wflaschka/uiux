@@ -109,6 +109,7 @@ $(document).ready(function() {
 
     // Hiding tab content with jquery because if hide from css, it doesn't get effect of see more elements.
     $('.tabs-container .tab-content').hide();
+    $('.tabs-container').addClass('tabs-init');
 
 
 

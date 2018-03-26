@@ -2,6 +2,19 @@
 // Slider ArtTap - Common slider for ArtTap elements.
 
 .at.slider {
+	position: relative;
+	max-height: 200px;
+	overflow: hidden;
+
+	@include preloader();
+
+	&.slick-initialized {
+		max-height: initial; // remove max height so slider cards data show in full height.
+
+		&::before {
+			display: none; // remove preloader
+		}
+	}
 
 	&.has-space {
 		margin-bottom: p(50);
