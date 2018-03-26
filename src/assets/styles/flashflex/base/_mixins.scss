@@ -173,3 +173,16 @@ $browser-context: 16; // Default
 @function p($pixels, $context: $browser-context) {
   @return #{$pixels/$context}rem;
 }
+
+////////////////////////////////////////////////////////////////////
+// Preloader mixin
+@mixin preloader() {
+    &::before {
+        content: "";
+        background: white url(#{$img}ajax-loader.gif) no-repeat center;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 20;
+    }
+}
