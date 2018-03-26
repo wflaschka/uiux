@@ -26,24 +26,21 @@
     position: relative;
     z-index: 2;
     box-sizing: border-box;
+    padding: p(63) p(40) 1rem p(40);
 
     // Sizing
     width: 90%;
+    max-width: 960px;
 
-    &.small {
+    &.is-small {
         max-width: 600px;
+        padding-top: p(40);
     }
-    &.medium {
+    &.is-medium {
         max-width: 800px;
     }
-    &.large {
-        max-width: 960px;
-    }
-    // &.small {
-    //     max-width: 500px;
-    // }
 
-    padding: 2rem 2.8rem 1rem 2.8rem;
+
     border-radius: 0px;
     box-shadow: $shadow;
     text-align: left;
