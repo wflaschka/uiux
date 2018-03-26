@@ -1,0 +1,91 @@
+////////////////////////////////////////////////////////////////////
+// Form styles for Stripe payment form
+// Using example 2 but changing it a lot:
+// https://stripe.github.io/elements-examples/
+// CSS:
+// https://github.com/stripe/elements-examples/blob/master/css/example2.css
+
+form#payment-form {
+
+    /* How stripe says to vertically center the inputs */
+    #card-number,
+    #card-expiry,
+    #card-cvc {
+        padding-top: 12px;
+    }
+
+    .input.StripeElement {
+    }
+
+    .input.focused + label {
+        color: color(text);
+    }
+
+    .input.invalid + label {
+        color: color(red);
+    }
+
+    .StripeElement--webkit-autofill {
+        background: transparent !important;
+    }
+
+    input, button {
+        /*-webkit-animation: 1ms void-animation-out;*/
+    }
+
+
+    input:active {
+        // background-color: #159570;
+    }
+
+    .error {
+        // display: none;
+        opacity: 0;
+        transition: opacity 0.5s linear;
+
+        &.visible {
+            opacity: 1;
+        }
+
+        // svg {
+        //     margin-top: 0 !important;
+
+        //     .base {
+        //         fill: #e25950;
+        //     }
+
+        //     .glyph {
+        //         fill: #fff;
+        //     }
+        // }
+
+        .message {
+            color: color(red);
+        }
+    }
+
+
+    .success {
+        .icon {
+            .border {
+                stroke: #abe9d2;
+            }
+
+            .checkmark {
+                stroke: #24b47e;
+            }
+        } 
+
+        .title {
+            color: #32325d;
+            font-size: 16px !important;
+        }
+
+        .message {
+            color: #8898aa;
+            font-size: 13px !important;
+        }
+    }
+
+
+}

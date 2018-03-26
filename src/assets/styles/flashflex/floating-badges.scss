@@ -36,7 +36,7 @@
 	$color-invert: nth($pair, 2);
 
 	.badge[data-badge].is-#{$name}-badge:after {
-		background: $color;
+		background-color: $color;
 		color: $color-invert;
 	}
 }
