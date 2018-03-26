@@ -139,17 +139,6 @@ h1, h2, h3, h4, h5, h6 {
         }
     }
 
-    &.has-link {
-        position: relative;
-        padding-right: 5rem;
-        a {
-            font-size: 0.8125rem;
-            position: absolute;
-            right: 0;
-            top: 0;
-        }   
-    }
-
     & + h1[secondary],
     & + h2[secondary],
     & + h3[secondary],
@@ -172,31 +161,58 @@ h3.styled {
 }
 
 .modal {
-    h1, h3 {
-        font-size: 1.875rem;
-        line-height: 2rem;
-    }
-    h1 {
-        margin: 0 0 1.875rem 0;
-        padding-bottom: 1rem;
-        border-bottom: 1px solid $color-border;
-        &.is-large {
-            margin-top: 1.875rem;
-            font-size: 2.8125rem;
-        }
-    }
-    h3 {
+
+    h4, h5 {
         margin: 2.5rem 0 1.25rem 0;
         padding-bottom: 0.3125rem;
-        border-bottom: 1px solid #333;
+        border-bottom: 2px solid #333;
     }
+
+    .modal-title {
+        font-size: $h1-fontsize;
+        font-family: $font-family-header;
+        line-height: p(32);
+        margin-bottom: p(35);
+        font-weight: normal;
+        color: $color-db;
+        word-wrap: break-word;
+        padding-bottom: 1rem;
+        border-bottom: 2px solid $color-border;
+    }
+
+    &.is-small {
+        .modal-title {
+            font-size: $h4-fontsize;
+            padding-bottom: p(6);
+        }
+    }
+
 }
+
 
 .has-border {
     padding-bottom: 1rem;
     margin-bottom: 1rem;
-    border-bottom: 1px solid $color-border;
+    border-bottom: 2px solid $color-border;
 }
+
+.has-link {
+    position: relative;
+    padding-right: 5rem;
+    a {
+        font-size: p(13);
+        position: absolute;
+        right: 0;
+        top: 0;
+    }   
+}
+
+h4 {
+    &.has-border {
+        padding-bottom: 6px;
+    }
+}
+
 
 // text-darkblack
 .text-db { color: $color-db }
@@ -214,6 +230,10 @@ h3.styled {
     line-height: p(21);
 }
 
+.modal-event-trigger {
+    font-size: p(13);
+    line-height: p(16);
+}
 
 ////////////////////////////////////////////////////////////////////
 // ui.arttap.com dev site stylings
@@ -317,7 +337,7 @@ hr[documentation] {
 // single line separator with overlay text
 .sep-text {
     position: relative;
-    border-bottom: 1px solid $color-border;
+    border-bottom: 2px solid $color-border;
     margin: p(20) 0;
 
     span {
