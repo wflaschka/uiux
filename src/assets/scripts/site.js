@@ -40,6 +40,15 @@ $(document).ready(function() {
     });
 
 
+      // bind change event to select
+      $('.select-url').on('change', function () {
+          var url = $(this).val(); // get selected value
+          if (url) { // require a URL
+              window.location = url; // redirect
+          }
+          return false;
+      });
+
     ////////////////////////////////////////////////////////////
     // Accordion JS
     ////////////////////////////////////////////////////////////
@@ -100,6 +109,7 @@ $(document).ready(function() {
 
     // Hiding tab content with jquery because if hide from css, it doesn't get effect of see more elements.
     $('.tabs-container .tab-content').hide();
+    $('.tabs-container').addClass('tabs-init');
 
 
 

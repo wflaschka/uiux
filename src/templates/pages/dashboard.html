@@ -1,5 +1,5 @@
 <!-- Add This div page classes on <body> tag -->
-<div class="page page-dashboard">
+<div class="page page-dashboard has-sidebar">
 {{> header-logged-in }}
 
 <div id="wrapper">
@@ -9,15 +9,15 @@
     <div id="content">
 
         <div class="page-title">
-            <h2 class="has-border">Dashboard</h2>
+            <h1>Dashboard</h1>
         </div>
 
         <section class="section is-large">
             {{> typography-dashboard-stats }}
         </section>
         
-        <section class="section is-large">
-            <h4 class="has-border has-link">Toral Artwork Stats <a href="#">See More</a></h4>
+        <section class="section is-medium">
+            <h4 class="has-border has-link mb0">Total Artwork Stats <a href="#">See More</a></h4>
             {{> typography-statistics-responsive }}
         </section>
 
@@ -28,16 +28,16 @@
             </div>
         </section>
 
-        <section class="section is-large">
-            <h4 class="has-border has-link">Recent Followers <a href="#">See More</a></h4>
-            <div class="d-flex flex-wrap mt40">
+        <section class="section is-medium">
+            <h4 class="has-border has-link mb25">Recent Followers <a href="#">See More</a></h4>
+            <div class="d-flex flex-wrap">
                 {{> follower }}
                 {{> follower }}
             </div>
         </section>
 
         <section class="section">
-            <h4 class="has-border has-link">Artist Support <a href="#">See More</a></h4>
+            <h4 class="has-border has-link mb0">Artist Support <a href="#">See More</a></h4>
             {{> accordion-artist-support }}
         </section>
 

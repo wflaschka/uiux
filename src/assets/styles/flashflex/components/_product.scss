@@ -168,5 +168,19 @@
 				margin-top: 0;
 			}
 		}
+
+
+	&.modal-product {
+		.product-image {
+			flex: 1 1 60%;
+			width: 60%;
+			padding: 0;
+		}
+		.product-detail {
+			padding: 0 0 0 2rem;
+			flex: 1 1 40%;
+		}
+	}
+
 	}
 }

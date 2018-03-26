@@ -346,3 +346,9 @@
 .button:not(.is-small):not(.is-large):not(.is-medium):not(:last-child) {
     margin-bottom: p(10);
 }
+
+.button-center {
+    width: 360px;
+    margin: 0 auto;
+    display: flex;
+}

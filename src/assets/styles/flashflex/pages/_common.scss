@@ -59,13 +59,19 @@
     		font-size: p(13);
     	}
 
-	    h1, h2, h3 {
-	    	margin: 0 0 p(20);
-	    	font-size: 3rem;
+	    h1 {
+	    	font-size: p(45);
+	    	margin: p(8) 0 p(40);
+			padding-bottom: p(22);
+			border-bottom: 2px solid #d9d9d9;
+			&.no-border {
+				padding-bottom: 0;
+				border-bottom: 0;
+			}
 	    }
 
 	    .with-page-title {
-			min-width: 18.75rem;
+			min-width: p(320);
 
 			button {
 				@extend .button;
@@ -91,7 +97,7 @@
 	    	// Element with page title positioned top right. e.g: button or search box
 			position: absolute;
 			right: 0px;
-			top: 0px;
+			top: -10px;
 			width: auto;
 	    }
     }
