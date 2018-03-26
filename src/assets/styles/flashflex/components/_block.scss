@@ -24,7 +24,6 @@
 	&.shipping-address {
 	    margin-bottom: 2rem;
         flex: 0 0 47%;
-        border-bottom: 1px solid $color-border;
 
 	    .title {
 	    	padding: 1rem;
@@ -34,9 +33,10 @@
 	    }
 
 	    .content {
-	    	padding: 1rem;
+	    	padding: p(21) 1rem 1rem;
 		    display: flex;
 		    justify-content: space-between;
+        	border-bottom: 1px solid $color-border;
 	    }
 
 	    address {
@@ -45,8 +45,9 @@
 	    }
 
 	    .action {
-	    	.button:first-child {
-	    		margin-right: 1rem;
+	    	font-size: p(13);
+	    	a:first-child {
+	    		margin-right: p(65);
 	    	}
 	    }
 	}

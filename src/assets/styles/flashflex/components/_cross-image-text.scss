@@ -3,10 +3,11 @@
 
 .cross-image-text {
 	
-	h4 {
+	h2 {
 		font-size: p(30);
 		line-height: p(32);
 		margin-bottom: p(10);
+		margin-top: p(30);
 	}
 
 	.group {
@@ -29,8 +30,8 @@
 			padding: 0px p(20) p(55);
 
 			p {
-				font-size: 0.85rem;
-				line-height: 1.4rem;
+				// font-size: 0.85rem;
+				// line-height: 1.4rem;
 				margin-top: 0px;
 			}
 		}
@@ -46,9 +47,9 @@
 
 	@include for-tablet-landscape-up {
 
-		h4 {
-			font-size: 2rem;
+		h2 {
 			margin-bottom: 1.125rem;
+			margin-top: 0px;
 		}
 
 		.group {
@@ -61,7 +62,7 @@
 			.group-text {
 				flex: 1 1 50%;
 			    align-self: center;
-			    padding: 0 10%;
+			    padding: 0 11%;
 			}
 
 			&:nth-child(even) {
@@ -77,7 +78,7 @@
 
 	@include for-desktop-up {
 
-		h4 {
+		h2 {
 			font-size: p(35);
 		}
 	}
