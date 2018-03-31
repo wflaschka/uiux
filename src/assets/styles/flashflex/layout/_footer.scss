@@ -13,18 +13,18 @@
 	}
 
 	.footer-top {
-		border-bottom: 1px solid $color-border;
-		padding-bottom: 10px;
-		margin-bottom: 15px;
+		border-bottom: 2px solid $color-border;
+		padding-bottom: 0;
+		margin-bottom: p(20);
 
 		.subscribe {
 			margin-bottom: p(30);
 
 			h5 {
-				margin: 0 0 p(5);
+				margin: 0;
 			}
 			p {
-				margin: 0 0 0.8125rem;
+				margin: 0 0 p(10);
 			}
 
 			.field-wrap {
@@ -45,13 +45,13 @@
 			flex-wrap: wrap;
 
 			.links {
-				margin: 0;
+				margin: p(5) 0 0;
 				padding: 0 0 p(20);
 				list-style: none;
 				flex: 1 1 50%;
 
 				li {
-					margin-bottom: .5rem;
+					margin-bottom: p(4);
 
 					&.title {
 						font-weight: $weight-semibold;
@@ -77,14 +77,14 @@
 		}
 
 		.social-links {
-			font-size: 1.4rem;
+			font-size: p(20);
 			text-align: center;
 			border-bottom: 1px solid $color-border;
 			padding-bottom: p(10);
 			margin-bottom: p(30);
 
 			a:not(:first-child) {
-				margin-left: 3.1rem;
+				margin-left: p(49);
 			}
 		}
 
@@ -95,7 +95,7 @@
 
 
 	@include for-tablet-portrait-up {
-		padding: 2.1875rem;
+		padding: p(30);
 
 		.footer-top {
 			display: flex;
@@ -134,7 +134,7 @@
 
 		.footer-bottom {
 			display: flex;
-			align-items: center;
+			// align-items: center;
 			justify-content: space-between;
 
 			.social-links {
