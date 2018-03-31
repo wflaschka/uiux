@@ -11,13 +11,13 @@
     height: 1.5rem;
     width: 1.5rem;
 
-    .fa {
+    .at {
         font-size: 21px;
     }
 
     &.tooltip {
-        @extend .fa;
-        @extend .fa-question-circle;
+        // @extend .fa;
+        // @extend .fa-question-circle;
         color: color(black);
         font-size: 1.25rem;
     }
@@ -38,7 +38,7 @@
         height: 1rem;
         width: 1rem;
 
-        .fa {
+        .at {
             font-size: 14px;
         }
     }
@@ -47,7 +47,7 @@
         height: 2rem;
         width: 2rem;
 
-        .fa {
+        .at {
             font-size: 28px;
         }
     }
@@ -56,12 +56,41 @@
         height: 3rem;
         width: 3rem;
 
-        .fa {
+        .at {
             font-size: 42px;
         }
     }
 }
 
 .icon {
+    @include at();
     @extend %icon;
 }
+
+
+.icon-circle {
+    border: 2px solid $color-border;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: p(66);
+    height: p(66);
+}
+
+.at.at-arrows-remove {
+    font-size: p(9); // remove size is bigger than normal icons so resizing to 9px
+}
+
+.icon-circle.success-check {
+    font-size: 20px;
+    border-color: #53c14a;
+    color: #53c14a;
+}
+
+// Customize icons Size
+.at-heart,
+.at-heart-o {
+    font-size: 11px;
+}
+

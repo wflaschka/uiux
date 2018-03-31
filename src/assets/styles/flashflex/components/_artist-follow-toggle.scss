@@ -12,16 +12,40 @@
         margin-right: 1rem;
         // font-weight: bold;
 
+        .icon {
+            background: color(primary);
+
+            @include at;
+            @extend .at-arrows-plus;
+
+            border-radius: 50%;
+            height: .5em;
+            width: .5em;
+
+            color: white;
+
+            padding: p(9);
+            font-size: p(9);
+            line-height: p(10);
+            text-indent: p(1);
+            margin-right: p(4);
+
+            &::before {
+                position: relative;
+                top: p(-1);
+            }
+        }
+        
         &.follow {
             color: color(link);
             .icon {
-                @extend .plus;
+                background: color(primary);
             }
         }
         &.followed {
-            color: color(black);
             .icon {
-                @extend .minus;
+                background: color(black);
+                @extend .at-arrows-minus;
             }
         }
     }
@@ -29,3 +53,6 @@
         color: $color-fade;
     }
 }
+
+
+

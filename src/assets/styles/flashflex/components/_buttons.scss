@@ -325,19 +325,6 @@
 
 }
 
-.button {
-    @extend %button;
-    &.is-black {
-        &:hover,
-        &:focus {
-            background-color: $color-border !important;
-        }
-    }
-    &.is-secondary {
-        color: rgba(0,0,0,0.44) !important;
-    }
-}
-
 .button:not(.is-small):not(.is-large):not(.is-medium) {
     font-size: inherit;
     min-height: p(47); //47px
@@ -352,3 +339,26 @@
     margin: 0 auto;
     display: flex;
 }
+
+.is-gray {
+    border-color: $color-border !important; // replacing border color to match with prototype.
+}
+
+.button {
+    @extend %button;
+    &.is-black {
+        &:hover,
+        &:focus {
+            background-color: $color-border !important;
+        }
+    }
+    &.is-secondary {
+        color: rgba(0,0,0,0.44) !important;
+    }
+}
+
+.is-square {
+    width: 47px;
+    height: 47px;
+}
+
