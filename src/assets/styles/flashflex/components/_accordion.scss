@@ -34,7 +34,7 @@
 		}
 
 		&.active {
-			.at-arrows-plus:before { content: "\64"; }
+			.at-arrows-plus:before { @extend .at-arrows-minus; }
 		}
 
 	}

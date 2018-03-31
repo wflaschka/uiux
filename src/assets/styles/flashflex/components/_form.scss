@@ -172,7 +172,7 @@ select { font-size: inherit; }
     border-radius: 0px;
     border-color: $color-border;
 	&:not(.is-small):not(.is-large):not(.is-medium) {
-		min-height: 2.875rem;
+		min-height: p(47);
 	}
 }
 

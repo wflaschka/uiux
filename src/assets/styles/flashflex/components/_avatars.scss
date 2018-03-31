@@ -106,10 +106,11 @@
         @extend .at-arrows-plus;
 
         color: white;
-        padding: 0.5rem;
+
+        padding: p(7);
         font-size: p(9);
-        line-height: p(5);
-        text-indent: p(-1);
+        line-height: p(10);
+        text-indent: p(-3);
 
         transition: background-color 0.5s ease;
 
@@ -119,6 +120,11 @@
         &.followed {
             background: color(black);
             @extend .at-arrows-minus;
+        }
+
+        &::before {
+            position: relative;
+            top: p(-2);
         }
     }
 }

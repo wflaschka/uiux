@@ -52,7 +52,7 @@
     &.no-shadow { box-shadow: none; }
 
     .hamburger {
-    	margin-right: 56px;
+    	margin-right: 46px;
     }
 
     .search-wrapper {
@@ -84,12 +84,12 @@
 
     // Hamburger icon
     .icon-hamburger {
-        @extend .fa;
+    	@include at;
         &.active {
             @include at;
             @extend .at-arrows-remove;
         }
-        @extend .fa-bars;
+        @extend .at-bars;
     }
 
     .row {
@@ -131,7 +131,52 @@
 			}
 		}
 	}
+
+
+	// icons
+	.at-bars {
+		font-size: 20px;
+		position: relative;
+		top: 5px;
+	}
+
+	.at-bars-close {
+		font-size: 18px !important;
+		line-height: 10px;
+		position: relative;
+		top: 5px;
+		margin-right: 2px;
+	}
+
+	.at-search {
+		font-size: 19px;
+		position: relative;
+		top: 5px;
+		margin-right: 7px;
+	}
+
+	.at-account {
+		font-size: 20px;
+		position: relative;
+		top: 3px;
+		right: 3px;
+	}
+	
+	.at-cart {
+		font-size: 20px;
+		position: relative;
+		top: 4px;
+		margin-right: 6px;
+	}
+
+	.at-arrows-up,
+	.at-arrows-down {
+    	font-size: 10px;
+    	margin-left: 6px;
+	}
+
 }
+
 
 .navigation-dropdown {
 	z-index: z('site-header-dropdown') !important; 
@@ -166,7 +211,6 @@
 			align-items: center;
 
 			.success-check {
-				padding: .7625rem; //resize check size inside navbar cart
 				margin-right: 1rem;
 			}
 		}
@@ -227,10 +271,10 @@
 
 			// Disclosure triangle
 			.icon-disclosure {
-				// float: right;
-				position: relative;
-				margin-left: 1rem;
+				position: absolute;
 				top: p(2);
+				right: p(20);
+				margin-left: 1rem;
 				@include at;
 				@extend .at-arrows-down;
 			}

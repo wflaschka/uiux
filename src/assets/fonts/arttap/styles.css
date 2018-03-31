@@ -41,72 +41,114 @@
 .at-4-squares:before {
   content: "\61";
 }
-.at-arrows-down:before {
+.at-account:before {
   content: "\62";
 }
-.at-arrows-left:before {
+.at-arrows-back-l:before {
   content: "\63";
 }
-.at-arrows-minus:before {
+.at-arrows-down:before {
   content: "\64";
 }
-.at-arrows-plus:before {
+.at-arrows-left:before {
   content: "\65";
 }
-.at-arrows-question:before {
+.at-arrows-minus:before {
   content: "\66";
 }
-.at-arrows-remove:before {
+.at-arrows-plus:before {
   content: "\67";
 }
-.at-arrows-right:before {
+.at-arrows-question:before {
   content: "\68";
 }
-.at-arrows-up:before {
+.at-arrows-remove:before {
   content: "\69";
 }
-.at-artwork:before {
+.at-arrows-right:before {
   content: "\6a";
 }
-.at-bell:before {
+.at-arrows-up:before {
   content: "\6b";
 }
-.at-card:before {
+.at-arrows-up-l:before {
   content: "\6c";
 }
-.at-copypaste:before {
+.at-artwork:before {
   content: "\6d";
 }
-.at-document:before {
+.at-bars:before {
   content: "\6e";
 }
-.at-email:before {
+.at-bell:before {
   content: "\6f";
 }
-.at-facebook:before {
+.at-card:before {
   content: "\70";
 }
-.at-instagram:before {
+.at-cart:before {
   content: "\71";
 }
-.at-mail:before {
+.at-check:before {
   content: "\72";
 }
-.at-pinterest:before {
+.at-checkbox:before {
   content: "\73";
 }
-.at-speech:before {
+.at-checkbox-on:before {
   content: "\74";
 }
-.at-tag:before {
+.at-copypaste:before {
   content: "\75";
 }
-.at-twitter:before {
+.at-delete:before {
   content: "\76";
 }
-.at-two-arrows:before {
+.at-delete-light:before {
   content: "\77";
 }
-.at-upload:before {
+.at-document:before {
   content: "\78";
+}
+.at-email:before {
+  content: "\79";
+}
+.at-facebook:before {
+  content: "\7a";
+}
+.at-heart:before {
+  content: "\41";
+}
+.at-heart-o:before {
+  content: "\42";
+}
+.at-instagram:before {
+  content: "\43";
+}
+.at-linkedin:before {
+  content: "\44";
+}
+.at-mail:before {
+  content: "\45";
+}
+.at-pinterest:before {
+  content: "\46";
+}
+.at-search:before {
+  content: "\47";
+}
+.at-speech:before {
+  content: "\48";
+}
+.at-tag:before {
+  content: "\49";
+}
+.at-twitter:before {
+  content: "\4a";
+}
+.at-two-arrows:before {
+  content: "\4b";
+}
+.at-upload:before {
+  content: "\4c";
 }
