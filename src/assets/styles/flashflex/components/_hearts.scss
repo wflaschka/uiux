@@ -17,8 +17,8 @@
 	&:not(.is-hearted) {
 		.icon-heart,
 		.icon {
-			@extend %fa;
-			@extend .fa-heart-o;
+			@inlcude at;
+			@extend .at-heart-o;
 			color: color(gray);
 			cursor: pointer;
 		}
@@ -27,8 +27,8 @@
 	&.is-hearted {
 		.icon-heart,
 		.icon {
-			@extend %fa;
-			@extend .fa-heart;
+			@inlcude at;
+			@extend .at-heart;
 			color: color(red) !important;
 			cursor: pointer;
 		}

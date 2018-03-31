@@ -102,19 +102,43 @@
 					width: 100%;
 					padding: 1rem;
 					border: 1px solid $color-border;
+					transform: translateY(-11px);
 				}
 			}
 
+			.btn-add-collection {
+				justify-content: baseline;
+    			position: relative;
+    			color: #333;
+
+	    		.at-arrows-down {
+	    			position: absolute;
+					right: 15px;
+					top: 16px;
+					font-size: 12px;
+	    		}
+    		}
+
 			.heart,
-			.upload {
-				margin-left: p(10);
+			.up-arrow {
+				margin-left: p(12);
+			    .icon {
+			    	color: #333;
+			    	font-size: 22px !important;
+			    }
 			}
+
 		}
 
 		.saved-collection {
 			color: $color-fade;
 			font-size: p(13);
 			margin-top: 2px;
+
+			.at {
+				position: relative;
+				top: 1px;
+			}
 		}
 
 		.at.accordion {
