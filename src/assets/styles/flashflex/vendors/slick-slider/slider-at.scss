@@ -11,7 +11,8 @@
 	&.slick-initialized {
 		max-height: initial; // remove max height so slider cards data show in full height.
 
-		&::before {
+		&::before,
+		&::after {
 			display: none; // remove preloader
 		}
 	}
