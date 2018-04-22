@@ -1,0 +1,102 @@
+{{> header-standard }}
+<div class="page page-checkout">
+
+    <!--
+        Below: 
+        ".checkout-page" might be in <main>, or somewhere.
+        It's used by flashflex/page-checkout.scss as a selector.
+    -->
+    <div class="checkout-container">
+
+        <div class="address">
+            <div class="checkout-prompt">
+                <span class="fw-m">Checkout | Robyn Asquini </span>
+                (Not you? <a>Sign In</a> or <a>Checkout as a Guest</a>)
+            </div>
+
+            <div class="checkout-prompt-box active">
+                <div class="step">Step 1</div>
+                <div class="two-column">
+                    <div class="col-one">
+                        <h2>
+                            Shipping Address
+                            <a class="change">Change</a>
+                        </h2>
+                        {{> typography-address-text }}
+                    </div>
+                    <div class="col-two">
+                        <h2>Billing Address</h2>
+                        {{> typography-billing-address-v1 }}
+                    </div>
+                </div>
+            </div>
+
+            <div class="checkout-prompt-box">
+                <span class="step">Step 2</span>
+                <h2>Payment Method</h2>
+            </div>
+
+            <div class="checkout-prompt-box">
+                <span class="step">Step 3</span>
+                <h2>Review Items and Shipping</h2>
+            </div>
+        </div>
+
+        <div class="summary">
+            <div class="checkout-prompt">
+                <span class="fw-m">Order Summary</span>
+            </div>
+            <button class="button is-black is-fullwidth">Place Your Order</button>
+            <div class="text-s mb25">By placing your order, you agree to Art Tap's <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a></div>
+
+            <div class="card order">
+                <div class="left">
+                    <div class="image" style="background-image: url('/assets/images/artwork/art-1.jpg');">
+                        <img src="/assets/images/artwork/art-1.jpg">
+                    </div>
+                    <div class="content">
+                        <div class="artist">
+                            Camille Oudinot
+                        </div>
+                        <div class="title">
+                            Fading Faces
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <i class="at at-2x at-arrows-remove"></i>
+                    <div class="price">
+                        $930
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-s">
+                <div class="subtotal">
+                    <div class="flex flex-between pb10 fw-m">
+                        <div>Subtotal</div>
+                        <div>$1760.00</div>
+                    </div>
+                    <div class="flex flex-between pb10">
+                        <div>Shipping (Item 1)</div>
+                        <div>$0.00</div>
+                    </div>
+                    <div class="flex flex-between pb10">
+                        <div>Shipping (Item 2)</div>
+                        <div>$10.00</div>
+                    </div>
+                </div>
+
+                <div class="total flex flex-between mb25 fw-m">
+                    <div>Total</div>
+                    <div>$1760.00</div>
+                </div>
+                
+                <div>Need Help? <a href="#">Contact Us</a></div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+{{> footer-standard }}

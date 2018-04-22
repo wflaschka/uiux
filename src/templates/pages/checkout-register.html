@@ -1,0 +1,140 @@
+{{> header-standard }}
+<div class="page page-checkout">
+
+    <!--
+        Below: 
+        ".checkout-page" might be in <main>, or somewhere.
+        It's used by flashflex/page-checkout.scss as a selector.
+    -->
+    <div class="checkout-container">
+
+        <div class="address">
+            <div class="checkout-prompt">
+                <span class="fw-m">Checkout</span>
+            </div>
+
+            <div class="two-column mb50">
+                <div class="col-one">
+                    <h4>Register</h4>
+                    <div>Already have an account? <a href="#">Sign In</a></div>
+                    <div class="sep small2"></div>
+                    <div class="field">
+                        <label class="label">Name</label>
+                        <div class="control">
+                            <input class="input" type="name" placeholder="" value="">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Email</label>
+                        <div class="control">
+                            <input class="input" type="name" placeholder="" value="">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Password</label>
+                        <div class="control">
+                            <input class="input" type="name" placeholder="" value="">
+                        </div>
+                    </div>
+                    <button class="button is-black is-fullwidth mt40">Register</button>
+                </div>
+                <div class="col-two">
+                    <h4>Checkout as a Guest</h4>
+                    <div>
+                        <label class="checkbox" for="guest">
+                            <input type="checkbox" id="guest" name="guest">
+                            <span></span>
+                            Checkout as a Guest
+                        </label>
+                    </div>
+                    <div class="sep small2"></div>
+                    <div class="field">
+                        <label class="label">Email</label>
+                        <div class="control">
+                            <input class="input" type="name" placeholder="" value="">
+                        </div>
+                    </div>
+                    <button class="button is-black is-fullwidth mt40">Continue</button>
+                </div>
+            </div>
+
+            <div class="checkout-prompt-box">
+                <div class="two-column">
+                    <div class="col-one">
+                        <span class="step">Step 1</span>
+                        <h4>
+                            Shipping Address
+                        </h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checkout-prompt-box">
+                <span class="step">Step 2</span>
+                <h2>Payment Method</h2>
+            </div>
+
+            <div class="checkout-prompt-box">
+                <span class="step">Step 3</span>
+                <h2>Review Items and Shipping</h2>
+            </div>
+        </div>
+
+        <div class="summary">
+            <div class="checkout-prompt">
+                <span class="fw-m">Order Summary</span>
+            </div>
+            <button class="button is-black is-fullwidth">Place Your Order</button>
+            <div class="text-s mb25">By placing your order, you agree to Art Tap's <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a></div>
+
+            <div class="card order">
+                <div class="left">
+                    <div class="image" style="background-image: url('/assets/images/artwork/art-1.jpg');">
+                        <img src="/assets/images/artwork/art-1.jpg">
+                    </div>
+                    <div class="content">
+                        <div class="artist">
+                            Camille Oudinot
+                        </div>
+                        <div class="title">
+                            Fading Faces
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <i class="at at-2x at-arrows-remove"></i>
+                    <div class="price">
+                        $930
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-s">
+                <div class="subtotal">
+                    <div class="flex flex-between pb10 fw-m">
+                        <div>Subtotal</div>
+                        <div>$1760.00</div>
+                    </div>
+                    <div class="flex flex-between pb10">
+                        <div>Shipping (Item 1)</div>
+                        <div>$0.00</div>
+                    </div>
+                    <div class="flex flex-between pb10">
+                        <div>Shipping (Item 2)</div>
+                        <div>$10.00</div>
+                    </div>
+                </div>
+
+                <div class="total flex flex-between mb25 fw-m">
+                    <div>Total</div>
+                    <div>$1760.00</div>
+                </div>
+                
+                <div>Need Help? <a href="#">Contact Us</a></div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+{{> footer-standard }}
