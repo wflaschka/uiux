@@ -93,6 +93,12 @@
     justify-content: space-between;
 }
 
+.flex-center-h {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
 .d-flex {
     display: flex;
 }
