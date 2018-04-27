@@ -47,35 +47,34 @@
 }
 
 $colors: (
-	primary    : (#E09D00, contrastColor(#E09D00)),
-	// secondary  : (#141414, contrastColor(#141414)),
-	secondary  : (#d9d9d9, contrastColor(#d9d9d9)),
-	text       : (transparentize(#191919, 0.13), transparentize(#ffffff, 0.13)),
-	link       : (#E09D00, contrastColor(#E09D00)),
-	white      : (#efefef, contrastColor(#efefef)),
-	gray       : (#8B8B8B, contrastColor(#8B8B8B)),
-	black      : (#141414, contrastColor(#141414)),
-	green      : (#BCCE38, contrastColor(#BCCE38)),
-	greentree  : (#34863D, contrastColor(#34863D)),
-	bluesea    : (#408C98, contrastColor(#408C98)),
-	blue       : (#A0D5E5, contrastColor(#A0D5E5)),
-	blueroyal  : (#425CAB, contrastColor(#425CAB)),
-	purple     : (#6C449E, contrastColor(#6C449E)),
-	magenta    : (#A22173, contrastColor(#A22173)),
-	red        : (#D92F1D, contrastColor(#D92F1D)),
-	danger     : (#D92F1D, contrastColor(#D92F1D)),
-	orange     : (#F9922C, contrastColor(#F9922C)),
-	yellow     : (#FCEA44, contrastColor(#FCEA44)),
-	eggshell   : (#FAEFCF, contrastColor(#FAEFCF)),
-	brown      : (#7C4D38, contrastColor(#7C4D38)),
+	primary      : (#E09D00, contrastColor(#E09D00)),
+	secondary    : (#d9d9d9, contrastColor(#d9d9d9)),
+	text         : (transparentize(#191919, 0.13), transparentize(#ffffff, 0.13)),
+	link         : (#E09D00, contrastColor(#E09D00)),
+	white        : (#efefef, contrastColor(#efefef)),
+	gray         : (#8B8B8B, contrastColor(#8B8B8B)),
+	black        : (#141414, contrastColor(#141414)),
+	lime         : (#BCCE38, contrastColor(#BCCE38)), // was 'green'
+	green        : (#34863D, contrastColor(#34863D)), // was 'greentree'
+	turquoise    : (#408C98, contrastColor(#408C98)), // was 'bluesea'
+	light-blue   : (#A0D5E5, contrastColor(#A0D5E5)), // was 'blue'
+	dark-blue    : (#425CAB, contrastColor(#425CAB)), // was 'blueroyal'
+	purple       : (#6C449E, contrastColor(#6C449E)),
+	magenta      : (#A22173, contrastColor(#A22173)),
+	red          : (#D92F1D, contrastColor(#D92F1D)),
+	danger       : (#D92F1D, contrastColor(#D92F1D)),
+	orange       : (#F9922C, contrastColor(#F9922C)),
+	yellow       : (#FCEA44, contrastColor(#FCEA44)),
+	beige        : (#FAEFCF, contrastColor(#FAEFCF)), // was 'eggshell'
+	brown        : (#7C4D38, contrastColor(#7C4D38)),
 	cropper-blue : (#3399ff, contrastColor(#3399ff)),
-	facebook   : (#43609C, contrastColor(#43609C)),
-	linkedin   : (#177EB8, contrastColor(#177EB8))
+	facebook     : (#43609C, contrastColor(#43609C)),
+	linkedin     : (#177EB8, contrastColor(#177EB8))
 );
 // Use this list for color loops in elements. This 
 // will avoid errors that are created by by dynamically-added
 // colors in $colors map:
-$colorsBasic: (primary secondary text link white gray black green greentree bluesea blue blueroyal purple magenta red orange yellow eggshell brown cropper-blue facebook linkedin);
+$colorsBasic: (primary , secondary , text , link , white , gray , black , lime , green , turquoise , light-blue , dark-blue , purple , magenta , red , danger , orange , yellow , beige , brown , cropper-blue , facebook , linkedin);
 
 // Create *-light and *-dark versions of each color in $colors map
 @each $name, $pair in $colors {
