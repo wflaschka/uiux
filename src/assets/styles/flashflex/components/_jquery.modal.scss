@@ -7,7 +7,7 @@
     padding: 20px;
     box-sizing: border-box;
     // background-color: rgb(0,0,0);
-    background-color: rgba(192, 192, 192, 0.8);
+    background-color: rgba(234, 234, 234, 0.8);
     text-align: center;
 }
 .blocker:before{
@@ -42,7 +42,8 @@
 
 
     border-radius: 0px;
-    box-shadow: $shadow;
+    // box-shadow: $shadow;
+    box-shadow: 0 2px 10px 0 rgba(0,0,0,0.5);
     text-align: left;
 
     background: #fff;
