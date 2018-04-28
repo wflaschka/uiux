@@ -11,8 +11,15 @@
 
 		.slick-slider {
 			.slick-slide {
+			    padding-left: 30px;
+			    padding-top: 20px;
+			    padding-right: 30px;
+			    
 				img {
-		    		@include box_shadow(2);
+		    		// @include box_shadow(2);
+		    		box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
+					position: relative;
+					top: -15px;
 					width: auto;
 				}
 			}
