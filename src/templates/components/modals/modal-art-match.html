@@ -1,0 +1,115 @@
+{{! https://github.com/kylefox/jquery-modal }}
+
+<div id="blech" class="modal art-match-modal" data-modal-current="01" data-modal-next="02" style="display:none;">
+	<a href="#" rel="modal:close" class="close-modal">
+        <i class="at at-arrows-remove"></i>
+	</a>
+	<div class="modal-title">Which lovely lady are you most drawn to?</div>
+	<div class="row">
+		<div class="centered column col-xs mb10">
+
+			<div class="card art-match">
+				<a data-art-match-medium="Painting" data-art-match-colors="Gray, Black, Red" data-art-match-style="Modernist" class="art-match-option image" style="background-image: url('/assets/images/artwork/art-1.jpg');">
+					<img class="responsive width" src="/assets/images/artwork/art-1.jpg">
+				</a>
+				<div class="content">
+					<div class="artist fw-m">
+						First Last 1
+					</div>
+					<div class="title">
+						Title of Piece
+					</div>
+				</div>
+			</div>
+
+			<div class="card art-match">
+
+				<a data-art-match-medium="Photography" data-art-match-colors="Gray, Black, Red" data-art-match-style="Romanticism" class="art-match-option image" style="background-image: url('/assets/images/artwork/art-1.jpg');">
+					<img class="responsive width" src="/assets/images/artwork/art-1.jpg">
+				</a>
+				<div class="content text-s text-fade">
+					<div class="artist fw-m">
+						First Last 2
+					</div>
+					<div class="title">
+						Title of Piece
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="centered column col-xs mb10">
+
+			<div class="card art-match">
+
+				<a data-art-match-medium="Painting" data-art-match-colors="Gray, Black, Red" data-art-match-style="Expressionism" class="art-match-option image" style="background-image: url('/assets/images/artwork/art-1.jpg');">
+					<img class="responsive width" src="/assets/images/artwork/art-1.jpg">
+				</a>
+				<div class="content text-s text-fade">
+					<div class="artist fw-m">
+						First Last 3
+					</div>
+					<div class="title">
+						Title of Piece
+					</div>
+				</div>
+			</div>
+
+			<div class="card art-match">
+
+				<a data-art-match-medium="Mixed Media" data-art-match-colors="Gray, Black, Red" data-art-match-style="Abstract" class="art-match-option image" style="background-image: url('/assets/images/artwork/art-1.jpg');">
+					<img class="responsive width" src="/assets/images/artwork/art-1.jpg">
+				</a>
+				<div class="content text-s text-fade">
+					<div class="artist fw-m">
+						First Last 4
+					</div>
+					<div class="title">
+						Title of Piece
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<div progress></div>
+	<a class="button is-black is-fullwidth">Continue</a>
+	<a class="button is-secondary is-fullwidth">Go Back</a>
+</div>
+
+<p>
+	<a href="#art-match-modal" rel="modal:open">Open Modal</a>
+</p>
+
+<script type="text/javascript">
+	$.modal.defaults = {
+		closeExisting : true,      // Close existing modals. Set this to false if you need to stack multiple modal instances.
+		escapeClose   : true,      // Allows the user to close the modal by pressing `ESC`
+		clickClose    : true,      // Allows the user to close the modal by clicking the overlay
+		closeText     : '',        // Text content for the close <a> tag.
+		closeClass    : '',        // Add additional class(es) to the close <a> tag.
+		showClose     : true,      // Shows a (X) icon/link in the top-right corner
+		modalClass    : "modal",   // CSS class added to the element being displayed in the modal.
+		blockerClass  : "blocker", // CSS class added to the overlay (blocker).
+		spinnerHtml   : null,      // HTML appended to the default spinner during AJAX requests.
+		showSpinner   : true,      // Enable/disable the default spinner during AJAX requests.
+		fadeDuration  : 250,       // Number of milliseconds the fade transition takes (null means no transition)
+		fadeDelay     : 0.8        // Point during the overlay's fade-in that the modal begins to fade in (.5 = 50%, 1.5 = 150%, etc.)
+	};
+	$( document ).ready(function() {
+		$('.art-match-modal').modal();
+	});
+
+	$( document ).ready(function() {
+		$('body').on('click', 'a.art-match-option', function(){
+			console.log("CLICKED: data-art-match-medium: %s", $(this).attr('data-art-match-medium'));
+			console.log("CLICKED: data-art-match-style: %s", $(this).attr('data-art-match-style'));
+			console.log("CLICKED: data-art-match-colors: %s", $(this).attr('data-art-match-colors'));
+var current = $(this).parentsUntil('.modal.art-match-modal').attr('data-modal-current');
+console.log("current modal: %s", current);
+var next = $(this).parentsUntil('.modal.art-match-modal').attr('data-modal-next');
+console.log("next modal: %s", next);
+		});
+	});
+
+</script>

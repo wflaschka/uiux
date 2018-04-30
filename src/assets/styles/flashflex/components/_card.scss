@@ -303,6 +303,25 @@
 			}
 		}
 	}
+	&.art-match {
+		width: 100%;
+
+		/* Scales fit container */
+		.image {
+			width: 100%;
+			height: 100%;
+
+			img {
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		.content {
+			width: 100%;
+			text-align: center;
+		}
+	}
 
 	@include for-phone-only {
 		margin-right: 0;
