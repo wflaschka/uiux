@@ -165,7 +165,7 @@ h3.styled {
     h4, h5 {
         margin: 2.5rem 0 1.25rem 0;
         padding-bottom: 0.3125rem;
-        border-bottom: 2px solid #333;
+        border-bottom: $border-two solid #333;
     }
 
     .modal-title {
@@ -177,7 +177,7 @@ h3.styled {
         color: $color-db;
         word-wrap: break-word;
         padding-bottom: 1rem;
-        border-bottom: 2px solid $color-border;
+        border-bottom: $border-two solid $color-border;
     }
 
     &.is-small {
@@ -193,7 +193,7 @@ h3.styled {
 .has-border {
     padding-bottom: 1rem;
     margin-bottom: 1rem;
-    border-bottom: 2px solid $color-border;
+    border-bottom: $border-two solid $color-border;
 }
 
 .has-link {
@@ -339,10 +339,11 @@ hr[documentation] {
     }
 }
 
+
 // single line separator with overlay text
 .sep-text {
     position: relative;
-    border-bottom: 2px solid $color-border;
+    border-bottom: $border-two solid $color-border;
     margin: p(20) 0;
 
     span {
@@ -356,6 +357,8 @@ hr[documentation] {
     }
 }
 
+
+// attach work icon border circle
 .at-attach-work {
     border: 1px solid #191919;
     display: inline-flex;
@@ -366,4 +369,27 @@ hr[documentation] {
     height: 46px;
     margin-right: 15px;
     margin-bottom: 20px;
+}
+
+
+// icon color circle
+.icon-color {
+    padding-left: p(18);
+    height: p(10);
+    i {
+        border-radius: 50%;
+        width: 18px;
+        height: 18px;
+        left: 0px;
+        top: 5px;
+        position: absolute;
+    }
+
+    @each $name, $pair in $colors {
+        $tag: $name;
+        $val: nth($pair, 1);
+        &.#{$tag} {
+            background-color: $val !important;
+        }
+    }
 }
