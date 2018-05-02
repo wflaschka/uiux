@@ -7,17 +7,17 @@
 }
 
 .noUi-horizontal {
-    height: 2px;
+    height: 4px;
     margin: 3px 0 3px 0;
 }
 .noUi-target {
-    background: color(gray-light);
+    background: #F2F2F2;
     border-radius: 4px;
     box-shadow: none;
     border: none;
 }
 .noUi-connect {
-    background: color(gray-dark);
+    background: color(primary);
     box-shadow: none;
     -webkit-transition: background 450ms;
     transition: background 450ms;
@@ -30,19 +30,23 @@
     /* Fix 401 */
 }
 .noUi-handle {
-    border: 1px solid color(gray-dark);
+    border: 1px solid #F2F2F2;
+    background-color: #fff;
+    // box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+    // border: 1px solid color(gray-dark);
     border-radius: 100%;
-    background: color(white);
+    // background: color(white);
     cursor: default;
-    box-shadow: none;
+    // box-shadow: none;
     // box-shadow: inset 0 0 1px #FFF, inset 0 1px 7px #EBEBEB, 0 3px 6px -3px #BBB;
-    @include box_shadow(2);
+    // @include box_shadow(2);
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
 }
 .noUi-horizontal .noUi-handle {
-    width: 20px;
-    height: 20px;
+    width: 23px;
+    height: 23px;
     left: -19px;
-    top: -10px;
+    top: -11px;
     &.noUi-handle-lower {
         // So going to "0" on left doesn't mean ball goes off the line
         left: -1px;

@@ -1,0 +1,258 @@
+
+<form class="is-search-form is-fullwidth">
+    <!-- <nav class="nav"> -->
+    <nav class="row">
+
+        <!-- SIZES SIZES SIZES SIZES SIZES SIZES SIZES SIZES -->
+        <!-- SIZES SIZES SIZES SIZES SIZES SIZES SIZES SIZES -->
+        <div class="nav-item column dropdown">
+            <div class="level">
+                <div class="level-left">
+                    <div class="level-item">
+                        <label class="checkbox" for="sizeAllSizes">
+                            <input type="checkbox" id="sizeAllSizes" name="sizeAllSizes">
+                            <span></span>
+                            All sizes
+                        </label>
+                    </div>
+                </div>
+                <div class="level-right">
+                    <a id="size-set-in" class="is-depressed button has-no-states is-outlined is-gray is-small">
+                        Inches
+                    </a>
+                    <a id="size-set-cm" class="button has-no-states is-outlined is-gray is-small">
+                        Centimeters
+                    </a>
+                </div>
+            </div>
+            <!-- Form inputs -->
+            <input type="hidden" id="sizeInchOrCentimeter" value="in">
+            <input type="hidden" id="sizeMinWidth" value="20">
+            <input type="hidden" id="sizeMaxWidth" value="100">
+            <input type="hidden" id="sizeMinHeight" value="20">
+            <input type="hidden" id="sizeMaxHeight" value="100">
+
+            <hr>
+            
+            <div class="noUi-container" style="width: 400px;">
+                <label>Height</label>
+                <div id="height-slider-handles" class="noUi-target noUi-ltr noUi-horizontal"></div>
+                <!-- <div class="level">
+                    <div class="level-left">
+                        <div class="level-item">
+                            <span class="sizeMinHeight"></span>
+                            <span class="sizeMeasureInorCm">in</span>
+                        </div>
+                    </div>
+                    <div class="level-right">
+                        <div class="level-item">
+                            <span class="sizeMaxHeight"></span>
+                            <span class="sizeMeasureInorCm">in</span>
+                        </div>
+                    </div>
+                </div> -->
+                <label>Width</label>
+                <div id="width-slider-handles" class="noUi-target noUi-ltr noUi-horizontal"></div>
+                <!-- <div class="level">
+                    <div class="level-left">
+                        <div class="level-item">
+                            <span class="sizeMinWidth"></span>
+                            <span class="sizeMeasureInorCm">in</span>
+                        </div>
+                    </div>
+                    <div class="level-right">
+                        <div class="level-item">
+                            <span class="sizeMaxWidth"></span>
+                            <span class="sizeMeasureInorCm">in</span>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+
+
+    </nav>
+</form>
+
+<!-- NoUiSlider NoUiSlider NoUiSlider NoUiSlider NoUiSlider NoUiSlider -->
+<!-- NoUiSlider NoUiSlider NoUiSlider NoUiSlider NoUiSlider NoUiSlider -->
+<script type="text/javascript" src="/assets/scripts/nouislider.js"></script>
+<script type="text/javascript">
+    // UI Slider and Size logic
+    $( document ).ready(function() {
+        // BASIC MIN/MAX
+        var minMax = {
+            width:  { min: 0, max: 120 },
+            height: { min: 0, max: 120 },
+        };
+        var measureLabel = "in";
+        console.log("width.min: %s", minMax.width.min);
+        console.log("height.max: %s", minMax.height.max)
+
+
+        // CONVERSION CONVERSION CONVERSION CONVERSION CONVERSION CONVERSION 
+        // 1 in = 2.54 cm
+        $('#size-set-in').on('click', function() {
+            measureLabel = "in";
+            $('#size-set-in').addClass('is-depressed');
+            $('#size-set-cm').removeClass('is-depressed');
+            fixToolTips();
+        });
+        $('#size-set-cm').on('click', function() {
+            measureLabel = "cm";
+            $('#size-set-cm').addClass('is-depressed');
+            $('#size-set-in').removeClass('is-depressed');
+            fixToolTips();
+        });
+
+        function fixToolTips() {
+            // Can't trigger to rebuild tooltip, so replace the text:
+            $('#width-slider-handles .noUi-handle-lower .noUi-tooltip').text(formatTooltipHandle($('#sizeMinWidth').val()));
+            $('#width-slider-handles .noUi-handle-upper .noUi-tooltip').text(formatTooltipHandle($('#sizeMaxWidth').val()));
+            $('#height-slider-handles .noUi-handle-lower .noUi-tooltip').text(formatTooltipHandle($('#sizeMinHeight').val()));
+            $('#height-slider-handles .noUi-handle-upper .noUi-tooltip').text(formatTooltipHandle($('#sizeMaxHeight').val()));
+        };
+
+        // All sizes checkbox -- when it changes to 'checked' status
+        $('#sizeAllSizes').on('change', function() {
+            if ($('#sizeAllSizes').prop('checked')) {
+                $('#sizeMinWidth').val(minMax.width.min).trigger('change');
+                $('#sizeMaxWidth').val(minMax.width.max).trigger('change');
+                $('#sizeMinHeight').val(minMax.height.min).trigger('change');
+                $('#sizeMaxHeight').val(minMax.height.max).trigger('change');
+                
+                // setSizeMeasureLabel('sizeMinWidth', $('#sizeMinWidth').val());
+                // setSizeMeasureLabel('sizeMaxWidth', $('#sizeMaxWidth').val());
+                // setSizeMeasureLabel('sizeMinHeight', $('#sizeMinHeight').val());
+                // setSizeMeasureLabel('sizeMaxHeight', $('#sizeMaxHeight').val());
+            }
+        });
+        // Check or uncheck "all sizes" checkbox based on user's slider changes
+        function uncheckAllSizes() {
+            // Fires after slider UI change
+            // Only uncheck if width/height values no longer min/max
+            if (
+                minMax.width.min  != $('#sizeMinWidth').val() ||
+                minMax.width.max  != $('#sizeMaxWidth').val() ||
+                minMax.height.min != $('#sizeMinHeight').val() ||
+                minMax.height.max != $('#sizeMaxHeight').val()
+            ) {
+                $('#sizeAllSizes').prop('checked', false);
+            } else {
+                $('#sizeAllSizes').prop('checked', true);
+            }
+        }
+
+        // DISPLAY CURRENT MEASURES -- as either 'in' or 'cm' and change cm value
+        // function setSizeMeasureLabel(measureName, value) {
+        //     console.log("Changing `%s` to %s", measureName, value);
+        //     if ($('#size-set-in').hasClass('is-depressed')) {
+        //         newValue = value;
+        //         measureLabel = "in";
+        //     } else {
+        //         // cm
+        //         newValue = Math.round(value * 2.54);
+        //         measureLabel = "cm";
+        //     }
+        //     $('span.'+measureName).text(newValue);
+        // }
+
+        // FORMAT MIN/MAX HANDLES
+        function formatTooltipHandle(value) {
+            value = Math.round(parseInt(value));
+            valueInInches = value;
+
+            if ('cm' == measureLabel) {
+                value = value * 2.54;
+            }
+            value = Math.round(parseInt(value));
+            if (0 == valueInInches) {
+                value = "Min 0";
+            }
+            if (120 == valueInInches) {
+                value = "Max " + value;
+            }
+            return value + " " + measureLabel;
+        }
+
+        // SLIDER SETTING SLIDER SETTING SLIDER SETTING SLIDER SETTING SLIDER SETTING 
+        // https://refreshless.com/nouislider/
+        // TODO: Add noUiSlider settings like tab-drag behavior
+        var handlesSliderWidth = document.getElementById('width-slider-handles');
+        var handlesSliderHeight = document.getElementById('height-slider-handles');
+
+        noUiSlider.create(handlesSliderWidth, {
+            start: [ 20, 100 ],
+            connect: true,
+            // tooltips: [ false, wNumb({ decimals: 1 }), true ],
+            // tooltips: [formatTooltipMinHandle, formatTooltipMaxHandle],
+            // https://github.com/algolia/react-nouislider/issues/20#issuecomment-209517590
+            tooltips: [
+                { to: formatTooltipHandle },
+                { to: formatTooltipHandle }
+            ],
+            range: {
+                'min': [ minMax.width.min ],
+                'max': [ minMax.width.max ]
+            }
+        });
+
+        noUiSlider.create(handlesSliderHeight, {
+            start: [ 20, 100 ],
+            connect: true,
+            tooltips: [
+                { to: formatTooltipHandle },
+                { to: formatTooltipHandle }
+            ],
+            range: {
+                'min': [ minMax.height.min ],
+                'max': [ minMax.height.max ]
+            }
+        });
+
+        var sizeMaxWidth = document.getElementById('sizeMaxWidth');
+        var sizeMinWidth = document.getElementById('sizeMinWidth');
+        var sizeMaxHeight = document.getElementById('sizeMaxHeight');
+        var sizeMinHeight = document.getElementById('sizeMinHeight');
+
+        handlesSliderWidth.noUiSlider.on('update', function( values, handle ) {
+            var value = values[handle];
+            if ( handle ) {
+                sizeMaxWidth.value = Math.round(value);
+                // setSizeMeasureLabel('sizeMaxWidth', sizeMaxWidth.value);
+            } else {
+                sizeMinWidth.value = Math.round(value);
+                // setSizeMeasureLabel('sizeMinWidth', sizeMinWidth.value);
+            }
+            // If slider changes, see if we must uncheck the "All sizes" checkbox
+            uncheckAllSizes();
+        });
+
+        $('#sizeMinWidth').on('change', function() {
+            handlesSliderWidth.noUiSlider.set([this.value, null]);
+        });
+        $('#sizeMaxWidth').on('change', function() {
+            handlesSliderWidth.noUiSlider.set([null, this.value]);
+        });
+
+        handlesSliderHeight.noUiSlider.on('update', function( values, handle ) {
+            var value = values[handle];
+            if ( handle ) {
+                sizeMaxHeight.value = Math.round(value);
+                // setSizeMeasureLabel('sizeMaxHeight', sizeMaxHeight.value);
+            } else {
+                sizeMinHeight.value = Math.round(value);
+                // setSizeMeasureLabel('sizeMinHeight', sizeMinHeight.value);
+            }
+            // If slider changes, see if we must uncheck the "All sizes" checkbox
+            uncheckAllSizes();
+        });
+
+        $('#sizeMinHeight').on('change', function() {
+            handlesSliderHeight.noUiSlider.set([this.value, null]);
+        });
+        $('#sizeMaxHeight').on('change', function() {
+            handlesSliderHeight.noUiSlider.set([null, this.value]);
+        });
+    });
+</script>

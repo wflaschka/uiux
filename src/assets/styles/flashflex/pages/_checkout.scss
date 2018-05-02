@@ -11,7 +11,7 @@
 
 		.address {
 			padding: 0 40px 0 0;
-			border-right: 2px solid $color-border;
+			border-right: $border-two solid $color-border;
 			flex: 1 1 auto;
 		}
 
@@ -55,7 +55,7 @@
 		}
 
 		.col-two {
-			border-left: 2px solid $color-border;
+			border-left: $border-two solid $color-border;
 			padding-left: 40px;
 		}
 	}
