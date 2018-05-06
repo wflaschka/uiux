@@ -1,3 +1,5 @@
+// "Defer" method is used in this repo as a convenience
+// but won't be used on `atx` repo.
 // https://stackoverflow.com/questions/7486309/how-to-make-script-execution-wait-until-jquery-is-loaded/17914854#17914854
 function defer(method) {
     if (window.jQuery) {
@@ -8,46 +10,28 @@ function defer(method) {
 }
 
 
-// Common JS utilities for site
+// Common JS for site
 $(document).ready(function() {
 
-    // // MaterializeCSS
-    // // Update forms
-    // Materialize.updateTextFields();
-
-    // // Init dropdowns for header nav
-    // $("nav .dropdown-user").dropdown();
-
-    // // Init side-nav for mobile
-    // $(".button-collapse").sideNav();
-
-    // // Run AnimateCSS animation and remove when done
-    // // https://github.com/daneden/animate.css
-    // // $('div').animateCSS('bounce');
-    // $.fn.extend({
-    //     animateCss: function (animationName) {
-    //         var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-    //         this.addClass('animated ' + animationName).one(animationEnd, function() {
-    //             $(this).removeClass('animated ' + animationName);
-    //         });
-    //         return this;
-    //     }
+    // DEPRECATED 20180506, this is handled by special cookie code on `atx` repo
+    ////////////////////////////////////////////////////////////
+    // Header banner
+    ////////////////////////////////////////////////////////////
+    // $('.header-banner .close').on('click', function(){
+    //     $(this).closest('.header-banner').hide();
     // });
 
 
-    $('.header-banner .close').on('click', function(){
-        $(this).closest('.header-banner').hide();
+    ////////////////////////////////////////////////////////////
+    // Select a URL -- event binder
+    ////////////////////////////////////////////////////////////
+    $('.select-url').on('change', function () {
+        var url = $(this).val(); // get selected value
+        if (url) { // require a URL
+            window.location = url; // redirect
+        }
+        return false;
     });
-
-
-      // bind change event to select
-      $('.select-url').on('change', function () {
-          var url = $(this).val(); // get selected value
-          if (url) { // require a URL
-              window.location = url; // redirect
-          }
-          return false;
-      });
 
     ////////////////////////////////////////////////////////////
     // Accordion JS
@@ -58,7 +42,6 @@ $(document).ready(function() {
 
     var allPanels = $('.at.accordion > dt');
     allPanels.next().hide(); // hide all dd elements
-    // openFirstPanel(); // open first dd element on load
 
     $('.at.accordion > dt').on( "click", function(e) {
         $this = $(this);
@@ -284,8 +267,7 @@ $(document).ready(function() {
     // Flash Messages
     // hide flash message
     ////////////////////////////////////////////////////////////
-    $('.flash .close')
-    .on('click', function() {
+    $('.flash .close').on('click', function() {
         $(this)
         .closest('.flash')
         .fadeOut();
@@ -296,8 +278,7 @@ $(document).ready(function() {
     // Tags
     // Delete Tag
     ////////////////////////////////////////////////////////////
-    $('.tag .close')
-    .on('click', function(e) {
+    $('.tag .close').on('click', function(e) {
         $(this)
         .closest('.tag')
         .fadeOut();
