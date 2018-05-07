@@ -71,7 +71,7 @@
 	        width: 100%;
 	        top: 50%;
 	        left: 0;
-	        background-color: $color-border;
+	        background-color: $border-color;
 	    }
 
 	    &:hover {
@@ -89,7 +89,7 @@
 
 	        display: inline-block;
 	        padding: p(10) p(30);
-	        border: 1px solid $color-border;
+	        border: 1px solid $border-color;
 	        background-color: #fff;
 			left: 50%;
 			transform: translateX(-50%);

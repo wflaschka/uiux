@@ -20,7 +20,8 @@
     position: relative;
 
     .menu {
-        box-shadow: 4px 4px 10px #dedede;
+        box-shadow: 0 5px 8px 0 rgba(51, 51, 51, 0.3);
+        // box-shadow: 4px 4px 10px #dedede;
 
         animation: slide-down-menu .2s ease 1;
         display: none;
@@ -29,8 +30,8 @@
         top: $search-bar-height;
 
         background: white;
-        border: 1px solid #dedede;
-        border-radius: 2px;
+        // border: 1px solid $border-color;
+        // border-radius: 2px;
         min-width: 100%;
         z-index: z('search-form');
 

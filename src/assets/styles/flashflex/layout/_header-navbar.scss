@@ -224,6 +224,10 @@
 
 	&.register {
 		right: 0;
+		width: 400px;
+		@include for-phone-only {
+			width: 100%;
+		}
 	}
 
 	&.cart {
@@ -333,7 +337,7 @@
 
 
 			&.is-admin {
-				border: 1px solid color(gray);
+				border: $border-width solid color(gray);
 				background-color: color(white-dark);
 			}
 
@@ -404,7 +408,7 @@
     width: 100%;
     padding: 0 1.875rem 0.8125rem 0;
     margin-bottom: 2.625rem;
-    border-bottom: 1px solid #979797;
+    border-bottom: $border-width solid #979797;
     &:focus { outline: none; }
 }
 

@@ -9,6 +9,9 @@
 
 	.product-image {
 
+		img {
+    		box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
+		}
 		.slick-slider {
 			.slick-slide {
 			    padding-left: 30px;
@@ -17,7 +20,6 @@
 			    
 				img {
 		    		// @include box_shadow(2);
-		    		box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
 					position: relative;
 					top: -15px;
 					width: auto;
@@ -108,7 +110,7 @@
 				.dropdown-content {
 					width: 100%;
 					padding: 1rem;
-					border: 1px solid $color-border;
+					border: 1px solid $border-color;
 					transform: translateY(-11px);
 				}
 			}
@@ -149,7 +151,7 @@
 		}
 
 		.at.accordion {
-			border-top: 1px solid $color-border;
+			border-top: 1px solid $border-color;
 			margin-top: p(18);
 			padding-left: p(12);
 

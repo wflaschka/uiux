@@ -13,7 +13,7 @@
     ul {
         margin-top: p(12);
         padding: 0;
-        border-bottom-color: $color-border;
+        border-bottom-color: $border-color;
         border-bottom-width: 2px;
         li {
             &.is-active {
@@ -28,7 +28,7 @@
     a {
         cursor: pointer;
         padding: p(10) 1.1rem;
-        border-bottom-color: $color-border;
+        border-bottom-color: $border-color;
         border-bottom-width: 2px;
         color: rgba(25, 25, 25, 0.44);
         margin-bottom: -2px;
@@ -146,7 +146,7 @@
         position: relative;
         padding: 0 0 1rem 3rem;
         margin-bottom: 1rem;
-        border-bottom: 1px solid $color-border;
+        border-bottom: 1px solid $border-color;
         @include clearfix();
 
         i {
