@@ -10,7 +10,7 @@
 
 .nav-item.column {
     &:not(:last-of-type) {
-        margin-right: 0.5em;
+        margin-right: p(24);
     }
 
     // height: 48px;
@@ -26,7 +26,11 @@
             @extend .is-fullwidth;
             @extend .is-outlined;
             @extend .is-gray;
-
+            
+            font-size: p(15) !important;
+            font-weight: $weight-normal;
+            color: $color-db !important;
+            text-align: left !important;;
 
             justify-content: space-between;
             span {
@@ -55,9 +59,14 @@
 
     aside.menu {
         // font-size: 0.8rem;
-        padding: 1rem 0.5rem 0.25rem 0.5rem;
+        padding: p(15) p(12) p(30);
         margin-top: none;
         white-space: nowrap;
+
+        .title {
+            font-weight: $weight-semibold;
+            padding: 0 0 p(20);
+        }
 
         ul.menu-list {
             -webkit-padding-start: 0; //wtf
@@ -67,7 +76,10 @@
             li {
                 align-items: left;
                 display: flex;
-                padding: 1rem 0;
+                margin: 0 0 p(40);
+                &:last-child {
+                    margin: 0;
+                }
             }
         }
     }

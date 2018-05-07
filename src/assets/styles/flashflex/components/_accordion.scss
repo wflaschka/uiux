@@ -10,10 +10,10 @@
 	}
 
 	dt {
-  		border-top: 1px solid $color-border;
+  		border-top: $border-width solid $border-color;
   		padding: 1rem 1.5rem 1rem 0;
   		cursor: pointer;
-  		font-weight: 500;
+  		font-weight: $weight-semibold;
   		position: relative;
   		&:hover {
   			color: lighten(black, 40%);
@@ -22,7 +22,7 @@
 			border-top: 0;
 		}
 		&:last-of-type:not(.active) {
-  			border-bottom: 1px solid $color-border;
+  			border-bottom: 1px solid $border-color;
 		}
 
 		.at {
@@ -48,7 +48,7 @@
 		}
 
 		&:last-of-type {
-  			border-bottom: 1px solid $color-border;
+  			border-bottom: $border-width solid $border-color;
 		}
 	}
 

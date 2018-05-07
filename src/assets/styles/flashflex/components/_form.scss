@@ -67,7 +67,7 @@ label {
 		// Set the basic colors for the checkboxes / radios
 		span::before {
 			background-color: $white;
-			border: $checkbox-border solid $gray-color-dark;
+			border: $checkbox-border solid $checkbox-radio-border-color;
 		}
 		span::after {
 			background-color: $white;
@@ -76,7 +76,7 @@ label {
 		&.is-large {
 			span::before {
 				background-color: $white;
-				border: ($checkbox-border * $is-large-multiplier) solid $gray-color-dark;
+				border: ($checkbox-border * $is-large-multiplier) solid $checkbox-radio-border-color;
 			}
 			span::after {
 				background-color: $white;
@@ -170,7 +170,7 @@ select { font-size: inherit; }
     color: color(black);
     box-shadow: none;
     border-radius: 0px;
-    border-color: $color-border;
+    border-color: $border-color;
 	&:not(.is-small):not(.is-large):not(.is-medium) {
 		min-height: p(47);
 	}
@@ -199,7 +199,7 @@ select { font-size: inherit; }
 // Radio, Check with button style, used in messages/inbox
 .radio-check-square {
     padding: 0.525rem 0.625rem 0.325rem;
-    border: 1px solid $color-border;
+    border: 1px solid $border-color;
     min-height: 2.875rem;
     &.empty {
     	padding: p(2) p(10) p(10);

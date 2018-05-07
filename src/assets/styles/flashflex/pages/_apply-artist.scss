@@ -39,7 +39,7 @@
 		.form-wrapper {
 			order: 3;
 			margin: 0 p(20);
-			border-bottom: 1px solid $color-border;
+			border-bottom: 1px solid $border-color;
 		}
 	}// .main
 
@@ -48,7 +48,7 @@
 
 		h3 {
 			padding-bottom: p(10);
-			border-bottom: 1px solid $color-border;
+			border-bottom: 1px solid $border-color;
 			margin-bottom: p(45);
 		}
 
@@ -145,14 +145,14 @@
 			// 	display: flex;
 			// 	margin-bottom: p(20);
 			// 	padding-bottom: p(60);
-			// 	border-bottom: 1px solid $color-border;
+			// 	border-bottom: 1px solid $border-color;
 
 			// 	.step {
 			// 		margin-bottom: p(20);
 			// 		flex: 1 1 100%;
 			// 	}
 			// 	.step:nth-child(1) {
-			// 		border-right: 1px solid $color-border;
+			// 		border-right: 1px solid $border-color;
 			// 		padding-right: 3.125rem;
 			// 	}
 			// 	.step:nth-child(2) {
@@ -160,7 +160,7 @@
 			// 		padding-left: 3.125rem;
 			// 	}
 			// 	.step:nth-child(3) {
-			// 		border-left: 1px solid $color-border;
+			// 		border-left: 1px solid $border-color;
 			// 		padding-left: 3.125rem;
 			// 	}
 			// }

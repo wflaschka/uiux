@@ -102,10 +102,10 @@
                     });
                 </script>
                 <ul class="menu-list">
-                    <li>
-                        <span>&dollar;</span> <input name="input-price-min" id="input-price-min" class="input is-small is-dollar-input" type="text" placeholder="0">
-                        <span>&ndash;</span>
-                        <span>&dollar;</span> <input name="input-price-max" id="input-price-max" class="input is-small is-dollar-input" type="text" placeholder="10000">
+                    <li class="mb30">
+                        <span>&dollar;</span> <input name="input-price-min" id="input-price-min" class="input is-dollar-input" type="text" placeholder="0">
+                        <span class="ml5 mr5">&ndash;</span>
+                        <span>&dollar;</span> <input name="input-price-max" id="input-price-max" class="input is-dollar-input" type="text" placeholder="10000">
                     </li>
                     <li class="">
                         <label class="radio" for="input-price-all">
@@ -174,10 +174,10 @@
                         </div>
                     </div>
                     <div class="level-right">
-                        <a id="size-set-in" class="is-depressed button has-no-states is-outlined is-gray is-small">
+                        <a id="size-set-in" class="is-depressed button has-no-states is-outlined is-small">
                             Inches
                         </a>
-                        <a id="size-set-cm" class="button has-no-states is-outlined is-gray is-small">
+                        <a id="size-set-cm" class="button has-no-states is-outlined is-small">
                             Centimeters
                         </a>
                     </div>
@@ -312,8 +312,50 @@
             <aside class="menu row is-more-menu">
                 <!-- <div class="row"> -->
                 <div class="column">
-                    <strong>Subject</strong>
-                    <ul class="menu-list">
+                    <div class="title">Subject</div>
+                    <ul class="menu-list overflow-400">
+                        <li class="">
+                            <label class="checkbox" for="input-subject-abstract">
+                                <input type="checkbox" id="input-subject-abstract" name="input-subject-abstract">
+                                <span></span>
+                                Abstract
+                            </label>
+                        </li>
+                        <li>
+                            <label class="checkbox" for="input-subject-figurative">
+                                <input checked="checked" type="checkbox" id="input-subject-figurative" name="input-subject-figurative">
+                                <span></span>
+                                Figurative
+                            </label>
+                        </li>
+                        <li>
+                            <label class="checkbox" for="input-subject-still-life">
+                                <input type="checkbox" id="input-subject-still-life" name="input-subject-still-life">
+                                <span></span>
+                                Still Life
+                            </label>
+                        </li>
+                        <li class="">
+                            <label class="checkbox" for="input-subject-abstract">
+                                <input type="checkbox" id="input-subject-abstract" name="input-subject-abstract">
+                                <span></span>
+                                Abstract
+                            </label>
+                        </li>
+                        <li>
+                            <label class="checkbox" for="input-subject-figurative">
+                                <input checked="checked" type="checkbox" id="input-subject-figurative" name="input-subject-figurative">
+                                <span></span>
+                                Figurative
+                            </label>
+                        </li>
+                        <li>
+                            <label class="checkbox" for="input-subject-still-life">
+                                <input type="checkbox" id="input-subject-still-life" name="input-subject-still-life">
+                                <span></span>
+                                Still Life
+                            </label>
+                        </li>
                         <li class="">
                             <label class="checkbox" for="input-subject-abstract">
                                 <input type="checkbox" id="input-subject-abstract" name="input-subject-abstract">
@@ -338,7 +380,7 @@
                     </ul>
                 </div>
                 <div class="column">
-                    <strong>Number of Editions</strong>
+                    <div class="title">Number of Editions</div>
                     <ul class="menu-list">
                         <li class="">
                             <label class="checkbox" for="input-subject-abstract">
@@ -364,7 +406,7 @@
                     </ul>
                 </div>
                 <div class="column">
-                    <strong>Time Period</strong>
+                    <div class="title">Time Period</div>
                     <ul class="menu-list">
                         <li class="">
                             <label class="checkbox" for="input-subject-abstract">
@@ -390,7 +432,7 @@
                     </ul>
                 </div>
                 <div class="column">
-                    <strong>Other</strong>
+                    <div class="title">Other</div>
                     <ul class="menu-list">
                         <li class="">
                             <label class="checkbox" for="input-subject-abstract">

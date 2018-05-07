@@ -143,10 +143,10 @@
 		$border: $input-border-color;
 		$border-hover: $input-hover-border-color;
 	// Used by 'form.scss', consolidate these later in colors/variables files
-		$checkbox-offset: -15px;
-		$checkbox-width: 15px;
-		$checkbox-height: 15px;
-		$checkbox-border: 1px;
+		$checkbox-offset: -18px;
+		$checkbox-width: 18px;
+		$checkbox-height: 18px;
+		$checkbox-border: 2px;
 		$checkbox-inner-padding: 2px;
 		$is-large-multiplier: 1.5; 
 		$input: $gray-color-dark;

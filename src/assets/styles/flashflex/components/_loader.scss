@@ -3,7 +3,7 @@
 ////////////////////////////////////////////////////////////////////
 
 
-$progress-width: 24em;
+$progress-width: 100%;
 $progress-height: .25em;
 $color-progress-bg: #e5e9eb;
 $color-progress-green: #4cd964;
@@ -57,7 +57,7 @@ $color-progress-red: #ff2d55;
 
 /* PROGRESS */
 
-.progress {
+.at.loader {
   background-color: $color-progress-bg;
   height: $progress-height;
   position: relative;
