@@ -11,7 +11,7 @@
 
 		.address {
 			padding: 0 40px 0 0;
-			border-right: $border-two solid $color-border;
+			border-right: $border-width solid $border-color;
 			flex: 1 1 auto;
 		}
 
@@ -27,11 +27,11 @@
 			
 			.subtotal {
 				padding-bottom: 10px;
-				border-bottom: 1px solid $color-border;
+				border-bottom: $border-width solid $border-color;
 			}
 			.total {
 				padding: 20px 0;
-				border-bottom: 1px solid $color-border;
+				border-bottom: $border-width solid $border-color;
 			}
 		}
 
@@ -55,7 +55,7 @@
 		}
 
 		.col-two {
-			border-left: $border-two solid $color-border;
+			border-left: $border-width solid $border-color;
 			padding-left: 40px;
 		}
 	}
@@ -68,7 +68,7 @@
 	}
 
 	.checkout-prompt {
-		border-bottom: 1px solid $color-border;
+		border-bottom: $border-width solid $border-color;
 		padding-bottom: 10px;
 		margin-bottom: 25px;
 	}
@@ -76,13 +76,13 @@
 			padding-bottom: 25px;
 
 			&:not(.active) {
-				border-top: 1px solid $color-border;
+				border-top: $border-width solid $border-color;
 				padding: 35px 0 15px;
 				margin: 10px 0 5px 0;
-				border-bottom: 1px solid rgba(0, 0, 0, 0);
+				border-bottom: $border-width solid rgba(0, 0, 0, 0);
 
 			&:last-of-type {
-				border-bottom: 1px solid $color-border;
+				border-bottom: $border-width solid $border-color;
 			}
 		}
 	}
@@ -117,7 +117,7 @@
 }
 
 .shipping-method-wrapper {
-	border: 1px solid $color-border;
+	border: $border-width solid $border-color;
 	margin-bottom: 20px;
 
 	.item-container {
@@ -126,14 +126,14 @@
 
 	.shipping-item {
 		padding: 25px 15px;
-		border-bottom: 1px solid $color-border;
+		border-bottom: $border-width solid $border-color;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
 
 		&.title {
 			padding: 15px;
-			font-weight: 500;
+			font-weight: $weight-semibold;
 		}
 
 		&:last-child {
@@ -150,7 +150,7 @@
 	.order {
 		padding: 20px 20px 15px;
 		border: 0;
-		border-right: 1px solid #ccc;
+		border-right: $border-width solid #ccc;
 		margin: 0;
 	}
 }

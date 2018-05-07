@@ -2,13 +2,22 @@
 // 404 Error Page
 
 .error-page {
-	height: calc(100vh - 70px);
-	width: 550px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
+	#content {
+		height: calc(100vh - 77px);
+		margin: 0 auto;
+		padding: 0px;
+		width: 550px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 
-    .action {
-    	padding: 0 p(100);
-    }
+	    .action {
+	    	padding: 0 p(100);
+	    }
+	}
+
+	// hiding footer by CSS, protptype not have footer
+	footer {
+		display: none;
+	}
 }

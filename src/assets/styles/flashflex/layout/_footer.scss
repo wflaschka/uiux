@@ -9,11 +9,12 @@
 	padding: 2.1875rem p(20);
 
 	a {
+		font-weight: $weight-normal;
 		@extend .link-black;
 	}
 
 	.footer-top {
-		border-bottom: $border-two solid $color-border;
+		border-bottom: $border-width solid $border-color;
 		padding-bottom: 0;
 		margin-bottom: p(20);
 
@@ -54,7 +55,7 @@
 					margin-bottom: p(4);
 
 					&.title {
-						font-weight: $weight-semibold;
+						font-weight: $weight-bold;
 					}
 
 					&:last-child {
@@ -79,7 +80,7 @@
 		.social-links {
 			font-size: p(20);
 			text-align: center;
-			border-bottom: 1px solid $color-border;
+			border-bottom: 1px solid $border-color;
 			padding-bottom: p(10);
 			margin-bottom: p(30);
 

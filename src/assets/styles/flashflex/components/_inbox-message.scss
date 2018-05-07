@@ -6,7 +6,7 @@
 .inbox-message {
 
 	.message {
-		border-bottom: 1px solid $color-border;
+		border-bottom: 1px solid $border-color;
 
 		&:not(:last-child) {
 			margin-bottom: p(30);
@@ -56,7 +56,7 @@
 @include for-tablet-portrait-up {
 
 	.message {
-		border-bottom: 1px solid $color-border;
+		border-bottom: 1px solid $border-color;
 
 		&.reply {
 
