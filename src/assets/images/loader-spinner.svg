@@ -12,6 +12,10 @@
 	<stop  offset="1" style="stop-color:#FF2D55"/>
 </linearGradient>
 <circle fill="none" stroke="url(#SVGID_1_)" stroke-width="4" stroke-miterlimit="10" cx="20" cy="20" r="14.946"/>
-<animateTransform  fill="remove" type="rotate" attributeType="xml" restart="always" calcMode="linear" additive="replace" accumulate="none" repeatCount="indefinite" dur="1s" to="360 20 20" from="0 20 20" attributeName="transform">
+<animateTransform  fill="remove" type="rotate" attributeType="xml" restart="always" calcMode="linear" additive="replace" accumulate="none" repeatCount="indefinite" 
+                  dur="1s" 
+                  to="360 0 0" 
+                  from="0 0 0" 
+                  attributeName="transform">
 	</animateTransform>
 </svg>
