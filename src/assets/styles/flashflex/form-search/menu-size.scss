@@ -5,7 +5,7 @@
 aside.menu.is-size-menu {
     // display: flex;
     flex-direction: column;
-    width: 20rem;
+    width: 25rem;
 
     .level {
         &:last-of-type {
@@ -14,8 +14,23 @@ aside.menu.is-size-menu {
     }
 
     .button {
+        font-weight: $weight-normal;
+        border-radius: 0 !important;
+        min-height: p(32) !important;
+
+        &:first-child {
+            margin-right: -5px;
+        }
+
+        &:last-child {
+            border-left-color: #141414 !important;
+        }
+
         &.is-depressed {
-            @extend .is-gray-light;
+            color: $color-fade;
+            background-color: transparent;
+            border-color: $border-color;
+            // @extend .is-gray-light;
         }
         &:not(.is-depressed) {
             @extend .is-black;

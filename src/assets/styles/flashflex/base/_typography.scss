@@ -165,7 +165,7 @@ h3.styled {
     h4, h5 {
         margin: 2.5rem 0 1.25rem 0;
         padding-bottom: 0.3125rem;
-        border-bottom: $border-two solid #333;
+        border-bottom: $border-width solid #333;
     }
 
     .modal-title {
@@ -177,13 +177,13 @@ h3.styled {
         color: $color-db;
         word-wrap: break-word;
         padding-bottom: 1rem;
-        border-bottom: $border-two solid $color-border;
+        border-bottom: $border-width solid $border-color;
     }
 
     &.is-small {
         .modal-title {
             font-size: $h4-fontsize;
-            padding-bottom: p(6);
+            // padding-bottom: p(6);
         }
     }
 
@@ -193,7 +193,7 @@ h3.styled {
 .has-border {
     padding-bottom: 1rem;
     margin-bottom: 1rem;
-    border-bottom: $border-two solid $color-border;
+    border-bottom: $border-width solid $border-color;
 }
 
 .has-link {
@@ -220,8 +220,10 @@ h4 {
 .text-fb { color: #000; }
 .text-red { color: #f00; }
 .text-fade { color: $color-fade; }
+
+.fw-n { font-weight: $weight-normal; }
 .fw-m,
-.fw-500 { font-weight: 500; }
+.fw-500 { font-weight: $weight-semibold; }
 
 .text-xl {
     font-size: p(45);
@@ -320,10 +322,13 @@ hr[documentation] {
 // single line separator
 .sep {
     height: 1px;
-    background-color: $color-border;
+    background-color: $border-color;
     margin: 2rem 0;
     &.m10 {
         margin: p(10) 0;
+    }
+    &.nospace {
+        margin: 0;
     }
     &.small {
         margin: 1rem 0;
@@ -343,7 +348,7 @@ hr[documentation] {
 // single line separator with overlay text
 .sep-text {
     position: relative;
-    border-bottom: $border-two solid $color-border;
+    border-bottom: $border-width solid $border-color;
     margin: p(20) 0;
 
     span {
@@ -360,7 +365,7 @@ hr[documentation] {
 
 // attach work icon border circle
 .at-attach-work {
-    border: 1px solid #191919;
+    border: 1px solid $color-db;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -373,9 +378,9 @@ hr[documentation] {
 
 
 // icon color circle
-.icon-color {
+.color-ball {
     padding-left: p(18);
-    height: p(10);
+    height: p(8);
     i {
         border-radius: 50%;
         width: 18px;
@@ -392,4 +397,12 @@ hr[documentation] {
             background-color: $val !important;
         }
     }
+}
+
+
+// Overflow
+.overflow-400 {
+    overflow-y: scroll;
+    max-height: 400px;
+    overflow-x: hidden;
 }

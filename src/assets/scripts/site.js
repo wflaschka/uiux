@@ -278,7 +278,7 @@ $(document).ready(function() {
     // Tags
     // Delete Tag
     ////////////////////////////////////////////////////////////
-    $('.tag .close').on('click', function(e) {
+    $('.tag .close, .tag .delete').on('click', function(e) {
         $(this)
         .closest('.tag')
         .fadeOut();

@@ -14,35 +14,35 @@ label, .checkbox, .radio, .radio + .radio {
     &:not(.is-colorball-checkbox) {
         position: relative;
         margin-left: ($checkbox-offset * -1) * 1;
-        padding-left: ($checkbox-offset * -1) * .25;
+        padding-left: ($checkbox-offset * -1) * .5;
 
         &.is-large {
             margin-left: ($checkbox-offset * -1) * 1.25 * $is-large-multiplier;
-            padding-left: ($checkbox-offset * -1) * .25 * $is-large-multiplier;
+            padding-left: ($checkbox-offset * -1) * .5 * $is-large-multiplier;
         }
     }
 }
 
 // Styling for all checkbox labels: set the basic colors
-label {
-    span::before {
-        // border
-        background-color: none;
-        border: $checkbox-border solid color(black);
-    }
-    span::after {
-        // fill
-        background-color: color(white);
-        transition: background-color $transition-duration;
-    }
-    &.is-large {
-        span::before {
-            border: ($checkbox-border * $is-large-multiplier) solid color(black);
-        }
-        span::after {
-        }
-    } 
-}
+// label {
+//     span::before {
+//         // border
+//         background-color: none;
+//         border: $checkbox-border solid color(black);
+//     }
+//     span::after {
+//         // fill
+//         background-color: color(white);
+//         transition: background-color $transition-duration;
+//     }
+//     &.is-large {
+//         span::before {
+//             border: ($checkbox-border * $is-large-multiplier) solid color(black);
+//         }
+//         span::after {
+//         }
+//     } 
+// }
 
 // Fill the span::after when checkbox has been checked
 input:checked + span:after {

@@ -28,7 +28,7 @@
 	    flex-direction: column;
 	    justify-content: space-between;
 	    padding-bottom: p(15);
-		border-bottom: 1px solid $color-border;
+		border-bottom: 1px solid $border-color;
 
 	    .search-container {
 	    	margin-bottom: p(20);
@@ -62,7 +62,7 @@
 	.message {
 		display: flex;
 		padding: p(15) 0 p(15) p(15);
-		border-bottom: 1px solid $color-border;
+		border-bottom: 1px solid $border-color;
 		background-color: #f7f7f7;
 		&.new { background-color: #fff; }
 

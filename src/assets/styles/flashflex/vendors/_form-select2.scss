@@ -47,17 +47,18 @@
 
                     // The remove/delete icon for the tag
                     // Select2 hardcodes a formatted "x" character.
-                    // Hide it, then add in a FontAwesome icon
+                    // Hide it, then add in a ArtTap icon
                     .select2-selection__choice__remove {
-                        @extend .delete;
-                        color: rgba(0, 0, 0, 0);
+                        @extend .icon;
+                        @extend .at;
+                        @extend .at-arrows-remove;
 
-                        &::after {
-                            // Get the "Close" icon from FontAwesome (for now)
-                            @include at;
-                            @extend .at-arrows-remove;
-                            margin-left: -12px;
-                            color: $gray-color-dark;
+                        margin-left: p(7);
+                        margin-right: p(-13);
+                        color: rgba(0, 0, 0, 0) !important;
+
+                        &:before {
+                            color: #000;
                         }
                     }
                 }

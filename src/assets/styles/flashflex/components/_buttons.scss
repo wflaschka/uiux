@@ -341,7 +341,9 @@
 }
 
 .is-gray {
-    border-color: $color-border !important; // replacing border color to match with prototype.
+    // border-color: $border-color !important; // replacing border color to match with prototype.
+    // Unknown error wrong color value from variable so using hard coded for now
+    border-color: #d9d9d9 !important; // replacing border color to match with prototype.
 }
 
 .button {
@@ -349,7 +351,7 @@
     &.is-black {
         &:hover,
         &:focus {
-            background-color: $color-border !important;
+            background-color: $border-color !important;
         }
     }
     &.is-secondary {
@@ -362,3 +364,10 @@
     height: 47px;
 }
 
+.btn-m {
+    width: 360px;
+}
+
+.btn-s {
+    width: 270px;
+}

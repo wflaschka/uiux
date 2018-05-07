@@ -20,6 +20,7 @@
 			// margin-bottom: 1rem;
 			margin-bottom: 2rem;
 			a {
+				font-weight: $weight-normal;
 				@extend .link-gray;
 			}
 			&.active {
