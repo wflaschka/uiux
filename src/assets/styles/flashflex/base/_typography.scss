@@ -113,9 +113,11 @@ h1, h2, h3, h4, h5, h6 {
     line-height: p(32);
     margin-bottom: p(35);
     font-weight: normal;
-    color: $color-db;
     word-wrap: break-word;
-
+    &:not(.is-link) {
+        color: $color-db;
+    }
+    
     small {
         font-family: $font-family-header-secondary;
         margin-left: 1em;

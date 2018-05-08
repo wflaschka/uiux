@@ -219,6 +219,13 @@ select { font-size: inherit; }
 	}
 }
 
+.control {
+	font-size: p(15);
+	&:not(:last-child) {
+		margin-bottom: 0.75rem;
+	}
+}
+
 
 // .help {
 // 	color: color(red);
