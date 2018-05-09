@@ -1,0 +1,23 @@
+////////////////////////////////////////////////////
+// Masonry
+// Responsive width set to center align layout
+////////////////////////////////////////////////////
+
+.masonry-grid {
+	max-width: 340px;
+	margin: 0 auto;
+
+
+@include for-tablet-portrait {
+	max-width: 680px;
+}
+
+@include for-tablet-landscape-up {
+	max-width: 850px;
+}
+
+@include for-desktop-up {
+	max-width: 1190px;
+}
+
+}

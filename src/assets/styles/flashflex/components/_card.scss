@@ -4,7 +4,11 @@
 
 .card {
 	width: 150px;
-	margin-right: 1rem;
+	
+	&:not(.masonry) {
+		margin-right: 1rem;
+	}
+
 	// &:not(:last-of-type) {
 	// 	margin-right: 1rem;
 	// }
@@ -329,7 +333,7 @@
 
 	@include for-phone-only {
 		margin-right: 0;
-		&:nth-child(odd) {
+		&:not(.masonry):nth-child(odd) {
 			margin-right: 1rem;
 		}
 	}

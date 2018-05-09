@@ -1,7 +1,10 @@
 {{> header-standard }}
-<main>
 
-<h2>Masonry via Javascript</h2>
+<div class="page">
+
+<div id="content">
+
+<h2 class="text-center">Masonry via Javascript</h2>
 <!--
 	https://github.com/desandro/masonry
 	Docs:
@@ -9,6 +12,13 @@
 		data-masonry='{ "itemSelector": ".card", "columnWidth": 170 }'
 	https://github.com/desandro/imagesloaded
 -->
+
+{{> user-header }}
+
+<h2 class="has-border mt50">
+	Molestiae placeat officia
+</h2>
+
 <div class="row masonry-grid">
 	{{#dataset}}
 		{{> card-masonry }}
@@ -16,6 +26,8 @@
 	{{#dataset}}
 		{{> card-masonry }}
 	{{/dataset}}
+</div>
+
 </div>
 
 <script type="text/javascript" src="assets/scripts/masonry.pkgd.min.js"></script>
@@ -52,5 +64,5 @@
 	});
 </script>
 
-</main>
+</div>
 {{> footer-standard }}
