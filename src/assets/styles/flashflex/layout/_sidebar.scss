@@ -23,11 +23,12 @@
 				font-weight: $weight-normal;
 				@extend .link-gray;
 			}
-			&.active {
-				a {
-					@extend .link-black;
-				}
+		&.active {
+			a {
+				@extend .link-black;
+				font-weight: $weight-semibold;
 			}
+		}
 		}
 	}
 
