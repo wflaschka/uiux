@@ -297,8 +297,9 @@
 			}
 			
 			&.active {
-				a {
-					color: #111;
+				> a {
+					color: $color-db;
+					font-weight: $weight-semibold;
 				}
 			}
 
@@ -462,6 +463,13 @@
 
 	.search-input {
 		@include search-input;
+	}
+
+	.search-result {
+		.search-container {
+			position: relative;
+			margin: 3px 0.5rem;
+		}
 	}
 
 } //.search
