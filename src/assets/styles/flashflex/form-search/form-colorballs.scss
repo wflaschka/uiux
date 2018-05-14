@@ -2,6 +2,20 @@
 // Styling the fading color ball selection (checkboxes)
 ////////////////////////////////////////////////////////////////////
 
+// In Artwork add/edit the colors should show labels:
+// http://localhost:3000/components/typography/typography-form-colorball.html
+label.is-colorball-checkbox.is-labeled {
+    small {
+        display: block;
+        position: absolute;
+        left: $checkbox-width * 2;
+        top: (($checkbox-height * 1.5) - 12px) / 2;
+        white-space: nowrap;
+        font-size: 12px;
+        line-height: 12px;
+    }
+}
+
 // BASIC COLOR CHECKBOXES COLOR CHECKBOXES COLOR CHECKBOXES COLOR CHECKBOXES 
 label.is-colorball-checkbox {
     width: $checkbox-width * 1.5;
@@ -51,8 +65,6 @@ label.is-colorball-checkbox {
             width: $checkbox-width - ($checkbox-border * 2) - ($checkbox-inner-padding * 2);
             height: $checkbox-height - ($checkbox-border * 2) - ($checkbox-inner-padding * 2);
         }
-
-
     }
 
     &.is-large {
