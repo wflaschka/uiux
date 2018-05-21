@@ -37,7 +37,7 @@
             </div>
         </div><!-- .message-header -->
         <div class="content">
-            <div class="artwork-description-editor">
+            <div class="at-ql-editor">
                 <p><br></p>
             </div>
             <div class="button-send">
@@ -49,18 +49,6 @@
 
 <script>
     defer(function () {
-
-        var toolbarOptions = [
-            ['bold', 'italic'],        // toggled buttons
-        ];
-
-        var editor = new Quill('.artwork-description-editor', {
-            modules: {
-                toolbar: toolbarOptions
-            },
-            theme: 'snow'
-        });
-
 
         $('.button-reply').on( "click", function(e) {
             $('.message.reply').show();

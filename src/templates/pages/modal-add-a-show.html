@@ -1015,8 +1015,8 @@
     <div class="row has-space-small">
         <div class="col-xs-14 col-md-12">
             <div class="field">
-                <label class="label">Artwork Description  <i><small class="color-gray fw-normal">Characters: 0/2000</small></i></label>
-                <div class="artwork-description-editor">
+                <label class="label">Artwork Description <span class="text-fade text-s fs-n">Characters: <span class="ql-char-count">0</span>/<span class="ql-char-max">10</span></span></label>
+                <div class="artwork-description-editor at-ql-editor" data-ql-char-max="2000">
                     <p><br></p>
                 </div>
             </div>
@@ -1090,18 +1090,6 @@
             var divHide = $(this).attr( 'data-hide' );
             $('.add-a-show-' + divHide).hide();
             $('.add-a-show-' + divShow).show();
-        });
-
-        // Rich Editor
-        var toolbarOptions = [
-            ['bold', 'italic'],        // toggled buttons
-        ];
-
-        var editor = new Quill('.artwork-description-editor', {
-            modules: {
-                toolbar: toolbarOptions
-            },
-            theme: 'snow'
         });
 
     });

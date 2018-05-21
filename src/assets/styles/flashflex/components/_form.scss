@@ -20,6 +20,7 @@ label {
 			font-style: italic;
 			font-weight: normal;
 			color: $color-fade;
+			font-size: p(13);
 			// margin-left: 2rem;
 		}
 	}
@@ -193,7 +194,21 @@ select { font-size: inherit; }
     top: 1.4375rem;
 }
 
+
+// set full width select dropdown
+// if get an issue for UI UX
+// then remove it
+.select {
+	width: 100%;
+	select {
+		width: 100%;
+	}
+}
+
+
+
 // Rich text editor
+.ql-container { height: auto !important; }
 .ql-editor { min-height: 12.5rem; }
 
 // Radio, Check with button style, used in messages/inbox
@@ -216,6 +231,13 @@ select { font-size: inherit; }
 	.radio:not(:last-child),
 	.checkbox:not(:last-child) {
 		margin-right: 2rem;
+	}
+}
+
+.control {
+	font-size: p(15);
+	&:not(:last-child) {
+		margin-bottom: 0.75rem;
 	}
 }
 

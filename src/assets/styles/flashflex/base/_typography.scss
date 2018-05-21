@@ -113,9 +113,11 @@ h1, h2, h3, h4, h5, h6 {
     line-height: p(32);
     margin-bottom: p(35);
     font-weight: normal;
-    color: $color-db;
     word-wrap: break-word;
-
+    &:not(.is-link) {
+        color: $color-db;
+    }
+    
     small {
         font-family: $font-family-header-secondary;
         margin-left: 1em;
@@ -149,6 +151,10 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+hr { 
+    border-color: #d9d9d9;
+    border-top: 0px;
+}
 
 h3 {
     color: $color-placeholder;
@@ -165,7 +171,7 @@ h3.styled {
     h4, h5 {
         margin: 2.5rem 0 1.25rem 0;
         padding-bottom: 0.3125rem;
-        border-bottom: $border-width solid #333;
+        border-bottom: $border-width solid #999;
     }
 
     .modal-title {
@@ -221,6 +227,7 @@ h4 {
 .text-red { color: #f00; }
 .text-fade { color: $color-fade; }
 
+.fs-n { font-style: $fs-n; }
 .fw-n { font-weight: $weight-normal; }
 .fw-m,
 .fw-500 { font-weight: $weight-semibold; }

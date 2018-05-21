@@ -63,8 +63,11 @@
 
 
 	.step {
+		font-weight: $weight-semibold;
 		position: relative;
 		top: -10px;
+		display: block;
+		margin-top: 40px;
 	}
 
 	.checkout-prompt {
@@ -73,18 +76,16 @@
 		margin-bottom: 25px;
 	}
 	.checkout-prompt-box {
-			padding-bottom: 25px;
 
-			&:not(.active) {
-				border-top: $border-width solid $border-color;
-				padding: 35px 0 15px;
-				margin: 10px 0 5px 0;
-				border-bottom: $border-width solid rgba(0, 0, 0, 0);
+		border-bottom: $border-width solid $border-color;
+		padding: 0 0 30px;
 
-			&:last-of-type {
-				border-bottom: $border-width solid $border-color;
+		&:last-of-type {
+			&.active {
+				border-bottom: 0px;
 			}
 		}
+
 	}
 
 	h1, h2, h3, h4, h5, h6 {

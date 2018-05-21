@@ -12,7 +12,7 @@
 ////////////////////////////////////////////////////////////////////
 // Placeholders
 $for-phone-only            : (max, rem-to-px($fBG_xs));
-$for-tablet-portrait       : (inside, rem-to-px($fBG_xs), (rem-to-px($fBG_sm) - 1px));
+$for-tablet-portrait       : (inside, rem-to-px($fBG_xs), (rem-to-px($fBG_sm)));
 $for-tablet-portrait-up    : (min, rem-to-px($fBG_sm));
 $for-tablet-portrait-down  : (max, rem-to-px($fBG_sm));
 $for-tablet-landscape      : (inside, rem-to-px($fBG_sm), (rem-to-px($fBG_lg) - 1px));
