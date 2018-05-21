@@ -286,7 +286,72 @@ $(document).ready(function() {
     });
 
 
+    ////////////////////////////////////////////////////////////
+    // QL Editor
+    ////////////////////////////////////////////////////////////
+
+    var toolbarOptions = [
+        ['bold', 'italic'],        // toggled buttons
+    ];
+
+    if ( $('.at-ql-editor').length ) {
+        var editor = new Quill('.at-ql-editor', {
+            modules: {
+                toolbar: toolbarOptions
+            },
+            theme: 'snow'
+        });
+    }
+
+
+    // run ql function for counting ql div characters
+    at_ql();
+
+
 });
+
+
+function at_ql() {
+    if ( $('.ql-container').attr('data-ql-char-max') ) {
+
+        $('.ql-editor').keydown(function(e) {
+            var keycode = e.keyCode;
+            var tlength = $(this).text().length;
+
+            // 
+            // Ref: https://stackoverflow.com/questions/32471737/maxlength-for-div-like-textarea
+            // 
+
+            // List of keycodes of printable characters from:
+            var printable = 
+            (keycode > 47 && keycode < 58)   || // number keys
+            keycode == 32 || keycode == 13   || // spacebar & return key(s) (if you want to allow carriage returns)
+            (keycode > 64 && keycode < 91)   || // letter keys
+            (keycode > 95 && keycode < 112)  || // numpad keys
+            (keycode > 185 && keycode < 193) || // ;=,-./` (in order)
+            (keycode > 218 && keycode < 223);   // [\]' (in order)
+
+            if (printable) {
+                // get the length of total character typed in ql editor
+                remain = parseInt(tlength);
+                
+                // show typed character in html
+                $('.ql-char-count').text(remain);
+
+                // if reached max limit, Stop
+                return $(this).text().length <= qlCharMax -1;
+            }
+        });
+
+        // Get the character max length from data attribute data-ql-char-max="XX"
+        var qlCharMax = $('.ql-container').data('ql-char-max');
+
+        // show the max allowed char text in html
+        $('.ql-char-max').text(qlCharMax);
+
+    }
+}
+
 
 $(document).click(function(e) {
 

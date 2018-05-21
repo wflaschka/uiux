@@ -54,6 +54,15 @@
     	position: relative;
     	margin-bottom: p(30);
 
+	    &.no-border {
+	    	margin-bottom: 0px;
+	    	h1 {
+	    		margin: p(8) 0;
+				padding-bottom: 0;
+				border-bottom: 0;
+	    	}
+	    }
+	    
     	.link-back {
     		@extend %link-gray;
     		font-size: p(13);
@@ -63,7 +72,7 @@
 	    	font-size: p(45);
 	    	margin: p(8) 0 p(40);
 			padding-bottom: p(22);
-			border-bottom: $border-width solid #d9d9d9;
+			border-bottom: $border-width solid $border-color;
 			&.no-border {
 				padding-bottom: 0;
 				border-bottom: 0;
