@@ -11,3 +11,12 @@
 .home-search {
 	margin-top: -20px;
 }
+
+
+.group-step-home {
+	margin-top: 60px;
+
+	@include for-phone-only {
+		margin-top: 0px;
+	}
+}
