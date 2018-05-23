@@ -12,6 +12,12 @@
         display: none !important;
     }
 }
+.show-for-phone-only {
+    display: none !important;
+    @include for-phone-only {
+        display: block !important;
+    }
+}
 .hide-for-tablet-portrait {
     @include for-tablet-portrait {
         display: none !important;
