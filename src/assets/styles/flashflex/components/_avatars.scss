@@ -95,7 +95,12 @@
 // AVATAR -- extended for ArtTap
 // Edit this
 .avatar {
-    background: color(primary);
+    background: #e0e0e0;
+    color: #fff;
+
+    &.avatar-xl {
+        font-size: p(25);
+    }
 
     .avatar-status {
         @extend .avatar-presence;
