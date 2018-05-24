@@ -17,6 +17,7 @@
 		"modal",
 		"site-header-dropdown",
 		"site-header",
+		"site-header-dropdown-bg",
 		"slide-in",
 		"dropdown-menus",
 		"search-form",
@@ -58,6 +59,12 @@
 	$page-element-header-mobile-height: 50px;
 	$page-element-footer-height: 60px;
 	$page-element-footer-offset: 5rem;
+
+	$page-banner-height: 40px;
+	$page-header-height: 77px;
+	$page-footer-height: 248px;
+
+	$page-elements: $page-header-height + $page-footer-height;
 
 ////////////////////////////////////////////////////////////////////
 // FONTS AND TEXT STYLES
