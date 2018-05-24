@@ -1,20 +1,46 @@
 /**
  * HEADER
  */
+	
+$header-shadow: 0 2px 10px 0 rgba(0,0,0,0.24);
+$dropdown-shadow: 0 -5px 0px 0 rgba(255,255,255, 1), 0 3px 8px 0 rgba(0, 0, 0, 0.15);
+$dropdown-top-pos: 22px;
+$dropdown-top-pos-mobile: 11px;
+
+
+// transparent bg which overlaps all page except header as shown in prototype
+.header-dropdown-bg {
+	display: none;
+	position: absolute;
+	height: 100vh;
+	width: 100%;
+	top: 0px;
+	left: 0px;
+	background-color: rgba(234,234,234,0.8);
+    z-index: z('site-header') - 1;
+}
+
+
+#header {
+    position: relative;
+    z-index: z('site-header');
+}
 
 .header-banner {
 	text-align: center;
 	position: relative;
 	background-color: #f7f7f7;
-    z-index: z('site-header') + 1; 
+    z-index: z('site-header') + 1;
+    min-height: 40px;
 
 	.banner-text {
 		display: inline-block;
 		padding: 6px 0;
+		font-size: 13px;
+		letter-spacing: 0.3px;
 		@include for-phone-only {
 			width: 180px;
 			padding: 5px 0;
-			font-size: 13px;
 		}
 	}
 
@@ -35,14 +61,15 @@
     background-color: white;
     border-top: 3px solid rgb(223, 158, 38);
     position: relative;
-    z-index: z('site-header'); 
+    z-index: z('site-header');
 
     padding: 0 22px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    @include box_shadow(2);
+    box-shadow: $header-shadow;
+    // @include box_shadow(2);
 
 
     &.impersonated {
@@ -135,17 +162,19 @@
 
 	// icons
 	.at-bars {
-		font-size: 20px;
+		font-size: 22px;
 		position: relative;
-		top: 5px;
+		top: 6px;
+		left: -1px;
 	}
 
 	.at-bars-close {
-		font-size: 18px !important;
-		line-height: 10px;
-		position: relative;
-		top: 5px;
-		margin-right: 2px;
+	    line-height: 10px;
+	    position: relative;
+	    margin-top: 10px;
+	    top: 4px;
+	    left: 11px;
+	    margin-right: 10px;
 	}
 
 	.at-search {
@@ -177,49 +206,112 @@
 
 
 	@include for-tablet-portrait-down {
+
+		height: 72px;
+
 	    .cart-wrapper {
 	    	margin-right: 0px;
 	    }
 	}
 
 	@include for-phone-only {
+		
+		height: 56px;
+		padding: 0 19px;
+
 	    .hamburger {
-	    	margin-right: 16px;
+	    	margin-right: 13px;
 	    }
 
 	    .search-wrapper {
-	    	margin-right: 0px;
+	    	margin-right: 1px;
+
 	    	.fa-search,
 	    	.at-arrows-remove {
 	    		margin-right: 12px;
 	    	}
 	    }
 
+	    .logo {
+	        img {
+	            max-height: 23px;
+	            top: 0px;
+	        }
+	    }
+
 	    .cart-wrapper {
 	    	margin: 0 0px 0 10px;
 	    }
+
+		// icons
+		.at-bars {
+			font-size: 22px;
+			position: relative;
+			top: 6px;
+			left: -1px;
+		}
+
+		.at-bars-close {
+		    top: -1px;
+		    left: 3px;
+		}
+
+		.at-search {
+			font-size: 16px;
+			top: 1px;
+		}
+
+		.at-account {
+			font-size: 20px;
+			position: relative;
+			top: 3px;
+			right: 3px;
+		}
+		
+		.at-cart {
+			font-size: 18px;
+			top: 6px;
+			margin-right: 0px;
+		}
+
+		.at-arrows-up,
+		.at-arrows-down {
+	    	font-size: 10px;
+	    	margin-left: 6px;
+		}
+
 	}
 
 }
 
 
 .navigation-dropdown {
-	z-index: z('site-header-dropdown') !important; 
+	z-index: z('site-header-dropdown') !important;
 	background-color: white;
 	text-align: left;
-	padding: p(27) 2.5rem p(15);
+	padding: p(27) p(40) p(40);
 	// padding: 1rem 4.5rem 2.5rem;
 
 	// Shadows
-	@include box_shadow_topless(2);
+	// box-shadow: $dropdown-shadow;
+	// @include box_shadow_topless(2);
 	
 	// Positioning: menu height + top border width
-	transform: translateY(22px);
+	transform: translateY($dropdown-top-pos);
 
 
 	&.main-menu {
 		left: 0;
-		min-width: 304px;
+		width: 305px;
+		height: calc(100vh - 82px);
+		padding: 0px;
+		
+		ul.menu {
+			overflow: auto;
+			height: calc(100vh - 82px);
+			// Ref for spaceing https://projects.invisionapp.com/d/main#/console/11941484/251762893/preview
+			padding: 64px 30px 40px 95px;
+		}
 	}
 
 	&.register {
@@ -271,24 +363,36 @@
 	}
 
 	&.logged-in {
+		box-shadow: $dropdown-shadow;
 		left: auto;
 		right: 0;
-		min-width: 304px;
+		width: 305px;
+
+		ul {
+			padding: 0 0 0 p(54);
+
+			li {
+				margin: 0 0 p(26);
+
+				&:last-child {
+					margin-bottom: 0px;
+				}
+			}
+		}
 	}
 
 
-	ul.menu {
+	.menu {
 		list-style: none;
-		padding: 0 0 0 54px;
 		margin: 0;
 		color: gray;
 
 		li {
 			flex: 0 1 auto;
-			margin: 0 0 26px;
+			margin: 0 0 p(32);
 			padding: 0;
 			position: relative;
-			transition: all linear 1s;
+			// transition: all linear 1s;
 
 			// Appearance
 			a {
@@ -298,7 +402,7 @@
 			
 			&.active {
 				> a {
-					color: $color-db;
+					color: $color-db !important;
 					font-weight: $weight-semibold;
 				}
 			}
@@ -306,8 +410,14 @@
 			// Disclosure triangle
 			.icon-disclosure {
 				position: absolute;
-				top: p(2);
-				right: p(20);
+				top: p(4);
+				
+				// right: p(20);
+
+				// Using position left because when overflow shows scroll bar the right position get moved to left a bit.
+				// So positioning from left works fine in this situation.
+				left: p(144);
+
 				margin-left: 1rem;
 				@include at;
 				@extend .at-arrows-down;
@@ -327,15 +437,17 @@
 				line-height: p(18);
 
 				li {
-					padding-left: p(25);
-					margin-bottom: p(22);
+					padding-left: p(35);
+					margin-bottom: p(28);
+					&:last-child {
+						margin-bottom: 0px;
+					}
 				}
 			}
 			&.active ul {
 				display: flex;
 				flex-direction: column;
 			}
-
 
 			&.is-admin {
 				border: $border-width solid color(gray);
@@ -368,26 +480,30 @@
 	}
 
 	@include for-phone-only {
-		width: 100vw;
+		// width: 100vw;
 		// width: 80vw;
+		transform: translateY($dropdown-top-pos-mobile);
+		padding-left: p(20);
+		padding-right: p(20);
 	}
+
 	@include for-tablet-portrait {
-		width: 50vw;
+		// width: 50vw;
 	}
 	@include for-tablet-landscape {
-		width: 35vw;
+		// width: 35vw;
 	}
 	@include for-desktop {
-		width: 25vw;
+		// width: 25vw;
 	}
 	@include for-big-desktop {
-		width: 15vw;
+		// width: 15vw;
 	}
 
 	@include for-desktop-up {
 		&.logged-in {
 			right: auto;
-			transform: translate(-67px, 21px);
+			transform: translate(-67px, $dropdown-top-pos);
 		}
 	}
 
@@ -418,7 +534,7 @@
 	// z-index: 1500;
 	z-index: z('site-header-dropdown'); 
 	left: 0px;
-	transform: translateY(16px);
+	transform: translateY($dropdown-top-pos);
 	// top: $page-element-header-height + 2;
 	@include for-tablet-portrait-down {
 		// top: $page-element-header-mobile-height + 2;
@@ -428,8 +544,8 @@
 	width: 100%;
 	overflow: hidden;
 	background: #fff;
-	transition: height linear .3s;
-	@include box_shadow(2);
+	box-shadow: $dropdown-shadow;
+	// @include box_shadow(2);
 
 	.search-form {
 		width: 75%;
@@ -437,7 +553,7 @@
 		margin: 0 auto;
 		padding: 5.5rem 0 0;
 		transform: translateY(-2rem);
-		transition: all linear .3s;
+		// transition: all linear .3s;
 		@include for-phone-only {
 			width: 100%;
 			padding-left: p(20);
@@ -470,6 +586,10 @@
 			position: relative;
 			margin: 3px 0.5rem;
 		}
+	}
+
+	@include for-phone-only {
+		transform: translateY($dropdown-top-pos-mobile);
 	}
 
 } //.search

@@ -120,12 +120,30 @@ $(document).ready(function() {
             // then remove class and hide it
             dropdown.removeClass('open');
             content.slideUp('slow');
+            $(".header-dropdown-bg").fadeOut();
         } else {
             // else add class and show it
             dropdown.addClass('open');
             content.slideDown('slow');
+            $(".header-dropdown-bg").fadeIn();
         }
     });
+
+
+
+    ////////////////////////////////////////////////////////////
+    // Main menu > submenu dropdown
+    $('.navigation-dropdown li').has('ul').click(function(){
+        submenu = $(this).find('ul');
+        if (submenu.is(':hidden')) {
+            submenu.slideDown('slow');
+            $(this).addClass('active');
+        } else {
+            submenu.slideUp('slow');
+            $(this).removeClass('active');
+        }
+    });
+
 
 
     ////////////////////////////////////////////////////////////
@@ -289,32 +307,28 @@ $(document).ready(function() {
     ////////////////////////////////////////////////////////////
     // QL Editor
     ////////////////////////////////////////////////////////////
-
-    var toolbarOptions = [
-        ['bold', 'italic'],        // toggled buttons
-    ];
-
-    if ( $('.at-ql-editor').length ) {
-        var editor = new Quill('.at-ql-editor', {
-            modules: {
-                toolbar: toolbarOptions
-            },
-            theme: 'snow'
-        });
-    }
-
-
-    // run ql function for counting ql div characters
-    at_ql();
-
+    // TODO: organize qlCountCharacters() and qlUpdateCount() for QL editor in `site.js`
+    //    var toolbarOptions = [
+    //        ['bold', 'italic'],
+    //    ];
+    //
+    //    if ( $('.at-ql-editor').length ) {
+    //        var editor = new Quill('.at-ql-editor', {
+    //            modules: {
+    //                toolbar: toolbarOptions
+    //            },
+    //            theme: 'snow'
+    //        });
+    //    }
+    qlCountCharacters();
 
 });
 
 
-function at_ql() {
+function qlCountCharacters() {
     if ( $('.ql-container').attr('data-ql-char-max') ) {
-
         $('.ql-editor').keydown(function(e) {
+
             var keycode = e.keyCode;
             var tlength = $(this).text().length;
 
@@ -351,6 +365,13 @@ function at_ql() {
 
     }
 }
+// When page first loads, run this to set the count:
+function qlUpdateCount() {
+    tlength = $('.ql-editor').text().length;
+    remain = parseInt(tlength);
+    $('.ql-char-count').text(remain);
+}
+
 
 
 $(document).click(function(e) {
@@ -361,6 +382,7 @@ $(document).click(function(e) {
     if (!dropdownContainer.is(e.target) && dropdownContainer.has(e.target).length === 0) {
         $('.at.dropdown').removeClass('open');
         $('.at.dropdown .dropdown-content').slideUp('slow');
+        $(".header-dropdown-bg").fadeOut();
     }
 
 });
