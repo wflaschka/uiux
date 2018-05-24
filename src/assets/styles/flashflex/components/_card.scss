@@ -112,16 +112,18 @@
 		}
 	}
 	&.edit {
-		height: 180px;
+		height: 178px;
 		width: 150px;
 		box-shadow: $shadow;
+		margin-bottom: 1rem;
+
 		.image {
-			box-shadow: none;
+			// box-shadow: none;
 			width: 150px;
-			height: 125px;
+			height: 124px;
 		}
 		.content {
-			height: 55px;
+			height: 54px;
 			margin: 0;
 			display: flex;
 			flex-direction: row;
@@ -135,6 +137,14 @@
 				justify-content: center;
 
 				height: 100%;
+
+				.at-add { font-size: p(19); }
+				.at-crop { font-size: p(20); }
+				.at-delete { font-size: p(24); }
+
+				&:hover {
+					color: #000;
+				}
 			}
 		}
 
@@ -165,16 +175,22 @@
 
 		&.empty {
 			.image {
-				background-color: color(gray-light);
+				box-shadow: none;
+				background-color: #f7f7f7;
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
 				align-items: center;
 				position: relative;
 
+				.at-attach-work {
+					transform: translateY(-15px);
+				}
+
 				input {
 					opacity: 0;
 					position: absolute;
+					z-index: 1; // fix clicking on icon not open file upload
 					width: 100%;
 					height: 125px;
 				}
