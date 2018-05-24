@@ -100,7 +100,6 @@ $colorsBasic: (primary , secondary , text , link , white , gray , black , lime ,
 // @debug "primary color (inverse): " color-inverse(primary);
 
 
-
 // Color classes
 @each $name, $pair in $colors {
 	$this-color: nth($pair, 1);

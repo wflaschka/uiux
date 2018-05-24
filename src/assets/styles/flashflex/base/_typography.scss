@@ -95,17 +95,17 @@ h6 {
     }
 }
 
-    @include for-phone-only {
-        // set h2 to 30px for mobile as in prototype artist inbox page
-        // will keep update others heading as I found pages and their match
-        h2 {
-            font-size: p(30);
-        }
-        // set h4 to 25px for mobile as in prototype help-main, typography stats pages 
-        h4 {
-            font-size: p(25);
-        }
+@include for-phone-only {
+    // set h2 to 30px for mobile as in prototype artist inbox page
+    // will keep update others heading as I found pages and their match
+    h2 {
+        font-size: p(30);
     }
+    // set h4 to 25px for mobile as in prototype help-main, typography stats pages 
+    h4 {
+        font-size: p(25);
+    }
+}
 
 
 h1, h2, h3, h4, h5, h6 {
