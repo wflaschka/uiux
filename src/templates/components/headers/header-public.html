@@ -163,17 +163,6 @@
             e.preventDefault();
         });
 
-        $('.navigation-dropdown li').has('ul').click(function(){
-            submenu = $(this).find('ul');
-            if (submenu.is(':hidden')) {
-                submenu.slideDown('slow');
-                $(this).addClass('active');
-            } else {
-                submenu.slideUp('slow');
-                $(this).removeClass('active');
-            }
-        });
-
     });
 </script>
 </header>

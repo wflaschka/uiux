@@ -412,6 +412,13 @@
                 }
             });
 
+
+            $('.at.slider').on('init', function(event, slick){
+                $(this).wrap('<div class="slider-wrapper"></div>');
+                $(this).find('.slick-arrow').prependTo( $(this).parents('.slider-wrapper') );
+
+                setElementsHeight();
+            });
             $('.at.slider.slide2').slick({
                 infinite: false,
                 slidesToShow: 2,

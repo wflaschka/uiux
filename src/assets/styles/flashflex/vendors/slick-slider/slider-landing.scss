@@ -9,12 +9,13 @@
             button {
                 &:before {
                     font-size: .7rem;
-                    color: color(white);
-                    opacity: .5;
+                    color: #989898;
+                    opacity: 1;
                 }
             }
             &.slick-active button:before {
-                opacity: 1;
+                color: #191919;
+                // opacity: 1;
             }
         }
     }

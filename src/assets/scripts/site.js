@@ -165,7 +165,7 @@ $(document).ready(function() {
     // Slick Slider
     ////////////////////////////////////////////////////////////
     // check if Slider exist then run to avoid errors
-    if ( $('.at.slider').length ) {
+    if ( $('.at.slider.is-responsive').length ) {
 
         if ( $('.page').hasClass('has-sidebar') ) {
             

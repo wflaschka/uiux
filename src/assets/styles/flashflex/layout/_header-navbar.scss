@@ -27,6 +27,7 @@ $dropdown-top-pos-mobile: 11px;
 }
 
 .header-banner {
+	// display: none;
 	text-align: center;
 	position: relative;
 	background-color: #f7f7f7;
@@ -303,12 +304,12 @@ $dropdown-top-pos-mobile: 11px;
 	&.main-menu {
 		left: 0;
 		width: 305px;
-		height: calc(100vh - 82px);
+		// height: calc(100vh - 56px);
 		padding: 0px;
 		
 		ul.menu {
 			overflow: auto;
-			height: calc(100vh - 82px);
+			height: calc(100vh - 77px);
 			// Ref for spaceing https://projects.invisionapp.com/d/main#/console/11941484/251762893/preview
 			padding: 64px 30px 40px 95px;
 		}
@@ -485,6 +486,12 @@ $dropdown-top-pos-mobile: 11px;
 		transform: translateY($dropdown-top-pos-mobile);
 		padding-left: p(20);
 		padding-right: p(20);
+
+		&.main-menu {
+			ul.menu {
+				height: calc(100vh - 56px);
+			}
+		}
 	}
 
 	@include for-tablet-portrait {
