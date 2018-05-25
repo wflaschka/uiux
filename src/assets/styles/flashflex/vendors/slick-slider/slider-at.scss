@@ -99,7 +99,7 @@
 	}
 
 	.slick-next {
-		right: 12px;
+		right: 9px;
 	    [dir="rtl"] & {
 	    }
 	    &:before {
@@ -129,5 +129,17 @@
 	        }
 	    }
 	}
+
+@include for-tablet-landscape-up {
+	.slick-next {
+		right: 3px;
+	}
+}
+
+@include for-desktop-up {
+	.slick-next {
+		right: 12px;
+	}
+}
 
 }

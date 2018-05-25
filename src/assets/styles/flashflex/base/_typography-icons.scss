@@ -89,8 +89,10 @@
 }
 
 // Customize icons Size
-.at-heart,
-.at-heart-o {
-    font-size: 15px;
+.card {
+    .at-heart,
+    .at-heart-o {
+        font-size: 15px;
+    }   
 }
 

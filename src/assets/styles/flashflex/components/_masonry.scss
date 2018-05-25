@@ -1,23 +1,139 @@
 ////////////////////////////////////////////////////
 // Masonry
 // Responsive width set to center align layout
+// Mobile First
 ////////////////////////////////////////////////////
 
+// 
+// how to divide cards for a row that fit accuratelly
+// check total width of container e.g. desktop 1200
+// total width: 1200 / 4 = 300
+// column width: 260 * 4 = 1040
+// 160 / 3 = 53
+// gutter size = 53;
+//
+
+// mcw = massonry card width
+$mcwMobile: 150px;
+$mcwTablet: 167px;
+$mcwLaptop: 172px;
+$mcwDesktop: 260px; // show 4 in a row
+
+// gs = gutter size
+$gsMobile: 20px;
+$gsTablet: 20px;
+$gsLaptop: 20px;
+$gsDesktop: 53px;
+
+
 .masonry-grid {
-	max-width: 340px;
 	margin: 0 auto;
+
+	.grid-size {
+		width: $mcwMobile;
+	}
+	.gutter-size {
+		width: $gsMobile;
+	}
+
+	.card.masonry {
+		width: $mcwMobile;
+		margin: 0 0 20px;
+
+		.image {
+			width: $mcwMobile;
+			background: none;
+
+			img {
+				width: $mcwMobile;
+				height: auto;
+				display: block;
+			}
+		}
+
+		.content {
+			width: $mcwMobile;
+		}
+	}
 
 
 @include for-tablet-portrait {
-	max-width: 680px;
+
+	.grid-size {
+		width: $mcwTablet;
+	}
+	.gutter-size {
+		width: $gsTablet;
+	}
+	
+	.card.masonry {
+		width: $mcwTablet;
+
+		.image {
+			width: $mcwTablet;
+
+			img {
+				width: $mcwTablet;
+			}
+		}
+
+		.content {
+			width: $mcwTablet;
+		}
+	}
+
 }
 
 @include for-tablet-landscape-up {
-	max-width: 850px;
+
+	.grid-size {
+		width: $mcwLaptop;
+	}
+	.gutter-size {
+		width: $gsLaptop;
+	}
+	
+	.card.masonry {
+		width: $mcwLaptop;
+
+		.image {
+			width: $mcwLaptop;
+
+			img {
+				width: $mcwLaptop;
+			}
+		}
+		
+		.content {
+			width: $mcwLaptop;
+		}
+	}
 }
 
 @include for-desktop-up {
-	max-width: 1190px;
+
+	.grid-size {
+		width: $mcwDesktop;
+	}
+	.gutter-size {
+		width: $gsDesktop;
+	}
+	
+	.card.masonry {
+		width: $mcwDesktop;
+
+		.image {
+			width: $mcwDesktop;
+
+			img {
+				width: $mcwDesktop;
+			}
+		}
+		
+		.content {
+			width: $mcwDesktop;
+		}
+	}
 }
 
 }

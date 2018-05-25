@@ -9,9 +9,18 @@ function defer(method) {
     }
 }
 
+function setElementsHeight(){
+    $('.header-dropdown-bg').height( $(document).height() );
+    $('.navigation-dropdown.main-menu').height( $(document).height() - $('#header').height() );
+    // var menuHeight = $('.navigation-dropdown.main-menu .menu').height();
+    // $('.navigation-dropdown.main-menu .menu').height( menuHeight - $('#header').height());
+}
+
 
 // Common JS for site
 $(document).ready(function() {
+
+    var elementsHeight = false;
 
     // DEPRECATED 20180506, this is handled by special cookie code on `atx` repo
     ////////////////////////////////////////////////////////////
@@ -127,6 +136,12 @@ $(document).ready(function() {
             content.slideDown('slow');
             $(".header-dropdown-bg").fadeIn();
         }
+
+        if ( elementsHeight == false ) {
+            setElementsHeight();
+            elementsHeight = true;
+            console.log('set Height');
+        }
     });
 
 
@@ -164,58 +179,68 @@ $(document).ready(function() {
     ////////////////////////////////////////////////////////////
     // Slick Slider
     ////////////////////////////////////////////////////////////
+
+
+    $('.at.slider').on('init', function(event, slick){
+        $(this).wrap('<div class="slider-wrapper"></div>');
+        $(this).find('.slick-arrow').prependTo( $(this).parents('.slider-wrapper') );
+
+        setElementsHeight();
+    });
+
+
     // check if Slider exist then run to avoid errors
     if ( $('.at.slider.is-responsive').length ) {
 
-        if ( $('.page').hasClass('has-sidebar') ) {
+        // if ( $('.page').hasClass('has-sidebar') ) {
             
-            $('.at.slider.is-responsive').slick({
-                infinite: false,
-                slidesToShow: 5,
-                slidesToScroll: 5,
-                responsive: [
-                    {
-                      breakpoint: 1100,
-                      settings: {
-                        slidesToShow: 6,
-                        slidesToScroll: 6
-                      }
-                    },
-                    {
-                      breakpoint: 950,
-                      settings: {
-                        slidesToShow: 5,
-                        slidesToScroll: 5
-                      }
-                    },
-                    {
-                      breakpoint: 800,
-                      settings: {
-                        slidesToShow: 4,
-                        slidesToScroll: 4
-                      }
-                    },
-                    {
-                      breakpoint: 650,
-                      settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 3
-                      }
-                    },
-                    {
-                      breakpoint: 530,
-                      settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2
-                      }
-                    }
-                    // You can unslick at a given breakpoint now by adding:
-                    // settings: "unslick"
-                    // instead of a settings object
-                ]
-            });
+        //     $('.at.slider.is-responsive').slick({
+        //         infinite: false,
+        //         slidesToShow: 5,
+        //         slidesToScroll: 5,
+        //         responsive: [
+        //             {
+        //               breakpoint: 1100,
+        //               settings: {
+        //                 slidesToShow: 6,
+        //                 slidesToScroll: 6
+        //               }
+        //             },
+        //             {
+        //               breakpoint: 950,
+        //               settings: {
+        //                 slidesToShow: 5,
+        //                 slidesToScroll: 5
+        //               }
+        //             },
+        //             {
+        //               breakpoint: 800,
+        //               settings: {
+        //                 slidesToShow: 4,
+        //                 slidesToScroll: 4
+        //               }
+        //             },
+        //             {
+        //               breakpoint: 650,
+        //               settings: {
+        //                 slidesToShow: 3,
+        //                 slidesToScroll: 3
+        //               }
+        //             },
+        //             {
+        //               breakpoint: 530,
+        //               settings: {
+        //                 slidesToShow: 2,
+        //                 slidesToScroll: 2
+        //               }
+        //             }
+        //             // You can unslick at a given breakpoint now by adding:
+        //             // settings: "unslick"
+        //             // instead of a settings object
+        //         ]
+        //     });
 
-        } else {
+        // } else {
 
             $('.at.slider.is-responsive').slick({
                 infinite: false,
@@ -263,7 +288,7 @@ $(document).ready(function() {
                 ]
             });
 
-        }
+        // }
 
     }
 
@@ -322,6 +347,7 @@ $(document).ready(function() {
     //    }
     qlCountCharacters();
 
+    setElementsHeight();
 });
 
 

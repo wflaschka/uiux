@@ -208,20 +208,6 @@
 			height: 200px;
 		}
 	}
-	&.masonry {
-		margin: 0.5rem;
-
-		.image {
-			width: 150px;
-			background: none;
-
-			img {
-				width: 150px;
-				height: auto;
-				display: block;
-			}
-		}
-	}
 	&.artist {
 		a {
 			text-decoration: none;
@@ -355,7 +341,6 @@
 	}
 
 }
-
 
 .image-upload-dropzone .card {
 	margin-bottom: 1.5rem;
