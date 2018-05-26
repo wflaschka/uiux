@@ -27,7 +27,7 @@ $dropdown-top-pos-mobile: 11px;
 }
 
 .header-banner {
-	// display: none;
+	display: none;
 	text-align: center;
 	position: relative;
 	background-color: #f7f7f7;
@@ -156,6 +156,9 @@ $dropdown-top-pos-mobile: 11px;
 			margin-bottom: p(22);
 			a {
 				@extend .link-gray;
+			}
+			&:last-child {
+				margin-bottom: 0px;
 			}
 		}
 	}

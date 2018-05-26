@@ -74,8 +74,8 @@
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    width: p(66);
-    height: p(66);
+    width: p(64);
+    height: p(64);
 }
 
 .at.at-arrows-remove {
@@ -96,3 +96,22 @@
     }   
 }
 
+// used on biography upload photo
+.at-icon-profile-photo {
+    font-size: 32px;
+    color: #999;
+    border-color: #000;
+}
+
+.upload-profile-photo {
+    // width: 240px;
+    position: relative;
+    
+    input {
+        opacity: 0;
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 64px;
+    }
+}

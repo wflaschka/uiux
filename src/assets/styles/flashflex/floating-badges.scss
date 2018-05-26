@@ -2,7 +2,7 @@
 // FLOATING BADGES
 // From SpectreCSS
 // 
-// NOT in use yet... might not be needed.
+// Used in cart...
 ////////////////////////////////////////////////////////////////////
 
 .badge {
@@ -12,17 +12,18 @@
 .badge[data-badge]:after {
 	background-clip: padding-box;
 	border-radius: 1rem;
-	content:attr(data-badge);
+	content: attr(data-badge);
 	font-size: $size-small;
-	height: 1rem;
-	line-height: 1;
-	min-width: 1rem;
-	padding: .1rem .2rem;
-	position:absolute;
-	right:-0.5rem;
+    font-style: normal;
+    text-indent: -1px;
+	height: p(17);
+    line-height: 1.5;
+	min-width: p(17);
+	// padding: .1rem .2rem;
+	position: absolute;
+	right: p(-8);
 	text-align: center;
-	text-align:center;
-	top:-0.5rem;
+	top: p(-10);
 	white-space: nowrap;
 
 	// default colors
@@ -37,6 +38,7 @@
 
 	.badge[data-badge].is-#{$name}-badge:after {
 		background-color: $color;
-		color: $color-invert;
+		// color: $color-invert;
+		color: #fff;
 	}
 }

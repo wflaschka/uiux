@@ -42,26 +42,6 @@
 		}
 	}
 
-	.two-column {
-		display: flex;
-
-		.col-one,
-		.col-two {
-			flex: 50% 0 0;
-		}
-
-		.col-one {
-			padding-right: 40px;
-		}
-
-		.col-two {
-			border-left: $border-width solid $border-color;
-			padding-left: 40px;
-		}
-	}
-
-
-
 	.step {
 		font-weight: $weight-semibold;
 		position: relative;
