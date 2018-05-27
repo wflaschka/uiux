@@ -26,7 +26,7 @@
     position: relative;
     z-index: 2;
     box-sizing: border-box;
-    padding: p(63) p(40) 1rem p(40);
+    padding: p(63) p(40);
 
     // Sizing
     width: 90%;
@@ -35,6 +35,7 @@
     &.is-small {
         max-width: 600px;
         padding-top: p(40);
+        padding-bottom: p(40);
     }
     &.is-medium {
         max-width: 800px;

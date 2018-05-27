@@ -14,12 +14,13 @@
         margin-top: p(12);
         padding: 0;
         border-bottom-color: $border-color;
-        border-bottom-width: 2px;
+        border-bottom-width: 1px;
         li {
             &.is-active {
                 a {
                     border-bottom-color: #000000;
                     color: #333;
+                    border-bottom-width: 2px;
                 }
             }
         }
@@ -29,9 +30,9 @@
         cursor: pointer;
         padding: p(10) 1.1rem;
         border-bottom-color: $border-color;
-        border-bottom-width: 2px;
+        border-bottom-width: 1px;
+        margin-bottom: -1px;
         color: rgba(25, 25, 25, 0.44);
-        margin-bottom: -2px;
     }
 
 

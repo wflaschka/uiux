@@ -1,0 +1,38 @@
+///////////////////////////////////////////////////////////////////
+// Page Support - policy, copyright, terms, and help sections
+///////////////////////////////////////////////////////////////////
+
+.page-support {
+
+	h1, h2, h3, h4, h5, h6 {
+		font-family: $font-family-header-secondary;
+		font-size: 26px;
+		margin: 40px 0 10px;
+	}
+	.page-title {
+		h1 {
+			font-family: $font-family-header;
+		}
+	}
+
+	p {
+		margin: 0 0 1rem;
+	}
+
+	ol, ul {
+		li {
+			margin: 0 0 1rem;
+		}
+	}
+
+
+@include for-tablet-portrait-up {
+}
+
+@include for-tablet-landscape-up {
+}
+
+@include for-desktop-up {
+}
+
+}
