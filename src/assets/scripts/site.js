@@ -182,8 +182,6 @@ $(document).ready(function() {
 
 
     $('.at.slider').on('init', function(event, slick){
-        $(this).wrap('<div class="slider-wrapper"></div>');
-        $(this).find('.slick-arrow').prependTo( $(this).parents('.slider-wrapper') );
 
         setElementsHeight();
     });
@@ -250,8 +248,8 @@ $(document).ready(function() {
                     {
                       breakpoint: 1100,
                       settings: {
-                        slidesToShow: 6,
-                        slidesToScroll: 6
+                        slidesToShow: 5,
+                        slidesToScroll: 5
                       }
                     },
                     {

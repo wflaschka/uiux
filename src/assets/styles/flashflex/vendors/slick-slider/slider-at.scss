@@ -1,16 +1,29 @@
 ////////////////////////////////////////////////////////////////////
 // Slider ArtTap - Common slider for ArtTap elements.
+// Mobile First
+////////////////////////////////////////////////////////////////////
+
+
+// scm = slideCardMargin
+$scm: 10px;
+$scmTablet: 17.5px;
+$scmLaptop: 24.5px;
+$scmDesktop: 12.5px;
 
 .at.slider {
 	position: relative;
 	max-height: 200px;
-	// Left Right arrows not visible so disabling overflow
+	// added overflow hidden to hide slides breakng UI, remove it on slider Initialized 
 	overflow: hidden;
+
+	width: calc(100% + #{$scm} * 2);
+	transform: translateX(-$scm);
 
 	@include preloader();
 
 	&.slick-initialized {
 		max-height: initial; // remove max height so slider cards data show in full height.
+		overflow: unset;
 
 		&::before,
 		&::after {
@@ -21,10 +34,11 @@
 	&.has-space {
 		margin-bottom: p(50);
 	}
-}
-	
-.slider-wrapper {
-	position: relative;
+
+	.card {
+		margin-right: $scm;
+		margin-left: $scm;
+	}
 
 	&:hover {
 		.slick-prev,
@@ -67,12 +81,12 @@
 	    	@include at;
 			border: 1px solid #D9D9D9;
 			background: #fff;
-			font-size: 15px;
+			font-size: 13px;
 			border-radius: 50%;
-			padding: 14px;
+			padding: 11px 10px;
 			color: #333;
-			width: 45px;
-			height: 45px;
+			width: 35px;
+			height: 35px;
 			display: block;
 			opacity: 1;
 			position: relative;
@@ -81,7 +95,7 @@
 
 	.slick-prev {
 		background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.75) 100%);
-		left: 0px;
+		left: $scm;
 	    [dir="rtl"] & {
 	    }
 	    &:hover {
@@ -92,19 +106,19 @@
 	    }
 	    &:before {
 	    	@extend .at-arrows-left;
-	    	left: -22px;
+	    	left: -15px;
 	        [dir="rtl"] & {
 	        }
 	    }
 	}
 
 	.slick-next {
-		right: 9px;
+		right: $scm;
 	    [dir="rtl"] & {
 	    }
 	    &:before {
 	    	@extend .at-arrows-right;
-	    	right: -7px;
+	    	right: -10px;
 	        [dir="rtl"] & {
 	        }
 	    }
@@ -130,15 +144,79 @@
 	    }
 	}
 
-@include for-tablet-landscape-up {
+
+@include for-tablet-portrait {
+	width: calc(100% + #{$scmTablet} * 2);
+	transform: translateX(-$scmTablet);
+
+	.card {
+		margin-right: $scmTablet;
+		margin-left: $scmTablet;
+	}
+
+	.slick-prev {
+		left: $scmTablet;
+	}
+
 	.slick-next {
-		right: 3px;
+		right: $scmTablet - 2;
+	}
+
+}
+
+@include for-tablet-landscape-up {
+	width: calc(100% + #{$scmLaptop} * 2);
+	transform: translateX(-$scmLaptop);
+
+	.card {
+		margin-right: $scmLaptop;
+		margin-left: $scmLaptop;
+	}
+
+	.slick-prev,
+	.slick-next {
+	    &:before {
+			font-size: 15px;
+			padding: 14px;
+			width: 45px;
+			height: 45px;
+	    }
+	}
+
+	.slick-prev {
+		left: $scmLaptop;
+
+	    &:before {
+	    	left: -22px;
+	    }
+	}
+
+	.slick-next {
+		right: $scmLaptop - 2;
+
+	    &:before {
+	    	right: -7px;
+	    }
 	}
 }
 
+
+
 @include for-desktop-up {
+	width: calc(100% + #{$scmDesktop} * 2);
+	transform: translateX(-$scmDesktop);
+
+	.card {
+		margin-right: $scmDesktop;
+		margin-left: $scmDesktop;
+	}
+
+	.slick-prev {
+		left: $scmDesktop;
+	}
+
 	.slick-next {
-		right: 12px;
+		right: $scmDesktop;
 	}
 }
 
