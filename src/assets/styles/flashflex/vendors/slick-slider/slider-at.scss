@@ -35,11 +35,6 @@ $scmDesktop: 12.5px;
 		margin-bottom: p(50);
 	}
 
-	.card {
-		margin-right: $scm;
-		margin-left: $scm;
-	}
-
 	&:hover {
 		.slick-prev,
 		.slick-next {
@@ -142,6 +137,24 @@ $scmDesktop: 12.5px;
 	        &.slick-active button:before {
 	        }
 	    }
+	}
+
+
+	.card {
+		margin-right: $scm;
+		margin-left: $scm;
+	}
+
+	.content {
+		// setting to 100% for slider pixel perfect layout.
+		width: 100%;
+	}
+	
+	&.square {
+		.image {
+			// setting to 100% for slider pixel perfect layout.
+			width: 100%;
+		}
 	}
 
 

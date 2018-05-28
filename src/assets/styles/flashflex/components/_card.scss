@@ -29,9 +29,7 @@
 
 	.content {
 		height: 4rem;
-		// width: 150px;
-		// setting to 100% for slider pixel perfect layout.
-		width: 100%;
+		width: 150px;
 
 		margin-top: 11px; // match with prototype
 		// margin-top: 12.8px;
@@ -74,9 +72,7 @@
 	// Card variations
 	&.square {
 		.image {
-			// width: 150px;
-			// setting to 100% for slider pixel perfect layout.
-			width: 100%;
+			width: 150px;
 			height: 150px;
 		}
 	}
