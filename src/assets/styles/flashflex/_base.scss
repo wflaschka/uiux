@@ -179,7 +179,10 @@
 				"components/apply-thumbnails",
 				"components/tabs",
 				"components/artist-follow-toggle",
-				"floating-badges.scss"; // Might not be needed
+				"floating-badges.scss", // Might not be needed
+
+				// Drag-and-drop image upload
+				"components/image-upload";
 
 		// These are for Spectre avatar include
 		$border-width: $unit-o !default;
