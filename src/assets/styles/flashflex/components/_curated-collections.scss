@@ -11,7 +11,11 @@
 
 	.block-curated {
 		margin-bottom: p(50);
-		width: 340px;
+		// width: 340px;
+
+		&:last-child {
+			margin-bottom: 0px;
+		}
 
 		.user {
 		    display: flex;
@@ -36,7 +40,7 @@
 		}
 
 		.btn-collection {
-			width: calc(100% - 1rem);
+			// width: calc(100% - 1rem);
 		}
 	}
 
@@ -52,8 +56,12 @@
 	@include for-tablet-portrait-up {
 		flex-direction: row;
 
-		.block-curated:last-child {
-			display: none;
+		.block-curated {
+			width: 340px;
+
+			&:last-child {
+				display: none;
+			}
 		}
 	}
 
@@ -74,4 +82,3 @@
 	}
 
 }
-

@@ -20,7 +20,10 @@
     .select2-container {
         .select2-selection {
             transition: border-color $speed;
-            height: 2.285em;
+            // height: 2.285em;
+            height: unset;
+            padding-top: p(4);
+            padding-bottom: p(4);
             line-height: 1.5;
             font-size: 1rem;
             outline: none !important;
@@ -33,8 +36,11 @@
                 border-color: $border-hover;
             }
             .select2-selection__rendered {
-                padding-left: 0.75em;
-                padding-right: 0.75em;
+                // padding-left: 0.75em;
+                // padding-right: 0.75em;
+                padding-left: p(5);
+                padding-right: p(5);
+                
                 .select2-selection__choice {
                     @extend .tag;
 

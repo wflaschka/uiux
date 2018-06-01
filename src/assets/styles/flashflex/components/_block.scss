@@ -23,7 +23,7 @@
 
 	&.shipping-address {
 	    margin-bottom: 2rem;
-        flex: 0 0 47%;
+        flex: 0 0 100%;
 
 	    .title {
 	    	padding: 1rem;
@@ -54,6 +54,9 @@
 
 @include for-tablet-portrait-up {
 
+	&.shipping-address {
+        flex: 0 0 47%;
+	}
 }
 
 @include for-tablet-landscape-up {

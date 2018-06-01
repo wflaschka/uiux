@@ -143,19 +143,27 @@ $scmDesktop: 12.5px;
 	.card {
 		margin-right: $scm;
 		margin-left: $scm;
-	}
-
-	.content {
-		// setting to 100% for slider pixel perfect layout.
-		width: 100%;
-	}
-	
-	&.square {
-		.image {
+		
+		.content {
 			// setting to 100% for slider pixel perfect layout.
 			width: 100%;
 		}
+		
+		&.square {
+			.image {
+				// setting to 100% for slider pixel perfect layout.
+				width: 100%;
+			}
+		}
+		&.artist {
+			position: relative;
+			.card-avatar {
+				width: 100%;
+			}
+		}
+
 	}
+
 
 
 @include for-tablet-portrait {

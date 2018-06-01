@@ -168,6 +168,8 @@
 				.image {
 					img {
 						display: block;
+						width: 100%;
+						height: 125px;
 					}
 				}
 			}
@@ -334,9 +336,9 @@
 	}
 
 	@include for-phone-only {
-		margin-right: 0;
-		&:not(.masonry):nth-child(odd) {
-			margin-right: 1rem;
+		// margin-right: 0;
+		&:not(.masonry):nth-child(even) {
+			margin-right: 0px;
 		}
 	}
 

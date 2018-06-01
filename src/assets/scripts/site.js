@@ -20,6 +20,28 @@ function setElementsHeight(){
 // Common JS for site
 $(document).ready(function() {
 
+    // Customized for AT
+    // NOTE: when update this library don't forget to Place this code inside jquery.modal.js 
+    // Ref: https://github.com/kylefox/jquery-modal#options
+    // $.modal.defaults = {
+    //   closeExisting: false,    // Close existing modals. Set this to false if you need to stack multiple modal instances.
+    //   escapeClose: true,      // Allows the user to close the modal by pressing `ESC`
+    //   clickClose: true,       // Allows the user to close the modal by clicking the overlay
+    //   closeText: 'Close',     // Text content for the close <a> tag.
+    //   closeClass: '',         // Add additional class(es) to the close <a> tag.
+    //   showClose: false,        // Shows a (X) icon/link in the top-right corner
+    //   modalClass: "modal",    // CSS class added to the element being displayed in the modal.
+    //   blockerClass: "blocker",  // CSS class added to the overlay (blocker).
+
+    //   // HTML appended to the default spinner during AJAX requests.
+    //   spinnerHtml: '<div class="rect1"></div><div class="rect2"></div><div class="rect3"></div><div class="rect4"></div>',
+
+    //   showSpinner: true,      // Enable/disable the default spinner during AJAX requests.
+    //   fadeDuration: 250,     // Number of milliseconds the fade transition takes (null means no transition)
+    //   fadeDelay: 0.8          // Point during the overlay's fade-in that the modal begins to fade in (.5 = 50%, 1.5 = 150%, etc.)
+    // };
+    
+
     var elementsHeight = false;
 
     // DEPRECATED 20180506, this is handled by special cookie code on `atx` repo
@@ -129,12 +151,18 @@ $(document).ready(function() {
             // then remove class and hide it
             dropdown.removeClass('open');
             content.slideUp('slow');
-            $(".header-dropdown-bg").fadeOut();
+
+            if ( ! $(this).parent().hasClass('no-bg') ) {
+                $(".header-dropdown-bg").fadeOut();
+            }
         } else {
             // else add class and show it
             dropdown.addClass('open');
             content.slideDown('slow');
-            $(".header-dropdown-bg").fadeIn();
+
+            if ( ! $(this).parent().hasClass('no-bg') ) {
+                $(".header-dropdown-bg").fadeIn();
+            }
         }
 
         if ( elementsHeight == false ) {
@@ -182,9 +210,20 @@ $(document).ready(function() {
 
 
     $('.at.slider').on('init', function(event, slick){
+        // console.log('slider init');
 
         setElementsHeight();
     });
+
+
+    if ( $('.at.slider.slide2').length ) {
+        $('.at.slider.slide2').slick({
+            infinite: false,
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            variableWidth: false
+        });
+    }
 
 
     // check if Slider exist then run to avoid errors

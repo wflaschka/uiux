@@ -109,10 +109,10 @@
                     </div>
                     <div class="dropdown-content navigation-dropdown logged-in">
                         <ul class="menu">
-                            <li><a href="#">Dashboard</a></li>
+                            <li><a href="dashboard.html">Dashboard</a></li>
                             <li><a href="#">Artist Profile</a></li>
-                            <li><span class="count count-primary">3</span></badge><a href="#">Messages</a></li>
-                            <li><span class="count count-primary">2</span><a href="#">Orders</a></li>
+                            <li><a href="#" class="badge" data-badge="44">Messages</a></li>
+                            <li><a href="#" class="badge" data-badge="99">Orders</a></li>
                             <li><a href="#">Payment Options</a></li>
                             <li><a href="#">Shipping</a></li>
                             <li><a href="#">Collections</a></li>
@@ -127,14 +127,15 @@
             </div>
 
             <div class="at dropdown cart-wrapper">
-                <span class="opener hide-on-open">
+                <span class="shopping-cart-open opener hide-on-open">
+                    <i class="at at-cart badge is-primary-badge" data-badge="44"></i>
+                    <span class="hide-on-xs">Cart</span>
+                </span>
+                <span class="shopping-cart-close opener show-on-open">
                     <i class="at at-cart"></i>
                     <span class="hide-on-xs">Cart</span>
                 </span>
-                <span class="opener show-on-open">
-                    <i class="at at-cart"></i>
-                    <span class="hide-on-xs">Cart</span>
-                </span>
+
                 <div class="dropdown-content navigation-dropdown cart">
                     <div class="cart-success-text">
                         <div>

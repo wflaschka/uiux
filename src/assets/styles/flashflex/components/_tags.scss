@@ -16,7 +16,8 @@
 	// background-color: color(white);
     border: $border-width solid $border-color;
     background-color: #fff;
-    margin: 0.1rem 0.25rem;
+    // margin: 0.1rem 0.25rem;
+    margin: p(5) 0.25rem;
     font-size: p(12);
     line-height: p(32);
     font-weight: $weight-semibold;

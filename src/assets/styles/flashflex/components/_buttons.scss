@@ -368,3 +368,12 @@
 .btn-m { width: 270px; }
 .btn-l { width: 320px; }
 .btn-xl { width: 360px; }
+
+@include for-phone-only {
+    .btn-s,
+    .btn-m,
+    .btn-l,
+    .btn-xl {
+        width: 100%;
+    }
+}

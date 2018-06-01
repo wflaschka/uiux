@@ -14,7 +14,8 @@
 		font-size: p(25);
 		line-height: p(32);
 		padding: 0 0 0 p(20);
-		margin-bottom: p(10);
+		margin-bottom: p(20);
+		margin-top: p(30);
 	}
 
 	h3 {
@@ -32,23 +33,24 @@
 			order: 1;
 			background: url(../images/graphics/register-login.jpg) no-repeat;
 			background-size: cover;
-			background-position: 0 50%;
+			background-position: 0 70%;
 			min-height: 50vw;
 		}
 
 		.form-wrapper {
 			order: 3;
 			margin: 0 p(20);
-			border-bottom: 1px solid $border-color;
+			border-bottom: $border-width solid $border-color;
+			padding-bottom: p(30);
 		}
-	}// .main
+	}
 
 	.how-it-works {
 		padding: 0 p(20) 0;
 
 		h3 {
 			padding-bottom: p(10);
-			border-bottom: 1px solid $border-color;
+			border-bottom: $border-width solid $border-color;
 			margin-bottom: p(45);
 		}
 
@@ -68,21 +70,38 @@
 		h3 {
 			padding: 0 0 0 p(20);
 			margin-bottom: p(20);
+			margin-top: p(30);
 		}
 
 		.btn-apply {
-			margin: 0 p(20) p(50);
+			margin: 0 p(20) p(35);
 		}
-	}// .artist-benefits
+	}
 
 
 	@include for-tablet-portrait-up {
+
 		.main {
 			.image {
 				// header height including banner = 102
 				min-height: calc(100vh - 102px);
 			}
+
+			.form-wrapper {
+				padding-bottom: 0;
+			}
 		}
+
+		.artist-benefits {
+			h3 {
+				margin-top: p(45);
+			}
+
+			.btn-apply {
+				margin: 0 p(20) p(50);
+			}
+		}
+
 	}
 
 

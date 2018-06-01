@@ -1,0 +1,550 @@
+<div id="filterMedium" style="display:none;">
+	<a href="#" rel="modal:close" class="close-modal link-black"><i class="at at-arrows-remove"></i></a>
+	<div class="modal-title">Medium</div>
+
+	<form class="is-search-form">
+
+		<div class="nav-item column">
+			<aside class="menu is-medium-menu">
+				<ul class="menu-list">
+				    <li class="">
+				        <label class="checkbox" for="input-medium-all">
+				            <input type="checkbox" id="input-medium-all" name="Medium[]" value="All Mediums" checked="checked">
+				            <span></span>
+				            All Mediums
+				        </label>
+				    </li>
+			    
+			        <li class="">
+			            <label class="checkbox" for="input-medium-painting">
+			                <input type="checkbox" id="input-medium-painting" name="Medium[]" value="Painting">
+			                <span></span>
+			                Painting
+			            </label>
+			        </li>
+			    
+			        <li class="">
+			            <label class="checkbox" for="input-medium-photography">
+			                <input type="checkbox" id="input-medium-photography" name="Medium[]" value="Photography">
+			                <span></span>
+			                Photography
+			            </label>
+			        </li>
+
+			        <li class="">
+			            <label class="checkbox" for="input-medium-works-on-paper">
+			                <input type="checkbox" id="input-medium-works-on-paper" name="Medium[]" value="Works on Paper">
+			                <span></span>
+			                Works on Paper
+			            </label>
+			        </li>
+			    
+			        <li class="">
+			            <label class="checkbox" for="input-medium-prints-&amp;-multiples">
+			                <input type="checkbox" id="input-medium-prints-&amp;-multiples" name="Medium[]" value="Prints &amp; Multiples">
+			                <span></span>
+			                Prints &amp; Multiples
+			            </label>
+			        </li>
+			    
+			        <li class="">
+			            <label class="checkbox" for="input-medium-mixed-media">
+			                <input type="checkbox" id="input-medium-mixed-media" name="Medium[]" value="Mixed Media">
+			                <span></span>
+			                Mixed Media
+			            </label>
+			        </li>
+				</ul>
+			</aside>
+		</div>
+
+		<a href="#" class="button is-black is-fullwidth mt40" rel="modal:close">Done</a>
+	</form>
+</div>
+
+<div id="filterPrice" style="display:none;">
+	<a href="#" rel="modal:close" class="close-modal link-black"><i class="at at-arrows-remove"></i></a>
+	<div class="modal-title">Price</div>
+
+	<form class="is-search-form">
+		<div class="nav-item column">
+
+            <aside class="menu is-price-menu">
+                <script type="text/javascript">
+                    $( document ).ready(function() {
+                        $('#input-price-all').on('change', function() { priceMinMax(0,10000); });
+                        $('#input-price-lt500').on('change', function() { priceMinMax(0,500); });
+                        $('#input-price-lt10').on('change', function() { priceMinMax(0,1000); });
+                        $('#input-price-1t25').on('change', function() { priceMinMax(1000,2500); });
+                        $('#input-price-25t5').on('change', function() { priceMinMax(2500,5000); });
+                        $('#input-price-5t10').on('change', function() { priceMinMax(5000,10000); });
+                        function priceMinMax(min, max) {
+                            $('#input-price-min').val(min);
+                            $('#input-price-max').val(max);
+                            return true;
+                        }
+                    });
+                </script>
+                <ul class="menu-list">
+                    <li class="mb30">
+                        <span>&dollar;</span> <input name="input-price-min" id="input-price-min" class="input is-dollar-input" type="text" placeholder="0">
+                        <span class="ml5 mr5">&ndash;</span>
+                        <span>&dollar;</span> <input name="input-price-max" id="input-price-max" class="input is-dollar-input" type="text" placeholder="10000">
+                    </li>
+                    <li class="">
+                        <label class="radio" for="input-price-all">
+                            <input type="radio" id="input-price-all" name="input-price-span" checked="true">
+                            <span></span>
+                            All prices
+                        </label>
+                    </li>
+                    <li>
+                        <label class="radio" for="input-price-lt500">
+                            <input type="radio" id="input-price-lt500" name="input-price-span">
+                            <span></span>
+                            Under $500
+                        </label>
+                    </li>
+                    <li>
+                        <label class="radio" for="input-price-lt10">
+                            <input type="radio" id="input-price-lt10" name="input-price-span">
+                            <span></span>
+                            Under $1000
+                        </label>
+                    </li>
+                    <li>
+                        <label class="radio" for="input-price-1t25">
+                            <input type="radio" id="input-price-1t25" name="input-price-span">
+                            <span></span>
+                            $1,000 &ndash; $2,500
+                        </label>
+                    </li>
+                    <li>
+                        <label class="radio" for="input-price-25t5">
+                            <input type="radio" id="input-price-25t5" name="input-price-span">
+                            <span></span>
+                            $2,500 &ndash; $5,000
+                        </label>
+                    </li>
+                    <li>
+                        <label class="radio" for="input-price-5t10">
+                            <input type="radio" id="input-price-5t10" name="input-price-span">
+                            <span></span>
+                            $5,000 &ndash; $10,000
+                        </label>
+                    </li>
+                </ul>
+            </aside>
+
+		</div>
+		<a href="#" class="button is-black is-fullwidth mt40" rel="modal:close">Done</a>
+	</form>
+</div>
+
+<div id="filterSize" style="display:none;">
+	<a href="#" rel="modal:close" class="close-modal link-black"><i class="at at-arrows-remove"></i></a>
+	<div class="modal-title">Size</div>
+
+	<form class="is-search-form">
+
+		<div class="nav-item column">
+            <aside class="menu is-size-menu">
+                <div class="level">
+                    <div class="level-left">
+                        <div class="level-item">
+                            <label class="checkbox" for="sizeAllSizes">
+                                <input type="checkbox" id="sizeAllSizes" name="sizeAllSizes">
+                                <span></span>
+                                All sizes
+                            </label>
+                        </div>
+                    </div>
+                    <div class="level-right">
+                        <a id="size-set-in" class="is-depressed button has-no-states is-outlined is-small">
+                            Inches
+                        </a>
+                        <a id="size-set-cm" class="button has-no-states is-outlined is-small">
+                            Centimeters
+                        </a>
+                    </div>
+                </div>
+                <!-- Form inputs -->
+                <input type="hidden" id="sizeInchOrCentimeter" value="in">
+                <input type="hidden" id="sizeMinWidth" value="20">
+                <input type="hidden" id="sizeMaxWidth" value="100">
+                <input type="hidden" id="sizeMinHeight" value="20">
+                <input type="hidden" id="sizeMaxHeight" value="100">
+
+                <div class="noUi-container">
+                    <label>Height</label>
+                    <div id="height-slider-handles" class="noUi-target noUi-ltr noUi-horizontal"></div>
+                    <label>Width</label>
+                    <div id="width-slider-handles" class="noUi-target noUi-ltr noUi-horizontal"></div>
+                </div>
+            </aside>
+		</div>
+
+		<a href="#" class="button is-black is-fullwidth mt40" rel="modal:close">Done</a>
+	</form>
+</div>
+
+<div id="filterColour" style="display:none;">
+	<a href="#" rel="modal:close" class="close-modal link-black"><i class="at at-arrows-remove"></i></a>
+	<div class="modal-title">Colour</div>
+
+	<form class="is-search-form">
+		<div class="nav-item column">
+
+            <aside class="menu is-color-menu">
+                
+                <label class="checkbox is-colorball-checkbox is-large is-color-white" for="input-color-select-white">
+                    <input type="checkbox" id="input-color-select-white" name="input-color-select-white">
+                    <span></span>
+                </label>
+                <label class="checkbox is-colorball-checkbox is-large is-color-gray" for="input-color-select-gray">
+                    <input type="checkbox" id="input-color-select-gray" name="input-color-select-gray">
+                    <span></span>
+                </label>
+                <label class="checkbox is-colorball-checkbox is-large is-color-black" for="input-color-select-black">
+                    <input type="checkbox" id="input-color-select-black" name="input-color-select-black">
+                    <span></span>
+                </label>
+                <label class="checkbox is-colorball-checkbox is-large is-color-lime" for="input-color-select-lime">
+                    <input type="checkbox" id="input-color-select-lime" name="input-color-select-lime">
+                    <span></span>
+                </label>
+                <label class="checkbox is-colorball-checkbox is-large is-color-green" for="input-color-select-green">
+                    <input type="checkbox" id="input-color-select-green" name="input-color-select-green">
+                    <span></span>
+                </label>
+                <label class="checkbox is-colorball-checkbox is-large is-color-turquoise" for="input-color-select-turquoise">
+                    <input type="checkbox" id="input-color-select-turquoise" name="input-color-select-turquoise">
+                    <span></span>
+                </label>
+                <label class="checkbox is-colorball-checkbox is-large is-color-blue" for="input-color-select-blue">
+                    <input type="checkbox" id="input-color-select-blue" name="input-color-select-blue">
+                    <span></span>
+                </label>
+                <label class="checkbox is-colorball-checkbox is-large is-color-dark-blue" for="input-color-select-dark-blue">
+                    <input type="checkbox" id="input-color-select-dark-blue" name="input-color-select-dark-blue">
+                    <span></span>
+                </label>
+                <label class="checkbox is-colorball-checkbox is-large is-color-purple" for="input-color-select-purple">
+                    <input type="checkbox" id="input-color-select-purple" name="input-color-select-purple">
+                    <span></span>
+                </label>
+                <label class="checkbox is-colorball-checkbox is-large is-color-magenta" for="input-color-select-magenta">
+                    <input type="checkbox" id="input-color-select-magenta" name="input-color-select-magenta">
+                    <span></span>
+                </label>
+                <label class="checkbox is-colorball-checkbox is-large is-color-red" for="input-color-select-red">
+                    <input type="checkbox" id="input-color-select-red" name="input-color-select-red">
+                    <span></span>
+                </label>
+                <label class="checkbox is-colorball-checkbox is-large is-color-orange" for="input-color-select-orange">
+                    <input type="checkbox" id="input-color-select-orange" name="input-color-select-orange">
+                    <span></span>
+                </label>
+                <label class="checkbox is-colorball-checkbox is-large is-color-yellow" for="input-color-select-yellow">
+                    <input type="checkbox" id="input-color-select-yellow" name="input-color-select-yellow">
+                    <span></span>
+                </label>
+                <label class="checkbox is-colorball-checkbox is-large is-color-beige" for="input-color-select-beige">
+                    <input type="checkbox" id="input-color-select-beige" name="input-color-select-beige">
+                    <span></span>
+                </label>
+                <label class="checkbox is-colorball-checkbox is-large is-color-brown" for="input-color-select-brown">
+                    <input type="checkbox" id="input-color-select-brown" name="input-color-select-brown">
+                    <span></span>
+                </label>
+            </aside>
+
+		</div>
+		<a href="#" class="button is-black is-fullwidth mt40" rel="modal:close">Done</a>
+	</form>
+</div>
+
+<div id="filterMore" style="display:none;">
+	<a href="#" rel="modal:close" class="close-modal link-black"><i class="at at-arrows-remove"></i></a>
+	<div class="modal-title">More</div>
+
+	<form class="is-search-form">
+		<div class="nav-item column">
+
+			<aside class="menu row is-more-menu">
+                <!-- <div class="row"> -->
+                <div class="column">
+                    <div class="title">Subject</div>
+                    <ul class="menu-list overflow-400">
+                        <li class="">
+                            <label class="checkbox" for="input-subject-abstract">
+                                <input type="checkbox" id="input-subject-abstract" name="input-subject-abstract">
+                                <span></span>
+                                Abstract
+                            </label>
+                        </li>
+                        <li>
+                            <label class="checkbox" for="input-subject-figurative">
+                                <input checked="checked" type="checkbox" id="input-subject-figurative" name="input-subject-figurative">
+                                <span></span>
+                                Figurative
+                            </label>
+                        </li>
+                        <li>
+                            <label class="checkbox" for="input-subject-still-life">
+                                <input type="checkbox" id="input-subject-still-life" name="input-subject-still-life">
+                                <span></span>
+                                Still Life
+                            </label>
+                        </li>
+                        <li class="">
+                            <label class="checkbox" for="input-subject-abstract">
+                                <input type="checkbox" id="input-subject-abstract" name="input-subject-abstract">
+                                <span></span>
+                                Abstract
+                            </label>
+                        </li>
+                        <li>
+                            <label class="checkbox" for="input-subject-figurative">
+                                <input checked="checked" type="checkbox" id="input-subject-figurative" name="input-subject-figurative">
+                                <span></span>
+                                Figurative
+                            </label>
+                        </li>
+                        <li>
+                            <label class="checkbox" for="input-subject-still-life">
+                                <input type="checkbox" id="input-subject-still-life" name="input-subject-still-life">
+                                <span></span>
+                                Still Life
+                            </label>
+                        </li>
+                        <li class="">
+                            <label class="checkbox" for="input-subject-abstract">
+                                <input type="checkbox" id="input-subject-abstract" name="input-subject-abstract">
+                                <span></span>
+                                Abstract
+                            </label>
+                        </li>
+                        <li>
+                            <label class="checkbox" for="input-subject-figurative">
+                                <input checked="checked" type="checkbox" id="input-subject-figurative" name="input-subject-figurative">
+                                <span></span>
+                                Figurative
+                            </label>
+                        </li>
+                        <li>
+                            <label class="checkbox" for="input-subject-still-life">
+                                <input type="checkbox" id="input-subject-still-life" name="input-subject-still-life">
+                                <span></span>
+                                Still Life
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <div class="title">Number of Editions</div>
+                    <ul class="menu-list">
+                        <li class="">
+                            <label class="checkbox" for="input-subject-abstract">
+                                <input type="checkbox" id="input-subject-abstract" name="input-subject-abstract">
+                                <span></span>
+                                Abstract
+                            </label>
+                        </li>
+                        <li>
+                            <label class="checkbox" for="input-subject-figurative">
+                                <input type="checkbox" id="input-subject-figurative" name="input-subject-figurative">
+                                <span></span>
+                                Figurative
+                            </label>
+                        </li>
+                        <li>
+                            <label class="checkbox" for="input-subject-still-life">
+                                <input type="checkbox" id="input-subject-still-life" name="input-subject-still-life">
+                                <span></span>
+                                Still Life
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <div class="title">Time Period</div>
+                    <ul class="menu-list">
+                        <li class="">
+                            <label class="checkbox" for="input-subject-abstract">
+                                <input type="checkbox" id="input-subject-abstract" name="input-subject-abstract">
+                                <span></span>
+                                Abstract
+                            </label>
+                        </li>
+                        <li>
+                            <label class="checkbox" for="input-subject-figurative">
+                                <input type="checkbox" id="input-subject-figurative" name="input-subject-figurative">
+                                <span></span>
+                                Figurative
+                            </label>
+                        </li>
+                        <li>
+                            <label class="checkbox" for="input-subject-still-life">
+                                <input type="checkbox" id="input-subject-still-life" name="input-subject-still-life">
+                                <span></span>
+                                Still Life
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <div class="title">Other</div>
+                    <ul class="menu-list">
+                        <li class="">
+                            <label class="checkbox" for="input-subject-abstract">
+                                <input type="checkbox" id="input-subject-abstract" name="input-subject-abstract">
+                                <span></span>
+                                Abstract
+                            </label>
+                        </li>
+                        <li>
+                            <label class="checkbox" for="input-subject-figurative">
+                                <input type="checkbox" id="input-subject-figurative" name="input-subject-figurative">
+                                <span></span>
+                                Figurative
+                            </label>
+                        </li>
+                        <li>
+                            <label class="checkbox" for="input-subject-still-life">
+                                <input type="checkbox" id="input-subject-still-life" name="input-subject-still-life">
+                                <span></span>
+                                Still Life
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <!-- </div> -->
+            </aside>
+
+		</div>
+		<a href="#" class="button is-black is-fullwidth mt40" rel="modal:close">Done</a>
+	</form>
+</div>
+
+
+<div class="page">
+{{> header-public }}
+
+<div class="home-slider">
+	<div class="landing-slider">
+		<div><img src="../../assets/images/slider/1.jpg"></div>
+		<div><img src="../../assets/images/slider/2.jpg"></div>
+		<div><img src="../../assets/images/slider/3.jpg"></div>
+		<div><img src="../../assets/images/slider/4.jpg"></div>
+		<div><img src="../../assets/images/slider/5.jpg"></div>
+		<div><img src="../../assets/images/slider/6.jpg"></div>
+	</div>
+</div>
+
+
+<div id="content">
+
+<section class="section has-border section-padding-s home-search is-large hide-for-phone-only">
+	<p>Search Original Artwork by</p>
+	{{> typography-art-search }}
+</section>
+
+<section class="section has-border pb10 mb20 show-for-phone-only">
+	<p class="text-s">Search Original Artwork by</p>
+
+	<div class="home-mobile-filter ">
+		<a class="button" rel="modal:open" href="#filterMedium">Medium <i class="at at-arrows-down"></i></a>
+		<a class="button" rel="modal:open" href="#filterPrice">Price <i class="at at-arrows-down"></i></a>
+		<a class="button" rel="modal:open" href="#filterSize">Size <i class="at at-arrows-down"></i></a>
+		<a class="button" rel="modal:open" href="#filterColour">Colour <i class="at at-arrows-down"></i></a>
+		<a class="button" rel="modal:open" href="#filterMore">More <i class="at at-arrows-down"></i></a>
+	</div>
+</section>
+
+<section class="section has-border">
+	<h3 class="has-link">
+		Newest Works
+		<a href="/search?_token=znT9W2eRSOZjQIIQsx7qbs46Af6c9iyXs7lcBQRg&amp;Orderby=newest">See More</a>
+	</h3>
+
+	<div id="newest-works">
+		{{> slider-card-square }}
+	</div>
+</section>
+
+<section class="section has-border">
+	<h3>Curated Collections</h3>
+	<div id="curated-collections">
+		{{> curated-collections }}
+	</div>
+</section>
+
+
+<section class="section has-border">
+	<h3 class="has-link">
+		Artists to Watch
+		<a href="/search?_token=znT9W2eRSOZjQIIQsx7qbs46Af6c9iyXs7lcBQRg&amp;Orderby=newest">See More</a>
+	</h3>
+
+	<div id="newest-works">
+		{{> slider-card-artist }}
+	</div>
+</section>
+
+
+<section class="section ">
+	<section class="section">
+	    <h3 class="has-link">
+	        Art Tap is Breaking Down Walls
+	        <a class="hide-for-phone-only" href="/apply">See Artist Benefits</a>
+	    </h3>
+	    <div class="group-step group-step-home">
+	        <div class="step">
+	            <div class="title">Quality</div>
+	            <ul class="at-dots">
+	                <li>Gallery quality artwork for less</li>
+	                <li>Vetted professional artists</li>
+	                <li>Expert curation</li>
+	            </ul>
+	        </div>
+	        <div class="step">
+	            <div class="title">Community</div>
+	            <ul class="at-dots">
+	                <li>Dedicated to supporting artists</li>
+	                <li>Charitable donation with every purchase</li> 
+	                <li>Art news and events</li>
+	            </ul>
+	        </div>
+	        <div class="step">
+	            <div class="title">Trust</div>
+	            <ul class="at-dots">
+	                <li>Easy shipping and insurance</li>
+	                <li>Transparent pricing on all artwork</li>
+	                <li>Secure online payments</li>
+	            </ul>
+	        </div>
+	    </div>
+	    <a class="text-s show-for-phone-only" href="/apply">See Artist Benefits</a>
+	</section>
+</section>
+
+
+
+</div><!-- #content -->
+
+<script type="text/javascript">
+    defer(function () {
+
+	    $('.landing-slider').slick({
+	      dots: true,
+	      arrows: false
+	    });
+
+		$('#filterColour').modal();
+
+    });
+</script>
+
+{{> footer-standard }}
+</div><!-- .page -->
