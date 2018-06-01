@@ -71,6 +71,7 @@
 	////////////////////////////////////////
 	// Card variations
 	&.square {
+		width: auto;
 		.image {
 			width: 150px;
 			height: 150px;
@@ -207,6 +208,7 @@
 		}
 	}
 	&.unlabeled {
+		width: auto;
 		.image {
 			width: 150px;
 			height: 200px;

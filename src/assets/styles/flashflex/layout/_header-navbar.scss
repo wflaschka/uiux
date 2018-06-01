@@ -293,8 +293,8 @@ $dropdown-top-pos-mobile: 11px;
 	z-index: z('site-header-dropdown') !important;
 	background-color: white;
 	text-align: left;
-	padding: p(27) p(40) p(40);
-	// padding: 1rem 4.5rem 2.5rem;
+	padding: p(27) p(40);
+	// padding: p(27) p(40) p(40);
 
 	// Shadows
 	// box-shadow: $dropdown-shadow;
@@ -327,7 +327,8 @@ $dropdown-top-pos-mobile: 11px;
 	}
 
 	&.cart {
-		width: 400px;
+		width: 380px;
+		// width: 400px;
 		left: auto;
 		right: 0;
 		// padding: 1rem 2.5rem 2.5rem;

@@ -89,7 +89,11 @@
 		}
 
 		.edition-number {
-			margin-bottom: p(30);
+			margin-bottom: p(20);
+
+			.select {
+				height: unset;
+			}
 
 			.prompt {
 				display: flex;
