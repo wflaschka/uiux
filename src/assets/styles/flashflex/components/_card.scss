@@ -127,6 +127,7 @@
 			margin: 0;
 			display: flex;
 			flex-direction: row;
+			background-color: #ffffff;
 			align-items: center;
 			.tool {
 				display: flex;
@@ -198,6 +199,7 @@
 				}
 			}
 			.content {
+				background-color: #ffffff;
 				.tool {
 					display: none;
 				}
