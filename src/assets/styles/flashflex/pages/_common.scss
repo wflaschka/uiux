@@ -144,6 +144,11 @@
 }
 
 @include for-tablet-landscape-up {
+	&.has-sidebar {
+		#content {
+			width: 80%;
+		}
+	}
 	#content {
 		padding: p(50) p(40) p(40);
 	}
@@ -161,5 +166,6 @@
 		}
 	}
 }
+
 
 }// .page

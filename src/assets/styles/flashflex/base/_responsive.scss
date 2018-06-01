@@ -16,7 +16,7 @@ $for-tablet-portrait       : (inside, rem-to-px($fBG_xs), (rem-to-px($fBG_sm)));
 $for-tablet-portrait-up    : (min, rem-to-px($fBG_sm));
 $for-tablet-portrait-down  : (max, rem-to-px($fBG_sm));
 $for-tablet-landscape      : (inside, rem-to-px($fBG_sm), (rem-to-px($fBG_lg) - 1px));
-$for-tablet-landscape-up   : (min, rem-to-px($fBG_md));
+$for-tablet-landscape-up   : (min, rem-to-px($fBG_md) - 1px);
 $for-tablet-landscape-down : (max, rem-to-px($fBG_md));
 $for-desktop               : (inside, rem-to-px($fBG_lg), (rem-to-px($fBG_xl) - 1px));
 $for-desktop-up            : (min, rem-to-px($fBG_lg));

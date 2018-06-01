@@ -46,6 +46,12 @@
 
 @include for-tablet-landscape-up {
     a {
+        padding: p(8) p(60);
+    }
+}
+
+@include for-desktop-up {
+    a {
         padding: p(8) p(80);
     }
 }

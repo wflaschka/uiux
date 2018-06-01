@@ -120,10 +120,10 @@
     @include for-tablet-portrait-up {
         display: flex;
 
-        &.is-space-large {
-            .col-one { padding-right: 80px; }
-            .col-two { padding-left: 80px; }
-        }
+        // &.is-space-large {
+        //     .col-one { padding-right: 40px; }
+        //     .col-two { padding-left: 40px; }
+        // }
 
         &.no-border {
             .col-two {
@@ -143,6 +143,13 @@
         .col-two {
             border-left: $border-width solid $border-color;
             padding-left: 40px;
+        }
+    }
+
+    @include for-desktop-up {
+        &.is-space-large {
+            .col-one { padding-right: 80px; }
+            .col-two { padding-left: 80px; }
         }
     }
 
