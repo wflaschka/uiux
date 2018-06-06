@@ -44,6 +44,20 @@
 	}
 
 
+	@include for-phone-only {
+
+		.group {
+
+			.group-text {
+
+				p {
+					font-size: p(13);
+					line-height: p(21);
+				}
+			}
+		}
+
+	}
 
 	@include for-tablet-landscape-up {
 

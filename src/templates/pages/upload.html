@@ -1,78 +1,66 @@
 <div id="add_a_piece" style="display:none;">
-	<a href="#" rel="modal:close" class="close-modal"><i class="at at-arrows-remove"></i></a>
+	<a href="#" rel="modal:close" class="close-modal link-black"><i class="at at-arrows-remove"></i></a>
 
 	<div class="modal-title">Add a Piece</div>
 
 	<h4>Add a Photo</h4>
 	<p class="text-s text-fade">Add at least one photo. Use up to four photos to show different angles and details. (Minimum photo resolution is 300px on shortest side. Maximum resolution is 2500px on longest side.)</p>
 
-	<div class="flex">
-		{{#single}}
-			{{> card-edit }}
-		{{/single}}
-		<div class="card edit empty">
-			<div class="image">
-				<input type="file" class="input-image" id="" name="file" accept=".jpg,.jpeg,.png,.gif,.bmp,.tiff">
-				<i class="at-attach-work at at-arrows-up-l"></i>
+    <div class="image-upload-dropzone mb30">
+		<div class="flex">
+			{{#single}}
+				{{> card-edit }}
+			{{/single}}
+			<div class="card edit empty">
+				<div class="image">
+					<input type="file" class="input-image" id="" name="file" accept=".jpg,.jpeg,.png,.gif,.bmp,.tiff">
+					<i class="at-attach-work at at-arrows-up-l"></i>
+				</div>
+				<div class="content">
+					<div class="tool">
+						<i class="at at-add"></i>
+					</div>
+					<div class="tool">
+						<i class="at at-crop"></i>
+					</div>
+					<div class="tool">
+						<i class="at at-delete"></i>
+					</div>
+				</div>
 			</div>
-			<div class="content">
-				<div class="tool">
-					<i class="at at-add"></i>
-				</div>
-				<div class="tool">
-					<i class="at at-crop"></i>
-				</div>
-				<div class="tool">
-					<i class="at at-delete"></i>
-				</div>
-			</div>
+            <div class="upload-prompt card edit empty hide-for-phone-only">
+                <div class="image">
+                </div>
+                <div class="content">
+                    <div class="tool">
+                        <i class="at at-add"></i>
+                    </div>
+                    <div class="tool">
+                        <i class="at at-crop"></i>
+                    </div>
+                    <div class="tool">
+                        <i class="at at-delete"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="upload-prompt card edit empty hide-for-phone-only">
+                <div class="image">
+                </div>
+                <div class="content">
+                    <div class="tool">
+                        <i class="at at-add"></i>
+                    </div>
+                    <div class="tool">
+                        <i class="at at-crop"></i>
+                    </div>
+                    <div class="tool">
+                        <i class="at at-delete"></i>
+                    </div>
+                </div>
+            </div>
 		</div>
-		<div class="card edit empty">
-			<div class="image">
-			</div>
-			<div class="content">
-				<div class="tool">
-					<i class="at at-add"></i>
-				</div>
-				<div class="tool">
-					<i class="at at-crop"></i>
-				</div>
-				<div class="tool">
-					<i class="at at-delete"></i>
-				</div>
-			</div>
-		</div>
-		<div class="card edit empty">
-			<div class="image">
-			</div>
-			<div class="content">
-				<div class="tool">
-					<i class="at at-add"></i>
-				</div>
-				<div class="tool">
-					<i class="at at-crop"></i>
-				</div>
-				<div class="tool">
-					<i class="at at-delete"></i>
-				</div>
-			</div>
-		</div>
-		<div class="card edit empty">
-			<div class="image">
-			</div>
-			<div class="content">
-				<div class="tool">
-					<i class="at at-add"></i>
-				</div>
-				<div class="tool">
-					<i class="at at-crop"></i>
-				</div>
-				<div class="tool">
-					<i class="at at-delete"></i>
-				</div>
-			</div>
-		</div>
-	</div>
+    </div>
+
 
 </div>
 
@@ -80,20 +68,10 @@
 <script type="text/javascript">
 
 
-$.modal.defaults = {
-	closeExisting : false,      // Close existing modals. Set this to false if you need to stack multiple modal instances.
-	escapeClose   : true,      // Allows the user to close the modal by pressing `ESC`
-	clickClose    : true,      // Allows the user to close the modal by clicking the overlay
-	closeText     : '',        // Text content for the close <a> tag.
-	closeClass    : '',        // Add additional class(es) to the close <a> tag.
-	showClose     : true,      // Shows a (X) icon/link in the top-right corner
-	modalClass    : "modal medium",   // CSS class added to the element being displayed in the modal.
-	blockerClass  : "blocker", // CSS class added to the overlay (blocker).
-	spinnerHtml   : null,      // HTML appended to the default spinner during AJAX requests.
-	showSpinner   : true,      // Enable/disable the default spinner during AJAX requests.
-	fadeDuration  : 250,       // Number of milliseconds the fade transition takes (null means no transition)
-	fadeDelay     : 0.8        // Point during the overlay's fade-in that the modal begins to fade in (.5 = 50%, 1.5 = 150%, etc.)
-};
+$("#add_a_piece").modal({
+	modalClass: "is-medium"
+});
+
 
 $('#add_a_piece').modal();
 

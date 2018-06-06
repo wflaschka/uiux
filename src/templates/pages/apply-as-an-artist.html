@@ -12,42 +12,40 @@
         <div class="form-wrapper">
             <div class="box-inner">
                 
-                <div>Apply now to sell and promote your work through Art Tap or 
+                <div class="mb15">Apply now to sell and promote your work through Art Tap or 
                     <a href="#modalHowItWorks" rel="modal:open" class="hide-on-sm-ls-up">see how it works</a>
                     <a href="#" data-scroll-to="#howItWorks" class="scroll-to hide-on-sm-ls-down">see how it works</a>
                 </div>
 
-                <div class="field-wrapper">
-                    <div class="field">
-                        <label class="label">First Name</label>
-                        <div class="control">
-                            <input class="input" type="input">
-                        </div>
+                <div class="field">
+                    <label class="label">First Name</label>
+                    <div class="control">
+                        <input class="input" type="input">
                     </div>
-                    <div class="field">
-                        <label class="label">Last Name</label>
-                        <div class="control">
-                            <input class="input" type="input">
-                        </div>
+                </div>
+                <div class="field">
+                    <label class="label">Last Name</label>
+                    <div class="control">
+                        <input class="input" type="input">
                     </div>
-                    <div class="field">
-                        <label class="label">Email</label>
-                        <div class="control">
-                            <input class="input" type="input">
-                        </div>
+                </div>
+                <div class="field">
+                    <label class="label">Email</label>
+                    <div class="control">
+                        <input class="input" type="input">
                     </div>
-                    <div class="field">
-                        <label class="label">Phone <span>Optional</span></label>
-                        <div class="control">
-                            <input class="input" type="input">
-                        </div>
+                </div>
+                <div class="field">
+                    <label class="label">Phone <span>Optional</span></label>
+                    <div class="control">
+                        <input class="input" type="input">
                     </div>
-                </div><!-- .field-wrapper -->
+                </div>
 
-                <button class="button is-black is-fullwidth">Apply For Free</button>
+                <button class="button is-black is-fullwidth mt20 mb20">Apply For Free</button>
 
-                <p><small>By clicking apply, you accept our <br><a href="#" class="link-black"><b>Terms of Use</b></a> and <a href="#" class="link-black"><b>Privacy Policy</b></a></small></p>
-                <p><small>Questions? <a href="#" >Contact Us</a></small></p>
+                <div class="text-s mb25">By clicking apply, you accept our <br><a href="#" class="link-black"><b>Terms of Use</b></a> and <a href="#" class="link-black"><b>Privacy Policy</b></a></div>
+                <div class="text-s">Questions? <a href="#" >Contact Us</a></div>
 
             </div>
         </div><!-- .form-wrapper -->
@@ -55,7 +53,7 @@
 
 
     <div id="howItWorks" class="how-it-works hide-on-sm-ls-down">
-        <h3 class="styled">How It Works</h3>
+        <h3>How It Works</h3>
 
         <div class="group-step has-border space-small">
             <div class="step">
@@ -76,7 +74,7 @@
 
     <div class="artist-benefits">
 
-        <h3 class="styled">Artist Benefits</h3>
+        <h3>Artist Benefits</h3>
 
         <div class="cross-image-text">
             <div class="group">
@@ -152,10 +150,9 @@
 
 
 <div id="modalHowItWorks" style="display:none;">
-    <a href="#" rel="modal:close" class="close-modal"><i class="at at-arrows-remove"></i></a>
+    <a href="#" rel="modal:close" class="close-modal link-black"><i class="at at-arrows-remove"></i></a>
+    <div class="modal-title">How It Works</div>
     <div class="how-it-works">
-        <h3>How It Works</h3>
-
         <div class="group-step">
             <div class="step">
                 <div class="title">Step 1</div>
@@ -172,25 +169,3 @@
         </div>
     </div><!-- .how-it-works -->
 </div>
-
-
-<script type="text/javascript">
-    defer(function () {
-
-        $.modal.defaults = {
-            closeExisting : true,      // Close existing modals. Set this to false if you need to stack multiple modal instances.
-            escapeClose   : true,      // Allows the user to close the modal by pressing `ESC`
-            clickClose    : true,      // Allows the user to close the modal by clicking the overlay
-            closeText     : '',        // Text content for the close <a> tag.
-            closeClass    : '',        // Add additional class(es) to the close <a> tag.
-            showClose     : true,      // Shows a (X) icon/link in the top-right corner
-            modalClass    : "modal",   // CSS class added to the element being displayed in the modal.
-            blockerClass  : "blocker", // CSS class added to the overlay (blocker).
-            spinnerHtml   : null,      // HTML appended to the default spinner during AJAX requests.
-            showSpinner   : true,      // Enable/disable the default spinner during AJAX requests.
-            fadeDuration  : 250,       // Number of milliseconds the fade transition takes (null means no transition)
-            fadeDelay     : 0.8        // Point during the overlay's fade-in that the modal begins to fade in (.5 = 50%, 1.5 = 150%, etc.)
-        };
-
-    });
-</script>

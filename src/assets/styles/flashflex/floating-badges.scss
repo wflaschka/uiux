@@ -2,7 +2,7 @@
 // FLOATING BADGES
 // From SpectreCSS
 // 
-// Used in cart...
+// Used in user dropdown and cart...
 ////////////////////////////////////////////////////////////////////
 
 .badge {
@@ -10,35 +10,40 @@
 }
 
 .badge[data-badge]:after {
-	background-clip: padding-box;
-	border-radius: 1rem;
+	border-radius: 50%;
 	content: attr(data-badge);
-	font-size: $size-small;
     font-style: normal;
-    text-indent: -1px;
-	height: p(17);
-    line-height: 1.5;
-	min-width: p(17);
-	// padding: .1rem .2rem;
 	position: absolute;
-	right: p(-8);
 	text-align: center;
-	top: p(-10);
 	white-space: nowrap;
 
-	// default colors
-	background: $grey-darker;
-	color: $white;
+    font-size: p(12);
+    line-height: 1.8;
+    text-indent: -1px;
+    height: p(20);
+    width: p(20);
+    top: 3px;
+    left: -34px;
+
+	background-color: color(primary);
+	color: #fff;
 }
 
-// Color variations
-@each $name, $pair in $colors {
-	$color: nth($pair, 1);
-	$color-invert: nth($pair, 2);
-
-	.badge[data-badge].is-#{$name}-badge:after {
-		background-color: $color;
-		// color: $color-invert;
-		color: #fff;
-	}
+.at-cart.badge[data-badge]:after {
+	left: unset;
+	right: -10px;
+	top: -15px;
 }
+
+
+// // Color variations
+// @each $name, $pair in $colors {
+// 	$color: nth($pair, 1);
+// 	$color-invert: nth($pair, 2);
+
+// 	.badge[data-badge].is-#{$name}-badge:after {
+// 		background-color: $color;
+// 		// color: $color-invert;
+// 		color: #fff;
+// 	}
+// }

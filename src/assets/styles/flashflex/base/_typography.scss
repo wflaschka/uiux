@@ -114,9 +114,15 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: p(35);
     font-weight: normal;
     word-wrap: break-word;
-    &:not(.is-link) {
-        color: $color-db;
+
+    @include for-phone-only {
+        margin-bottom: p(20);
     }
+
+    // buggy over written - not in use for now, it was used for checkout page link heading.
+    // &:not(.is-link) {
+    //     color: $color-db;
+    // }
     
     small {
         font-family: $font-family-header-secondary;
@@ -128,6 +134,11 @@ h1, h2, h3, h4, h5, h6 {
         font-style: normal;
         font-weight: bolder;
         opacity: 0.7;
+        &.has-icon {
+            margin-left: 0px;
+            opacity: 1;
+            font-size: 50%;
+        }
     }
 
     &[secondary] {
@@ -156,14 +167,9 @@ hr {
     border-top: 0px;
 }
 
-h3 {
-    color: $color-placeholder;
-}
 
 h3.styled {
-    color: $color-db;
-    font-size: $h1-fontsize;
-    margin-top: ($h1-fontsize);
+    color: $color-placeholder;
 }
 
 .modal {
@@ -184,6 +190,12 @@ h3.styled {
         word-wrap: break-word;
         padding-bottom: 1rem;
         border-bottom: $border-width solid $border-color;
+        
+        @include for-phone-only {
+            font-size: p(35);
+            margin-top: p(20);
+            padding-bottom: p(10);
+        }
     }
 
     &.is-small {

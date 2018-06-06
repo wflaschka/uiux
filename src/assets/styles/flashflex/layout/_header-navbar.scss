@@ -293,8 +293,8 @@ $dropdown-top-pos-mobile: 11px;
 	z-index: z('site-header-dropdown') !important;
 	background-color: white;
 	text-align: left;
-	padding: p(27) p(40) p(40);
-	// padding: 1rem 4.5rem 2.5rem;
+	padding: p(27) p(40);
+	// padding: p(27) p(40) p(40);
 
 	// Shadows
 	// box-shadow: $dropdown-shadow;
@@ -327,7 +327,8 @@ $dropdown-top-pos-mobile: 11px;
 	}
 
 	&.cart {
-		width: 400px;
+		width: 380px;
+		// width: 400px;
 		left: auto;
 		right: 0;
 		// padding: 1rem 2.5rem 2.5rem;
@@ -461,21 +462,6 @@ $dropdown-top-pos-mobile: 11px;
 		}
 	}
 
-	.count {
-		display: inline-block;
-	    color: color(white);
-	    background-color: color(primary);
-	    height: p(20);
-	    width: p(20);
-	    font-size: p(13);
-	    line-height: p(21);
-	    position: absolute;
-		left: -32px;
-		top: 3px;
-	    text-align: center;
-	    border-radius: 50%;
-	}
-
 
 	// top: $page-element-header-height + -17;
 	@include for-tablet-portrait-down {
@@ -566,8 +552,7 @@ $dropdown-top-pos-mobile: 11px;
 		// transition: all linear .3s;
 		@include for-phone-only {
 			width: 100%;
-			padding-left: p(20);
-			padding-right: p(20);
+			padding: p(70) p(20) 0 p(20);
 		}
 	}
 

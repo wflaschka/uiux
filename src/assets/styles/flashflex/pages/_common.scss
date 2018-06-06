@@ -54,7 +54,7 @@
 
 	.page-title {
     	position: relative;
-    	margin-bottom: p(30);
+    	margin-bottom: p(25);
 
 	    &.no-border {
 	    	margin-bottom: 0px;
@@ -72,7 +72,8 @@
 
 	    h1 {
 	    	font-size: p(45);
-	    	margin: p(8) 0 p(40);
+	    	margin: p(8) 0 p(25);
+	    	// margin: p(8) 0 p(40);
 			padding-bottom: p(22);
 			border-bottom: $border-width solid $border-color;
 			&.no-border {
@@ -101,14 +102,13 @@
 
 	.section {
 		&.has-border {
-			margin-bottom: 5rem;
-			padding-bottom: 3.5rem;
-			border-bottom: $border-width solid $border-color;
+			margin-bottom: 2rem;
+			padding-bottom: 2.5rem;
 		}
 
 		&.is-small { margin-bottom: 2rem; }
-		&.is-medium { margin-bottom: p(51); }
-		&.is-large { margin-bottom: 4rem; }
+		&.is-medium { margin-bottom: 2rem; }
+		&.is-large { margin-bottom: 2rem; }
 		&.section-padding-s { padding-bottom: 1.5rem; }
 
 		> h1, > h2, > h3 {
@@ -144,6 +144,11 @@
 }
 
 @include for-tablet-landscape-up {
+	&.has-sidebar {
+		#content {
+			width: 80%;
+		}
+	}
 	#content {
 		padding: p(50) p(40) p(40);
 	}
@@ -161,5 +166,6 @@
 		}
 	}
 }
+
 
 }// .page

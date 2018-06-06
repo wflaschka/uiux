@@ -183,7 +183,7 @@ select { font-size: inherit; }
 .control.has-icons-right .select {
 	&:not(.is-small):not(.is-large):not(.is-medium) ~ .icon {
 		// font-size: 1.5rem;
-		top: 5px;	
+		top: 9px;
 	}
 }
 
@@ -248,3 +248,8 @@ select { font-size: inherit; }
 // 		color: color(red);
 // 	}
 // }
+
+// replace bulma height
+.select.select-tags {
+	height: unset;
+}

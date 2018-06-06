@@ -16,8 +16,8 @@ $scmDesktop: 12.5px;
 	// added overflow hidden to hide slides breakng UI, remove it on slider Initialized 
 	overflow: hidden;
 
-	width: calc(100% + #{$scm} * 2);
-	transform: translateX(-$scm);
+	// width: calc(100% + #{$scm} * 2);
+	// transform: translateX(-$scm);
 
 	@include preloader();
 
@@ -90,7 +90,8 @@ $scmDesktop: 12.5px;
 
 	.slick-prev {
 		background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.75) 100%);
-		left: $scm;
+		// left: $scm;
+		left: 0;
 	    [dir="rtl"] & {
 	    }
 	    &:hover {
@@ -108,7 +109,8 @@ $scmDesktop: 12.5px;
 	}
 
 	.slick-next {
-		right: $scm;
+		// right: $scm;
+		right: -1px;
 	    [dir="rtl"] & {
 	    }
 	    &:before {
@@ -143,24 +145,32 @@ $scmDesktop: 12.5px;
 	.card {
 		margin-right: $scm;
 		margin-left: $scm;
-	}
-
-	.content {
-		// setting to 100% for slider pixel perfect layout.
-		width: 100%;
-	}
-	
-	&.square {
-		.image {
+		
+		.content {
 			// setting to 100% for slider pixel perfect layout.
 			width: 100%;
 		}
+		
+		&.square {
+			.image {
+				// setting to 100% for slider pixel perfect layout.
+				width: 100%;
+			}
+		}
+		&.artist {
+			position: relative;
+			.card-avatar {
+				width: 100%;
+			}
+		}
+
 	}
 
 
+
 @include for-tablet-portrait {
-	width: calc(100% + #{$scmTablet} * 2);
-	transform: translateX(-$scmTablet);
+	// width: calc(100% + #{$scmTablet} * 2);
+	// transform: translateX(-$scmTablet);
 
 	.card {
 		margin-right: $scmTablet;
@@ -168,18 +178,20 @@ $scmDesktop: 12.5px;
 	}
 
 	.slick-prev {
-		left: $scmTablet;
+		// left: $scmTablet;
+		left: 0px;
 	}
 
 	.slick-next {
-		right: $scmTablet - 2;
+		// right: $scmTablet - 2;
+		right: -1px;
 	}
 
 }
 
 @include for-tablet-landscape-up {
-	width: calc(100% + #{$scmLaptop} * 2);
-	transform: translateX(-$scmLaptop);
+	// width: calc(100% + #{$scmLaptop} * 2);
+	// transform: translateX(-$scmLaptop);
 
 	.card {
 		margin-right: $scmLaptop;
@@ -197,7 +209,8 @@ $scmDesktop: 12.5px;
 	}
 
 	.slick-prev {
-		left: $scmLaptop;
+		// left: $scmLaptop;
+		left: 0px;
 
 	    &:before {
 	    	left: -22px;
@@ -205,7 +218,8 @@ $scmDesktop: 12.5px;
 	}
 
 	.slick-next {
-		right: $scmLaptop - 2;
+		// right: $scmLaptop - 2;
+		right: 1px;
 
 	    &:before {
 	    	right: -7px;
@@ -216,8 +230,8 @@ $scmDesktop: 12.5px;
 
 
 @include for-desktop-up {
-	width: calc(100% + #{$scmDesktop} * 2);
-	transform: translateX(-$scmDesktop);
+	// width: calc(100% + #{$scmDesktop} * 2);
+	// transform: translateX(-$scmDesktop);
 
 	.card {
 		margin-right: $scmDesktop;
@@ -225,11 +239,13 @@ $scmDesktop: 12.5px;
 	}
 
 	.slick-prev {
-		left: $scmDesktop;
+		// left: $scmDesktop;
+		left: 0px;
 	}
 
 	.slick-next {
-		right: $scmDesktop;
+		// right: $scmDesktop;
+		right: -1px;
 	}
 }
 

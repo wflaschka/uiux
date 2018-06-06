@@ -32,3 +32,14 @@ a {
     @extend %link-#{$linkColor};
   }
 }
+
+a {
+  &:link,
+  &:visited,
+  &:active,
+  &:hover {
+    h1, h2, h3 {
+      color: $color-db;
+    }
+  }
+}
