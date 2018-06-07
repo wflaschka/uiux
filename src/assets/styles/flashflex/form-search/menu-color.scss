@@ -11,8 +11,7 @@
 aside.menu.is-color-menu {
     width: 14rem;
 
-    display: none;
-    // display: flex; // DEBUG
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
