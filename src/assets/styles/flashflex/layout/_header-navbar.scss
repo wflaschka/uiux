@@ -585,6 +585,12 @@ $dropdown-top-pos-mobile: 11px;
 		// so Artist cards don't collide with Artwork cards.
 		& .card {
 			margin-bottom: 0.5rem;
+			// THIS DIDN'T WORK FOR WALTER 2018-06-21... it resulted in only having two columns
+			// &.artist {
+			// 	// Spacing around artists to conform to masonry card
+			// 	margin-left: 11px;
+			// 	margin-right: 11px;
+			// }
 		}
 	}
 
