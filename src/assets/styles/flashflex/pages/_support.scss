@@ -7,8 +7,17 @@
 	h1, h2, h3, h4, h5, h6 {
 		font-family: $font-family-header-secondary;
 		// font-size: 26px;
-		margin: 40px 0 10px;
+		margin: 20px 0 0px;
+		font-weight: 500;
 	}
+
+	h1, h2, h3 {
+		font-size: 15px;
+	}
+	h4, h5, h6 {
+		font-size: 13px;
+	}
+	
 	.page-title {
 		h1 {
 			font-family: $font-family-header;
