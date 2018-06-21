@@ -23,30 +23,8 @@ label, .checkbox, .radio, .radio + .radio {
     }
 }
 
-// Styling for all checkbox labels: set the basic colors
-// label {
-//     span::before {
-//         // border
-//         background-color: none;
-//         border: $checkbox-border solid color(black);
-//     }
-//     span::after {
-//         // fill
-//         background-color: color(white);
-//         transition: background-color $transition-duration;
-//     }
-//     &.is-large {
-//         span::before {
-//             border: ($checkbox-border * $is-large-multiplier) solid color(black);
-//         }
-//         span::after {
-//         }
-//     } 
-// }
-
 // Fill the span::after when checkbox has been checked
 input:checked + span:after {
-    // background-color: color(black) !important;
     background-color: color(black);
 }
 

@@ -581,6 +581,11 @@ $dropdown-top-pos-mobile: 11px;
 			position: relative;
 			margin: 3px 0.5rem;
 		}
+		// For cards displayed in this search result add margin bottom
+		// so Artist cards don't collide with Artwork cards.
+		& .card {
+			margin-bottom: 0.5rem;
+		}
 	}
 
 	@include for-phone-only {
