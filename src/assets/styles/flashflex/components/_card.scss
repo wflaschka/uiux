@@ -48,6 +48,7 @@
 			&.heart {
 				float: right !important;
 				overflow: initial;
+				padding-left: 5px;
 				.icon {
 					width: auto;
 					height: auto;
@@ -75,6 +76,42 @@
 		.image {
 			width: 150px;
 			height: 150px;
+			box-shadow: none;
+			background-image: none !important;
+			img {
+				display: block;
+				max-height: 150px;
+				box-shadow: $shadow;
+			}
+		}
+	}
+	&.status {
+		width: auto;
+		.image {
+			width: 150px;
+			height: 150px;
+		}
+		.content {
+			height: auto;
+		}
+		.status-posted {
+			color: black;
+		}
+		.status-sold {
+			color: black;
+			&:after {
+				content: "";
+				display: inline-block;
+				border-radius: 50%;
+				height: 8px;
+				width: 8px;
+				margin-left: 6px;
+				background-color: black;
+				font-weight: 500;
+			}
+		}
+		.status-not-visible {
+			color: red;
 		}
 	}
 	&.checkout {
