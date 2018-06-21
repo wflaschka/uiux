@@ -53,6 +53,12 @@
         color: $color-invert;
         border-color: $color;
       }
+
+      &.is-border-#{$name} {
+        background-color: #fff;
+        color: $color;
+        border-color: $color;
+      }
     }
     
 

@@ -12,7 +12,6 @@ aside.menu.is-color-menu {
     width: 14rem;
 
     display: none;
-    // display: flex; // DEBUG
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
@@ -21,4 +20,9 @@ aside.menu.is-color-menu {
     label {
         margin: 1rem;
     }
+}
+
+// Make sure color modal shows
+.modal aside.menu.is-color-menu {
+    display: flex;
 }

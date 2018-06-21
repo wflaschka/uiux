@@ -581,6 +581,17 @@ $dropdown-top-pos-mobile: 11px;
 			position: relative;
 			margin: 3px 0.5rem;
 		}
+		// For cards displayed in this search result add margin bottom
+		// so Artist cards don't collide with Artwork cards.
+		& .card {
+			margin-bottom: 0.5rem;
+			// THIS DIDN'T WORK FOR WALTER 2018-06-21... it resulted in only having two columns
+			// &.artist {
+			// 	// Spacing around artists to conform to masonry card
+			// 	margin-left: 11px;
+			// 	margin-right: 11px;
+			// }
+		}
 	}
 
 	@include for-phone-only {
