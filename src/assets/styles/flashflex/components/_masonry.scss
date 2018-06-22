@@ -137,3 +137,58 @@ $gsDesktop: 53px;
 }
 
 }
+
+
+
+//=====================================
+// Header Search Result Masonry
+//=====================================
+.search-result {
+
+	.masonry-grid {
+
+		.grid-size {
+			width: 150px;
+		}
+		.gutter-size {
+			width: 20px;
+		}
+
+		.card {
+			width: 150px;
+			margin: 0 0 30px;
+
+			.image {
+				width: 150px;
+
+				img {
+					width: 150px;
+				}
+			}
+
+			.content {
+				width: 150px;
+			}
+		}
+	}
+
+
+@include for-tablet-portrait {
+	.masonry-grid {
+		.gutter-size {
+			width: 42px;
+		}
+	}
+}
+
+
+@include for-tablet-landscape-up {
+	.masonry-grid {
+		.gutter-size {
+			width: 37px;
+		}
+	}
+}
+
+
+}
