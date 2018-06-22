@@ -1,0 +1,23 @@
+////////////////////////////////////////////////////////////////////
+// Select2 customization
+////////////////////////////////////////////////////////////////////
+
+.select2-selection__rendered {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	max-width: 180px;
+
+@include for-tablet-portrait-up {
+	max-width: 150px;
+}
+
+@include for-tablet-landscape-up {
+	max-width: 170px;
+}
+
+@include for-desktop-up {
+	max-width: 220px;
+}
+
+}

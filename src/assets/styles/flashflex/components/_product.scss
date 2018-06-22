@@ -147,72 +147,83 @@
 
 	@include for-tablet-portrait-up {
 
-	flex-direction: row;
+		flex-direction: row;
 
-		.product-image {
-			// flex: 1 1 63%;
-			// width: 63%;
-			// padding: 0 40px;
-			// matching prototype
-			flex: 1 1 73%;
-			width: 73%;
-			padding: 0 170px;
+			.product-image {
+				// flex: 1 1 63%;
+				// width: 63%;
+				// padding: 0 40px;
+				// matching prototype
+				flex: 1 1 60%;
+				width: 60%;
+				padding: 0 40px;
 
-			img {
-				max-height: calc(100vh - 250px);
-				margin: 0 auto;
+				img {
+					max-height: calc(100vh - 250px);
+					margin: 0 auto;
+				}
+
+
+				img {
+		    		box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
+				}
+				.slick-slider {
+					.slick-slide {
+					    padding-left: 30px;
+					    padding-right: 30px;
+					}
+				}
+
+			    .slick-dots {
+			    	bottom: -35px;
+			        li {
+			            button {
+			                &:before {
+			                    font-size: .5rem;
+			                }
+			            }
+			        }
+			    }
+
 			}
 
+			.product-detail {
+				flex: 1 1 40%;
 
-			img {
-	    		box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
-			}
-			.slick-slider {
-				.slick-slide {
-				    padding-left: 30px;
-				    padding-right: 30px;
+				h2 {
+					margin: 0;
+				}
+
+				h4 {
+					margin-top: 0;
 				}
 			}
 
-		    .slick-dots {
-		    	bottom: -35px;
-		        li {
-		            button {
-		                &:before {
-		                    font-size: .5rem;
-		                }
-		            }
-		        }
-		    }
 
+		&.modal-product {
+			.product-image {
+				flex: 1 1 60%;
+				width: 60%;
+				padding: 0;
+			}
+			.product-detail {
+				padding: 0 0 0 2rem;
+				flex: 1 1 40%;
+			}
 		}
+	}
 
+	@include for-tablet-landscape-up {
+		.product-image {
+			flex: 1 1 73%;
+			width: 73%;
+			padding: 0 170px;
+		}
 		.product-detail {
 			flex: 1 1 380px;
-
-			h2 {
-				margin: 0;
-			}
-
-			h4 {
-				margin-top: 0;
-			}
-		}
-
-
-	&.modal-product {
-		.product-image {
-			flex: 1 1 60%;
-			width: 60%;
-			padding: 0;
-		}
-		.product-detail {
-			padding: 0 0 0 2rem;
-			flex: 1 1 40%;
 		}
 	}
 
-	}
 }
 
 
