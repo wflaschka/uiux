@@ -90,6 +90,9 @@
         <div class="tabs-container"">
             <div id="tab_artwork" class="tab-content is-active">
                 <div class="row masonry-grid">
+                    <div class="grid-size"></div>
+                    <div class="gutter-size"></div>
+
                     {{#dataset}}
                         {{> card-masonry }}
                     {{/dataset}}
@@ -426,7 +429,8 @@
         // init Masonry
         var $grid = $('.masonry-grid').masonry({
             "itemSelector": ".card",
-            "columnWidth": 170
+            "gutter": '.gutter-size',
+            "columnWidth": '.grid-size'
         });
         // layout Masonry after each image loads
         $grid.imagesLoaded().progress( function() {
