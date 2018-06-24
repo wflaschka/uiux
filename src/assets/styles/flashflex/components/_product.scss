@@ -117,15 +117,13 @@
 						display: none;
 					}
 					.edition-number-text-error { 
+						font-weight: $weight-semibold;
 						display: block; 
 						color: color(red-dark);
 					}
 				}
-				.field .control .select2-wrapper select {
-					border: 1px solid color(red-dark);
-				}
 				.field .control .select2-wrapper {
-					// border: 1px solid color(red-dark);
+					border: 1px solid color(red-dark);
 				}
 			}
 		}
