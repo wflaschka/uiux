@@ -166,9 +166,9 @@
         .time {
             @extend .text-fade;
             text-decoration: none;
-            &:hover {
-                text-decoration: underline;
-            }
+            // &:hover {
+            //     text-decoration: underline;
+            // }
         }
 
         a {

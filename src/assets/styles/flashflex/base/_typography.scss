@@ -233,21 +233,35 @@ h4 {
 
 
 // text-darkblack
+.text-darkblack,
 .text-db { color: $color-db }
+
 // text-fullblack
+.text-fullblack,
 .text-fb { color: #000; }
+
 .text-red { color: #f00; }
+
+.text-light,
 .text-fade { color: $color-fade; }
 
+.is-style-normal,
 .fs-n { font-style: $fs-n; }
+
+.is-weight-normal,
 .fw-n { font-weight: $weight-normal; }
+
+.is-weight-medium,
 .fw-m,
 .fw-500 { font-weight: $weight-semibold; }
 
+.text-extralarge,
+.text-large,
 .text-xl {
     font-size: p(45);
     line-height: p(16);
 }
+.text-small,
 .text-s {
     font-size: p(13);
     line-height: p(21);

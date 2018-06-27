@@ -105,6 +105,27 @@
 			.edition-remain {
 				font-weight: $weight-semibold;
 			}
+
+
+			.edition-number-text-error { display: none; }
+			&.error-missing-edition {
+				// border: 1px solid red !important;
+				// background-color: color(red-light);
+				// background-opacity: 0.9;
+				.prompt {
+					.edition-number-text { 
+						display: none;
+					}
+					.edition-number-text-error { 
+						font-weight: $weight-semibold;
+						display: block; 
+						color: color(red-dark);
+					}
+				}
+				.field .control .select2-wrapper {
+					border: 1px solid color(red-dark);
+				}
+			}
 		}
 
 		.add-to-cart {
