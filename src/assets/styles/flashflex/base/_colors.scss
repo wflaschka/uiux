@@ -123,3 +123,11 @@ $border-color: color(secondary);
 $color-db: #191919;
 $color-fade: rgba(0, 0, 0, 0.44);
 $checkbox-radio-border-color: #333;
+
+
+// During checkout, there are red-backed error messages 
+// that need white links w/ underline
+a.white-underline-link {
+	color: color(white) !important;
+	text-decoration: underline !important;
+}

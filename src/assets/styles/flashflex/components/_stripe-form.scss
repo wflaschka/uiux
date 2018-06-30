@@ -45,6 +45,7 @@ form#payment-form {
 
         &.visible {
             opacity: 1;
+            padding: 0.5rem;
         }
 
         // svg {
@@ -60,7 +61,7 @@ form#payment-form {
         // }
 
         .message {
-            color: color(red);
+            // color: color(red);
         }
     }
 

@@ -388,3 +388,22 @@
 .image-upload-dropzone .card {
 	margin-bottom: 1.5rem;
 }
+
+// During checkouts, if an item goes unavailable,
+// wrap it in an element to draw attention to it.
+.checkout-card-wrapper {
+	padding: 0.25rem;
+	border: 1px solid color(red-dark);
+	border-radius: p(10);
+
+	.card.checkout {
+		margin: 0.25rem;
+		border-bottom-width: 0px !important;
+		.close-link {
+			color: color(red-dark) !important;
+		}
+	}
+
+}
+
+
