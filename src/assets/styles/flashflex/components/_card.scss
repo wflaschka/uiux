@@ -76,6 +76,13 @@
 		.image {
 			width: 150px;
 			height: 150px;
+		}
+	}
+	&.square.slick-slide {
+		width: auto;
+		.image {
+			width: 150px;
+			height: 150px;
 			box-shadow: none;
 			background-image: none !important;
 			img {
@@ -85,6 +92,7 @@
 			}
 		}
 	}
+	
 	&.status {
 		width: auto;
 		.image {
