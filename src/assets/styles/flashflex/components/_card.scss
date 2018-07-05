@@ -67,6 +67,46 @@
 			}
 			&.price { }
 		}
+
+		// Merchant > Profile > Artwork tab: cards have a status DIV
+		.status {
+			// width: auto;
+			// .image {
+			// 	width: 150px;
+			// 	height: 150px;
+			// }
+			// .content {
+			// 	height: auto;
+			// }
+			&.status-published {
+				color: color(black);
+			}
+			&.status-draft {
+				// color: color(black);
+				font-style: italic;
+			}
+			&.status-sold {
+				color: color(red);
+				&:after {
+					content: "";
+					display: inline-block;
+					border-radius: 50%;
+					height: 8px;
+					width: 8px;
+					margin-left: 6px;
+					background-color: color(red);
+					font-weight: 500;
+				}
+			}
+			&.status-not-visible {
+				color: color(red);
+			}
+			&.status-declined {
+				color: color(orange);
+			}
+		}
+
+
 	}
 
 	////////////////////////////////////////
@@ -93,35 +133,6 @@
 		}
 	}
 	
-	&.status {
-		width: auto;
-		.image {
-			width: 150px;
-			height: 150px;
-		}
-		.content {
-			height: auto;
-		}
-		.status-posted {
-			color: black;
-		}
-		.status-sold {
-			color: black;
-			&:after {
-				content: "";
-				display: inline-block;
-				border-radius: 50%;
-				height: 8px;
-				width: 8px;
-				margin-left: 6px;
-				background-color: black;
-				font-weight: 500;
-			}
-		}
-		.status-not-visible {
-			color: red;
-		}
-	}
 	&.checkout {
 		@extend .square;
 		height: 216px;
