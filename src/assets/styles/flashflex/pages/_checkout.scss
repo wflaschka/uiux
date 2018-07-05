@@ -92,6 +92,11 @@
 			.user-name {
 				display: inline;
 			}
+
+			.btn-place-order {
+				min-width: 360px;
+				margin-right: 20px;
+			}
 		}
 
 		.summary {
@@ -101,10 +106,6 @@
 			padding-left: 40px;
 		}
 
-		.btn-place-order {
-			min-width: 360px;
-			margin-right: 20px;
-		}
 		
 		.checkout-payment-container {
 			max-width: 600px;
@@ -152,13 +153,13 @@
 		justify-content: space-between;
 
 		.item {
-			flex: 0 0 70%;
+			flex: 0 0 85%;
 			display: flex;
-			align-items: baseline;
+			// align-items: baseline;
 		}
 
 		.price {
-			flex: 0 0 30%;
+			flex: 0 0 15%;
 			text-align: right;
 		}
 
@@ -172,9 +173,7 @@
 		}
 
 		.radio {
-			span {
-				margin-right: 10px;
-			}
+			padding-left: 15px;
 		}
 	}
 
