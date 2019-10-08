@@ -1,3 +1,8 @@
+git filter-branch --force --index-filter "git rm --cached --ignore-unmatch __NOTES.md" --prune-empty --tag-name-filter cat -- --all
+sync_wdhdevatux.sh
+
+
+
 # ArtTap UI/UX Patterns
 
 *Point of contact:* Walter Flaschka wflaschka@gmail.com. Best methods for contact are the `#arttap` [Slack](https://slack.com/), [email](wflaschka@gmail.com), or texting the Google+ account for wflaschka@gmail.com.

@@ -17,16 +17,16 @@ var debug                = require('gulp-debug');
 var runSequence          = require('run-sequence');
 var sass                 = require('gulp-sass');
 var sourcemaps           = require('gulp-sourcemaps');
-var autoprefixer         = require('gulp-autoprefixer');
+// var autoprefixer         = require('gulp-autoprefixer');
 var sassdoc              = require('sassdoc');
 var util                 = require("gulp-util"); // https://github.com/gulpjs/gulp-util
 var log                  = util.log;
-var less                 = require('gulp-less');
-var cleancss             = require('gulp-clean-css');
-var csscomb              = require('gulp-csscomb');
-var rename               = require('gulp-rename');
-var LessPluginAutoPrefix = require('less-plugin-autoprefix');
-var autoprefix           = new LessPluginAutoPrefix({ browsers: ["last 4 versions"] });
+// var less                 = require('gulp-less');
+// var cleancss             = require('gulp-clean-css');
+// var csscomb              = require('gulp-csscomb');
+// var rename               = require('gulp-rename');
+// var LessPluginAutoPrefix = require('less-plugin-autoprefix');
+// var autoprefix           = new LessPluginAutoPrefix({ browsers: ["last 4 versions"] });
 var hbsmaster            = require('gulp-handlebars-master');
 var fs                   = require('fs');
 
@@ -70,8 +70,8 @@ var paths = {
 	sass: [
 		rootSource    + 'assets/styles/site.scss'
 	],
-	less: [
-	],
+	// less: [
+	// ],
 	html: [
 		rootSource    + '**/*.htm?'
 	],
@@ -96,9 +96,9 @@ var sassOptions = {
   errLogToConsole: true,
   outputStyle: 'expanded'
 };
-var autoprefixerOptions = {
-  browsers: ['last 2 versions', '> 5%', 'Firefox ESR']
-};
+// var autoprefixerOptions = {
+//   browsers: ['last 2 versions', '> 5%', 'Firefox ESR']
+// };
 var sassdocOptions = {
   dest: buildTargets.styles + '/sassdoc'
 };
@@ -106,11 +106,10 @@ var sassdocOptions = {
 
 ////////////////////////////////////////////////////////////////////////////////////
 // Start work:
+log(" ")
 log("Gulpfile building...")
-log(" ")
-log(" ")
-log("NOTE NOTE NOTE:")
-log("    You'll need to add new template/components subfolders to gulpfile!")
+log("NOTE:")
+log("    IF you make new template/components subfolders, add them to the gulpfile.")
 log(" ")
 
 // Clean target directory of everything
@@ -158,15 +157,6 @@ gulp.task('pdfs', function() {
 		.pipe(gulp.dest(buildTargets.pdfs));
 });
 
-// HTML
-gulp.task('html', function(callback) {
-  runSequence(
-	'build-html-index',
-	'build-html-pages',
-	'build-html-component-pages',
-	callback);
-});
-
 // FONTS
 gulp.task('fonts', function() {
 	return gulp.src(paths.fonts)
@@ -179,20 +169,20 @@ gulp.task('shell', function() {
 		.pipe(gulp.dest(buildTargets.shell));
 });
 
-// [NOT IN USE] Less/CSS
-gulp.task('less', function() {
-    gulp.src(paths.less)
-        .pipe(less({
-            plugins: [autoprefix]
-        }))
-        .pipe(csscomb())
-        .pipe(gulp.dest(buildTargets.styles))
-        .pipe(cleancss())
-        .pipe(rename({
-            suffix: '.min'
-        }))
-        .pipe(gulp.dest(buildTargets.styles))
-});
+// // [NOT IN USE] Less/CSS
+// gulp.task('less', function() {
+//     gulp.src(paths.less)
+//         .pipe(less({
+//             plugins: [autoprefix]
+//         }))
+//         .pipe(csscomb())
+//         .pipe(gulp.dest(buildTargets.styles))
+//         .pipe(cleancss())
+//         .pipe(rename({
+//             suffix: '.min'
+//         }))
+//         .pipe(gulp.dest(buildTargets.styles))
+// });
 
 // [NOT IN USE] Handle MaterializeCSS's javascript
 // gulp-concat documentation: https://www.npmjs.com/package/gulp-concat
@@ -384,29 +374,25 @@ gulp.task('build-html-pages', function() {
 		.pipe(gulp.dest(buildTargets.html));
 });
 
+
+// HTML
+gulp.task('html', gulp.series('build-html-index', 'build-html-pages', 'build-html-component-pages'))
+
 // Rerun the task when a file changes
 // invoke with: gulp watch
-gulp.task('watch', ['all'], function() {
-	gulp.watch(paths.images, ['images']);
-	gulp.watch(paths.scripts, ['scripts']);
-	gulp.watch(paths.styles, ['styles']);
-	gulp.watch(paths.less, ['less']);
-	gulp.watch(paths.html, ['html']);
-	gulp.watch(paths.fonts, ['fonts']);
-	gulp.watch(paths.pdfs, ['pdfs']);
-	gulp.watch(paths.shell, ['shell']);
-	gulp.watch(rootSource + '**/*.scss', ['sass']);
-	gulp.watch(rootSource + '**/*.sass', ['sass']);
-	gulp.watch(rootSource + '**/*.less', ['less']);
+gulp.task('watchpaths', function() {
+	gulp.watch(paths.images, gulp.series('images'))
+	gulp.watch(paths.scripts, gulp.series('scripts'))
+	gulp.watch(paths.styles, gulp.series('styles'))
+	gulp.watch(paths.html, gulp.series('html'))
+	gulp.watch(paths.fonts, gulp.series('fonts'))
+	gulp.watch(paths.pdfs, gulp.series('pdfs'))
+	gulp.watch(paths.shell, gulp.series('shell'))
+	gulp.watch(rootSource + '**/*.scss', gulp.series('sass'))
+	gulp.watch(rootSource + '**/*.sass', gulp.series('sass'))
 });
 
-gulp.task('all', function(callback) {
-  runSequence(
-	'clean',
-	'images', 'scripts', 'styles',
-	'less', 'sass', 'fonts', 'pdfs',
-	'html', 'shell',
-	callback);
-});
+gulp.task('all', gulp.series('clean', 'images', 'scripts', 'styles', 'sass', 'fonts', 'pdfs', 'html', 'shell'))
 
-gulp.task('default', ['watch']);
+gulp.task('watch', gulp.series('all', 'watchpaths'))
+gulp.task('default', gulp.series('watch'));
