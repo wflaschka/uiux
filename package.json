@@ -44,7 +44,7 @@
     "gulp-template-html": "^0.2.2",
     "gulp-util": "^3.0.8",
     "handlebars": "^4.4.2",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "less-plugin-autoprefix": "^2.0.0",
     "materialize-css": "^1.0.0",
     "nouislider": "^14.0.2",
